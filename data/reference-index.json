@@ -1,0 +1,3462 @@
+{
+  "users": [],
+  "groups": [
+    {
+      "id": "account",
+      "title": "Account",
+      "url": "https://dev.vk.com/ru/method/account"
+    },
+    {
+      "id": "ads",
+      "title": "Ads",
+      "url": "https://dev.vk.com/ru/method/ads"
+    },
+    {
+      "id": "appWidgets",
+      "title": "AppWidgets",
+      "url": "https://dev.vk.com/ru/method/appWidgets"
+    },
+    {
+      "id": "apps",
+      "title": "Apps",
+      "url": "https://dev.vk.com/ru/method/apps"
+    },
+    {
+      "id": "board",
+      "title": "Board",
+      "url": "https://dev.vk.com/ru/method/board"
+    },
+    {
+      "id": "bugtracker",
+      "title": "Bugtracker",
+      "url": "https://dev.vk.com/ru/method/bugtracker"
+    },
+    {
+      "id": "calls",
+      "title": "Calls",
+      "url": "https://dev.vk.com/ru/method/calls"
+    },
+    {
+      "id": "crowdCustomer",
+      "title": "CrowdCustomer",
+      "url": "https://dev.vk.com/ru/method/crowdCustomer"
+    },
+    {
+      "id": "database",
+      "title": "Database",
+      "url": "https://dev.vk.com/ru/method/database"
+    },
+    {
+      "id": "docs",
+      "title": "Docs",
+      "url": "https://dev.vk.com/ru/method/docs"
+    },
+    {
+      "id": "donut",
+      "title": "Donut",
+      "url": "https://dev.vk.com/ru/method/donut"
+    },
+    {
+      "id": "friends",
+      "title": "Friends",
+      "url": "https://dev.vk.com/ru/method/friends"
+    },
+    {
+      "id": "gifts",
+      "title": "Gifts",
+      "url": "https://dev.vk.com/ru/method/gifts"
+    },
+    {
+      "id": "groups",
+      "title": "Groups",
+      "url": "https://dev.vk.com/ru/method/groups"
+    },
+    {
+      "id": "leadForms",
+      "title": "LeadForms",
+      "url": "https://dev.vk.com/ru/method/leadForms"
+    },
+    {
+      "id": "likes",
+      "title": "Likes",
+      "url": "https://dev.vk.com/ru/method/likes"
+    },
+    {
+      "id": "loyaltyTeen",
+      "title": "LoyaltyTeen",
+      "url": "https://dev.vk.com/ru/method/loyaltyTeen"
+    },
+    {
+      "id": "market",
+      "title": "Market",
+      "url": "https://dev.vk.com/ru/method/market"
+    },
+    {
+      "id": "messages",
+      "title": "Messages",
+      "url": "https://dev.vk.com/ru/method/messages"
+    },
+    {
+      "id": "newsfeed",
+      "title": "Newsfeed",
+      "url": "https://dev.vk.com/ru/method/newsfeed"
+    },
+    {
+      "id": "notifications",
+      "title": "Notifications",
+      "url": "https://dev.vk.com/ru/method/notifications"
+    },
+    {
+      "id": "orders",
+      "title": "Orders",
+      "url": "https://dev.vk.com/ru/method/orders"
+    },
+    {
+      "id": "pages",
+      "title": "Pages",
+      "url": "https://dev.vk.com/ru/method/pages"
+    },
+    {
+      "id": "partnerStats",
+      "title": "PartnerStats",
+      "url": "https://dev.vk.com/ru/method/partnerStats"
+    },
+    {
+      "id": "photos",
+      "title": "Photos",
+      "url": "https://dev.vk.com/ru/method/photos"
+    },
+    {
+      "id": "podcasts",
+      "title": "Podcasts",
+      "url": "https://dev.vk.com/ru/method/podcasts"
+    },
+    {
+      "id": "polls",
+      "title": "Polls",
+      "url": "https://dev.vk.com/ru/method/polls"
+    },
+    {
+      "id": "prettyCards",
+      "title": "PrettyCards",
+      "url": "https://dev.vk.com/ru/method/prettyCards"
+    },
+    {
+      "id": "search",
+      "title": "Search",
+      "url": "https://dev.vk.com/ru/method/search"
+    },
+    {
+      "id": "secure",
+      "title": "Secure",
+      "url": "https://dev.vk.com/ru/method/secure"
+    },
+    {
+      "id": "stats",
+      "title": "Stats",
+      "url": "https://dev.vk.com/ru/method/stats"
+    },
+    {
+      "id": "status",
+      "title": "Status",
+      "url": "https://dev.vk.com/ru/method/status"
+    },
+    {
+      "id": "storage",
+      "title": "Storage",
+      "url": "https://dev.vk.com/ru/method/storage"
+    },
+    {
+      "id": "store",
+      "title": "Store",
+      "url": "https://dev.vk.com/ru/method/store"
+    },
+    {
+      "id": "stories",
+      "title": "Stories",
+      "url": "https://dev.vk.com/ru/method/stories"
+    },
+    {
+      "id": "translations",
+      "title": "Translations",
+      "url": "https://dev.vk.com/ru/method/translations"
+    },
+    {
+      "id": "userLinking",
+      "title": "UserLinking",
+      "url": "https://dev.vk.com/ru/method/userLinking"
+    },
+    {
+      "id": "users",
+      "title": "Users",
+      "url": "https://dev.vk.com/ru/method/users"
+    },
+    {
+      "id": "utils",
+      "title": "Utils",
+      "url": "https://dev.vk.com/ru/method/utils"
+    },
+    {
+      "id": "video",
+      "title": "Video",
+      "url": "https://dev.vk.com/ru/method/video"
+    },
+    {
+      "id": "wall",
+      "title": "Wall",
+      "url": "https://dev.vk.com/ru/method/wall"
+    },
+    {
+      "id": "widgets",
+      "title": "Widgets",
+      "url": "https://dev.vk.com/ru/method/widgets"
+    }
+  ],
+  "methods": {
+    "users": [
+      {
+        "id": "users.get",
+        "name": "get",
+        "group": "users",
+        "title": "get",
+        "url": "https://dev.vk.com/ru/method/users.get"
+      },
+      {
+        "id": "users.getFollowers",
+        "name": "getFollowers",
+        "group": "users",
+        "title": "getFollowers",
+        "url": "https://dev.vk.com/ru/method/users.getFollowers"
+      },
+      {
+        "id": "users.getSubscriptions",
+        "name": "getSubscriptions",
+        "group": "users",
+        "title": "getSubscriptions",
+        "url": "https://dev.vk.com/ru/method/users.getSubscriptions"
+      },
+      {
+        "id": "users.search",
+        "name": "search",
+        "group": "users",
+        "title": "search",
+        "url": "https://dev.vk.com/ru/method/users.search"
+      }
+    ],
+    "groups": [
+      {
+        "id": "groups.addAddress",
+        "name": "addAddress",
+        "group": "groups",
+        "title": "addAddress",
+        "url": "https://dev.vk.com/ru/method/groups.addAddress"
+      },
+      {
+        "id": "groups.getAddresses",
+        "name": "getAddresses",
+        "group": "groups",
+        "title": "getAddresses",
+        "url": "https://dev.vk.com/ru/method/groups.getAddresses"
+      },
+      {
+        "id": "groups.addCallbackServer",
+        "name": "addCallbackServer",
+        "group": "groups",
+        "title": "addCallbackServer",
+        "url": "https://dev.vk.com/ru/method/groups.addCallbackServer"
+      },
+      {
+        "id": "groups.approveRequest",
+        "name": "approveRequest",
+        "group": "groups",
+        "title": "approveRequest",
+        "url": "https://dev.vk.com/ru/method/groups.approveRequest"
+      },
+      {
+        "id": "groups.ban",
+        "name": "ban",
+        "group": "groups",
+        "title": "ban",
+        "url": "https://dev.vk.com/ru/method/groups.ban"
+      },
+      {
+        "id": "groups.deleteAddress",
+        "name": "deleteAddress",
+        "group": "groups",
+        "title": "deleteAddress",
+        "url": "https://dev.vk.com/ru/method/groups.deleteAddress"
+      },
+      {
+        "id": "groups.deleteCallbackServer",
+        "name": "deleteCallbackServer",
+        "group": "groups",
+        "title": "deleteCallbackServer",
+        "url": "https://dev.vk.com/ru/method/groups.deleteCallbackServer"
+      },
+      {
+        "id": "groups.disableOnline",
+        "name": "disableOnline",
+        "group": "groups",
+        "title": "disableOnline",
+        "url": "https://dev.vk.com/ru/method/groups.disableOnline"
+      },
+      {
+        "id": "groups.editAddress",
+        "name": "editAddress",
+        "group": "groups",
+        "title": "editAddress",
+        "url": "https://dev.vk.com/ru/method/groups.editAddress"
+      },
+      {
+        "id": "groups.editCallbackServer",
+        "name": "editCallbackServer",
+        "group": "groups",
+        "title": "editCallbackServer",
+        "url": "https://dev.vk.com/ru/method/groups.editCallbackServer"
+      },
+      {
+        "id": "groups.editManager",
+        "name": "editManager",
+        "group": "groups",
+        "title": "editManager",
+        "url": "https://dev.vk.com/ru/method/groups.editManager"
+      },
+      {
+        "id": "groups.enableOnline",
+        "name": "enableOnline",
+        "group": "groups",
+        "title": "enableOnline",
+        "url": "https://dev.vk.com/ru/method/groups.enableOnline"
+      },
+      {
+        "id": "groups.get",
+        "name": "get",
+        "group": "groups",
+        "title": "get",
+        "url": "https://dev.vk.com/ru/method/groups.get"
+      },
+      {
+        "id": "groups.getBanned",
+        "name": "getBanned",
+        "group": "groups",
+        "title": "getBanned",
+        "url": "https://dev.vk.com/ru/method/groups.getBanned"
+      },
+      {
+        "id": "groups.getById",
+        "name": "getById",
+        "group": "groups",
+        "title": "getById",
+        "url": "https://dev.vk.com/ru/method/groups.getById"
+      },
+      {
+        "id": "groups.getCallbackConfirmationCode",
+        "name": "getCallbackConfirmationCode",
+        "group": "groups",
+        "title": "getCallbackConfirmationCode",
+        "url": "https://dev.vk.com/ru/method/groups.getCallbackConfirmationCode"
+      },
+      {
+        "id": "groups.getCallbackServers",
+        "name": "getCallbackServers",
+        "group": "groups",
+        "title": "getCallbackServers",
+        "url": "https://dev.vk.com/ru/method/groups.getCallbackServers"
+      },
+      {
+        "id": "groups.getCallbackSettings",
+        "name": "getCallbackSettings",
+        "group": "groups",
+        "title": "getCallbackSettings",
+        "url": "https://dev.vk.com/ru/method/groups.getCallbackSettings"
+      },
+      {
+        "id": "groups.getCatalogInfo",
+        "name": "getCatalogInfo",
+        "group": "groups",
+        "title": "getCatalogInfo",
+        "url": "https://dev.vk.com/ru/method/groups.getCatalogInfo"
+      },
+      {
+        "id": "groups.getInvitedUsers",
+        "name": "getInvitedUsers",
+        "group": "groups",
+        "title": "getInvitedUsers",
+        "url": "https://dev.vk.com/ru/method/groups.getInvitedUsers"
+      },
+      {
+        "id": "groups.getInvites",
+        "name": "getInvites",
+        "group": "groups",
+        "title": "getInvites",
+        "url": "https://dev.vk.com/ru/method/groups.getInvites"
+      },
+      {
+        "id": "groups.getLongPollServer",
+        "name": "getLongPollServer",
+        "group": "groups",
+        "title": "getLongPollServer",
+        "url": "https://dev.vk.com/ru/method/groups.getLongPollServer"
+      },
+      {
+        "id": "groups.getLongPollSettings",
+        "name": "getLongPollSettings",
+        "group": "groups",
+        "title": "getLongPollSettings",
+        "url": "https://dev.vk.com/ru/method/groups.getLongPollSettings"
+      },
+      {
+        "id": "groups.getMembers",
+        "name": "getMembers",
+        "group": "groups",
+        "title": "getMembers",
+        "url": "https://dev.vk.com/ru/method/groups.getMembers"
+      },
+      {
+        "id": "groups.getOnlineStatus",
+        "name": "getOnlineStatus",
+        "group": "groups",
+        "title": "getOnlineStatus",
+        "url": "https://dev.vk.com/ru/method/groups.getOnlineStatus"
+      },
+      {
+        "id": "groups.getRequests",
+        "name": "getRequests",
+        "group": "groups",
+        "title": "getRequests",
+        "url": "https://dev.vk.com/ru/method/groups.getRequests"
+      },
+      {
+        "id": "groups.getTagList",
+        "name": "getTagList",
+        "group": "groups",
+        "title": "getTagList",
+        "url": "https://dev.vk.com/ru/method/groups.getTagList"
+      },
+      {
+        "id": "groups.getTokenPermissions",
+        "name": "getTokenPermissions",
+        "group": "groups",
+        "title": "getTokenPermissions",
+        "url": "https://dev.vk.com/ru/method/groups.getTokenPermissions"
+      },
+      {
+        "id": "groups.invite",
+        "name": "invite",
+        "group": "groups",
+        "title": "invite",
+        "url": "https://dev.vk.com/ru/method/groups.invite"
+      },
+      {
+        "id": "groups.isMember",
+        "name": "isMember",
+        "group": "groups",
+        "title": "isMember",
+        "url": "https://dev.vk.com/ru/method/groups.isMember"
+      },
+      {
+        "id": "groups.removeUser",
+        "name": "removeUser",
+        "group": "groups",
+        "title": "removeUser",
+        "url": "https://dev.vk.com/ru/method/groups.removeUser"
+      },
+      {
+        "id": "groups.search",
+        "name": "search",
+        "group": "groups",
+        "title": "search",
+        "url": "https://dev.vk.com/ru/method/groups.search"
+      },
+      {
+        "id": "groups.setCallbackSettings",
+        "name": "setCallbackSettings",
+        "group": "groups",
+        "title": "setCallbackSettings",
+        "url": "https://dev.vk.com/ru/method/groups.setCallbackSettings"
+      },
+      {
+        "id": "groups.setLongPollSettings",
+        "name": "setLongPollSettings",
+        "group": "groups",
+        "title": "setLongPollSettings",
+        "url": "https://dev.vk.com/ru/method/groups.setLongPollSettings"
+      },
+      {
+        "id": "groups.setSettings",
+        "name": "setSettings",
+        "group": "groups",
+        "title": "setSettings",
+        "url": "https://dev.vk.com/ru/method/groups.setSettings"
+      },
+      {
+        "id": "groups.setUserNote",
+        "name": "setUserNote",
+        "group": "groups",
+        "title": "setUserNote",
+        "url": "https://dev.vk.com/ru/method/groups.setUserNote"
+      },
+      {
+        "id": "groups.tagAdd",
+        "name": "tagAdd",
+        "group": "groups",
+        "title": "tagAdd",
+        "url": "https://dev.vk.com/ru/method/groups.tagAdd"
+      },
+      {
+        "id": "groups.tagBind",
+        "name": "tagBind",
+        "group": "groups",
+        "title": "tagBind",
+        "url": "https://dev.vk.com/ru/method/groups.tagBind"
+      },
+      {
+        "id": "groups.tagDelete",
+        "name": "tagDelete",
+        "group": "groups",
+        "title": "tagDelete",
+        "url": "https://dev.vk.com/ru/method/groups.tagDelete"
+      },
+      {
+        "id": "groups.tagUpdate",
+        "name": "tagUpdate",
+        "group": "groups",
+        "title": "tagUpdate",
+        "url": "https://dev.vk.com/ru/method/groups.tagUpdate"
+      },
+      {
+        "id": "groups.toggleMarket",
+        "name": "toggleMarket",
+        "group": "groups",
+        "title": "toggleMarket",
+        "url": "https://dev.vk.com/ru/method/groups.toggleMarket"
+      },
+      {
+        "id": "groups.unban",
+        "name": "unban",
+        "group": "groups",
+        "title": "unban",
+        "url": "https://dev.vk.com/ru/method/groups.unban"
+      }
+    ],
+    "messages": [
+      {
+        "id": "messages.addChatUser",
+        "name": "addChatUser",
+        "group": "messages",
+        "title": "addChatUser",
+        "url": "https://dev.vk.com/ru/method/messages.addChatUser"
+      },
+      {
+        "id": "messages.allowMessagesFromGroup",
+        "name": "allowMessagesFromGroup",
+        "group": "messages",
+        "title": "allowMessagesFromGroup",
+        "url": "https://dev.vk.com/ru/method/messages.allowMessagesFromGroup"
+      },
+      {
+        "id": "messages.createChat",
+        "name": "createChat",
+        "group": "messages",
+        "title": "createChat",
+        "url": "https://dev.vk.com/ru/method/messages.createChat"
+      },
+      {
+        "id": "messages.delete",
+        "name": "delete",
+        "group": "messages",
+        "title": "delete",
+        "url": "https://dev.vk.com/ru/method/messages.delete"
+      },
+      {
+        "id": "messages.deleteChatPhoto",
+        "name": "deleteChatPhoto",
+        "group": "messages",
+        "title": "deleteChatPhoto",
+        "url": "https://dev.vk.com/ru/method/messages.deleteChatPhoto"
+      },
+      {
+        "id": "messages.deleteConversation",
+        "name": "deleteConversation",
+        "group": "messages",
+        "title": "deleteConversation",
+        "url": "https://dev.vk.com/ru/method/messages.deleteConversation"
+      },
+      {
+        "id": "messages.deleteReaction",
+        "name": "deleteReaction",
+        "group": "messages",
+        "title": "deleteReaction",
+        "url": "https://dev.vk.com/ru/method/messages.deleteReaction"
+      },
+      {
+        "id": "messages.denyMessagesFromGroup",
+        "name": "denyMessagesFromGroup",
+        "group": "messages",
+        "title": "denyMessagesFromGroup",
+        "url": "https://dev.vk.com/ru/method/messages.denyMessagesFromGroup"
+      },
+      {
+        "id": "messages.edit",
+        "name": "edit",
+        "group": "messages",
+        "title": "edit",
+        "url": "https://dev.vk.com/ru/method/messages.edit"
+      },
+      {
+        "id": "messages.editChat",
+        "name": "editChat",
+        "group": "messages",
+        "title": "editChat",
+        "url": "https://dev.vk.com/ru/method/messages.editChat"
+      },
+      {
+        "id": "messages.forceCallFinish",
+        "name": "forceCallFinish",
+        "group": "messages",
+        "title": "forceCallFinish",
+        "url": "https://dev.vk.com/ru/method/messages.forceCallFinish"
+      },
+      {
+        "id": "messages.getByConversationMessageId",
+        "name": "getByConversationMessageId",
+        "group": "messages",
+        "title": "getByConversationMessageId",
+        "url": "https://dev.vk.com/ru/method/messages.getByConversationMessageId"
+      },
+      {
+        "id": "messages.getById",
+        "name": "getById",
+        "group": "messages",
+        "title": "getById",
+        "url": "https://dev.vk.com/ru/method/messages.getById"
+      },
+      {
+        "id": "messages.getChat",
+        "name": "getChat",
+        "group": "messages",
+        "title": "getChat",
+        "url": "https://dev.vk.com/ru/method/messages.getChat"
+      },
+      {
+        "id": "messages.getChatPreview",
+        "name": "getChatPreview",
+        "group": "messages",
+        "title": "getChatPreview",
+        "url": "https://dev.vk.com/ru/method/messages.getChatPreview"
+      },
+      {
+        "id": "messages.getConversationMembers",
+        "name": "getConversationMembers",
+        "group": "messages",
+        "title": "getConversationMembers",
+        "url": "https://dev.vk.com/ru/method/messages.getConversationMembers"
+      },
+      {
+        "id": "messages.getConversations",
+        "name": "getConversations",
+        "group": "messages",
+        "title": "getConversations",
+        "url": "https://dev.vk.com/ru/method/messages.getConversations"
+      },
+      {
+        "id": "messages.getConversationsById",
+        "name": "getConversationsById",
+        "group": "messages",
+        "title": "getConversationsById",
+        "url": "https://dev.vk.com/ru/method/messages.getConversationsById"
+      },
+      {
+        "id": "messages.getHistory",
+        "name": "getHistory",
+        "group": "messages",
+        "title": "getHistory",
+        "url": "https://dev.vk.com/ru/method/messages.getHistory"
+      },
+      {
+        "id": "messages.getHistoryAttachments",
+        "name": "getHistoryAttachments",
+        "group": "messages",
+        "title": "getHistoryAttachments",
+        "url": "https://dev.vk.com/ru/method/messages.getHistoryAttachments"
+      },
+      {
+        "id": "messages.getImportantMessages",
+        "name": "getImportantMessages",
+        "group": "messages",
+        "title": "getImportantMessages",
+        "url": "https://dev.vk.com/ru/method/messages.getImportantMessages"
+      },
+      {
+        "id": "messages.getInviteLink",
+        "name": "getInviteLink",
+        "group": "messages",
+        "title": "getInviteLink",
+        "url": "https://dev.vk.com/ru/method/messages.getInviteLink"
+      },
+      {
+        "id": "messages.getLastActivity",
+        "name": "getLastActivity",
+        "group": "messages",
+        "title": "getLastActivity",
+        "url": "https://dev.vk.com/ru/method/messages.getLastActivity"
+      },
+      {
+        "id": "messages.getLongPollHistory",
+        "name": "getLongPollHistory",
+        "group": "messages",
+        "title": "getLongPollHistory",
+        "url": "https://dev.vk.com/ru/method/messages.getLongPollHistory"
+      },
+      {
+        "id": "messages.getLongPollServer",
+        "name": "getLongPollServer",
+        "group": "messages",
+        "title": "getLongPollServer",
+        "url": "https://dev.vk.com/ru/method/messages.getLongPollServer"
+      },
+      {
+        "id": "messages.getMessagesReactions",
+        "name": "getMessagesReactions",
+        "group": "messages",
+        "title": "getMessagesReactions",
+        "url": "https://dev.vk.com/ru/method/messages.getMessagesReactions"
+      },
+      {
+        "id": "messages.getReactedPeers",
+        "name": "getReactedPeers",
+        "group": "messages",
+        "title": "getReactedPeers",
+        "url": "https://dev.vk.com/ru/method/messages.getReactedPeers"
+      },
+      {
+        "id": "messages.getReactionsAssets",
+        "name": "getReactionsAssets",
+        "group": "messages",
+        "title": "getReactionsAssets",
+        "url": "https://dev.vk.com/ru/method/messages.getReactionsAssets"
+      },
+      {
+        "id": "messages.isMessagesFromGroupAllowed",
+        "name": "isMessagesFromGroupAllowed",
+        "group": "messages",
+        "title": "isMessagesFromGroupAllowed",
+        "url": "https://dev.vk.com/ru/method/messages.isMessagesFromGroupAllowed"
+      },
+      {
+        "id": "messages.joinChatByInviteLink",
+        "name": "joinChatByInviteLink",
+        "group": "messages",
+        "title": "joinChatByInviteLink",
+        "url": "https://dev.vk.com/ru/method/messages.joinChatByInviteLink"
+      },
+      {
+        "id": "messages.markAsAnsweredConversation",
+        "name": "markAsAnsweredConversation",
+        "group": "messages",
+        "title": "markAsAnsweredConversation",
+        "url": "https://dev.vk.com/ru/method/messages.markAsAnsweredConversation"
+      },
+      {
+        "id": "messages.markAsImportant",
+        "name": "markAsImportant",
+        "group": "messages",
+        "title": "markAsImportant",
+        "url": "https://dev.vk.com/ru/method/messages.markAsImportant"
+      },
+      {
+        "id": "messages.markAsImportantConversation",
+        "name": "markAsImportantConversation",
+        "group": "messages",
+        "title": "markAsImportantConversation",
+        "url": "https://dev.vk.com/ru/method/messages.markAsImportantConversation"
+      },
+      {
+        "id": "messages.markAsRead",
+        "name": "markAsRead",
+        "group": "messages",
+        "title": "markAsRead",
+        "url": "https://dev.vk.com/ru/method/messages.markAsRead"
+      },
+      {
+        "id": "messages.markReactionsAsRead",
+        "name": "markReactionsAsRead",
+        "group": "messages",
+        "title": "markReactionsAsRead",
+        "url": "https://dev.vk.com/ru/method/messages.markReactionsAsRead"
+      },
+      {
+        "id": "messages.pin",
+        "name": "pin",
+        "group": "messages",
+        "title": "pin",
+        "url": "https://dev.vk.com/ru/method/messages.pin"
+      },
+      {
+        "id": "messages.removeChatUser",
+        "name": "removeChatUser",
+        "group": "messages",
+        "title": "removeChatUser",
+        "url": "https://dev.vk.com/ru/method/messages.removeChatUser"
+      },
+      {
+        "id": "messages.restore",
+        "name": "restore",
+        "group": "messages",
+        "title": "restore",
+        "url": "https://dev.vk.com/ru/method/messages.restore"
+      },
+      {
+        "id": "messages.search",
+        "name": "search",
+        "group": "messages",
+        "title": "search",
+        "url": "https://dev.vk.com/ru/method/messages.search"
+      },
+      {
+        "id": "messages.searchConversations",
+        "name": "searchConversations",
+        "group": "messages",
+        "title": "searchConversations",
+        "url": "https://dev.vk.com/ru/method/messages.searchConversations"
+      },
+      {
+        "id": "messages.send",
+        "name": "send",
+        "group": "messages",
+        "title": "send",
+        "url": "https://dev.vk.com/ru/method/messages.send"
+      },
+      {
+        "id": "messages.sendMessageEventAnswer",
+        "name": "sendMessageEventAnswer",
+        "group": "messages",
+        "title": "sendMessageEventAnswer",
+        "url": "https://dev.vk.com/ru/method/messages.sendMessageEventAnswer"
+      },
+      {
+        "id": "messages.sendReaction",
+        "name": "sendReaction",
+        "group": "messages",
+        "title": "sendReaction",
+        "url": "https://dev.vk.com/ru/method/messages.sendReaction"
+      },
+      {
+        "id": "messages.setActivity",
+        "name": "setActivity",
+        "group": "messages",
+        "title": "setActivity",
+        "url": "https://dev.vk.com/ru/method/messages.setActivity"
+      },
+      {
+        "id": "messages.setChatPhoto",
+        "name": "setChatPhoto",
+        "group": "messages",
+        "title": "setChatPhoto",
+        "url": "https://dev.vk.com/ru/method/messages.setChatPhoto"
+      },
+      {
+        "id": "messages.startCall",
+        "name": "startCall",
+        "group": "messages",
+        "title": "startCall",
+        "url": "https://dev.vk.com/ru/method/messages.startCall"
+      },
+      {
+        "id": "messages.unpin",
+        "name": "unpin",
+        "group": "messages",
+        "title": "unpin",
+        "url": "https://dev.vk.com/ru/method/messages.unpin"
+      }
+    ],
+    "wall": [
+      {
+        "id": "wall.closeComments",
+        "name": "closeComments",
+        "group": "wall",
+        "title": "closeComments",
+        "url": "https://dev.vk.com/ru/method/wall.closeComments"
+      },
+      {
+        "id": "wall.createComment",
+        "name": "createComment",
+        "group": "wall",
+        "title": "createComment",
+        "url": "https://dev.vk.com/ru/method/wall.createComment"
+      },
+      {
+        "id": "wall.delete",
+        "name": "delete",
+        "group": "wall",
+        "title": "delete",
+        "url": "https://dev.vk.com/ru/method/wall.delete"
+      },
+      {
+        "id": "wall.deleteComment",
+        "name": "deleteComment",
+        "group": "wall",
+        "title": "deleteComment",
+        "url": "https://dev.vk.com/ru/method/wall.deleteComment"
+      },
+      {
+        "id": "wall.edit",
+        "name": "edit",
+        "group": "wall",
+        "title": "edit",
+        "url": "https://dev.vk.com/ru/method/wall.edit"
+      },
+      {
+        "id": "wall.editAdsStealth",
+        "name": "editAdsStealth",
+        "group": "wall",
+        "title": "editAdsStealth",
+        "url": "https://dev.vk.com/ru/method/wall.editAdsStealth"
+      },
+      {
+        "id": "wall.editComment",
+        "name": "editComment",
+        "group": "wall",
+        "title": "editComment",
+        "url": "https://dev.vk.com/ru/method/wall.editComment"
+      },
+      {
+        "id": "wall.get",
+        "name": "get",
+        "group": "wall",
+        "title": "get",
+        "url": "https://dev.vk.com/ru/method/wall.get"
+      },
+      {
+        "id": "wall.getById",
+        "name": "getById",
+        "group": "wall",
+        "title": "getById",
+        "url": "https://dev.vk.com/ru/method/wall.getById"
+      },
+      {
+        "id": "wall.getComment",
+        "name": "getComment",
+        "group": "wall",
+        "title": "getComment",
+        "url": "https://dev.vk.com/ru/method/wall.getComment"
+      },
+      {
+        "id": "wall.getComments",
+        "name": "getComments",
+        "group": "wall",
+        "title": "getComments",
+        "url": "https://dev.vk.com/ru/method/wall.getComments"
+      },
+      {
+        "id": "wall.getReposts",
+        "name": "getReposts",
+        "group": "wall",
+        "title": "getReposts",
+        "url": "https://dev.vk.com/ru/method/wall.getReposts"
+      },
+      {
+        "id": "wall.openComments",
+        "name": "openComments",
+        "group": "wall",
+        "title": "openComments",
+        "url": "https://dev.vk.com/ru/method/wall.openComments"
+      },
+      {
+        "id": "wall.parseAttachedLink",
+        "name": "parseAttachedLink",
+        "group": "wall",
+        "title": "parseAttachedLink",
+        "url": "https://dev.vk.com/ru/method/wall.parseAttachedLink"
+      },
+      {
+        "id": "wall.pin",
+        "name": "pin",
+        "group": "wall",
+        "title": "pin",
+        "url": "https://dev.vk.com/ru/method/wall.pin"
+      },
+      {
+        "id": "wall.post",
+        "name": "post",
+        "group": "wall",
+        "title": "post",
+        "url": "https://dev.vk.com/ru/method/wall.post"
+      },
+      {
+        "id": "wall.postAdsStealth",
+        "name": "postAdsStealth",
+        "group": "wall",
+        "title": "postAdsStealth",
+        "url": "https://dev.vk.com/ru/method/wall.postAdsStealth"
+      },
+      {
+        "id": "wall.reportComment",
+        "name": "reportComment",
+        "group": "wall",
+        "title": "reportComment",
+        "url": "https://dev.vk.com/ru/method/wall.reportComment"
+      },
+      {
+        "id": "wall.reportPost",
+        "name": "reportPost",
+        "group": "wall",
+        "title": "reportPost",
+        "url": "https://dev.vk.com/ru/method/wall.reportPost"
+      },
+      {
+        "id": "wall.repost",
+        "name": "repost",
+        "group": "wall",
+        "title": "repost",
+        "url": "https://dev.vk.com/ru/method/wall.repost"
+      },
+      {
+        "id": "wall.restore",
+        "name": "restore",
+        "group": "wall",
+        "title": "restore",
+        "url": "https://dev.vk.com/ru/method/wall.restore"
+      },
+      {
+        "id": "wall.restoreComment",
+        "name": "restoreComment",
+        "group": "wall",
+        "title": "restoreComment",
+        "url": "https://dev.vk.com/ru/method/wall.restoreComment"
+      },
+      {
+        "id": "wall.search",
+        "name": "search",
+        "group": "wall",
+        "title": "search",
+        "url": "https://dev.vk.com/ru/method/wall.search"
+      },
+      {
+        "id": "wall.unpin",
+        "name": "unpin",
+        "group": "wall",
+        "title": "unpin",
+        "url": "https://dev.vk.com/ru/method/wall.unpin"
+      }
+    ],
+    "photos": [
+      {
+        "id": "photos.copy",
+        "name": "copy",
+        "group": "photos",
+        "title": "copy",
+        "url": "https://dev.vk.com/ru/method/photos.copy"
+      },
+      {
+        "id": "photos.createAlbum",
+        "name": "createAlbum",
+        "group": "photos",
+        "title": "createAlbum",
+        "url": "https://dev.vk.com/ru/method/photos.createAlbum"
+      },
+      {
+        "id": "photos.createComment",
+        "name": "createComment",
+        "group": "photos",
+        "title": "createComment",
+        "url": "https://dev.vk.com/ru/method/photos.createComment"
+      },
+      {
+        "id": "photos.delete",
+        "name": "delete",
+        "group": "photos",
+        "title": "delete",
+        "url": "https://dev.vk.com/ru/method/photos.delete"
+      },
+      {
+        "id": "photos.deleteAlbum",
+        "name": "deleteAlbum",
+        "group": "photos",
+        "title": "deleteAlbum",
+        "url": "https://dev.vk.com/ru/method/photos.deleteAlbum"
+      },
+      {
+        "id": "photos.deleteComment",
+        "name": "deleteComment",
+        "group": "photos",
+        "title": "deleteComment",
+        "url": "https://dev.vk.com/ru/method/photos.deleteComment"
+      },
+      {
+        "id": "photos.edit",
+        "name": "edit",
+        "group": "photos",
+        "title": "edit",
+        "url": "https://dev.vk.com/ru/method/photos.edit"
+      },
+      {
+        "id": "photos.editAlbum",
+        "name": "editAlbum",
+        "group": "photos",
+        "title": "editAlbum",
+        "url": "https://dev.vk.com/ru/method/photos.editAlbum"
+      },
+      {
+        "id": "photos.editComment",
+        "name": "editComment",
+        "group": "photos",
+        "title": "editComment",
+        "url": "https://dev.vk.com/ru/method/photos.editComment"
+      },
+      {
+        "id": "photos.get",
+        "name": "get",
+        "group": "photos",
+        "title": "get",
+        "url": "https://dev.vk.com/ru/method/photos.get"
+      },
+      {
+        "id": "photos.getAlbums",
+        "name": "getAlbums",
+        "group": "photos",
+        "title": "getAlbums",
+        "url": "https://dev.vk.com/ru/method/photos.getAlbums"
+      },
+      {
+        "id": "photos.getAlbumsCount",
+        "name": "getAlbumsCount",
+        "group": "photos",
+        "title": "getAlbumsCount",
+        "url": "https://dev.vk.com/ru/method/photos.getAlbumsCount"
+      },
+      {
+        "id": "photos.getAll",
+        "name": "getAll",
+        "group": "photos",
+        "title": "getAll",
+        "url": "https://dev.vk.com/ru/method/photos.getAll"
+      },
+      {
+        "id": "photos.getAllComments",
+        "name": "getAllComments",
+        "group": "photos",
+        "title": "getAllComments",
+        "url": "https://dev.vk.com/ru/method/photos.getAllComments"
+      },
+      {
+        "id": "photos.getById",
+        "name": "getById",
+        "group": "photos",
+        "title": "getById",
+        "url": "https://dev.vk.com/ru/method/photos.getById"
+      },
+      {
+        "id": "photos.getChatUploadServer",
+        "name": "getChatUploadServer",
+        "group": "photos",
+        "title": "getChatUploadServer",
+        "url": "https://dev.vk.com/ru/method/photos.getChatUploadServer"
+      },
+      {
+        "id": "photos.getComments",
+        "name": "getComments",
+        "group": "photos",
+        "title": "getComments",
+        "url": "https://dev.vk.com/ru/method/photos.getComments"
+      },
+      {
+        "id": "photos.getMarketAlbumUploadServer",
+        "name": "getMarketAlbumUploadServer",
+        "group": "photos",
+        "title": "getMarketAlbumUploadServer",
+        "url": "https://dev.vk.com/ru/method/photos.getMarketAlbumUploadServer"
+      },
+      {
+        "id": "photos.getMessagesUploadServer",
+        "name": "getMessagesUploadServer",
+        "group": "photos",
+        "title": "getMessagesUploadServer",
+        "url": "https://dev.vk.com/ru/method/photos.getMessagesUploadServer"
+      },
+      {
+        "id": "photos.getOwnerCoverPhotoUploadServer",
+        "name": "getOwnerCoverPhotoUploadServer",
+        "group": "photos",
+        "title": "getOwnerCoverPhotoUploadServer",
+        "url": "https://dev.vk.com/ru/method/photos.getOwnerCoverPhotoUploadServer"
+      },
+      {
+        "id": "photos.getOwnerPhotoUploadServer",
+        "name": "getOwnerPhotoUploadServer",
+        "group": "photos",
+        "title": "getOwnerPhotoUploadServer",
+        "url": "https://dev.vk.com/ru/method/photos.getOwnerPhotoUploadServer"
+      },
+      {
+        "id": "photos.getUploadServer",
+        "name": "getUploadServer",
+        "group": "photos",
+        "title": "getUploadServer",
+        "url": "https://dev.vk.com/ru/method/photos.getUploadServer"
+      },
+      {
+        "id": "photos.getUserPhotos",
+        "name": "getUserPhotos",
+        "group": "photos",
+        "title": "getUserPhotos",
+        "url": "https://dev.vk.com/ru/method/photos.getUserPhotos"
+      },
+      {
+        "id": "photos.getWallUploadServer",
+        "name": "getWallUploadServer",
+        "group": "photos",
+        "title": "getWallUploadServer",
+        "url": "https://dev.vk.com/ru/method/photos.getWallUploadServer"
+      },
+      {
+        "id": "photos.makeCover",
+        "name": "makeCover",
+        "group": "photos",
+        "title": "makeCover",
+        "url": "https://dev.vk.com/ru/method/photos.makeCover"
+      },
+      {
+        "id": "photos.move",
+        "name": "move",
+        "group": "photos",
+        "title": "move",
+        "url": "https://dev.vk.com/ru/method/photos.move"
+      },
+      {
+        "id": "photos.reorderAlbums",
+        "name": "reorderAlbums",
+        "group": "photos",
+        "title": "reorderAlbums",
+        "url": "https://dev.vk.com/ru/method/photos.reorderAlbums"
+      },
+      {
+        "id": "photos.reorderPhotos",
+        "name": "reorderPhotos",
+        "group": "photos",
+        "title": "reorderPhotos",
+        "url": "https://dev.vk.com/ru/method/photos.reorderPhotos"
+      },
+      {
+        "id": "photos.report",
+        "name": "report",
+        "group": "photos",
+        "title": "report",
+        "url": "https://dev.vk.com/ru/method/photos.report"
+      },
+      {
+        "id": "photos.reportComment",
+        "name": "reportComment",
+        "group": "photos",
+        "title": "reportComment",
+        "url": "https://dev.vk.com/ru/method/photos.reportComment"
+      },
+      {
+        "id": "photos.restore",
+        "name": "restore",
+        "group": "photos",
+        "title": "restore",
+        "url": "https://dev.vk.com/ru/method/photos.restore"
+      },
+      {
+        "id": "photos.restoreComment",
+        "name": "restoreComment",
+        "group": "photos",
+        "title": "restoreComment",
+        "url": "https://dev.vk.com/ru/method/photos.restoreComment"
+      },
+      {
+        "id": "photos.save",
+        "name": "save",
+        "group": "photos",
+        "title": "save",
+        "url": "https://dev.vk.com/ru/method/photos.save"
+      },
+      {
+        "id": "photos.saveMarketAlbumPhoto",
+        "name": "saveMarketAlbumPhoto",
+        "group": "photos",
+        "title": "saveMarketAlbumPhoto",
+        "url": "https://dev.vk.com/ru/method/photos.saveMarketAlbumPhoto"
+      },
+      {
+        "id": "photos.saveMessagesPhoto",
+        "name": "saveMessagesPhoto",
+        "group": "photos",
+        "title": "saveMessagesPhoto",
+        "url": "https://dev.vk.com/ru/method/photos.saveMessagesPhoto"
+      },
+      {
+        "id": "photos.saveOwnerCoverPhoto",
+        "name": "saveOwnerCoverPhoto",
+        "group": "photos",
+        "title": "saveOwnerCoverPhoto",
+        "url": "https://dev.vk.com/ru/method/photos.saveOwnerCoverPhoto"
+      },
+      {
+        "id": "photos.saveOwnerPhoto",
+        "name": "saveOwnerPhoto",
+        "group": "photos",
+        "title": "saveOwnerPhoto",
+        "url": "https://dev.vk.com/ru/method/photos.saveOwnerPhoto"
+      },
+      {
+        "id": "photos.saveWallPhoto",
+        "name": "saveWallPhoto",
+        "group": "photos",
+        "title": "saveWallPhoto",
+        "url": "https://dev.vk.com/ru/method/photos.saveWallPhoto"
+      },
+      {
+        "id": "photos.search",
+        "name": "search",
+        "group": "photos",
+        "title": "search",
+        "url": "https://dev.vk.com/ru/method/photos.search"
+      }
+    ],
+    "account": [
+      {
+        "id": "account.getAppPermissions",
+        "name": "getAppPermissions",
+        "group": "account",
+        "title": "getAppPermissions",
+        "url": "https://dev.vk.com/ru/method/account.getAppPermissions"
+      }
+    ],
+    "ads": [
+      {
+        "id": "ads.addOfficeUsers",
+        "name": "addOfficeUsers",
+        "group": "ads",
+        "title": "addOfficeUsers",
+        "url": "https://dev.vk.com/ru/method/ads.addOfficeUsers"
+      },
+      {
+        "id": "ads.checkLink",
+        "name": "checkLink",
+        "group": "ads",
+        "title": "checkLink",
+        "url": "https://dev.vk.com/ru/method/ads.checkLink"
+      },
+      {
+        "id": "ads.createAds",
+        "name": "createAds",
+        "group": "ads",
+        "title": "createAds",
+        "url": "https://dev.vk.com/ru/method/ads.createAds"
+      },
+      {
+        "id": "ads.createCampaigns",
+        "name": "createCampaigns",
+        "group": "ads",
+        "title": "createCampaigns",
+        "url": "https://dev.vk.com/ru/method/ads.createCampaigns"
+      },
+      {
+        "id": "ads.createClients",
+        "name": "createClients",
+        "group": "ads",
+        "title": "createClients",
+        "url": "https://dev.vk.com/ru/method/ads.createClients"
+      },
+      {
+        "id": "ads.createLookalikeRequest",
+        "name": "createLookalikeRequest",
+        "group": "ads",
+        "title": "createLookalikeRequest",
+        "url": "https://dev.vk.com/ru/method/ads.createLookalikeRequest"
+      },
+      {
+        "id": "ads.createTargetGroup",
+        "name": "createTargetGroup",
+        "group": "ads",
+        "title": "createTargetGroup",
+        "url": "https://dev.vk.com/ru/method/ads.createTargetGroup"
+      },
+      {
+        "id": "ads.createTargetPixel",
+        "name": "createTargetPixel",
+        "group": "ads",
+        "title": "createTargetPixel",
+        "url": "https://dev.vk.com/ru/method/ads.createTargetPixel"
+      },
+      {
+        "id": "ads.deleteAds",
+        "name": "deleteAds",
+        "group": "ads",
+        "title": "deleteAds",
+        "url": "https://dev.vk.com/ru/method/ads.deleteAds"
+      },
+      {
+        "id": "ads.deleteCampaigns",
+        "name": "deleteCampaigns",
+        "group": "ads",
+        "title": "deleteCampaigns",
+        "url": "https://dev.vk.com/ru/method/ads.deleteCampaigns"
+      },
+      {
+        "id": "ads.deleteClients",
+        "name": "deleteClients",
+        "group": "ads",
+        "title": "deleteClients",
+        "url": "https://dev.vk.com/ru/method/ads.deleteClients"
+      },
+      {
+        "id": "ads.deleteTargetGroup",
+        "name": "deleteTargetGroup",
+        "group": "ads",
+        "title": "deleteTargetGroup",
+        "url": "https://dev.vk.com/ru/method/ads.deleteTargetGroup"
+      },
+      {
+        "id": "ads.deleteTargetPixel",
+        "name": "deleteTargetPixel",
+        "group": "ads",
+        "title": "deleteTargetPixel",
+        "url": "https://dev.vk.com/ru/method/ads.deleteTargetPixel"
+      },
+      {
+        "id": "ads.getAccounts",
+        "name": "getAccounts",
+        "group": "ads",
+        "title": "getAccounts",
+        "url": "https://dev.vk.com/ru/method/ads.getAccounts"
+      },
+      {
+        "id": "ads.getAds",
+        "name": "getAds",
+        "group": "ads",
+        "title": "getAds",
+        "url": "https://dev.vk.com/ru/method/ads.getAds"
+      },
+      {
+        "id": "ads.getAdsLayout",
+        "name": "getAdsLayout",
+        "group": "ads",
+        "title": "getAdsLayout",
+        "url": "https://dev.vk.com/ru/method/ads.getAdsLayout"
+      },
+      {
+        "id": "ads.getAdsTargeting",
+        "name": "getAdsTargeting",
+        "group": "ads",
+        "title": "getAdsTargeting",
+        "url": "https://dev.vk.com/ru/method/ads.getAdsTargeting"
+      },
+      {
+        "id": "ads.getBudget",
+        "name": "getBudget",
+        "group": "ads",
+        "title": "getBudget",
+        "url": "https://dev.vk.com/ru/method/ads.getBudget"
+      },
+      {
+        "id": "ads.getCampaigns",
+        "name": "getCampaigns",
+        "group": "ads",
+        "title": "getCampaigns",
+        "url": "https://dev.vk.com/ru/method/ads.getCampaigns"
+      },
+      {
+        "id": "ads.getCategories",
+        "name": "getCategories",
+        "group": "ads",
+        "title": "getCategories",
+        "url": "https://dev.vk.com/ru/method/ads.getCategories"
+      },
+      {
+        "id": "ads.getClients",
+        "name": "getClients",
+        "group": "ads",
+        "title": "getClients",
+        "url": "https://dev.vk.com/ru/method/ads.getClients"
+      },
+      {
+        "id": "ads.getDemographics",
+        "name": "getDemographics",
+        "group": "ads",
+        "title": "getDemographics",
+        "url": "https://dev.vk.com/ru/method/ads.getDemographics"
+      },
+      {
+        "id": "ads.getFloodStats",
+        "name": "getFloodStats",
+        "group": "ads",
+        "title": "getFloodStats",
+        "url": "https://dev.vk.com/ru/method/ads.getFloodStats"
+      },
+      {
+        "id": "ads.getLookalikeRequests",
+        "name": "getLookalikeRequests",
+        "group": "ads",
+        "title": "getLookalikeRequests",
+        "url": "https://dev.vk.com/ru/method/ads.getLookalikeRequests"
+      },
+      {
+        "id": "ads.getMusicians",
+        "name": "getMusicians",
+        "group": "ads",
+        "title": "getMusicians",
+        "url": "https://dev.vk.com/ru/method/ads.getMusicians"
+      },
+      {
+        "id": "ads.getMusiciansByIds",
+        "name": "getMusiciansByIds",
+        "group": "ads",
+        "title": "getMusiciansByIds",
+        "url": "https://dev.vk.com/ru/method/ads.getMusiciansByIds"
+      },
+      {
+        "id": "ads.getOfficeUsers",
+        "name": "getOfficeUsers",
+        "group": "ads",
+        "title": "getOfficeUsers",
+        "url": "https://dev.vk.com/ru/method/ads.getOfficeUsers"
+      },
+      {
+        "id": "ads.getPostsReach",
+        "name": "getPostsReach",
+        "group": "ads",
+        "title": "getPostsReach",
+        "url": "https://dev.vk.com/ru/method/ads.getPostsReach"
+      },
+      {
+        "id": "ads.getRejectionReason",
+        "name": "getRejectionReason",
+        "group": "ads",
+        "title": "getRejectionReason",
+        "url": "https://dev.vk.com/ru/method/ads.getRejectionReason"
+      },
+      {
+        "id": "ads.getStatistics",
+        "name": "getStatistics",
+        "group": "ads",
+        "title": "getStatistics",
+        "url": "https://dev.vk.com/ru/method/ads.getStatistics"
+      },
+      {
+        "id": "ads.getSuggestions",
+        "name": "getSuggestions",
+        "group": "ads",
+        "title": "getSuggestions",
+        "url": "https://dev.vk.com/ru/method/ads.getSuggestions"
+      },
+      {
+        "id": "ads.getTargetGroups",
+        "name": "getTargetGroups",
+        "group": "ads",
+        "title": "getTargetGroups",
+        "url": "https://dev.vk.com/ru/method/ads.getTargetGroups"
+      },
+      {
+        "id": "ads.getTargetPixels",
+        "name": "getTargetPixels",
+        "group": "ads",
+        "title": "getTargetPixels",
+        "url": "https://dev.vk.com/ru/method/ads.getTargetPixels"
+      },
+      {
+        "id": "ads.getTargetingStats",
+        "name": "getTargetingStats",
+        "group": "ads",
+        "title": "getTargetingStats",
+        "url": "https://dev.vk.com/ru/method/ads.getTargetingStats"
+      },
+      {
+        "id": "ads.getUploadURL",
+        "name": "getUploadURL",
+        "group": "ads",
+        "title": "getUploadURL",
+        "url": "https://dev.vk.com/ru/method/ads.getUploadURL"
+      },
+      {
+        "id": "ads.getVideoUploadURL",
+        "name": "getVideoUploadURL",
+        "group": "ads",
+        "title": "getVideoUploadURL",
+        "url": "https://dev.vk.com/ru/method/ads.getVideoUploadURL"
+      },
+      {
+        "id": "ads.importTargetContacts",
+        "name": "importTargetContacts",
+        "group": "ads",
+        "title": "importTargetContacts",
+        "url": "https://dev.vk.com/ru/method/ads.importTargetContacts"
+      },
+      {
+        "id": "ads.removeOfficeUsers",
+        "name": "removeOfficeUsers",
+        "group": "ads",
+        "title": "removeOfficeUsers",
+        "url": "https://dev.vk.com/ru/method/ads.removeOfficeUsers"
+      },
+      {
+        "id": "ads.removeTargetContacts",
+        "name": "removeTargetContacts",
+        "group": "ads",
+        "title": "removeTargetContacts",
+        "url": "https://dev.vk.com/ru/method/ads.removeTargetContacts"
+      },
+      {
+        "id": "ads.saveLookalikeRequestResult",
+        "name": "saveLookalikeRequestResult",
+        "group": "ads",
+        "title": "saveLookalikeRequestResult",
+        "url": "https://dev.vk.com/ru/method/ads.saveLookalikeRequestResult"
+      },
+      {
+        "id": "ads.shareTargetGroup",
+        "name": "shareTargetGroup",
+        "group": "ads",
+        "title": "shareTargetGroup",
+        "url": "https://dev.vk.com/ru/method/ads.shareTargetGroup"
+      },
+      {
+        "id": "ads.updateAds",
+        "name": "updateAds",
+        "group": "ads",
+        "title": "updateAds",
+        "url": "https://dev.vk.com/ru/method/ads.updateAds"
+      },
+      {
+        "id": "ads.updateCampaigns",
+        "name": "updateCampaigns",
+        "group": "ads",
+        "title": "updateCampaigns",
+        "url": "https://dev.vk.com/ru/method/ads.updateCampaigns"
+      },
+      {
+        "id": "ads.updateClients",
+        "name": "updateClients",
+        "group": "ads",
+        "title": "updateClients",
+        "url": "https://dev.vk.com/ru/method/ads.updateClients"
+      },
+      {
+        "id": "ads.updateOfficeUsers",
+        "name": "updateOfficeUsers",
+        "group": "ads",
+        "title": "updateOfficeUsers",
+        "url": "https://dev.vk.com/ru/method/ads.updateOfficeUsers"
+      },
+      {
+        "id": "ads.updateTargetGroup",
+        "name": "updateTargetGroup",
+        "group": "ads",
+        "title": "updateTargetGroup",
+        "url": "https://dev.vk.com/ru/method/ads.updateTargetGroup"
+      },
+      {
+        "id": "ads.updateTargetPixel",
+        "name": "updateTargetPixel",
+        "group": "ads",
+        "title": "updateTargetPixel",
+        "url": "https://dev.vk.com/ru/method/ads.updateTargetPixel"
+      }
+    ],
+    "appWidgets": [
+      {
+        "id": "appWidgets.getAppImageUploadServer",
+        "name": "getAppImageUploadServer",
+        "group": "appWidgets",
+        "title": "getAppImageUploadServer",
+        "url": "https://dev.vk.com/ru/method/appWidgets.getAppImageUploadServer"
+      },
+      {
+        "id": "appWidgets.getAppImages",
+        "name": "getAppImages",
+        "group": "appWidgets",
+        "title": "getAppImages",
+        "url": "https://dev.vk.com/ru/method/appWidgets.getAppImages"
+      },
+      {
+        "id": "appWidgets.getGroupImageUploadServer",
+        "name": "getGroupImageUploadServer",
+        "group": "appWidgets",
+        "title": "getGroupImageUploadServer",
+        "url": "https://dev.vk.com/ru/method/appWidgets.getGroupImageUploadServer"
+      },
+      {
+        "id": "appWidgets.getGroupImages",
+        "name": "getGroupImages",
+        "group": "appWidgets",
+        "title": "getGroupImages",
+        "url": "https://dev.vk.com/ru/method/appWidgets.getGroupImages"
+      },
+      {
+        "id": "appWidgets.getImagesById",
+        "name": "getImagesById",
+        "group": "appWidgets",
+        "title": "getImagesById",
+        "url": "https://dev.vk.com/ru/method/appWidgets.getImagesById"
+      },
+      {
+        "id": "appWidgets.saveAppImage",
+        "name": "saveAppImage",
+        "group": "appWidgets",
+        "title": "saveAppImage",
+        "url": "https://dev.vk.com/ru/method/appWidgets.saveAppImage"
+      },
+      {
+        "id": "appWidgets.saveGroupImage",
+        "name": "saveGroupImage",
+        "group": "appWidgets",
+        "title": "saveGroupImage",
+        "url": "https://dev.vk.com/ru/method/appWidgets.saveGroupImage"
+      },
+      {
+        "id": "appWidgets.update",
+        "name": "update",
+        "group": "appWidgets",
+        "title": "update",
+        "url": "https://dev.vk.com/ru/method/appWidgets.update"
+      }
+    ],
+    "apps": [
+      {
+        "id": "apps.addSnippet",
+        "name": "addSnippet",
+        "group": "apps",
+        "title": "addSnippet",
+        "url": "https://dev.vk.com/ru/method/apps.addSnippet"
+      },
+      {
+        "id": "apps.addUsersToTestingGroup",
+        "name": "addUsersToTestingGroup",
+        "group": "apps",
+        "title": "addUsersToTestingGroup",
+        "url": "https://dev.vk.com/ru/method/apps.addUsersToTestingGroup"
+      },
+      {
+        "id": "apps.deleteAppRequests",
+        "name": "deleteAppRequests",
+        "group": "apps",
+        "title": "deleteAppRequests",
+        "url": "https://dev.vk.com/ru/method/apps.deleteAppRequests"
+      },
+      {
+        "id": "apps.deleteSnippet",
+        "name": "deleteSnippet",
+        "group": "apps",
+        "title": "deleteSnippet",
+        "url": "https://dev.vk.com/ru/method/apps.deleteSnippet"
+      },
+      {
+        "id": "apps.get",
+        "name": "get",
+        "group": "apps",
+        "title": "get",
+        "url": "https://dev.vk.com/ru/method/apps.get"
+      },
+      {
+        "id": "apps.getCatalog",
+        "name": "getCatalog",
+        "group": "apps",
+        "title": "getCatalog",
+        "url": "https://dev.vk.com/ru/method/apps.getCatalog"
+      },
+      {
+        "id": "apps.getFriendsList",
+        "name": "getFriendsList",
+        "group": "apps",
+        "title": "getFriendsList",
+        "url": "https://dev.vk.com/ru/method/apps.getFriendsList"
+      },
+      {
+        "id": "apps.getLeaderboard",
+        "name": "getLeaderboard",
+        "group": "apps",
+        "title": "getLeaderboard",
+        "url": "https://dev.vk.com/ru/method/apps.getLeaderboard"
+      },
+      {
+        "id": "apps.getMiniAppPolicies",
+        "name": "getMiniAppPolicies",
+        "group": "apps",
+        "title": "getMiniAppPolicies",
+        "url": "https://dev.vk.com/ru/method/apps.getMiniAppPolicies"
+      },
+      {
+        "id": "apps.getScopes",
+        "name": "getScopes",
+        "group": "apps",
+        "title": "getScopes",
+        "url": "https://dev.vk.com/ru/method/apps.getScopes"
+      },
+      {
+        "id": "apps.getScore",
+        "name": "getScore",
+        "group": "apps",
+        "title": "getScore",
+        "url": "https://dev.vk.com/ru/method/apps.getScore"
+      },
+      {
+        "id": "apps.getSnippets",
+        "name": "getSnippets",
+        "group": "apps",
+        "title": "getSnippets",
+        "url": "https://dev.vk.com/ru/method/apps.getSnippets"
+      },
+      {
+        "id": "apps.getTestingGroups",
+        "name": "getTestingGroups",
+        "group": "apps",
+        "title": "getTestingGroups",
+        "url": "https://dev.vk.com/ru/method/apps.getTestingGroups"
+      },
+      {
+        "id": "apps.isNotificationsAllowed",
+        "name": "isNotificationsAllowed",
+        "group": "apps",
+        "title": "isNotificationsAllowed",
+        "url": "https://dev.vk.com/ru/method/apps.isNotificationsAllowed"
+      },
+      {
+        "id": "apps.promoHasActiveGift",
+        "name": "promoHasActiveGift",
+        "group": "apps",
+        "title": "promoHasActiveGift",
+        "url": "https://dev.vk.com/ru/method/apps.promoHasActiveGift"
+      },
+      {
+        "id": "apps.promoUseGift",
+        "name": "promoUseGift",
+        "group": "apps",
+        "title": "promoUseGift",
+        "url": "https://dev.vk.com/ru/method/apps.promoUseGift"
+      },
+      {
+        "id": "apps.removeTestingGroup",
+        "name": "removeTestingGroup",
+        "group": "apps",
+        "title": "removeTestingGroup",
+        "url": "https://dev.vk.com/ru/method/apps.removeTestingGroup"
+      },
+      {
+        "id": "apps.removeUsersFromTestingGroups",
+        "name": "removeUsersFromTestingGroups",
+        "group": "apps",
+        "title": "removeUsersFromTestingGroups",
+        "url": "https://dev.vk.com/ru/method/apps.removeUsersFromTestingGroups"
+      },
+      {
+        "id": "apps.sendRequest",
+        "name": "sendRequest",
+        "group": "apps",
+        "title": "sendRequest",
+        "url": "https://dev.vk.com/ru/method/apps.sendRequest"
+      },
+      {
+        "id": "apps.updateMetaForTestingGroup",
+        "name": "updateMetaForTestingGroup",
+        "group": "apps",
+        "title": "updateMetaForTestingGroup",
+        "url": "https://dev.vk.com/ru/method/apps.updateMetaForTestingGroup"
+      }
+    ],
+    "board": [
+      {
+        "id": "board.addTopic",
+        "name": "addTopic",
+        "group": "board",
+        "title": "addTopic",
+        "url": "https://dev.vk.com/ru/method/board.addTopic"
+      },
+      {
+        "id": "board.createComment",
+        "name": "createComment",
+        "group": "board",
+        "title": "createComment",
+        "url": "https://dev.vk.com/ru/method/board.createComment"
+      },
+      {
+        "id": "board.deleteComment",
+        "name": "deleteComment",
+        "group": "board",
+        "title": "deleteComment",
+        "url": "https://dev.vk.com/ru/method/board.deleteComment"
+      },
+      {
+        "id": "board.editComment",
+        "name": "editComment",
+        "group": "board",
+        "title": "editComment",
+        "url": "https://dev.vk.com/ru/method/board.editComment"
+      },
+      {
+        "id": "board.getComments",
+        "name": "getComments",
+        "group": "board",
+        "title": "getComments",
+        "url": "https://dev.vk.com/ru/method/board.getComments"
+      },
+      {
+        "id": "board.getTopics",
+        "name": "getTopics",
+        "group": "board",
+        "title": "getTopics",
+        "url": "https://dev.vk.com/ru/method/board.getTopics"
+      },
+      {
+        "id": "board.restoreComment",
+        "name": "restoreComment",
+        "group": "board",
+        "title": "restoreComment",
+        "url": "https://dev.vk.com/ru/method/board.restoreComment"
+      }
+    ],
+    "bugtracker": [
+      {
+        "id": "bugtracker.addCompanyGroupsMembers",
+        "name": "addCompanyGroupsMembers",
+        "group": "bugtracker",
+        "title": "addCompanyGroupsMembers",
+        "url": "https://dev.vk.com/ru/method/bugtracker.addCompanyGroupsMembers"
+      },
+      {
+        "id": "bugtracker.addCompanyMembers",
+        "name": "addCompanyMembers",
+        "group": "bugtracker",
+        "title": "addCompanyMembers",
+        "url": "https://dev.vk.com/ru/method/bugtracker.addCompanyMembers"
+      },
+      {
+        "id": "bugtracker.changeBugreportStatus",
+        "name": "changeBugreportStatus",
+        "group": "bugtracker",
+        "title": "changeBugreportStatus",
+        "url": "https://dev.vk.com/ru/method/bugtracker.changeBugreportStatus"
+      },
+      {
+        "id": "bugtracker.createComment",
+        "name": "createComment",
+        "group": "bugtracker",
+        "title": "createComment",
+        "url": "https://dev.vk.com/ru/method/bugtracker.createComment"
+      },
+      {
+        "id": "bugtracker.getBugreportById",
+        "name": "getBugreportById",
+        "group": "bugtracker",
+        "title": "getBugreportById",
+        "url": "https://dev.vk.com/ru/method/bugtracker.getBugreportById"
+      },
+      {
+        "id": "bugtracker.getCompanyGroupMembers",
+        "name": "getCompanyGroupMembers",
+        "group": "bugtracker",
+        "title": "getCompanyGroupMembers",
+        "url": "https://dev.vk.com/ru/method/bugtracker.getCompanyGroupMembers"
+      },
+      {
+        "id": "bugtracker.getCompanyMembers",
+        "name": "getCompanyMembers",
+        "group": "bugtracker",
+        "title": "getCompanyMembers",
+        "url": "https://dev.vk.com/ru/method/bugtracker.getCompanyMembers"
+      },
+      {
+        "id": "bugtracker.getDownloadVersionUrl",
+        "name": "getDownloadVersionUrl",
+        "group": "bugtracker",
+        "title": "getDownloadVersionUrl",
+        "url": "https://dev.vk.com/ru/method/bugtracker.getDownloadVersionUrl"
+      },
+      {
+        "id": "bugtracker.getProductBuildUploadServer",
+        "name": "getProductBuildUploadServer",
+        "group": "bugtracker",
+        "title": "getProductBuildUploadServer",
+        "url": "https://dev.vk.com/ru/method/bugtracker.getProductBuildUploadServer"
+      },
+      {
+        "id": "bugtracker.removeCompanyGroupMember",
+        "name": "removeCompanyGroupMember",
+        "group": "bugtracker",
+        "title": "removeCompanyGroupMember",
+        "url": "https://dev.vk.com/ru/method/bugtracker.removeCompanyGroupMember"
+      },
+      {
+        "id": "bugtracker.removeCompanyMember",
+        "name": "removeCompanyMember",
+        "group": "bugtracker",
+        "title": "removeCompanyMember",
+        "url": "https://dev.vk.com/ru/method/bugtracker.removeCompanyMember"
+      },
+      {
+        "id": "bugtracker.saveProductVersion",
+        "name": "saveProductVersion",
+        "group": "bugtracker",
+        "title": "saveProductVersion",
+        "url": "https://dev.vk.com/ru/method/bugtracker.saveProductVersion"
+      },
+      {
+        "id": "bugtracker.setCompanyMemberRole",
+        "name": "setCompanyMemberRole",
+        "group": "bugtracker",
+        "title": "setCompanyMemberRole",
+        "url": "https://dev.vk.com/ru/method/bugtracker.setCompanyMemberRole"
+      },
+      {
+        "id": "bugtracker.setProductIsOver",
+        "name": "setProductIsOver",
+        "group": "bugtracker",
+        "title": "setProductIsOver",
+        "url": "https://dev.vk.com/ru/method/bugtracker.setProductIsOver"
+      }
+    ],
+    "calls": [
+      {
+        "id": "calls.forceFinish",
+        "name": "forceFinish",
+        "group": "calls",
+        "title": "forceFinish",
+        "url": "https://dev.vk.com/ru/method/calls.forceFinish"
+      },
+      {
+        "id": "calls.start",
+        "name": "start",
+        "group": "calls",
+        "title": "start",
+        "url": "https://dev.vk.com/ru/method/calls.start"
+      }
+    ],
+    "crowdCustomer": [
+      {
+        "id": "crowdCustomer.createTaskJob",
+        "name": "createTaskJob",
+        "group": "crowdCustomer",
+        "title": "createTaskJob",
+        "url": "https://dev.vk.com/ru/method/crowdCustomer.createTaskJob"
+      },
+      {
+        "id": "crowdCustomer.getTaskResults",
+        "name": "getTaskResults",
+        "group": "crowdCustomer",
+        "title": "getTaskResults",
+        "url": "https://dev.vk.com/ru/method/crowdCustomer.getTaskResults"
+      }
+    ],
+    "database": [
+      {
+        "id": "database.getCities",
+        "name": "getCities",
+        "group": "database",
+        "title": "getCities",
+        "url": "https://dev.vk.com/ru/method/database.getCities"
+      },
+      {
+        "id": "database.getCitiesById",
+        "name": "getCitiesById",
+        "group": "database",
+        "title": "getCitiesById",
+        "url": "https://dev.vk.com/ru/method/database.getCitiesById"
+      },
+      {
+        "id": "database.getRegions",
+        "name": "getRegions",
+        "group": "database",
+        "title": "getRegions",
+        "url": "https://dev.vk.com/ru/method/database.getRegions"
+      }
+    ],
+    "docs": [
+      {
+        "id": "docs.get",
+        "name": "get",
+        "group": "docs",
+        "title": "get",
+        "url": "https://dev.vk.com/ru/method/docs.get"
+      },
+      {
+        "id": "docs.getById",
+        "name": "getById",
+        "group": "docs",
+        "title": "getById",
+        "url": "https://dev.vk.com/ru/method/docs.getById"
+      },
+      {
+        "id": "docs.getMessagesUploadServer",
+        "name": "getMessagesUploadServer",
+        "group": "docs",
+        "title": "getMessagesUploadServer",
+        "url": "https://dev.vk.com/ru/method/docs.getMessagesUploadServer"
+      },
+      {
+        "id": "docs.getWallUploadServer",
+        "name": "getWallUploadServer",
+        "group": "docs",
+        "title": "getWallUploadServer",
+        "url": "https://dev.vk.com/ru/method/docs.getWallUploadServer"
+      },
+      {
+        "id": "docs.save",
+        "name": "save",
+        "group": "docs",
+        "title": "save",
+        "url": "https://dev.vk.com/ru/method/docs.save"
+      }
+    ],
+    "donut": [
+      {
+        "id": "donut.getFriends",
+        "name": "getFriends",
+        "group": "donut",
+        "title": "getFriends",
+        "url": "https://dev.vk.com/ru/method/donut.getFriends"
+      },
+      {
+        "id": "donut.getSubscription",
+        "name": "getSubscription",
+        "group": "donut",
+        "title": "getSubscription",
+        "url": "https://dev.vk.com/ru/method/donut.getSubscription"
+      },
+      {
+        "id": "donut.getSubscriptions",
+        "name": "getSubscriptions",
+        "group": "donut",
+        "title": "getSubscriptions",
+        "url": "https://dev.vk.com/ru/method/donut.getSubscriptions"
+      }
+    ],
+    "friends": [
+      {
+        "id": "friends.areFriends",
+        "name": "areFriends",
+        "group": "friends",
+        "title": "areFriends",
+        "url": "https://dev.vk.com/ru/method/friends.areFriends"
+      },
+      {
+        "id": "friends.get",
+        "name": "get",
+        "group": "friends",
+        "title": "get",
+        "url": "https://dev.vk.com/ru/method/friends.get"
+      },
+      {
+        "id": "friends.getAppUsers",
+        "name": "getAppUsers",
+        "group": "friends",
+        "title": "getAppUsers",
+        "url": "https://dev.vk.com/ru/method/friends.getAppUsers"
+      },
+      {
+        "id": "friends.getLists",
+        "name": "getLists",
+        "group": "friends",
+        "title": "getLists",
+        "url": "https://dev.vk.com/ru/method/friends.getLists"
+      },
+      {
+        "id": "friends.getMutual",
+        "name": "getMutual",
+        "group": "friends",
+        "title": "getMutual",
+        "url": "https://dev.vk.com/ru/method/friends.getMutual"
+      },
+      {
+        "id": "friends.getOnline",
+        "name": "getOnline",
+        "group": "friends",
+        "title": "getOnline",
+        "url": "https://dev.vk.com/ru/method/friends.getOnline"
+      },
+      {
+        "id": "friends.getRecent",
+        "name": "getRecent",
+        "group": "friends",
+        "title": "getRecent",
+        "url": "https://dev.vk.com/ru/method/friends.getRecent"
+      },
+      {
+        "id": "friends.getRequests",
+        "name": "getRequests",
+        "group": "friends",
+        "title": "getRequests",
+        "url": "https://dev.vk.com/ru/method/friends.getRequests"
+      },
+      {
+        "id": "friends.getSuggestions",
+        "name": "getSuggestions",
+        "group": "friends",
+        "title": "getSuggestions",
+        "url": "https://dev.vk.com/ru/method/friends.getSuggestions"
+      },
+      {
+        "id": "friends.search",
+        "name": "search",
+        "group": "friends",
+        "title": "search",
+        "url": "https://dev.vk.com/ru/method/friends.search"
+      }
+    ],
+    "gifts": [
+      {
+        "id": "gifts.get",
+        "name": "get",
+        "group": "gifts",
+        "title": "get",
+        "url": "https://dev.vk.com/ru/method/gifts.get"
+      }
+    ],
+    "leadForms": [],
+    "likes": [
+      {
+        "id": "likes.getList",
+        "name": "getList",
+        "group": "likes",
+        "title": "getList",
+        "url": "https://dev.vk.com/ru/method/likes.getList"
+      },
+      {
+        "id": "likes.isLiked",
+        "name": "isLiked",
+        "group": "likes",
+        "title": "isLiked",
+        "url": "https://dev.vk.com/ru/method/likes.isLiked"
+      }
+    ],
+    "loyaltyTeen": [
+      {
+        "id": "loyaltyTeen.hasAccount",
+        "name": "hasAccount",
+        "group": "loyaltyTeen",
+        "title": "hasAccount",
+        "url": "https://dev.vk.com/ru/method/loyaltyTeen.hasAccount"
+      },
+      {
+        "id": "loyaltyTeen.hasAccounts",
+        "name": "hasAccounts",
+        "group": "loyaltyTeen",
+        "title": "hasAccounts",
+        "url": "https://dev.vk.com/ru/method/loyaltyTeen.hasAccounts"
+      },
+      {
+        "id": "loyaltyTeen.partnerCompleteAchievement",
+        "name": "partnerCompleteAchievement",
+        "group": "loyaltyTeen",
+        "title": "partnerCompleteAchievement",
+        "url": "https://dev.vk.com/ru/method/loyaltyTeen.partnerCompleteAchievement"
+      },
+      {
+        "id": "loyaltyTeen.partnerCompleteTask",
+        "name": "partnerCompleteTask",
+        "group": "loyaltyTeen",
+        "title": "partnerCompleteTask",
+        "url": "https://dev.vk.com/ru/method/loyaltyTeen.partnerCompleteTask"
+      },
+      {
+        "id": "loyaltyTeen.partnerCreateAccount",
+        "name": "partnerCreateAccount",
+        "group": "loyaltyTeen",
+        "title": "partnerCreateAccount",
+        "url": "https://dev.vk.com/ru/method/loyaltyTeen.partnerCreateAccount"
+      },
+      {
+        "id": "loyaltyTeen.partnerGetAchievements",
+        "name": "partnerGetAchievements",
+        "group": "loyaltyTeen",
+        "title": "partnerGetAchievements",
+        "url": "https://dev.vk.com/ru/method/loyaltyTeen.partnerGetAchievements"
+      },
+      {
+        "id": "loyaltyTeen.partnerGetBalance",
+        "name": "partnerGetBalance",
+        "group": "loyaltyTeen",
+        "title": "partnerGetBalance",
+        "url": "https://dev.vk.com/ru/method/loyaltyTeen.partnerGetBalance"
+      },
+      {
+        "id": "loyaltyTeen.partnerGetOffers",
+        "name": "partnerGetOffers",
+        "group": "loyaltyTeen",
+        "title": "partnerGetOffers",
+        "url": "https://dev.vk.com/ru/method/loyaltyTeen.partnerGetOffers"
+      },
+      {
+        "id": "loyaltyTeen.partnerGetTasks",
+        "name": "partnerGetTasks",
+        "group": "loyaltyTeen",
+        "title": "partnerGetTasks",
+        "url": "https://dev.vk.com/ru/method/loyaltyTeen.partnerGetTasks"
+      },
+      {
+        "id": "loyaltyTeen.partnerHasAccount",
+        "name": "partnerHasAccount",
+        "group": "loyaltyTeen",
+        "title": "partnerHasAccount",
+        "url": "https://dev.vk.com/ru/method/loyaltyTeen.partnerHasAccount"
+      },
+      {
+        "id": "loyaltyTeen.sumsubCallback",
+        "name": "sumsubCallback",
+        "group": "loyaltyTeen",
+        "title": "sumsubCallback",
+        "url": "https://dev.vk.com/ru/method/loyaltyTeen.sumsubCallback"
+      }
+    ],
+    "market": [
+      {
+        "id": "market.add",
+        "name": "add",
+        "group": "market",
+        "title": "add",
+        "url": "https://dev.vk.com/ru/method/market.add"
+      },
+      {
+        "id": "market.addAlbum",
+        "name": "addAlbum",
+        "group": "market",
+        "title": "addAlbum",
+        "url": "https://dev.vk.com/ru/method/market.addAlbum"
+      },
+      {
+        "id": "market.addProperty",
+        "name": "addProperty",
+        "group": "market",
+        "title": "addProperty",
+        "url": "https://dev.vk.com/ru/method/market.addProperty"
+      },
+      {
+        "id": "market.addPropertyVariant",
+        "name": "addPropertyVariant",
+        "group": "market",
+        "title": "addPropertyVariant",
+        "url": "https://dev.vk.com/ru/method/market.addPropertyVariant"
+      },
+      {
+        "id": "market.addToAlbum",
+        "name": "addToAlbum",
+        "group": "market",
+        "title": "addToAlbum",
+        "url": "https://dev.vk.com/ru/method/market.addToAlbum"
+      },
+      {
+        "id": "market.createComment",
+        "name": "createComment",
+        "group": "market",
+        "title": "createComment",
+        "url": "https://dev.vk.com/ru/method/market.createComment"
+      },
+      {
+        "id": "market.delete",
+        "name": "delete",
+        "group": "market",
+        "title": "delete",
+        "url": "https://dev.vk.com/ru/method/market.delete"
+      },
+      {
+        "id": "market.deleteAlbum",
+        "name": "deleteAlbum",
+        "group": "market",
+        "title": "deleteAlbum",
+        "url": "https://dev.vk.com/ru/method/market.deleteAlbum"
+      },
+      {
+        "id": "market.deleteComment",
+        "name": "deleteComment",
+        "group": "market",
+        "title": "deleteComment",
+        "url": "https://dev.vk.com/ru/method/market.deleteComment"
+      },
+      {
+        "id": "market.deleteProperty",
+        "name": "deleteProperty",
+        "group": "market",
+        "title": "deleteProperty",
+        "url": "https://dev.vk.com/ru/method/market.deleteProperty"
+      },
+      {
+        "id": "market.deletePropertyVariant",
+        "name": "deletePropertyVariant",
+        "group": "market",
+        "title": "deletePropertyVariant",
+        "url": "https://dev.vk.com/ru/method/market.deletePropertyVariant"
+      },
+      {
+        "id": "market.edit",
+        "name": "edit",
+        "group": "market",
+        "title": "edit",
+        "url": "https://dev.vk.com/ru/method/market.edit"
+      },
+      {
+        "id": "market.editAlbum",
+        "name": "editAlbum",
+        "group": "market",
+        "title": "editAlbum",
+        "url": "https://dev.vk.com/ru/method/market.editAlbum"
+      },
+      {
+        "id": "market.editComment",
+        "name": "editComment",
+        "group": "market",
+        "title": "editComment",
+        "url": "https://dev.vk.com/ru/method/market.editComment"
+      },
+      {
+        "id": "market.editOrder",
+        "name": "editOrder",
+        "group": "market",
+        "title": "editOrder",
+        "url": "https://dev.vk.com/ru/method/market.editOrder"
+      },
+      {
+        "id": "market.editProperty",
+        "name": "editProperty",
+        "group": "market",
+        "title": "editProperty",
+        "url": "https://dev.vk.com/ru/method/market.editProperty"
+      },
+      {
+        "id": "market.editPropertyVariant",
+        "name": "editPropertyVariant",
+        "group": "market",
+        "title": "editPropertyVariant",
+        "url": "https://dev.vk.com/ru/method/market.editPropertyVariant"
+      },
+      {
+        "id": "market.get",
+        "name": "get",
+        "group": "market",
+        "title": "get",
+        "url": "https://dev.vk.com/ru/method/market.get"
+      },
+      {
+        "id": "market.getAlbumById",
+        "name": "getAlbumById",
+        "group": "market",
+        "title": "getAlbumById",
+        "url": "https://dev.vk.com/ru/method/market.getAlbumById"
+      },
+      {
+        "id": "market.getAlbums",
+        "name": "getAlbums",
+        "group": "market",
+        "title": "getAlbums",
+        "url": "https://dev.vk.com/ru/method/market.getAlbums"
+      },
+      {
+        "id": "market.getById",
+        "name": "getById",
+        "group": "market",
+        "title": "getById",
+        "url": "https://dev.vk.com/ru/method/market.getById"
+      },
+      {
+        "id": "market.getCategories",
+        "name": "getCategories",
+        "group": "market",
+        "title": "getCategories",
+        "url": "https://dev.vk.com/ru/method/market.getCategories"
+      },
+      {
+        "id": "market.getComments",
+        "name": "getComments",
+        "group": "market",
+        "title": "getComments",
+        "url": "https://dev.vk.com/ru/method/market.getComments"
+      },
+      {
+        "id": "market.getCommunityReviews",
+        "name": "getCommunityReviews",
+        "group": "market",
+        "title": "getCommunityReviews",
+        "url": "https://dev.vk.com/ru/method/market.getCommunityReviews"
+      },
+      {
+        "id": "market.getGroupOrders",
+        "name": "getGroupOrders",
+        "group": "market",
+        "title": "getGroupOrders",
+        "url": "https://dev.vk.com/ru/method/market.getGroupOrders"
+      },
+      {
+        "id": "market.getOrderById",
+        "name": "getOrderById",
+        "group": "market",
+        "title": "getOrderById",
+        "url": "https://dev.vk.com/ru/method/market.getOrderById"
+      },
+      {
+        "id": "market.getOrderItems",
+        "name": "getOrderItems",
+        "group": "market",
+        "title": "getOrderItems",
+        "url": "https://dev.vk.com/ru/method/market.getOrderItems"
+      },
+      {
+        "id": "market.getOrders",
+        "name": "getOrders",
+        "group": "market",
+        "title": "getOrders",
+        "url": "https://dev.vk.com/ru/method/market.getOrders"
+      },
+      {
+        "id": "market.getProductPhotoUploadServer",
+        "name": "getProductPhotoUploadServer",
+        "group": "market",
+        "title": "getProductPhotoUploadServer",
+        "url": "https://dev.vk.com/ru/method/market.getProductPhotoUploadServer"
+      },
+      {
+        "id": "market.getProperties",
+        "name": "getProperties",
+        "group": "market",
+        "title": "getProperties",
+        "url": "https://dev.vk.com/ru/method/market.getProperties"
+      },
+      {
+        "id": "market.groupItems",
+        "name": "groupItems",
+        "group": "market",
+        "title": "groupItems",
+        "url": "https://dev.vk.com/ru/method/market.groupItems"
+      },
+      {
+        "id": "market.removeFromAlbum",
+        "name": "removeFromAlbum",
+        "group": "market",
+        "title": "removeFromAlbum",
+        "url": "https://dev.vk.com/ru/method/market.removeFromAlbum"
+      },
+      {
+        "id": "market.reorderAlbums",
+        "name": "reorderAlbums",
+        "group": "market",
+        "title": "reorderAlbums",
+        "url": "https://dev.vk.com/ru/method/market.reorderAlbums"
+      },
+      {
+        "id": "market.reorderItems",
+        "name": "reorderItems",
+        "group": "market",
+        "title": "reorderItems",
+        "url": "https://dev.vk.com/ru/method/market.reorderItems"
+      },
+      {
+        "id": "market.report",
+        "name": "report",
+        "group": "market",
+        "title": "report",
+        "url": "https://dev.vk.com/ru/method/market.report"
+      },
+      {
+        "id": "market.reportComment",
+        "name": "reportComment",
+        "group": "market",
+        "title": "reportComment",
+        "url": "https://dev.vk.com/ru/method/market.reportComment"
+      },
+      {
+        "id": "market.restore",
+        "name": "restore",
+        "group": "market",
+        "title": "restore",
+        "url": "https://dev.vk.com/ru/method/market.restore"
+      },
+      {
+        "id": "market.restoreComment",
+        "name": "restoreComment",
+        "group": "market",
+        "title": "restoreComment",
+        "url": "https://dev.vk.com/ru/method/market.restoreComment"
+      },
+      {
+        "id": "market.saveProductPhoto",
+        "name": "saveProductPhoto",
+        "group": "market",
+        "title": "saveProductPhoto",
+        "url": "https://dev.vk.com/ru/method/market.saveProductPhoto"
+      },
+      {
+        "id": "market.saveProductPhotoBulk",
+        "name": "saveProductPhotoBulk",
+        "group": "market",
+        "title": "saveProductPhotoBulk",
+        "url": "https://dev.vk.com/ru/method/market.saveProductPhotoBulk"
+      },
+      {
+        "id": "market.search",
+        "name": "search",
+        "group": "market",
+        "title": "search",
+        "url": "https://dev.vk.com/ru/method/market.search"
+      },
+      {
+        "id": "market.searchItems",
+        "name": "searchItems",
+        "group": "market",
+        "title": "searchItems",
+        "url": "https://dev.vk.com/ru/method/market.searchItems"
+      },
+      {
+        "id": "market.searchItemsBasic",
+        "name": "searchItemsBasic",
+        "group": "market",
+        "title": "searchItemsBasic",
+        "url": "https://dev.vk.com/ru/method/market.searchItemsBasic"
+      },
+      {
+        "id": "market.ungroupItems",
+        "name": "ungroupItems",
+        "group": "market",
+        "title": "ungroupItems",
+        "url": "https://dev.vk.com/ru/method/market.ungroupItems"
+      }
+    ],
+    "newsfeed": [
+      {
+        "id": "newsfeed.get",
+        "name": "get",
+        "group": "newsfeed",
+        "title": "get",
+        "url": "https://dev.vk.com/ru/method/newsfeed.get"
+      },
+      {
+        "id": "newsfeed.getBanned",
+        "name": "getBanned",
+        "group": "newsfeed",
+        "title": "getBanned",
+        "url": "https://dev.vk.com/ru/method/newsfeed.getBanned"
+      },
+      {
+        "id": "newsfeed.getComments",
+        "name": "getComments",
+        "group": "newsfeed",
+        "title": "getComments",
+        "url": "https://dev.vk.com/ru/method/newsfeed.getComments"
+      },
+      {
+        "id": "newsfeed.getMentions",
+        "name": "getMentions",
+        "group": "newsfeed",
+        "title": "getMentions",
+        "url": "https://dev.vk.com/ru/method/newsfeed.getMentions"
+      },
+      {
+        "id": "newsfeed.getRecommended",
+        "name": "getRecommended",
+        "group": "newsfeed",
+        "title": "getRecommended",
+        "url": "https://dev.vk.com/ru/method/newsfeed.getRecommended"
+      },
+      {
+        "id": "newsfeed.getSuggestedSources",
+        "name": "getSuggestedSources",
+        "group": "newsfeed",
+        "title": "getSuggestedSources",
+        "url": "https://dev.vk.com/ru/method/newsfeed.getSuggestedSources"
+      },
+      {
+        "id": "newsfeed.search",
+        "name": "search",
+        "group": "newsfeed",
+        "title": "search",
+        "url": "https://dev.vk.com/ru/method/newsfeed.search"
+      }
+    ],
+    "notifications": [
+      {
+        "id": "notifications.get",
+        "name": "get",
+        "group": "notifications",
+        "title": "get",
+        "url": "https://dev.vk.com/ru/method/notifications.get"
+      },
+      {
+        "id": "notifications.sendMessage",
+        "name": "sendMessage",
+        "group": "notifications",
+        "title": "sendMessage",
+        "url": "https://dev.vk.com/ru/method/notifications.sendMessage"
+      }
+    ],
+    "orders": [
+      {
+        "id": "orders.cancelSubscription",
+        "name": "cancelSubscription",
+        "group": "orders",
+        "title": "cancelSubscription",
+        "url": "https://dev.vk.com/ru/method/orders.cancelSubscription"
+      },
+      {
+        "id": "orders.changeState",
+        "name": "changeState",
+        "group": "orders",
+        "title": "changeState",
+        "url": "https://dev.vk.com/ru/method/orders.changeState"
+      },
+      {
+        "id": "orders.get",
+        "name": "get",
+        "group": "orders",
+        "title": "get",
+        "url": "https://dev.vk.com/ru/method/orders.get"
+      },
+      {
+        "id": "orders.getAmount",
+        "name": "getAmount",
+        "group": "orders",
+        "title": "getAmount",
+        "url": "https://dev.vk.com/ru/method/orders.getAmount"
+      },
+      {
+        "id": "orders.getById",
+        "name": "getById",
+        "group": "orders",
+        "title": "getById",
+        "url": "https://dev.vk.com/ru/method/orders.getById"
+      },
+      {
+        "id": "orders.getUserSubscriptionById",
+        "name": "getUserSubscriptionById",
+        "group": "orders",
+        "title": "getUserSubscriptionById",
+        "url": "https://dev.vk.com/ru/method/orders.getUserSubscriptionById"
+      },
+      {
+        "id": "orders.getUserSubscriptions",
+        "name": "getUserSubscriptions",
+        "group": "orders",
+        "title": "getUserSubscriptions",
+        "url": "https://dev.vk.com/ru/method/orders.getUserSubscriptions"
+      }
+    ],
+    "pages": [
+      {
+        "id": "pages.clearCache",
+        "name": "clearCache",
+        "group": "pages",
+        "title": "clearCache",
+        "url": "https://dev.vk.com/ru/method/pages.clearCache"
+      },
+      {
+        "id": "pages.get",
+        "name": "get",
+        "group": "pages",
+        "title": "get",
+        "url": "https://dev.vk.com/ru/method/pages.get"
+      },
+      {
+        "id": "pages.getHistory",
+        "name": "getHistory",
+        "group": "pages",
+        "title": "getHistory",
+        "url": "https://dev.vk.com/ru/method/pages.getHistory"
+      },
+      {
+        "id": "pages.getTitles",
+        "name": "getTitles",
+        "group": "pages",
+        "title": "getTitles",
+        "url": "https://dev.vk.com/ru/method/pages.getTitles"
+      },
+      {
+        "id": "pages.getVersion",
+        "name": "getVersion",
+        "group": "pages",
+        "title": "getVersion",
+        "url": "https://dev.vk.com/ru/method/pages.getVersion"
+      },
+      {
+        "id": "pages.parseWiki",
+        "name": "parseWiki",
+        "group": "pages",
+        "title": "parseWiki",
+        "url": "https://dev.vk.com/ru/method/pages.parseWiki"
+      },
+      {
+        "id": "pages.save",
+        "name": "save",
+        "group": "pages",
+        "title": "save",
+        "url": "https://dev.vk.com/ru/method/pages.save"
+      },
+      {
+        "id": "pages.saveAccess",
+        "name": "saveAccess",
+        "group": "pages",
+        "title": "saveAccess",
+        "url": "https://dev.vk.com/ru/method/pages.saveAccess"
+      }
+    ],
+    "partnerStats": [],
+    "podcasts": [
+      {
+        "id": "podcasts.searchPodcast",
+        "name": "searchPodcast",
+        "group": "podcasts",
+        "title": "searchPodcast",
+        "url": "https://dev.vk.com/ru/method/podcasts.searchPodcast"
+      }
+    ],
+    "polls": [
+      {
+        "id": "polls.create",
+        "name": "create",
+        "group": "polls",
+        "title": "create",
+        "url": "https://dev.vk.com/ru/method/polls.create"
+      },
+      {
+        "id": "polls.edit",
+        "name": "edit",
+        "group": "polls",
+        "title": "edit",
+        "url": "https://dev.vk.com/ru/method/polls.edit"
+      },
+      {
+        "id": "polls.getBackgrounds",
+        "name": "getBackgrounds",
+        "group": "polls",
+        "title": "getBackgrounds",
+        "url": "https://dev.vk.com/ru/method/polls.getBackgrounds"
+      },
+      {
+        "id": "polls.getById",
+        "name": "getById",
+        "group": "polls",
+        "title": "getById",
+        "url": "https://dev.vk.com/ru/method/polls.getById"
+      },
+      {
+        "id": "polls.getPhotoUploadServer",
+        "name": "getPhotoUploadServer",
+        "group": "polls",
+        "title": "getPhotoUploadServer",
+        "url": "https://dev.vk.com/ru/method/polls.getPhotoUploadServer"
+      },
+      {
+        "id": "polls.getVoters",
+        "name": "getVoters",
+        "group": "polls",
+        "title": "getVoters",
+        "url": "https://dev.vk.com/ru/method/polls.getVoters"
+      },
+      {
+        "id": "polls.savePhoto",
+        "name": "savePhoto",
+        "group": "polls",
+        "title": "savePhoto",
+        "url": "https://dev.vk.com/ru/method/polls.savePhoto"
+      }
+    ],
+    "prettyCards": [
+      {
+        "id": "prettyCards.create",
+        "name": "create",
+        "group": "prettyCards",
+        "title": "create",
+        "url": "https://dev.vk.com/ru/method/prettyCards.create"
+      },
+      {
+        "id": "prettyCards.delete",
+        "name": "delete",
+        "group": "prettyCards",
+        "title": "delete",
+        "url": "https://dev.vk.com/ru/method/prettyCards.delete"
+      },
+      {
+        "id": "prettyCards.edit",
+        "name": "edit",
+        "group": "prettyCards",
+        "title": "edit",
+        "url": "https://dev.vk.com/ru/method/prettyCards.edit"
+      },
+      {
+        "id": "prettyCards.get",
+        "name": "get",
+        "group": "prettyCards",
+        "title": "get",
+        "url": "https://dev.vk.com/ru/method/prettyCards.get"
+      },
+      {
+        "id": "prettyCards.getById",
+        "name": "getById",
+        "group": "prettyCards",
+        "title": "getById",
+        "url": "https://dev.vk.com/ru/method/prettyCards.getById"
+      },
+      {
+        "id": "prettyCards.getUploadURL",
+        "name": "getUploadURL",
+        "group": "prettyCards",
+        "title": "getUploadURL",
+        "url": "https://dev.vk.com/ru/method/prettyCards.getUploadURL"
+      }
+    ],
+    "search": [
+      {
+        "id": "search.getHints",
+        "name": "getHints",
+        "group": "search",
+        "title": "getHints",
+        "url": "https://dev.vk.com/ru/method/search.getHints"
+      }
+    ],
+    "secure": [
+      {
+        "id": "secure.addAppEvent",
+        "name": "addAppEvent",
+        "group": "secure",
+        "title": "addAppEvent",
+        "url": "https://dev.vk.com/ru/method/secure.addAppEvent"
+      },
+      {
+        "id": "secure.checkToken",
+        "name": "checkToken",
+        "group": "secure",
+        "title": "checkToken",
+        "url": "https://dev.vk.com/ru/method/secure.checkToken"
+      },
+      {
+        "id": "secure.getAppBalance",
+        "name": "getAppBalance",
+        "group": "secure",
+        "title": "getAppBalance",
+        "url": "https://dev.vk.com/ru/method/secure.getAppBalance"
+      },
+      {
+        "id": "secure.getTransactionsHistory",
+        "name": "getTransactionsHistory",
+        "group": "secure",
+        "title": "getTransactionsHistory",
+        "url": "https://dev.vk.com/ru/method/secure.getTransactionsHistory"
+      },
+      {
+        "id": "secure.getUserLevel",
+        "name": "getUserLevel",
+        "group": "secure",
+        "title": "getUserLevel",
+        "url": "https://dev.vk.com/ru/method/secure.getUserLevel"
+      },
+      {
+        "id": "secure.giveEventSticker",
+        "name": "giveEventSticker",
+        "group": "secure",
+        "title": "giveEventSticker",
+        "url": "https://dev.vk.com/ru/method/secure.giveEventSticker"
+      },
+      {
+        "id": "secure.sendNotification",
+        "name": "sendNotification",
+        "group": "secure",
+        "title": "sendNotification",
+        "url": "https://dev.vk.com/ru/method/secure.sendNotification"
+      },
+      {
+        "id": "secure.setCounter",
+        "name": "setCounter",
+        "group": "secure",
+        "title": "setCounter",
+        "url": "https://dev.vk.com/ru/method/secure.setCounter"
+      }
+    ],
+    "stats": [
+      {
+        "id": "stats.get",
+        "name": "get",
+        "group": "stats",
+        "title": "get",
+        "url": "https://dev.vk.com/ru/method/stats.get"
+      },
+      {
+        "id": "stats.getPostReach",
+        "name": "getPostReach",
+        "group": "stats",
+        "title": "getPostReach",
+        "url": "https://dev.vk.com/ru/method/stats.getPostReach"
+      },
+      {
+        "id": "stats.trackVisitor",
+        "name": "trackVisitor",
+        "group": "stats",
+        "title": "trackVisitor",
+        "url": "https://dev.vk.com/ru/method/stats.trackVisitor"
+      }
+    ],
+    "status": [
+      {
+        "id": "status.get",
+        "name": "get",
+        "group": "status",
+        "title": "get",
+        "url": "https://dev.vk.com/ru/method/status.get"
+      }
+    ],
+    "storage": [
+      {
+        "id": "storage.get",
+        "name": "get",
+        "group": "storage",
+        "title": "get",
+        "url": "https://dev.vk.com/ru/method/storage.get"
+      },
+      {
+        "id": "storage.getKeys",
+        "name": "getKeys",
+        "group": "storage",
+        "title": "getKeys",
+        "url": "https://dev.vk.com/ru/method/storage.getKeys"
+      },
+      {
+        "id": "storage.set",
+        "name": "set",
+        "group": "storage",
+        "title": "set",
+        "url": "https://dev.vk.com/ru/method/storage.set"
+      }
+    ],
+    "store": [
+      {
+        "id": "store.addStickersToFavorite",
+        "name": "addStickersToFavorite",
+        "group": "store",
+        "title": "addStickersToFavorite",
+        "url": "https://dev.vk.com/ru/method/store.addStickersToFavorite"
+      },
+      {
+        "id": "store.getFavoriteStickers",
+        "name": "getFavoriteStickers",
+        "group": "store",
+        "title": "getFavoriteStickers",
+        "url": "https://dev.vk.com/ru/method/store.getFavoriteStickers"
+      },
+      {
+        "id": "store.getProducts",
+        "name": "getProducts",
+        "group": "store",
+        "title": "getProducts",
+        "url": "https://dev.vk.com/ru/method/store.getProducts"
+      },
+      {
+        "id": "store.getStickersKeywords",
+        "name": "getStickersKeywords",
+        "group": "store",
+        "title": "getStickersKeywords",
+        "url": "https://dev.vk.com/ru/method/store.getStickersKeywords"
+      },
+      {
+        "id": "store.removeStickersFromFavorite",
+        "name": "removeStickersFromFavorite",
+        "group": "store",
+        "title": "removeStickersFromFavorite",
+        "url": "https://dev.vk.com/ru/method/store.removeStickersFromFavorite"
+      }
+    ],
+    "stories": [
+      {
+        "id": "stories.banOwner",
+        "name": "banOwner",
+        "group": "stories",
+        "title": "banOwner",
+        "url": "https://dev.vk.com/ru/method/stories.banOwner"
+      },
+      {
+        "id": "stories.delete",
+        "name": "delete",
+        "group": "stories",
+        "title": "delete",
+        "url": "https://dev.vk.com/ru/method/stories.delete"
+      },
+      {
+        "id": "stories.get",
+        "name": "get",
+        "group": "stories",
+        "title": "get",
+        "url": "https://dev.vk.com/ru/method/stories.get"
+      },
+      {
+        "id": "stories.getBanned",
+        "name": "getBanned",
+        "group": "stories",
+        "title": "getBanned",
+        "url": "https://dev.vk.com/ru/method/stories.getBanned"
+      },
+      {
+        "id": "stories.getById",
+        "name": "getById",
+        "group": "stories",
+        "title": "getById",
+        "url": "https://dev.vk.com/ru/method/stories.getById"
+      },
+      {
+        "id": "stories.getPhotoUploadServer",
+        "name": "getPhotoUploadServer",
+        "group": "stories",
+        "title": "getPhotoUploadServer",
+        "url": "https://dev.vk.com/ru/method/stories.getPhotoUploadServer"
+      },
+      {
+        "id": "stories.getReplies",
+        "name": "getReplies",
+        "group": "stories",
+        "title": "getReplies",
+        "url": "https://dev.vk.com/ru/method/stories.getReplies"
+      },
+      {
+        "id": "stories.getStats",
+        "name": "getStats",
+        "group": "stories",
+        "title": "getStats",
+        "url": "https://dev.vk.com/ru/method/stories.getStats"
+      },
+      {
+        "id": "stories.getVideoUploadServer",
+        "name": "getVideoUploadServer",
+        "group": "stories",
+        "title": "getVideoUploadServer",
+        "url": "https://dev.vk.com/ru/method/stories.getVideoUploadServer"
+      },
+      {
+        "id": "stories.getViewers",
+        "name": "getViewers",
+        "group": "stories",
+        "title": "getViewers",
+        "url": "https://dev.vk.com/ru/method/stories.getViewers"
+      },
+      {
+        "id": "stories.hideAllReplies",
+        "name": "hideAllReplies",
+        "group": "stories",
+        "title": "hideAllReplies",
+        "url": "https://dev.vk.com/ru/method/stories.hideAllReplies"
+      },
+      {
+        "id": "stories.hideReply",
+        "name": "hideReply",
+        "group": "stories",
+        "title": "hideReply",
+        "url": "https://dev.vk.com/ru/method/stories.hideReply"
+      },
+      {
+        "id": "stories.save",
+        "name": "save",
+        "group": "stories",
+        "title": "save",
+        "url": "https://dev.vk.com/ru/method/stories.save"
+      },
+      {
+        "id": "stories.search",
+        "name": "search",
+        "group": "stories",
+        "title": "search",
+        "url": "https://dev.vk.com/ru/method/stories.search"
+      },
+      {
+        "id": "stories.sendInteraction",
+        "name": "sendInteraction",
+        "group": "stories",
+        "title": "sendInteraction",
+        "url": "https://dev.vk.com/ru/method/stories.sendInteraction"
+      },
+      {
+        "id": "stories.unbanOwner",
+        "name": "unbanOwner",
+        "group": "stories",
+        "title": "unbanOwner",
+        "url": "https://dev.vk.com/ru/method/stories.unbanOwner"
+      }
+    ],
+    "translations": [
+      {
+        "id": "translations.translate",
+        "name": "translate",
+        "group": "translations",
+        "title": "translate",
+        "url": "https://dev.vk.com/ru/method/translations.translate"
+      }
+    ],
+    "userLinking": [],
+    "utils": [
+      {
+        "id": "utils.checkLink",
+        "name": "checkLink",
+        "group": "utils",
+        "title": "checkLink",
+        "url": "https://dev.vk.com/ru/method/utils.checkLink"
+      },
+      {
+        "id": "utils.deleteFromLastShortened",
+        "name": "deleteFromLastShortened",
+        "group": "utils",
+        "title": "deleteFromLastShortened",
+        "url": "https://dev.vk.com/ru/method/utils.deleteFromLastShortened"
+      },
+      {
+        "id": "utils.getLastShortenedLinks",
+        "name": "getLastShortenedLinks",
+        "group": "utils",
+        "title": "getLastShortenedLinks",
+        "url": "https://dev.vk.com/ru/method/utils.getLastShortenedLinks"
+      },
+      {
+        "id": "utils.getLinkStats",
+        "name": "getLinkStats",
+        "group": "utils",
+        "title": "getLinkStats",
+        "url": "https://dev.vk.com/ru/method/utils.getLinkStats"
+      },
+      {
+        "id": "utils.getServerTime",
+        "name": "getServerTime",
+        "group": "utils",
+        "title": "getServerTime",
+        "url": "https://dev.vk.com/ru/method/utils.getServerTime"
+      },
+      {
+        "id": "utils.getShortLink",
+        "name": "getShortLink",
+        "group": "utils",
+        "title": "getShortLink",
+        "url": "https://dev.vk.com/ru/method/utils.getShortLink"
+      },
+      {
+        "id": "utils.resolveScreenName",
+        "name": "resolveScreenName",
+        "group": "utils",
+        "title": "resolveScreenName",
+        "url": "https://dev.vk.com/ru/method/utils.resolveScreenName"
+      }
+    ],
+    "video": [
+      {
+        "id": "video.add",
+        "name": "add",
+        "group": "video",
+        "title": "add",
+        "url": "https://dev.vk.com/ru/method/video.add"
+      },
+      {
+        "id": "video.addAlbum",
+        "name": "addAlbum",
+        "group": "video",
+        "title": "addAlbum",
+        "url": "https://dev.vk.com/ru/method/video.addAlbum"
+      },
+      {
+        "id": "video.addToAlbum",
+        "name": "addToAlbum",
+        "group": "video",
+        "title": "addToAlbum",
+        "url": "https://dev.vk.com/ru/method/video.addToAlbum"
+      },
+      {
+        "id": "video.createComment",
+        "name": "createComment",
+        "group": "video",
+        "title": "createComment",
+        "url": "https://dev.vk.com/ru/method/video.createComment"
+      },
+      {
+        "id": "video.delete",
+        "name": "delete",
+        "group": "video",
+        "title": "delete",
+        "url": "https://dev.vk.com/ru/method/video.delete"
+      },
+      {
+        "id": "video.deleteAlbum",
+        "name": "deleteAlbum",
+        "group": "video",
+        "title": "deleteAlbum",
+        "url": "https://dev.vk.com/ru/method/video.deleteAlbum"
+      },
+      {
+        "id": "video.deleteComment",
+        "name": "deleteComment",
+        "group": "video",
+        "title": "deleteComment",
+        "url": "https://dev.vk.com/ru/method/video.deleteComment"
+      },
+      {
+        "id": "video.edit",
+        "name": "edit",
+        "group": "video",
+        "title": "edit",
+        "url": "https://dev.vk.com/ru/method/video.edit"
+      },
+      {
+        "id": "video.editAlbum",
+        "name": "editAlbum",
+        "group": "video",
+        "title": "editAlbum",
+        "url": "https://dev.vk.com/ru/method/video.editAlbum"
+      },
+      {
+        "id": "video.editComment",
+        "name": "editComment",
+        "group": "video",
+        "title": "editComment",
+        "url": "https://dev.vk.com/ru/method/video.editComment"
+      },
+      {
+        "id": "video.get",
+        "name": "get",
+        "group": "video",
+        "title": "get",
+        "url": "https://dev.vk.com/ru/method/video.get"
+      },
+      {
+        "id": "video.getAlbumById",
+        "name": "getAlbumById",
+        "group": "video",
+        "title": "getAlbumById",
+        "url": "https://dev.vk.com/ru/method/video.getAlbumById"
+      },
+      {
+        "id": "video.getAlbums",
+        "name": "getAlbums",
+        "group": "video",
+        "title": "getAlbums",
+        "url": "https://dev.vk.com/ru/method/video.getAlbums"
+      },
+      {
+        "id": "video.getAlbumsByVideo",
+        "name": "getAlbumsByVideo",
+        "group": "video",
+        "title": "getAlbumsByVideo",
+        "url": "https://dev.vk.com/ru/method/video.getAlbumsByVideo"
+      },
+      {
+        "id": "video.getComments",
+        "name": "getComments",
+        "group": "video",
+        "title": "getComments",
+        "url": "https://dev.vk.com/ru/method/video.getComments"
+      },
+      {
+        "id": "video.getLongPollServer",
+        "name": "getLongPollServer",
+        "group": "video",
+        "title": "getLongPollServer",
+        "url": "https://dev.vk.com/ru/method/video.getLongPollServer"
+      },
+      {
+        "id": "video.getOembed",
+        "name": "getOembed",
+        "group": "video",
+        "title": "getOembed",
+        "url": "https://dev.vk.com/ru/method/video.getOembed"
+      },
+      {
+        "id": "video.getPublicSectionFeed",
+        "name": "getPublicSectionFeed",
+        "group": "video",
+        "title": "getPublicSectionFeed",
+        "url": "https://dev.vk.com/ru/method/video.getPublicSectionFeed"
+      },
+      {
+        "id": "video.getThumbUploadUrl",
+        "name": "getThumbUploadUrl",
+        "group": "video",
+        "title": "getThumbUploadUrl",
+        "url": "https://dev.vk.com/ru/method/video.getThumbUploadUrl"
+      },
+      {
+        "id": "video.removeFromAlbum",
+        "name": "removeFromAlbum",
+        "group": "video",
+        "title": "removeFromAlbum",
+        "url": "https://dev.vk.com/ru/method/video.removeFromAlbum"
+      },
+      {
+        "id": "video.reorderAlbums",
+        "name": "reorderAlbums",
+        "group": "video",
+        "title": "reorderAlbums",
+        "url": "https://dev.vk.com/ru/method/video.reorderAlbums"
+      },
+      {
+        "id": "video.reorderVideos",
+        "name": "reorderVideos",
+        "group": "video",
+        "title": "reorderVideos",
+        "url": "https://dev.vk.com/ru/method/video.reorderVideos"
+      },
+      {
+        "id": "video.report",
+        "name": "report",
+        "group": "video",
+        "title": "report",
+        "url": "https://dev.vk.com/ru/method/video.report"
+      },
+      {
+        "id": "video.reportComment",
+        "name": "reportComment",
+        "group": "video",
+        "title": "reportComment",
+        "url": "https://dev.vk.com/ru/method/video.reportComment"
+      },
+      {
+        "id": "video.restore",
+        "name": "restore",
+        "group": "video",
+        "title": "restore",
+        "url": "https://dev.vk.com/ru/method/video.restore"
+      },
+      {
+        "id": "video.restoreComment",
+        "name": "restoreComment",
+        "group": "video",
+        "title": "restoreComment",
+        "url": "https://dev.vk.com/ru/method/video.restoreComment"
+      },
+      {
+        "id": "video.save",
+        "name": "save",
+        "group": "video",
+        "title": "save",
+        "url": "https://dev.vk.com/ru/method/video.save"
+      },
+      {
+        "id": "video.saveUploadedThumb",
+        "name": "saveUploadedThumb",
+        "group": "video",
+        "title": "saveUploadedThumb",
+        "url": "https://dev.vk.com/ru/method/video.saveUploadedThumb"
+      },
+      {
+        "id": "video.search",
+        "name": "search",
+        "group": "video",
+        "title": "search",
+        "url": "https://dev.vk.com/ru/method/video.search"
+      },
+      {
+        "id": "video.startStreaming",
+        "name": "startStreaming",
+        "group": "video",
+        "title": "startStreaming",
+        "url": "https://dev.vk.com/ru/method/video.startStreaming"
+      },
+      {
+        "id": "video.stopStreaming",
+        "name": "stopStreaming",
+        "group": "video",
+        "title": "stopStreaming",
+        "url": "https://dev.vk.com/ru/method/video.stopStreaming"
+      }
+    ],
+    "widgets": [
+      {
+        "id": "widgets.getComments",
+        "name": "getComments",
+        "group": "widgets",
+        "title": "getComments",
+        "url": "https://dev.vk.com/ru/method/widgets.getComments"
+      },
+      {
+        "id": "widgets.getPages",
+        "name": "getPages",
+        "group": "widgets",
+        "title": "getPages",
+        "url": "https://dev.vk.com/ru/method/widgets.getPages"
+      }
+    ]
+  }
+}
