@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappgyroscopestart",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppGyroscopeStart",
+  "title": "VKWebAppGyroscopeStart",
+  "h1": "VKWebAppGyroscopeStart",
+  "group": "Датчики",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

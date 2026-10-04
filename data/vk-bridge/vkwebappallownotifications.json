@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappallownotifications",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppAllowNotifications",
+  "title": "VKWebAppAllowNotifications",
+  "h1": "VKWebAppAllowNotifications",
+  "group": "Социальные механики и взаимодействие",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

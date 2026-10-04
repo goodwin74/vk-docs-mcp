@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappshowslidessheet",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppShowSlidesSheet",
+  "title": "VKWebAppShowSlidesSheet",
+  "h1": "VKWebAppShowSlidesSheet",
+  "group": "Текст и медиафайлы",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

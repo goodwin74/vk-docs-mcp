@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappshoworderbox",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppShowOrderBox",
+  "title": "VKWebAppShowOrderBox",
+  "h1": "VKWebAppShowOrderBox",
+  "group": "Покупки",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

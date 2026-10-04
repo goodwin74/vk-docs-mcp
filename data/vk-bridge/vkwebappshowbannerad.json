@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappshowbannerad",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppShowBannerAd",
+  "title": "VKWebAppShowBannerAd",
+  "h1": "VKWebAppShowBannerAd",
+  "group": "Баннеры",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

@@ -1,0 +1,15 @@
+{
+  "id": "vkwebapptapticimpactoccurred",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppTapticImpactOccurred",
+  "title": "VKWebAppTapticImpactOccurred",
+  "h1": "VKWebAppTapticImpactOccurred",
+  "group": "Виброотклик",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

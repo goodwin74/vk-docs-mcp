@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappallowmessagesfromgroup",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppAllowMessagesFromGroup",
+  "title": "VKWebAppAllowMessagesFromGroup",
+  "h1": "VKWebAppAllowMessagesFromGroup",
+  "group": "Сообщества",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

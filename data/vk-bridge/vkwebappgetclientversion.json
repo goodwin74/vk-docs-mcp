@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappgetclientversion",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppGetClientVersion",
+  "title": "VKWebAppGetClientVersion",
+  "h1": "VKWebAppGetClientVersion",
+  "group": "",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

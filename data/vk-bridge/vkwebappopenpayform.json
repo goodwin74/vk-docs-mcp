@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappopenpayform",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppOpenPayForm",
+  "title": "VKWebAppOpenPayForm",
+  "h1": "VKWebAppOpenPayForm",
+  "group": "Покупки",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

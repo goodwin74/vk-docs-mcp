@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappopenwallpost",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppOpenWallPost",
+  "title": "VKWebAppOpenWallPost",
+  "h1": "VKWebAppOpenWallPost",
+  "group": "Социальные механики и взаимодействие",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

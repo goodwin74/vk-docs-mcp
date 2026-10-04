@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappgetgroupinfo",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppGetGroupInfo",
+  "title": "VKWebAppGetGroupInfo",
+  "h1": "VKWebAppGetGroupInfo",
+  "group": "Сообщества",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

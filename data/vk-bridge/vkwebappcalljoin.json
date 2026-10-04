@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappcalljoin",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppCallJoin",
+  "title": "VKWebAppCallJoin",
+  "h1": "VKWebAppCallJoin",
+  "group": "Звонки",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

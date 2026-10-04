@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappdevicemotionstop",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppDeviceMotionStop",
+  "title": "VKWebAppDeviceMotionStop",
+  "h1": "VKWebAppDeviceMotionStop",
+  "group": "Датчики",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

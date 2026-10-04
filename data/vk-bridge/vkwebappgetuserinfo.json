@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappgetuserinfo",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppGetUserInfo",
+  "title": "VKWebAppGetUserInfo",
+  "h1": "VKWebAppGetUserInfo",
+  "group": "Пользователи",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

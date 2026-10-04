@@ -1,0 +1,20 @@
+{
+  "id": "vkwebappinit",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppInit",
+  "title": "VKWebAppInit",
+  "h1": "VKWebAppInit",
+  "group": "",
+  "description": "VKWebAppInit — метод для инициализации VK Bridge. Необходимо вызывать при загрузке мини-приложения. Без успешной инициализации некоторые методы могут работать некорректно.",
+  "examples": [
+    {
+      "lang": "js",
+      "code": "bridge.send('VKWebAppInit').then((data) => {\n  if (data.result) {\n    console.log('VK Bridge инициализирован');\n  }\n}).catch((error) => {\n  console.error(error);\n});"
+    }
+  ],
+  "params": [],
+  "returns": {
+    "description": "result: boolean — true, если мини-приложение успешно инициализировано"
+  },
+  "sections": [],
+  "contentText": "VKWebAppInit — метод для инициализации VK Bridge. Необходимо вызывать при загрузке мини-приложения."
+}

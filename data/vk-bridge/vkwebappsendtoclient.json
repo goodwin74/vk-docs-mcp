@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappsendtoclient",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppSendToClient",
+  "title": "VKWebAppSendToClient",
+  "h1": "VKWebAppSendToClient",
+  "group": "Навигация",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

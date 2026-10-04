@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappscrolltop",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppScrollTop",
+  "title": "VKWebAppScrollTop",
+  "h1": "VKWebAppScrollTop",
+  "group": "Навигация",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

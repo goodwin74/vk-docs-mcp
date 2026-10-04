@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappsetlocation",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppSetLocation",
+  "title": "VKWebAppSetLocation",
+  "h1": "VKWebAppSetLocation",
+  "group": "Навигация",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

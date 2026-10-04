@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappopencodereader",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppOpenCodeReader",
+  "title": "VKWebAppOpenCodeReader",
+  "h1": "VKWebAppOpenCodeReader",
+  "group": "Текст и медиафайлы",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

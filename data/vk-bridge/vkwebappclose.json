@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappclose",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppClose",
+  "title": "VKWebAppClose",
+  "h1": "VKWebAppClose",
+  "group": "Навигация",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

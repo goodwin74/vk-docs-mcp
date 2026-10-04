@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappopenapp",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppOpenApp",
+  "title": "VKWebAppOpenApp",
+  "h1": "VKWebAppOpenApp",
+  "group": "Навигация",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

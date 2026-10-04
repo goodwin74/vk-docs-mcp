@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappaccelerometerstop",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppAccelerometerStop",
+  "title": "VKWebAppAccelerometerStop",
+  "h1": "VKWebAppAccelerometerStop",
+  "group": "Датчики",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappchecknativeads",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppCheckNativeAds",
+  "title": "VKWebAppCheckNativeAds",
+  "h1": "VKWebAppCheckNativeAds",
+  "group": "Реклама",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

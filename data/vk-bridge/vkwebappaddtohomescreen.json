@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappaddtohomescreen",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppAddToHomeScreen",
+  "title": "VKWebAppAddToHomeScreen",
+  "h1": "VKWebAppAddToHomeScreen",
+  "group": "Социальные механики и взаимодействие",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

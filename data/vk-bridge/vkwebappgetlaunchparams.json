@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappgetlaunchparams",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppGetLaunchParams",
+  "title": "VKWebAppGetLaunchParams",
+  "h1": "VKWebAppGetLaunchParams",
+  "group": "",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

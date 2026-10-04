@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappdevicemotionstart",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppDeviceMotionStart",
+  "title": "VKWebAppDeviceMotionStart",
+  "h1": "VKWebAppDeviceMotionStart",
+  "group": "Датчики",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

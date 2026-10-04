@@ -1,0 +1,33 @@
+{
+  "id": "vkwebappstorageset",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppStorageSet",
+  "title": "VKWebAppStorageSet",
+  "h1": "VKWebAppStorageSet",
+  "group": "Хранилище VK Storage",
+  "description": "Сохранение данных в хранилище VK Storage.",
+  "examples": [
+    {
+      "lang": "js",
+      "code": "bridge.send('VKWebAppStorageSet', {\n  key: 'user_data',\n  value: JSON.stringify({ score: 100 })\n}).then((data) => {\n  console.log(data.result);\n});"
+    }
+  ],
+  "params": [
+    {
+      "name": "key",
+      "type": "string",
+      "required": true,
+      "description": "Ключ для хранения данных"
+    },
+    {
+      "name": "value",
+      "type": "string",
+      "required": true,
+      "description": "Значение в формате строки"
+    }
+  ],
+  "returns": {
+    "description": "result: boolean — true при успешном сохранении"
+  },
+  "sections": [],
+  "contentText": "Сохранение данных в хранилище VK Storage."
+}

@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappsetviewsettings",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppSetViewSettings",
+  "title": "VKWebAppSetViewSettings",
+  "h1": "VKWebAppSetViewSettings",
+  "group": "Внешний вид",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

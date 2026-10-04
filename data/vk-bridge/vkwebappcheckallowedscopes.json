@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappcheckallowedscopes",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppCheckAllowedScopes",
+  "title": "VKWebAppCheckAllowedScopes",
+  "h1": "VKWebAppCheckAllowedScopes",
+  "group": "Доступы и разрешения",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

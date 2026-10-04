@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappshowleaderboardbox",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppShowLeaderBoardBox",
+  "title": "VKWebAppShowLeaderBoardBox",
+  "h1": "VKWebAppShowLeaderBoardBox",
+  "group": "Социальные механики и взаимодействие",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

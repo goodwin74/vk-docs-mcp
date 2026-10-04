@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappcallleft",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppCallLeft",
+  "title": "VKWebAppCallLeft",
+  "h1": "VKWebAppCallLeft",
+  "group": "Звонки",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

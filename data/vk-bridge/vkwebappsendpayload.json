@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappsendpayload",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppSendPayload",
+  "title": "VKWebAppSendPayload",
+  "h1": "VKWebAppSendPayload",
+  "group": "Сообщества",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

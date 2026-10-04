@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappbanneradclosedbyuser",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppBannerAdClosedByUser",
+  "title": "VKWebAppBannerAdClosedByUser",
+  "h1": "VKWebAppBannerAdClosedByUser",
+  "group": "Баннеры",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

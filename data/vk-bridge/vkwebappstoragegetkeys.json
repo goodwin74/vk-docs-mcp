@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappstoragegetkeys",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppStorageGetKeys",
+  "title": "VKWebAppStorageGetKeys",
+  "h1": "VKWebAppStorageGetKeys",
+  "group": "Хранилище VK Storage",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

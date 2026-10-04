@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappaccelerometerstart",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppAccelerometerStart",
+  "title": "VKWebAppAccelerometerStart",
+  "h1": "VKWebAppAccelerometerStart",
+  "group": "Датчики",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

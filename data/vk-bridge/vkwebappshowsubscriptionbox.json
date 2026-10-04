@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappshowsubscriptionbox",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppShowSubscriptionBox",
+  "title": "VKWebAppShowSubscriptionBox",
+  "h1": "VKWebAppShowSubscriptionBox",
+  "group": "Покупки",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

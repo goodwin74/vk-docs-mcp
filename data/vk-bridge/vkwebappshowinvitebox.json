@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappshowinvitebox",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppShowInviteBox",
+  "title": "VKWebAppShowInviteBox",
+  "h1": "VKWebAppShowInviteBox",
+  "group": "Социальные механики и взаимодействие",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

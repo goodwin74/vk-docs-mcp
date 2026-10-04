@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappshowstorybox",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppShowStoryBox",
+  "title": "VKWebAppShowStoryBox",
+  "h1": "VKWebAppShowStoryBox",
+  "group": "Социальные механики и взаимодействие",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

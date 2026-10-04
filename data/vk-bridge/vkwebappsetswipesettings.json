@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappsetswipesettings",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppSetSwipeSettings",
+  "title": "VKWebAppSetSwipeSettings",
+  "h1": "VKWebAppSetSwipeSettings",
+  "group": "Навигация",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

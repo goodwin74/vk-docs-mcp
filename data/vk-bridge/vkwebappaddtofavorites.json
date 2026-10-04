@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappaddtofavorites",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppAddToFavorites",
+  "title": "VKWebAppAddToFavorites",
+  "h1": "VKWebAppAddToFavorites",
+  "group": "Социальные механики и взаимодействие",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

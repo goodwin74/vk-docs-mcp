@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappjoingroup",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppJoinGroup",
+  "title": "VKWebAppJoinGroup",
+  "h1": "VKWebAppJoinGroup",
+  "group": "Сообщества",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

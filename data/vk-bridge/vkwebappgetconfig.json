@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappgetconfig",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppGetConfig",
+  "title": "VKWebAppGetConfig",
+  "h1": "VKWebAppGetConfig",
+  "group": "",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappchangefragment",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppChangeFragment",
+  "title": "VKWebAppChangeFragment",
+  "h1": "VKWebAppChangeFragment",
+  "group": "Навигация",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

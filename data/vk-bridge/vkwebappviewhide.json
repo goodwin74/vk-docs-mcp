@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappviewhide",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppViewHide",
+  "title": "VKWebAppViewHide",
+  "h1": "VKWebAppViewHide",
+  "group": "Навигация",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

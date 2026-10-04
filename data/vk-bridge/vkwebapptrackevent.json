@@ -1,0 +1,15 @@
+{
+  "id": "vkwebapptrackevent",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppTrackEvent",
+  "title": "VKWebAppTrackEvent",
+  "h1": "VKWebAppTrackEvent",
+  "group": "Аналитика",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

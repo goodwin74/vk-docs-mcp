@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappdenynotifications",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppDenyNotifications",
+  "title": "VKWebAppDenyNotifications",
+  "h1": "VKWebAppDenyNotifications",
+  "group": "Социальные механики и взаимодействие",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

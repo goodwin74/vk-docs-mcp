@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappsecuretokenrequestaccess",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppSecureTokenRequestAccess",
+  "title": "VKWebAppSecureTokenRequestAccess",
+  "h1": "VKWebAppSecureTokenRequestAccess",
+  "group": "Аутентификация",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

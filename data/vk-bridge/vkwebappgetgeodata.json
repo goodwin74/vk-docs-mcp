@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappgetgeodata",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppGetGeodata",
+  "title": "VKWebAppGetGeodata",
+  "h1": "VKWebAppGetGeodata",
+  "group": "Пользователи",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

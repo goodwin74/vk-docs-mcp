@@ -1,0 +1,15 @@
+{
+  "id": "vkwebapplocationchanged",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppLocationChanged",
+  "title": "VKWebAppLocationChanged",
+  "h1": "VKWebAppLocationChanged",
+  "group": "Навигация",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

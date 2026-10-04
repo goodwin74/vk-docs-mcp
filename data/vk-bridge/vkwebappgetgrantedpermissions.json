@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappgetgrantedpermissions",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppGetGrantedPermissions",
+  "title": "VKWebAppGetGrantedPermissions",
+  "h1": "VKWebAppGetGrantedPermissions",
+  "group": "Доступы и разрешения",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

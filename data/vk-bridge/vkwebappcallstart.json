@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappcallstart",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppCallStart",
+  "title": "VKWebAppCallStart",
+  "h1": "VKWebAppCallStart",
+  "group": "Звонки",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

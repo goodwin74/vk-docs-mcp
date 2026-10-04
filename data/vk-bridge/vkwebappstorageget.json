@@ -1,0 +1,27 @@
+{
+  "id": "vkwebappstorageget",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppStorageGet",
+  "title": "VKWebAppStorageGet",
+  "h1": "VKWebAppStorageGet",
+  "group": "Хранилище VK Storage",
+  "description": "Получение данных из хранилища VK Storage по ключу.",
+  "examples": [
+    {
+      "lang": "js",
+      "code": "bridge.send('VKWebAppStorageGet', {\n  keys: [\"user_data\"]\n}).then((data) => {\n  console.log(data.keys);\n});"
+    }
+  ],
+  "params": [
+    {
+      "name": "keys",
+      "type": "array<string>",
+      "required": true,
+      "description": "Массив ключей для получения"
+    }
+  ],
+  "returns": {
+    "description": "keys: Array<{key: string, value: string}> — полученные данные"
+  },
+  "sections": [],
+  "contentText": "Получение данных из хранилища VK Storage по ключу."
+}

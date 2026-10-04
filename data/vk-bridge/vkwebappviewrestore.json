@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappviewrestore",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppViewRestore",
+  "title": "VKWebAppViewRestore",
+  "h1": "VKWebAppViewRestore",
+  "group": "Навигация",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

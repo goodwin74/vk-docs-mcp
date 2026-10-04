@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappflashsetlevel",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppFlashSetLevel",
+  "title": "VKWebAppFlashSetLevel",
+  "h1": "VKWebAppFlashSetLevel",
+  "group": "Фонарик",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

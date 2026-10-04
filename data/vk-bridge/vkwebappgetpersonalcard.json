@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappgetpersonalcard",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppGetPersonalCard",
+  "title": "VKWebAppGetPersonalCard",
+  "h1": "VKWebAppGetPersonalCard",
+  "group": "Пользователи",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

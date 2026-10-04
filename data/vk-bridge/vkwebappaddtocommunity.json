@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappaddtocommunity",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppAddToCommunity",
+  "title": "VKWebAppAddToCommunity",
+  "h1": "VKWebAppAddToCommunity",
+  "group": "Сообщества",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

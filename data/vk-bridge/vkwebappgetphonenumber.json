@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappgetphonenumber",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppGetPhoneNumber",
+  "title": "VKWebAppGetPhoneNumber",
+  "h1": "VKWebAppGetPhoneNumber",
+  "group": "Пользователи",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappcallgetstatus",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppCallGetStatus",
+  "title": "VKWebAppCallGetStatus",
+  "h1": "VKWebAppCallGetStatus",
+  "group": "Звонки",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

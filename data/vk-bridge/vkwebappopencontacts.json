@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappopencontacts",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppOpenContacts",
+  "title": "VKWebAppOpenContacts",
+  "h1": "VKWebAppOpenContacts",
+  "group": "Пользователи",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

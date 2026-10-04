@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappshare",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppShare",
+  "title": "VKWebAppShare",
+  "h1": "VKWebAppShare",
+  "group": "Социальные механики и взаимодействие",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

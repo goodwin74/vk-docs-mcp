@@ -1,0 +1,15 @@
+{
+  "id": "vkwebapprecommend",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppRecommend",
+  "title": "VKWebAppRecommend",
+  "h1": "VKWebAppRecommend",
+  "group": "Социальные механики и взаимодействие",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

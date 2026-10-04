@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappgetfriends",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppGetFriends",
+  "title": "VKWebAppGetFriends",
+  "h1": "VKWebAppGetFriends",
+  "group": "Пользователи",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

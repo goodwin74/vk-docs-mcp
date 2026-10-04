@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappscroll",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppScroll",
+  "title": "VKWebAppScroll",
+  "h1": "VKWebAppScroll",
+  "group": "Навигация",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

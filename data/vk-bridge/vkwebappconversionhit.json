@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappconversionhit",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppConversionHit",
+  "title": "VKWebAppConversionHit",
+  "h1": "VKWebAppConversionHit",
+  "group": "Аналитика",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

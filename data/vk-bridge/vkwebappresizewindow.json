@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappresizewindow",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppResizeWindow",
+  "title": "VKWebAppResizeWindow",
+  "h1": "VKWebAppResizeWindow",
+  "group": "Внешний вид",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

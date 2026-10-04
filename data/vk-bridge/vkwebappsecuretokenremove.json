@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappsecuretokenremove",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppSecureTokenRemove",
+  "title": "VKWebAppSecureTokenRemove",
+  "h1": "VKWebAppSecureTokenRemove",
+  "group": "Аутентификация",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

@@ -1,0 +1,15 @@
+{
+  "id": "vkwebapptapticnotificationoccurred",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppTapticNotificationOccurred",
+  "title": "VKWebAppTapticNotificationOccurred",
+  "h1": "VKWebAppTapticNotificationOccurred",
+  "group": "Виброотклик",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

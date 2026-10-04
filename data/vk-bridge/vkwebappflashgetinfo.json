@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappflashgetinfo",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppFlashGetInfo",
+  "title": "VKWebAppFlashGetInfo",
+  "h1": "VKWebAppFlashGetInfo",
+  "group": "Фонарик",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

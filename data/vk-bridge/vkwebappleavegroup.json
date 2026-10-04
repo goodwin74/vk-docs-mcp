@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappleavegroup",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppLeaveGroup",
+  "title": "VKWebAppLeaveGroup",
+  "h1": "VKWebAppLeaveGroup",
+  "group": "Сообщества",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

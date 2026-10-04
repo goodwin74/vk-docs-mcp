@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappscrolltopstop",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppScrollTopStop",
+  "title": "VKWebAppScrollTopStop",
+  "h1": "VKWebAppScrollTopStop",
+  "group": "Навигация",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

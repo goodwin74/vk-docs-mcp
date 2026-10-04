@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappgetcommunitytoken",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppGetCommunityToken",
+  "title": "VKWebAppGetCommunityToken",
+  "h1": "VKWebAppGetCommunityToken",
+  "group": "Доступы и разрешения",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

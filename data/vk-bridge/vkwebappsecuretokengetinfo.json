@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappsecuretokengetinfo",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppSecureTokenGetInfo",
+  "title": "VKWebAppSecureTokenGetInfo",
+  "h1": "VKWebAppSecureTokenGetInfo",
+  "group": "Аутентификация",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

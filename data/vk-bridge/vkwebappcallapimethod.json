@@ -1,0 +1,33 @@
+{
+  "id": "vkwebappcallapimethod",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppCallAPIMethod",
+  "title": "VKWebAppCallAPIMethod",
+  "h1": "VKWebAppCallAPIMethod",
+  "group": "",
+  "description": "Метод для вызова методов VK API из мини-приложения через VK Bridge.",
+  "examples": [
+    {
+      "lang": "js",
+      "code": "bridge.send('VKWebAppCallAPIMethod', {\n  method: 'users.get',\n  params: {\n    user_ids: '1',\n    v: '5.199'\n  }\n}).then((data) => {\n  console.log(data.response);\n});"
+    }
+  ],
+  "params": [
+    {
+      "name": "method",
+      "type": "string",
+      "required": true,
+      "description": "Название метода VK API"
+    },
+    {
+      "name": "params",
+      "type": "object",
+      "required": true,
+      "description": "Параметры вызываемого метода"
+    }
+  ],
+  "returns": {
+    "description": "response: object — результат выполнения метода VK API"
+  },
+  "sections": [],
+  "contentText": "Метод для вызова методов VK API из мини-приложения через VK Bridge."
+}

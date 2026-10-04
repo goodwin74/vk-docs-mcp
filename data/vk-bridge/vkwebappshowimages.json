@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappshowimages",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppShowImages",
+  "title": "VKWebAppShowImages",
+  "h1": "VKWebAppShowImages",
+  "group": "Текст и медиафайлы",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

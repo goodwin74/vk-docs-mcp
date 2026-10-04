@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappcopytext",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppCopyText",
+  "title": "VKWebAppCopyText",
+  "h1": "VKWebAppCopyText",
+  "group": "Текст и медиафайлы",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappupdateconfig",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppUpdateConfig",
+  "title": "VKWebAppUpdateConfig",
+  "h1": "VKWebAppUpdateConfig",
+  "group": "",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}

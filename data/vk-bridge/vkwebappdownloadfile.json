@@ -1,0 +1,15 @@
+{
+  "id": "vkwebappdownloadfile",
+  "url": "https://dev.vk.com/ru/bridge/VKWebAppDownloadFile",
+  "title": "VKWebAppDownloadFile",
+  "h1": "VKWebAppDownloadFile",
+  "group": "Текст и медиафайлы",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}
