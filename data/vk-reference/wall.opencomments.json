@@ -1,0 +1,47 @@
+{
+  "id": "wall.opencomments",
+  "url": "https://dev.vk.com/ru/method/wall.openComments",
+  "title": "wall.openComments | VK для разработчиков",
+  "h1": "wall.openComments",
+  "description": "Включает комментирование записи.",
+  "params": [
+    {
+      "name": "owner_id",
+      "type": "integer",
+      "required": true,
+      "description": "Обязательный параметр"
+    },
+    {
+      "name": "post_id",
+      "type": "positive",
+      "required": true,
+      "description": "Обязательный параметр"
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "Возвращает 1 в случае успеха."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "owner_idintegerОбязательный параметрpost_idpositiveОбязательный параметр"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Возвращает 1 в случае успеха."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Включает комментирование записи. Параметры: owner_idintegerОбязательный параметрpost_idpositiveОбязательный параметр Результат: Возвращает 1 в случае успеха. Коды ошибок: В ходе выполнения могут произойти общие ошибки",
+  "group": "wall"
+}

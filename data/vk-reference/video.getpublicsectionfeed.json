@@ -1,0 +1,53 @@
+{
+  "id": "video.getpublicsectionfeed",
+  "url": "https://dev.vk.com/ru/method/video.getPublicSectionFeed",
+  "title": "video.getPublicSectionFeed | VK для разработчиков",
+  "h1": "video.getPublicSectionFeed",
+  "description": "Метод позволяет получать ссылку на выбранный тематический фид.",
+  "params": [
+    {
+      "name": "section_name",
+      "type": "string",
+      "required": true,
+      "description": "Позволяет выбрать нужный фид. Доступные значения: •trends •sport •cybersport •for_kids •politics Обязательный параметр"
+    },
+    {
+      "name": "limit",
+      "type": "integer",
+      "required": false,
+      "description": "Позволяет выбрать количество видео в ответе. Доступные значения: •20 •50"
+    },
+    {
+      "name": "max_duration",
+      "type": "integer",
+      "required": false,
+      "description": "Позволяет выбрать максимальную длительность видео в ответе. Доступные значения: •61 •122"
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "URL-ссылка на json файл, в котором содержится запрашиваемая информация."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "section_namestringПозволяет выбрать нужный фид. Доступные значения: •trends •sport •cybersport •for_kids •politics Обязательный параметрlimitintegerПозволяет выбрать количество видео в ответе. Доступные значения: •20 •50 max_durationintegerПозволяет выбрать максимальную длительность видео в ответе. Доступные значения: •61 •122 access_token необязателен."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "URL-ссылка на json файл, в котором содержится запрашиваемая информация."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Метод позволяет получать ссылку на выбранный тематический фид. Параметры: section_namestringПозволяет выбрать нужный фид. Доступные значения: •trends •sport •cybersport •for_kids •politics Обязательный параметрlimitintegerПозволяет выбрать количество видео в ответе. Доступные значения: •20 •50 max_durationintegerПозволяет выбрать максимальную длительность видео в ответе. Доступные значения: •61 •122 access_token необязателен. Результат: URL-ссылка на json файл, в котором содержится запрашиваемая информация. Коды ошибок: В ходе выполнения могут произойти общие ошибки",
+  "group": "video"
+}

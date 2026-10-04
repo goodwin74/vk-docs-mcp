@@ -1,0 +1,37 @@
+{
+  "id": "video.getlongpollserver",
+  "url": "https://dev.vk.com/ru/method/video.getLongPollServer",
+  "title": "video.getLongPollServer | VK для разработчиков",
+  "h1": "video.getLongPollServer",
+  "description": "Позволяет получать данные о новых событиях трансляции в режиме реального времени.",
+  "params": [
+    {
+      "name": "owner_id",
+      "type": "integer",
+      "required": false,
+      "description": "Идентификатор пользователя или сообщества, которому принадлежит трансляция."
+    },
+    {
+      "name": "video_id",
+      "type": "positive",
+      "required": true,
+      "description": "Идентификатор трансляции.Обязательный параметр"
+    }
+  ],
+  "returns": [],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "owner_idintegerИдентификатор пользователя или сообщества, которому принадлежит трансляция.video_idpositiveИдентификатор трансляции.Обязательный параметр"
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "32Need wait В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Позволяет получать данные о новых событиях трансляции в режиме реального времени. Параметры: owner_idintegerИдентификатор пользователя или сообщества, которому принадлежит трансляция.video_idpositiveИдентификатор трансляции.Обязательный параметр Коды ошибок: 32Need wait В ходе выполнения могут произойти общие ошибки",
+  "group": "video"
+}

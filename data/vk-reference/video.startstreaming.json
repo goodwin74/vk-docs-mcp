@@ -1,0 +1,95 @@
+{
+  "id": "video.startstreaming",
+  "url": "https://dev.vk.com/ru/method/video.startStreaming",
+  "title": "video.startStreaming | VK для разработчиков",
+  "h1": "video.startStreaming",
+  "description": "Получает RTMP-адрес для трансляции видео.",
+  "params": [
+    {
+      "name": "video_id",
+      "type": "positive",
+      "required": false,
+      "description": "идентификатор заранее созданной трансляции, в которую нужно пустить поток"
+    },
+    {
+      "name": "name",
+      "type": "string",
+      "required": false,
+      "description": "название трансляции."
+    },
+    {
+      "name": "description",
+      "type": "string",
+      "required": false,
+      "description": "описание трансляции."
+    },
+    {
+      "name": "wallpost",
+      "type": "checkbox",
+      "required": false,
+      "description": "1 — опубликовать трансляцию на стене. По умолчанию: 0."
+    },
+    {
+      "name": "group_id",
+      "type": "integer",
+      "required": false,
+      "description": "идентификатор сообщества, в котором будет вестись трансляция."
+    },
+    {
+      "name": "privacy_view",
+      "type": "string",
+      "required": false,
+      "description": "настройки приватности просмотра видеозаписи в специальном формате."
+    },
+    {
+      "name": "privacy_comment",
+      "type": "string",
+      "required": false,
+      "description": "настройки приватности комментирования видеозаписи в специальном формате."
+    },
+    {
+      "name": "no_comments",
+      "type": "checkbox",
+      "required": false,
+      "description": "1 — отключить комментирование трансляции. По умолчанию: 0."
+    },
+    {
+      "name": "category_id",
+      "type": "integer",
+      "required": false,
+      "description": "идентификатор категории."
+    },
+    {
+      "name": "publish",
+      "type": "checkbox",
+      "required": false,
+      "description": "1 — опубликовать трансляцию, находящуюся в состоянии предпросмотра. По умолчанию: 0."
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "Возвращает объект, который содержит следующие поля: •owner_id (integer) — идентификатор владельца трансляции; •video_id (integer) — идентификатор трансляции; •name (string) — название трансляции; •description (string) — описание трансляции; •access_key (string) — ключ доступа к приватному объекту; •stream (object) — данные для загрузки видео. Объект, который содержит следующие поля: •url (string) — rtmp-адрес трансляции, если call = false. •key (string) — ключ доступа (фрагмент адреса), если call = false. •post_id (integer) — идентификатор записи на стене, в которой находится трансляция."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "video_idpositiveидентификатор заранее созданной трансляции, в которую нужно пустить потокnamestringназвание трансляции.descriptionstringописание трансляции.wallpostcheckbox1 — опубликовать трансляцию на стене. По умолчанию: 0.group_idintegerидентификатор сообщества, в котором будет вестись трансляция.privacy_viewstringнастройки приватности просмотра видеозаписи в специальном формате.privacy_commentstringнастройки приватности комментирования видеозаписи в специальном формате.no_commentscheckbox1 — отключить комментирование трансляции. По умолчанию: 0.category_idintegerидентификатор категории.publishcheckbox1 — опубликовать трансляцию, находящуюся в состоянии предпросмотра. По умолчанию: 0."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Возвращает объект, который содержит следующие поля: •owner_id (integer) — идентификатор владельца трансляции; •video_id (integer) — идентификатор трансляции; •name (string) — название трансляции; •description (string) — описание трансляции; •access_key (string) — ключ доступа к приватному объекту; •stream (object) — данные для загрузки видео. Объект, который содержит следующие поля: •url (string) — rtmp-адрес трансляции, если call = false. •key (string) — ключ доступа (фрагмент адреса), если call = false. •post_id (integer) — идентификатор записи на стене, в которой находится трансляция."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "204Access denied214Access to adding post denied219Advertisement post was recently added13000Content upload was denied due to active community strikes В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Получает RTMP-адрес для трансляции видео. Параметры: video_idpositiveидентификатор заранее созданной трансляции, в которую нужно пустить потокnamestringназвание трансляции.descriptionstringописание трансляции.wallpostcheckbox1 — опубликовать трансляцию на стене. По умолчанию: 0.group_idintegerидентификатор сообщества, в котором будет вестись трансляция.privacy_viewstringнастройки приватности просмотра видеозаписи в специальном формате.privacy_commentstringнастройки приватности комментирования видеозаписи в специальном формате.no_commentscheckbox1 — отключить комментирование трансляции. По умолчанию: 0.category_idintegerидентификатор категории.publishcheckbox1 — опубликовать трансляцию, находящуюся в состоянии предпросмотра. По умолчанию: 0. Результат: Возвращает объект, который содержит следующие поля: •owner_id (integer) — идентификатор владельца трансляции; •video_id (integer) — идентификатор трансляции; •name (string) — название трансляции; •description (string) — описание трансляции; •access_key (string) — ключ доступа к приватному объекту; •stream (object) — данные для загрузки видео. Объект, который содержит следующие поля: •url (string) — rtmp-адрес трансляции, если call = false. •key (string) — ключ доступа (фрагмент адреса), если call = false. •post_id (integer) — идентификатор записи на стене, в которой находится трансляция. Коды ошибок: 204Access denied214Access to adding post denied219Advertisement post was recently added13000Content upload was denied due to active community strikes В ходе выполнения могут произойти общие ошибки",
+  "group": "video"
+}

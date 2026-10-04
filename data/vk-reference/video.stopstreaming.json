@@ -1,0 +1,47 @@
+{
+  "id": "video.stopstreaming",
+  "url": "https://dev.vk.com/ru/method/video.stopStreaming",
+  "title": "video.stopStreaming | VK для разработчиков",
+  "h1": "video.stopStreaming",
+  "description": "Завершает трансляцию.",
+  "params": [
+    {
+      "name": "group_id",
+      "type": "integer",
+      "required": false,
+      "description": "идентификатор сообщества, в котором ведется трансляция"
+    },
+    {
+      "name": "video_id",
+      "type": "positive",
+      "required": false,
+      "description": "идентификатор трансляции."
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "Возвращает объект, который содержит следующие поля: •unique_viewers (integer) — количество уникальных зрителей трансляции;"
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "group_idintegerидентификатор сообщества, в котором ведется трансляцияvideo_idpositiveидентификатор трансляции."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Возвращает объект, который содержит следующие поля: •unique_viewers (integer) — количество уникальных зрителей трансляции;"
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Завершает трансляцию. Параметры: group_idintegerидентификатор сообщества, в котором ведется трансляцияvideo_idpositiveидентификатор трансляции. Результат: Возвращает объект, который содержит следующие поля: •unique_viewers (integer) — количество уникальных зрителей трансляции; Коды ошибок: В ходе выполнения могут произойти общие ошибки",
+  "group": "video"
+}

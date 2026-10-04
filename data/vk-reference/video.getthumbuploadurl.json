@@ -1,0 +1,31 @@
+{
+  "id": "video.getthumbuploadurl",
+  "url": "https://dev.vk.com/ru/method/video.getThumbUploadUrl",
+  "title": "video.getThumbUploadUrl | VK для разработчиков",
+  "h1": "video.getThumbUploadUrl",
+  "description": "integer",
+  "params": [
+    {
+      "name": "owner_id",
+      "type": "integer",
+      "required": true,
+      "description": "Обязательный параметр"
+    }
+  ],
+  "returns": [],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "owner_idintegerОбязательный параметр"
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "integer Параметры: owner_idintegerОбязательный параметр Коды ошибок: В ходе выполнения могут произойти общие ошибки",
+  "group": "video"
+}
