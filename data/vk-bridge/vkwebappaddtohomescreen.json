@@ -1,15 +1,76 @@
 {
   "id": "vkwebappaddtohomescreen",
   "url": "https://dev.vk.com/ru/bridge/VKWebAppAddToHomeScreen",
-  "title": "VKWebAppAddToHomeScreen",
+  "title": "VK Bridge | VKWebAppAddToHomeScreen | VK для разработчиков",
   "h1": "VKWebAppAddToHomeScreen",
   "group": "Социальные механики и взаимодействие",
-  "description": "",
-  "examples": [],
+  "description": "VKWebAppAddToHomeScreen показывает окно с предложением добавить ярлык мини-приложения или игры на экран устройства. Чтобы убедиться, что ярлык ещё не был добавлен, вызовите событие VKWebAppAddToHomeScreenInfo.",
+  "examples": [
+    {
+      "lang": "javascript",
+      "code": "bridge.send('VKWebAppAddToHomeScreen')\n  .then((data) => { \n    if (data.result) {\n      // Ярлык мини-приложения или игры добавлен на экран устройства\n    }\n  })\n  .catch((error) => {\n    // Ошибка\n    console.log(error);\n  });"
+    },
+    {
+      "lang": "javascript",
+      "code": "{\n  detail: {\n    type: \"VKWebAppAddToHomeScreenResult\",\n    data: {\n      result: true\n    }\n  }\n}"
+    }
+  ],
   "params": [],
   "returns": {
-    "description": ""
+    "description": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppAddToHomeScreenResult и VKWebAppAddToHomeScreenFailed. Подробнее о проверке результатов при вызовах VK Bridge. Возможные ошибки: •This action cannot be performed in the background, если мини-приложение или игра запущены в фоновом режиме. •User denied, если пользователь запретил доступ. result (boolean): true, если ярлык мини-приложения или игры добавлен на главный экран устройства."
   },
-  "sections": [],
-  "contentText": ""
+  "sections": [
+    {
+      "level": 2,
+      "title": "Пример",
+      "text": "JavaScriptbridge.send('VKWebAppAddToHomeScreen') .then((data) => { if (data.result) { // Ярлык мини-приложения или игры добавлен на экран устройства } }) .catch((error) => { // Ошибка console.log(error); });"
+    },
+    {
+      "level": 2,
+      "title": "Совместимость",
+      "text": "ПлощадкиПлатформыВКонтактеAndroidОдноклассники–"
+    },
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "—"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppAddToHomeScreenResult и VKWebAppAddToHomeScreenFailed. Подробнее о проверке результатов при вызовах VK Bridge. Возможные ошибки: •This action cannot be performed in the background, если мини-приложение или игра запущены в фоновом режиме. •User denied, если пользователь запретил доступ."
+    },
+    {
+      "level": 3,
+      "title": "Объект Promise",
+      "text": "Если вызов к платформе прошёл успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект со следующим полем: ПолеТипОписаниеresultbooleantrue, если ярлык мини-приложения или игры добавлен на главный экран устройства. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge."
+    },
+    {
+      "level": 3,
+      "title": "События",
+      "text": ""
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppAddToHomeScreenResult",
+      "text": "Сигнализирует, что ярлык мини-приложения или игры добавлен на главный экран устройства. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppAddToHomeScreenResult\", data: { result: true } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса."
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppAddToHomeScreenFailed",
+      "text": "Информирует об ошибке, которая произошла при взаимодействии с платформой. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge."
+    },
+    {
+      "level": 4,
+      "title": "Пример обработки событий",
+      "text": "Смотри раздел Обработка событий-результатов."
+    },
+    {
+      "level": 2,
+      "title": "Материалы по теме",
+      "text": "• Добавление игры на главный экран Android-устройства • VKWebAppAddToHomeScreenInfo"
+    }
+  ],
+  "compatibility": "ВКонтакте: Android; Одноклассники: –",
+  "contentText": "VKWebAppAddToHomeScreen показывает окно с предложением добавить ярлык мини-приложения или игры на экран устройства. Чтобы убедиться, что ярлык ещё не был добавлен, вызовите событие VKWebAppAddToHomeScreenInfo. Пример: JavaScriptbridge.send('VKWebAppAddToHomeScreen') .then((data) => { if (data.result) { // Ярлык мини-приложения или игры добавлен на экран устройства } }) .catch((error) => { // Ошибка console.log(error); }); Совместимость: ПлощадкиПлатформыВКонтактеAndroidОдноклассники– Параметры: — Результат: Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppAddToHomeScreenResult и VKWebAppAddToHomeScreenFailed. Подробнее о проверке результатов при вызовах VK Bridge. Возможные ошибки: •This action cannot be performed in the background, если мини-приложение или игра запущены в фоновом режиме. •User denied, если пользователь запретил доступ. Объект Promise: Если вызов к платформе прошёл успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект со следующим полем: ПолеТипОписаниеresultbooleantrue, если ярлык мини-приложения или игры добавлен на главный экран устройства. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge. События: VKWebAppAddToHomeScreenResult: Сигнализирует, что ярлык мини-приложения или игры добавлен на главный экран устройства. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppAddToHomeScreenResult\", data: { result: true } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса. VKWebAppAddToHomeScreenFailed: Информирует об ошибке, которая произошла при взаимодействии с платформой. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge. Пример обработки событий: Смотри раздел Обработка событий-результатов. Материалы по теме: • Добавление игры на главный экран Android-устройства • VKWebAppAddToHomeScreenInfo"
 }

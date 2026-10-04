@@ -1,15 +1,76 @@
 {
   "id": "vkwebappflashgetinfo",
   "url": "https://dev.vk.com/ru/bridge/VKWebAppFlashGetInfo",
-  "title": "VKWebAppFlashGetInfo",
+  "title": "VK Bridge | VKWebAppFlashGetInfo | VK для разработчиков",
   "h1": "VKWebAppFlashGetInfo",
   "group": "Фонарик",
-  "description": "",
-  "examples": [],
+  "description": "VKWebAppFlashGetInfo получает информацию о фонарике на устройстве.",
+  "examples": [
+    {
+      "lang": "javascript",
+      "code": "bridge.send('VKWebAppFlashGetInfo')\n  .then((data) => { \n    if (data.is_available) {\n      // Данные о фонарике получены\n    }\n  })\n  .catch((error) => {\n    // Ошибка\n    console.log(error);\n  });"
+    },
+    {
+      "lang": "javascript",
+      "code": "{\n  detail: {\n    type: \"VKWebAppFlashGetInfoResult\",\n    data: {\n      is_available: true,\n      level: 0.5\n    }\n  }\n}"
+    }
+  ],
   "params": [],
   "returns": {
-    "description": ""
+    "description": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppFlashGetInfoResult и VKWebAppFlashGetInfoFailed. Подробнее о проверке результатов при вызовах VK Bridge. is_available (boolean): Информация о том, доступна ли работа с фонариком. Возможные значения: • true — работа с фонариком доступна. • false — работа с фонариком недоступна. level (float): Уровень яркости фонарика. Диапазон значений: от 0 до 1."
   },
-  "sections": [],
-  "contentText": ""
+  "sections": [
+    {
+      "level": 2,
+      "title": "Пример",
+      "text": "JavaScriptbridge.send('VKWebAppFlashGetInfo') .then((data) => { if (data.is_available) { // Данные о фонарике получены } }) .catch((error) => { // Ошибка console.log(error); });"
+    },
+    {
+      "level": 2,
+      "title": "Совместимость",
+      "text": "ПлощадкиПлатформыВКонтактеAndroid, iOSОдноклассникиAndroid, iOS"
+    },
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "—"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppFlashGetInfoResult и VKWebAppFlashGetInfoFailed. Подробнее о проверке результатов при вызовах VK Bridge."
+    },
+    {
+      "level": 3,
+      "title": "Объект Promise",
+      "text": "Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект со следующими полями: ПолеТипОписаниеis_available обязательноеbooleanИнформация о том, доступна ли работа с фонариком. Возможные значения: • true — работа с фонариком доступна. • false — работа с фонариком недоступна.levelfloatУровень яркости фонарика. Диапазон значений: от 0 до 1. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge."
+    },
+    {
+      "level": 3,
+      "title": "События",
+      "text": ""
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppFlashGetInfoResult",
+      "text": "Сигнализирует, что данные о фонарике получены. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppFlashGetInfoResult\", data: { is_available: true, level: 0.5 } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса."
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppFlashGetInfoFailed",
+      "text": "Информирует об ошибке, которая произошла при взаимодействии с платформой. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge."
+    },
+    {
+      "level": 4,
+      "title": "Пример обработки событий",
+      "text": "Подробнее — в разделе Обработка результата."
+    },
+    {
+      "level": 2,
+      "title": "Песочница",
+      "text": "VKWebAppFlashGetInfo"
+    }
+  ],
+  "compatibility": "ВКонтакте: Android, iOS; Одноклассники: Android, iOS",
+  "contentText": "VKWebAppFlashGetInfo получает информацию о фонарике на устройстве. Пример: JavaScriptbridge.send('VKWebAppFlashGetInfo') .then((data) => { if (data.is_available) { // Данные о фонарике получены } }) .catch((error) => { // Ошибка console.log(error); }); Совместимость: ПлощадкиПлатформыВКонтактеAndroid, iOSОдноклассникиAndroid, iOS Параметры: — Результат: Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppFlashGetInfoResult и VKWebAppFlashGetInfoFailed. Подробнее о проверке результатов при вызовах VK Bridge. Объект Promise: Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект со следующими полями: ПолеТипОписаниеis_available обязательноеbooleanИнформация о том, доступна ли работа с фонариком. Возможные значения: • true — работа с фонариком доступна. • false — работа с фонариком недоступна.levelfloatУровень яркости фонарика. Диапазон значений: от 0 до 1. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge. События: VKWebAppFlashGetInfoResult: Сигнализирует, что данные о фонарике получены. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppFlashGetInfoResult\", data: { is_available: true, level: 0.5 } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса. VKWebAppFlashGetInfoFailed: Информирует об ошибке, которая произошла при взаимодействии с платформой. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge. Пример обработки событий: Подробнее — в разделе Обработка результата. Песочница: VKWebAppFlashGetInfo"
 }

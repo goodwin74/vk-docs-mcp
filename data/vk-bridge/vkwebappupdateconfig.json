@@ -1,15 +1,51 @@
 {
   "id": "vkwebappupdateconfig",
   "url": "https://dev.vk.com/ru/bridge/VKWebAppUpdateConfig",
-  "title": "VKWebAppUpdateConfig",
+  "title": "VK Bridge | VKWebAppUpdateConfig | VK для разработчиков",
   "h1": "VKWebAppUpdateConfig",
   "group": "",
-  "description": "",
-  "examples": [],
+  "description": "VKWebAppUpdateConfig отправляется платформой, когда изменяется конфигурация мини-приложения или игры.",
+  "examples": [
+    {
+      "lang": "javascript",
+      "code": "bridge.subscribe((e) => {\n  if (e.detail.type === 'VKWebAppUpdateConfig') {\n    // Логика мини-приложения\n  }\n});"
+    },
+    {
+      "lang": "javascript",
+      "code": "{\n  detail: {\n    type: \"VKWebAppUpdateConfig\",\n    data: {\n      \"app\" : \"vkclient\",\n      \"app_id\" : \"6703670\",\n      \"appearance\" : \"light\",\n      \"insets\" : {\n          \"top\" : 0,\n          \"left\" : 0,\n          \"right\" : 0,\n          \"bottom\" : 0\n      },\n      \"scheme\": \"client_light\",\n      \"start_time\" : 1565272434.911599\n    }\n  }\n}"
+    }
+  ],
   "params": [],
   "returns": {
-    "description": ""
+    "description": "VKWebAppUpdateConfig сигнализирует, что информация получена. В качестве ответа платформа возвращает объект со следующими полями: ПолеТипПлатформаЗначениеadaptivitystringAndroid, iOSАдаптивная вёрстка. Возможные значения: • auto — автоматически выбирать вёрстку в зависимости от размера экрана. • adaptive – всегда использовать адаптивную вёрстку. • force_mobile – всегда использовать вёрстку для мобильных устройств.api_hoststringMobile Web, WebAPI-хост для вызовов, не использующих VK Bridge: api.vk.ru.appstringAndroid, iOSТип мобильного клиента. Возможные значения: • vkclient — приложение «ВКонтакте». • vkme — приложение «VK Мессенджер». • ok — приложение «Одноклассники».app_idstringAndroid, iOS, Mobile Web, WebИдентификатор приложения, которому соответствует нативное мобильное приложение ВКонтакте.appearancestringAndroid, iOS, Mobile Web, WebТема мини-приложения или игры. Возможные значения: • light— светлая тема. • dark — тёмная тема.back_buttonstringAndroid, iOSОтображение кнопки выхода из приложения на главном экране. Возможные значения: • back — «Назад». • close — «Закрыть». • none – не показывать кнопку.insetsobjectAndroid, iOSВеличина отступов, которые необходимо выдержать от края экрана до контента. Поля объекта: • right — отступ справа. • top — отступ сверху. • left — отступ слева. • bottom – отступ снизу. Если показана клавиатура, её высота будет указана в параметре bottom.integrationstringAndroid, iOS, Mobile Web, WebТип встраивания мини-приложения или игры. Возможные"
   },
-  "sections": [],
-  "contentText": ""
+  "sections": [
+    {
+      "level": 2,
+      "title": "Пример",
+      "text": "JavaScriptbridge.subscribe((e) => { if (e.detail.type === 'VKWebAppUpdateConfig') { // Логика мини-приложения } });"
+    },
+    {
+      "level": 2,
+      "title": "Совместимость",
+      "text": "ПлощадкиПлатформыВКонтактеAndroid, iOS, Mobile Web, WebОдноклассники–"
+    },
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "—"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "VKWebAppUpdateConfig сигнализирует, что информация получена. В качестве ответа платформа возвращает объект со следующими полями: ПолеТипПлатформаЗначениеadaptivitystringAndroid, iOSАдаптивная вёрстка. Возможные значения: • auto — автоматически выбирать вёрстку в зависимости от размера экрана. • adaptive – всегда использовать адаптивную вёрстку. • force_mobile – всегда использовать вёрстку для мобильных устройств.api_hoststringMobile Web, WebAPI-хост для вызовов, не использующих VK Bridge: api.vk.ru.appstringAndroid, iOSТип мобильного клиента. Возможные значения: • vkclient — приложение «ВКонтакте». • vkme — приложение «VK Мессенджер». • ok — приложение «Одноклассники».app_idstringAndroid, iOS, Mobile Web, WebИдентификатор приложения, которому соответствует нативное мобильное приложение ВКонтакте.appearancestringAndroid, iOS, Mobile Web, WebТема мини-приложения или игры. Возможные значения: • light— светлая тема. • dark — тёмная тема.back_buttonstringAndroid, iOSОтображение кнопки выхода из приложения на главном экране. Возможные значения: • back — «Назад». • close — «Закрыть». • none – не показывать кнопку.insetsobjectAndroid, iOSВеличина отступов, которые необходимо выдержать от края экрана до контента. Поля объекта: • right — отступ справа. • top — отступ сверху. • left — отступ слева. • bottom – отступ снизу. Если показана клавиатура, её высота будет указана в параметре bottom.integrationstringAndroid, iOS, Mobile Web, WebТип встраивания мини-приложения или игры. Возможные значения: • fullscreen – на весь экран. • content – встроено в контентную зону, например режим Split View в мобильном приложении или вторая колонка на сайте vk.com. • popup — всплывающее модальное окно. • popup_fullscreen — всплывающее окно на весь экран.idfvstringiOSИдентификатор для приложений от одного разработчика на устройстве iOS. Подробнее – в документации Apple.is_layerbooleanWebПоле приходит, если мини-приложение или игра открыты в слое.schemestringAndroid, iOS, Mobile Web, WebЦветовая"
+    },
+    {
+      "level": 2,
+      "title": "Пример обработки события",
+      "text": "Подробнее — в разделе Обработка результата."
+    }
+  ],
+  "compatibility": "ВКонтакте: Android, iOS, Mobile Web, Web; Одноклассники: –",
+  "contentText": "VKWebAppUpdateConfig отправляется платформой, когда изменяется конфигурация мини-приложения или игры. Пример: JavaScriptbridge.subscribe((e) => { if (e.detail.type === 'VKWebAppUpdateConfig') { // Логика мини-приложения } }); Совместимость: ПлощадкиПлатформыВКонтактеAndroid, iOS, Mobile Web, WebОдноклассники– Параметры: — Результат: VKWebAppUpdateConfig сигнализирует, что информация получена. В качестве ответа платформа возвращает объект со следующими полями: ПолеТипПлатформаЗначениеadaptivitystringAndroid, iOSАдаптивная вёрстка. Возможные значения: • auto — автоматически выбирать вёрстку в зависимости от размера экрана. • adaptive – всегда использовать адаптивную вёрстку. • force_mobile – всегда использовать вёрстку для мобильных устройств.api_hoststringMobile Web, WebAPI-хост для вызовов, не использующих VK Bridge: api.vk.ru.appstringAndroid, iOSТип мобильного клиента. Возможные значения: • vkclient — приложение «ВКонтакте». • vkme — приложение «VK Мессенджер». • ok — приложение «Одноклассники».app_idstringAndroid, iOS, Mobile Web, WebИдентификатор приложения, которому соответствует нативное мобильное приложение ВКонтакте.appearancestringAndroid, iOS, Mobile Web, WebТема мини-приложения или игры. Возможные значения: • light— светлая тема. • dark — тёмная тема.back_buttonstringAndroid, iOSОтображение кнопки выхода из приложения на главном экране. Возможные значения: • back — «Назад». • close — «Закрыть». • none – не показывать кнопку.insetsobjectAndroid, iOSВеличина отступов, которые необходимо выдержать от края экрана до контента. Поля объекта: • right — отступ справа. • top — отступ сверху. • left — отступ слева. • bottom – отступ снизу. Если показана клавиатура, её высота будет указана в параметре bottom.integrationstringAndroid, iOS, Mobile Web, WebТип встраивания мини-приложения или игры. Возможные значения: • fullscreen – на весь экран. • content – встроено в контентную зону, например режим Split View в мобильном приложении или вторая колонка на сайте vk.com. • popup — всплывающее модальное окно. • popup_fullscreen — всплывающее окно на весь экран.idfvstringiOSИдентификатор для приложений от одного разработчика на устройстве iOS. Подробнее – в документации Apple.is_layerbooleanWebПоле приходит, если мини-приложение или игра открыты в слое.schemestringAndroid, iOS, Mobile Web, WebЦветовая Пример обработки события: Подробнее — в разделе Обработка результата."
 }

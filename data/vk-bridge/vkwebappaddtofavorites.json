@@ -1,15 +1,81 @@
 {
   "id": "vkwebappaddtofavorites",
   "url": "https://dev.vk.com/ru/bridge/VKWebAppAddToFavorites",
-  "title": "VKWebAppAddToFavorites",
+  "title": "VK Bridge | VKWebAppAddToFavorites | VK для разработчиков",
   "h1": "VKWebAppAddToFavorites",
   "group": "Социальные механики и взаимодействие",
-  "description": "",
-  "examples": [],
+  "description": "Важно! Событие станет доступно пользователям после того, как ваше приложение пройдёт модерацию.",
+  "examples": [
+    {
+      "lang": "javascript",
+      "code": "bridge.send('VKWebAppAddToFavorites')\n  .then((data) => { \n    if (data.result) {\n      // Мини-приложение или игра добавлены в избранное\n    }\n  })\n  .catch((error) => {\n    // Ошибка\n    console.log(error);\n  });"
+    },
+    {
+      "lang": "javascript",
+      "code": "{\n  detail: {\n    type: \"VKWebAppAddToFavoritesResult\",\n    data: {\n      result: true\n    }\n  }\n}"
+    }
+  ],
   "params": [],
   "returns": {
-    "description": ""
+    "description": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppAddToFavoritesResult и VKWebAppAddToFavoritesFailed. Подробнее о проверке результатов при вызовах VK Bridge. Возможные ошибки: •This action cannot be performed in the background, если мини-приложение или игра запущены в фоновом режиме. •User denied, если пользователь закрыл окно с предложением добавить мини-приложение или игру в избранное. result (boolean): true, если мини-приложение или игра добавлены в избранное."
   },
-  "sections": [],
-  "contentText": ""
+  "sections": [
+    {
+      "level": 2,
+      "title": "Пример",
+      "text": "JavaScriptbridge.send('VKWebAppAddToFavorites') .then((data) => { if (data.result) { // Мини-приложение или игра добавлены в избранное } }) .catch((error) => { // Ошибка console.log(error); });"
+    },
+    {
+      "level": 2,
+      "title": "Совместимость",
+      "text": "ПлощадкиПлатформыВКонтактеAndroid, iOS, Mobile Web, WebОдноклассники–"
+    },
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "—"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppAddToFavoritesResult и VKWebAppAddToFavoritesFailed. Подробнее о проверке результатов при вызовах VK Bridge. Возможные ошибки: •This action cannot be performed in the background, если мини-приложение или игра запущены в фоновом режиме. •User denied, если пользователь закрыл окно с предложением добавить мини-приложение или игру в избранное."
+    },
+    {
+      "level": 3,
+      "title": "Объект Promise",
+      "text": "Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект со следующим полем: ПолеТипОписаниеresultbooleantrue, если мини-приложение или игра добавлены в избранное. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge."
+    },
+    {
+      "level": 3,
+      "title": "События",
+      "text": ""
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppAddToFavoritesResult",
+      "text": "Сигнализирует, что данные мини-приложение или игра добавлены в избранное. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppAddToFavoritesResult\", data: { result: true } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса."
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppAddToFavoritesFailed",
+      "text": "Информирует об ошибке, которая произошла при взаимодействии с платформой. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge."
+    },
+    {
+      "level": 4,
+      "title": "Пример обработки событий",
+      "text": "Подробнее — в разделе Обработка результата."
+    },
+    {
+      "level": 2,
+      "title": "Песочница",
+      "text": "VKWebAppAddToFavorites"
+    },
+    {
+      "level": 2,
+      "title": "Материалы по теме",
+      "text": "•Добавление Web-игры в левое меню ВКонтакте"
+    }
+  ],
+  "compatibility": "ВКонтакте: Android, iOS, Mobile Web, Web; Одноклассники: –",
+  "contentText": "Важно! Событие станет доступно пользователям после того, как ваше приложение пройдёт модерацию. Пример: JavaScriptbridge.send('VKWebAppAddToFavorites') .then((data) => { if (data.result) { // Мини-приложение или игра добавлены в избранное } }) .catch((error) => { // Ошибка console.log(error); }); Совместимость: ПлощадкиПлатформыВКонтактеAndroid, iOS, Mobile Web, WebОдноклассники– Параметры: — Результат: Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppAddToFavoritesResult и VKWebAppAddToFavoritesFailed. Подробнее о проверке результатов при вызовах VK Bridge. Возможные ошибки: •This action cannot be performed in the background, если мини-приложение или игра запущены в фоновом режиме. •User denied, если пользователь закрыл окно с предложением добавить мини-приложение или игру в избранное. Объект Promise: Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект со следующим полем: ПолеТипОписаниеresultbooleantrue, если мини-приложение или игра добавлены в избранное. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge. События: VKWebAppAddToFavoritesResult: Сигнализирует, что данные мини-приложение или игра добавлены в избранное. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppAddToFavoritesResult\", data: { result: true } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса. VKWebAppAddToFavoritesFailed: Информирует об ошибке, которая произошла при взаимодействии с платформой. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge. Пример обработки событий: Подробнее — в разделе Обработка результата. Песочница: VKWebAppAddToFavorites Материалы по теме: •Добавление Web-игры в левое меню ВКонтакте"
 }

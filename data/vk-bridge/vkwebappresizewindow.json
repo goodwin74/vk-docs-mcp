@@ -1,15 +1,89 @@
 {
   "id": "vkwebappresizewindow",
   "url": "https://dev.vk.com/ru/bridge/VKWebAppResizeWindow",
-  "title": "VKWebAppResizeWindow",
+  "title": "VK Bridge | Интерфейс и навигация | VKWebAppResizeWindow | VK для разработчиков",
   "h1": "VKWebAppResizeWindow",
   "group": "Внешний вид",
-  "description": "",
-  "examples": [],
-  "params": [],
+  "description": "VKWebAppResizeWindow изменяет ширину и высоту элемента iframe.",
+  "examples": [
+    {
+      "lang": "javascript",
+      "code": "bridge.send('VKWebAppResizeWindow', {\n  width: 800,\n  height: 1000\n  })\n  .then((data) => { \n    if (data.width) {\n      // Ширина и высота элемента iframe изменены\n    }\n  })\n  .catch((error) => {\n    // Ошибка\n    console.log(error);\n  });"
+    },
+    {
+      "lang": "javascript",
+      "code": "{\n  detail: {\n    type: \"VKWebAppResizeWindowResult\",\n    data: {\n      width: 800, \n      height: 1000 \n    }\n  }\n}"
+    }
+  ],
+  "params": [
+    {
+      "name": "width",
+      "type": "integer",
+      "required": false,
+      "description": "Ширина окна в пикселях. Диапазон значений: от 600 до 1000."
+    },
+    {
+      "name": "height",
+      "type": "string",
+      "required": false,
+      "description": "Высота окна в пикселях. Диапазон значений: от 500 до 10000."
+    }
+  ],
   "returns": {
-    "description": ""
+    "description": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppResizeWindowResult и VKWebAppResizeWindowFailed. Подробнее о проверке результатов при вызовах VK Bridge. width (integer): Ширина окна в пикселях. height (string): Высота окна в пикселях."
   },
-  "sections": [],
-  "contentText": ""
+  "sections": [
+    {
+      "level": 2,
+      "title": "Пример",
+      "text": "JavaScriptbridge.send('VKWebAppResizeWindow', { width: 800, height: 1000 }) .then((data) => { if (data.width) { // Ширина и высота элемента iframe изменены } }) .catch((error) => { // Ошибка console.log(error); });"
+    },
+    {
+      "level": 2,
+      "title": "Совместимость",
+      "text": "ПлощадкиПлатформыВКонтактеWebОдноклассникиWeb"
+    },
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "ПолеТипОписаниеwidth необязательноеintegerШирина окна в пикселях. Диапазон значений: от 600 до 1000.height необязательноеstringВысота окна в пикселях. Диапазон значений: от 500 до 10000."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppResizeWindowResult и VKWebAppResizeWindowFailed. Подробнее о проверке результатов при вызовах VK Bridge."
+    },
+    {
+      "level": 3,
+      "title": "Объект Promise",
+      "text": "Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект со следующими полями: ПолеТипОписаниеwidthintegerШирина окна в пикселях.heightstringВысота окна в пикселях. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge."
+    },
+    {
+      "level": 3,
+      "title": "События",
+      "text": ""
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppResizeWindowResult",
+      "text": "Сигнализирует, что ширина и высота элемента iframe изменены. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppResizeWindowResult\", data: { width: 800, height: 1000 } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса."
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppResizeWindowFailed",
+      "text": "Информирует об ошибке, которая произошла при взаимодействии с платформой. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge."
+    },
+    {
+      "level": 4,
+      "title": "Пример обработки событий",
+      "text": "Подробнее — в разделе Обработка результата."
+    },
+    {
+      "level": 2,
+      "title": "Песочница",
+      "text": "VKWebAppResizeWindow"
+    }
+  ],
+  "compatibility": "ВКонтакте: Web; Одноклассники: Web",
+  "contentText": "VKWebAppResizeWindow изменяет ширину и высоту элемента iframe. Пример: JavaScriptbridge.send('VKWebAppResizeWindow', { width: 800, height: 1000 }) .then((data) => { if (data.width) { // Ширина и высота элемента iframe изменены } }) .catch((error) => { // Ошибка console.log(error); }); Совместимость: ПлощадкиПлатформыВКонтактеWebОдноклассникиWeb Параметры: ПолеТипОписаниеwidth необязательноеintegerШирина окна в пикселях. Диапазон значений: от 600 до 1000.height необязательноеstringВысота окна в пикселях. Диапазон значений: от 500 до 10000. Результат: Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppResizeWindowResult и VKWebAppResizeWindowFailed. Подробнее о проверке результатов при вызовах VK Bridge. Объект Promise: Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект со следующими полями: ПолеТипОписаниеwidthintegerШирина окна в пикселях.heightstringВысота окна в пикселях. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge. События: VKWebAppResizeWindowResult: Сигнализирует, что ширина и высота элемента iframe изменены. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppResizeWindowResult\", data: { width: 800, height: 1000 } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса. VKWebAppResizeWindowFailed: Информирует об ошибке, которая произошла при взаимодействии с платформой. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge. Пример обработки событий: Подробнее — в разделе Обработка результата. Песочница: VKWebAppResizeWindow"
 }

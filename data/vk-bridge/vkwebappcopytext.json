@@ -1,15 +1,83 @@
 {
   "id": "vkwebappcopytext",
   "url": "https://dev.vk.com/ru/bridge/VKWebAppCopyText",
-  "title": "VKWebAppCopyText",
+  "title": "VK Bridge | VKWebAppCopyText | VK для разработчиков",
   "h1": "VKWebAppCopyText",
   "group": "Текст и медиафайлы",
-  "description": "",
-  "examples": [],
-  "params": [],
+  "description": "VKWebAppCopyText копирует переданный текст в буфер обмена.",
+  "examples": [
+    {
+      "lang": "javascript",
+      "code": "bridge.send('VKWebAppCopyText', {\n  text: 'Этот текст будет скопирован в буфер обмена.'\n  })\n  .then((data) => { \n    if (data.result) {\n      // Текст скопирован в буфер обмена\n    } else {\n      // Ошибка\n    }\n  })\n  .catch((error) => {\n    // Ошибка\n    console.log(error);\n  });"
+    },
+    {
+      "lang": "javascript",
+      "code": "{\n  detail: {\n    type: \"VKWebAppCopyTextResult\",\n    data: {\n      \"status\": \"success\",\n      \"payload\": {\n        \"name\": \"value\"\n      }\n    }\n  }\n}"
+    }
+  ],
+  "params": [
+    {
+      "name": "text",
+      "type": "string",
+      "required": true,
+      "description": "Текст, который будет размещён в буфере обмена."
+    }
+  ],
   "returns": {
-    "description": ""
+    "description": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppCopyTextResult и VKWebAppCopyTextFailed. Подробнее о проверке результатов при вызовах VK Bridge. Возможные ошибки: •This action cannot be performed in the background, если мини-приложение или игра запущены в фоновом режиме. result (boolean): true, если текст был скопирован в буфер обмена."
   },
-  "sections": [],
-  "contentText": ""
+  "sections": [
+    {
+      "level": 2,
+      "title": "Пример",
+      "text": "JavaScriptbridge.send('VKWebAppCopyText', { text: 'Этот текст будет скопирован в буфер обмена.' }) .then((data) => { if (data.result) { // Текст скопирован в буфер обмена } else { // Ошибка } }) .catch((error) => { // Ошибка console.log(error); });"
+    },
+    {
+      "level": 2,
+      "title": "Совместимость",
+      "text": "ПлощадкиПлатформыВКонтактеAndroid, iOS, Mobile Web, WebОдноклассникиAndroid, iOS, Mobile Web, Web"
+    },
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "ПолеТипОписаниеtext обязательноеstringТекст, который будет размещён в буфере обмена."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppCopyTextResult и VKWebAppCopyTextFailed. Подробнее о проверке результатов при вызовах VK Bridge. Возможные ошибки: •This action cannot be performed in the background, если мини-приложение или игра запущены в фоновом режиме."
+    },
+    {
+      "level": 3,
+      "title": "Объект Promise",
+      "text": "Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект со следующим полем: ПолеТипОписаниеresultbooleantrue, если текст был скопирован в буфер обмена. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge."
+    },
+    {
+      "level": 3,
+      "title": "События",
+      "text": ""
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppCopyTextResult",
+      "text": "Сигнализирует, что текст скопирован в буфер обмена. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppCopyTextResult\", data: { \"status\": \"success\", \"payload\": { \"name\": \"value\" } } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса."
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppCopyTextFailed",
+      "text": "Информирует об ошибке, которая произошла при взаимодействии с платформой. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge."
+    },
+    {
+      "level": 4,
+      "title": "Пример обработки событий",
+      "text": "Подробнее — в разделе Обработка результата."
+    },
+    {
+      "level": 2,
+      "title": "Песочница",
+      "text": "VKWebAppCopyText"
+    }
+  ],
+  "compatibility": "ВКонтакте: Android, iOS, Mobile Web, Web; Одноклассники: Android, iOS, Mobile Web, Web",
+  "contentText": "VKWebAppCopyText копирует переданный текст в буфер обмена. Пример: JavaScriptbridge.send('VKWebAppCopyText', { text: 'Этот текст будет скопирован в буфер обмена.' }) .then((data) => { if (data.result) { // Текст скопирован в буфер обмена } else { // Ошибка } }) .catch((error) => { // Ошибка console.log(error); }); Совместимость: ПлощадкиПлатформыВКонтактеAndroid, iOS, Mobile Web, WebОдноклассникиAndroid, iOS, Mobile Web, Web Параметры: ПолеТипОписаниеtext обязательноеstringТекст, который будет размещён в буфере обмена. Результат: Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppCopyTextResult и VKWebAppCopyTextFailed. Подробнее о проверке результатов при вызовах VK Bridge. Возможные ошибки: •This action cannot be performed in the background, если мини-приложение или игра запущены в фоновом режиме. Объект Promise: Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект со следующим полем: ПолеТипОписаниеresultbooleantrue, если текст был скопирован в буфер обмена. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge. События: VKWebAppCopyTextResult: Сигнализирует, что текст скопирован в буфер обмена. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppCopyTextResult\", data: { \"status\": \"success\", \"payload\": { \"name\": \"value\" } } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса. VKWebAppCopyTextFailed: Информирует об ошибке, которая произошла при взаимодействии с платформой. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge. Пример обработки событий: Подробнее — в разделе Обработка результата. Песочница: VKWebAppCopyText"
 }

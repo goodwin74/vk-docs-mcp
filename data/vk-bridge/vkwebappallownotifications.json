@@ -1,15 +1,81 @@
 {
   "id": "vkwebappallownotifications",
   "url": "https://dev.vk.com/ru/bridge/VKWebAppAllowNotifications",
-  "title": "VKWebAppAllowNotifications",
+  "title": "VK Bridge | VKWebAppAllowNotifications | VK для разработчиков",
   "h1": "VKWebAppAllowNotifications",
   "group": "Социальные механики и взаимодействие",
-  "description": "",
-  "examples": [],
+  "description": "Важно! Событие станет доступно пользователям после того, как ваше приложение пройдёт модерацию.",
+  "examples": [
+    {
+      "lang": "javascript",
+      "code": "bridge.send('VKWebAppAllowNotifications')\n  .then((data) => { \n    if (data.result) {\n      // Разрешение на отправку уведомлений мини-приложением или игрой получено\n    } else {\n      // Ошибка\n    }\n  })\n  .catch((error) => {\n    // Ошибка\n    console.log(error);\n  });"
+    },
+    {
+      "lang": "javascript",
+      "code": "{\n  detail: {\n    type: \"VKWebAppAllowNotificationsResult\",\n    data: {\n      result: true\n    }\n  }\n}"
+    }
+  ],
   "params": [],
   "returns": {
-    "description": ""
+    "description": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppAllowNotificationsResult и VKWebAppAllowNotificationsFailed. Подробнее о проверке результатов при вызовах VK Bridge. Возможные ошибки: •This action cannot be performed in the background, если мини-приложение или игра запущены в фоновом режиме. •User denied, если пользователь закрыл окно с запросом разрешения на отправку уведомлений от мини-приложения или игры. result (boolean): true, если разрешение на отправку уведомлений мини-приложением или игрой получено."
   },
-  "sections": [],
-  "contentText": ""
+  "sections": [
+    {
+      "level": 2,
+      "title": "Пример",
+      "text": "JavaScriptbridge.send('VKWebAppAllowNotifications') .then((data) => { if (data.result) { // Разрешение на отправку уведомлений мини-приложением или игрой получено } else { // Ошибка } }) .catch((error) => { // Ошибка console.log(error); });"
+    },
+    {
+      "level": 2,
+      "title": "Совместимость",
+      "text": "ПлощадкиПлатформыВКонтактеAndroid, iOS, Mobile Web, WebОдноклассникиAndroid, iOS, Mobile Web, Web"
+    },
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "—"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppAllowNotificationsResult и VKWebAppAllowNotificationsFailed. Подробнее о проверке результатов при вызовах VK Bridge. Возможные ошибки: •This action cannot be performed in the background, если мини-приложение или игра запущены в фоновом режиме. •User denied, если пользователь закрыл окно с запросом разрешения на отправку уведомлений от мини-приложения или игры."
+    },
+    {
+      "level": 3,
+      "title": "Объект Promise",
+      "text": "Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект со следующим полем: ПолеТипОписаниеresultbooleantrue, если разрешение на отправку уведомлений мини-приложением или игрой получено. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge."
+    },
+    {
+      "level": 3,
+      "title": "События",
+      "text": ""
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppAllowNotificationsResult",
+      "text": "Сигнализирует, что разрешение на отправку уведомлений мини-приложением или игрой получено. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppAllowNotificationsResult\", data: { result: true } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса."
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppAllowNotificationsFailed",
+      "text": "Информирует об ошибке, которая произошла при взаимодействии с платформой. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge."
+    },
+    {
+      "level": 4,
+      "title": "Пример обработки событий",
+      "text": "Подробнее — в разделе Обработка результата."
+    },
+    {
+      "level": 2,
+      "title": "Песочница",
+      "text": "VKWebAppAllowNotifications"
+    },
+    {
+      "level": 2,
+      "title": "Материалы по теме",
+      "text": "•Уведомления в мини-приложениях •Уведомления в играх •VKWebAppDenyNotifications"
+    }
+  ],
+  "compatibility": "ВКонтакте: Android, iOS, Mobile Web, Web; Одноклассники: Android, iOS, Mobile Web, Web",
+  "contentText": "Важно! Событие станет доступно пользователям после того, как ваше приложение пройдёт модерацию. Пример: JavaScriptbridge.send('VKWebAppAllowNotifications') .then((data) => { if (data.result) { // Разрешение на отправку уведомлений мини-приложением или игрой получено } else { // Ошибка } }) .catch((error) => { // Ошибка console.log(error); }); Совместимость: ПлощадкиПлатформыВКонтактеAndroid, iOS, Mobile Web, WebОдноклассникиAndroid, iOS, Mobile Web, Web Параметры: — Результат: Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppAllowNotificationsResult и VKWebAppAllowNotificationsFailed. Подробнее о проверке результатов при вызовах VK Bridge. Возможные ошибки: •This action cannot be performed in the background, если мини-приложение или игра запущены в фоновом режиме. •User denied, если пользователь закрыл окно с запросом разрешения на отправку уведомлений от мини-приложения или игры. Объект Promise: Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект со следующим полем: ПолеТипОписаниеresultbooleantrue, если разрешение на отправку уведомлений мини-приложением или игрой получено. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge. События: VKWebAppAllowNotificationsResult: Сигнализирует, что разрешение на отправку уведомлений мини-приложением или игрой получено. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppAllowNotificationsResult\", data: { result: true } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса. VKWebAppAllowNotificationsFailed: Информирует об ошибке, которая произошла при взаимодействии с платформой. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge. Пример обработки событий: Подробнее — в разделе Обработка результата. Песочница: VKWebAppAllowNotifications Материалы по теме: •Уведомления в мини-приложениях •Уведомления в играх •VKWebAppDenyNotifications"
 }

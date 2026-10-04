@@ -1,15 +1,125 @@
 {
   "id": "vkwebappgyroscopestart",
   "url": "https://dev.vk.com/ru/bridge/VKWebAppGyroscopeStart",
-  "title": "VKWebAppGyroscopeStart",
+  "title": "VK Bridge | VKWebAppGyroscopeStart | VK для разработчиков",
   "h1": "VKWebAppGyroscopeStart",
   "group": "Датчики",
-  "description": "",
-  "examples": [],
-  "params": [],
+  "description": "VKWebAppGyroscopeStart включает отслеживание и приём данных гироскопа, установленного на мобильном устройстве.",
+  "examples": [
+    {
+      "lang": "javascript",
+      "code": "bridge.send('VKWebAppGyroscopeStart', {\n  refresh_rate: 500\n  })\n  .then((data) => { \n    if (data.result) {\n      // Отслеживание данных гироскопа включено\n    }\n  })\n  .catch((error) => {\n    // Ошибка\n    console.log(error);\n  });"
+    },
+    {
+      "lang": "javascript",
+      "code": "{\n  detail: {\n    type: \"VKWebAppGyroscopeStartResult\",\n    data: {\n      result: true\n    }\n  }\n}"
+    },
+    {
+      "lang": "javascript",
+      "code": "{\n  detail: {\n    type: \"VKWebAppGyroscopeChanged\",\n    data: {\n      x: -0.005497787,\n      y: 0.002443461,\n      z: 0.004886922\n    }\n  }\n}"
+    },
+    {
+      "lang": "javascript",
+      "code": "{\n  detail: {\n    type: \"VKWebAppGyroscopeInterrupted\",\n    data: {\n      \"message\": \"Received empty accelerometer data\"\n    }\n  }\n}"
+    }
+  ],
+  "params": [
+    {
+      "name": "refresh_rate",
+      "type": "integer",
+      "required": false,
+      "description": "Период обновления данных гироскопа в миллисекундах. Минимальное значение: 20. Максимальное значение: 1000. Значение по умолчанию: 1000."
+    },
+    {
+      "name": "result",
+      "type": "boolean",
+      "required": false,
+      "description": "true, если отслеживание данных гироскопа включено."
+    },
+    {
+      "name": "x",
+      "type": "float",
+      "required": false,
+      "description": "Скорость вращения устройства вокруг оси X в радиан/c."
+    },
+    {
+      "name": "y",
+      "type": "float",
+      "required": false,
+      "description": "Скорость вращения устройства вокруг оси Y в радиан/c."
+    },
+    {
+      "name": "z",
+      "type": "float",
+      "required": false,
+      "description": "Скорость вращения устройства вокруг оси Z в радиан/c."
+    }
+  ],
   "returns": {
-    "description": ""
+    "description": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий: •VKWebAppGyroscopeStartResult •VKWebAppGyroscopeStartFailed Подробнее о проверке результатов при вызовах VK Bridge — в разделе Обработка результата."
   },
-  "sections": [],
-  "contentText": ""
+  "sections": [
+    {
+      "level": 2,
+      "title": "Схема работы",
+      "text": "1.Клиент вызывает VKWebAppGyroscopeStart для начала получения данных гироскопа. 2.Платформа отвечает: •Событием VKWebAppGyroscopeStartResult в случае успешного выполнения. •Событием VKWebAppGyroscopeStartFailed в случае ошибки доступа к датчику. 3.Если на предыдущем шаге не было ошибки, платформа начинает отправлять поток событий VKWebAppGyroscopeChanged с данными гироскопа. 4.На iOS поток событий с данными гироскопа может быть прерван. В этом случае платформа отправляет событие VKWebAppGyroscopeInterrupted. 5.Чтобы возобновить получение данных гироскопа, снова вызовите VKWebAppGyroscopeStart. Чтобы прекратить отслеживание данных, вызовите VKWebAppGyroscopeStop."
+    },
+    {
+      "level": 2,
+      "title": "Пример",
+      "text": "JavaScriptbridge.send('VKWebAppGyroscopeStart', { refresh_rate: 500 }) .then((data) => { if (data.result) { // Отслеживание данных гироскопа включено } }) .catch((error) => { // Ошибка console.log(error); });"
+    },
+    {
+      "level": 2,
+      "title": "Совместимость",
+      "text": "ПлощадкиПлатформыВКонтактеAndroid, iOSОдноклассникиAndroid, iOS"
+    },
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "ПолеТипОписаниеrefresh_rate необязательноеintegerПериод обновления данных гироскопа в миллисекундах. Минимальное значение: 20. Максимальное значение: 1000. Значение по умолчанию: 1000."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий: •VKWebAppGyroscopeStartResult •VKWebAppGyroscopeStartFailed Подробнее о проверке результатов при вызовах VK Bridge — в разделе Обработка результата."
+    },
+    {
+      "level": 3,
+      "title": "Объект Promise",
+      "text": "Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge."
+    },
+    {
+      "level": 3,
+      "title": "События",
+      "text": ""
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppGyroscopeStartResult",
+      "text": "Сигнализирует, что отслеживание данных гироскопа включено и мини-приложение может получать данные. В обработчик события на стороне пользователя передаются данные: JavaScript{ detail: { type: \"VKWebAppGyroscopeStartResult\", data: { result: true } } } В качестве ответа платформа возвращает объект с полем: ПолеТипОписаниеresultbooleantrue, если отслеживание данных гироскопа включено."
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppGyroscopeStartFailed",
+      "text": "Информирует, что при взаимодействии с платформой произошла ошибка или что мини-приложение не может получать данные гироскопа. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge."
+    },
+    {
+      "level": 2,
+      "title": "Отслеживание данных",
+      "text": "Чтобы получить текущее состояние гироскопа, подпишитесь на события: •VKWebAppGyroscopeChanged — отслеживает координаты устройства при его перемещении. •VKWebAppGyroscopeInterrupted — сообщает о том, что поток данных прервался. Событие доступно только для iOS."
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppGyroscopeChanged",
+      "text": "Сигнализирует, что получены данные гироскопа — скорость вращения устройства вокруг осей X, Y и Z. Знак числа показывает, в какую сторону происходит вращение. Положение устройства относительно осей X, Y, Z В обработчик события на стороне пользователя передаются данные: JavaScript{ detail: { type: \"VKWebAppGyroscopeChanged\", data: { x: -0.005497787, y: 0.002443461, z: 0.004886922 } } } В качестве ответа платформа возвращает объект с полями: ПолеТипОписаниеxfloatСкорость вращения устройства вокруг оси X в радиан/c.yfloatСкорость вращения устройства вокруг оси Y в радиан/c.zfloatСкорость вращения устройства вокруг оси Z в радиан/c."
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppGyroscopeInterrupted",
+      "text": "Указывает на то, что поток событий VKWebAppGyroscopeChanged прерван и данные гироскопа больше не могут быть получены. Событие доступно только для iOS. В обработчик события на стороне пользователя передаются данные: JavaScript{ detail: { type: \"VKWebAppGyroscopeInterrupted\", data: { \"message\": \"Received empty accelerometer data\" } } } Чтобы продолжить отслеживание данных гироскопа, снова вызовите событие VKWebAppGyroscopeStart."
+    }
+  ],
+  "compatibility": "ВКонтакте: Android, iOS; Одноклассники: Android, iOS",
+  "contentText": "VKWebAppGyroscopeStart включает отслеживание и приём данных гироскопа, установленного на мобильном устройстве. Схема работы: 1.Клиент вызывает VKWebAppGyroscopeStart для начала получения данных гироскопа. 2.Платформа отвечает: •Событием VKWebAppGyroscopeStartResult в случае успешного выполнения. •Событием VKWebAppGyroscopeStartFailed в случае ошибки доступа к датчику. 3.Если на предыдущем шаге не было ошибки, платформа начинает отправлять поток событий VKWebAppGyroscopeChanged с данными гироскопа. 4.На iOS поток событий с данными гироскопа может быть прерван. В этом случае платформа отправляет событие VKWebAppGyroscopeInterrupted. 5.Чтобы возобновить получение данных гироскопа, снова вызовите VKWebAppGyroscopeStart. Чтобы прекратить отслеживание данных, вызовите VKWebAppGyroscopeStop. Пример: JavaScriptbridge.send('VKWebAppGyroscopeStart', { refresh_rate: 500 }) .then((data) => { if (data.result) { // Отслеживание данных гироскопа включено } }) .catch((error) => { // Ошибка console.log(error); }); Совместимость: ПлощадкиПлатформыВКонтактеAndroid, iOSОдноклассникиAndroid, iOS Параметры: ПолеТипОписаниеrefresh_rate необязательноеintegerПериод обновления данных гироскопа в миллисекундах. Минимальное значение: 20. Максимальное значение: 1000. Значение по умолчанию: 1000. Результат: Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий: •VKWebAppGyroscopeStartResult •VKWebAppGyroscopeStartFailed Подробнее о проверке результатов при вызовах VK Bridge — в разделе Обработка результата. Объект Promise: Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge. События: VKWebAppGyroscopeStartResult: Сигнализирует, что отслеживание данных гироскопа включено и мини-приложение может получать данные. В обработчик события на стороне пользователя передаются данные: JavaScript{ detail: { type: \"VKWebAppGyroscopeStartResult\", data: { result: true } } } В качестве ответа платформа возвращает объект с полем: ПолеТипОписаниеresultbooleantrue, если отслеживание данных гироскопа включено. VKWebAppGyroscopeStartFailed: Информирует, что при взаимодействии с платформой произошла ошибка или что мини-приложение не может получать данные гироскопа. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge. Отслеживание данных: Чтобы получить текущее состояние гироскопа, подпишитесь на события: •VKWebAppGyroscopeChanged — отслеживает координаты устройства при его перемещении. •VKWebAppGyroscopeInterrupted — сообщает о том, что поток данных прервался. Событие доступно только для iOS. VKWebAppGyroscopeChanged: Сигнализирует, что получены данные гироскопа — скорость вращения устройства вокруг осей X, Y и Z. Знак числа показывает, в какую сторону происходит вращение. Положение устройства относительно осей X, Y, Z В обработчик события на стороне пользователя передаются данные: JavaScript{ detail: { type: \"VKWebAppGyroscopeChanged\", data: { x: -0.005497787, y: 0.002443461, z: 0.004886922 } } } В качестве ответа платформа возвращает объект с полями: ПолеТипОписаниеxfloatСкорость вращения устройства вокруг оси X в радиан/c.yfloatСкорость вращения устройства вокруг оси Y в радиан/c.zfloatСкорость вращения устройства вокруг оси Z в радиан/c. VKWebAppGyroscopeInterrupted: Указывает на то, что поток событий VKWebAppGyroscopeChanged прерван и данные гироскопа больше не могут быть получены. Событие доступно только для iOS. В обработчик события на стороне пользователя передаются данные: JavaScript{ detail: { type: \"VKWebAppGyroscopeInterrupted\", data: { \"message\": \"Received empty accelerometer data\" } } } Чтобы продолжить отслеживание данных гироскопа, снова вызовите событие VKWebAppGyroscopeStart."
 }

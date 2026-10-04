@@ -1,15 +1,88 @@
 {
   "id": "vkwebappsetlocation",
   "url": "https://dev.vk.com/ru/bridge/VKWebAppSetLocation",
-  "title": "VKWebAppSetLocation",
+  "title": "VK Bridge | VKWebAppSetLocation | VK для разработчиков",
   "h1": "VKWebAppSetLocation",
   "group": "Навигация",
-  "description": "",
-  "examples": [],
-  "params": [],
+  "description": "VKWebAppSetLocation устанавливает новое значение хеша — строки после символа # в URL мини-приложения или игры вида https://vk.com/app123#some-value. Это значение используется для навигации внутри приложений и передачи параметров. Для обработки изменений в хеше используйте событие VKWebAppChangeFragment.",
+  "examples": [
+    {
+      "lang": "javascript",
+      "code": "bridge.send('VKWebAppSetLocation', {\n  location: 'fragment'\n  })\n  .then((data) => { \n    if (data.width) {\n      // Новое значение хеша установлено\n    }\n  })\n  .catch((error) => {\n    // Ошибка\n    console.log(error);\n  });"
+    },
+    {
+      "lang": "javascript",
+      "code": "{\n  detail: {\n    type: \"VKWebAppSetLocationResult\",\n    data: { }\n  }\n}"
+    }
+  ],
+  "params": [
+    {
+      "name": "location",
+      "type": "string",
+      "required": true,
+      "description": "Новое значение хеша. Символ # в поле указывать не нужно."
+    }
+  ],
   "returns": {
-    "description": ""
+    "description": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppSetLocationResult и VKWebAppSetLocationFailed. Подробнее о проверке результатов при вызовах VK Bridge."
   },
-  "sections": [],
-  "contentText": ""
+  "sections": [
+    {
+      "level": 2,
+      "title": "Пример",
+      "text": "JavaScriptbridge.send('VKWebAppSetLocation', { location: 'fragment' }) .then((data) => { if (data.width) { // Новое значение хеша установлено } }) .catch((error) => { // Ошибка console.log(error); });"
+    },
+    {
+      "level": 2,
+      "title": "Совместимость",
+      "text": "ПлощадкиПлатформыВКонтактеAndroid, iOS, Mobile Web, WebОдноклассникиAndroid, Mobile Web, Web"
+    },
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "ПолеТипОписаниеlocation обязательноеstringНовое значение хеша. Символ # в поле указывать не нужно."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppSetLocationResult и VKWebAppSetLocationFailed. Подробнее о проверке результатов при вызовах VK Bridge."
+    },
+    {
+      "level": 3,
+      "title": "Объект Promise",
+      "text": "Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge."
+    },
+    {
+      "level": 3,
+      "title": "События",
+      "text": ""
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppSetLocationResult",
+      "text": "Сигнализирует, что новое значение хеша установлено. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppSetLocationResult\", data: { } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса."
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppSetLocationFailed",
+      "text": "Информирует об ошибке, которая произошла при взаимодействии с платформой. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge."
+    },
+    {
+      "level": 4,
+      "title": "Пример обработки событий",
+      "text": "Подробнее — в разделе Обработка результата."
+    },
+    {
+      "level": 2,
+      "title": "Песочница",
+      "text": "VKWebAppSetLocation"
+    },
+    {
+      "level": 2,
+      "title": "Материалы по теме",
+      "text": "•VKWebAppChangeFragment"
+    }
+  ],
+  "compatibility": "ВКонтакте: Android, iOS, Mobile Web, Web; Одноклассники: Android, Mobile Web, Web",
+  "contentText": "VKWebAppSetLocation устанавливает новое значение хеша — строки после символа # в URL мини-приложения или игры вида https://vk.com/app123#some-value. Это значение используется для навигации внутри приложений и передачи параметров. Для обработки изменений в хеше используйте событие VKWebAppChangeFragment. Пример: JavaScriptbridge.send('VKWebAppSetLocation', { location: 'fragment' }) .then((data) => { if (data.width) { // Новое значение хеша установлено } }) .catch((error) => { // Ошибка console.log(error); }); Совместимость: ПлощадкиПлатформыВКонтактеAndroid, iOS, Mobile Web, WebОдноклассникиAndroid, Mobile Web, Web Параметры: ПолеТипОписаниеlocation обязательноеstringНовое значение хеша. Символ # в поле указывать не нужно. Результат: Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppSetLocationResult и VKWebAppSetLocationFailed. Подробнее о проверке результатов при вызовах VK Bridge. Объект Promise: Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge. События: VKWebAppSetLocationResult: Сигнализирует, что новое значение хеша установлено. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppSetLocationResult\", data: { } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса. VKWebAppSetLocationFailed: Информирует об ошибке, которая произошла при взаимодействии с платформой. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge. Пример обработки событий: Подробнее — в разделе Обработка результата. Песочница: VKWebAppSetLocation Материалы по теме: •VKWebAppChangeFragment"
 }

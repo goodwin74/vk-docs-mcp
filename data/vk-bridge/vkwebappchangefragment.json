@@ -1,15 +1,61 @@
 {
   "id": "vkwebappchangefragment",
   "url": "https://dev.vk.com/ru/bridge/VKWebAppChangeFragment",
-  "title": "VKWebAppChangeFragment",
+  "title": "VK Bridge | VKWebAppChangeFragment | VK для разработчиков",
   "h1": "VKWebAppChangeFragment",
   "group": "Навигация",
-  "description": "",
-  "examples": [],
+  "description": "Платформа ВКонтакте отправляет мини-приложению или игре событие VKWebAppChangeFragment, чтобы сообщить о смене значения после символа # в текущем URL мини-приложения или игры. Это может происходить, когда пользователь меняет адресную строку в браузере, в результате вызова события VKWebAppSetLocation и в других случаях.",
+  "examples": [
+    {
+      "lang": "javascript",
+      "code": "bridge.subscribe((e) => {\n  if (e.detail.type === 'VKWebAppChangeFragment') {\n    // Обработка изменений в URL\n  }\n});"
+    },
+    {
+      "lang": "javascript",
+      "code": "{\n  detail: {\n    type: \"VKWebAppChangeFragment\",\n    data: {\n      location: \"new-value\"\n    }\n  }\n}"
+    }
+  ],
   "params": [],
   "returns": {
-    "description": ""
+    "description": "VKWebAppChangeFragment сигнализирует, что часть URL после символа # была изменена. В качестве ответа платформа возвращает объект со следующим полем: ПолеТипОписаниеlocationstringСтрока после символа # в URL. Например, если текущий URL приложения vk.com/app6909581#new-value, то location будет содержать new-value. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppChangeFragment\", data: { location: \"new-value\" } } } location (string): Строка после символа # в URL. Например, если текущий URL приложения vk.com/app6909581#new-value, то location будет содержать new-value."
   },
-  "sections": [],
-  "contentText": ""
+  "sections": [
+    {
+      "level": 2,
+      "title": "Пример",
+      "text": "JavaScriptbridge.subscribe((e) => { if (e.detail.type === 'VKWebAppChangeFragment') { // Обработка изменений в URL } });"
+    },
+    {
+      "level": 2,
+      "title": "Совместимость",
+      "text": "ПлощадкиПлатформыВКонтактеAndroid, iOS, Mobile Web, WebОдноклассники–"
+    },
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "—"
+    },
+    {
+      "level": 2,
+      "title": "Обработка события",
+      "text": "Символы после # в URL часто используются для навигации и передачи параметров. Используйте сообщение VKWebAppChangeFragment, чтобы ваше приложение могло обработать изменения. При работе на Android и iOS платформа ВКонтакте сохраняет в кеше навигационное состояние последних открытых приложений. При восстановлении приложения из кеша платформа сначала отправит приложению VKWebAppChangeFragment, а потом — VKWebAppViewRestore. Это позволяет приложению открыть нужный экран, пока восстановленный из кеша экран ещё не отобразился полностью."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "VKWebAppChangeFragment сигнализирует, что часть URL после символа # была изменена. В качестве ответа платформа возвращает объект со следующим полем: ПолеТипОписаниеlocationstringСтрока после символа # в URL. Например, если текущий URL приложения vk.com/app6909581#new-value, то location будет содержать new-value. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppChangeFragment\", data: { location: \"new-value\" } } }"
+    },
+    {
+      "level": 2,
+      "title": "Пример обработки события",
+      "text": "Подробнее — в разделе Обработка результата."
+    },
+    {
+      "level": 2,
+      "title": "Материалы по теме",
+      "text": "• Работа кеша мини-приложений • Работа кеша игр • VKWebAppSetLocation • VKWebAppViewRestore • Обработка событий-результатов"
+    }
+  ],
+  "compatibility": "ВКонтакте: Android, iOS, Mobile Web, Web; Одноклассники: –",
+  "contentText": "Платформа ВКонтакте отправляет мини-приложению или игре событие VKWebAppChangeFragment, чтобы сообщить о смене значения после символа # в текущем URL мини-приложения или игры. Это может происходить, когда пользователь меняет адресную строку в браузере, в результате вызова события VKWebAppSetLocation и в других случаях. Пример: JavaScriptbridge.subscribe((e) => { if (e.detail.type === 'VKWebAppChangeFragment') { // Обработка изменений в URL } }); Совместимость: ПлощадкиПлатформыВКонтактеAndroid, iOS, Mobile Web, WebОдноклассники– Параметры: — Обработка события: Символы после # в URL часто используются для навигации и передачи параметров. Используйте сообщение VKWebAppChangeFragment, чтобы ваше приложение могло обработать изменения. При работе на Android и iOS платформа ВКонтакте сохраняет в кеше навигационное состояние последних открытых приложений. При восстановлении приложения из кеша платформа сначала отправит приложению VKWebAppChangeFragment, а потом — VKWebAppViewRestore. Это позволяет приложению открыть нужный экран, пока восстановленный из кеша экран ещё не отобразился полностью. Результат: VKWebAppChangeFragment сигнализирует, что часть URL после символа # была изменена. В качестве ответа платформа возвращает объект со следующим полем: ПолеТипОписаниеlocationstringСтрока после символа # в URL. Например, если текущий URL приложения vk.com/app6909581#new-value, то location будет содержать new-value. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppChangeFragment\", data: { location: \"new-value\" } } } Пример обработки события: Подробнее — в разделе Обработка результата. Материалы по теме: • Работа кеша мини-приложений • Работа кеша игр • VKWebAppSetLocation • VKWebAppViewRestore • Обработка событий-результатов"
 }

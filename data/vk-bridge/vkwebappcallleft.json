@@ -1,15 +1,56 @@
 {
   "id": "vkwebappcallleft",
   "url": "https://dev.vk.com/ru/bridge/VKWebAppCallLeft",
-  "title": "VKWebAppCallLeft",
+  "title": "VK Bridge | VKWebAppCallLeft | VK для разработчиков",
   "h1": "VKWebAppCallLeft",
   "group": "Звонки",
-  "description": "",
-  "examples": [],
+  "description": "VKWebAppCallLeft используется при интеграции звонков в мини-приложение. Событие отправляется платформой, если пользователь вышел из звонка.",
+  "examples": [
+    {
+      "lang": "javascript",
+      "code": "bridge.subscribe((e) => {\n  if (e.detail.type === 'VKWebAppCallLeft') {\n    // Логика мини-приложения\n  }\n});"
+    },
+    {
+      "lang": "javascript",
+      "code": "{\n  detail: {\n    \"type\": \"VKWebAppCallLeft\",\n    \"data\": {\n      \"reason\": \"general\"\n    }\n  }\n}"
+    }
+  ],
   "params": [],
   "returns": {
-    "description": ""
+    "description": "VKWebAppCallLeft сигнализирует, что пользователь покинул звонок. В качестве ответа платформа возвращает объект со следующим полем: ПолеТипОписаниеreasonstringСообщение о причине, по которой пользователь вышел из звонка. Сейчас возвращается только значение general — неопределённая причина. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { \"type\": \"VKWebAppCallLeft\", \"data\": { \"reason\": \"general\" } } } reason (string): Сообщение о причине, по которой пользователь вышел из звонка. Сейчас возвращается только значение general — неопределённая причина."
   },
-  "sections": [],
-  "contentText": ""
+  "sections": [
+    {
+      "level": 2,
+      "title": "Пример",
+      "text": "JavaScriptbridge.subscribe((e) => { if (e.detail.type === 'VKWebAppCallLeft') { // Логика мини-приложения } });"
+    },
+    {
+      "level": 2,
+      "title": "Совместимость",
+      "text": "ПлощадкиПлатформыВКонтактеAndroid, iOS, WebОдноклассники–"
+    },
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "—"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "VKWebAppCallLeft сигнализирует, что пользователь покинул звонок. В качестве ответа платформа возвращает объект со следующим полем: ПолеТипОписаниеreasonstringСообщение о причине, по которой пользователь вышел из звонка. Сейчас возвращается только значение general — неопределённая причина. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { \"type\": \"VKWebAppCallLeft\", \"data\": { \"reason\": \"general\" } } }"
+    },
+    {
+      "level": 2,
+      "title": "Пример обработки события",
+      "text": "Подробнее — в разделе Обработка результата."
+    },
+    {
+      "level": 2,
+      "title": "Материалы по теме",
+      "text": "•VKWebAppCallFinished •Интеграция звонков"
+    }
+  ],
+  "compatibility": "ВКонтакте: Android, iOS, Web; Одноклассники: –",
+  "contentText": "VKWebAppCallLeft используется при интеграции звонков в мини-приложение. Событие отправляется платформой, если пользователь вышел из звонка. Пример: JavaScriptbridge.subscribe((e) => { if (e.detail.type === 'VKWebAppCallLeft') { // Логика мини-приложения } }); Совместимость: ПлощадкиПлатформыВКонтактеAndroid, iOS, WebОдноклассники– Параметры: — Результат: VKWebAppCallLeft сигнализирует, что пользователь покинул звонок. В качестве ответа платформа возвращает объект со следующим полем: ПолеТипОписаниеreasonstringСообщение о причине, по которой пользователь вышел из звонка. Сейчас возвращается только значение general — неопределённая причина. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { \"type\": \"VKWebAppCallLeft\", \"data\": { \"reason\": \"general\" } } } Пример обработки события: Подробнее — в разделе Обработка результата. Материалы по теме: •VKWebAppCallFinished •Интеграция звонков"
 }

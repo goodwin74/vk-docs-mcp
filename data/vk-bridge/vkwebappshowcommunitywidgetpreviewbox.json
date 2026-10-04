@@ -1,15 +1,95 @@
 {
   "id": "vkwebappshowcommunitywidgetpreviewbox",
   "url": "https://dev.vk.com/ru/bridge/VKWebAppShowCommunityWidgetPreviewBox",
-  "title": "VKWebAppShowCommunityWidgetPreviewBox",
+  "title": "VK Bridge | VKWebAppShowCommunityWidgetPreviewBox | VK для разработчиков",
   "h1": "VKWebAppShowCommunityWidgetPreviewBox",
   "group": "Сообщества",
-  "description": "",
-  "examples": [],
-  "params": [],
+  "description": "VKWebAppShowCommunityWidgetPreviewBox показывает экран предпросмотра виджета для сообщества.",
+  "examples": [
+    {
+      "lang": "javascript",
+      "code": "bridge.send('VKWebAppShowCommunityWidgetPreviewBox', {\n  group_id: 166562603,\n  type: 'text',\n  code: 'return {\n    \"title\": \"Цитата\",\n    \"text\": \"Текст цитаты\"\n  };'})\n  .then((data) => { \n    if (data.result) {\n      // Экран предпросмотра показан\n    }\n  })\n  .catch((error) => {\n    // Ошибка\n    console.log(error);\n  });"
+    },
+    {
+      "lang": "javascript",
+      "code": "{\n  detail: {\n    type: \"VKWebAppShowCommunityWidgetPreviewBoxResult\",\n    data: {\n      result: true\n    }\n  }\n}"
+    }
+  ],
+  "params": [
+    {
+      "name": "group_id",
+      "type": "integer",
+      "required": true,
+      "description": "Идентификатор сообщества."
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": true,
+      "description": "Тип виджета. Возможные значения: • text — выводит текст. • list — выводит список объектов с описанием и кнопками для действий. • table — выводит таблицу с данными. • tiles — выводит плитки с изображением и кратким описанием. • compact_list — выводит список элементов в компактном виде. • cover_list — выводит список изображений (от 1 до 3) с кнопкой для действия, заголовком и описанием. • match — выводит текущий результат спортивного матча. • matches — выводит список спортивных матчей. • donation — выводит прогресс пожертвований. Параметры всех поддерживаемых типов виджетов подробно описаны в разделе Виджеты приложений сообществ."
+    },
+    {
+      "name": "code",
+      "type": "string",
+      "required": true,
+      "description": "Код виджета на языке программирования VKScript. Подробная информация о синтаксисе и возможностях этого языка с примерами находится в описании метода execute."
+    }
+  ],
   "returns": {
-    "description": ""
+    "description": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppShowCommunityWidgetPreviewBoxResult и VKWebAppShowCommunityWidgetPreviewBoxFailed. Подробнее о проверке результатов при вызовах VK Bridge. result (boolean): true, если экран предпросмотра показан."
   },
-  "sections": [],
-  "contentText": ""
+  "sections": [
+    {
+      "level": 2,
+      "title": "Пример",
+      "text": "JavaScriptbridge.send('VKWebAppShowCommunityWidgetPreviewBox', { group_id: 166562603, type: 'text', code: 'return { \"title\": \"Цитата\", \"text\": \"Текст цитаты\" };'}) .then((data) => { if (data.result) { // Экран предпросмотра показан } }) .catch((error) => { // Ошибка console.log(error); });"
+    },
+    {
+      "level": 2,
+      "title": "Совместимость",
+      "text": "ПлощадкиПлатформыВКонтактеAndroid, iOS, WebОдноклассники–"
+    },
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "ПолеТипОписаниеgroup_id обязательноеintegerИдентификатор сообщества.type обязательноеstringТип виджета. Возможные значения: • text — выводит текст. • list — выводит список объектов с описанием и кнопками для действий. • table — выводит таблицу с данными. • tiles — выводит плитки с изображением и кратким описанием. • compact_list — выводит список элементов в компактном виде. • cover_list — выводит список изображений (от 1 до 3) с кнопкой для действия, заголовком и описанием. • match — выводит текущий результат спортивного матча. • matches — выводит список спортивных матчей. • donation — выводит прогресс пожертвований. Параметры всех поддерживаемых типов виджетов подробно описаны в разделе Виджеты приложений сообществ.code обязательноеstringКод виджета на языке программирования VKScript. Подробная информация о синтаксисе и возможностях этого языка с примерами находится в описании метода execute."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppShowCommunityWidgetPreviewBoxResult и VKWebAppShowCommunityWidgetPreviewBoxFailed. Подробнее о проверке результатов при вызовах VK Bridge."
+    },
+    {
+      "level": 3,
+      "title": "Объект Promise",
+      "text": "Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект со следующим полем: ПолеТипОписаниеresultbooleantrue, если экран предпросмотра показан. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge."
+    },
+    {
+      "level": 3,
+      "title": "События",
+      "text": ""
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppShowCommunityWidgetPreviewBoxResult",
+      "text": "Сигнализирует, что экран предпросмотра показан. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppShowCommunityWidgetPreviewBoxResult\", data: { result: true } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса."
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppShowCommunityWidgetPreviewBoxFailed",
+      "text": "Информирует об ошибке, которая произошла при взаимодействии с платформой. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge."
+    },
+    {
+      "level": 4,
+      "title": "Пример обработки событий",
+      "text": "Подробнее — в разделе Обработка результата."
+    },
+    {
+      "level": 2,
+      "title": "Песочница",
+      "text": "VKWebAppShowCommunityWidgetPreviewBox"
+    }
+  ],
+  "compatibility": "ВКонтакте: Android, iOS, Web; Одноклассники: –",
+  "contentText": "VKWebAppShowCommunityWidgetPreviewBox показывает экран предпросмотра виджета для сообщества. Пример: JavaScriptbridge.send('VKWebAppShowCommunityWidgetPreviewBox', { group_id: 166562603, type: 'text', code: 'return { \"title\": \"Цитата\", \"text\": \"Текст цитаты\" };'}) .then((data) => { if (data.result) { // Экран предпросмотра показан } }) .catch((error) => { // Ошибка console.log(error); }); Совместимость: ПлощадкиПлатформыВКонтактеAndroid, iOS, WebОдноклассники– Параметры: ПолеТипОписаниеgroup_id обязательноеintegerИдентификатор сообщества.type обязательноеstringТип виджета. Возможные значения: • text — выводит текст. • list — выводит список объектов с описанием и кнопками для действий. • table — выводит таблицу с данными. • tiles — выводит плитки с изображением и кратким описанием. • compact_list — выводит список элементов в компактном виде. • cover_list — выводит список изображений (от 1 до 3) с кнопкой для действия, заголовком и описанием. • match — выводит текущий результат спортивного матча. • matches — выводит список спортивных матчей. • donation — выводит прогресс пожертвований. Параметры всех поддерживаемых типов виджетов подробно описаны в разделе Виджеты приложений сообществ.code обязательноеstringКод виджета на языке программирования VKScript. Подробная информация о синтаксисе и возможностях этого языка с примерами находится в описании метода execute. Результат: Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppShowCommunityWidgetPreviewBoxResult и VKWebAppShowCommunityWidgetPreviewBoxFailed. Подробнее о проверке результатов при вызовах VK Bridge. Объект Promise: Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект со следующим полем: ПолеТипОписаниеresultbooleantrue, если экран предпросмотра показан. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge. События: VKWebAppShowCommunityWidgetPreviewBoxResult: Сигнализирует, что экран предпросмотра показан. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppShowCommunityWidgetPreviewBoxResult\", data: { result: true } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса. VKWebAppShowCommunityWidgetPreviewBoxFailed: Информирует об ошибке, которая произошла при взаимодействии с платформой. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge. Пример обработки событий: Подробнее — в разделе Обработка результата. Песочница: VKWebAppShowCommunityWidgetPreviewBox"
 }

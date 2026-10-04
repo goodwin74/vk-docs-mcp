@@ -1,15 +1,90 @@
 {
   "id": "vkwebappsetviewsettings",
   "url": "https://dev.vk.com/ru/bridge/VKWebAppSetViewSettings",
-  "title": "VKWebAppSetViewSettings",
+  "title": "VK Bridge | VKWebAppSetViewSettings | VK для разработчиков",
   "h1": "VKWebAppSetViewSettings",
   "group": "Внешний вид",
-  "description": "",
-  "examples": [],
-  "params": [],
+  "description": "VKWebAppSetViewSettings устанавливает тему для значков в статус-баре и цвет статус-бара.",
+  "examples": [
+    {
+      "lang": "javascript",
+      "code": "bridge.send('VKWebAppSetViewSettings', {\n  status_bar_style: 'dark',\n  action_bar_color: '#ffffff'\n  })\n  .then((data) => { \n    if (data.result) {\n      // Тема и цвет установлены\n    }\n  })\n  .catch((error) => {\n    // Ошибка\n    console.log(error);\n  });"
+    },
+    {
+      "lang": "javascript",
+      "code": "{\n  detail: {\n    type: \"VKWebAppSetViewSettingsResult\",\n    data: {\n      result: true\n    }\n  }\n}"
+    }
+  ],
+  "params": [
+    {
+      "name": "status_bar_style",
+      "type": "string",
+      "required": true,
+      "description": "Тема для значков статус-бара. Возможные значения: • light — светлая. • dark — тёмная."
+    },
+    {
+      "name": "action_bar_color",
+      "type": "string",
+      "required": false,
+      "description": "Цвет экшен-бара в формате HEX-кода. Например: #00ffff. Используйте значение none для задания прозрачного цвета. Поле работает только на Android."
+    },
+    {
+      "name": "navigation_bar_color",
+      "type": "string",
+      "required": false,
+      "description": "Цвет навигационного бара в формате HEX-кода. Например: #00ffff. Поле работает только на Android."
+    }
+  ],
   "returns": {
-    "description": ""
+    "description": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppSetViewSettingsResult и VKWebAppSetViewSettingsFailed. Подробнее о проверке результатов при вызовах VK Bridge. result (boolean): true, если тема и цвет установлены."
   },
-  "sections": [],
-  "contentText": ""
+  "sections": [
+    {
+      "level": 2,
+      "title": "Пример",
+      "text": "JavaScriptbridge.send('VKWebAppSetViewSettings', { status_bar_style: 'dark', action_bar_color: '#ffffff' }) .then((data) => { if (data.result) { // Тема и цвет установлены } }) .catch((error) => { // Ошибка console.log(error); });"
+    },
+    {
+      "level": 2,
+      "title": "Совместимость",
+      "text": "ПлощадкиПлатформыВКонтактеAndroid, iOSОдноклассникиAndroid, iOS"
+    },
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "ПолеТипОписаниеstatus_bar_style обязательноеstringТема для значков статус-бара. Возможные значения: • light — светлая. • dark — тёмная.action_bar_color необязательноеstringЦвет экшен-бара в формате HEX-кода. Например: #00ffff. Используйте значение none для задания прозрачного цвета. Поле работает только на Android.navigation_bar_color необязательноеstringЦвет навигационного бара в формате HEX-кода. Например: #00ffff. Поле работает только на Android."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppSetViewSettingsResult и VKWebAppSetViewSettingsFailed. Подробнее о проверке результатов при вызовах VK Bridge."
+    },
+    {
+      "level": 3,
+      "title": "Объект Promise",
+      "text": "Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект со следующим полем: ПолеТипОписаниеresultbooleantrue, если тема и цвет установлены. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge."
+    },
+    {
+      "level": 3,
+      "title": "События",
+      "text": ""
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppSetViewSettingsResult",
+      "text": "Сигнализирует, что тема и цвет установлены. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppSetViewSettingsResult\", data: { result: true } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса."
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppSetViewSettingsFailed",
+      "text": "Информирует об ошибке, которая произошла при взаимодействии с платформой. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge."
+    },
+    {
+      "level": 4,
+      "title": "Пример обработки событий",
+      "text": "Подробнее — в разделе Обработка результата."
+    }
+  ],
+  "compatibility": "ВКонтакте: Android, iOS; Одноклассники: Android, iOS",
+  "contentText": "VKWebAppSetViewSettings устанавливает тему для значков в статус-баре и цвет статус-бара. Пример: JavaScriptbridge.send('VKWebAppSetViewSettings', { status_bar_style: 'dark', action_bar_color: '#ffffff' }) .then((data) => { if (data.result) { // Тема и цвет установлены } }) .catch((error) => { // Ошибка console.log(error); }); Совместимость: ПлощадкиПлатформыВКонтактеAndroid, iOSОдноклассникиAndroid, iOS Параметры: ПолеТипОписаниеstatus_bar_style обязательноеstringТема для значков статус-бара. Возможные значения: • light — светлая. • dark — тёмная.action_bar_color необязательноеstringЦвет экшен-бара в формате HEX-кода. Например: #00ffff. Используйте значение none для задания прозрачного цвета. Поле работает только на Android.navigation_bar_color необязательноеstringЦвет навигационного бара в формате HEX-кода. Например: #00ffff. Поле работает только на Android. Результат: Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppSetViewSettingsResult и VKWebAppSetViewSettingsFailed. Подробнее о проверке результатов при вызовах VK Bridge. Объект Promise: Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект со следующим полем: ПолеТипОписаниеresultbooleantrue, если тема и цвет установлены. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge. События: VKWebAppSetViewSettingsResult: Сигнализирует, что тема и цвет установлены. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppSetViewSettingsResult\", data: { result: true } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса. VKWebAppSetViewSettingsFailed: Информирует об ошибке, которая произошла при взаимодействии с платформой. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge. Пример обработки событий: Подробнее — в разделе Обработка результата."
 }

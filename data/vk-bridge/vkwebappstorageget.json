@@ -1,27 +1,83 @@
 {
   "id": "vkwebappstorageget",
   "url": "https://dev.vk.com/ru/bridge/VKWebAppStorageGet",
-  "title": "VKWebAppStorageGet",
+  "title": "VK Bridge | VKWebAppStorageGet | VK для разработчиков",
   "h1": "VKWebAppStorageGet",
   "group": "Хранилище VK Storage",
-  "description": "Получение данных из хранилища VK Storage по ключу.",
+  "description": "VKWebAppStorageGet возвращает значения переменных, названия которых переданы в параметре keys. Чтобы задать значения переменных, используйте событие VKWebAppStorageSet.",
   "examples": [
     {
-      "lang": "js",
-      "code": "bridge.send('VKWebAppStorageGet', {\n  keys: [\"user_data\"]\n}).then((data) => {\n  console.log(data.keys);\n});"
+      "lang": "javascript",
+      "code": "bridge.send('VKWebAppStorageGet', {\n  keys: [\n    'example1',\n    'example2',\n    'example3'\n  ]})\n  .then((data) => { \n    if (data.keys) {\n      // Значения получены\n    }\n  })\n  .catch((error) => {\n    // Ошибка\n    console.log(error);\n  });"
+    },
+    {
+      "lang": "javascript",
+      "code": "{\n  detail: {\n    type: \"VKWebAppStorageGetResult\",\n    data: {\n      keys: [\n        {\n          key: \"example1\",\n          value: \"example_value1\"\n        },\n        {\n          key: \"example2\",\n          value: \"example_value2\"\n        },\n        {\n          key: \"example3\",\n          value: \"example_value3\"\n        }\n      ]\n    }\n  }\n}"
     }
   ],
   "params": [
     {
       "name": "keys",
-      "type": "array<string>",
+      "type": "array[string]",
       "required": true,
-      "description": "Массив ключей для получения"
+      "description": "Массив названий переменных, значения которых нужно получить. Допустимые символы названия переменной: [a-zA-Z_\\-0-9]."
     }
   ],
   "returns": {
-    "description": "keys: Array<{key: string, value: string}> — полученные данные"
+    "description": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppStorageGetResult и VKWebAppStorageGetFailed. Подробнее о проверке результатов при вызовах VK Bridge. keys (array[object]): Информация о переменных и их значениях. Поля объекта массива: • key (string) — название переменной. • value (string) — значение переменной."
   },
-  "sections": [],
-  "contentText": "Получение данных из хранилища VK Storage по ключу."
+  "sections": [
+    {
+      "level": 2,
+      "title": "Пример",
+      "text": "JavaScriptbridge.send('VKWebAppStorageGet', { keys: [ 'example1', 'example2', 'example3' ]}) .then((data) => { if (data.keys) { // Значения получены } }) .catch((error) => { // Ошибка console.log(error); });"
+    },
+    {
+      "level": 2,
+      "title": "Совместимость",
+      "text": "ПлощадкиПлатформыВКонтактеAndroid, iOS, Mobile Web, WebОдноклассникиAndroid, iOS, Mobile Web, Web"
+    },
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "ПолеТипОписаниеkeys обязательноеarray[string]Массив названий переменных, значения которых нужно получить. Допустимые символы названия переменной: [a-zA-Z_\\-0-9]."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppStorageGetResult и VKWebAppStorageGetFailed. Подробнее о проверке результатов при вызовах VK Bridge."
+    },
+    {
+      "level": 3,
+      "title": "Объект Promise",
+      "text": "Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект со следующим полем: ПолеТипОписаниеkeysarray[object]Информация о переменных и их значениях. Поля объекта массива: • key (string) — название переменной. • value (string) — значение переменной. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge."
+    },
+    {
+      "level": 3,
+      "title": "События",
+      "text": ""
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppStorageGetResult",
+      "text": "Сигнализирует, что значения получены. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppStorageGetResult\", data: { keys: [ { key: \"example1\", value: \"example_value1\" }, { key: \"example2\", value: \"example_value2\" }, { key: \"example3\", value: \"example_value3\" } ] } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса."
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppStorageGetFailed",
+      "text": "Информирует об ошибке, которая произошла при взаимодействии с платформой. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge."
+    },
+    {
+      "level": 4,
+      "title": "Пример обработки событий",
+      "text": "Подробнее — в разделе Обработка результата."
+    },
+    {
+      "level": 2,
+      "title": "Песочница",
+      "text": "VKWebAppStorageGet"
+    }
+  ],
+  "compatibility": "ВКонтакте: Android, iOS, Mobile Web, Web; Одноклассники: Android, iOS, Mobile Web, Web",
+  "contentText": "VKWebAppStorageGet возвращает значения переменных, названия которых переданы в параметре keys. Чтобы задать значения переменных, используйте событие VKWebAppStorageSet. Пример: JavaScriptbridge.send('VKWebAppStorageGet', { keys: [ 'example1', 'example2', 'example3' ]}) .then((data) => { if (data.keys) { // Значения получены } }) .catch((error) => { // Ошибка console.log(error); }); Совместимость: ПлощадкиПлатформыВКонтактеAndroid, iOS, Mobile Web, WebОдноклассникиAndroid, iOS, Mobile Web, Web Параметры: ПолеТипОписаниеkeys обязательноеarray[string]Массив названий переменных, значения которых нужно получить. Допустимые символы названия переменной: [a-zA-Z_\\-0-9]. Результат: Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppStorageGetResult и VKWebAppStorageGetFailed. Подробнее о проверке результатов при вызовах VK Bridge. Объект Promise: Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект со следующим полем: ПолеТипОписаниеkeysarray[object]Информация о переменных и их значениях. Поля объекта массива: • key (string) — название переменной. • value (string) — значение переменной. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge. События: VKWebAppStorageGetResult: Сигнализирует, что значения получены. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppStorageGetResult\", data: { keys: [ { key: \"example1\", value: \"example_value1\" }, { key: \"example2\", value: \"example_value2\" }, { key: \"example3\", value: \"example_value3\" } ] } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса. VKWebAppStorageGetFailed: Информирует об ошибке, которая произошла при взаимодействии с платформой. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge. Пример обработки событий: Подробнее — в разделе Обработка результата. Песочница: VKWebAppStorageGet"
 }

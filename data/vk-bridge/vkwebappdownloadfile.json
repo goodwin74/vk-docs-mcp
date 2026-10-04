@@ -1,15 +1,136 @@
 {
   "id": "vkwebappdownloadfile",
   "url": "https://dev.vk.com/ru/bridge/VKWebAppDownloadFile",
-  "title": "VKWebAppDownloadFile",
+  "title": "VK Bridge | VKWebAppDownloadFile | VK для разработчиков",
   "h1": "VKWebAppDownloadFile",
   "group": "Текст и медиафайлы",
-  "description": "",
-  "examples": [],
-  "params": [],
+  "description": "VKWebAppDownloadFile позволяет скачать файл на устройство.",
+  "examples": [
+    {
+      "lang": "javascript",
+      "code": "bridge.send(\"VKWebAppDownloadFile\", {\"url\": \"https://sun9-28.userapi.com/c846420/v846420985/1526c3/ISX7VF8NjZk.jpg\", \"filename\": \"test.jpg\"});"
+    },
+    {
+      "lang": "javascript",
+      "code": "vkBridge.send(\"VKWebAppDownloadFile\", {\"url\": \"https://sun9-28.userapi.com/c846420/v846420985/1526c3/ISX7VF8NjZk.jpg\", \"filename\": \"test.jpg\"});"
+    },
+    {
+      "lang": "javascript",
+      "code": "bridge.send(\"VKWebAppDownloadFile\")\n.then( (data) => { \n  if (data.result) {\n    // Файл скачивается\n  }\n  else {\n    // Ошибка\n  }\n})\n.catch( (error) => {\n  // Ошибка\n  console.log(\"Ошибка: \" + error.error_type, error.error_data);\n});"
+    },
+    {
+      "lang": "javascript",
+      "code": "{\n  \"data\": {\n    \"error_type\": \"...\",\n    \"error_data\": {\n      ...\n    }\n  }\n}"
+    },
+    {
+      "lang": "javascript",
+      "code": "// Подписаться на события библиотеки\nbridge.subscribe(eventHandler);\n\n// Обработчик событий\nfunction eventHandler(e) {\n\n  switch(e.detail.type) {\n    case \"VKWebAppDownloadFileResult\":\n      if (e.detail.data.scrollTop) {\n        // Файл скачивается\n      }\n      else {\n        // Ошибка\n      }\n      break;\n    case \"VKWebAppDownloadFileFailed\":\n      // Ошибка\n      console.log(e.detail.data.error_type, \n                  e.detail.data.error_data);\n      break;\n\n    // ...\n\n  }\n}"
+    },
+    {
+      "lang": "javascript",
+      "code": "{\n  detail: \n  {\n    type: \"VKWebAppDownloadFileResult\",\n    data: {\n    \"result\": true\n    }\n  }\n}"
+    },
+    {
+      "lang": "javascript",
+      "code": "{\n  detail: \n  {\n    type: \"VKWebAppDownloadFileFailed\",\n    data: {\n      error_type: \"...\",\n      error_data: {\n        ...\n      },\n      request_id: 3\n    }\n  }\n}"
+    }
+  ],
+  "params": [
+    {
+      "name": "url",
+      "type": "string",
+      "required": true,
+      "description": "Ссылка на файл, который необходимо скачать."
+    },
+    {
+      "name": "filename",
+      "type": "string",
+      "required": true,
+      "description": "Название файла, который будет скачан."
+    },
+    {
+      "name": "result",
+      "type": "boolean",
+      "required": false,
+      "description": "true, если файл скачивается. false — в ином случае."
+    },
+    {
+      "name": "result",
+      "type": "boolean",
+      "required": false,
+      "description": "true, если файл скачивается. false — в ином случае."
+    }
+  ],
   "returns": {
-    "description": ""
+    "description": "Подробнее о проверке результатов при вызовах VK Bridge."
   },
-  "sections": [],
-  "contentText": ""
+  "sections": [
+    {
+      "level": 2,
+      "title": "Пример",
+      "text": ""
+    },
+    {
+      "level": 3,
+      "title": "Приложение на JavaScript",
+      "text": "JavaScriptbridge.send(\"VKWebAppDownloadFile\", {\"url\": \"https://sun9-28.userapi.com/c846420/v846420985/1526c3/ISX7VF8NjZk.jpg\", \"filename\": \"test.jpg\"});"
+    },
+    {
+      "level": 3,
+      "title": "Сайт",
+      "text": "JavaScriptvkBridge.send(\"VKWebAppDownloadFile\", {\"url\": \"https://sun9-28.userapi.com/c846420/v846420985/1526c3/ISX7VF8NjZk.jpg\", \"filename\": \"test.jpg\"});"
+    },
+    {
+      "level": 2,
+      "title": "Совместимость",
+      "text": "ПлощадкиПлатформыВКонтактеAndroid, iOSОдноклассникиAndroid"
+    },
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "ПолеТипОписаниеurl обязательноеstringСсылка на файл, который необходимо скачать.filename обязательноеstringНазвание файла, который будет скачан."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Подробнее о проверке результатов при вызовах VK Bridge."
+    },
+    {
+      "level": 3,
+      "title": "Объект Promise",
+      "text": "JavaScriptbridge.send(\"VKWebAppDownloadFile\") .then( (data) => { if (data.result) { // Файл скачивается } else { // Ошибка } }) .catch( (error) => { // Ошибка console.log(\"Ошибка: \" + error.error_type, error.error_data); });"
+    },
+    {
+      "level": 4,
+      "title": ".then()",
+      "text": "В качестве ответа платформа возвращает объект со следующим полем: ПолеТипОписаниеresultbooleantrue, если файл скачивается. false — в ином случае."
+    },
+    {
+      "level": 4,
+      "title": ".catch()",
+      "text": "В качестве ответа платформа возвращает объект с информацией об ошибке: JSON{ \"data\": { \"error_type\": \"...\", \"error_data\": { ... } } } Это общий объект для всех методов VK Bridge. Подробнее о нём можно узнать в описании обработки результатов."
+    },
+    {
+      "level": 3,
+      "title": "События",
+      "text": ""
+    },
+    {
+      "level": 4,
+      "title": "Пример обработки",
+      "text": "JavaScript// Подписаться на события библиотеки bridge.subscribe(eventHandler); // Обработчик событий function eventHandler(e) { switch(e.detail.type) { case \"VKWebAppDownloadFileResult\": if (e.detail.data.scrollTop) { // Файл скачивается } else { // Ошибка } break; case \"VKWebAppDownloadFileFailed\": // Ошибка console.log(e.detail.data.error_type, e.detail.data.error_data); break; // ... } }"
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppDownloadFileResult",
+      "text": "VKWebAppDownloadFileResult сигнализирует, что файл скачивается. В обработчик события на стороне пользователя передаётся объект следующей структуры: JavaScript{ detail: { type: \"VKWebAppDownloadFileResult\", data: { \"result\": true } } } В качестве ответа, платформа возвращает объект со следующими полями: ПолеТипОписаниеresultbooleantrue, если файл скачивается. false — в ином случае."
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppDownloadFileFailed",
+      "text": "VKWebAppDownloadFileFailed информирует об ошибке. В обработчик события на стороне пользователя передаётся объект следующей структуры: JavaScript{ detail: { type: \"VKWebAppDownloadFileFailed\", data: { error_type: \"...\", error_data: { ... }, request_id: 3 } } } Это общий объект для всех методов VK Bridge. Подробнее о нём можно узнать в описании обработки результатов."
+    }
+  ],
+  "compatibility": "ВКонтакте: Android, iOS; Одноклассники: Android",
+  "contentText": "VKWebAppDownloadFile позволяет скачать файл на устройство. Пример: Приложение на JavaScript: JavaScriptbridge.send(\"VKWebAppDownloadFile\", {\"url\": \"https://sun9-28.userapi.com/c846420/v846420985/1526c3/ISX7VF8NjZk.jpg\", \"filename\": \"test.jpg\"}); Сайт: JavaScriptvkBridge.send(\"VKWebAppDownloadFile\", {\"url\": \"https://sun9-28.userapi.com/c846420/v846420985/1526c3/ISX7VF8NjZk.jpg\", \"filename\": \"test.jpg\"}); Совместимость: ПлощадкиПлатформыВКонтактеAndroid, iOSОдноклассникиAndroid Параметры: ПолеТипОписаниеurl обязательноеstringСсылка на файл, который необходимо скачать.filename обязательноеstringНазвание файла, который будет скачан. Результат: Подробнее о проверке результатов при вызовах VK Bridge. Объект Promise: JavaScriptbridge.send(\"VKWebAppDownloadFile\") .then( (data) => { if (data.result) { // Файл скачивается } else { // Ошибка } }) .catch( (error) => { // Ошибка console.log(\"Ошибка: \" + error.error_type, error.error_data); }); .then(): В качестве ответа платформа возвращает объект со следующим полем: ПолеТипОписаниеresultbooleantrue, если файл скачивается. false — в ином случае. .catch(): В качестве ответа платформа возвращает объект с информацией об ошибке: JSON{ \"data\": { \"error_type\": \"...\", \"error_data\": { ... } } } Это общий объект для всех методов VK Bridge. Подробнее о нём можно узнать в описании обработки результатов. События: Пример обработки: JavaScript// Подписаться на события библиотеки bridge.subscribe(eventHandler); // Обработчик событий function eventHandler(e) { switch(e.detail.type) { case \"VKWebAppDownloadFileResult\": if (e.detail.data.scrollTop) { // Файл скачивается } else { // Ошибка } break; case \"VKWebAppDownloadFileFailed\": // Ошибка console.log(e.detail.data.error_type, e.detail.data.error_data); break; // ... } } VKWebAppDownloadFileResult: VKWebAppDownloadFileResult сигнализирует, что файл скачивается. В обработчик события на стороне пользователя передаётся объект следующей структуры: JavaScript{ detail: { type: \"VKWebAppDownloadFileResult\", data: { \"result\": true } } } В качестве ответа, платформа возвращает объект со следующими полями: ПолеТипОписаниеresultbooleantrue, если файл скачивается. false — в ином случае. VKWebAppDownloadFileFailed: VKWebAppDownloadFileFailed информирует об ошибке. В обработчик события на стороне пользователя передаётся объект следующей структуры: JavaScript{ detail: { type: \"VKWebAppDownloadFileFailed\", data: { error_type: \"...\", error_data: { ... }, request_id: 3 } } } Это общий объект для всех методов VK Bridge. Подробнее о нём можно узнать в описании обработки результатов."
 }

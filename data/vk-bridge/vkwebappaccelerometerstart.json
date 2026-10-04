@@ -1,15 +1,125 @@
 {
   "id": "vkwebappaccelerometerstart",
   "url": "https://dev.vk.com/ru/bridge/VKWebAppAccelerometerStart",
-  "title": "VKWebAppAccelerometerStart",
+  "title": "VK Bridge | VKWebAppAccelerometerStart | VK для разработчиков",
   "h1": "VKWebAppAccelerometerStart",
   "group": "Датчики",
-  "description": "",
-  "examples": [],
-  "params": [],
+  "description": "VKWebAppAccelerometerStart включает отслеживание и приём данных акселерометра, установленного на мобильном устройстве.",
+  "examples": [
+    {
+      "lang": "javascript",
+      "code": "bridge.send('VKWebAppAccelerometerStart', {\n  refresh_rate: 500\n  })\n  .then((data) => { \n    if (data.result) {\n      // Отслеживание данных акселерометра включено\n    }\n  })\n  .catch((error) => {\n    // Ошибка\n    console.log(error);\n  });"
+    },
+    {
+      "lang": "javascript",
+      "code": "{\n  detail: {\n    type: \"VKWebAppAccelerometerStartResult\",\n    data: {\n      result: true\n    }\n  }\n}"
+    },
+    {
+      "lang": "javascript",
+      "code": "{\n  detail: {\n    type: \"VKWebAppAccelerometerChanged\",\n    data: {\n      x: -0.016759412,\n      y: 6.3302693,\n      z: 7.704541\n    }\n  }\n}"
+    },
+    {
+      "lang": "javascript",
+      "code": "{\n  detail: {\n    type: \"VKWebAppAccelerometerInterrupted\",\n    data: {\n      \"message\": \"Received empty accelerometer data\"\n    }\n  }\n}"
+    }
+  ],
+  "params": [
+    {
+      "name": "refresh_rate",
+      "type": "integer",
+      "required": false,
+      "description": "Период обновления данных акселерометра в миллисекундах. Минимальное значение: 20. Максимальное значение: 1000. Значение по умолчанию: 1000."
+    },
+    {
+      "name": "result",
+      "type": "boolean",
+      "required": false,
+      "description": "true, если отслеживание данных акселерометра включено."
+    },
+    {
+      "name": "x",
+      "type": "float",
+      "required": false,
+      "description": "Проекция кажущегося ускорения на ось X в м/c²."
+    },
+    {
+      "name": "y",
+      "type": "float",
+      "required": false,
+      "description": "Проекция кажущегося ускорения на ось Y в м/c²."
+    },
+    {
+      "name": "z",
+      "type": "float",
+      "required": false,
+      "description": "Проекция кажущегося ускорения на ось Z в м/c²."
+    }
+  ],
   "returns": {
-    "description": ""
+    "description": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий: •VKWebAppAccelerometerStartResult •VKWebAppAccelerometerStartFailed Подробнее о проверке результатов при вызовах VK Bridge — в разделе Обработка результата."
   },
-  "sections": [],
-  "contentText": ""
+  "sections": [
+    {
+      "level": 2,
+      "title": "Схема работы",
+      "text": "1.Клиент вызывает VKWebAppAccelerometerStart для начала получения данных акселерометра. 2.Платформа отвечает: •Событием VKWebAppAccelerometerStartResult в случае успешного выполнения. •Событием VKWebAppAccelerometerStartFailed в случае ошибки доступа к датчику. 3.Если на предыдущем шаге не было ошибки, платформа начинает отправлять поток событий VKWebAppAccelerometerChanged с данными акселерометра. 4.На iOS поток событий с данными акселерометра может быть прерван. В этом случае платформа отправляет событие VKWebAppAccelerometerInterrupted. 5.Чтобы возобновить получение данных акселерометра, снова вызовите VKWebAppAccelerometerStart. Чтобы прекратить отслеживание данных, вызовите VKWebAppAccelerometerStop."
+    },
+    {
+      "level": 2,
+      "title": "Пример",
+      "text": "JavaScriptbridge.send('VKWebAppAccelerometerStart', { refresh_rate: 500 }) .then((data) => { if (data.result) { // Отслеживание данных акселерометра включено } }) .catch((error) => { // Ошибка console.log(error); });"
+    },
+    {
+      "level": 2,
+      "title": "Совместимость",
+      "text": "ПлощадкиПлатформыВКонтактеAndroid, iOSОдноклассникиAndroid, iOS"
+    },
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "ПолеТипОписаниеrefresh_rate необязательноеintegerПериод обновления данных акселерометра в миллисекундах. Минимальное значение: 20. Максимальное значение: 1000. Значение по умолчанию: 1000."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий: •VKWebAppAccelerometerStartResult •VKWebAppAccelerometerStartFailed Подробнее о проверке результатов при вызовах VK Bridge — в разделе Обработка результата."
+    },
+    {
+      "level": 3,
+      "title": "Объект Promise",
+      "text": "Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge."
+    },
+    {
+      "level": 3,
+      "title": "События",
+      "text": ""
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppAccelerometerStartResult",
+      "text": "Сигнализирует, что отслеживание данных акселерометра включено и мини-приложение может получать данные. В обработчик события на стороне пользователя передаются данные: JavaScript{ detail: { type: \"VKWebAppAccelerometerStartResult\", data: { result: true } } } В качестве ответа платформа возвращает объект: ПолеТипОписаниеresultbooleantrue, если отслеживание данных акселерометра включено."
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppAccelerometerStartFailed",
+      "text": "Информирует, что при взаимодействии с платформой произошла ошибка или что мини-приложение не может получить данные акселерометра. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge."
+    },
+    {
+      "level": 2,
+      "title": "Отслеживание данных",
+      "text": "Чтобы получить текущее состояние акселерометра, подпишитесь на события: •VKWebAppAccelerometerChanged — отслеживает координаты устройства при его перемещении. •VKWebAppAccelerometerInterrupted — сообщает о том, что поток данных прервался. Событие доступно только для iOS."
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppAccelerometerChanged",
+      "text": "Сигнализирует, что получены данные акселерометра. Акселерометр измеряет проекцию кажущегося ускорения — разницу между истинным и гравитационным ускорением. Таким образом определяется положение устройства относительно осей X, Y и Z. Знак числа обозначает направление перемещения. `` Положение устройства относительно осей X, Y, Z В обработчик события на стороне пользователя передаются данные: JavaScript{ detail: { type: \"VKWebAppAccelerometerChanged\", data: { x: -0.016759412, y: 6.3302693, z: 7.704541 } } } В качестве ответа платформа возвращает объект с полями: ПолеТипОписаниеxfloatПроекция кажущегося ускорения на ось X в м/c².yfloatПроекция кажущегося ускорения на ось Y в м/c².zfloatПроекция кажущегося ускорения на ось Z в м/c²."
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppAccelerometerInterrupted",
+      "text": "Указывает на то, что поток событий VKWebAppAccelerometerChanged прерван и данные акселерометра больше не могут быть получены. Событие доступно только для iOS. В обработчик события на стороне пользователя передаются данные: JavaScript{ detail: { type: \"VKWebAppAccelerometerInterrupted\", data: { \"message\": \"Received empty accelerometer data\" } } } Чтобы продолжить отслеживание данных акселерометра, снова вызовите событие VKWebAppAccelerometerStart."
+    }
+  ],
+  "compatibility": "ВКонтакте: Android, iOS; Одноклассники: Android, iOS",
+  "contentText": "VKWebAppAccelerometerStart включает отслеживание и приём данных акселерометра, установленного на мобильном устройстве. Схема работы: 1.Клиент вызывает VKWebAppAccelerometerStart для начала получения данных акселерометра. 2.Платформа отвечает: •Событием VKWebAppAccelerometerStartResult в случае успешного выполнения. •Событием VKWebAppAccelerometerStartFailed в случае ошибки доступа к датчику. 3.Если на предыдущем шаге не было ошибки, платформа начинает отправлять поток событий VKWebAppAccelerometerChanged с данными акселерометра. 4.На iOS поток событий с данными акселерометра может быть прерван. В этом случае платформа отправляет событие VKWebAppAccelerometerInterrupted. 5.Чтобы возобновить получение данных акселерометра, снова вызовите VKWebAppAccelerometerStart. Чтобы прекратить отслеживание данных, вызовите VKWebAppAccelerometerStop. Пример: JavaScriptbridge.send('VKWebAppAccelerometerStart', { refresh_rate: 500 }) .then((data) => { if (data.result) { // Отслеживание данных акселерометра включено } }) .catch((error) => { // Ошибка console.log(error); }); Совместимость: ПлощадкиПлатформыВКонтактеAndroid, iOSОдноклассникиAndroid, iOS Параметры: ПолеТипОписаниеrefresh_rate необязательноеintegerПериод обновления данных акселерометра в миллисекундах. Минимальное значение: 20. Максимальное значение: 1000. Значение по умолчанию: 1000. Результат: Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий: •VKWebAppAccelerometerStartResult •VKWebAppAccelerometerStartFailed Подробнее о проверке результатов при вызовах VK Bridge — в разделе Обработка результата. Объект Promise: Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge. События: VKWebAppAccelerometerStartResult: Сигнализирует, что отслеживание данных акселерометра включено и мини-приложение может получать данные. В обработчик события на стороне пользователя передаются данные: JavaScript{ detail: { type: \"VKWebAppAccelerometerStartResult\", data: { result: true } } } В качестве ответа платформа возвращает объект: ПолеТипОписаниеresultbooleantrue, если отслеживание данных акселерометра включено. VKWebAppAccelerometerStartFailed: Информирует, что при взаимодействии с платформой произошла ошибка или что мини-приложение не может получить данные акселерометра. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge. Отслеживание данных: Чтобы получить текущее состояние акселерометра, подпишитесь на события: •VKWebAppAccelerometerChanged — отслеживает координаты устройства при его перемещении. •VKWebAppAccelerometerInterrupted — сообщает о том, что поток данных прервался. Событие доступно только для iOS. VKWebAppAccelerometerChanged: Сигнализирует, что получены данные акселерометра. Акселерометр измеряет проекцию кажущегося ускорения — разницу между истинным и гравитационным ускорением. Таким образом определяется положение устройства относительно осей X, Y и Z. Знак числа обозначает направление перемещения. `` Положение устройства относительно осей X, Y, Z В обработчик события на стороне пользователя передаются данные: JavaScript{ detail: { type: \"VKWebAppAccelerometerChanged\", data: { x: -0.016759412, y: 6.3302693, z: 7.704541 } } } В качестве ответа платформа возвращает объект с полями: ПолеТипОписаниеxfloatПроекция кажущегося ускорения на ось X в м/c².yfloatПроекция кажущегося ускорения на ось Y в м/c².zfloatПроекция кажущегося ускорения на ось Z в м/c². VKWebAppAccelerometerInterrupted: Указывает на то, что поток событий VKWebAppAccelerometerChanged прерван и данные акселерометра больше не могут быть получены. Событие доступно только для iOS. В обработчик события на стороне пользователя передаются данные: JavaScript{ detail: { type: \"VKWebAppAccelerometerInterrupted\", data: { \"message\": \"Received empty accelerometer data\" } } } Чтобы продолжить отслеживание данных акселерометра, снова вызовите событие VKWebAppAccelerometerStart."
 }

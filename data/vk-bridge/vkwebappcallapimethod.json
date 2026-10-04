@@ -1,14 +1,18 @@
 {
   "id": "vkwebappcallapimethod",
   "url": "https://dev.vk.com/ru/bridge/VKWebAppCallAPIMethod",
-  "title": "VKWebAppCallAPIMethod",
+  "title": "VK Bridge | VKWebAppCallAPIMethod | VK для разработчиков",
   "h1": "VKWebAppCallAPIMethod",
   "group": "",
-  "description": "Метод для вызова методов VK API из мини-приложения через VK Bridge.",
+  "description": "С помощью VKWebAppCallAPIMethod вы можете отправлять запросы к API ВКонтакте и API Одноклассников из клиентской части вашего приложения.",
   "examples": [
     {
-      "lang": "js",
-      "code": "bridge.send('VKWebAppCallAPIMethod', {\n  method: 'users.get',\n  params: {\n    user_ids: '1',\n    v: '5.199'\n  }\n}).then((data) => {\n  console.log(data.response);\n});"
+      "lang": "javascript",
+      "code": "bridge.send('VKWebAppCallAPIMethod', {\n  method: 'users.get',\n  params: {\n    user_ids: '743784474,743784479',\n    v: '5.131',\n    access_token: 'ключ_доступа_пользователя'\n  }})\n  .then((data) => { \n    if (data.response) {\n      // Метод API выполнен\n    }\n  })\n  .catch((error) => {\n    // Ошибка\n    console.log(error);\n  });"
+    },
+    {
+      "lang": "javascript",
+      "code": "{\n  detail: {\n    type: \"VKWebAppCallAPIMethodResult\",\n    data: {\n      response: [\n        {\n          id: 743784474,\n          first_name: \"Персик\",\n          last_name: \"Рыжий\",\n          can_access_closed: true,\n          is_closed: false\n        },\n        {\n          id: 743784479,\n          first_name: \"Сеня\",\n          last_name: \"Хомяк\",\n          can_access_closed: true,\n          is_closed: false\n        }\n      ]\n    }\n  }\n}"
     }
   ],
   "params": [
@@ -16,18 +20,81 @@
       "name": "method",
       "type": "string",
       "required": true,
-      "description": "Название метода VK API"
+      "description": "Имя вызываемого метода API."
     },
     {
       "name": "params",
       "type": "object",
       "required": true,
-      "description": "Параметры вызываемого метода"
+      "description": "Параметры метода API. Возможные поля: • access_token (string) — ключ доступа пользователя с соответствующими правами, полученный с помощью события VKWebAppGetAuthToken. • v (string) — версия API, используемая для запроса (последняя доступная версия: 5.131). • другие обязательные параметры метода API."
+    },
+    {
+      "name": "use_local",
+      "type": "boolean",
+      "required": false,
+      "description": "Определяет, к API какой площадки отправляется запрос. Возможные значения: • true — к API площадки, которая использует SDK, например API Одноклассников. • false — к API Вконтакте. Значение по умолчанию."
     }
   ],
   "returns": {
-    "description": "response: object — результат выполнения метода VK API"
+    "description": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppCallAPIMethodResult и VKWebAppCallAPIMethodFailed. Подробнее о проверке результатов при вызовах VK Bridge. response (array[object]): Результат выполнения метода API. Описание структуры объекта response можно найти на странице соответствующего метода."
   },
-  "sections": [],
-  "contentText": "Метод для вызова методов VK API из мини-приложения через VK Bridge."
+  "sections": [
+    {
+      "level": 2,
+      "title": "Пример",
+      "text": "JavaScriptbridge.send('VKWebAppCallAPIMethod', { method: 'users.get', params: { user_ids: '743784474,743784479', v: '5.131', access_token: 'ключ_доступа_пользователя' }}) .then((data) => { if (data.response) { // Метод API выполнен } }) .catch((error) => { // Ошибка console.log(error); });"
+    },
+    {
+      "level": 2,
+      "title": "Совместимость",
+      "text": "ПлощадкиПлатформыВКонтактеAndroid, iOS, Mobile Web, WebОдноклассникиAndroid, iOS, Mobile Web, Web"
+    },
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "ПолеТипОписаниеmethod обязательноеstringИмя вызываемого метода API.params обязательноеobjectПараметры метода API. Возможные поля: • access_token (string) — ключ доступа пользователя с соответствующими правами, полученный с помощью события VKWebAppGetAuthToken. • v (string) — версия API, используемая для запроса (последняя доступная версия: 5.131). • другие обязательные параметры метода API.use_localbooleanОпределяет, к API какой площадки отправляется запрос. Возможные значения: • true — к API площадки, которая использует SDK, например API Одноклассников. • false — к API Вконтакте. Значение по умолчанию."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppCallAPIMethodResult и VKWebAppCallAPIMethodFailed. Подробнее о проверке результатов при вызовах VK Bridge."
+    },
+    {
+      "level": 3,
+      "title": "Объект Promise",
+      "text": "Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект со следующим полем: ПолеТипОписаниеresponsearray[object]Результат выполнения метода API. Описание структуры объекта response можно найти на странице соответствующего метода. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge."
+    },
+    {
+      "level": 3,
+      "title": "События",
+      "text": ""
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppCallAPIMethodResult",
+      "text": "Сигнализирует, что метод API выполнен. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppCallAPIMethodResult\", data: { response: [ { id: 743784474, first_name: \"Персик\", last_name: \"Рыжий\", can_access_closed: true, is_closed: false }, { id: 743784479, first_name: \"Сеня\", last_name: \"Хомяк\", can_access_closed: true, is_closed: false } ] } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса."
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppCallAPIMethodFailed",
+      "text": "Информирует об ошибке, которая произошла при взаимодействии с платформой. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge."
+    },
+    {
+      "level": 4,
+      "title": "Пример обработки событий",
+      "text": "Подробнее — в разделе Обработка результата."
+    },
+    {
+      "level": 2,
+      "title": "Песочница",
+      "text": "VKWebAppCallAPIMethod"
+    },
+    {
+      "level": 2,
+      "title": "Материалы по теме",
+      "text": "•API-вызовы в мини-приложениях •API-вызовы в играх"
+    }
+  ],
+  "compatibility": "ВКонтакте: Android, iOS, Mobile Web, Web; Одноклассники: Android, iOS, Mobile Web, Web",
+  "contentText": "С помощью VKWebAppCallAPIMethod вы можете отправлять запросы к API ВКонтакте и API Одноклассников из клиентской части вашего приложения. Пример: JavaScriptbridge.send('VKWebAppCallAPIMethod', { method: 'users.get', params: { user_ids: '743784474,743784479', v: '5.131', access_token: 'ключ_доступа_пользователя' }}) .then((data) => { if (data.response) { // Метод API выполнен } }) .catch((error) => { // Ошибка console.log(error); }); Совместимость: ПлощадкиПлатформыВКонтактеAndroid, iOS, Mobile Web, WebОдноклассникиAndroid, iOS, Mobile Web, Web Параметры: ПолеТипОписаниеmethod обязательноеstringИмя вызываемого метода API.params обязательноеobjectПараметры метода API. Возможные поля: • access_token (string) — ключ доступа пользователя с соответствующими правами, полученный с помощью события VKWebAppGetAuthToken. • v (string) — версия API, используемая для запроса (последняя доступная версия: 5.131). • другие обязательные параметры метода API.use_localbooleanОпределяет, к API какой площадки отправляется запрос. Возможные значения: • true — к API площадки, которая использует SDK, например API Одноклассников. • false — к API Вконтакте. Значение по умолчанию. Результат: Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppCallAPIMethodResult и VKWebAppCallAPIMethodFailed. Подробнее о проверке результатов при вызовах VK Bridge. Объект Promise: Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект со следующим полем: ПолеТипОписаниеresponsearray[object]Результат выполнения метода API. Описание структуры объекта response можно найти на странице соответствующего метода. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge. События: VKWebAppCallAPIMethodResult: Сигнализирует, что метод API выполнен. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppCallAPIMethodResult\", data: { response: [ { id: 743784474, first_name: \"Персик\", last_name: \"Рыжий\", can_access_closed: true, is_closed: false }, { id: 743784479, first_name: \"Сеня\", last_name: \"Хомяк\", can_access_closed: true, is_closed: false } ] } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса. VKWebAppCallAPIMethodFailed: Информирует об ошибке, которая произошла при взаимодействии с платформой. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge. Пример обработки событий: Подробнее — в разделе Обработка результата. Песочница: VKWebAppCallAPIMethod Материалы по теме: •API-вызовы в мини-приложениях •API-вызовы в играх"
 }

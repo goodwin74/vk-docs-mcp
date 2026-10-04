@@ -1,15 +1,88 @@
 {
   "id": "vkwebappgetpersonalcard",
   "url": "https://dev.vk.com/ru/bridge/VKWebAppGetPersonalCard",
-  "title": "VKWebAppGetPersonalCard",
+  "title": "VK Bridge | VKWebAppGetPersonalCard | VK для разработчиков",
   "h1": "VKWebAppGetPersonalCard",
   "group": "Пользователи",
-  "description": "",
-  "examples": [],
-  "params": [],
+  "description": "VKWebAppGetPersonalCard вызывает карточку контактов пользователя с полями, которые вы запросили. Мобильное приложение показывает экран с запросом доступа к выбранным данным.",
+  "examples": [
+    {
+      "lang": "javascript",
+      "code": "bridge.send('VKWebAppGetPersonalCard', {\n  type: [\n    'phone',\n    'email',\n    'address'\n  ]})\n  .then((data) => { \n    if (data.phone) {\n      // Данные получены\n    }\n  })\n  .catch((error) => {\n    // Ошибка\n    console.log(error);\n  });"
+    },
+    {
+      "lang": "javascript",
+      "code": "{\n  detail: {\n    type: \"VKWebAppGetPersonalCardResult\",\n    data: {\n      phone: \"79111234567\",\n      email: \"persik_ryzhiy@mail.ru\"\n      address: {\n        country: {\n          id: 1,\n          name: \"Россия\"\n        },\n        city: {\n          id: 2,\n          name: \"Санкт-Петербург\"\n        },\n        specified_address: \"Невский пр., д. 28\"\n        postal_code: \"191186\"\n      }\n    }\n  }\n}"
+    }
+  ],
+  "params": [
+    {
+      "name": "type",
+      "type": "array[string]",
+      "required": true,
+      "description": "Массив доступов. Возможные значения: • phone — номер телефона пользователя. • email — электронный адрес пользователя. • address — физический адрес пользователя."
+    }
+  ],
   "returns": {
-    "description": ""
+    "description": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppGetPersonalCardResult и VKWebAppGetPersonalCardFailed. Подробнее о проверке результатов при вызовах VK Bridge. Возможные ошибки: •This action cannot be performed in the background, если мини-приложение запущено в фоновом режиме. •User denied, если пользователь запретил доступ к данным. phone (string): Номер телефона пользователя. email (string): Электронный адрес пользователя. address (object): Информация об адресе пользователя. Поля объекта: • city (object) — город пользователя. • country (object) — страна пользователя. • specified_address (string) — точный адрес, указанный пользователем. • postal_code (string) — почтовый индекс. Поля объекта country: • id (integer) — идентификатор страны. • title (string) — название страны. Поля объекта city: • id (integer) — идентификатор города. • title (string) — название города."
   },
-  "sections": [],
-  "contentText": ""
+  "sections": [
+    {
+      "level": 2,
+      "title": "Пример",
+      "text": "JavaScriptbridge.send('VKWebAppGetPersonalCard', { type: [ 'phone', 'email', 'address' ]}) .then((data) => { if (data.phone) { // Данные получены } }) .catch((error) => { // Ошибка console.log(error); });"
+    },
+    {
+      "level": 2,
+      "title": "Совместимость",
+      "text": "ПлощадкиПлатформыВКонтактеAndroid, iOSОдноклассники–"
+    },
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "ПолеТипОписаниеtype обязательноеarray[string]Массив доступов. Возможные значения: • phone — номер телефона пользователя. • email — электронный адрес пользователя. • address — физический адрес пользователя."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppGetPersonalCardResult и VKWebAppGetPersonalCardFailed. Подробнее о проверке результатов при вызовах VK Bridge. Возможные ошибки: •This action cannot be performed in the background, если мини-приложение запущено в фоновом режиме. •User denied, если пользователь запретил доступ к данным."
+    },
+    {
+      "level": 3,
+      "title": "Объект Promise",
+      "text": "Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект со следующими полями: ПолеТипОписаниеphonestringНомер телефона пользователя.emailstringЭлектронный адрес пользователя.addressobjectИнформация об адресе пользователя. Поля объекта: • city (object) — город пользователя. • country (object) — страна пользователя. • specified_address (string) — точный адрес, указанный пользователем. • postal_code (string) — почтовый индекс. Поля объекта country: • id (integer) — идентификатор страны. • title (string) — название страны. Поля объекта city: • id (integer) — идентификатор города. • title (string) — название города. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge."
+    },
+    {
+      "level": 3,
+      "title": "События",
+      "text": ""
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppGetPersonalCardResult",
+      "text": "Сигнализирует, что данные получены. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppGetPersonalCardResult\", data: { phone: \"79111234567\", email: \"persik_ryzhiy@mail.ru\" address: { country: { id: 1, name: \"Россия\" }, city: { id: 2, name: \"Санкт-Петербург\" }, specified_address: \"Невский пр., д. 28\" postal_code: \"191186\" } } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса."
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppGetPersonalCardFailed",
+      "text": "Информирует об ошибке, которая произошла при взаимодействии с платформой. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge."
+    },
+    {
+      "level": 4,
+      "title": "Пример обработки событий",
+      "text": "Подробнее — в разделе Обработка результата."
+    },
+    {
+      "level": 2,
+      "title": "Особенности использования",
+      "text": "Платформа ВКонтакте показывает окно подтверждения доступа к данным при каждом вызове события VKWebAppGetPersonalCard. Это помогает вашему приложению получать актуальные данные. Если вашему приложению нужно использовать полученные данные несколько раз, сохраните их на стороне приложения и предоставьте возможность редактирования по запросу."
+    },
+    {
+      "level": 2,
+      "title": "Материалы по теме",
+      "text": "• VKWebAppGetEmail • VKWebAppGetPhoneNumber • VKWebAppGetUserInfo"
+    }
+  ],
+  "compatibility": "ВКонтакте: Android, iOS; Одноклассники: –",
+  "contentText": "VKWebAppGetPersonalCard вызывает карточку контактов пользователя с полями, которые вы запросили. Мобильное приложение показывает экран с запросом доступа к выбранным данным. Пример: JavaScriptbridge.send('VKWebAppGetPersonalCard', { type: [ 'phone', 'email', 'address' ]}) .then((data) => { if (data.phone) { // Данные получены } }) .catch((error) => { // Ошибка console.log(error); }); Совместимость: ПлощадкиПлатформыВКонтактеAndroid, iOSОдноклассники– Параметры: ПолеТипОписаниеtype обязательноеarray[string]Массив доступов. Возможные значения: • phone — номер телефона пользователя. • email — электронный адрес пользователя. • address — физический адрес пользователя. Результат: Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppGetPersonalCardResult и VKWebAppGetPersonalCardFailed. Подробнее о проверке результатов при вызовах VK Bridge. Возможные ошибки: •This action cannot be performed in the background, если мини-приложение запущено в фоновом режиме. •User denied, если пользователь запретил доступ к данным. Объект Promise: Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект со следующими полями: ПолеТипОписаниеphonestringНомер телефона пользователя.emailstringЭлектронный адрес пользователя.addressobjectИнформация об адресе пользователя. Поля объекта: • city (object) — город пользователя. • country (object) — страна пользователя. • specified_address (string) — точный адрес, указанный пользователем. • postal_code (string) — почтовый индекс. Поля объекта country: • id (integer) — идентификатор страны. • title (string) — название страны. Поля объекта city: • id (integer) — идентификатор города. • title (string) — название города. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge. События: VKWebAppGetPersonalCardResult: Сигнализирует, что данные получены. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppGetPersonalCardResult\", data: { phone: \"79111234567\", email: \"persik_ryzhiy@mail.ru\" address: { country: { id: 1, name: \"Россия\" }, city: { id: 2, name: \"Санкт-Петербург\" }, specified_address: \"Невский пр., д. 28\" postal_code: \"191186\" } } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса. VKWebAppGetPersonalCardFailed: Информирует об ошибке, которая произошла при взаимодействии с платформой. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge. Пример обработки событий: Подробнее — в разделе Обработка результата. Особенности использования: Платформа ВКонтакте показывает окно подтверждения доступа к данным при каждом вызове события VKWebAppGetPersonalCard. Это помогает вашему приложению получать актуальные данные. Если вашему приложению нужно использовать полученные данные несколько раз, сохраните их на стороне приложения и предоставьте возможность редактирования по запросу. Материалы по теме: • VKWebAppGetEmail • VKWebAppGetPhoneNumber • VKWebAppGetUserInfo"
 }

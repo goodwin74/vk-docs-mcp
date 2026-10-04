@@ -1,15 +1,61 @@
 {
   "id": "vkwebappcallfinished",
   "url": "https://dev.vk.com/ru/bridge/VKWebAppCallFinished",
-  "title": "VKWebAppCallFinished",
+  "title": "VK Bridge | VKWebAppCallFinished | VK для разработчиков",
   "h1": "VKWebAppCallFinished",
   "group": "Звонки",
-  "description": "",
-  "examples": [],
+  "description": "VKWebAppCallFinished используется при интеграции звонков в мини-приложение. Отправляется платформой, если пользователь, создавший звонок, завершил его.",
+  "examples": [
+    {
+      "lang": "javascript",
+      "code": "bridge.subscribe((e) => {\n  if (e.detail.type === 'VKWebAppCallFinished') {\n    // Логика мини-приложения\n  }\n});"
+    },
+    {
+      "lang": "javascript",
+      "code": "{\n  detail: {\n    \"type\": \"VKWebAppCallFinished\",\n    \"data\": {}\n  }\n}"
+    }
+  ],
   "params": [],
   "returns": {
-    "description": ""
+    "description": "VKWebAppCallFinished сигнализирует, что пользователь, начавший звонок, завершил его для всех. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { \"type\": \"VKWebAppCallFinished\", \"data\": {} } }"
   },
-  "sections": [],
-  "contentText": ""
+  "sections": [
+    {
+      "level": 2,
+      "title": "Пример",
+      "text": "JavaScriptbridge.subscribe((e) => { if (e.detail.type === 'VKWebAppCallFinished') { // Логика мини-приложения } });"
+    },
+    {
+      "level": 2,
+      "title": "Совместимость",
+      "text": "ПлощадкиПлатформыВКонтактеAndroid, iOS, WebОдноклассники–"
+    },
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "—"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "VKWebAppCallFinished сигнализирует, что пользователь, начавший звонок, завершил его для всех. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { \"type\": \"VKWebAppCallFinished\", \"data\": {} } }"
+    },
+    {
+      "level": 2,
+      "title": "Пример обработки события",
+      "text": "Подробнее — в разделе Обработка результата."
+    },
+    {
+      "level": 2,
+      "title": "Рекомендации",
+      "text": "После того как мини-приложение получит событие VKWebAppCallFinished от платформы, вам нужно передать эту информацию в серверную часть вашего мини-приложения и больше не отправлять пользователям ссылку на завершившийся звонок."
+    },
+    {
+      "level": 2,
+      "title": "Материалы по теме",
+      "text": "•VKWebAppCallLeft •Интеграция звонков"
+    }
+  ],
+  "compatibility": "ВКонтакте: Android, iOS, Web; Одноклассники: –",
+  "contentText": "VKWebAppCallFinished используется при интеграции звонков в мини-приложение. Отправляется платформой, если пользователь, создавший звонок, завершил его. Пример: JavaScriptbridge.subscribe((e) => { if (e.detail.type === 'VKWebAppCallFinished') { // Логика мини-приложения } }); Совместимость: ПлощадкиПлатформыВКонтактеAndroid, iOS, WebОдноклассники– Параметры: — Результат: VKWebAppCallFinished сигнализирует, что пользователь, начавший звонок, завершил его для всех. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { \"type\": \"VKWebAppCallFinished\", \"data\": {} } } Пример обработки события: Подробнее — в разделе Обработка результата. Рекомендации: После того как мини-приложение получит событие VKWebAppCallFinished от платформы, вам нужно передать эту информацию в серверную часть вашего мини-приложения и больше не отправлять пользователям ссылку на завершившийся звонок. Материалы по теме: •VKWebAppCallLeft •Интеграция звонков"
 }

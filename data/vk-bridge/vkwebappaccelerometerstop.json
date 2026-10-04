@@ -1,15 +1,71 @@
 {
   "id": "vkwebappaccelerometerstop",
   "url": "https://dev.vk.com/ru/bridge/VKWebAppAccelerometerStop",
-  "title": "VKWebAppAccelerometerStop",
+  "title": "VK Bridge | VKWebAppAccelerometerStop | VK для разработчиков",
   "h1": "VKWebAppAccelerometerStop",
   "group": "Датчики",
-  "description": "",
-  "examples": [],
+  "description": "VKWebAppAccelerometerStop прекращает отслеживание данных акселерометра.",
+  "examples": [
+    {
+      "lang": "javascript",
+      "code": "bridge.send('VKWebAppAccelerometerStop')\n  .then((data) => { \n    if (data.result) {\n      // Отслеживание данных акселерометра прекращено\n    }\n  })\n  .catch((error) => {\n    // Ошибка\n    console.log(error);\n  });"
+    },
+    {
+      "lang": "javascript",
+      "code": "{\n  detail: {\n    type: \"VKWebAppAccelerometerStopResult\",\n    data: {\n      result: true\n    }\n  }\n}"
+    }
+  ],
   "params": [],
   "returns": {
-    "description": ""
+    "description": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppAccelerometerStopResult и VKWebAppAccelerometerStopFailed. Подробнее о проверке результатов при вызовах VK Bridge. result (boolean): true, если отслеживание данных акселерометра прекращено."
   },
-  "sections": [],
-  "contentText": ""
+  "sections": [
+    {
+      "level": 2,
+      "title": "Пример",
+      "text": "JavaScriptbridge.send('VKWebAppAccelerometerStop') .then((data) => { if (data.result) { // Отслеживание данных акселерометра прекращено } }) .catch((error) => { // Ошибка console.log(error); });"
+    },
+    {
+      "level": 2,
+      "title": "Совместимость",
+      "text": "ПлощадкиПлатформыВКонтактеAndroid, iOSОдноклассникиAndroid, iOS"
+    },
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "—"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppAccelerometerStopResult и VKWebAppAccelerometerStopFailed. Подробнее о проверке результатов при вызовах VK Bridge."
+    },
+    {
+      "level": 3,
+      "title": "Объект Promise",
+      "text": "Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект со следующим полем: ПолеТипОписаниеresultbooleantrue, если отслеживание данных акселерометра прекращено. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge."
+    },
+    {
+      "level": 3,
+      "title": "События",
+      "text": ""
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppAccelerometerStopResult",
+      "text": "Сигнализирует, что отслеживание данных акселерометра прекращено. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppAccelerometerStopResult\", data: { result: true } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса."
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppAccelerometerStopFailed",
+      "text": "Информирует, что при взаимодействии с платформой произошла ошибка или не удалось остановить отслеживание данных акселерометра. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge."
+    },
+    {
+      "level": 4,
+      "title": "Пример обработки событий",
+      "text": "Подробнее — в разделе Обработка результата."
+    }
+  ],
+  "compatibility": "ВКонтакте: Android, iOS; Одноклассники: Android, iOS",
+  "contentText": "VKWebAppAccelerometerStop прекращает отслеживание данных акселерометра. Пример: JavaScriptbridge.send('VKWebAppAccelerometerStop') .then((data) => { if (data.result) { // Отслеживание данных акселерометра прекращено } }) .catch((error) => { // Ошибка console.log(error); }); Совместимость: ПлощадкиПлатформыВКонтактеAndroid, iOSОдноклассникиAndroid, iOS Параметры: — Результат: Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppAccelerometerStopResult и VKWebAppAccelerometerStopFailed. Подробнее о проверке результатов при вызовах VK Bridge. Объект Promise: Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект со следующим полем: ПолеТипОписаниеresultbooleantrue, если отслеживание данных акселерометра прекращено. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge. События: VKWebAppAccelerometerStopResult: Сигнализирует, что отслеживание данных акселерометра прекращено. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppAccelerometerStopResult\", data: { result: true } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса. VKWebAppAccelerometerStopFailed: Информирует, что при взаимодействии с платформой произошла ошибка или не удалось остановить отслеживание данных акселерометра. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge. Пример обработки событий: Подробнее — в разделе Обработка результата."
 }

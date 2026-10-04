@@ -1,15 +1,76 @@
 {
   "id": "vkwebappcallstart",
   "url": "https://dev.vk.com/ru/bridge/VKWebAppCallStart",
-  "title": "VKWebAppCallStart",
+  "title": "VK Bridge | VKWebAppCallStart | VK для разработчиков",
   "h1": "VKWebAppCallStart",
   "group": "Звонки",
-  "description": "",
-  "examples": [],
+  "description": "VKWebAppCallStart используется при интеграции звонков в мини-приложение. Событие создаёт ссылку, по которой к звонку могут присоединяться пользователи, запустившие мини-приложение.",
+  "examples": [
+    {
+      "lang": "javascript",
+      "code": "bridge.send('VKWebAppCallStart')  \n  .then((data) => { \n    if (data.result) {\n      // Ссылка на звонок создана\n    }\n  })\n  .catch((error) => {\n    // Ошибка\n    console.log(error);\n  });"
+    },
+    {
+      "lang": "javascript",
+      "code": "{\n  detail: {\n    type: \"VKWebAppCallStartResult\",\n    data: {\n        \"join_link\": \"hg0IXLVD7txQyFKMTLt2Zy4P6HmuXxcKGcfF0A8GznU\"\n    }\n  }\n}"
+    }
+  ],
   "params": [],
   "returns": {
-    "description": ""
+    "description": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppCallStartResult и VKWebAppCallStartFailed. Подробнее о проверке результатов при вызовах VK Bridge. join_link (string): URL, по которому можно подключить к звонку других участников с помощью события VKWebAppCallJoin."
   },
-  "sections": [],
-  "contentText": ""
+  "sections": [
+    {
+      "level": 2,
+      "title": "Пример",
+      "text": "JavaScriptbridge.send('VKWebAppCallStart') .then((data) => { if (data.result) { // Ссылка на звонок создана } }) .catch((error) => { // Ошибка console.log(error); });"
+    },
+    {
+      "level": 2,
+      "title": "Совместимость",
+      "text": "ПлощадкиПлатформыВКонтактеAndroid, iOS, WebОдноклассники–"
+    },
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "—"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppCallStartResult и VKWebAppCallStartFailed. Подробнее о проверке результатов при вызовах VK Bridge."
+    },
+    {
+      "level": 3,
+      "title": "Объект Promise",
+      "text": "Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект со следующим полем: ПолеТипОписаниеjoin_linkstringURL, по которому можно подключить к звонку других участников с помощью события VKWebAppCallJoin. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge."
+    },
+    {
+      "level": 3,
+      "title": "События",
+      "text": ""
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppCallStartResult",
+      "text": "Сигнализирует, что метод API выполнен. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppCallStartResult\", data: { \"join_link\": \"hg0IXLVD7txQyFKMTLt2Zy4P6HmuXxcKGcfF0A8GznU\" } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса."
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppCallStartFailed",
+      "text": "Информирует об ошибке, которая произошла при взаимодействии с платформой. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge."
+    },
+    {
+      "level": 4,
+      "title": "Пример обработки событий",
+      "text": "Подробнее — в разделе Обработка результата."
+    },
+    {
+      "level": 2,
+      "title": "Материалы по теме",
+      "text": "•Интеграция звонков •VKWebAppCallJoin"
+    }
+  ],
+  "compatibility": "ВКонтакте: Android, iOS, Web; Одноклассники: –",
+  "contentText": "VKWebAppCallStart используется при интеграции звонков в мини-приложение. Событие создаёт ссылку, по которой к звонку могут присоединяться пользователи, запустившие мини-приложение. Пример: JavaScriptbridge.send('VKWebAppCallStart') .then((data) => { if (data.result) { // Ссылка на звонок создана } }) .catch((error) => { // Ошибка console.log(error); }); Совместимость: ПлощадкиПлатформыВКонтактеAndroid, iOS, WebОдноклассники– Параметры: — Результат: Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppCallStartResult и VKWebAppCallStartFailed. Подробнее о проверке результатов при вызовах VK Bridge. Объект Promise: Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект со следующим полем: ПолеТипОписаниеjoin_linkstringURL, по которому можно подключить к звонку других участников с помощью события VKWebAppCallJoin. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge. События: VKWebAppCallStartResult: Сигнализирует, что метод API выполнен. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppCallStartResult\", data: { \"join_link\": \"hg0IXLVD7txQyFKMTLt2Zy4P6HmuXxcKGcfF0A8GznU\" } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса. VKWebAppCallStartFailed: Информирует об ошибке, которая произошла при взаимодействии с платформой. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge. Пример обработки событий: Подробнее — в разделе Обработка результата. Материалы по теме: •Интеграция звонков •VKWebAppCallJoin"
 }

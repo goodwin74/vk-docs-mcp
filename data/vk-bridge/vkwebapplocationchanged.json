@@ -1,15 +1,51 @@
 {
   "id": "vkwebapplocationchanged",
   "url": "https://dev.vk.com/ru/bridge/VKWebAppLocationChanged",
-  "title": "VKWebAppLocationChanged",
+  "title": "VK Bridge | События жизненного цикла | VKWebAppLocationChanged | VK для разработчиков",
   "h1": "VKWebAppLocationChanged",
   "group": "Навигация",
-  "description": "",
-  "examples": [],
+  "description": "VKWebAppLocationChanged отправляется платформой при изменении значения хеша после символа # через событие VKWebAppSetLocation.",
+  "examples": [
+    {
+      "lang": "javascript",
+      "code": "bridge.subscribe((e) => {\n  if (e.detail.type === 'VKWebAppLocationChanged') {\n    // Логика мини-приложения\n  }\n});"
+    },
+    {
+      "lang": "javascript",
+      "code": "{\n  detail: {\n    type: \"VKWebAppLocationChanged\",\n    data: {\n      location: \"fragment\"\n    }\n  }\n}"
+    }
+  ],
   "params": [],
   "returns": {
-    "description": ""
+    "description": "VKWebAppLocationChanged сигнализирует, что хеш изменён. В качестве ответа платформа возвращает объект со следующим полем: ПолеТипОписаниеlocationstringХеш — строка после символа # в URL вида vk.com/app6909581#. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppLocationChanged\", data: { location: \"fragment\" } } } location (string): Хеш — строка после символа # в URL вида vk.com/app6909581#."
   },
-  "sections": [],
-  "contentText": ""
+  "sections": [
+    {
+      "level": 2,
+      "title": "Пример",
+      "text": "JavaScriptbridge.subscribe((e) => { if (e.detail.type === 'VKWebAppLocationChanged') { // Логика мини-приложения } });"
+    },
+    {
+      "level": 2,
+      "title": "Совместимость",
+      "text": "ПлощадкиПлатформыВКонтактеMobile Web, WebОдноклассники–"
+    },
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "—"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "VKWebAppLocationChanged сигнализирует, что хеш изменён. В качестве ответа платформа возвращает объект со следующим полем: ПолеТипОписаниеlocationstringХеш — строка после символа # в URL вида vk.com/app6909581#. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppLocationChanged\", data: { location: \"fragment\" } } }"
+    },
+    {
+      "level": 2,
+      "title": "Пример обработки события",
+      "text": "Подробнее — в разделе Обработка результата."
+    }
+  ],
+  "compatibility": "ВКонтакте: Mobile Web, Web; Одноклассники: –",
+  "contentText": "VKWebAppLocationChanged отправляется платформой при изменении значения хеша после символа # через событие VKWebAppSetLocation. Пример: JavaScriptbridge.subscribe((e) => { if (e.detail.type === 'VKWebAppLocationChanged') { // Логика мини-приложения } }); Совместимость: ПлощадкиПлатформыВКонтактеMobile Web, WebОдноклассники– Параметры: — Результат: VKWebAppLocationChanged сигнализирует, что хеш изменён. В качестве ответа платформа возвращает объект со следующим полем: ПолеТипОписаниеlocationstringХеш — строка после символа # в URL вида vk.com/app6909581#. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppLocationChanged\", data: { location: \"fragment\" } } } Пример обработки события: Подробнее — в разделе Обработка результата."
 }

@@ -1,15 +1,93 @@
 {
   "id": "vkwebappgetfriends",
   "url": "https://dev.vk.com/ru/bridge/VKWebAppGetFriends",
-  "title": "VKWebAppGetFriends",
+  "title": "VK Bridge | VKWebAppGetFriends | VK для разработчиков",
   "h1": "VKWebAppGetFriends",
   "group": "Пользователи",
-  "description": "",
-  "examples": [],
-  "params": [],
+  "description": "VKWebAppGetFriends показывает окно выбора друзей из списка и получает информацию о них.",
+  "examples": [
+    {
+      "lang": "javascript",
+      "code": "bridge.send('VKWebAppGetFriends')\n  .then((data) => { \n    if (data) {\n      // Данные о пользователях\n      console.log(data.users);\n    }\n  })\n  .catch((error) => {\n    // Ошибка\n    console.log(error);\n  });"
+    },
+    {
+      "lang": "javascript",
+      "code": "{\n  detail: {\n    type: \"VKWebAppGetFriendsResult\",\n    data: {\n      users: [\n        {\n          id: 743784479,\n          sex: 2,\n          last_name: \"Хомяк\",\n          first_name: \"Сеня\",\n          photo_200: \"https://sun1-88.userapi.com/s/v1/ig2/ffZYc9qa-E8wPmfGsv-7erYVc83oWBUPeZjY0KSt7i7mkJ6y5YgwrNVs8K9E8TfCK8PuWXhu3l6O5cyCnlUSUCl3.jpg?size=200x200&quality=96&crop=26,26,204,204&ava=1\"\n        },\n        {\n          id: 743784474,\n          sex: 2,\n          last_name: \"Рыжий\",\n          first_name: \"Персик\",\n          photo_200: \"https://sun1-91.userapi.com/s/v1/ig2/Dcf-SWu7nVYDDldq9oQegiC06VqsSa43-HpDxzPjrvFCUUk9nSevY2Uf9xzm0bxvLfgsTOH6XiiW-zeLcDhPDj_w.jpg?size=200x200&quality=96&crop=26,26,204,204&ava=1\"\n        }\n      ]\n    }\n  }\n}"
+    }
+  ],
+  "params": [
+    {
+      "name": "multi",
+      "type": "boolean",
+      "required": true,
+      "description": "Информация о том, выбрать ли нескольких друзей из списка или одного. Возможные значения: • false — выбор одного друга из списка (значение по умолчанию). • true — выбор нескольких друзей из списка."
+    }
+  ],
   "returns": {
-    "description": ""
+    "description": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppGetFriendsResult и VKWebAppGetFriendsFailed. Подробнее о проверке результатов при вызовах VK Bridge. Возможные ошибки: •This action cannot be performed in the background, если мини-приложение запущено в фоновом режиме. •User denied, если пользователь закрыл окно выбора друзей. users (array[object]): Массив объектов пользователей. Объект содержит следующие поля: • id (integer) — идентификатор пользователя. • first_name (string) — имя пользователя. • last_name (string) — фамилия пользователя. • sex (integer) — пол пользователя. Возможные значения: • 1 — женский. • 2 — мужской. • 0 — пол не указан. • photo_200 (string) — URL квадратной фотографии пользователя с шириной 200 пикселей. Если у пользователя отсутствует фотография, возвращается https://vk.com/images/camera_200.png."
   },
-  "sections": [],
-  "contentText": ""
+  "sections": [
+    {
+      "level": 2,
+      "title": "Пример",
+      "text": "JavaScriptbridge.send('VKWebAppGetFriends') .then((data) => { if (data) { // Данные о пользователях console.log(data.users); } }) .catch((error) => { // Ошибка console.log(error); });"
+    },
+    {
+      "level": 2,
+      "title": "Совместимость",
+      "text": "ПлощадкиПлатформыВКонтактеAndroid, iOS, Mobile Web, WebОдноклассникиAndroid, iOS, Mobile Web, Web"
+    },
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "ПолеТипОписаниеmulti обязательноеbooleanИнформация о том, выбрать ли нескольких друзей из списка или одного. Возможные значения: • false — выбор одного друга из списка (значение по умолчанию). • true — выбор нескольких друзей из списка."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppGetFriendsResult и VKWebAppGetFriendsFailed. Подробнее о проверке результатов при вызовах VK Bridge. Возможные ошибки: •This action cannot be performed in the background, если мини-приложение запущено в фоновом режиме. •User denied, если пользователь закрыл окно выбора друзей."
+    },
+    {
+      "level": 3,
+      "title": "Объект Promise",
+      "text": "Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект со следующими полями: ПолеТипОписаниеusersarray[object]Массив объектов пользователей. Объект содержит следующие поля: • id (integer) — идентификатор пользователя. • first_name (string) — имя пользователя. • last_name (string) — фамилия пользователя. • sex (integer) — пол пользователя. Возможные значения: • 1 — женский. • 2 — мужской. • 0 — пол не указан. • photo_200 (string) — URL квадратной фотографии пользователя с шириной 200 пикселей. Если у пользователя отсутствует фотография, возвращается https://vk.com/images/camera_200.png. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge."
+    },
+    {
+      "level": 3,
+      "title": "События",
+      "text": ""
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppGetFriendsResult",
+      "text": "Сигнализирует, что данные о пользователях получены. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppGetFriendsResult\", data: { users: [ { id: 743784479, sex: 2, last_name: \"Хомяк\", first_name: \"Сеня\", photo_200: \"https://sun1-88.userapi.com/s/v1/ig2/ffZYc9qa-E8wPmfGsv-7erYVc83oWBUPeZjY0KSt7i7mkJ6y5YgwrNVs8K9E8TfCK8PuWXhu3l6O5cyCnlUSUCl3.jpg?size=200x200&quality=96&crop=26,26,204,204&ava=1\" }, { id: 743784474, sex: 2, last_name: \"Рыжий\", first_name: \"Персик\", photo_200: \"https://sun1-91.userapi.com/s/v1/ig2/Dcf-SWu7nVYDDldq9oQegiC06VqsSa43-HpDxzPjrvFCUUk9nSevY2Uf9xzm0bxvLfgsTOH6XiiW-zeLcDhPDj_w.jpg?size=200x200&quality=96&crop=26,26,204,204&ava=1\" } ] } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса."
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppGetFriendsFailed",
+      "text": "Информирует об ошибке, которая произошла при взаимодействии с платформой. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge."
+    },
+    {
+      "level": 4,
+      "title": "Пример обработки событий",
+      "text": "Подробнее — в разделе Обработка результата."
+    },
+    {
+      "level": 2,
+      "title": "Особенности использования",
+      "text": "Для работы события вашему приложению не требуется предварительно получать права на доступ к данным профиля пользователя. Событие VKWebAppGetFriends предназначено для разового получения информации о друзьях пользователя. Решение пользователя не сохраняется для последующих вызовов. При повторном вызове события платформа снова покажет диалоговое окно со списком друзей."
+    },
+    {
+      "level": 2,
+      "title": "Песочница",
+      "text": "VKWebAppGetFriends"
+    },
+    {
+      "level": 2,
+      "title": "Материалы по теме",
+      "text": "• API-метод apps.getFriendsList • API-методы Friends"
+    }
+  ],
+  "compatibility": "ВКонтакте: Android, iOS, Mobile Web, Web; Одноклассники: Android, iOS, Mobile Web, Web",
+  "contentText": "VKWebAppGetFriends показывает окно выбора друзей из списка и получает информацию о них. Пример: JavaScriptbridge.send('VKWebAppGetFriends') .then((data) => { if (data) { // Данные о пользователях console.log(data.users); } }) .catch((error) => { // Ошибка console.log(error); }); Совместимость: ПлощадкиПлатформыВКонтактеAndroid, iOS, Mobile Web, WebОдноклассникиAndroid, iOS, Mobile Web, Web Параметры: ПолеТипОписаниеmulti обязательноеbooleanИнформация о том, выбрать ли нескольких друзей из списка или одного. Возможные значения: • false — выбор одного друга из списка (значение по умолчанию). • true — выбор нескольких друзей из списка. Результат: Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppGetFriendsResult и VKWebAppGetFriendsFailed. Подробнее о проверке результатов при вызовах VK Bridge. Возможные ошибки: •This action cannot be performed in the background, если мини-приложение запущено в фоновом режиме. •User denied, если пользователь закрыл окно выбора друзей. Объект Promise: Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект со следующими полями: ПолеТипОписаниеusersarray[object]Массив объектов пользователей. Объект содержит следующие поля: • id (integer) — идентификатор пользователя. • first_name (string) — имя пользователя. • last_name (string) — фамилия пользователя. • sex (integer) — пол пользователя. Возможные значения: • 1 — женский. • 2 — мужской. • 0 — пол не указан. • photo_200 (string) — URL квадратной фотографии пользователя с шириной 200 пикселей. Если у пользователя отсутствует фотография, возвращается https://vk.com/images/camera_200.png. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge. События: VKWebAppGetFriendsResult: Сигнализирует, что данные о пользователях получены. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppGetFriendsResult\", data: { users: [ { id: 743784479, sex: 2, last_name: \"Хомяк\", first_name: \"Сеня\", photo_200: \"https://sun1-88.userapi.com/s/v1/ig2/ffZYc9qa-E8wPmfGsv-7erYVc83oWBUPeZjY0KSt7i7mkJ6y5YgwrNVs8K9E8TfCK8PuWXhu3l6O5cyCnlUSUCl3.jpg?size=200x200&quality=96&crop=26,26,204,204&ava=1\" }, { id: 743784474, sex: 2, last_name: \"Рыжий\", first_name: \"Персик\", photo_200: \"https://sun1-91.userapi.com/s/v1/ig2/Dcf-SWu7nVYDDldq9oQegiC06VqsSa43-HpDxzPjrvFCUUk9nSevY2Uf9xzm0bxvLfgsTOH6XiiW-zeLcDhPDj_w.jpg?size=200x200&quality=96&crop=26,26,204,204&ava=1\" } ] } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса. VKWebAppGetFriendsFailed: Информирует об ошибке, которая произошла при взаимодействии с платформой. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge. Пример обработки событий: Подробнее — в разделе Обработка результата. Особенности использования: Для работы события вашему приложению не требуется предварительно получать права на доступ к данным профиля пользователя. Событие VKWebAppGetFriends предназначено для разового получения информации о друзьях пользователя. Решение пользователя не сохраняется для последующих вызовов. При повторном вызове события платформа снова покажет диалоговое окно со списком друзей. Песочница: VKWebAppGetFriends Материалы по теме: • API-метод apps.getFriendsList • API-методы Friends"
 }

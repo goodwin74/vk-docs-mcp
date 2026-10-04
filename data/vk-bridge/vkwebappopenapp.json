@@ -1,15 +1,129 @@
 {
   "id": "vkwebappopenapp",
   "url": "https://dev.vk.com/ru/bridge/VKWebAppOpenApp",
-  "title": "VKWebAppOpenApp",
+  "title": "VK Bridge | VKWebAppOpenApp | VK для разработчиков",
   "h1": "VKWebAppOpenApp",
   "group": "Навигация",
-  "description": "",
-  "examples": [],
-  "params": [],
+  "description": "VKWebAppOpenApp открывает другое приложение из текущего мини-приложения или игры.",
+  "examples": [
+    {
+      "lang": "javascript",
+      "code": "bridge.send('VKWebAppOpenApp', {\n  app_id: 6909581,\n  location: 'test'\n  })\n  .then((data) => { \n    if (data.result) {\n      // Приложение открыто\n    }\n  })\n  .catch((error) => {\n    // Ошибка\n    console.log(error);\n  });"
+    },
+    {
+      "lang": "javascript",
+      "code": "{\n  detail: {\n    type: \"VKWebAppOpenAppResult\",\n    data: {\n      result: true\n    }\n  }\n}"
+    }
+  ],
+  "params": [
+    {
+      "name": "app_id",
+      "type": "integer",
+      "required": true,
+      "description": "Идентификатор открываемого мини-приложения или игры."
+    },
+    {
+      "name": "location",
+      "type": "string",
+      "required": false,
+      "description": "Хеш — строка после символа # в URL, например vk.com/app12345#/path=start-screen."
+    },
+    {
+      "name": "group_id",
+      "type": "integer",
+      "required": false,
+      "description": "Идентификатор сообщества, если надо эмулировать открытие приложения из сообщества. Важно. Укажите идентификатор без знака «минус». Где найти идентификатор сообщества?"
+    },
+    {
+      "name": "close_parent",
+      "type": "boolean",
+      "required": false,
+      "description": "Сообщает платформе, что текущее приложение надо закрыть после того, как из него откроется другое."
+    },
+    {
+      "name": "app_is_local",
+      "type": "boolean",
+      "required": false,
+      "description": "Определяет, приложение какой площадки должно быть открыто. Возможные значения: • true — открыть приложение площадки, которая использует SDK (например, Одноклассники). • false — открыть приложение ВКонтакте. Значение по умолчанию."
+    },
+    {
+      "name": "app_id",
+      "type": "integer",
+      "required": true,
+      "description": "Идентификатор открываемого мини-приложения или игры."
+    },
+    {
+      "name": "location",
+      "type": "string",
+      "required": false,
+      "description": "Хеш — строка после символа # в URL, например vk.com/app12345#/path=start-screen."
+    }
+  ],
   "returns": {
-    "description": ""
+    "description": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppOpenAppResult и VKWebAppOpenAppFailed. Подробнее о проверке результатов при вызовах VK Bridge. Возможные ошибки: •This action cannot be performed in the background, если мини-приложение или игра запущены в фоновом режиме. result (boolean): true, если приложение открыто."
   },
-  "sections": [],
-  "contentText": ""
+  "sections": [
+    {
+      "level": 2,
+      "title": "Пример",
+      "text": "JavaScriptbridge.send('VKWebAppOpenApp', { app_id: 6909581, location: 'test' }) .then((data) => { if (data.result) { // Приложение открыто } }) .catch((error) => { // Ошибка console.log(error); });"
+    },
+    {
+      "level": 2,
+      "title": "Совместимость",
+      "text": "ПлощадкиПлатформыВКонтактеAndroid, iOS, Mobile Web, WebОдноклассникиMobile Web, Web"
+    },
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": ""
+    },
+    {
+      "level": 3,
+      "title": "Android, iOS",
+      "text": "ПолеТипОписаниеapp_id обязательноеintegerИдентификатор открываемого мини-приложения или игры.location необязательноеstringХеш — строка после символа # в URL, например vk.com/app12345#/path=start-screen.group_id необязательноеintegerИдентификатор сообщества, если надо эмулировать открытие приложения из сообщества. Важно. Укажите идентификатор без знака «минус». Где найти идентификатор сообщества?close_parent необязательноеbooleanСообщает платформе, что текущее приложение надо закрыть после того, как из него откроется другое.app_is_local необязательноеbooleanОпределяет, приложение какой площадки должно быть открыто. Возможные значения: • true — открыть приложение площадки, которая использует SDK (например, Одноклассники). • false — открыть приложение ВКонтакте. Значение по умолчанию."
+    },
+    {
+      "level": 3,
+      "title": "Mobile Web, Web",
+      "text": "ПолеТипОписаниеapp_id обязательноеintegerИдентификатор открываемого мини-приложения или игры.location необязательноеstringХеш — строка после символа # в URL, например vk.com/app12345#/path=start-screen."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppOpenAppResult и VKWebAppOpenAppFailed. Подробнее о проверке результатов при вызовах VK Bridge. Возможные ошибки: •This action cannot be performed in the background, если мини-приложение или игра запущены в фоновом режиме."
+    },
+    {
+      "level": 3,
+      "title": "Объект Promise",
+      "text": "Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект со следующим полем: ПолеТипОписаниеresultbooleantrue, если приложение открыто. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge."
+    },
+    {
+      "level": 3,
+      "title": "События",
+      "text": ""
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppOpenAppResult",
+      "text": "Сигнализирует, что приложение открыто. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppOpenAppResult\", data: { result: true } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса."
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppOpenAppFailed",
+      "text": "Информирует об ошибке, которая произошла при взаимодействии с платформой. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge."
+    },
+    {
+      "level": 4,
+      "title": "Пример обработки событий",
+      "text": "Подробнее — в разделе Обработка результата."
+    },
+    {
+      "level": 2,
+      "title": "Песочница",
+      "text": "VKWebAppOpenApp"
+    }
+  ],
+  "compatibility": "ВКонтакте: Android, iOS, Mobile Web, Web; Одноклассники: Mobile Web, Web",
+  "contentText": "VKWebAppOpenApp открывает другое приложение из текущего мини-приложения или игры. Пример: JavaScriptbridge.send('VKWebAppOpenApp', { app_id: 6909581, location: 'test' }) .then((data) => { if (data.result) { // Приложение открыто } }) .catch((error) => { // Ошибка console.log(error); }); Совместимость: ПлощадкиПлатформыВКонтактеAndroid, iOS, Mobile Web, WebОдноклассникиMobile Web, Web Параметры: Android, iOS: ПолеТипОписаниеapp_id обязательноеintegerИдентификатор открываемого мини-приложения или игры.location необязательноеstringХеш — строка после символа # в URL, например vk.com/app12345#/path=start-screen.group_id необязательноеintegerИдентификатор сообщества, если надо эмулировать открытие приложения из сообщества. Важно. Укажите идентификатор без знака «минус». Где найти идентификатор сообщества?close_parent необязательноеbooleanСообщает платформе, что текущее приложение надо закрыть после того, как из него откроется другое.app_is_local необязательноеbooleanОпределяет, приложение какой площадки должно быть открыто. Возможные значения: • true — открыть приложение площадки, которая использует SDK (например, Одноклассники). • false — открыть приложение ВКонтакте. Значение по умолчанию. Mobile Web, Web: ПолеТипОписаниеapp_id обязательноеintegerИдентификатор открываемого мини-приложения или игры.location необязательноеstringХеш — строка после символа # в URL, например vk.com/app12345#/path=start-screen. Результат: Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppOpenAppResult и VKWebAppOpenAppFailed. Подробнее о проверке результатов при вызовах VK Bridge. Возможные ошибки: •This action cannot be performed in the background, если мини-приложение или игра запущены в фоновом режиме. Объект Promise: Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект со следующим полем: ПолеТипОписаниеresultbooleantrue, если приложение открыто. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge. События: VKWebAppOpenAppResult: Сигнализирует, что приложение открыто. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppOpenAppResult\", data: { result: true } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса. VKWebAppOpenAppFailed: Информирует об ошибке, которая произошла при взаимодействии с платформой. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge. Пример обработки событий: Подробнее — в разделе Обработка результата. Песочница: VKWebAppOpenApp"
 }

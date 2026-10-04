@@ -1,15 +1,94 @@
 {
   "id": "vkwebappshoworderbox",
   "url": "https://dev.vk.com/ru/bridge/VKWebAppShowOrderBox",
-  "title": "VKWebAppShowOrderBox",
+  "title": "VK Bridge | VKWebAppShowOrderBox | VK для разработчиков",
   "h1": "VKWebAppShowOrderBox",
   "group": "Покупки",
-  "description": "",
-  "examples": [],
-  "params": [],
+  "description": "VKWebAppShowOrderBox открывает окно покупки виртуальной ценности в мини-приложении или игре.",
+  "examples": [
+    {
+      "lang": "javascript",
+      "code": "bridge.send('VKWebAppShowOrderBox', { \n  type: 'item',\n  item: 'item_id_123456'\n  })\n  .then((data) => {\n    if (data.success) {\n      // Списание голосов прошло успешно\n  }})\n  .catch((error) => {\n    // Ошибка\n    console.log(error);\n  });"
+    },
+    {
+      "lang": "javascript",
+      "code": "{\n  detail: {\n    type: \"VKWebAppShowOrderBoxResult\",\n    data: {\n      success: true,\n      order_id: \"235379722919\"\n    }\n  }\n}"
+    }
+  ],
+  "params": [
+    {
+      "name": "type",
+      "type": "string",
+      "required": true,
+      "description": "Тип виртуальной ценности. Всегда имеет значение item."
+    },
+    {
+      "name": "item",
+      "type": "string",
+      "required": true,
+      "description": "Название виртуальной ценности. Будет передано в уведомлении на получение информации о виртуальной ценности. Длина строки: 64 символа."
+    }
+  ],
   "returns": {
-    "description": ""
+    "description": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppShowOrderBoxResult и VKWebAppShowOrderBoxFailed. Подробнее о проверке результатов при вызовах VK Bridge. Возможные ошибки: •This action cannot be performed in the background, если мини-приложение или игра запущены в фоновом режиме. success (boolean): Возвращает значение true, если списание прошло успешно. order_id (string): Идентификатор заказа в cистеме платежей. Возвращается, если status = true."
   },
-  "sections": [],
-  "contentText": ""
+  "sections": [
+    {
+      "level": 2,
+      "title": "Пример",
+      "text": "JavaScriptbridge.send('VKWebAppShowOrderBox', { type: 'item', item: 'item_id_123456' }) .then((data) => { if (data.success) { // Списание голосов прошло успешно }}) .catch((error) => { // Ошибка console.log(error); });"
+    },
+    {
+      "level": 2,
+      "title": "Совместимость",
+      "text": "ПлощадкиПлатформыВКонтактеAndroid, Mobile Web, WebОдноклассникиAndroid, iOS, Mobile Web, Web"
+    },
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "ПолеТипОписаниеtype обязательноеstringТип виртуальной ценности. Всегда имеет значение item.item обязательноеstringНазвание виртуальной ценности. Будет передано в уведомлении на получение информации о виртуальной ценности. Длина строки: 64 символа."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppShowOrderBoxResult и VKWebAppShowOrderBoxFailed. Подробнее о проверке результатов при вызовах VK Bridge. Возможные ошибки: •This action cannot be performed in the background, если мини-приложение или игра запущены в фоновом режиме."
+    },
+    {
+      "level": 3,
+      "title": "Объект Promise",
+      "text": "Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект со следующим полем: ПолеТипОписаниеsuccessbooleanВозвращает значение true, если списание прошло успешно.order_idstringИдентификатор заказа в cистеме платежей. Возвращается, если status = true. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge."
+    },
+    {
+      "level": 3,
+      "title": "События",
+      "text": ""
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppShowOrderBoxResult",
+      "text": "Сигнализирует, что списание голосов прошло успешно. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppShowOrderBoxResult\", data: { success: true, order_id: \"235379722919\" } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса."
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppShowOrderBoxFailed",
+      "text": "Информирует об ошибке, которая произошла при взаимодействии с платформой. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge."
+    },
+    {
+      "level": 4,
+      "title": "Пример обработки событий",
+      "text": "Подробнее — в разделе Обработка результата."
+    },
+    {
+      "level": 2,
+      "title": "Песочница игр",
+      "text": "VKWebAppShowOrderBox"
+    },
+    {
+      "level": 2,
+      "title": "Материалы по теме",
+      "text": "•Мини-приложения — Панель управления | Платежи •Игры — Панель управления | Платежи •Продажа игровых товаров •Продажа товаров в мини-приложениях •Платежи виртуальной валютой"
+    }
+  ],
+  "compatibility": "ВКонтакте: Android, Mobile Web, Web; Одноклассники: Android, iOS, Mobile Web, Web",
+  "contentText": "VKWebAppShowOrderBox открывает окно покупки виртуальной ценности в мини-приложении или игре. Пример: JavaScriptbridge.send('VKWebAppShowOrderBox', { type: 'item', item: 'item_id_123456' }) .then((data) => { if (data.success) { // Списание голосов прошло успешно }}) .catch((error) => { // Ошибка console.log(error); }); Совместимость: ПлощадкиПлатформыВКонтактеAndroid, Mobile Web, WebОдноклассникиAndroid, iOS, Mobile Web, Web Параметры: ПолеТипОписаниеtype обязательноеstringТип виртуальной ценности. Всегда имеет значение item.item обязательноеstringНазвание виртуальной ценности. Будет передано в уведомлении на получение информации о виртуальной ценности. Длина строки: 64 символа. Результат: Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppShowOrderBoxResult и VKWebAppShowOrderBoxFailed. Подробнее о проверке результатов при вызовах VK Bridge. Возможные ошибки: •This action cannot be performed in the background, если мини-приложение или игра запущены в фоновом режиме. Объект Promise: Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект со следующим полем: ПолеТипОписаниеsuccessbooleanВозвращает значение true, если списание прошло успешно.order_idstringИдентификатор заказа в cистеме платежей. Возвращается, если status = true. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge. События: VKWebAppShowOrderBoxResult: Сигнализирует, что списание голосов прошло успешно. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppShowOrderBoxResult\", data: { success: true, order_id: \"235379722919\" } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса. VKWebAppShowOrderBoxFailed: Информирует об ошибке, которая произошла при взаимодействии с платформой. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge. Пример обработки событий: Подробнее — в разделе Обработка результата. Песочница игр: VKWebAppShowOrderBox Материалы по теме: •Мини-приложения — Панель управления | Платежи •Игры — Панель управления | Платежи •Продажа игровых товаров •Продажа товаров в мини-приложениях •Платежи виртуальной валютой"
 }

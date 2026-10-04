@@ -1,15 +1,71 @@
 {
   "id": "vkwebappdevicemotionstop",
   "url": "https://dev.vk.com/ru/bridge/VKWebAppDeviceMotionStop",
-  "title": "VKWebAppDeviceMotionStop",
+  "title": "VK Bridge | VKWebAppDeviceMotionStop | VK для разработчиков",
   "h1": "VKWebAppDeviceMotionStop",
   "group": "Датчики",
-  "description": "",
-  "examples": [],
+  "description": "VKWebAppDeviceMotionStop прекращает отслеживание данных о положении мобильного устройства в пространстве.",
+  "examples": [
+    {
+      "lang": "javascript",
+      "code": "bridge.send('VKWebAppDeviceMotionStop')\n  .then((data) => { \n    if (data.result) {\n      // Отслеживание данных о положении в пространстве прекращено\n    }\n  })\n  .catch((error) => {\n    // Ошибка\n    console.log(error);\n  });"
+    },
+    {
+      "lang": "javascript",
+      "code": "{\n  detail: {\n    type: \"VKWebAppDeviceMotionStopResult\",\n    data: {\n      result: true\n    }\n  }\n}"
+    }
+  ],
   "params": [],
   "returns": {
-    "description": ""
+    "description": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppDeviceMotionStopResult и VKWebAppDeviceMotionStopFailed. Подробнее о проверке результатов при вызовах VK Bridge. result (boolean): true, если отслеживание данных о положении в пространстве прекращено."
   },
-  "sections": [],
-  "contentText": ""
+  "sections": [
+    {
+      "level": 2,
+      "title": "Пример",
+      "text": "JavaScriptbridge.send('VKWebAppDeviceMotionStop') .then((data) => { if (data.result) { // Отслеживание данных о положении в пространстве прекращено } }) .catch((error) => { // Ошибка console.log(error); });"
+    },
+    {
+      "level": 2,
+      "title": "Совместимость",
+      "text": "ПлощадкиПлатформыВКонтактеAndroid, iOSОдноклассникиAndroid, iOS"
+    },
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "—"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppDeviceMotionStopResult и VKWebAppDeviceMotionStopFailed. Подробнее о проверке результатов при вызовах VK Bridge."
+    },
+    {
+      "level": 3,
+      "title": "Объект Promise",
+      "text": "Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект со следующим полем: ПолеТипОписаниеresultbooleantrue, если отслеживание данных о положении в пространстве прекращено. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge."
+    },
+    {
+      "level": 3,
+      "title": "События",
+      "text": ""
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppDeviceMotionStopResult",
+      "text": "Сигнализирует, что отслеживание данных о положении в пространстве прекращено. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppDeviceMotionStopResult\", data: { result: true } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса."
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppDeviceMotionStopFailed",
+      "text": "Информирует, что при взаимодействии с платформой произошла ошибка или не удалось остановить отслеживание данных. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge."
+    },
+    {
+      "level": 4,
+      "title": "Пример обработки событий",
+      "text": "Подробнее — в разделе Обработка результата."
+    }
+  ],
+  "compatibility": "ВКонтакте: Android, iOS; Одноклассники: Android, iOS",
+  "contentText": "VKWebAppDeviceMotionStop прекращает отслеживание данных о положении мобильного устройства в пространстве. Пример: JavaScriptbridge.send('VKWebAppDeviceMotionStop') .then((data) => { if (data.result) { // Отслеживание данных о положении в пространстве прекращено } }) .catch((error) => { // Ошибка console.log(error); }); Совместимость: ПлощадкиПлатформыВКонтактеAndroid, iOSОдноклассникиAndroid, iOS Параметры: — Результат: Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppDeviceMotionStopResult и VKWebAppDeviceMotionStopFailed. Подробнее о проверке результатов при вызовах VK Bridge. Объект Promise: Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект со следующим полем: ПолеТипОписаниеresultbooleantrue, если отслеживание данных о положении в пространстве прекращено. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge. События: VKWebAppDeviceMotionStopResult: Сигнализирует, что отслеживание данных о положении в пространстве прекращено. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppDeviceMotionStopResult\", data: { result: true } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса. VKWebAppDeviceMotionStopFailed: Информирует, что при взаимодействии с платформой произошла ошибка или не удалось остановить отслеживание данных. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge. Пример обработки событий: Подробнее — в разделе Обработка результата."
 }

@@ -1,15 +1,88 @@
 {
   "id": "vkwebappaddtocommunity",
   "url": "https://dev.vk.com/ru/bridge/VKWebAppAddToCommunity",
-  "title": "VKWebAppAddToCommunity",
+  "title": "VK Bridge | VKWebAppAddToCommunity | VK для разработчиков",
   "h1": "VKWebAppAddToCommunity",
   "group": "Сообщества",
-  "description": "",
-  "examples": [],
-  "params": [],
+  "description": "VKWebAppAddToCommunity вызывает окно выбора сообщества и устанавливает в него приложение: мини-приложение или плагин.",
+  "examples": [
+    {
+      "lang": "javascript",
+      "code": "bridge.send('VKWebAppAddToCommunity')\n  .then((data) => { \n    if (data.group_id) {\n      // Приложение установлено в сообщество\n    }\n  })\n  .catch((error) => {\n    // Ошибка\n    console.log(error);\n  });"
+    },
+    {
+      "lang": "javascript",
+      "code": "{\n  detail: {\n    type: \"VKWebAppAddToCommunityResult\",\n    data: {\n      group_id: \"166562603\"\n    }\n  }\n}"
+    }
+  ],
+  "params": [
+    {
+      "name": "hide_success_modal",
+      "type": "boolean",
+      "required": false,
+      "description": "Указывает, нужно ли скрывать модальное окно об успешном добавлении приложения в сообщество. • true — скрывать модальное окно. • false — показывать модальное окно. Используется только в десктопной версии. На других платформах модальное окно не отображается."
+    }
+  ],
   "returns": {
-    "description": ""
+    "description": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppAddToCommunityResult и VKWebAppAddToCommunityFailed. Подробнее о проверке результатов при вызовах VK Bridge. Возможные ошибки: •This action cannot be performed in the background, если приложение запущено в фоновом режиме. •User denied, если пользователь закрывает окно выбора сообщества. group_id (string): Идентификатор сообщества, в котором установлено приложение."
   },
-  "sections": [],
-  "contentText": ""
+  "sections": [
+    {
+      "level": 2,
+      "title": "Пример",
+      "text": "JavaScriptbridge.send('VKWebAppAddToCommunity') .then((data) => { if (data.group_id) { // Приложение установлено в сообщество } }) .catch((error) => { // Ошибка console.log(error); });"
+    },
+    {
+      "level": 2,
+      "title": "Совместимость",
+      "text": "ПлощадкиПлатформыВКонтактеAndroid, iOS, Mobile Web, WebОдноклассникиAndroid, iOS, Mobile Web, Web"
+    },
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "ПолеТипОписаниеhide_success_modal необязательноеbooleanУказывает, нужно ли скрывать модальное окно об успешном добавлении приложения в сообщество. • true — скрывать модальное окно. • false — показывать модальное окно. Используется только в десктопной версии. На других платформах модальное окно не отображается."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppAddToCommunityResult и VKWebAppAddToCommunityFailed. Подробнее о проверке результатов при вызовах VK Bridge. Возможные ошибки: •This action cannot be performed in the background, если приложение запущено в фоновом режиме. •User denied, если пользователь закрывает окно выбора сообщества."
+    },
+    {
+      "level": 3,
+      "title": "Объект Promise",
+      "text": "Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект со следующим полем: ПолеТипОписаниеgroup_idstringИдентификатор сообщества, в котором установлено приложение. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge."
+    },
+    {
+      "level": 3,
+      "title": "События",
+      "text": ""
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppAddToCommunityResult",
+      "text": "Сигнализирует, что приложение установлено в сообщество. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppAddToCommunityResult\", data: { group_id: \"166562603\" } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса."
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppAddToCommunityFailed",
+      "text": "Информирует об ошибке, которая произошла при взаимодействии с платформой. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge."
+    },
+    {
+      "level": 4,
+      "title": "Пример обработки событий",
+      "text": "Подробнее — в разделе Обработка результата."
+    },
+    {
+      "level": 2,
+      "title": "Песочница",
+      "text": "VKWebAppAddToCommunity"
+    },
+    {
+      "level": 2,
+      "title": "Материалы по теме",
+      "text": "•Настройки мини-приложения •Плагины для сообществ"
+    }
+  ],
+  "compatibility": "ВКонтакте: Android, iOS, Mobile Web, Web; Одноклассники: Android, iOS, Mobile Web, Web",
+  "contentText": "VKWebAppAddToCommunity вызывает окно выбора сообщества и устанавливает в него приложение: мини-приложение или плагин. Пример: JavaScriptbridge.send('VKWebAppAddToCommunity') .then((data) => { if (data.group_id) { // Приложение установлено в сообщество } }) .catch((error) => { // Ошибка console.log(error); }); Совместимость: ПлощадкиПлатформыВКонтактеAndroid, iOS, Mobile Web, WebОдноклассникиAndroid, iOS, Mobile Web, Web Параметры: ПолеТипОписаниеhide_success_modal необязательноеbooleanУказывает, нужно ли скрывать модальное окно об успешном добавлении приложения в сообщество. • true — скрывать модальное окно. • false — показывать модальное окно. Используется только в десктопной версии. На других платформах модальное окно не отображается. Результат: Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppAddToCommunityResult и VKWebAppAddToCommunityFailed. Подробнее о проверке результатов при вызовах VK Bridge. Возможные ошибки: •This action cannot be performed in the background, если приложение запущено в фоновом режиме. •User denied, если пользователь закрывает окно выбора сообщества. Объект Promise: Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект со следующим полем: ПолеТипОписаниеgroup_idstringИдентификатор сообщества, в котором установлено приложение. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge. События: VKWebAppAddToCommunityResult: Сигнализирует, что приложение установлено в сообщество. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppAddToCommunityResult\", data: { group_id: \"166562603\" } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса. VKWebAppAddToCommunityFailed: Информирует об ошибке, которая произошла при взаимодействии с платформой. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge. Пример обработки событий: Подробнее — в разделе Обработка результата. Песочница: VKWebAppAddToCommunity Материалы по теме: •Настройки мини-приложения •Плагины для сообществ"
 }

@@ -1,15 +1,90 @@
 {
   "id": "vkwebapptrackevent",
   "url": "https://dev.vk.com/ru/bridge/VKWebAppTrackEvent",
-  "title": "VKWebAppTrackEvent",
+  "title": "VK Bridge | VKWebAppTrackEvent | VK для разработчиков",
   "h1": "VKWebAppTrackEvent",
   "group": "Аналитика",
-  "description": "",
-  "examples": [],
-  "params": [],
+  "description": "VKWebAppTrackEvent отправляет данные из мини-приложения или игры в VK Рекламу. Чтобы данные отправлялись в систему аналитики MyTracker, она должна быть подключена отдельно.",
+  "examples": [
+    {
+      "lang": "javascript",
+      "code": "bridge.send('VKWebAppTrackEvent', {\n    event_name: 'game_event',\n    custom_user_id: '743784479',\n    event_params: {\n      level: 5,\n      mode: 123\n    }\n  })\n  .then((data) => {\n    if (data.result) {\n      // Данные отправлены \n    }\n  })\n  .catch((error) => {\n    // Ошибка\n    console.log(error);\n  });"
+    },
+    {
+      "lang": "javascript",
+      "code": "{\n  detail: {\n    type: \"VKWebAppTrackEventResult\",\n    data: {\n      result: true\n    }\n  }\n}"
+    }
+  ],
+  "params": [
+    {
+      "name": "event_name",
+      "type": "string",
+      "required": true,
+      "description": "Название события. Событие — это заранее определённое в коде действие, например покупка через приложение или авторизация пользователя в игре. • События в VK Рекламе • События в MyTracker"
+    },
+    {
+      "name": "custom_user_id",
+      "type": "string",
+      "required": false,
+      "description": "Идентификатор пользователя мини-приложения или игры, например ID профиля ВКонтакте."
+    },
+    {
+      "name": "event_params",
+      "type": "object",
+      "required": false,
+      "description": "Параметры события event_name."
+    }
+  ],
   "returns": {
-    "description": ""
+    "description": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppTrackEventResult и VKWebAppTrackEventFailed. Подробнее о проверке результатов при вызовах VK Bridge — в разделе Обработка результата. result (boolean): true, если данные были отправлены в MyTracker."
   },
-  "sections": [],
-  "contentText": ""
+  "sections": [
+    {
+      "level": 2,
+      "title": "Пример",
+      "text": "JavaScriptbridge.send('VKWebAppTrackEvent', { event_name: 'game_event', custom_user_id: '743784479', event_params: { level: 5, mode: 123 } }) .then((data) => { if (data.result) { // Данные отправлены } }) .catch((error) => { // Ошибка console.log(error); });"
+    },
+    {
+      "level": 2,
+      "title": "Совместимость",
+      "text": "ПлощадкиПлатформыВКонтактеAndroid, iOS, Mobile Web, WebОдноклассникиAndroid, iOS, Mobile Web, Web"
+    },
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "ПолеТипОписаниеevent_name обязательноеstringНазвание события. Событие — это заранее определённое в коде действие, например покупка через приложение или авторизация пользователя в игре. • События в VK Рекламе • События в MyTrackercustom_user_id необязательноеstringИдентификатор пользователя мини-приложения или игры, например ID профиля ВКонтакте.event_params необязательноеobjectПараметры события event_name."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppTrackEventResult и VKWebAppTrackEventFailed. Подробнее о проверке результатов при вызовах VK Bridge — в разделе Обработка результата."
+    },
+    {
+      "level": 3,
+      "title": "Объект Promise",
+      "text": "Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект со следующим полем: ПолеТипОписаниеresultbooleantrue, если данные были отправлены в MyTracker. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge."
+    },
+    {
+      "level": 3,
+      "title": "События",
+      "text": ""
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppTrackEventResult",
+      "text": "Сигнализирует, что данные отправлены в MyTracker. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppTrackEventResult\", data: { result: true } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса."
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppTrackEventFailed",
+      "text": "Информирует об ошибке, которая произошла при взаимодействии с платформой. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge."
+    },
+    {
+      "level": 4,
+      "title": "Пример обработки событий",
+      "text": "Подробнее — в разделе Обработка результата."
+    }
+  ],
+  "compatibility": "ВКонтакте: Android, iOS, Mobile Web, Web; Одноклассники: Android, iOS, Mobile Web, Web",
+  "contentText": "VKWebAppTrackEvent отправляет данные из мини-приложения или игры в VK Рекламу. Чтобы данные отправлялись в систему аналитики MyTracker, она должна быть подключена отдельно. Пример: JavaScriptbridge.send('VKWebAppTrackEvent', { event_name: 'game_event', custom_user_id: '743784479', event_params: { level: 5, mode: 123 } }) .then((data) => { if (data.result) { // Данные отправлены } }) .catch((error) => { // Ошибка console.log(error); }); Совместимость: ПлощадкиПлатформыВКонтактеAndroid, iOS, Mobile Web, WebОдноклассникиAndroid, iOS, Mobile Web, Web Параметры: ПолеТипОписаниеevent_name обязательноеstringНазвание события. Событие — это заранее определённое в коде действие, например покупка через приложение или авторизация пользователя в игре. • События в VK Рекламе • События в MyTrackercustom_user_id необязательноеstringИдентификатор пользователя мини-приложения или игры, например ID профиля ВКонтакте.event_params необязательноеobjectПараметры события event_name. Результат: Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppTrackEventResult и VKWebAppTrackEventFailed. Подробнее о проверке результатов при вызовах VK Bridge — в разделе Обработка результата. Объект Promise: Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект со следующим полем: ПолеТипОписаниеresultbooleantrue, если данные были отправлены в MyTracker. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge. События: VKWebAppTrackEventResult: Сигнализирует, что данные отправлены в MyTracker. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppTrackEventResult\", data: { result: true } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса. VKWebAppTrackEventFailed: Информирует об ошибке, которая произошла при взаимодействии с платформой. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge. Пример обработки событий: Подробнее — в разделе Обработка результата."
 }

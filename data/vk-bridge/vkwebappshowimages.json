@@ -1,15 +1,84 @@
 {
   "id": "vkwebappshowimages",
   "url": "https://dev.vk.com/ru/bridge/VKWebAppShowImages",
-  "title": "VKWebAppShowImages",
+  "title": "VK Bridge | Общие события | VKWebAppShowImages | VK для разработчиков",
   "h1": "VKWebAppShowImages",
   "group": "Текст и медиафайлы",
-  "description": "",
-  "examples": [],
-  "params": [],
+  "description": "VKWebAppShowImages открывает нативный экран для просмотра изображений.",
+  "examples": [
+    {
+      "lang": "javascript",
+      "code": "bridge.send('VKWebAppShowImages',{\n  images: [\n    'https://pp.userapi.com/c639229/v639229113/31b31/KLVUrSZwAM4.jpg',\n    'https://pp.userapi.com/c639229/v639229113/31b94/mWQwkgDjav0.jpg',\n    'https://pp.userapi.com/c639229/v639229113/31b3a/Lw2it6bdISc.jpg'\n  ]\n  })\n  .then((data) => { \n    if (data.result) {\n      // Нативный экран открыт\n    }\n  })\n  .catch((error) => {\n    // Ошибка\n    console.log(error);\n  });"
+    },
+    {
+      "lang": "javascript",
+      "code": "{\n  detail: {\n    type: \"VKWebAppShowImagesResult\",\n    data: {\n      result: true\n    }\n  }\n}"
+    }
+  ],
+  "params": [
+    {
+      "name": "images",
+      "type": "array[string]",
+      "required": true,
+      "description": "Массив строк, содержащих URL-адреса изображений."
+    },
+    {
+      "name": "start_index",
+      "type": "integer",
+      "required": false,
+      "description": "Индекс элемента массива images, с которого нужно начать отображение (положительное число, включая 0). Индексация начинается с 0."
+    }
+  ],
   "returns": {
-    "description": ""
+    "description": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppShowImagesResult и VKWebAppShowImagesFailed. Подробнее о проверке результатов при вызовах VK Bridge. result (boolean): true, если нативный экран открыт."
   },
-  "sections": [],
-  "contentText": ""
+  "sections": [
+    {
+      "level": 2,
+      "title": "Пример",
+      "text": "JavaScriptbridge.send('VKWebAppShowImages',{ images: [ 'https://pp.userapi.com/c639229/v639229113/31b31/KLVUrSZwAM4.jpg', 'https://pp.userapi.com/c639229/v639229113/31b94/mWQwkgDjav0.jpg', 'https://pp.userapi.com/c639229/v639229113/31b3a/Lw2it6bdISc.jpg' ] }) .then((data) => { if (data.result) { // Нативный экран открыт } }) .catch((error) => { // Ошибка console.log(error); });"
+    },
+    {
+      "level": 2,
+      "title": "Совместимость",
+      "text": "ПлощадкиПлатформыВКонтактеAndroid, iOS, Mobile Web, WebОдноклассникиAndroid, iOS, Mobile Web"
+    },
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "ПолеТипОписаниеimages обязательноеarray[string]Массив строк, содержащих URL-адреса изображений.start_indexintegerИндекс элемента массива images, с которого нужно начать отображение (положительное число, включая 0). Индексация начинается с 0."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppShowImagesResult и VKWebAppShowImagesFailed. Подробнее о проверке результатов при вызовах VK Bridge."
+    },
+    {
+      "level": 3,
+      "title": "Объект Promise",
+      "text": "Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект со следующим полем: ПолеТипОписаниеresultbooleantrue, если нативный экран открыт. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge."
+    },
+    {
+      "level": 3,
+      "title": "События",
+      "text": ""
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppShowImagesResult",
+      "text": "Сигнализирует, что нативный экран открыт. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppShowImagesResult\", data: { result: true } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса."
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppShowImagesFailed",
+      "text": "Информирует об ошибке, которая произошла при взаимодействии с платформой. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge."
+    },
+    {
+      "level": 4,
+      "title": "Пример обработки событий",
+      "text": "Подробнее — в разделе Обработка результата."
+    }
+  ],
+  "compatibility": "ВКонтакте: Android, iOS, Mobile Web, Web; Одноклассники: Android, iOS, Mobile Web",
+  "contentText": "VKWebAppShowImages открывает нативный экран для просмотра изображений. Пример: JavaScriptbridge.send('VKWebAppShowImages',{ images: [ 'https://pp.userapi.com/c639229/v639229113/31b31/KLVUrSZwAM4.jpg', 'https://pp.userapi.com/c639229/v639229113/31b94/mWQwkgDjav0.jpg', 'https://pp.userapi.com/c639229/v639229113/31b3a/Lw2it6bdISc.jpg' ] }) .then((data) => { if (data.result) { // Нативный экран открыт } }) .catch((error) => { // Ошибка console.log(error); }); Совместимость: ПлощадкиПлатформыВКонтактеAndroid, iOS, Mobile Web, WebОдноклассникиAndroid, iOS, Mobile Web Параметры: ПолеТипОписаниеimages обязательноеarray[string]Массив строк, содержащих URL-адреса изображений.start_indexintegerИндекс элемента массива images, с которого нужно начать отображение (положительное число, включая 0). Индексация начинается с 0. Результат: Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppShowImagesResult и VKWebAppShowImagesFailed. Подробнее о проверке результатов при вызовах VK Bridge. Объект Promise: Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект со следующим полем: ПолеТипОписаниеresultbooleantrue, если нативный экран открыт. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge. События: VKWebAppShowImagesResult: Сигнализирует, что нативный экран открыт. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppShowImagesResult\", data: { result: true } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса. VKWebAppShowImagesFailed: Информирует об ошибке, которая произошла при взаимодействии с платформой. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge. Пример обработки событий: Подробнее — в разделе Обработка результата."
 }

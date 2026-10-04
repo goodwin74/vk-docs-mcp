@@ -1,15 +1,93 @@
 {
   "id": "vkwebappgetgroupinfo",
   "url": "https://dev.vk.com/ru/bridge/VKWebAppGetGroupInfo",
-  "title": "VKWebAppGetGroupInfo",
+  "title": "VK Bridge | VKWebAppGetGroupInfo | VK для разработчиков",
   "h1": "VKWebAppGetGroupInfo",
   "group": "Сообщества",
-  "description": "",
-  "examples": [],
-  "params": [],
+  "description": "С помощью события VKWebAppGetGroupInfo вы можете получить данные об одном или нескольких сообществах.",
+  "examples": [
+    {
+      "lang": "javascript",
+      "code": "bridge.send('VKWebAppGetGroupInfo', {\n  group_id: 166562603\n  })\n  .then((data) => { \n    if (data.id) {\n      // Данные о сообществе получены\n    }\n  })\n  .catch((error) => {\n    // Ошибка\n    console.log(error);\n  });"
+    },
+    {
+      "lang": "javascript",
+      "code": "{\n  detail: {\n    type: \"VKWebAppGetGroupInfoResult\",\n    data: {\n      id: 166562603,\n      name: \"VK Mini Apps\",\n      screen_name: \"vkappsdev\",\n      is_closed: 0,\n      description: \"Документация\\n• VK Mini Apps и не только: dev.vk.com/guide\\n• VKUI: vkcom.github.io/vkui-styleguide\\n\\nМакеты VKUI в Figma\\n• figma.com/@vk\\n\\nБыстрое создание приложения\\n• dev.vk.com/mini-apps/getting-started\\n• npmjs.com/package/@vkontakte/create-vk-mini-app\\n\\nХостинг статики\\n• npmjs.com/package/@vkontakte/vk-miniapps-deploy\\n\\nПолезные материалы\\n• vk.com/@vkappsdev-poleznye-materialy\\n• vk.com/@vkappsdev\\n\\nПесочница событий VK Bridge\\n• vk.com/sandbox_app\",\n      members_count: 52104,\n      photo_50: \"https://sun1-95.userapi.com/s/v1/if1/SrTI7tgAv79jphLz5OHUTFRzURtWS0axJCL1cSIFzI5p8Ja7iJm1dKN-4SiGEdQJQOiBENHX.jpg?size=50x50&quality=96&crop=100,100,599,599&ava=1\",\n      photo_100: \"https://sun1-95.userapi.com/s/v1/if1/7R1EtxtmMuhQSfGVD4Vt5Bzeq5TqHgpCCYG0hDi3RsIwfdOEiCht65OC_q1qOx1vfZIVHbn5.jpg?size=100x100&quality=96&crop=100,100,599,599&ava=1\",\n      photo_200: \"https://sun1-95.userapi.com/s/v1/if1/MTmSdynigJoHXdY0krbacTurak0PmEfuhkT0c1aIKnRhgACEi1v0je0guGvhnnc1rZnQ6sZb.jpg?size=200x200&quality=96&crop=100,100,599,599&ava=1\",\n      is_member: 1\n    }\n  }\n}"
+    }
+  ],
+  "params": [
+    {
+      "name": "group_id или group_ids",
+      "type": "integer или string",
+      "required": true,
+      "description": "Объект или массив: • group_id — идентификатор сообщества, если требуется узнать информацию об одном сообществе. • group_ids — идентификаторы сообществ, указанные через запятую, если требуется узнать информацию о нескольких сообществах. Где найти идентификатор сообщества?"
+    }
+  ],
   "returns": {
-    "description": ""
+    "description": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppGetGroupInfoResult и VKWebAppGetGroupInfoFailed. Подробнее о проверке результатов при вызовах VK Bridge. Возможные ошибки: •This action cannot be performed in the background, если мини-приложение запущено в фоновом режиме. id (integer): Идентификатор сообщества, о котором была запрошена информация. name (string): Название сообщества, о котором была запрошена информация. screen_name (string): Короткий адрес сообщества. is_closed (integer): Информация о том, является ли сообщество закрытым. Возможные значения: • 0 — открытое. • 1 — закрытое. • 2 — частное. description (string): Описание сообщества. Обратите внимание: платформа не включает это поле в результаты, если сообщество является частным. members_count (integer): Количество участников сообщества. Обратите внимание: платформа не включает это поле в результаты, если сообщество является частным. photo_50 (string): URL квадратной фотографии сообщества с шириной 50 пикселей. Если у сообщества отсутствует фотография, возвращается https://vk.com/images/community_50.png. photo_100 (string): URL квадратной фотографии сообщества с шириной 100 пикселей. Если у сообщества отсутствует фотография, возвращается https://vk.com/images/community_100.png. photo_200 (string): URL квадратной фотографии сообщества с шириной 200 пикселей. Если у сообщества отсутствует фотография, возвращается https://vk.com/images/co"
   },
-  "sections": [],
-  "contentText": ""
+  "sections": [
+    {
+      "level": 2,
+      "title": "Пример",
+      "text": "JavaScriptbridge.send('VKWebAppGetGroupInfo', { group_id: 166562603 }) .then((data) => { if (data.id) { // Данные о сообществе получены } }) .catch((error) => { // Ошибка console.log(error); });"
+    },
+    {
+      "level": 2,
+      "title": "Совместимость",
+      "text": "ПлощадкиПлатформыВКонтактеAndroid, iOS, Mobile Web, WebОдноклассникиAndroid, iOS, Mobile Web, Web"
+    },
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "ПолеТипОписаниеgroup_id или group_ids обязательноеinteger или stringОбъект или массив: • group_id — идентификатор сообщества, если требуется узнать информацию об одном сообществе. • group_ids — идентификаторы сообществ, указанные через запятую, если требуется узнать информацию о нескольких сообществах. Где найти идентификатор сообщества?"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppGetGroupInfoResult и VKWebAppGetGroupInfoFailed. Подробнее о проверке результатов при вызовах VK Bridge. Возможные ошибки: •This action cannot be performed in the background, если мини-приложение запущено в фоновом режиме."
+    },
+    {
+      "level": 3,
+      "title": "Объект Promise",
+      "text": "Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект. Содержимое ответа зависит от того, запрашивали вы информацию об одном сообществе или о нескольких."
+    },
+    {
+      "level": 4,
+      "title": "Ответ с данными об одном сообществе",
+      "text": "ПолеТипОписаниеidintegerИдентификатор сообщества, о котором была запрошена информация.namestringНазвание сообщества, о котором была запрошена информация.screen_namestringКороткий адрес сообщества.is_closedintegerИнформация о том, является ли сообщество закрытым. Возможные значения: • 0 — открытое. • 1 — закрытое. • 2 — частное.descriptionstringОписание сообщества. Обратите внимание: платформа не включает это поле в результаты, если сообщество является частным.members_countintegerКоличество участников сообщества. Обратите внимание: платформа не включает это поле в результаты, если сообщество является частным.photo_50stringURL квадратной фотографии сообщества с шириной 50 пикселей. Если у сообщества отсутствует фотография, возвращается https://vk.com/images/community_50.png.photo_100stringURL квадратной фотографии сообщества с шириной 100 пикселей. Если у сообщества отсутствует фотография, возвращается https://vk.com/images/community_100.png.photo_200stringURL квадратной фотографии сообщества с шириной 200 пикселей. Если у сообщества отсутствует фотография, возвращается https://vk.com/images/community_200.png.is_memberintegerИнформация о том, является ли пользователь, который работает с приложением, участником сообщества. Возможные значения: • 1 — является. • 0 — не является. Обратите внимание: платформа не включает это поле в результаты, если сообщество является частным. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge."
+    },
+    {
+      "level": 4,
+      "title": "Ответ с данными о нескольких сообществах",
+      "text": "ПолеТипОписаниеresultarray[object]Массив с данными о запрашиваемых сообществах. Каждый элемент массива — объект, содержащий информацию об одном сообществе из запрошенных. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge."
+    },
+    {
+      "level": 3,
+      "title": "События",
+      "text": ""
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppGetGroupInfoResult",
+      "text": "Сигнализирует, что данные о сообществе или сообществах были получены. Ниже — пример ответа, если запрашивались данные об одном сообществе: JavaScript{ detail: { type: \"VKWebAppGetGroupInfoResult\", data: { id: 166562603, name: \"VK Mini Apps\", screen_name: \"vkappsdev\", is_closed: 0, description: \"Документация\\n• VK Mini Apps и не только: dev.vk.com/guide\\n• VKUI: vkcom.github.io/vkui-styleguide\\n\\nМакеты VKUI в Figma\\n• figma.com/@vk\\n\\nБыстрое создание приложения\\n• dev.vk.com/mini-apps/getting-started\\n• npmjs.com/package/@vkontakte/create-vk-mini-app\\n\\nХостинг статики\\n• npmjs.com/package/@vkontakte/vk-miniapps-deploy\\n\\nПолезные материалы\\n• vk.com/@vkappsdev-poleznye-materialy\\n• vk.com/@vkappsdev\\n\\nПесочница событий VK Bridge\\n• vk.com/sandbox_app\", members_count: 52104, photo_50: \"https://sun1-95.userapi.com/s/v1/if1/SrTI7tgAv79jphLz5OHUTFRzURtWS0axJCL1cSIFzI5p8Ja7iJm1dKN-4SiGEdQJQOiBENHX.jpg?size=50x50&quality=96&crop=100,100,599,599&ava=1\", photo_100: \"https://sun1-95.userapi.com/s/v1/if1/7R1EtxtmMuhQSfGVD4Vt5Bzeq5TqHgpCCYG0hDi3RsIwfdOEiCht65OC_q1qOx1vfZIVHbn5.jpg?size=100x100&quality=96&crop=100,100,599,599&ava=1\", photo_200: \"https://sun1-95.userapi.com/s/v1/if1/MTmSdynigJoHXdY0krbacTurak0PmEfuhkT0c1aIKnRhgACEi1v0je0guGvhnnc1rZnQ6sZb.jpg?size=200x200&quality=96&crop=100,100,599,599&ava=1\", is_member: 1 } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса."
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppGetGroupInfoFailed",
+      "text": "Информирует об ошибке, которая произошла при взаимодействии с платформой. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge."
+    },
+    {
+      "level": 4,
+      "title": "Пример обработки событий",
+      "text": "Подробнее — в разделе Обработка результата."
+    },
+    {
+      "level": 2,
+      "title": "Песочница",
+      "text": "VKWebAppGetGroupInfo"
+    }
+  ],
+  "compatibility": "ВКонтакте: Android, iOS, Mobile Web, Web; Одноклассники: Android, iOS, Mobile Web, Web",
+  "contentText": "С помощью события VKWebAppGetGroupInfo вы можете получить данные об одном или нескольких сообществах. Пример: JavaScriptbridge.send('VKWebAppGetGroupInfo', { group_id: 166562603 }) .then((data) => { if (data.id) { // Данные о сообществе получены } }) .catch((error) => { // Ошибка console.log(error); }); Совместимость: ПлощадкиПлатформыВКонтактеAndroid, iOS, Mobile Web, WebОдноклассникиAndroid, iOS, Mobile Web, Web Параметры: ПолеТипОписаниеgroup_id или group_ids обязательноеinteger или stringОбъект или массив: • group_id — идентификатор сообщества, если требуется узнать информацию об одном сообществе. • group_ids — идентификаторы сообществ, указанные через запятую, если требуется узнать информацию о нескольких сообществах. Где найти идентификатор сообщества? Результат: Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppGetGroupInfoResult и VKWebAppGetGroupInfoFailed. Подробнее о проверке результатов при вызовах VK Bridge. Возможные ошибки: •This action cannot be performed in the background, если мини-приложение запущено в фоновом режиме. Объект Promise: Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект. Содержимое ответа зависит от того, запрашивали вы информацию об одном сообществе или о нескольких. Ответ с данными об одном сообществе: ПолеТипОписаниеidintegerИдентификатор сообщества, о котором была запрошена информация.namestringНазвание сообщества, о котором была запрошена информация.screen_namestringКороткий адрес сообщества.is_closedintegerИнформация о том, является ли сообщество закрытым. Возможные значения: • 0 — открытое. • 1 — закрытое. • 2 — частное.descriptionstringОписание сообщества. Обратите внимание: платформа не включает это поле в результаты, если сообщество является частным.members_countintegerКоличество участников сообщества. Обратите внимание: платформа не включает это поле в результаты, если сообщество является частным.photo_50stringURL квадратной фотографии сообщества с шириной 50 пикселей. Если у сообщества отсутствует фотография, возвращается https://vk.com/images/community_50.png.photo_100stringURL квадратной фотографии сообщества с шириной 100 пикселей. Если у сообщества отсутствует фотография, возвращается https://vk.com/images/community_100.png.photo_200stringURL квадратной фотографии сообщества с шириной 200 пикселей. Если у сообщества отсутствует фотография, возвращается https://vk.com/images/community_200.png.is_memberintegerИнформация о том, является ли пользователь, который работает с приложением, участником сообщества. Возможные значения: • 1 — является. • 0 — не является. Обратите внимание: платформа не включает это поле в результаты, если сообщество является частным. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge. Ответ с данными о нескольких сообществах: ПолеТипОписаниеresultarray[object]Массив с данными о запрашиваемых сообществах. Каждый элемент массива — объект, содержащий информацию об одном сообществе из запрошенных. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge. События: VKWebAppGetGroupInfoResult: Сигнализирует, что данные о сообществе или сообществах были получены. Ниже — пример ответа, если запрашивались данные об одном сообществе: JavaScript{ detail: { type: \"VKWebAppGetGroupInfoResult\", data: { id: 166562603, name: \"VK Mini Apps\", screen_name: \"vkappsdev\", is_closed: 0, description: \"Документация\\n• VK Mini Apps и не только: dev.vk.com/guide\\n• VKUI: vkcom.github.io/vkui-styleguide\\n\\nМакеты VKUI в Figma\\n• figma.com/@vk\\n\\nБыстрое создание приложения\\n• dev.vk.com/mini-apps/getting-started\\n• npmjs.com/package/@vkontakte/create-vk-mini-app\\n\\nХостинг статики\\n• npmjs.com/package/@vkontakte/vk-miniapps-deploy\\n\\nПолезные материалы\\n• vk.com/@vkappsdev-poleznye-materialy\\n• vk.com/@vkappsdev\\n\\nПесочница событий VK Bridge\\n• vk.com/sandbox_app\", members_count: 52104, photo_50: \"https://sun1-95.userapi.com/s/v1/if1/SrTI7tgAv79jphLz5OHUTFRzURtWS0axJCL1cSIFzI5p8Ja7iJm1dKN-4SiGEdQJQOiBENHX.jpg?size=50x50&quality=96&crop=100,100,599,599&ava=1\", photo_100: \"https://sun1-95.userapi.com/s/v1/if1/7R1EtxtmMuhQSfGVD4Vt5Bzeq5TqHgpCCYG0hDi3RsIwfdOEiCht65OC_q1qOx1vfZIVHbn5.jpg?size=100x100&quality=96&crop=100,100,599,599&ava=1\", photo_200: \"https://sun1-95.userapi.com/s/v1/if1/MTmSdynigJoHXdY0krbacTurak0PmEfuhkT0c1aIKnRhgACEi1v0je0guGvhnnc1rZnQ6sZb.jpg?size=200x200&quality=96&crop=100,100,599,599&ava=1\", is_member: 1 } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса. VKWebAppGetGroupInfoFailed: Информирует об ошибке, которая произошла при взаимодействии с платформой. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge. Пример обработки событий: Подробнее — в разделе Обработка результата. Песочница: VKWebAppGetGroupInfo"
 }

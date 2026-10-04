@@ -1,15 +1,105 @@
 {
   "id": "getting-started",
   "url": "https://dev.vk.com/ru/bridge/getting-started",
-  "title": "Первые шаги",
+  "title": "VK Bridge | Быстрый старт | VK для разработчиков",
   "h1": "Первые шаги",
   "group": "",
-  "description": "",
-  "examples": [],
+  "description": "Этот раздел описывает шаги, которые необходимо выполнить в мини-приложении или игре для подключения и инициализации библиотеки VK Bridge, а также примеры вызова событий и обработки результатов. Представленные инструкции подходят для любой операционной системы.",
+  "examples": [
+    {
+      "lang": "javascript",
+      "code": "cd <ПУТЬ_К_ПРИЛОЖЕНИЮ>"
+    },
+    {
+      "lang": "javascript",
+      "code": "npm install @vkontakte/vk-bridge || yarn add @vkontakte/vk-bridge"
+    },
+    {
+      "lang": "javascript",
+      "code": "import bridge from '@vkontakte/vk-bridge';\n\n// Отправляет событие инициализации нативному клиенту\nbridge.send(\"VKWebAppInit\");"
+    },
+    {
+      "lang": "javascript",
+      "code": "<script src=\"https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js\"></script>"
+    },
+    {
+      "lang": "javascript",
+      "code": "<script>\n  vkBridge.send(\"VKWebAppInit\", {});\n</script>"
+    },
+    {
+      "lang": "javascript",
+      "code": "// Подписывается на события, отправленные нативным клиентом\nbridge.subscribe((e) => console.log(e)); \n    \n// Отправляет событие нативному клиенту\nbridge.send(\"VKWebAppInit\", {});      \n    \n// Проверяет, поддерживается ли событие на текущей платформе, и\n// вызывает это событие \nbridge.supportsAsync(\"VKWebAppResizeWindow\").then( res => {\n    if (res) {\n        bridge.send(\"VKWebAppResizeWindow\", {\"width\": 800, \"height\": 1000});\n    }\n});"
+    },
+    {
+      "lang": "javascript",
+      "code": "// Отправка события\nbridge.send('VKWebAppGetEmail')\n  .then((data) => {\n    if (data.result) {\n      // Обработка события в случае успеха\n      console.log(data.email);\n    } else {\n      // Ошибка\n    }\n  })\n  .catch((error) => {\n    // Обработка события в случае ошибки\n    console.log(error);\n  });"
+    },
+    {
+      "lang": "javascript",
+      "code": "// Подписывается на события, отправленные нативным клиентом\nbridge.subscribe(event => {\n  if (!event.detail) {\n    return;\n  }\n\n  switch(event.detail.type) {\n    case 'VKWebAppOpenCodeReaderResult':\n      if (event.detail.data.result) {\n        // Обработка события в случае успеха\n        console.log(event.detail.data.result);\n      } else {\n        // Ошибка\n      }\n      break;\n    case 'VKWebAppOpenCodeReaderFailed':\n      // Обработка события в случае ошибки\n      console.log(event.detail.data.error_type, event.detail.data.error_data);      \n      break;\n  }\n});"
+    }
+  ],
   "params": [],
   "returns": {
     "description": ""
   },
-  "sections": [],
-  "contentText": ""
+  "sections": [
+    {
+      "level": 2,
+      "title": "Подключение библиотеки",
+      "text": "Если вы используете шаблон проекта create-vk-mini-app, отдельно подключать библиотеку VK Bridge не нужно. После подключения библиотеки в коде приложения обязательно нужно вызвать событие инициализации VKWebAppInit. Оно информирует платформу ВКонтакте о старте приложения и инициализирует параметры, необходимые для работы библиотеки. Есть несколько способов подключения библиотеки к приложению. Мы рекомендуем способ с использованием менеджеров пакетов."
+    },
+    {
+      "level": 3,
+      "title": "Через пакет npm",
+      "text": "1. Перейдите в созданный проект приложения: Shellcd <ПУТЬ_К_ПРИЛОЖЕНИЮ> 2. Установите библиотеку: Shellnpm install @vkontakte/vk-bridge || yarn add @vkontakte/vk-bridge 3. Чтобы инициализировать VK Bridge, в файле index.js вашего проекта вызовите событие VKWebAppInit: JavaScriptimport bridge from '@vkontakte/vk-bridge'; // Отправляет событие инициализации нативному клиенту bridge.send(\"VKWebAppInit\"); Событие VKWebAppInit должно быть отправлено до загрузки основных ресурсов приложения. Допустимый промежуток — не более 30 секунд после запуска приложения. Убедитесь, что ваше приложение обрабатывает это событие раньше других событий VK Bridge."
+    },
+    {
+      "level": 3,
+      "title": "Включение скрипта в HTML-код страницы",
+      "text": "Этот способ подходит, если при разработке HTML-приложения вы не используете менеджеры пакетов, такие как npm или yarn. 1. В код каждой HTML-страницы, где вы будете вызывать библиотеку, добавьте ссылку на файл browser.min.js. Файл минифицирован, время его загрузки минимально. Подключить файл можно несколькими способами: • Добавьте ссылку на копию файла, расположенную на сервисе unpkg.com. В этом случае вам не нужно будет следить за выходом обновлений библиотеки — последняя версия будет подтягиваться автоматически. Для подключения используйте: HTML<script src=\"https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js\"></script> — или — • Скопируйте файл browser.min.js в свой проект и в коде страниц ссылайтесь на эту копию. В этом случае вам придётся самостоятельно следить за выходом новых версий библиотеки и обновлять её в проекте вручную. В репозитории VK Bridge этот файл находится в папке dist. — или — • Разместите файл на любом CDN-сервере и ссылайтесь на него. Обратите внимание! Сервис unpkg.com или другой CDN-сервер может быть недоступен в регионе, в котором находится пользователь приложения. Проблемы с подключением к таким внешним сервисам могут привести к увеличению времени загрузки приложения или сбоям в её работе. Наша рекомендация для создания приложения — используйте менеджеры пакетов, например npm или yarn, и подключайте библиотеку VK Bridge с их помощью. 2. Чтобы инициализировать VK Bridge, добавьте в код страницы вызов события VKWebAppInit: HTML<script> vkBridge.send(\"VKWebAppInit\", {}); </script> Событие VKWebAppInit должно быть отправлено до загрузки основных ресурсов приложения. Допустимый промежуток — не более 30 секунд после запуска приложения. Убедитесь, что ваше приложение обрабатывает это событие раньше других событий VK Bridge. Обратите внимание: когда вы включаете .js-файл библиотеки в HTML-код своих страниц, в JavaScript-коде надо использовать имя объекта vkBridge, а не bridge."
+    },
+    {
+      "level": 2,
+      "title": "Вызов события",
+      "text": "Используйте события объекта bridge: JavaScript// Подписывается на события, отправленные нативным клиентом bridge.subscribe((e) => console.log(e)); // Отправляет событие нативному клиенту bridge.send(\"VKWebAppInit\", {}); // Проверяет, поддерживается ли событие на текущей платформе, и // вызывает это событие bridge.supportsAsync(\"VKWebAppResizeWindow\").then( res => { if (res) { bridge.send(\"VKWebAppResizeWindow\", {\"width\": 800, \"height\": 1000}); } }); Список всех событий VK Bridge"
+    },
+    {
+      "level": 2,
+      "title": "Обработка результата",
+      "text": ""
+    },
+    {
+      "level": 3,
+      "title": "bridge.send",
+      "text": "При использовании метода bridge.send вернётся промис. Работа с промисами не требует подключения дополнительных библиотек. JavaScript// Отправка события bridge.send('VKWebAppGetEmail') .then((data) => { if (data.result) { // Обработка события в случае успеха console.log(data.email); } else { // Ошибка } }) .catch((error) => { // Обработка события в случае ошибки console.log(error); }); Подробнее о промисах: • developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise • learn.javascript.ru/promise"
+    },
+    {
+      "level": 3,
+      "title": "bridge.subscribe",
+      "text": "При использовании метода bridge.subscribe в общем случае вернётся событие: •С постфиксом Result, если метод выполнился успешно. •С постфиксом Failed, если метод выполнился с ошибкой. События могут иметь другие постфиксы. Они подробно описаны на странице конкретного события. JavaScript// Подписывается на события, отправленные нативным клиентом bridge.subscribe(event => { if (!event.detail) { return; } switch(event.detail.type) { case 'VKWebAppOpenCodeReaderResult': if (event.detail.data.result) { // Обработка события в случае успеха console.log(event.detail.data.result); } else { // Ошибка } break; case 'VKWebAppOpenCodeReaderFailed': // Обработка события в случае ошибки console.log(event.detail.data.error_type, event.detail.data.error_data); break; } });"
+    },
+    {
+      "level": 2,
+      "title": "Обработка ошибок",
+      "text": "При работе с VK Bridge в ответе могут возвращаться ошибки в объекте data. JSON{ \"type\": \"EventNameFailed\", \"data\": { \"error_type\": \"...\", \"error_data\": {} } } Параметры объекта data: ПараметрТипОписаниеerror_typestringТип ошибки. Возможные значения: • client_error — ошибки, возникающие на клиенте; • api_error — ошибки API; • auth_error — ошибки авторизации.error_dataobjectДополнительные данные ошибки, которые зависят от error_type. См. описание ниже.request_idintegerИнформация, которая используется для внутренних целей: успешного выполнения или отклонения промиса."
+    },
+    {
+      "level": 3,
+      "title": "client_error",
+      "text": "К этому типу относятся ошибки, связанные с некорректным синтаксисом событий VK Bridge. Параметры объекта error_data: ПараметрТипОписаниеerror_codeintegerКод ошибки. См. список возможных значений в таблице ниже.error_reasonstringОписание ошибки.error_descriptionstringНеобязательное поле. Детальное описание ошибки. Код ошибки (error_code)Описание (error_reason)1Unknown error2Missing required params3Connection lost4User denied5Invalid params6Unsupported platform7No device permission8Need user permission9This action cannot be performed in the background10Requests limit reached11Access denied12Uninitialized App13Custom error for every handler20No ads"
+    },
+    {
+      "level": 3,
+      "title": "api_error",
+      "text": "К этому типу относятся ошибки, перечисленные на странице Возвращаемые ошибки или в описании метода. Параметры объекта error_data: ПараметрТипОписаниеerror_codeintegerКод ошибки.error_msgstringОписание ошибки.request_paramsarrayМассив, содержащий параметры запроса к API."
+    },
+    {
+      "level": 3,
+      "title": "auth_error",
+      "text": "К этому типу относятся ошибки, которые возвращаются в ходе авторизации. Параметры объекта error_data: ПараметрТипОписаниеerrorintegerКод ошибки.error_reasonstringОписание ошибки.error_descriptionarrayНеобязательное поле. Детальное описание ошибки."
+    }
+  ],
+  "compatibility": "",
+  "contentText": "Этот раздел описывает шаги, которые необходимо выполнить в мини-приложении или игре для подключения и инициализации библиотеки VK Bridge, а также примеры вызова событий и обработки результатов. Представленные инструкции подходят для любой операционной системы. Подключение библиотеки: Если вы используете шаблон проекта create-vk-mini-app, отдельно подключать библиотеку VK Bridge не нужно. После подключения библиотеки в коде приложения обязательно нужно вызвать событие инициализации VKWebAppInit. Оно информирует платформу ВКонтакте о старте приложения и инициализирует параметры, необходимые для работы библиотеки. Есть несколько способов подключения библиотеки к приложению. Мы рекомендуем способ с использованием менеджеров пакетов. Через пакет npm: 1. Перейдите в созданный проект приложения: Shellcd <ПУТЬ_К_ПРИЛОЖЕНИЮ> 2. Установите библиотеку: Shellnpm install @vkontakte/vk-bridge || yarn add @vkontakte/vk-bridge 3. Чтобы инициализировать VK Bridge, в файле index.js вашего проекта вызовите событие VKWebAppInit: JavaScriptimport bridge from '@vkontakte/vk-bridge'; // Отправляет событие инициализации нативному клиенту bridge.send(\"VKWebAppInit\"); Событие VKWebAppInit должно быть отправлено до загрузки основных ресурсов приложения. Допустимый промежуток — не более 30 секунд после запуска приложения. Убедитесь, что ваше приложение обрабатывает это событие раньше других событий VK Bridge. Включение скрипта в HTML-код страницы: Этот способ подходит, если при разработке HTML-приложения вы не используете менеджеры пакетов, такие как npm или yarn. 1. В код каждой HTML-страницы, где вы будете вызывать библиотеку, добавьте ссылку на файл browser.min.js. Файл минифицирован, время его загрузки минимально. Подключить файл можно несколькими способами: • Добавьте ссылку на копию файла, расположенную на сервисе unpkg.com. В этом случае вам не нужно будет следить за выходом обновлений библиотеки — последняя версия будет подтягиваться автоматически. Для подключения используйте: HTML<script src=\"https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js\"></script> — или — • Скопируйте файл browser.min.js в свой проект и в коде страниц ссылайтесь на эту копию. В этом случае вам придётся самостоятельно следить за выходом новых версий библиотеки и обновлять её в проекте вручную. В репозитории VK Bridge этот файл находится в папке dist. — или — • Разместите файл на любом CDN-сервере и ссылайтесь на него. Обратите внимание! Сервис unpkg.com или другой CDN-сервер может быть недоступен в регионе, в котором находится пользователь приложения. Проблемы с подключением к таким внешним сервисам могут привести к увеличению времени загрузки приложения или сбоям в её работе. Наша рекомендация для создания приложения — используйте менеджеры пакетов, например npm или yarn, и подключайте библиотеку VK Bridge с их помощью. 2. Чтобы инициализировать VK Bridge, добавьте в код страницы вызов события VKWebAppInit: HTML<script> vkBridge.send(\"VKWebAppInit\", {}); </script> Событие VKWebAppInit должно быть отправлено до загрузки основных ресурсов приложения. Допустимый промежуток — не более 30 секунд после запуска приложения. Убедитесь, что ваше приложение обрабатывает это событие раньше других событий VK Bridge. Обратите внимание: когда вы включаете .js-файл библиотеки в HTML-код своих страниц, в JavaScript-коде надо использовать имя объекта vkBridge, а не bridge. Вызов события: Используйте события объекта bridge: JavaScript// Подписывается на события, отправленные нативным клиентом bridge.subscribe((e) => console.log(e)); // Отправляет событие нативному клиенту bridge.send(\"VKWebAppInit\", {}); // Проверяет, поддерживается ли событие на текущей платформе, и // вызывает это событие bridge.supportsAsync(\"VKWebAppResizeWindow\").then( res => { if (res) { bridge.send(\"VKWebAppResizeWindow\", {\"width\": 800, \"height\": 1000}); } }); Список всех событий VK Bridge Обработка результата: bridge.send: При использовании метода bridge.send вернётся промис. Работа с промисами не требует подключения дополнительных библиотек. JavaScript// Отправка события bridge.send('VKWebAppGetEmail') .then((data) => { if (data.result) { // Обработка события в случае успеха console.log(data.email); } else { // Ошибка } }) .catch((error) => { // Обработка события в случае ошибки console.log(error); }); Подробнее о промисах: • developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise • learn.javascript.ru/promise bridge.subscribe: При использовании метода bridge.subscribe в общем случае вернётся событие: •С постфиксом Result, если метод выполнился успешно. •С постфиксом Failed, если метод выполнился с ошибкой. События могут иметь другие постфиксы. Они подробно описаны на странице конкретного события. JavaScript// Подписывается на события, отправленные нативным клиентом bridge.subscribe(event => { if (!event.detail) { return; } switch(event.detail.type) { case 'VKWebAppOpenCodeReaderResult': if (event.detail.data.result) { // Обработка события в случае успеха console.log(event.detail.data.result); } else { // Ошибка } break; case 'VKWebAppOpenCodeReaderFailed': // Обработка события в случае ошибки console.log(event.detail.data.error_type, event.detail.data.error_data); break; } }); Обработка ошибок: При работе с VK Bridge в ответе могут возвращаться ошибки в объекте data. JSON{ \"type\": \"EventNameFailed\", \"data\": { \"error_type\": \"...\", \"error_data\": {} } } Параметры объекта data: ПараметрТипОписаниеerror_typestringТип ошибки. Возможные значения: • client_error — ошибки, возникающие на клиенте; • api_error — ошибки API; • auth_error — ошибки авторизации.error_dataobjectДополнительные данные ошибки, которые зависят от error_type. См. описание ниже.request_idintegerИнформация, которая используется для внутренних целей: успешного выполнения или отклонения промиса. client_error: К этому типу относятся ошибки, связанные с некорректным синтаксисом событий VK Bridge. Параметры объекта error_data: ПараметрТипОписаниеerror_codeintegerКод ошибки. См. список возможны"
 }

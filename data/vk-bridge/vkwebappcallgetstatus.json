@@ -1,15 +1,76 @@
 {
   "id": "vkwebappcallgetstatus",
   "url": "https://dev.vk.com/ru/bridge/VKWebAppCallGetStatus",
-  "title": "VKWebAppCallGetStatus",
+  "title": "VK Bridge | VKWebAppCallGetStatus | VK для разработчиков",
   "h1": "VKWebAppCallGetStatus",
   "group": "Звонки",
-  "description": "",
-  "examples": [],
+  "description": "VKWebAppCallGetStatus используется при интеграции звонков в мини-приложение. Событие получает информацию о состоянии текущего активного звонка.",
+  "examples": [
+    {
+      "lang": "javascript",
+      "code": "bridge.send('VKWebAppCallGetStatus')  \n  .then((data) => { \n    if (data.result) {\n      // Информация о состоянии активного звонка получена\n    }\n  })\n  .catch((error) => {\n    // Ошибка\n    console.log(error);\n  });"
+    },
+    {
+      "lang": "javascript",
+      "code": "{\n  detail: {\n    type: \"VKWebAppCallGetStatusResult\",\n    \"data\": {\n        \"is_active\": true,\n    }\n  }\n}"
+    }
+  ],
   "params": [],
   "returns": {
-    "description": ""
+    "description": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppCallGetStatusResult и VKWebAppCallGetStatusFailed. Подробнее о проверке результатов при вызовах VK Bridge. is_active (bool): Состояние звонка. Возможные значения: • true — звонок активен. • false — звонок завершён."
   },
-  "sections": [],
-  "contentText": ""
+  "sections": [
+    {
+      "level": 2,
+      "title": "Пример",
+      "text": "JavaScriptbridge.send('VKWebAppCallGetStatus') .then((data) => { if (data.result) { // Информация о состоянии активного звонка получена } }) .catch((error) => { // Ошибка console.log(error); });"
+    },
+    {
+      "level": 2,
+      "title": "Совместимость",
+      "text": "ПлощадкиПлатформыВКонтактеAndroid, iOS, WebОдноклассники–"
+    },
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "—"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppCallGetStatusResult и VKWebAppCallGetStatusFailed. Подробнее о проверке результатов при вызовах VK Bridge."
+    },
+    {
+      "level": 3,
+      "title": "Объект Promise",
+      "text": "Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект со следующим полем: ПолеТипОписаниеis_activeboolСостояние звонка. Возможные значения: • true — звонок активен. • false — звонок завершён. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge."
+    },
+    {
+      "level": 3,
+      "title": "События",
+      "text": ""
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppCallGetStatusResult",
+      "text": "Сигнализирует, что статус звонка получен. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppCallGetStatusResult\", \"data\": { \"is_active\": true, } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса."
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppCallGetStatusFailed",
+      "text": "Информирует об ошибке, которая произошла при взаимодействии с платформой. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge."
+    },
+    {
+      "level": 4,
+      "title": "Пример обработки событий",
+      "text": "Подробнее — в разделе Обработка результата."
+    },
+    {
+      "level": 2,
+      "title": "Материалы по теме",
+      "text": "•Интеграция звонков •VKWebAppCallFinished •VKWebAppCallLeft"
+    }
+  ],
+  "compatibility": "ВКонтакте: Android, iOS, Web; Одноклассники: –",
+  "contentText": "VKWebAppCallGetStatus используется при интеграции звонков в мини-приложение. Событие получает информацию о состоянии текущего активного звонка. Пример: JavaScriptbridge.send('VKWebAppCallGetStatus') .then((data) => { if (data.result) { // Информация о состоянии активного звонка получена } }) .catch((error) => { // Ошибка console.log(error); }); Совместимость: ПлощадкиПлатформыВКонтактеAndroid, iOS, WebОдноклассники– Параметры: — Результат: Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppCallGetStatusResult и VKWebAppCallGetStatusFailed. Подробнее о проверке результатов при вызовах VK Bridge. Объект Promise: Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект со следующим полем: ПолеТипОписаниеis_activeboolСостояние звонка. Возможные значения: • true — звонок активен. • false — звонок завершён. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge. События: VKWebAppCallGetStatusResult: Сигнализирует, что статус звонка получен. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppCallGetStatusResult\", \"data\": { \"is_active\": true, } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса. VKWebAppCallGetStatusFailed: Информирует об ошибке, которая произошла при взаимодействии с платформой. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge. Пример обработки событий: Подробнее — в разделе Обработка результата. Материалы по теме: •Интеграция звонков •VKWebAppCallFinished •VKWebAppCallLeft"
 }

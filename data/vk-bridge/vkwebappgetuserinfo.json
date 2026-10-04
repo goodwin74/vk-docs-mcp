@@ -1,15 +1,212 @@
 {
   "id": "vkwebappgetuserinfo",
   "url": "https://dev.vk.com/ru/bridge/VKWebAppGetUserInfo",
-  "title": "VKWebAppGetUserInfo",
+  "title": "VK Bridge | VKWebAppGetUserInfo | VK для разработчиков",
   "h1": "VKWebAppGetUserInfo",
   "group": "Пользователи",
-  "description": "",
-  "examples": [],
-  "params": [],
+  "description": "VKWebAppGetUserInfo получает данные о пользователе из его профиля ВКонтакте или в Одноклассниках.",
+  "examples": [
+    {
+      "lang": "javascript",
+      "code": "bridge.send('VKWebAppGetUserInfo', {\n  user_id: 743784474\n  })\n  .then((data) => { \n    if (data.id) {\n      // Данные пользователя получены\n      console.log(data);      \n    }\n  })\n  .catch((error) => {\n    // Ошибка\n    console.log(error);\n  });"
+    },
+    {
+      "lang": "javascript",
+      "code": "bridge.send('VKWebAppGetUserInfo', {\n  user_id: 743784474\n  })\n  .then((data) => { \n      // data — объект с информацией о пользователе\n  })\n  .catch((error) => {\n    console.log(error); // Ошибка\n  });"
+    },
+    {
+      "lang": "javascript",
+      "code": "bridge.send('VKWebAppGetUserInfo', {\n  user_ids: '743784474, 743784479' \n  })\n  .then((data) => { \n      // data.result — массив объектов с информацией о пользователях\n    }\n  })\n  .catch((error) => {\n    console.log(error); // Ошибка\n  });"
+    },
+    {
+      "lang": "javascript",
+      "code": "{\n  detail: {\n    type: \"VKWebAppGetUserInfoResult\",\n    data: {\n      id: 743784474,\n      bdate: \"21.12.2000\",\n      bdate_visibility: 1,\n      city: {\n        id: 2,\n        title: \"Санкт-Петербург\"\n      },\n      country: {\n        id: 1,\n        title: \"Россия\"\n      },\n      photo_200: \"https://sun1-91.userapi.com/s/v1/ig2/Dcf-SWu7nVYDDldq9oQegiC06VqsSa43-HpDxzPjrvFCUUk9nSevY2Uf9xzm0bxvLfgsTOH6XiiW-zeLcDhPDj_w.jpg?size=200x200&quality=96&crop=26,26,204,204&ava=1\",\n      photo_max_orig: \"https://sun1-91.userapi.com/s/v1/ig2/trHNebJQhG4BmLxC8h4hOpDU6bKRy6uJi586wcyFcCj5fzrwYk7AtoNab-RSil0Bp9b569VQyGK_skG9e6oK7Ap7.jpg?size=256x256&quality=96&crop=0,0,256,256&ava=1\",\n      sex\": 2,\n      photo_100: \"https://sun1-91.userapi.com/s/v1/ig2/M4vtl7tcmeP6ANUgE0vU7JZWuJszbHaN5QcCcK2xD66EIc6SeSA1NyFVLTSOt2iLOkFhJSJ4DawEJGOjzKtszMpR.jpg?size=100x100&quality=96&crop=26,26,204,204&ava=1\",\n      first_name: \"Персик\",\n      last_name: \"Рыжий\",\n      can_access_closed: true,\n      is_closed: false\n    }\n  }\n}"
+    }
+  ],
+  "params": [
+    {
+      "name": "user_id",
+      "type": "integer",
+      "required": false,
+      "description": "Идентификатор пользователя, информацию о котором вы хотите получить."
+    },
+    {
+      "name": "user_ids",
+      "type": "string",
+      "required": false,
+      "description": "Идентификатор или идентификаторы пользователей, информацию о которых вы хотите получить. Указывайте идентификаторы через запятую."
+    },
+    {
+      "name": "use_local",
+      "type": "boolean",
+      "required": false,
+      "description": "Определяет, с какой площадки нужно получить данные. Возможные значения: • true — с площадки, которая использует SDK, например Одноклассники. • false — Вконтакте. Значение по умолчанию."
+    },
+    {
+      "name": "result",
+      "type": "object[]",
+      "required": false,
+      "description": "Массив объектов, с информацией о пользователях."
+    },
+    {
+      "name": "id",
+      "type": "integer",
+      "required": false,
+      "description": "Идентификатор пользователя."
+    },
+    {
+      "name": "bdate",
+      "type": "string",
+      "required": false,
+      "description": "Дата рождения пользователя. Например 10.4.1990 или 10.4 (если год рождения скрыт). Если дата рождения скрыта целиком, поле в ответе отсутствует."
+    },
+    {
+      "name": "bdate_visibility",
+      "type": "integer",
+      "required": false,
+      "description": "Информация о том, отображается ли дата рождения пользователя. Возможные значения: • 1 — дата рождения открыта целиком. • 2 — открыты только день и месяц даты рождения. • 0 — дата рождения скрыта."
+    },
+    {
+      "name": "city",
+      "type": "object",
+      "required": false,
+      "description": "Информация о городе пользователя. Объект, который содержит поля: • id (integer) — идентификатор города. • title (string) — название города."
+    },
+    {
+      "name": "country",
+      "type": "object",
+      "required": false,
+      "description": "Информация о стране пользователя. Объект, который содержит поля: • id (integer) — идентификатор страны. • title (string) — название страны."
+    },
+    {
+      "name": "photo_200",
+      "type": "string",
+      "required": false,
+      "description": "URL квадратной фотографии пользователя с шириной 200 пикселей. Если у пользователя отсутствует фотография, возвращается https://vk.com/images/camera_200.png."
+    },
+    {
+      "name": "photo_max_orig",
+      "type": "string",
+      "required": false,
+      "description": "URL фотографии максимального размера. Может быть возвращена фотография, имеющая ширину как 400, так и 200 пикселей. Если у пользователя отсутствует фотография, возвращается https://vk.com/images/camera_400.png."
+    },
+    {
+      "name": "sex",
+      "type": "integer",
+      "required": false,
+      "description": "Пол пользователя. Возможные значения: • 1 — женский. • 2 — мужской. • 0 — пол не указан."
+    },
+    {
+      "name": "photo_100",
+      "type": "string",
+      "required": false,
+      "description": "URL квадратной фотографии пользователя с шириной 100 пикселей. Если у пользователя отсутствует фотография, возвращается https://vk.com/images/camera_100.png."
+    },
+    {
+      "name": "first_name",
+      "type": "string",
+      "required": false,
+      "description": "Имя пользователя."
+    },
+    {
+      "name": "last_name",
+      "type": "string",
+      "required": false,
+      "description": "Фамилия пользователя."
+    },
+    {
+      "name": "can_access_closed",
+      "type": "boolean",
+      "required": false,
+      "description": "Информация о том, может ли пользователь, который открыл мини-приложение, видеть закрытый профиль пользователя. Возможные значения: • true — пользователь может видеть профиль. • false — пользователь не может видеть профиль."
+    },
+    {
+      "name": "is_closed",
+      "type": "boolean",
+      "required": false,
+      "description": "Информация о том, закрыт ли профиль пользователя. Возможные значения: • true — профиль закрыт. • false — профиль открыт."
+    }
+  ],
   "returns": {
-    "description": ""
+    "description": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppGetUserInfoResult и VKWebAppGetUserFailed. Подробнее о проверке результатов при вызовах VK Bridge."
   },
-  "sections": [],
-  "contentText": ""
+  "sections": [
+    {
+      "level": 2,
+      "title": "Пример",
+      "text": "JavaScriptbridge.send('VKWebAppGetUserInfo', { user_id: 743784474 }) .then((data) => { if (data.id) { // Данные пользователя получены console.log(data); } }) .catch((error) => { // Ошибка console.log(error); });"
+    },
+    {
+      "level": 2,
+      "title": "Совместимость",
+      "text": "ПлощадкиПлатформыВКонтактеAndroid, iOS, Mobile Web, WebОдноклассникиAndroid, iOS, Mobile Web, Web"
+    },
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "В качестве параметра передайте объект, содержащий одно из следующих полей: ПолеТипОписаниеuser_id необязательноеintegerИдентификатор пользователя, информацию о котором вы хотите получить.user_ids необязательноеstringИдентификатор или идентификаторы пользователей, информацию о которых вы хотите получить. Указывайте идентификаторы через запятую.use_localbooleanОпределяет, с какой площадки нужно получить данные. Возможные значения: • true — с площадки, которая использует SDK, например Одноклассники. • false — Вконтакте. Значение по умолчанию. При вызове события используйте только одно поле: user_id или user_ids. Если ни одно из них не указано, событие вернёт информацию о текущем пользователе."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppGetUserInfoResult и VKWebAppGetUserFailed. Подробнее о проверке результатов при вызовах VK Bridge."
+    },
+    {
+      "level": 3,
+      "title": "Объект Promise",
+      "text": "Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise."
+    },
+    {
+      "level": 4,
+      "title": "Если в запросе один идентификатор",
+      "text": "Если в запросе вы указали только один идентификатор, то есть указали поле user_id либо указали user_ids, но в нём было только одно значение, то в качестве ответа платформа вернёт объект, содержащий информацию о пользователе с указанным идентификатором. JavaScriptbridge.send('VKWebAppGetUserInfo', { user_id: 743784474 }) .then((data) => { // data — объект с информацией о пользователе }) .catch((error) => { console.log(error); // Ошибка }); Если идентификатор не был найден в базе или произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge."
+    },
+    {
+      "level": 4,
+      "title": "Если в запросе несколько идентификаторов",
+      "text": "Если в запросе вы указали несколько идентификаторов в user_ids, то в качестве ответа платформа вернёт объект, который содержит следующее поле: ПолеТипОписаниеresultobject[]Массив объектов, с информацией о пользователях. Массив содержит данные пользователей, чьи идентификаторы были найдены. Массив не содержит данных по несуществующим идентификаторам или указанным с ошибкой. JavaScriptbridge.send('VKWebAppGetUserInfo', { user_ids: '743784474, 743784479' }) .then((data) => { // data.result — массив объектов с информацией о пользователях } }) .catch((error) => { console.log(error); // Ошибка }); Если при обращении к платформе произошла ошибка или не был найден ни один идентификатор, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge."
+    },
+    {
+      "level": 3,
+      "title": "Объект с информацией о пользователе",
+      "text": "ПолеТипОписаниеidintegerИдентификатор пользователя.bdatestringДата рождения пользователя. Например 10.4.1990 или 10.4 (если год рождения скрыт). Если дата рождения скрыта целиком, поле в ответе отсутствует.bdate_visibilityintegerИнформация о том, отображается ли дата рождения пользователя. Возможные значения: • 1 — дата рождения открыта целиком. • 2 — открыты только день и месяц даты рождения. • 0 — дата рождения скрыта.cityobjectИнформация о городе пользователя. Объект, который содержит поля: • id (integer) — идентификатор города. • title (string) — название города.countryobjectИнформация о стране пользователя. Объект, который содержит поля: • id (integer) — идентификатор страны. • title (string) — название страны.photo_200stringURL квадратной фотографии пользователя с шириной 200 пикселей. Если у пользователя отсутствует фотография, возвращается https://vk.com/images/camera_200.png.photo_max_origstringURL фотографии максимального размера. Может быть возвращена фотография, имеющая ширину как 400, так и 200 пикселей. Если у пользователя отсутствует фотография, возвращается https://vk.com/images/camera_400.png.sexintegerПол пользователя. Возможные значения: • 1 — женский. • 2 — мужской. • 0 — пол не указан.photo_100stringURL квадратной фотографии пользователя с шириной 100 пикселей. Если у пользователя отсутствует фотография, возвращается https://vk.com/images/camera_100.png.first_namestringИмя пользователя.last_namestringФамилия пользователя.can_access_closedbooleanИнформация о том, может ли пользователь, который открыл мини-приложение, видеть закрытый профиль пользователя. Возможные значения: • true — пользователь может видеть профиль. • false — пользователь не может видеть профиль.is_closedbooleanИнформация о том, закрыт ли профиль пользователя. Возможные значения: • true — профиль закрыт. • false — профиль открыт."
+    },
+    {
+      "level": 3,
+      "title": "События",
+      "text": ""
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppGetUserInfoResult",
+      "text": "Сигнализирует, что данные пользователя получены. В обработчик события на стороне пользователя передаются следующие данные, если передан параметр user_id: JavaScript{ detail: { type: \"VKWebAppGetUserInfoResult\", data: { id: 743784474, bdate: \"21.12.2000\", bdate_visibility: 1, city: { id: 2, title: \"Санкт-Петербург\" }, country: { id: 1, title: \"Россия\" }, photo_200: \"https://sun1-91.userapi.com/s/v1/ig2/Dcf-SWu7nVYDDldq9oQegiC06VqsSa43-HpDxzPjrvFCUUk9nSevY2Uf9xzm0bxvLfgsTOH6XiiW-zeLcDhPDj_w.jpg?size=200x200&quality=96&crop=26,26,204,204&ava=1\", photo_max_orig: \"https://sun1-91.userapi.com/s/v1/ig2/trHNebJQhG4BmLxC8h4hOpDU6bKRy6uJi586wcyFcCj5fzrwYk7AtoNab-RSil0Bp9b569VQyGK_skG9e6oK7Ap7.jpg?size=256x256&quality=96&crop=0,0,256,256&ava=1\", sex\": 2, photo_100: \"https://sun1-91.userapi.com/s/v1/ig2/M4vtl7tcmeP6ANUgE0vU7JZWuJszbHaN5QcCcK2xD66EIc6SeSA1NyFVLTSOt2iLOkFhJSJ4DawEJGOjzKtszMpR.jpg?size=100x100&quality=96&crop=26,26,204,204&ava=1\", first_name: \"Персик\", last_name: \"Рыжий\", can_access_closed: true, is_closed: false } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса."
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppGetUserInfoFailed",
+      "text": "Информирует об ошибке, которая произошла при взаимодействии с платформой. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge."
+    },
+    {
+      "level": 4,
+      "title": "Пример обработки событий",
+      "text": "Подробнее — в разделе Обработка результата."
+    },
+    {
+      "level": 2,
+      "title": "Песочница",
+      "text": "VKWebAppGetUserInfo"
+    },
+    {
+      "level": 2,
+      "title": "Особенности использования",
+      "text": "Событие VKWebAppGetUserInfo возвращает информацию, которую пользователь отметил доступной в своём профиле. Для вызова события какие-либо права доступа не требуются."
+    },
+    {
+      "level": 2,
+      "title": "Материалы по теме",
+      "text": "• VKWebAppGetEmail • VKWebAppGetPhoneNumber • VKWebAppGetPersonalCard"
+    }
+  ],
+  "compatibility": "ВКонтакте: Android, iOS, Mobile Web, Web; Одноклассники: Android, iOS, Mobile Web, Web",
+  "contentText": "VKWebAppGetUserInfo получает данные о пользователе из его профиля ВКонтакте или в Одноклассниках. Пример: JavaScriptbridge.send('VKWebAppGetUserInfo', { user_id: 743784474 }) .then((data) => { if (data.id) { // Данные пользователя получены console.log(data); } }) .catch((error) => { // Ошибка console.log(error); }); Совместимость: ПлощадкиПлатформыВКонтактеAndroid, iOS, Mobile Web, WebОдноклассникиAndroid, iOS, Mobile Web, Web Параметры: В качестве параметра передайте объект, содержащий одно из следующих полей: ПолеТипОписаниеuser_id необязательноеintegerИдентификатор пользователя, информацию о котором вы хотите получить.user_ids необязательноеstringИдентификатор или идентификаторы пользователей, информацию о которых вы хотите получить. Указывайте идентификаторы через запятую.use_localbooleanОпределяет, с какой площадки нужно получить данные. Возможные значения: • true — с площадки, которая использует SDK, например Одноклассники. • false — Вконтакте. Значение по умолчанию. При вызове события используйте только одно поле: user_id или user_ids. Если ни одно из них не указано, событие вернёт информацию о текущем пользователе. Результат: Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppGetUserInfoResult и VKWebAppGetUserFailed. Подробнее о проверке результатов при вызовах VK Bridge. Объект Promise: Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. Если в запросе один идентификатор: Если в запросе вы указали только один идентификатор, то есть указали поле user_id либо указали user_ids, но в нём было только одно значение, то в качестве ответа платформа вернёт объект, содержащий информацию о пользователе с указанным идентификатором. JavaScriptbridge.send('VKWebAppGetUserInfo', { user_id: 743784474 }) .then((data) => { // data — объект с информацией о пользователе }) .catch((error) => { console.log(error); // Ошибка }); Если идентификатор не был найден в базе или произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge. Если в запросе несколько идентификаторов: Если в запросе вы указали несколько идентификаторов в user_ids, то в качестве ответа платформа вернёт объект, который содержит следующее поле: ПолеТипОписаниеresultobject[]Массив объектов, с информацией о пользователях. Массив содержит данные пользователей, чьи идентификаторы были найдены. Массив не содержит данных по несуществующим идентификаторам или указанным с ошибкой. JavaScriptbridge.send('VKWebAppGetUserInfo', { user_ids: '743784474, 743784479' }) .then((data) => { // data.result — массив объектов с информацией о пользователях } }) .catch((error) => { console.log(error); // Ошибка }); Если при обращении к платформе произошла ошибка или не был найден ни один идентификатор, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge. Объект с информацией о пользователе: ПолеТипОписаниеidintegerИдентификатор пользователя.bdatestringДата рождения пользователя. Например 10.4.1990 или 10.4 (если год рождения скрыт). Если дата рождения скрыта целиком, поле в ответе отсутствует.bdate_visibilityintegerИнформация о том, отображается ли дата рождения пользователя. Возможные значения: • 1 — дата рождения открыта целиком. • 2 — открыты только день и месяц даты рождения. • 0 — дата рождения скрыта.cityobjectИнформация о городе пользователя. Объект, который содержит поля: • id (integer) — идентификатор города. • title (string) — название города.countryobjectИнформация о стране пользователя. Объект, который содержит поля: • id (integer) — идентификатор страны. • title (string) — название страны.photo_200stringURL квадратной фотографии пользователя с шириной 200 пикселей. Если у пользователя отсутствует фотография, возвращается https://vk.com/images/camera_200.png.photo_max_origstringURL фотографии максимального размера. Может быть возвращена фотография, имеющая ширину как 400, так и 200 пикселей. Если у пользователя отсутствует фотография, возвращается https://vk.com/images/camera_400.png.sexintegerПол пользователя. Возможные значения: • 1 — женский. • 2 — мужской. • 0 — пол не указан.photo_100stringURL квадратной фотографии пользователя с шириной 100 пикселей. Если у пользователя отсутствует фотография, возвращается https://vk.com/images/camera_100.png.first_namestringИмя пользователя.last_namestringФамилия пользователя.can_access_closedbooleanИнформация о том, может ли пользователь, который открыл мини-приложение, видеть закрытый профиль пользователя. Возможные значения: • true — пользователь может видеть профиль. • false — пользователь не может видеть профиль.is_closedbooleanИнформация о том, закрыт ли профиль пользователя. Возможные значения: • true — профиль закрыт. • false — профиль открыт. События: VKWebAppGetUserInfoResult: Сигнализирует, что данные пользователя получены. В обработчик события на стороне пользователя передаются следующие данные, если передан параметр user_id: JavaScript{ detail: { type: \"VKWebAppGetUserInfoResult\", data: { id: 743784474, bdate: \"21.12.2000\", bdate_visibility: 1, city: { id: 2, title: \"Санкт-Петербург\" }, country: { id: 1, title: \"Россия\" }, photo_200: \"https://sun1-91.userapi.com/s/v1/ig2/Dcf-SWu7nVYDDldq9oQegiC06VqsSa43-HpDxzPjrvFCUUk9nSevY2Uf9xzm0bxvLfgsTOH6XiiW-zeLcDhPDj_w.jpg?size=200x200&quality=96&crop=26,26,204,204&ava=1\", photo_max_orig: \"https://sun1-91.userapi.com/s/v1/ig2/trHNebJQhG4BmLxC8h4hOpDU6bKRy6uJi586wcyFcCj5fzrwYk7AtoNab-RSil0Bp9b569VQyGK_skG9e6oK7Ap7.jpg?size=256x256&quality=96&crop=0,0,256,256&ava=1\", sex\": 2, photo_100: \"https://sun1-91.userapi.com/s/v1/ig2/M4vtl7tcmeP6ANUgE0vU7JZWuJszbHaN5QcCcK2xD66EIc6SeSA1NyFVLTSOt2iLOkFhJSJ4DawEJGOjzKtszMpR.jpg?size=100x100&quality=96&crop=26,26,204,204&ava=1\", first_name: \"Персик\", last_name: \"Рыжий\", can_access_closed: true, is_closed"
 }

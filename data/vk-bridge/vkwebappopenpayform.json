@@ -1,15 +1,100 @@
 {
   "id": "vkwebappopenpayform",
   "url": "https://dev.vk.com/ru/bridge/VKWebAppOpenPayForm",
-  "title": "VKWebAppOpenPayForm",
+  "title": "VK Bridge | VKWebAppOpenPayForm | VK для разработчиков",
   "h1": "VKWebAppOpenPayForm",
   "group": "Покупки",
-  "description": "",
-  "examples": [],
-  "params": [],
+  "description": "VKWebAppOpenPayForm показывает экран VK Pay для совершения платежа.",
+  "examples": [
+    {
+      "lang": "javascript",
+      "code": "bridge.send('VKWebAppOpenPayForm', {\n    app_id: 6909581,\n    action: 'pay-to-service',\n    params: {\n      user_id: 743784474\n    }})\n  .then((data) => {\n    if (data.status) {\n      // Экран VK Pay показан\n    }\n  })\n  .catch((error) => {\n    // Ошибка\n    console.log(error);\n  });"
+    },
+    {
+      "lang": "javascript",
+      "code": "{\n  detail: {\n    type: \"VKWebAppOpenPayFormResult\",\n    data: {\n      status: true,\n      transaction_id: \"1234ABCD-EEEE-5678-90FG-ABCDEF123456\",\n      amount: \"120.5\",\n      extra: \"{\\\"currency\\\":\\\"RUB\\\",\\\"merchant_data\\\":\\\"some_merchant_data\\\",\\\"merchant_sign\\\":\\\"some_sign\\\",\\\"order_id\\\":\\\"some_order_id\\\",\\\"ts\\\":1641999488}\\\"\"\n    }\n  }\n}"
+    }
+  ],
+  "params": [
+    {
+      "name": "app_id",
+      "type": "integer",
+      "required": true,
+      "description": "Идентификатор мини-приложения."
+    },
+    {
+      "name": "action",
+      "type": "string",
+      "required": true,
+      "description": "Тип перевода. Всегда pay-to-service — перевод в пользу юридического лица."
+    },
+    {
+      "name": "params",
+      "type": "object",
+      "required": true,
+      "description": "Параметры платёжного окна VK Pay. Параметры зависят от типа платежа action. Подробнее — в инструкции по проведению платежа."
+    }
+  ],
   "returns": {
-    "description": ""
+    "description": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppOpenPayFormResult и VKWebAppOpenPayFormFailed. Подробнее о проверке результатов при вызовах VK Bridge. Возможные ошибки: •This action cannot be performed in the background, если мини-приложение или игра запущены в фоновом режиме. status (boolean): Информация о том, успешно ли выполнен платёж. Возможные значения: • true — платёж выполнен успешно. • false — произошла ошибка. transaction_id (string): Идентификатор транзакции в платёжной системе. Поле возвращается, если поле status имеет значение true. amount (string): Сумма платежа. extra (string): Дополнительные данные о продавце. Содержит данные объекта params.data."
   },
-  "sections": [],
-  "contentText": ""
+  "sections": [
+    {
+      "level": 2,
+      "title": "Пример",
+      "text": "JavaScriptbridge.send('VKWebAppOpenPayForm', { app_id: 6909581, action: 'pay-to-service', params: { user_id: 743784474 }}) .then((data) => { if (data.status) { // Экран VK Pay показан } }) .catch((error) => { // Ошибка console.log(error); });"
+    },
+    {
+      "level": 2,
+      "title": "Совместимость",
+      "text": "ПлощадкиПлатформыВКонтактеAndroid, iOS, Mobile Web, WebОдноклассники–"
+    },
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "ПолеТипОписаниеapp_id обязательноеintegerИдентификатор мини-приложения.action обязательноеstringТип перевода. Всегда pay-to-service — перевод в пользу юридического лица.params обязательноеobjectПараметры платёжного окна VK Pay. Параметры зависят от типа платежа action. Подробнее — в инструкции по проведению платежа."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppOpenPayFormResult и VKWebAppOpenPayFormFailed. Подробнее о проверке результатов при вызовах VK Bridge. Возможные ошибки: •This action cannot be performed in the background, если мини-приложение или игра запущены в фоновом режиме."
+    },
+    {
+      "level": 3,
+      "title": "Объект Promise",
+      "text": "Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект со следующими полями: ПолеТипОписаниеstatusbooleanИнформация о том, успешно ли выполнен платёж. Возможные значения: • true — платёж выполнен успешно. • false — произошла ошибка.transaction_idstringИдентификатор транзакции в платёжной системе. Поле возвращается, если поле status имеет значение true.amountstringСумма платежа.extrastringДополнительные данные о продавце. Содержит данные объекта params.data. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge."
+    },
+    {
+      "level": 3,
+      "title": "События",
+      "text": ""
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppOpenPayFormResult",
+      "text": "Сигнализирует, что экран VK Pay показан. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppOpenPayFormResult\", data: { status: true, transaction_id: \"1234ABCD-EEEE-5678-90FG-ABCDEF123456\", amount: \"120.5\", extra: \"{\\\"currency\\\":\\\"RUB\\\",\\\"merchant_data\\\":\\\"some_merchant_data\\\",\\\"merchant_sign\\\":\\\"some_sign\\\",\\\"order_id\\\":\\\"some_order_id\\\",\\\"ts\\\":1641999488}\\\"\" } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса."
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppOpenPayFormFailed",
+      "text": "Информирует об ошибке, которая произошла при взаимодействии с платформой. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge."
+    },
+    {
+      "level": 4,
+      "title": "Пример обработки событий",
+      "text": "Подробнее — в разделе Обработка результата."
+    },
+    {
+      "level": 2,
+      "title": "Песочница",
+      "text": "VKWebAppOpenPayForm"
+    },
+    {
+      "level": 2,
+      "title": "Материалы по теме",
+      "text": "•Документация VK Pay •Платёжное окно •Продажа товаров в мини-приложениях"
+    }
+  ],
+  "compatibility": "ВКонтакте: Android, iOS, Mobile Web, Web; Одноклассники: –",
+  "contentText": "VKWebAppOpenPayForm показывает экран VK Pay для совершения платежа. Пример: JavaScriptbridge.send('VKWebAppOpenPayForm', { app_id: 6909581, action: 'pay-to-service', params: { user_id: 743784474 }}) .then((data) => { if (data.status) { // Экран VK Pay показан } }) .catch((error) => { // Ошибка console.log(error); }); Совместимость: ПлощадкиПлатформыВКонтактеAndroid, iOS, Mobile Web, WebОдноклассники– Параметры: ПолеТипОписаниеapp_id обязательноеintegerИдентификатор мини-приложения.action обязательноеstringТип перевода. Всегда pay-to-service — перевод в пользу юридического лица.params обязательноеobjectПараметры платёжного окна VK Pay. Параметры зависят от типа платежа action. Подробнее — в инструкции по проведению платежа. Результат: Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppOpenPayFormResult и VKWebAppOpenPayFormFailed. Подробнее о проверке результатов при вызовах VK Bridge. Возможные ошибки: •This action cannot be performed in the background, если мини-приложение или игра запущены в фоновом режиме. Объект Promise: Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект со следующими полями: ПолеТипОписаниеstatusbooleanИнформация о том, успешно ли выполнен платёж. Возможные значения: • true — платёж выполнен успешно. • false — произошла ошибка.transaction_idstringИдентификатор транзакции в платёжной системе. Поле возвращается, если поле status имеет значение true.amountstringСумма платежа.extrastringДополнительные данные о продавце. Содержит данные объекта params.data. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge. События: VKWebAppOpenPayFormResult: Сигнализирует, что экран VK Pay показан. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppOpenPayFormResult\", data: { status: true, transaction_id: \"1234ABCD-EEEE-5678-90FG-ABCDEF123456\", amount: \"120.5\", extra: \"{\\\"currency\\\":\\\"RUB\\\",\\\"merchant_data\\\":\\\"some_merchant_data\\\",\\\"merchant_sign\\\":\\\"some_sign\\\",\\\"order_id\\\":\\\"some_order_id\\\",\\\"ts\\\":1641999488}\\\"\" } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса. VKWebAppOpenPayFormFailed: Информирует об ошибке, которая произошла при взаимодействии с платформой. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge. Пример обработки событий: Подробнее — в разделе Обработка результата. Песочница: VKWebAppOpenPayForm Материалы по теме: •Документация VK Pay •Платёжное окно •Продажа товаров в мини-приложениях"
 }

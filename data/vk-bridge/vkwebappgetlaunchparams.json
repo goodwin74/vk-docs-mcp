@@ -1,15 +1,76 @@
 {
   "id": "vkwebappgetlaunchparams",
   "url": "https://dev.vk.com/ru/bridge/VKWebAppGetLaunchParams",
-  "title": "VKWebAppGetLaunchParams",
+  "title": "VK Bridge | VKWebAppGetLaunchParams | VK для разработчиков",
   "h1": "VKWebAppGetLaunchParams",
   "group": "",
-  "description": "",
-  "examples": [],
+  "description": "VKWebAppGetLaunchParams получает актуальные значения параметров запуска игры или мини-приложения.",
+  "examples": [
+    {
+      "lang": "javascript",
+      "code": "bridge.send('VKWebAppGetLaunchParams')\n  .then((data) => { \n    if (data.vk_app_id) {\n      // Параметры запуска получены\n    }\n  })\n  .catch((error) => {\n    // Ошибка\n    console.log(error);\n  });"
+    },
+    {
+      "lang": "javascript",
+      "code": "{\n  detail: {\n    type: \"VKWebAppGetLaunchParamsResult\",\n    data: {\n      sign: \"Hb67aIL4cElWINenspCpKu3tUgacikw541NCXX8zWL4\",\n      vk_access_token_settings: \"\",\n      vk_app_id: 8142709,\n      vk_are_notifications_enabled: 0,\n      vk_is_app_user: 1,\n      vk_is_favorite: 0,\n      vk_language: \"ru\",\n      vk_platform: \"desktop_web\",\n      vk_ref: \"other\",\n      vk_ts: 1664886146,\n      vk_user_id: 82156740\n    }\n  }\n}"
+    }
+  ],
   "params": [],
   "returns": {
-    "description": ""
+    "description": "Проверить результат можно: • Используя объект ``, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppGetLaunchParamsResult и VKWebAppGetLaunchParamsFailed. Подробнее о проверке результатов при вызовах VK Bridge."
   },
-  "sections": [],
-  "contentText": ""
+  "sections": [
+    {
+      "level": 2,
+      "title": "Пример",
+      "text": "JavaScriptbridge.send('VKWebAppGetLaunchParams') .then((data) => { if (data.vk_app_id) { // Параметры запуска получены } }) .catch((error) => { // Ошибка console.log(error); });"
+    },
+    {
+      "level": 2,
+      "title": "Совместимость",
+      "text": "ПлощадкиПлатформыВКонтактеAndroid, iOS, Mobile Web, WebОдноклассникиAndroid, iOS, Mobile Web, Web"
+    },
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "—"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Проверить результат можно: • Используя объект ``, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppGetLaunchParamsResult и VKWebAppGetLaunchParamsFailed. Подробнее о проверке результатов при вызовах VK Bridge."
+    },
+    {
+      "level": 3,
+      "title": "Объект Promise",
+      "text": "Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект с параметрами запуска игры или мини-приложения. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge."
+    },
+    {
+      "level": 3,
+      "title": "События",
+      "text": ""
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppGetLaunchParamsResult",
+      "text": "Сигнализирует, что параметры запуска получены. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppGetLaunchParamsResult\", data: { sign: \"Hb67aIL4cElWINenspCpKu3tUgacikw541NCXX8zWL4\", vk_access_token_settings: \"\", vk_app_id: 8142709, vk_are_notifications_enabled: 0, vk_is_app_user: 1, vk_is_favorite: 0, vk_language: \"ru\", vk_platform: \"desktop_web\", vk_ref: \"other\", vk_ts: 1664886146, vk_user_id: 82156740 } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса."
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppGetLaunchParamsFailed",
+      "text": "Информирует об ошибке, которая произошла при взаимодействии с платформой. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge."
+    },
+    {
+      "level": 4,
+      "title": "Пример обработки событий",
+      "text": "Подробнее — в разделе Обработка результата."
+    },
+    {
+      "level": 2,
+      "title": "Материалы по теме",
+      "text": "• Параметры запуска мини-приложений • Параметры запуска игр • Параметры запуска в Одноклассниках"
+    }
+  ],
+  "compatibility": "ВКонтакте: Android, iOS, Mobile Web, Web; Одноклассники: Android, iOS, Mobile Web, Web",
+  "contentText": "VKWebAppGetLaunchParams получает актуальные значения параметров запуска игры или мини-приложения. Пример: JavaScriptbridge.send('VKWebAppGetLaunchParams') .then((data) => { if (data.vk_app_id) { // Параметры запуска получены } }) .catch((error) => { // Ошибка console.log(error); }); Совместимость: ПлощадкиПлатформыВКонтактеAndroid, iOS, Mobile Web, WebОдноклассникиAndroid, iOS, Mobile Web, Web Параметры: — Результат: Проверить результат можно: • Используя объект ``, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppGetLaunchParamsResult и VKWebAppGetLaunchParamsFailed. Подробнее о проверке результатов при вызовах VK Bridge. Объект Promise: Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект с параметрами запуска игры или мини-приложения. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge. События: VKWebAppGetLaunchParamsResult: Сигнализирует, что параметры запуска получены. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppGetLaunchParamsResult\", data: { sign: \"Hb67aIL4cElWINenspCpKu3tUgacikw541NCXX8zWL4\", vk_access_token_settings: \"\", vk_app_id: 8142709, vk_are_notifications_enabled: 0, vk_is_app_user: 1, vk_is_favorite: 0, vk_language: \"ru\", vk_platform: \"desktop_web\", vk_ref: \"other\", vk_ts: 1664886146, vk_user_id: 82156740 } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса. VKWebAppGetLaunchParamsFailed: Информирует об ошибке, которая произошла при взаимодействии с платформой. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge. Пример обработки событий: Подробнее — в разделе Обработка результата. Материалы по теме: • Параметры запуска мини-приложений • Параметры запуска игр • Параметры запуска в Одноклассниках"
 }

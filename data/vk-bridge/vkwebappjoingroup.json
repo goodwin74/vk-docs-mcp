@@ -1,15 +1,83 @@
 {
   "id": "vkwebappjoingroup",
   "url": "https://dev.vk.com/ru/bridge/VKWebAppJoinGroup",
-  "title": "VKWebAppJoinGroup",
+  "title": "VK Bridge | Сообщества | VKWebAppJoinGroup | VK для разработчиков",
   "h1": "VKWebAppJoinGroup",
   "group": "Сообщества",
-  "description": "",
-  "examples": [],
-  "params": [],
+  "description": "VKWebAppJoinGroup показывает окно с предложением вступить в сообщество.",
+  "examples": [
+    {
+      "lang": "javascript",
+      "code": "bridge.send('VKWebAppJoinGroup', {\n  group_id: 166562603\n  })\n  .then((data) => { \n    if (data.result) {\n      // Пользователь подписался на сообщество\n    }\n  })\n  .catch((error) => {\n    // Ошибка\n    console.log(error);\n  });"
+    },
+    {
+      "lang": "javascript",
+      "code": "{\n  detail: {\n    type: \"VKWebAppJoinGroupResult\",\n    data: {\n      result: true\n    }\n  }\n}"
+    }
+  ],
+  "params": [
+    {
+      "name": "group_id",
+      "type": "integer",
+      "required": true,
+      "description": "Идентификатор сообщества."
+    }
+  ],
   "returns": {
-    "description": ""
+    "description": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppJoinGroupResult и VKWebAppJoinGroupFailed. Подробнее о проверке результатов при вызовах VK Bridge. Возможные ошибки: •This action cannot be performed in the background, если мини-приложение запущено в фоновом режиме. •User denied, если пользователь закрыл окно с предложением вступить в сообщество. result (boolean): true, если пользователь подписался на сообщество."
   },
-  "sections": [],
-  "contentText": ""
+  "sections": [
+    {
+      "level": 2,
+      "title": "Пример",
+      "text": "JavaScriptbridge.send('VKWebAppJoinGroup', { group_id: 166562603 }) .then((data) => { if (data.result) { // Пользователь подписался на сообщество } }) .catch((error) => { // Ошибка console.log(error); });"
+    },
+    {
+      "level": 2,
+      "title": "Совместимость",
+      "text": "ПлощадкиПлатформыВКонтактеAndroid, iOS, Mobile Web, WebОдноклассникиAndroid, iOS, Mobile Web, Web"
+    },
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "ПолеТипОписаниеgroup_id обязательноеintegerИдентификатор сообщества."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppJoinGroupResult и VKWebAppJoinGroupFailed. Подробнее о проверке результатов при вызовах VK Bridge. Возможные ошибки: •This action cannot be performed in the background, если мини-приложение запущено в фоновом режиме. •User denied, если пользователь закрыл окно с предложением вступить в сообщество."
+    },
+    {
+      "level": 3,
+      "title": "Объект Promise",
+      "text": "Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект со следующим полем: ПолеТипОписаниеresultbooleantrue, если пользователь подписался на сообщество. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge."
+    },
+    {
+      "level": 3,
+      "title": "События",
+      "text": ""
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppJoinGroupResult",
+      "text": "Сигнализирует, что пользователь подписался на сообщество. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppJoinGroupResult\", data: { result: true } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса."
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppJoinGroupFailed",
+      "text": "Информирует об ошибке, которая произошла при взаимодействии с платформой. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge."
+    },
+    {
+      "level": 4,
+      "title": "Пример обработки событий",
+      "text": "Подробнее — в разделе Обработка результата."
+    },
+    {
+      "level": 2,
+      "title": "Песочница",
+      "text": "VKWebAppJoinGroup"
+    }
+  ],
+  "compatibility": "ВКонтакте: Android, iOS, Mobile Web, Web; Одноклассники: Android, iOS, Mobile Web, Web",
+  "contentText": "VKWebAppJoinGroup показывает окно с предложением вступить в сообщество. Пример: JavaScriptbridge.send('VKWebAppJoinGroup', { group_id: 166562603 }) .then((data) => { if (data.result) { // Пользователь подписался на сообщество } }) .catch((error) => { // Ошибка console.log(error); }); Совместимость: ПлощадкиПлатформыВКонтактеAndroid, iOS, Mobile Web, WebОдноклассникиAndroid, iOS, Mobile Web, Web Параметры: ПолеТипОписаниеgroup_id обязательноеintegerИдентификатор сообщества. Результат: Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppJoinGroupResult и VKWebAppJoinGroupFailed. Подробнее о проверке результатов при вызовах VK Bridge. Возможные ошибки: •This action cannot be performed in the background, если мини-приложение запущено в фоновом режиме. •User denied, если пользователь закрыл окно с предложением вступить в сообщество. Объект Promise: Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект со следующим полем: ПолеТипОписаниеresultbooleantrue, если пользователь подписался на сообщество. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge. События: VKWebAppJoinGroupResult: Сигнализирует, что пользователь подписался на сообщество. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppJoinGroupResult\", data: { result: true } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса. VKWebAppJoinGroupFailed: Информирует об ошибке, которая произошла при взаимодействии с платформой. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge. Пример обработки событий: Подробнее — в разделе Обработка результата. Песочница: VKWebAppJoinGroup"
 }

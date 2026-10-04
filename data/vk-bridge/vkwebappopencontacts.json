@@ -1,15 +1,76 @@
 {
   "id": "vkwebappopencontacts",
   "url": "https://dev.vk.com/ru/bridge/VKWebAppOpenContacts",
-  "title": "VKWebAppOpenContacts",
+  "title": "VK Bridge | VKWebAppOpenContacts | VK для разработчиков",
   "h1": "VKWebAppOpenContacts",
   "group": "Пользователи",
-  "description": "",
-  "examples": [],
+  "description": "VKWebAppOpenContacts запрашивает доступ к телефонной книге на устройстве, открывает окно выбора контакта из телефонной книги и получает данные контакта.",
+  "examples": [
+    {
+      "lang": "javascript",
+      "code": "bridge.send('VKWebAppOpenContacts')\n  .then((data) => { \n    if (data.phone) {\n      // Данные контакта получены\n    }\n  })\n  .catch((error) => {\n    // Ошибка\n    console.log(error);\n  });"
+    },
+    {
+      "lang": "javascript",
+      "code": "{\n  detail: {\n    type: \"VKWebAppOpenContactsResult\",\n    data: {\n      phone: \"79217770099\",\n      first_name: \"Персик\",\n      last_name: \"Рыжий\" \n    }\n  }\n}"
+    }
+  ],
   "params": [],
   "returns": {
-    "description": ""
+    "description": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppOpenContactsResult и VKWebAppOpenContactsFailed. Подробнее о проверке результатов при вызовах VK Bridge. Возможные ошибки: •This action cannot be performed in the background, если приложение запущено в фоновом режиме. •User denied, если пользователь закрыл телефонную книгу. phone (string): Номер телефона в формате, в котором он хранится в телефонной книге. first_name (string): Имя пользователя, указанное в телефонной книге. last_name (string): Фамилия пользователя, указанная в телефонной книге."
   },
-  "sections": [],
-  "contentText": ""
+  "sections": [
+    {
+      "level": 2,
+      "title": "Пример",
+      "text": "JavaScriptbridge.send('VKWebAppOpenContacts') .then((data) => { if (data.phone) { // Данные контакта получены } }) .catch((error) => { // Ошибка console.log(error); });"
+    },
+    {
+      "level": 2,
+      "title": "Совместимость",
+      "text": "ПлощадкиПлатформыВКонтактеAndroid, iOSОдноклассникиAndroid, iOS"
+    },
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "—"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppOpenContactsResult и VKWebAppOpenContactsFailed. Подробнее о проверке результатов при вызовах VK Bridge. Возможные ошибки: •This action cannot be performed in the background, если приложение запущено в фоновом режиме. •User denied, если пользователь закрыл телефонную книгу."
+    },
+    {
+      "level": 3,
+      "title": "Объект Promise",
+      "text": "Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект со следующими полями: ПолеТипОписаниеphonestringНомер телефона в формате, в котором он хранится в телефонной книге.first_namestringИмя пользователя, указанное в телефонной книге.last_namestringФамилия пользователя, указанная в телефонной книге. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge."
+    },
+    {
+      "level": 3,
+      "title": "События",
+      "text": ""
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppOpenContactsResult",
+      "text": "Сигнализирует, что данные контакта получены. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppOpenContactsResult\", data: { phone: \"79217770099\", first_name: \"Персик\", last_name: \"Рыжий\" } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса."
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppOpenContactsFailed",
+      "text": "Информирует об ошибке, которая произошла при взаимодействии с платформой. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge."
+    },
+    {
+      "level": 4,
+      "title": "Пример обработки событий",
+      "text": "Подробнее — в разделе Обработка результата."
+    },
+    {
+      "level": 2,
+      "title": "Материалы по теме",
+      "text": "•VKWebAppGetPhoneNumber •VKWebAppGetFriends"
+    }
+  ],
+  "compatibility": "ВКонтакте: Android, iOS; Одноклассники: Android, iOS",
+  "contentText": "VKWebAppOpenContacts запрашивает доступ к телефонной книге на устройстве, открывает окно выбора контакта из телефонной книги и получает данные контакта. Пример: JavaScriptbridge.send('VKWebAppOpenContacts') .then((data) => { if (data.phone) { // Данные контакта получены } }) .catch((error) => { // Ошибка console.log(error); }); Совместимость: ПлощадкиПлатформыВКонтактеAndroid, iOSОдноклассникиAndroid, iOS Параметры: — Результат: Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppOpenContactsResult и VKWebAppOpenContactsFailed. Подробнее о проверке результатов при вызовах VK Bridge. Возможные ошибки: •This action cannot be performed in the background, если приложение запущено в фоновом режиме. •User denied, если пользователь закрыл телефонную книгу. Объект Promise: Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект со следующими полями: ПолеТипОписаниеphonestringНомер телефона в формате, в котором он хранится в телефонной книге.first_namestringИмя пользователя, указанное в телефонной книге.last_namestringФамилия пользователя, указанная в телефонной книге. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge. События: VKWebAppOpenContactsResult: Сигнализирует, что данные контакта получены. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppOpenContactsResult\", data: { phone: \"79217770099\", first_name: \"Персик\", last_name: \"Рыжий\" } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса. VKWebAppOpenContactsFailed: Информирует об ошибке, которая произошла при взаимодействии с платформой. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge. Пример обработки событий: Подробнее — в разделе Обработка результата. Материалы по теме: •VKWebAppGetPhoneNumber •VKWebAppGetFriends"
 }

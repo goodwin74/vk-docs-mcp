@@ -1,15 +1,100 @@
 {
   "id": "vkwebappgetcommunitytoken",
   "url": "https://dev.vk.com/ru/bridge/VKWebAppGetCommunityToken",
-  "title": "VKWebAppGetCommunityToken",
+  "title": "VK Bridge | VKWebAppGetCommunityToken | VK для разработчиков",
   "h1": "VKWebAppGetCommunityToken",
   "group": "Доступы и разрешения",
-  "description": "",
-  "examples": [],
-  "params": [],
+  "description": "VKWebAppGetCommunityToken показывает окно с запросом прав доступа у пользователя и получает ключ доступа для работы с API от имени сообщества. Получить ключ доступа сообщества может только его администратор.",
+  "examples": [
+    {
+      "lang": "javascript",
+      "code": "bridge.send(\"VKWebAppGetCommunityToken\", {\n   app_id: 6909581,\n   group_id: 166562603,\n   scope: 'messages'\n   })\n  .then((data) => { \n    if (data.access_token) {\n      // Ключ доступа сообщества получен\n    }\n  })\n  .catch((error) => {\n    // Ошибка\n    console.log(error);\n  });"
+    },
+    {
+      "lang": "javascript",
+      "code": "{\n  detail: {\n    type: \"VKWebAppGetCommunityTokenResult\",\n    data: {\n      access_token: \"cc9521551d93ddb290b32648a37a006d87438a67f953dd37e564eb6db1ec28f79d05c16e207f00a0\" \n    }\n  }\n}"
+    }
+  ],
+  "params": [
+    {
+      "name": "app_id",
+      "type": "integer",
+      "required": true,
+      "description": "Идентификатор мини-приложения."
+    },
+    {
+      "name": "group_id",
+      "type": "integer",
+      "required": true,
+      "description": "Идентификатор сообщества."
+    },
+    {
+      "name": "scope",
+      "type": "string",
+      "required": true,
+      "description": "Список прав доступа, перечисленных через запятую. Возможные значения: • stories — доступ к историям. • photos — доступ к фотографиям. • app_widget — доступ к виджетам сообществ. • messages — доступ к сообщениям сообщества. • docs — доступ к документам. • manage — доступ к администрированию сообщества."
+    }
+  ],
   "returns": {
-    "description": ""
+    "description": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppGetCommunityTokenResult и VKWebAppGetCommunityTokenFailed. Подробнее о проверке результатов при вызовах VK Bridge. Возможные ошибки: •This action cannot be performed in the background, если мини-приложение запущено в фоновом режиме. access_token (string): Ключ доступа сообщества."
   },
-  "sections": [],
-  "contentText": ""
+  "sections": [
+    {
+      "level": 2,
+      "title": "Пример",
+      "text": "JavaScriptbridge.send(\"VKWebAppGetCommunityToken\", { app_id: 6909581, group_id: 166562603, scope: 'messages' }) .then((data) => { if (data.access_token) { // Ключ доступа сообщества получен } }) .catch((error) => { // Ошибка console.log(error); });"
+    },
+    {
+      "level": 2,
+      "title": "Совместимость",
+      "text": "ПлощадкиПлатформыВКонтактеAndroid, iOS, Mobile Web, WebОдноклассники–"
+    },
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "ПолеТипОписаниеapp_id обязательноеintegerИдентификатор мини-приложения.group_id обязательноеintegerИдентификатор сообщества.scope обязательноеstringСписок прав доступа, перечисленных через запятую. Возможные значения: • stories — доступ к историям. • photos — доступ к фотографиям. • app_widget — доступ к виджетам сообществ. • messages — доступ к сообщениям сообщества. • docs — доступ к документам. • manage — доступ к администрированию сообщества."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppGetCommunityTokenResult и VKWebAppGetCommunityTokenFailed. Подробнее о проверке результатов при вызовах VK Bridge. Возможные ошибки: •This action cannot be performed in the background, если мини-приложение запущено в фоновом режиме."
+    },
+    {
+      "level": 3,
+      "title": "Объект Promise",
+      "text": "Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект со следующим полем: ПолеТипОписаниеaccess_tokenstringКлюч доступа сообщества. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge."
+    },
+    {
+      "level": 3,
+      "title": "События",
+      "text": ""
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppGetCommunityTokenResult",
+      "text": "Сигнализирует, что ключ доступа сообщества получен. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppGetCommunityTokenResult\", data: { access_token: \"cc9521551d93ddb290b32648a37a006d87438a67f953dd37e564eb6db1ec28f79d05c16e207f00a0\" } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса."
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppGetCommunityTokenFailed",
+      "text": "Информирует об ошибке, которая произошла при взаимодействии с платформой. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge."
+    },
+    {
+      "level": 4,
+      "title": "Пример обработки событий",
+      "text": "Подробнее — в разделе Обработка результата."
+    },
+    {
+      "level": 2,
+      "title": "Песочница",
+      "text": "VKWebAppGetCommunityToken"
+    },
+    {
+      "level": 2,
+      "title": "Материалы по теме",
+      "text": "• Ключ доступа сообщества • VKWebAppGetAuthToken"
+    }
+  ],
+  "compatibility": "ВКонтакте: Android, iOS, Mobile Web, Web; Одноклассники: –",
+  "contentText": "VKWebAppGetCommunityToken показывает окно с запросом прав доступа у пользователя и получает ключ доступа для работы с API от имени сообщества. Получить ключ доступа сообщества может только его администратор. Пример: JavaScriptbridge.send(\"VKWebAppGetCommunityToken\", { app_id: 6909581, group_id: 166562603, scope: 'messages' }) .then((data) => { if (data.access_token) { // Ключ доступа сообщества получен } }) .catch((error) => { // Ошибка console.log(error); }); Совместимость: ПлощадкиПлатформыВКонтактеAndroid, iOS, Mobile Web, WebОдноклассники– Параметры: ПолеТипОписаниеapp_id обязательноеintegerИдентификатор мини-приложения.group_id обязательноеintegerИдентификатор сообщества.scope обязательноеstringСписок прав доступа, перечисленных через запятую. Возможные значения: • stories — доступ к историям. • photos — доступ к фотографиям. • app_widget — доступ к виджетам сообществ. • messages — доступ к сообщениям сообщества. • docs — доступ к документам. • manage — доступ к администрированию сообщества. Результат: Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppGetCommunityTokenResult и VKWebAppGetCommunityTokenFailed. Подробнее о проверке результатов при вызовах VK Bridge. Возможные ошибки: •This action cannot be performed in the background, если мини-приложение запущено в фоновом режиме. Объект Promise: Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект со следующим полем: ПолеТипОписаниеaccess_tokenstringКлюч доступа сообщества. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge. События: VKWebAppGetCommunityTokenResult: Сигнализирует, что ключ доступа сообщества получен. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppGetCommunityTokenResult\", data: { access_token: \"cc9521551d93ddb290b32648a37a006d87438a67f953dd37e564eb6db1ec28f79d05c16e207f00a0\" } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса. VKWebAppGetCommunityTokenFailed: Информирует об ошибке, которая произошла при взаимодействии с платформой. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge. Пример обработки событий: Подробнее — в разделе Обработка результата. Песочница: VKWebAppGetCommunityToken Материалы по теме: • Ключ доступа сообщества • VKWebAppGetAuthToken"
 }

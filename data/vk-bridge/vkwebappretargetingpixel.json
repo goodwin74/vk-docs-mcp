@@ -1,15 +1,197 @@
 {
   "id": "vkwebappretargetingpixel",
   "url": "https://dev.vk.com/ru/bridge/VKWebAppRetargetingPixel",
-  "title": "VKWebAppRetargetingPixel",
+  "title": "VK Bridge | VKWebAppRetargetingPixel | VK для разработчиков",
   "h1": "VKWebAppRetargetingPixel",
   "group": "Аналитика",
-  "description": "",
-  "examples": [],
-  "params": [],
+  "description": "VKWebAppRetargetingPixel добавляет пользователя в аудиторию ретаргетинга. Параметры соответствуют параметрам event и audience при подключении пикселя в мобильном приложении.",
+  "examples": [
+    {
+      "lang": "javascript",
+      "code": "bridge.send('VKWebAppRetargetingPixel', {\n  pixel_code: 'VK-RTRG-447253-dUuM',\n  event: 'click-to-button'\n  })\n  .then((data) => { \n    if (data.result) {\n      // Пользователь добавлен в аудиторию ретаргетинга\n    }\n  })\n  .catch((error) => {\n    // Ошибка\n    console.log(error);\n  });"
+    },
+    {
+      "lang": "javascript",
+      "code": "{\n  detail: {\n    type: \"VKWebAppRetargetingPixelResult\",\n    data: {\n      result: true\n    }\n  }\n}"
+    },
+    {
+      "lang": "javascript",
+      "code": "VK.Retargeting.Event('purchase');"
+    },
+    {
+      "lang": "javascript",
+      "code": "bridge.send('VKWebAppRetargetingPixel', {\n  pixel_code: 'VK-Boo-427253-dUuM',\n  event: 'purchase'\n});"
+    },
+    {
+      "lang": "javascript",
+      "code": "VK.Retargeting.Hit();"
+    },
+    {
+      "lang": "javascript",
+      "code": "bridge.send('VKWebAppRetargetingPixel', {\n  pixel_code: 'VK-Boo-427253-dUuM'\n});"
+    },
+    {
+      "lang": "javascript",
+      "code": "VK.Retargeting.Add(8839163);"
+    },
+    {
+      "lang": "javascript",
+      "code": "bridge.send('VKWebAppRetargetingPixel', {\n  pixel_code: 'VK-Boo-427253-dUuM',\n  target_group_id: 8839163\n});"
+    }
+  ],
+  "params": [
+    {
+      "name": "pixel_code",
+      "type": "string",
+      "required": true,
+      "description": "Код пикселя. Например: VK-RTRG-447253-dUuM. Код пикселя можно найти в рекламном кабинете."
+    },
+    {
+      "name": "event",
+      "type": "string",
+      "required": false,
+      "description": "Идентификатор события, пользовательское правило пикселя. См. возможные значения."
+    },
+    {
+      "name": "target_group_id",
+      "type": "integer",
+      "required": false,
+      "description": "Идентификатор группы ретаргетинга, в которую нужно добавить пользователя."
+    },
+    {
+      "name": "price_list_id",
+      "type": "integer",
+      "required": false,
+      "description": "Идентификатор прайс-листа. Используется для динамического ретаргетинга продуктов."
+    },
+    {
+      "name": "products_event",
+      "type": "string",
+      "required": false,
+      "description": "Тип продуктового события. Используется для динамического ретаргетинга продуктов."
+    },
+    {
+      "name": "products_params",
+      "type": "string",
+      "required": false,
+      "description": "Параметры товара. Используется для динамического ретаргетинга продуктов."
+    }
+  ],
   "returns": {
-    "description": ""
+    "description": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppRetargetingPixelResult и VKWebAppRetargetingPixelFailed. Подробнее о проверке результатов при вызовах VK Bridge. result (boolean): true, пользователь добавлен в аудиторию ретаргетинга."
   },
-  "sections": [],
-  "contentText": ""
+  "sections": [
+    {
+      "level": 2,
+      "title": "Пример",
+      "text": "JavaScriptbridge.send('VKWebAppRetargetingPixel', { pixel_code: 'VK-RTRG-447253-dUuM', event: 'click-to-button' }) .then((data) => { if (data.result) { // Пользователь добавлен в аудиторию ретаргетинга } }) .catch((error) => { // Ошибка console.log(error); });"
+    },
+    {
+      "level": 2,
+      "title": "Совместимость",
+      "text": "ПлощадкиПлатформыВКонтактеAndroid (с версии клиента 6.1), iOS, Mobile Web, WebОдноклассникиAndroid, iOS, Mobile Web, Web"
+    },
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "ПолеТипОписаниеpixel_code обязательноеstringКод пикселя. Например: VK-RTRG-447253-dUuM. Код пикселя можно найти в рекламном кабинете.event необязательноеstringИдентификатор события, пользовательское правило пикселя. См. возможные значения.target_group_id необязательноеintegerИдентификатор группы ретаргетинга, в которую нужно добавить пользователя.price_list_id необязательноеintegerИдентификатор прайс-листа. Используется для динамического ретаргетинга продуктов.products_event необязательноеstringТип продуктового события. Используется для динамического ретаргетинга продуктов.products_params необязательноеstringПараметры товара. Используется для динамического ретаргетинга продуктов. Примечание. При создании пикселя в рекламном кабинете можно указывать только идентификатор мини-приложения (поле Разрешённый Mini App id). Указывать домен или поддомен не обязательно."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppRetargetingPixelResult и VKWebAppRetargetingPixelFailed. Подробнее о проверке результатов при вызовах VK Bridge."
+    },
+    {
+      "level": 3,
+      "title": "Объект Promise",
+      "text": "Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект со следующим полем: ПолеТипОписаниеresultbooleantrue, пользователь добавлен в аудиторию ретаргетинга. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge."
+    },
+    {
+      "level": 3,
+      "title": "События",
+      "text": ""
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppRetargetingPixelResult",
+      "text": "Сигнализирует, что пользователь добавлен в аудиторию ретаргетинга. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppRetargetingPixelResult\", data: { result: true } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса."
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppRetargetingPixelFailed",
+      "text": "Информирует об ошибке, которая произошла при взаимодействии с платформой. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge."
+    },
+    {
+      "level": 4,
+      "title": "Пример обработки событий",
+      "text": "Подробнее — в разделе Обработка результата."
+    },
+    {
+      "level": 2,
+      "title": "Примеры соответствия для Open API",
+      "text": "Если вы использовали Opеn API (openapi.js), ваш код на JavaScript по-прежнему будет работать. Но в будущем мы прекратим поддержку Opеn API, поэтому рекомендуем использовать события VK Bridge так, как показано ниже."
+    },
+    {
+      "level": 3,
+      "title": "VK.Retargeting.Event",
+      "text": ""
+    },
+    {
+      "level": 4,
+      "title": "Open API",
+      "text": "JavaScriptVK.Retargeting.Event('purchase');"
+    },
+    {
+      "level": 4,
+      "title": "VK Bridge",
+      "text": "JavaScriptbridge.send('VKWebAppRetargetingPixel', { pixel_code: 'VK-Boo-427253-dUuM', event: 'purchase' });"
+    },
+    {
+      "level": 3,
+      "title": "VK.Retargeting.Hit",
+      "text": ""
+    },
+    {
+      "level": 4,
+      "title": "Open API",
+      "text": "JavaScriptVK.Retargeting.Hit();"
+    },
+    {
+      "level": 4,
+      "title": "VK Bridge",
+      "text": "JavaScriptbridge.send('VKWebAppRetargetingPixel', { pixel_code: 'VK-Boo-427253-dUuM' });"
+    },
+    {
+      "level": 3,
+      "title": "VK.Retargeting.Add",
+      "text": ""
+    },
+    {
+      "level": 4,
+      "title": "Open API",
+      "text": "JavaScriptVK.Retargeting.Add(8839163);"
+    },
+    {
+      "level": 4,
+      "title": "VK Bridge",
+      "text": "JavaScriptbridge.send('VKWebAppRetargetingPixel', { pixel_code: 'VK-Boo-427253-dUuM', target_group_id: 8839163 });"
+    },
+    {
+      "level": 3,
+      "title": "VK.Retargeting.ProductEvent",
+      "text": ""
+    },
+    {
+      "level": 4,
+      "title": "Open API",
+      "text": "JavaScriptVK.Retargeting.ProductEvent(12345 /* PRICE_LIST_ID */, 'view_product', { 'total_price': 34899 });"
+    },
+    {
+      "level": 4,
+      "title": "VK Bridge",
+      "text": "JavaScriptbridge.send('VKWebAppRetargetingPixel', { pixel_code: 'VK-Boo-427253-dUuM', price_list_id: 12345, products_event: 'view_product', products_params: { total_price: 34899 } });"
+    }
+  ],
+  "compatibility": "ВКонтакте: Android (с версии клиента 6.1), iOS, Mobile Web, Web; Одноклассники: Android, iOS, Mobile Web, Web",
+  "contentText": "VKWebAppRetargetingPixel добавляет пользователя в аудиторию ретаргетинга. Параметры соответствуют параметрам event и audience при подключении пикселя в мобильном приложении. Пример: JavaScriptbridge.send('VKWebAppRetargetingPixel', { pixel_code: 'VK-RTRG-447253-dUuM', event: 'click-to-button' }) .then((data) => { if (data.result) { // Пользователь добавлен в аудиторию ретаргетинга } }) .catch((error) => { // Ошибка console.log(error); }); Совместимость: ПлощадкиПлатформыВКонтактеAndroid (с версии клиента 6.1), iOS, Mobile Web, WebОдноклассникиAndroid, iOS, Mobile Web, Web Параметры: ПолеТипОписаниеpixel_code обязательноеstringКод пикселя. Например: VK-RTRG-447253-dUuM. Код пикселя можно найти в рекламном кабинете.event необязательноеstringИдентификатор события, пользовательское правило пикселя. См. возможные значения.target_group_id необязательноеintegerИдентификатор группы ретаргетинга, в которую нужно добавить пользователя.price_list_id необязательноеintegerИдентификатор прайс-листа. Используется для динамического ретаргетинга продуктов.products_event необязательноеstringТип продуктового события. Используется для динамического ретаргетинга продуктов.products_params необязательноеstringПараметры товара. Используется для динамического ретаргетинга продуктов. Примечание. При создании пикселя в рекламном кабинете можно указывать только идентификатор мини-приложения (поле Разрешённый Mini App id). Указывать домен или поддомен не обязательно. Результат: Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppRetargetingPixelResult и VKWebAppRetargetingPixelFailed. Подробнее о проверке результатов при вызовах VK Bridge. Объект Promise: Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект со следующим полем: ПолеТипОписаниеresultbooleantrue, пользователь добавлен в аудиторию ретаргетинга. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge. События: VKWebAppRetargetingPixelResult: Сигнализирует, что пользователь добавлен в аудиторию ретаргетинга. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppRetargetingPixelResult\", data: { result: true } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса. VKWebAppRetargetingPixelFailed: Информирует об ошибке, которая произошла при взаимодействии с платформой. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge. Пример обработки событий: Подробнее — в разделе Обработка результата. Примеры соответствия для Open API: Если вы использовали Opеn API (openapi.js), ваш код на JavaScript по-прежнему будет работать. Но в будущем мы прекратим поддержку Opеn API, поэтому рекомендуем использовать события VK Bridge так, как показано ниже. VK.Retargeting.Event: Open API: JavaScriptVK.Retargeting.Event('purchase'); VK Bridge: JavaScriptbridge.send('VKWebAppRetargetingPixel', { pixel_code: 'VK-Boo-427253-dUuM', event: 'purchase' }); VK.Retargeting.Hit: Open API: JavaScriptVK.Retargeting.Hit(); VK Bridge: JavaScriptbridge.send('VKWebAppRetargetingPixel', { pixel_code: 'VK-Boo-427253-dUuM' }); VK.Retargeting.Add: Open API: JavaScriptVK.Retargeting.Add(8839163); VK Bridge: JavaScriptbridge.send('VKWebAppRetargetingPixel', { pixel_code: 'VK-Boo-427253-dUuM', target_group_id: 8839163 }); VK.Retargeting.ProductEvent: Open API: JavaScriptVK.Retargeting.ProductEvent(12345 /* PRICE_LIST_ID */, 'view_product', { 'total_price': 34899 }); VK Bridge: JavaScriptbridge.send('VKWebAppRetargetingPixel', { pixel_code: 'VK-Boo-427253-dUuM', price_list_id: 12345, products_event: 'view_product', products_params: { total_price: 34899 } });"
 }

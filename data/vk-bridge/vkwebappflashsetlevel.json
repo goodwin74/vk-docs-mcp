@@ -1,15 +1,78 @@
 {
   "id": "vkwebappflashsetlevel",
   "url": "https://dev.vk.com/ru/bridge/VKWebAppFlashSetLevel",
-  "title": "VKWebAppFlashSetLevel",
+  "title": "VK Bridge | Управление фонариком | VKWebAppFlashSetLevel | VK для разработчиков",
   "h1": "VKWebAppFlashSetLevel",
   "group": "Фонарик",
-  "description": "",
-  "examples": [],
-  "params": [],
+  "description": "VKWebAppFlashSetLevel устанавливает уровень яркости фонарика на устройстве.",
+  "examples": [
+    {
+      "lang": "javascript",
+      "code": "bridge.send('VKWebAppFlashSetLevel', {\n  level: 1\n  })\n  .then((data) => { \n    if (data.result) {\n      // Уровень яркости фонарика установлен\n    }\n  })\n  .catch((error) => {\n    // Ошибка\n    console.log(error);\n  });"
+    },
+    {
+      "lang": "javascript",
+      "code": "{\n  detail: {\n    type: \"VKWebAppFlashSetLevelResult\",\n    data: {\n      result: true\n    }\n  }\n}"
+    }
+  ],
+  "params": [
+    {
+      "name": "level",
+      "type": "float",
+      "required": true,
+      "description": "Уровень яркости фонарика. Диапазон значений: от 0 до 1."
+    }
+  ],
   "returns": {
-    "description": ""
+    "description": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppFlashSetLevelResult и VKWebAppFlashSetLevelFailed. Подробнее о проверке результатов при вызовах VK Bridge. result (boolean): true, если уровень яркости фонарика установлен."
   },
-  "sections": [],
-  "contentText": ""
+  "sections": [
+    {
+      "level": 2,
+      "title": "Пример",
+      "text": "JavaScriptbridge.send('VKWebAppFlashSetLevel', { level: 1 }) .then((data) => { if (data.result) { // Уровень яркости фонарика установлен } }) .catch((error) => { // Ошибка console.log(error); });"
+    },
+    {
+      "level": 2,
+      "title": "Совместимость",
+      "text": "ПлощадкиПлатформыВКонтактеAndroid, iOSОдноклассникиAndroid, iOS"
+    },
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "ПолеТипОписаниеlevel обязательноеfloatУровень яркости фонарика. Диапазон значений: от 0 до 1."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppFlashSetLevelResult и VKWebAppFlashSetLevelFailed. Подробнее о проверке результатов при вызовах VK Bridge."
+    },
+    {
+      "level": 3,
+      "title": "Объект Promise",
+      "text": "Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект со следующим полем: ПолеТипОписаниеresultbooleantrue, если уровень яркости фонарика установлен. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge."
+    },
+    {
+      "level": 3,
+      "title": "События",
+      "text": ""
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppFlashSetLevelResult",
+      "text": "Сигнализирует, что уровень яркости фонарика установлен. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppFlashSetLevelResult\", data: { result: true } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса."
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppFlashSetLevelFailed",
+      "text": "Информирует об ошибке, которая произошла при взаимодействии с платформой. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge."
+    },
+    {
+      "level": 4,
+      "title": "Пример обработки событий",
+      "text": "Подробнее — в разделе Обработка результата."
+    }
+  ],
+  "compatibility": "ВКонтакте: Android, iOS; Одноклассники: Android, iOS",
+  "contentText": "VKWebAppFlashSetLevel устанавливает уровень яркости фонарика на устройстве. Пример: JavaScriptbridge.send('VKWebAppFlashSetLevel', { level: 1 }) .then((data) => { if (data.result) { // Уровень яркости фонарика установлен } }) .catch((error) => { // Ошибка console.log(error); }); Совместимость: ПлощадкиПлатформыВКонтактеAndroid, iOSОдноклассникиAndroid, iOS Параметры: ПолеТипОписаниеlevel обязательноеfloatУровень яркости фонарика. Диапазон значений: от 0 до 1. Результат: Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppFlashSetLevelResult и VKWebAppFlashSetLevelFailed. Подробнее о проверке результатов при вызовах VK Bridge. Объект Promise: Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект со следующим полем: ПолеТипОписаниеresultbooleantrue, если уровень яркости фонарика установлен. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge. События: VKWebAppFlashSetLevelResult: Сигнализирует, что уровень яркости фонарика установлен. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppFlashSetLevelResult\", data: { result: true } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса. VKWebAppFlashSetLevelFailed: Информирует об ошибке, которая произошла при взаимодействии с платформой. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge. Пример обработки событий: Подробнее — в разделе Обработка результата."
 }

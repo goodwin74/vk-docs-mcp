@@ -1,15 +1,81 @@
 {
   "id": "vkwebappgetconfig",
   "url": "https://dev.vk.com/ru/bridge/VKWebAppGetConfig",
-  "title": "VKWebAppGetConfig",
+  "title": "VK Bridge | VKWebAppGetConfig | VK для разработчиков",
   "h1": "VKWebAppGetConfig",
   "group": "",
-  "description": "",
-  "examples": [],
+  "description": "VKWebAppGetConfig получает информацию о конфигурации мини-приложения или игры, а также информацию о родительском приложении, в котором открыто мини-приложение или игра.",
+  "examples": [
+    {
+      "lang": "javascript",
+      "code": "bridge.send('VKWebAppGetConfig')\n  .then((data) => { \n    if (data.api_host) {\n      // Информация получена\n    }\n  })\n  .catch((error) => {\n    // Ошибка\n    console.log(error);\n  });"
+    },
+    {
+      "lang": "javascript",
+      "code": "{\n  detail: {\n    type: \"VKWebAppGetConfigResult\",\n    data: {\n      \"scheme\": \"vkcom_light\",\n      \"appearance\": \"light\",\n      \"adaptivity\": \"auto\",\n      \"integration\": \"fullscreen\",\n      \"app\": \"vk.com\",\n      \"app_id\": 1234567,\n      \"vk_platform\": \"desktop_web\",\n      \"back_button\": \"close\",\n      \"api_host\": \"api.vk.ru\",\n      \"viewport_width\": 1103,\n      \"viewport_height\": 722,\n      \"avail_width\": 1103,\n      \"avail_height\": 722\n    }\n  }\n}"
+    }
+  ],
   "params": [],
   "returns": {
-    "description": ""
+    "description": "Чтобы проверить результат, используйте: • Объект Promise, который возвращается вызовом bridge.send(...). • Событие VKWebAppGetConfigResult. Подробнее о проверке результатов при вызовах VK Bridge. adaptivity (string): Android, iOS Адаптивная вёрстка. Возможные значения: • auto — автоматически выбирать вёрстку в зависимости от размера экрана. • adaptive – всегда использовать адаптивную вёрстку. • force_mobile – всегда использовать вёрстку для мобильных устройств. api_host (string): Mobile Web, Web API-хост для вызовов, не использующих VK Bridge: api.vk.ru. app (string): Android, iOS Тип мобильного клиента. Возможные значения: • vkclient — приложение «ВКонтакте». • vkme — приложение «VK Мессенджер». • ok — приложение «Одноклассники». app_id (string): Android, iOS, Mobile Web, Web Идентификатор приложения, которому соответствует нативное мобильное приложение ВКонтакте. appearance (string): Android, iOS, Mobile Web, Web Тема мини-приложения или игры. Возможные значения: • light— светлая тема. • dark — тёмная тема. back_button (string): Android, iOS Отображение кнопки выхода из приложения на главном экране. Возможные значения: • back — «Назад». • close — «Закрыть». • none – не показывать кнопку. insets (object): Android, iOS Величина отступов, которые необходимо выдержать от края экрана до контента. Поля объекта: • right — отступ справа. • top — отступ сверху. • left — отступ слева. • bottom – отступ снизу. Если показана клавиатура, её высота будет указана в параметре bottom. integ"
   },
-  "sections": [],
-  "contentText": ""
+  "sections": [
+    {
+      "level": 2,
+      "title": "Рекомендации",
+      "text": "•Используйте это событие, если вам нужно получить конфигурацию до вызова события инициализации VKWebAppInit. В остальных случаях используйте стандартный способ получения конфигурации — подпишитесь на событие VKWebAppUpdateConfig. •Чтобы определить цветовую схему до получения данных от платформы, используйте свойство prefers-color-scheme."
+    },
+    {
+      "level": 2,
+      "title": "Пример",
+      "text": "JavaScriptbridge.send('VKWebAppGetConfig') .then((data) => { if (data.api_host) { // Информация получена } }) .catch((error) => { // Ошибка console.log(error); });"
+    },
+    {
+      "level": 2,
+      "title": "Совместимость",
+      "text": "ПлощадкиПлатформыВКонтактеAndroid, iOS, Mobile Web, WebОдноклассники–"
+    },
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "—"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Чтобы проверить результат, используйте: • Объект Promise, который возвращается вызовом bridge.send(...). • Событие VKWebAppGetConfigResult. Подробнее о проверке результатов при вызовах VK Bridge."
+    },
+    {
+      "level": 3,
+      "title": "Объект Promise",
+      "text": "Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект со следующими полями: ПолеТипПлатформаЗначениеadaptivitystringAndroid, iOSАдаптивная вёрстка. Возможные значения: • auto — автоматически выбирать вёрстку в зависимости от размера экрана. • adaptive – всегда использовать адаптивную вёрстку. • force_mobile – всегда использовать вёрстку для мобильных устройств.api_hoststringMobile Web, WebAPI-хост для вызовов, не использующих VK Bridge: api.vk.ru.appstringAndroid, iOSТип мобильного клиента. Возможные значения: • vkclient — приложение «ВКонтакте». • vkme — приложение «VK Мессенджер». • ok — приложение «Одноклассники».app_idstringAndroid, iOS, Mobile Web, WebИдентификатор приложения, которому соответствует нативное мобильное приложение ВКонтакте.appearancestringAndroid, iOS, Mobile Web, WebТема мини-приложения или игры. Возможные значения: • light— светлая тема. • dark — тёмная тема.back_buttonstringAndroid, iOSОтображение кнопки выхода из приложения на главном экране. Возможные значения: • back — «Назад». • close — «Закрыть». • none – не показывать кнопку.insetsobjectAndroid, iOSВеличина отступов, которые необходимо выдержать от края экрана до контента. Поля объекта: • right — отступ справа. • top — отступ сверху. • left — отступ слева. • bottom – отступ снизу. Если показана клавиатура, её высота будет указана в параметре bottom.integrationstringAndroid, iOS, Mobile Web, WebТип встраивания мини-приложения или игры. Возможные значения: • fullscreen – на весь экран. • content – встроено в контентную зону, например режим Split View в мобильном приложении или вторая колонка на сайте vk.com. • popup — всплывающее модальное окно. • popup_fullscreen — всплывающее окно на весь экран.idfvstringiOSИдентификатор для приложений от одного разработчика на устройстве iOS. Подробнее – в документации Apple.is_layerbooleanWebПризнак того, что мини-приложение или игра открыты в слое.schemest"
+    },
+    {
+      "level": 3,
+      "title": "События",
+      "text": ""
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppGetConfigResult",
+      "text": "Сигнализирует, что информация получена. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppGetConfigResult\", data: { \"scheme\": \"vkcom_light\", \"appearance\": \"light\", \"adaptivity\": \"auto\", \"integration\": \"fullscreen\", \"app\": \"vk.com\", \"app_id\": 1234567, \"vk_platform\": \"desktop_web\", \"back_button\": \"close\", \"api_host\": \"api.vk.ru\", \"viewport_width\": 1103, \"viewport_height\": 722, \"avail_width\": 1103, \"avail_height\": 722 } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса."
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppGetConfigFailed",
+      "text": "Информирует об ошибке, которая произошла при взаимодействии с платформой. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge."
+    },
+    {
+      "level": 4,
+      "title": "Пример обработки событий",
+      "text": "Подробнее — в разделе Обработка результата."
+    },
+    {
+      "level": 2,
+      "title": "Материалы по теме",
+      "text": "•VKWebAppUpdateConfig"
+    }
+  ],
+  "compatibility": "ВКонтакте: Android, iOS, Mobile Web, Web; Одноклассники: –",
+  "contentText": "VKWebAppGetConfig получает информацию о конфигурации мини-приложения или игры, а также информацию о родительском приложении, в котором открыто мини-приложение или игра. Рекомендации: •Используйте это событие, если вам нужно получить конфигурацию до вызова события инициализации VKWebAppInit. В остальных случаях используйте стандартный способ получения конфигурации — подпишитесь на событие VKWebAppUpdateConfig. •Чтобы определить цветовую схему до получения данных от платформы, используйте свойство prefers-color-scheme. Пример: JavaScriptbridge.send('VKWebAppGetConfig') .then((data) => { if (data.api_host) { // Информация получена } }) .catch((error) => { // Ошибка console.log(error); }); Совместимость: ПлощадкиПлатформыВКонтактеAndroid, iOS, Mobile Web, WebОдноклассники– Параметры: — Результат: Чтобы проверить результат, используйте: • Объект Promise, который возвращается вызовом bridge.send(...). • Событие VKWebAppGetConfigResult. Подробнее о проверке результатов при вызовах VK Bridge. Объект Promise: Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект со следующими полями: ПолеТипПлатформаЗначениеadaptivitystringAndroid, iOSАдаптивная вёрстка. Возможные значения: • auto — автоматически выбирать вёрстку в зависимости от размера экрана. • adaptive – всегда использовать адаптивную вёрстку. • force_mobile – всегда использовать вёрстку для мобильных устройств.api_hoststringMobile Web, WebAPI-хост для вызовов, не использующих VK Bridge: api.vk.ru.appstringAndroid, iOSТип мобильного клиента. Возможные значения: • vkclient — приложение «ВКонтакте». • vkme — приложение «VK Мессенджер». • ok — приложение «Одноклассники».app_idstringAndroid, iOS, Mobile Web, WebИдентификатор приложения, которому соответствует нативное мобильное приложение ВКонтакте.appearancestringAndroid, iOS, Mobile Web, WebТема мини-приложения или игры. Возможные значения: • light— светлая тема. • dark — тёмная тема.back_buttonstringAndroid, iOSОтображение кнопки выхода из приложения на главном экране. Возможные значения: • back — «Назад». • close — «Закрыть». • none – не показывать кнопку.insetsobjectAndroid, iOSВеличина отступов, которые необходимо выдержать от края экрана до контента. Поля объекта: • right — отступ справа. • top — отступ сверху. • left — отступ слева. • bottom – отступ снизу. Если показана клавиатура, её высота будет указана в параметре bottom.integrationstringAndroid, iOS, Mobile Web, WebТип встраивания мини-приложения или игры. Возможные значения: • fullscreen – на весь экран. • content – встроено в контентную зону, например режим Split View в мобильном приложении или вторая колонка на сайте vk.com. • popup — всплывающее модальное окно. • popup_fullscreen — всплывающее окно на весь экран.idfvstringiOSИдентификатор для приложений от одного разработчика на устройстве iOS. Подробнее – в документации Apple.is_layerbooleanWebПризнак того, что мини-приложение или игра открыты в слое.schemest События: VKWebAppGetConfigResult: Сигнализирует, что информация получена. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppGetConfigResult\", data: { \"scheme\": \"vkcom_light\", \"appearance\": \"light\", \"adaptivity\": \"auto\", \"integration\": \"fullscreen\", \"app\": \"vk.com\", \"app_id\": 1234567, \"vk_platform\": \"desktop_web\", \"back_button\": \"close\", \"api_host\": \"api.vk.ru\", \"viewport_width\": 1103, \"viewport_height\": 722, \"avail_width\": 1103, \"avail_height\": 722 } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса. VKWebAppGetConfigFailed: Информирует об ошибке, которая произошла при взаимодействии с платформой. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge. Пример обработки событий: Подробнее — в разделе Обработка результата. Материалы по теме: •VKWebAppUpdateConfig"
 }

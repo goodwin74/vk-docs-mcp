@@ -1,15 +1,84 @@
 {
   "id": "vkwebappsendpayload",
   "url": "https://dev.vk.com/ru/bridge/VKWebAppSendPayload",
-  "title": "VKWebAppSendPayload",
+  "title": "VK Bridge | VKWebAppSendPayload | VK для разработчиков",
   "h1": "VKWebAppSendPayload",
   "group": "Сообщества",
-  "description": "",
-  "examples": [],
-  "params": [],
+  "description": "VKWebAppSendPayload отправляет событие app_payload, которое можно получить через Bots Longpoll или Callback API.",
+  "examples": [
+    {
+      "lang": "javascript",
+      "code": "bridge.send('VKWebAppSendPayload', {\n  group_id: 166562603, \n  payload: {\n    foo: 'bar'\n  }})\n  .then((data) => { \n    if (data.result) {\n      // Событие отправлено\n    }\n  })\n  .catch((error) => {\n    // Ошибка\n    console.log(error);\n  });"
+    },
+    {
+      "lang": "javascript",
+      "code": "{\n  detail: {\n    type: \"VKWebAppSendPayloadResult\",\n    data: {\n      result: true\n    }\n  }\n}"
+    }
+  ],
+  "params": [
+    {
+      "name": "group_id",
+      "type": "integer",
+      "required": true,
+      "description": "Идентификатор сообщества."
+    },
+    {
+      "name": "payload",
+      "type": "object",
+      "required": true,
+      "description": "Полезные данные в формате JSON."
+    }
+  ],
   "returns": {
-    "description": ""
+    "description": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppSendPayloadResult и VKWebAppSendPayloadFailed. Подробнее о проверке результатов при вызовах VK Bridge. result (boolean): true, если событие отправлено."
   },
-  "sections": [],
-  "contentText": ""
+  "sections": [
+    {
+      "level": 2,
+      "title": "Пример",
+      "text": "JavaScriptbridge.send('VKWebAppSendPayload', { group_id: 166562603, payload: { foo: 'bar' }}) .then((data) => { if (data.result) { // Событие отправлено } }) .catch((error) => { // Ошибка console.log(error); });"
+    },
+    {
+      "level": 2,
+      "title": "Совместимость",
+      "text": "ПлощадкиПлатформыВКонтактеAndroid, iOS, Mobile Web, WebОдноклассники–"
+    },
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "ПолеТипОписаниеgroup_id обязательноеintegerИдентификатор сообщества.payload обязательноеobjectПолезные данные в формате JSON."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppSendPayloadResult и VKWebAppSendPayloadFailed. Подробнее о проверке результатов при вызовах VK Bridge."
+    },
+    {
+      "level": 3,
+      "title": "Объект Promise",
+      "text": "Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект со следующим полем: ПолеТипОписаниеresultbooleantrue, если событие отправлено. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge."
+    },
+    {
+      "level": 3,
+      "title": "События",
+      "text": ""
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppSendPayloadResult",
+      "text": "Сигнализирует, что событие отправлено. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppSendPayloadResult\", data: { result: true } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса."
+    },
+    {
+      "level": 4,
+      "title": "VKWebAppSendPayloadFailed",
+      "text": "Информирует об ошибке, которая произошла при взаимодействии с платформой. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge."
+    },
+    {
+      "level": 4,
+      "title": "Пример обработки событий",
+      "text": "Подробнее — в разделе Обработка результата."
+    }
+  ],
+  "compatibility": "ВКонтакте: Android, iOS, Mobile Web, Web; Одноклассники: –",
+  "contentText": "VKWebAppSendPayload отправляет событие app_payload, которое можно получить через Bots Longpoll или Callback API. Пример: JavaScriptbridge.send('VKWebAppSendPayload', { group_id: 166562603, payload: { foo: 'bar' }}) .then((data) => { if (data.result) { // Событие отправлено } }) .catch((error) => { // Ошибка console.log(error); }); Совместимость: ПлощадкиПлатформыВКонтактеAndroid, iOS, Mobile Web, WebОдноклассники– Параметры: ПолеТипОписаниеgroup_id обязательноеintegerИдентификатор сообщества.payload обязательноеobjectПолезные данные в формате JSON. Результат: Проверить результат можно: • Используя объект Promise, который возвращается вызовом bridge.send(...). • С помощью событий VKWebAppSendPayloadResult и VKWebAppSendPayloadFailed. Подробнее о проверке результатов при вызовах VK Bridge. Объект Promise: Если обращение к платформе прошло успешно, управление будет передано в then-обработчик объекта Promise. В качестве ответа платформа возвращает объект со следующим полем: ПолеТипОписаниеresultbooleantrue, если событие отправлено. Если при обращении к платформе произошла ошибка, управление передаётся в метод catch. В качестве ответа платформа возвращает объект с информацией об ошибке, общий для всех событий VK Bridge. События: VKWebAppSendPayloadResult: Сигнализирует, что событие отправлено. В обработчик события на стороне пользователя передаются следующие данные: JavaScript{ detail: { type: \"VKWebAppSendPayloadResult\", data: { result: true } } } Передаваемый объект подобен объекту, возвращаемому при успешном выполнении промиса. VKWebAppSendPayloadFailed: Информирует об ошибке, которая произошла при взаимодействии с платформой. В обработчик события на стороне пользователя передаётся объект с информацией об ошибке, общий для всех методов VK Bridge. Пример обработки событий: Подробнее — в разделе Обработка результата."
 }
