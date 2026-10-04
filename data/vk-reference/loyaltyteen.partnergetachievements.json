@@ -1,0 +1,61 @@
+{
+  "id": "loyaltyteen.partnergetachievements",
+  "url": "https://dev.vk.com/ru/method/loyaltyTeen.partnerGetAchievements",
+  "title": "loyaltyTeen.partnerGetAchievements | VK для разработчиков",
+  "h1": "loyaltyTeen.partnerGetAchievements",
+  "description": "string",
+  "params": [
+    {
+      "name": "user_id",
+      "type": "string",
+      "required": true,
+      "description": "Обязательный параметр"
+    },
+    {
+      "name": "count",
+      "type": "positive",
+      "required": false,
+      "description": ""
+    },
+    {
+      "name": "offset",
+      "type": "positive",
+      "required": false,
+      "description": ""
+    },
+    {
+      "name": "category_ids",
+      "type": "string",
+      "required": false,
+      "description": ""
+    },
+    {
+      "name": "only_mine",
+      "type": "integer",
+      "required": false,
+      "description": ""
+    },
+    {
+      "name": "only_completed",
+      "type": "integer",
+      "required": false,
+      "description": ""
+    }
+  ],
+  "returns": [],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "user_idstringОбязательный параметрcountpositiveoffsetpositivecategory_idsstringonly_mineintegeronly_completedinteger"
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "string Параметры: user_idstringОбязательный параметрcountpositiveoffsetpositivecategory_idsstringonly_mineintegeronly_completedinteger Коды ошибок: В ходе выполнения могут произойти общие ошибки",
+  "group": "loyaltyteen"
+}

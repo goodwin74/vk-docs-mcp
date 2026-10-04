@@ -1,0 +1,31 @@
+{
+  "id": "loyaltyteen.hasaccounts",
+  "url": "https://dev.vk.com/ru/method/loyaltyTeen.hasAccounts",
+  "title": "loyaltyTeen.hasAccounts | VK для разработчиков",
+  "h1": "loyaltyTeen.hasAccounts",
+  "description": "integer",
+  "params": [
+    {
+      "name": "user_ids",
+      "type": "integer",
+      "required": true,
+      "description": "Обязательный параметр"
+    }
+  ],
+  "returns": [],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "user_idsintegerОбязательный параметр"
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "integer Параметры: user_idsintegerОбязательный параметр Коды ошибок: В ходе выполнения могут произойти общие ошибки",
+  "group": "loyaltyteen"
+}

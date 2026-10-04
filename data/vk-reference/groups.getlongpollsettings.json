@@ -1,0 +1,41 @@
+{
+  "id": "groups.getlongpollsettings",
+  "url": "https://dev.vk.com/ru/method/groups.getLongPollSettings",
+  "title": "groups.getLongPollSettings | VK для разработчиков",
+  "h1": "groups.getLongPollSettings",
+  "description": "Получает настройки Bots Longpoll API для сообщества.",
+  "params": [
+    {
+      "name": "group_id",
+      "type": "positive",
+      "required": true,
+      "description": "Идентификатор сообщества.Обязательный параметр"
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "Возвращает объект, который содержит следующие поля: •is_enabled (boolean) — true, если Bots Longpoll включен в сообществе. •events (object) — настройки Bots Longpoll. объект, содержащий настройки уведомлений в формате «название события» : «статус» (0 — уведомления о событии выключены, 1 — уведомления о событии включены). Объект содержит следующие поля: ПолеОписаниеmessage_newНовое сообщение integer, [0, 1]message_replyНовое исходящее сообщение integer, [0, 1]message_allowНовая подписка на сообщения integer, [0, 1]message_denyНовый запрет сообщений integer, [0, 1]photo_newДобавление новой фотографии integer, [0, 1]audio_newДобавление новой аудиозаписи integer, [0, 1]video_newДобавление новой видеозаписи integer, [0, 1]wall_reply_newДобавление нового комментария на стене integer, [0, 1]wall_reply_editРедактирование комментария на стене integer, [0, 1]wall_reply_deleteУдаление комментария на стене integer, [0, 1]wall_post_newДобавление новой записи на стене integer, [0, 1]wall_repostНовый репост записи на стене integer, [0, 1]board_post_newДобавление нового комментария в обсуждении integer, [0, 1]board_post_editРедактирование комментария в обсуждении integer, [0, 1]board_post_deleteУдаление комментария в обсуждении integer, [0, 1]board_post_restoreВосстановление комментария в обсуждении integer, [0, 1]photo_comment_newДобавление нового комментария к фото integer, [0, 1]photo_comment_editРедактирование комментария к фото integer, [0, 1]photo_comment_deleteУдаление комментария к фото integer, [0, 1]photo_comment_restoreВосстановление комментария к фото integer, [0, 1]video_comment_newДобавление нового комментария к видео integer, [0, 1]video_comment_editРедактирование комментария к видео integer, [0, 1]video_comment_deleteУдаление комментария к видео integer, [0, 1]video_comment_restoreВосстановление комментария к видео integer, [0, 1]market_comment_newДобавление нового комментария к товару integer, [0, 1]market_comment_editРедактирование комментария к товару integer, [0, 1]market_comment_deleteУдаление комментария к товару integer, [0, 1]market_comment_restoreВосстановление удалённого комментария к товару integer, [0, 1]poll_vote_newНовый голос в публичном опросе integer, [0, 1]group_joinВступление в сообщество integer, [0, 1]group_leaveВыход участника из сообщества integer, [0, 1]user_blockЗанесение пользователя в черный список integer, [0, 1]user_unblockУдаление пользователя из черного списка integer, [0, 1]group_change_settingsИзменение настроек сообщества integer, [0, 1]group_change_photoИзменение главной фотографии integer, [0, 1]group_officers_editИзменение руководства сообщества integer, [0, 1]donut_subscription_createСоздание подписки integer, [0, 1]donut_subscription_prolongedПродление подписки integer, [0, 1]donut_subscription_expiredПодписка истекла integer, [0, 1]donut_subscription_cancelledОтмена подписки integer, [0, 1]subscription_price_changedИзменение стоимости подписки integer, [0, 1]donut_money_withdrawВывод денег integer, [0, 1]donut_money_withdraw_errorОшибка вывода денег integer, [0, 1]"
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "group_idpositiveИдентификатор сообщества.Обязательный параметр"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Возвращает объект, который содержит следующие поля: •is_enabled (boolean) — true, если Bots Longpoll включен в сообществе. •events (object) — настройки Bots Longpoll. объект, содержащий настройки уведомлений в формате «название события» : «статус» (0 — уведомления о событии выключены, 1 — уведомления о событии включены). Объект содержит следующие поля: ПолеОписаниеmessage_newНовое сообщение integer, [0, 1]message_replyНовое исходящее сообщение integer, [0, 1]message_allowНовая подписка на сообщения integer, [0, 1]message_denyНовый запрет сообщений integer, [0, 1]photo_newДобавление новой фотографии integer, [0, 1]audio_newДобавление новой аудиозаписи integer, [0, 1]video_newДобавление новой видеозаписи integer, [0, 1]wall_reply_newДобавление нового комментария на стене integer, [0, 1]wall_reply_editРедактирование комментария на стене integer, [0, 1]wall_reply_deleteУдаление комментария на стене integer, [0, 1]wall_post_newДобавление новой записи на стене integer, [0, 1]wall_repostНовый репост записи на стене integer, [0, 1]board_post_newДобавление нового комментария в обсуждении integer, [0, 1]board_post_editРедактирование комментария в обсуждении integer, [0, 1]board_post_deleteУдаление комментария в обсуждении integer, [0, 1]board_post_restoreВосстановление комментария в обсуждении integer, [0, 1]photo_comment_newДобавление нового комментария к фото integer, [0, 1]photo_comment_editРедактирование комментария к фото integer, [0, 1]photo_comment_deleteУдаление комментария к ф"
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Получает настройки Bots Longpoll API для сообщества. Параметры: group_idpositiveИдентификатор сообщества.Обязательный параметр Результат: Возвращает объект, который содержит следующие поля: •is_enabled (boolean) — true, если Bots Longpoll включен в сообществе. •events (object) — настройки Bots Longpoll. объект, содержащий настройки уведомлений в формате «название события» : «статус» (0 — уведомления о событии выключены, 1 — уведомления о событии включены). Объект содержит следующие поля: ПолеОписаниеmessage_newНовое сообщение integer, [0, 1]message_replyНовое исходящее сообщение integer, [0, 1]message_allowНовая подписка на сообщения integer, [0, 1]message_denyНовый запрет сообщений integer, [0, 1]photo_newДобавление новой фотографии integer, [0, 1]audio_newДобавление новой аудиозаписи integer, [0, 1]video_newДобавление новой видеозаписи integer, [0, 1]wall_reply_newДобавление нового комментария на стене integer, [0, 1]wall_reply_editРедактирование комментария на стене integer, [0, 1]wall_reply_deleteУдаление комментария на стене integer, [0, 1]wall_post_newДобавление новой записи на стене integer, [0, 1]wall_repostНовый репост записи на стене integer, [0, 1]board_post_newДобавление нового комментария в обсуждении integer, [0, 1]board_post_editРедактирование комментария в обсуждении integer, [0, 1]board_post_deleteУдаление комментария в обсуждении integer, [0, 1]board_post_restoreВосстановление комментария в обсуждении integer, [0, 1]photo_comment_newДобавление нового комментария к фото integer, [0, 1]photo_comment_editРедактирование комментария к фото integer, [0, 1]photo_comment_deleteУдаление комментария к ф Коды ошибок: В ходе выполнения могут произойти общие ошибки",
+  "group": "groups"
+}

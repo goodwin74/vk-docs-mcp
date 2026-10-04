@@ -1,0 +1,65 @@
+{
+  "id": "groups.editcallbackserver",
+  "url": "https://dev.vk.com/ru/method/groups.editCallbackServer",
+  "title": "groups.editCallbackServer | VK для разработчиков",
+  "h1": "groups.editCallbackServer",
+  "description": "Редактирует данные сервера для Callback API в сообществе.",
+  "params": [
+    {
+      "name": "group_id",
+      "type": "positive",
+      "required": true,
+      "description": "Идентификатор сообщества.Обязательный параметр"
+    },
+    {
+      "name": "server_id",
+      "type": "positive",
+      "required": true,
+      "description": "Идентификатор сервера, данные которого нужно отредактировать.Обязательный параметр"
+    },
+    {
+      "name": "url",
+      "type": "string",
+      "required": true,
+      "description": "Новый URL сервера.Обязательный параметр"
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": true,
+      "description": "Новое название сервера.Обязательный параметр Макс. длина = 14"
+    },
+    {
+      "name": "secret_key",
+      "type": "string",
+      "required": false,
+      "description": "Новый секретный ключ сервера.Макс. длина = 50"
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "После успешного выполнения возвращает 1."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "group_idpositiveИдентификатор сообщества.Обязательный параметрserver_idpositiveИдентификатор сервера, данные которого нужно отредактировать.Обязательный параметрurlstringНовый URL сервера.Обязательный параметрtitlestringНовое название сервера.Обязательный параметр Макс. длина = 14secret_keystringНовый секретный ключ сервера.Макс. длина = 50"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "После успешного выполнения возвращает 1."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "104Not found В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Редактирует данные сервера для Callback API в сообществе. Параметры: group_idpositiveИдентификатор сообщества.Обязательный параметрserver_idpositiveИдентификатор сервера, данные которого нужно отредактировать.Обязательный параметрurlstringНовый URL сервера.Обязательный параметрtitlestringНовое название сервера.Обязательный параметр Макс. длина = 14secret_keystringНовый секретный ключ сервера.Макс. длина = 50 Результат: После успешного выполнения возвращает 1. Коды ошибок: 104Not found В ходе выполнения могут произойти общие ошибки",
+  "group": "groups"
+}

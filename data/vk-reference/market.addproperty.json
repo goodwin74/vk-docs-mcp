@@ -1,0 +1,47 @@
+{
+  "id": "market.addproperty",
+  "url": "https://dev.vk.com/ru/method/market.addProperty",
+  "title": "market.addProperty | VK для разработчиков",
+  "h1": "market.addProperty",
+  "description": "Добавляет новое свойство, которое может быть задано для товаров сообщества (например, «цвет», «размер» и т.д.).",
+  "params": [
+    {
+      "name": "group_id",
+      "type": "integer",
+      "required": true,
+      "description": "Идентификатор сообщества.Обязательный параметр"
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": true,
+      "description": "Название свойства.Обязательный параметр"
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "После успешного выполнения возвращает идентификатор добавленного свойства."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "group_idintegerИдентификатор сообщества.Обязательный параметрtitlestringНазвание свойства.Обязательный параметр"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "После успешного выполнения возвращает идентификатор добавленного свойства."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "1410Variants not enabled1411Variants error1418Max properties limit exceeded1421Name too long1424Unknown property type1438Market not enabled В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Добавляет новое свойство, которое может быть задано для товаров сообщества (например, «цвет», «размер» и т.д.). Параметры: group_idintegerИдентификатор сообщества.Обязательный параметрtitlestringНазвание свойства.Обязательный параметр Результат: После успешного выполнения возвращает идентификатор добавленного свойства. Коды ошибок: 1410Variants not enabled1411Variants error1418Max properties limit exceeded1421Name too long1424Unknown property type1438Market not enabled В ходе выполнения могут произойти общие ошибки",
+  "group": "market"
+}

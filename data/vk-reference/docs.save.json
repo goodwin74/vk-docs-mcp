@@ -1,0 +1,59 @@
+{
+  "id": "docs.save",
+  "url": "https://dev.vk.com/ru/method/docs.save",
+  "title": "docs.save | VK для разработчиков",
+  "h1": "docs.save",
+  "description": "Метод сохраняет файл после его успешной загрузки на сервер.",
+  "params": [
+    {
+      "name": "file",
+      "type": "string",
+      "required": true,
+      "description": "Обязательный параметр. Файл в формате multipart/form-data. Параметр возвращается в результате загрузки файла на сервер.Обязательный параметр"
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Название файла."
+    },
+    {
+      "name": "tags",
+      "type": "string",
+      "required": false,
+      "description": "Метки для поиска, которые будут добавлены к документу."
+    },
+    {
+      "name": "return_tags",
+      "type": "checkbox",
+      "required": false,
+      "description": "1 — добавить в ответ массив меток документа."
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "Метод возвращает объект: ПолеТипОписаниеtypestringТип файла.audio_messageobjectОбъект голосового сообщения.docobjectОбъект других типов файлов. Пример ответа: JSON{ \"response\":{ \"type\":\"doc\", \"doc\":{ \"id\":657626222, \"owner_id\":743784474, \"title\":\"\\\\u041f\\\\u0435\\\\u0440\\\\u0432\\\\u044b\\\\u0435 \\\\u0448\\\\u0430\\\\u0433\\\\u0438.pdf\", \"size\":14854, \"ext\":\"pdf\", \"date\":1674050872,\"type\":1, \"url\":\"https:\\/\\/vk.com\\/doc743784474_657626222?hash=jWHXvoUCYCxklaOiBsI0bZRACXzH6CiauvHlkgrIjYg&dl=G42DGNZYGQ2DONA:1674050872:7rxkHS8nSaTa5C0DkRfjpZZagKIs1Z3lKnPABTOqr4P&api=1&no_preview=1\" } } }"
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "filestringОбязательный параметр. Файл в формате multipart/form-data. Параметр возвращается в результате загрузки файла на сервер.Обязательный параметрtitlestringНазвание файла.tagsstringМетки для поиска, которые будут добавлены к документу.return_tagscheckbox1 — добавить в ответ массив меток документа."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Метод возвращает объект: ПолеТипОписаниеtypestringТип файла.audio_messageobjectОбъект голосового сообщения.docobjectОбъект других типов файлов. Пример ответа: JSON{ \"response\":{ \"type\":\"doc\", \"doc\":{ \"id\":657626222, \"owner_id\":743784474, \"title\":\"\\\\u041f\\\\u0435\\\\u0440\\\\u0432\\\\u044b\\\\u0435 \\\\u0448\\\\u0430\\\\u0433\\\\u0438.pdf\", \"size\":14854, \"ext\":\"pdf\", \"date\":1674050872,\"type\":1, \"url\":\"https:\\/\\/vk.com\\/doc743784474_657626222?hash=jWHXvoUCYCxklaOiBsI0bZRACXzH6CiauvHlkgrIjYg&dl=G42DGNZYGQ2DONA:1674050872:7rxkHS8nSaTa5C0DkRfjpZZagKIs1Z3lKnPABTOqr4P&api=1&no_preview=1\" } } }"
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "105Couldn't save file В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Метод сохраняет файл после его успешной загрузки на сервер. Параметры: filestringОбязательный параметр. Файл в формате multipart/form-data. Параметр возвращается в результате загрузки файла на сервер.Обязательный параметрtitlestringНазвание файла.tagsstringМетки для поиска, которые будут добавлены к документу.return_tagscheckbox1 — добавить в ответ массив меток документа. Результат: Метод возвращает объект: ПолеТипОписаниеtypestringТип файла.audio_messageobjectОбъект голосового сообщения.docobjectОбъект других типов файлов. Пример ответа: JSON{ \"response\":{ \"type\":\"doc\", \"doc\":{ \"id\":657626222, \"owner_id\":743784474, \"title\":\"\\\\u041f\\\\u0435\\\\u0440\\\\u0432\\\\u044b\\\\u0435 \\\\u0448\\\\u0430\\\\u0433\\\\u0438.pdf\", \"size\":14854, \"ext\":\"pdf\", \"date\":1674050872,\"type\":1, \"url\":\"https:\\/\\/vk.com\\/doc743784474_657626222?hash=jWHXvoUCYCxklaOiBsI0bZRACXzH6CiauvHlkgrIjYg&dl=G42DGNZYGQ2DONA:1674050872:7rxkHS8nSaTa5C0DkRfjpZZagKIs1Z3lKnPABTOqr4P&api=1&no_preview=1\" } } } Коды ошибок: 105Couldn't save file В ходе выполнения могут произойти общие ошибки",
+  "group": "docs"
+}

@@ -1,0 +1,118 @@
+{
+  "id": "market.editorder",
+  "url": "https://dev.vk.com/ru/method/market.editOrder",
+  "title": "market.editOrder | VK для разработчиков",
+  "h1": "market.editOrder",
+  "description": "Редактирует заказ.",
+  "params": [
+    {
+      "name": "user_id",
+      "type": "integer",
+      "required": true,
+      "description": "Идентификатор пользователя.Обязательный параметр"
+    },
+    {
+      "name": "order_id",
+      "type": "positive",
+      "required": true,
+      "description": "Идентификатор заказа.Обязательный параметр"
+    },
+    {
+      "name": "merchant_comment",
+      "type": "string",
+      "required": false,
+      "description": "Комментарий продавца.Макс. длина = 800"
+    },
+    {
+      "name": "status",
+      "type": "positive",
+      "required": false,
+      "description": "Статус заказа. Возможные значения: •0 - новый; •1 - согласуется; •2 - собирается; •3 - доставляется; •4 - выполнен; •5 - отменен; •6 - возвращен."
+    },
+    {
+      "name": "track_number",
+      "type": "string",
+      "required": false,
+      "description": "Трек-номер.Макс. длина = 60"
+    },
+    {
+      "name": "payment_status",
+      "type": "string",
+      "required": false,
+      "description": "Статус платежа. Возможные значения: •not_paid - не оплачен; •paid - оплачен; •returned - возвращен."
+    },
+    {
+      "name": "delivery_price",
+      "type": "positive",
+      "required": false,
+      "description": "Стоимость доставки."
+    },
+    {
+      "name": "width",
+      "type": "positive",
+      "required": false,
+      "description": "Ширина."
+    },
+    {
+      "name": "length",
+      "type": "positive",
+      "required": false,
+      "description": "Длина."
+    },
+    {
+      "name": "height",
+      "type": "positive",
+      "required": false,
+      "description": "Высота."
+    },
+    {
+      "name": "weight",
+      "type": "positive",
+      "required": false,
+      "description": "Вес."
+    },
+    {
+      "name": "comment_for_user",
+      "type": "string",
+      "required": false,
+      "description": "Комментарий для пользователя.Макс. длина = 400"
+    },
+    {
+      "name": "receipt_link",
+      "type": "string",
+      "required": false,
+      "description": "Ссылка на электронный чек.Макс. длина = 400"
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "В случае успешного выполнения возвращает 1."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "user_idintegerИдентификатор пользователя.Обязательный параметрorder_idpositiveИдентификатор заказа.Обязательный параметрmerchant_commentstringКомментарий продавца.Макс. длина = 800statuspositiveСтатус заказа. Возможные значения: •0 - новый; •1 - согласуется; •2 - собирается; •3 - доставляется; •4 - выполнен; •5 - отменен; •6 - возвращен. track_numberstringТрек-номер.Макс. длина = 60payment_statusstringСтатус платежа. Возможные значения: •not_paid - не оплачен; •paid - оплачен; •returned - возвращен. delivery_pricepositiveСтоимость доставки.widthpositiveШирина.lengthpositiveДлина.heightpositiveВысота.weightpositiveВес.comment_for_userstringКомментарий для пользователя.Макс. длина = 400receipt_linkstringСсылка на электронный чек.Макс. длина = 400"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "В случае успешного выполнения возвращает 1."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "1427Cart is empty1429Specify width, length, height and weight all together1430VK Pay status can not be changed1456Order status is invalid В ходе выполнения могут произойти общие ошибки"
+    },
+    {
+      "level": 2,
+      "title": "Связанные версии",
+      "text": "Перейти на страницу версий API 5.130 • В методе market.editOrder добавлены поля, которые может изменять администратор сообщества: •delivery_price — стоимость доставки. •track_number — трек-номер. •payment_status — статус оплаты. Также добавлены поля для редактирования габаритов и веса заказа: •width — ширина. •length — длина. •height — высота. •weight — вес. Поле merchant_comment теперь сохраняет комментарий продавца."
+    }
+  ],
+  "contentText": "Редактирует заказ. Параметры: user_idintegerИдентификатор пользователя.Обязательный параметрorder_idpositiveИдентификатор заказа.Обязательный параметрmerchant_commentstringКомментарий продавца.Макс. длина = 800statuspositiveСтатус заказа. Возможные значения: •0 - новый; •1 - согласуется; •2 - собирается; •3 - доставляется; •4 - выполнен; •5 - отменен; •6 - возвращен. track_numberstringТрек-номер.Макс. длина = 60payment_statusstringСтатус платежа. Возможные значения: •not_paid - не оплачен; •paid - оплачен; •returned - возвращен. delivery_pricepositiveСтоимость доставки.widthpositiveШирина.lengthpositiveДлина.heightpositiveВысота.weightpositiveВес.comment_for_userstringКомментарий для пользователя.Макс. длина = 400receipt_linkstringСсылка на электронный чек.Макс. длина = 400 Результат: В случае успешного выполнения возвращает 1. Коды ошибок: 1427Cart is empty1429Specify width, length, height and weight all together1430VK Pay status can not be changed1456Order status is invalid В ходе выполнения могут произойти общие ошибки Связанные версии: Перейти на страницу версий API 5.130 • В методе market.editOrder добавлены поля, которые может изменять администратор сообщества: •delivery_price — стоимость доставки. •track_number — трек-номер. •payment_status — статус оплаты. Также добавлены поля для редактирования габаритов и веса заказа: •width — ширина. •length — длина. •height — высота. •weight — вес. Поле merchant_comment теперь сохраняет комментарий продавца.",
+  "group": "market"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "market.addpropertyvariant",
+  "url": "https://dev.vk.com/ru/method/market.addPropertyVariant",
+  "title": "market.addPropertyVariant | VK для разработчиков",
+  "h1": "market.addPropertyVariant",
+  "description": "Добавляет вариант свойства. Всего у свойства может быть 50 вариантов.",
+  "params": [
+    {
+      "name": "group_id",
+      "type": "integer",
+      "required": true,
+      "description": "Идентификатор сообщества.Обязательный параметр"
+    },
+    {
+      "name": "property_id",
+      "type": "positive",
+      "required": true,
+      "description": "Идентификатор свойства.Обязательный параметр"
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": true,
+      "description": "Название вариантаОбязательный параметр Макс. длина = 60 Мин. длина = 1"
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "После успешного выполнения возвращает идентификатор добавленного варианта."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "group_idintegerИдентификатор сообщества.Обязательный параметрproperty_idpositiveИдентификатор свойства.Обязательный параметрtitlestringНазвание вариантаОбязательный параметр Макс. длина = 60 Мин. длина = 1"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "После успешного выполнения возвращает идентификатор добавленного варианта."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "1409Extended market not enabled1411Variants error1417Property not found1419Max variant limit exceeded1423Variant value is too long1438Market not enabled В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Добавляет вариант свойства. Всего у свойства может быть 50 вариантов. Параметры: group_idintegerИдентификатор сообщества.Обязательный параметрproperty_idpositiveИдентификатор свойства.Обязательный параметрtitlestringНазвание вариантаОбязательный параметр Макс. длина = 60 Мин. длина = 1 Результат: После успешного выполнения возвращает идентификатор добавленного варианта. Коды ошибок: 1409Extended market not enabled1411Variants error1417Property not found1419Max variant limit exceeded1423Variant value is too long1438Market not enabled В ходе выполнения могут произойти общие ошибки",
+  "group": "market"
+}

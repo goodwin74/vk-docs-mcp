@@ -1,0 +1,67 @@
+{
+  "id": "loyaltyteen.partnergetoffers",
+  "url": "https://dev.vk.com/ru/method/loyaltyTeen.partnerGetOffers",
+  "title": "loyaltyTeen.partnerGetOffers | VK для разработчиков",
+  "h1": "loyaltyTeen.partnerGetOffers",
+  "description": "positive",
+  "params": [
+    {
+      "name": "offset",
+      "type": "positive",
+      "required": false,
+      "description": ""
+    },
+    {
+      "name": "count",
+      "type": "positive",
+      "required": false,
+      "description": ""
+    },
+    {
+      "name": "partner_ids",
+      "type": "integer",
+      "required": false,
+      "description": ""
+    },
+    {
+      "name": "min_price",
+      "type": "positive",
+      "required": false,
+      "description": ""
+    },
+    {
+      "name": "max_price",
+      "type": "positive",
+      "required": false,
+      "description": ""
+    },
+    {
+      "name": "city_ids",
+      "type": "integer",
+      "required": false,
+      "description": ""
+    },
+    {
+      "name": "category_multi_ids",
+      "type": "integer",
+      "required": false,
+      "description": ""
+    }
+  ],
+  "returns": [],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "offsetpositivecountpositivepartner_idsintegermin_pricepositivemax_pricepositivecity_idsintegercategory_multi_idsinteger"
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "5000No account В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "positive Параметры: offsetpositivecountpositivepartner_idsintegermin_pricepositivemax_pricepositivecity_idsintegercategory_multi_idsinteger Коды ошибок: 5000No account В ходе выполнения могут произойти общие ошибки",
+  "group": "loyaltyteen"
+}

@@ -1,0 +1,71 @@
+{
+  "id": "friends.search",
+  "url": "https://dev.vk.com/ru/method/friends.search",
+  "title": "friends.search | VK для разработчиков",
+  "h1": "friends.search",
+  "description": "Позволяет искать по списку друзей пользователей.",
+  "params": [
+    {
+      "name": "user_id",
+      "type": "positive",
+      "required": true,
+      "description": "Идентификатор пользователя, по списку друзей которого необходимо произвести поиск.Обязательный параметр"
+    },
+    {
+      "name": "q",
+      "type": "string",
+      "required": false,
+      "description": "Строка запроса."
+    },
+    {
+      "name": "fields",
+      "type": "string",
+      "required": false,
+      "description": "Список дополнительных полей, которые необходимо вернуть. Доступные значения: •bdate; •can_post; •can_see_all_posts; •can_write_private_message; •city; •contacts •country •domain_; •education; •has_mobile; •last_seen; •nickname; •online; •photo_100; •photo_200_orig; •photo_50; •relation; •screen_name; •sex; •status; •timezone; •universities."
+    },
+    {
+      "name": "name_case",
+      "type": "string",
+      "required": false,
+      "description": "Падеж для склонения имени и фамилии пользователя. Возможные значения: •именительный – nom; •родительный – gen; •дательный – dat; •винительный – acc; •творительный – ins; •предложный – abl. По умолчанию nom."
+    },
+    {
+      "name": "offset",
+      "type": "positive",
+      "required": false,
+      "description": "Смещение, необходимое для выборки определенного подмножества друзей."
+    },
+    {
+      "name": "count",
+      "type": "positive",
+      "required": false,
+      "description": "Количество друзей, которое нужно вернуть."
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "После успешного выполнения метод возвращает список объектов пользователей."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "user_idpositiveИдентификатор пользователя, по списку друзей которого необходимо произвести поиск.Обязательный параметрqstringСтрока запроса.fieldsstringСписок дополнительных полей, которые необходимо вернуть. Доступные значения: •bdate; •can_post; •can_see_all_posts; •can_write_private_message; •city; •contacts •country •domain_; •education; •has_mobile; •last_seen; •nickname; •online; •photo_100; •photo_200_orig; •photo_50; •relation; •screen_name; •sex; •status; •timezone; •universities. name_casestringПадеж для склонения имени и фамилии пользователя. Возможные значения: •именительный – nom; •родительный – gen; •дательный – dat; •винительный – acc; •творительный – ins; •предложный – abl. По умолчанию nom.offsetpositiveСмещение, необходимое для выборки определенного подмножества друзей.countpositiveКоличество друзей, которое нужно вернуть."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "После успешного выполнения метод возвращает список объектов пользователей."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Позволяет искать по списку друзей пользователей. Параметры: user_idpositiveИдентификатор пользователя, по списку друзей которого необходимо произвести поиск.Обязательный параметрqstringСтрока запроса.fieldsstringСписок дополнительных полей, которые необходимо вернуть. Доступные значения: •bdate; •can_post; •can_see_all_posts; •can_write_private_message; •city; •contacts •country •domain_; •education; •has_mobile; •last_seen; •nickname; •online; •photo_100; •photo_200_orig; •photo_50; •relation; •screen_name; •sex; •status; •timezone; •universities. name_casestringПадеж для склонения имени и фамилии пользователя. Возможные значения: •именительный – nom; •родительный – gen; •дательный – dat; •винительный – acc; •творительный – ins; •предложный – abl. По умолчанию nom.offsetpositiveСмещение, необходимое для выборки определенного подмножества друзей.countpositiveКоличество друзей, которое нужно вернуть. Результат: После успешного выполнения метод возвращает список объектов пользователей. Коды ошибок: В ходе выполнения могут произойти общие ошибки",
+  "group": "friends"
+}

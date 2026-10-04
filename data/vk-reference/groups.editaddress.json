@@ -1,0 +1,119 @@
+{
+  "id": "groups.editaddress",
+  "url": "https://dev.vk.com/ru/method/groups.editAddress",
+  "title": "groups.editAddress | VK для разработчиков",
+  "h1": "groups.editAddress",
+  "description": "Метод редактирует адрес в сообществе. Чтобы получить список адресов, вызовите метод groups.getAddresses.",
+  "params": [
+    {
+      "name": "group_id",
+      "type": "positive",
+      "required": true,
+      "description": "Обязательный параметр. Идентификатор сообщества, в которое добавляется адрес.Обязательный параметр"
+    },
+    {
+      "name": "address_id",
+      "type": "positive",
+      "required": true,
+      "description": "Обязательный параметр. Идентификатор адреса.Обязательный параметр"
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Необязательный параметр. Заголовок адреса.Макс. длина = 255"
+    },
+    {
+      "name": "address",
+      "type": "string",
+      "required": false,
+      "description": "Необязательный параметр. Адрес. Пример: Город Санкт-Петербург, Невский проспект, дом 28.Макс. длина = 255"
+    },
+    {
+      "name": "additional_address",
+      "type": "string",
+      "required": false,
+      "description": "Необязательный параметр. Дополнительное описание адреса. Пример: Второй этаж, налево.Макс. длина = 400"
+    },
+    {
+      "name": "country_id",
+      "type": "positive",
+      "required": false,
+      "description": "Необязательный параметр. Идентификатор страны. Чтобы получить идентификатор, вызовите метод database.getCountries."
+    },
+    {
+      "name": "city_id",
+      "type": "positive",
+      "required": false,
+      "description": "Необязательный параметр. Идентификатор города. Чтобы получить идентификатор, вызовите метод database.getCities."
+    },
+    {
+      "name": "metro_id",
+      "type": "positive",
+      "required": false,
+      "description": "Необязательный параметр. Идентификатор станции метро. Чтобы получить идентификатор, вызовите метод database.getMetroStations."
+    },
+    {
+      "name": "latitude",
+      "type": "string",
+      "required": false,
+      "description": "Необязательный параметр. Географическая широта отметки в градусах. Диапазон значений: от -90 до 90."
+    },
+    {
+      "name": "longitude",
+      "type": "string",
+      "required": false,
+      "description": "Необязательный параметр. Географическая долгота отметки в градусах. Диапазон значений: от -180 до 180."
+    },
+    {
+      "name": "phone",
+      "type": "string",
+      "required": false,
+      "description": "Необязательный параметр. Номер телефона, привязанный к адресу."
+    },
+    {
+      "name": "work_info_status",
+      "type": "string",
+      "required": false,
+      "description": "Необязательный параметр. Тип расписания. Возможные значения: •no_information — нет информации о расписании. •temporarily_closed — временно закрыто. •always_opened — открыто круглосуточно. •forever_closed — закрыто навсегда. •timetable — открыто в указанные часы работы. Для этого типа расписания необходимо передать параметр timetable."
+    },
+    {
+      "name": "timetable",
+      "type": "text",
+      "required": false,
+      "description": "Необязательный параметр. Расписание в формате JSON. Время передается в минутах от 0 часов. Возможные значения: •mon — понедельник. •tue — вторник. •wed — среда. •thu — четверг. •fri — пятница. •sat — суббота. •sun — воскресенье. Пометки времени: •open_time — начало рабочего дня. •close_time — конец рабочего дня. •break_open_time — начало перерыва. •break_close_time — конец перерыва. Пример значения параметра: JSON{ \"mon\": { \"open_time\": 1080, \"close_time\": 1380 }, \"tue\": { \"open_time\": 1080, \"close_time\": 1380 }, \"wed\": { \"open_time\": 1080, \"close_time\": 1320 }, \"thu\": { \"open_time\": 1080, \"close_time\": 1320 }, \"fri\": { \"open_time\": 1080, \"close_time\": 1320 }, \"sat\": { \"open_time\": 1080, \"close_time\": 1320, \"break_open_time\": 1200, \"break_close_time\": 1230 } }"
+    },
+    {
+      "name": "is_main_address",
+      "type": "checkbox",
+      "required": false,
+      "description": "Информация о том, является ли адрес основным. Возможные значения: •1 — адрес является основным. •0 — адрес не является основным. Примечание. Информация об основном адресе сразу показывается в сообществе. Чтобы получить информацию об остальных адресах, нужно перейти к списку адресов."
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "Метод возвращает объект. Поля объекта: ПолеТипОписаниеidintegerИдентификатор адреса.titlestringЗаголовок адреса.addressstringАдрес.additional_addressstringДополнительное описание адреса.country_idintegerИдентификатор страны.city_idintegerИдентификатор города.metro_station_idintegerИдентификатор станции метро.latitudeintegerГеографическая широта отметки в градусах.longitudeintegerГеографическая долгота отметки в градусах.work_info_statusintegerТип расписания. Возможные значения: • no_information — нет информации о расписании. • temporarily_closed — временно закрыто. • always_opened — открыто круглосуточно. • forever_closed — закрыто навсегда. • timetable — открыто в указанные часы работы.time_offsetintegerСмещение времени в минутах относительно времени по UTC+0. Пример ответа: JSON{ \"response\": { \"id\": 56704, \"title\": \"Точка встречи parkrun\", \"address\": \"Сосновский лесопарк\", \"additional_address\": \"Парковая дорожка между футбольным полем и спортивной площадкой\", \"country_id\": 1, \"city_id\": 2, \"metro_station_id\": 189, \"latitude\": 60.017941, \"longitude\": 30.365817, \"work_info_status\": \"no_information\", \"time_offset\": 180 } }"
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "group_idpositiveОбязательный параметр. Идентификатор сообщества, в которое добавляется адрес.Обязательный параметрaddress_idpositiveОбязательный параметр. Идентификатор адреса.Обязательный параметрtitlestringНеобязательный параметр. Заголовок адреса.Макс. длина = 255addressstringНеобязательный параметр. Адрес. Пример: Город Санкт-Петербург, Невский проспект, дом 28.Макс. длина = 255additional_addressstringНеобязательный параметр. Дополнительное описание адреса. Пример: Второй этаж, налево.Макс. длина = 400country_idpositiveНеобязательный параметр. Идентификатор страны. Чтобы получить идентификатор, вызовите метод database.getCountries.city_idpositiveНеобязательный параметр. Идентификатор города. Чтобы получить идентификатор, вызовите метод database.getCities.metro_idpositiveНеобязательный параметр. Идентификатор станции метро. Чтобы получить идентификатор, вызовите метод database.getMetroStations.latitudestringНеобязательный параметр. Географическая широта отметки в градусах. Диапазон значений: от -90 до 90.longitudestringНеобязательный параметр. Географическая долгота отметки в градусах. Диапазон значений: от -180 до 180.phonestringНеобязательный параметр. Номер телефона, привязанный к адресу.work_info_statusstringНеобязательный параметр. Тип расписания. Возможные значения: •no_information — нет информации о расписании. •temporarily_closed — временно закрыто. •always_opened — открыто круглосуточно. •forever_closed — закрыто навсегда. •timetable — открыто в указанные часы раб"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Метод возвращает объект. Поля объекта: ПолеТипОписаниеidintegerИдентификатор адреса.titlestringЗаголовок адреса.addressstringАдрес.additional_addressstringДополнительное описание адреса.country_idintegerИдентификатор страны.city_idintegerИдентификатор города.metro_station_idintegerИдентификатор станции метро.latitudeintegerГеографическая широта отметки в градусах.longitudeintegerГеографическая долгота отметки в градусах.work_info_statusintegerТип расписания. Возможные значения: • no_information — нет информации о расписании. • temporarily_closed — временно закрыто. • always_opened — открыто круглосуточно. • forever_closed — закрыто навсегда. • timetable — открыто в указанные часы работы.time_offsetintegerСмещение времени в минутах относительно времени по UTC+0. Пример ответа: JSON{ \"response\": { \"id\": 56704, \"title\": \"Точка встречи parkrun\", \"address\": \"Сосновский лесопарк\", \"additional_address\": \"Парковая дорожка между футбольным полем и спортивной площадкой\", \"country_id\": 1, \"city_id\": 2, \"metro_station_id\": 189, \"latitude\": 60.017941, \"longitude\": 30.365817, \"work_info_status\": \"no_information\", \"time_offset\": 180 } }"
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "104Not found260Access to the groups list is denied due to the user's privacy settings706Too many addresses in club В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Метод редактирует адрес в сообществе. Чтобы получить список адресов, вызовите метод groups.getAddresses. Параметры: group_idpositiveОбязательный параметр. Идентификатор сообщества, в которое добавляется адрес.Обязательный параметрaddress_idpositiveОбязательный параметр. Идентификатор адреса.Обязательный параметрtitlestringНеобязательный параметр. Заголовок адреса.Макс. длина = 255addressstringНеобязательный параметр. Адрес. Пример: Город Санкт-Петербург, Невский проспект, дом 28.Макс. длина = 255additional_addressstringНеобязательный параметр. Дополнительное описание адреса. Пример: Второй этаж, налево.Макс. длина = 400country_idpositiveНеобязательный параметр. Идентификатор страны. Чтобы получить идентификатор, вызовите метод database.getCountries.city_idpositiveНеобязательный параметр. Идентификатор города. Чтобы получить идентификатор, вызовите метод database.getCities.metro_idpositiveНеобязательный параметр. Идентификатор станции метро. Чтобы получить идентификатор, вызовите метод database.getMetroStations.latitudestringНеобязательный параметр. Географическая широта отметки в градусах. Диапазон значений: от -90 до 90.longitudestringНеобязательный параметр. Географическая долгота отметки в градусах. Диапазон значений: от -180 до 180.phonestringНеобязательный параметр. Номер телефона, привязанный к адресу.work_info_statusstringНеобязательный параметр. Тип расписания. Возможные значения: •no_information — нет информации о расписании. •temporarily_closed — временно закрыто. •always_opened — открыто круглосуточно. •forever_closed — закрыто навсегда. •timetable — открыто в указанные часы раб Результат: Метод возвращает объект. Поля объекта: ПолеТипОписаниеidintegerИдентификатор адреса.titlestringЗаголовок адреса.addressstringАдрес.additional_addressstringДополнительное описание адреса.country_idintegerИдентификатор страны.city_idintegerИдентификатор города.metro_station_idintegerИдентификатор станции метро.latitudeintegerГеографическая широта отметки в градусах.longitudeintegerГеографическая долгота отметки в градусах.work_info_statusintegerТип расписания. Возможные значения: • no_information — нет информации о расписании. • temporarily_closed — временно закрыто. • always_opened — открыто круглосуточно. • forever_closed — закрыто навсегда. • timetable — открыто в указанные часы работы.time_offsetintegerСмещение времени в минутах относительно времени по UTC+0. Пример ответа: JSON{ \"response\": { \"id\": 56704, \"title\": \"Точка встречи parkrun\", \"address\": \"Сосновский лесопарк\", \"additional_address\": \"Парковая дорожка между футбольным полем и спортивной площадкой\", \"country_id\": 1, \"city_id\": 2, \"metro_station_id\": 189, \"latitude\": 60.017941, \"longitude\": 30.365817, \"work_info_status\": \"no_information\", \"time_offset\": 180 } } Коды ошибок: 104Not found260Access to the groups list is denied due to the user's privacy settings706Too many addresses in club В ходе выполнения могут произойти общие ошибки",
+  "group": "groups"
+}

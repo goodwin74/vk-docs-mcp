@@ -1,0 +1,70 @@
+{
+  "id": "friends.getsuggestions",
+  "url": "https://dev.vk.com/ru/method/friends.getSuggestions",
+  "title": "friends.getSuggestions | VK для разработчиков",
+  "h1": "friends.getSuggestions",
+  "description": "Возвращает список профилей пользователей, которые могут быть друзьями текущего пользователя.",
+  "params": [
+    {
+      "name": "filter",
+      "type": "string",
+      "required": false,
+      "description": "Типы предлагаемых друзей, которые нужно вернуть, перечисленные через запятую. Может принимать следующие значения: •mutual — пользователи, с которыми много общих друзей. По умолчанию будут возвращены все возможные друзья."
+    },
+    {
+      "name": "count",
+      "type": "positive",
+      "required": false,
+      "description": "Количество рекомендаций, которое необходимо вернуть."
+    },
+    {
+      "name": "offset",
+      "type": "positive",
+      "required": false,
+      "description": "Смещение, необходимое для выбора определённого подмножества списка."
+    },
+    {
+      "name": "fields",
+      "type": "string",
+      "required": false,
+      "description": "Список дополнительных полей, которые необходимо вернуть. Доступные значения: •bdate; •can_post; •can_see_all_posts; •can_write_private_message; •city; •contacts; •counters; •country; •education; •has_mobile; •last_seen; •nickname; •online; •photo_100; •photo_200_orig; •photo_50; •relation; •screen_name; •sex; •status; •timezone; •universities."
+    },
+    {
+      "name": "name_case",
+      "type": "string",
+      "required": false,
+      "description": "Падеж для склонения имени и фамилии пользователя. Возможные значения: •именительный – nom; •родительный – gen; •дательный – dat; •винительный – acc; •творительный – ins; •предложный – abl. По умолчанию nom."
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "После успешного выполнения возвращает список объектов пользователей с дополнительным полем found_with для пользователей, найденных через импорт контактов. Для некоторых пользователей, которые были найдены давно поле found_with может отсутствовать."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "filterstringТипы предлагаемых друзей, которые нужно вернуть, перечисленные через запятую. Может принимать следующие значения: •mutual — пользователи, с которыми много общих друзей. По умолчанию будут возвращены все возможные друзья.countpositiveКоличество рекомендаций, которое необходимо вернуть.offsetpositiveСмещение, необходимое для выбора определённого подмножества списка.fieldsstringСписок дополнительных полей, которые необходимо вернуть. Доступные значения: •bdate; •can_post; •can_see_all_posts; •can_write_private_message; •city; •contacts; •counters; •country; •education; •has_mobile; •last_seen; •nickname; •online; •photo_100; •photo_200_orig; •photo_50; •relation; •screen_name; •sex; •status; •timezone; •universities. name_casestringПадеж для склонения имени и фамилии пользователя. Возможные значения: •именительный – nom; •родительный – gen; •дательный – dat; •винительный – acc; •творительный – ins; •предложный – abl. По умолчанию nom."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "После успешного выполнения возвращает список объектов пользователей с дополнительным полем found_with для пользователей, найденных через импорт контактов. Для некоторых пользователей, которые были найдены давно поле found_with может отсутствовать."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "В ходе выполнения могут произойти общие ошибки"
+    },
+    {
+      "level": 2,
+      "title": "Связанные версии",
+      "text": "Перейти на страницу версий API 5.9 • В методе newsfeed.getComments поле cid было переименовано в id. • Метод notifications.get возвращает объект video в новом формате. • Метод friends.getLists возвращает список в виде объекта с полем count, а поле list_id в ответе заменено на id. • Метод board.getTopics возвращает информацию об опросах в новом формате. • В объектах, которые описывают альбомы и которые возвращаются методами audio.getAlbums и video.getAlbums, поле album_id было заменено на id. • Методы audio.getRecommendations, friends.getSuggestions, groups.getMembers возвращают данные в форме списка. • В объектах заметок, которые возвращает метод places.getCheckins, поле user_id было заменено на uid."
+    }
+  ],
+  "contentText": "Возвращает список профилей пользователей, которые могут быть друзьями текущего пользователя. Параметры: filterstringТипы предлагаемых друзей, которые нужно вернуть, перечисленные через запятую. Может принимать следующие значения: •mutual — пользователи, с которыми много общих друзей. По умолчанию будут возвращены все возможные друзья.countpositiveКоличество рекомендаций, которое необходимо вернуть.offsetpositiveСмещение, необходимое для выбора определённого подмножества списка.fieldsstringСписок дополнительных полей, которые необходимо вернуть. Доступные значения: •bdate; •can_post; •can_see_all_posts; •can_write_private_message; •city; •contacts; •counters; •country; •education; •has_mobile; •last_seen; •nickname; •online; •photo_100; •photo_200_orig; •photo_50; •relation; •screen_name; •sex; •status; •timezone; •universities. name_casestringПадеж для склонения имени и фамилии пользователя. Возможные значения: •именительный – nom; •родительный – gen; •дательный – dat; •винительный – acc; •творительный – ins; •предложный – abl. По умолчанию nom. Результат: После успешного выполнения возвращает список объектов пользователей с дополнительным полем found_with для пользователей, найденных через импорт контактов. Для некоторых пользователей, которые были найдены давно поле found_with может отсутствовать. Коды ошибок: В ходе выполнения могут произойти общие ошибки Связанные версии: Перейти на страницу версий API 5.9 • В методе newsfeed.getComments поле cid было переименовано в id. • Метод notifications.get возвращает объект video в новом формате. • Метод friends.getLists возвращает список в виде объекта с полем count, а поле list_id в ответе заменено на id. • Метод board.getTopics возвращает информацию об опросах в новом формате. • В объектах, которые описывают альбомы и которые возвращаются методами audio.getAlbums и video.getAlbums, поле album_id было заменено на id. • Методы audio.getRecommendations, friends.getSuggestions, groups.getMembers возвращают данные в форме списка. • В объектах заметок, которые возвращает метод places.getCheckins, поле user_id было заменено на uid.",
+  "group": "friends"
+}

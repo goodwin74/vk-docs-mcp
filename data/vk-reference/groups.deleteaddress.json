@@ -1,0 +1,47 @@
+{
+  "id": "groups.deleteaddress",
+  "url": "https://dev.vk.com/ru/method/groups.deleteAddress",
+  "title": "groups.deleteAddress | VK для разработчиков",
+  "h1": "groups.deleteAddress",
+  "description": "Удаляет адрес сообщества.",
+  "params": [
+    {
+      "name": "group_id",
+      "type": "positive",
+      "required": true,
+      "description": "ID группы.Обязательный параметр"
+    },
+    {
+      "name": "address_id",
+      "type": "positive",
+      "required": true,
+      "description": "ID адреса.Обязательный параметр"
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "После успешного выполнения возвращает 1."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "group_idpositiveID группы.Обязательный параметрaddress_idpositiveID адреса.Обязательный параметр"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "После успешного выполнения возвращает 1."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "104Not found260Access to the groups list is denied due to the user's privacy settings В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Удаляет адрес сообщества. Параметры: group_idpositiveID группы.Обязательный параметрaddress_idpositiveID адреса.Обязательный параметр Результат: После успешного выполнения возвращает 1. Коды ошибок: 104Not found260Access to the groups list is denied due to the user's privacy settings В ходе выполнения могут произойти общие ошибки",
+  "group": "groups"
+}

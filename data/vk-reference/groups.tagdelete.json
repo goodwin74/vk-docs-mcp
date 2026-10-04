@@ -1,0 +1,37 @@
+{
+  "id": "groups.tagdelete",
+  "url": "https://dev.vk.com/ru/method/groups.tagDelete",
+  "title": "groups.tagDelete | VK для разработчиков",
+  "h1": "groups.tagDelete",
+  "description": "Позволяет удалить тег сообщества.",
+  "params": [
+    {
+      "name": "group_id",
+      "type": "positive",
+      "required": true,
+      "description": "Идентификатор группы.Обязательный параметр"
+    },
+    {
+      "name": "tag_id",
+      "type": "positive",
+      "required": true,
+      "description": "Идентификатор удаляемого тега.Обязательный параметр"
+    }
+  ],
+  "returns": [],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "group_idpositiveИдентификатор группы.Обязательный параметрtag_idpositiveИдентификатор удаляемого тега.Обязательный параметр"
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Позволяет удалить тег сообщества. Параметры: group_idpositiveИдентификатор группы.Обязательный параметрtag_idpositiveИдентификатор удаляемого тега.Обязательный параметр Коды ошибок: В ходе выполнения могут произойти общие ошибки",
+  "group": "groups"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "market.deletepropertyvariant",
+  "url": "https://dev.vk.com/ru/method/market.deletePropertyVariant",
+  "title": "market.deletePropertyVariant | VK для разработчиков",
+  "h1": "market.deletePropertyVariant",
+  "description": "Удаляет вариант свойства.",
+  "params": [
+    {
+      "name": "group_id",
+      "type": "positive",
+      "required": true,
+      "description": "Идентификатор сообщества.Обязательный параметр"
+    },
+    {
+      "name": "variant_id",
+      "type": "positive",
+      "required": true,
+      "description": "Идентификатор варианта.Обязательный параметр"
+    }
+  ],
+  "returns": [],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "group_idpositiveИдентификатор сообщества.Обязательный параметрvariant_idpositiveИдентификатор варианта.Обязательный параметр"
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "1409Extended market not enabled1411Variants error1416Variant not found1417Property not found1438Market not enabled В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Удаляет вариант свойства. Параметры: group_idpositiveИдентификатор сообщества.Обязательный параметрvariant_idpositiveИдентификатор варианта.Обязательный параметр Коды ошибок: 1409Extended market not enabled1411Variants error1416Variant not found1417Property not found1438Market not enabled В ходе выполнения могут произойти общие ошибки",
+  "group": "market"
+}

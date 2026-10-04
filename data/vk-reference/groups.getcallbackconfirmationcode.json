@@ -1,0 +1,41 @@
+{
+  "id": "groups.getcallbackconfirmationcode",
+  "url": "https://dev.vk.com/ru/method/groups.getCallbackConfirmationCode",
+  "title": "groups.getCallbackConfirmationCode | VK для разработчиков",
+  "h1": "groups.getCallbackConfirmationCode",
+  "description": "Позволяет получить строку, необходимую для подтверждения адреса сервера в Callback API.",
+  "params": [
+    {
+      "name": "group_id",
+      "type": "positive",
+      "required": true,
+      "description": "Идентификатор сообщества.Обязательный параметр"
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "Возвращает строку, которую необходимо использовать в качестве ответа на уведомление с типом «confirmation» для подтверждения адреса сервера в Callback API."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "group_idpositiveИдентификатор сообщества.Обязательный параметр"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Возвращает строку, которую необходимо использовать в качестве ответа на уведомление с типом «confirmation» для подтверждения адреса сервера в Callback API."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Позволяет получить строку, необходимую для подтверждения адреса сервера в Callback API. Параметры: group_idpositiveИдентификатор сообщества.Обязательный параметр Результат: Возвращает строку, которую необходимо использовать в качестве ответа на уведомление с типом «confirmation» для подтверждения адреса сервера в Callback API. Коды ошибок: В ходе выполнения могут произойти общие ошибки",
+  "group": "groups"
+}

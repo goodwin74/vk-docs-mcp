@@ -1,0 +1,31 @@
+{
+  "id": "loyaltyteen.partnercreateaccount",
+  "url": "https://dev.vk.com/ru/method/loyaltyTeen.partnerCreateAccount",
+  "title": "loyaltyTeen.partnerCreateAccount | VK для разработчиков",
+  "h1": "loyaltyTeen.partnerCreateAccount",
+  "description": "integer",
+  "params": [
+    {
+      "name": "user_id",
+      "type": "integer",
+      "required": true,
+      "description": "Обязательный параметр"
+    }
+  ],
+  "returns": [],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "user_idintegerОбязательный параметр"
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "5004Request failed5033User already exists В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "integer Параметры: user_idintegerОбязательный параметр Коды ошибок: 5004Request failed5033User already exists В ходе выполнения могут произойти общие ошибки",
+  "group": "loyaltyteen"
+}

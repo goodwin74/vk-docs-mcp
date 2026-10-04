@@ -1,0 +1,59 @@
+{
+  "id": "groups.getrequests",
+  "url": "https://dev.vk.com/ru/method/groups.getRequests",
+  "title": "groups.getRequests | VK для разработчиков",
+  "h1": "groups.getRequests",
+  "description": "Возвращает список заявок на вступление в сообщество.",
+  "params": [
+    {
+      "name": "group_id",
+      "type": "string",
+      "required": true,
+      "description": "Идентификатор сообщества (указывается без знака «минус»).Обязательный параметр"
+    },
+    {
+      "name": "offset",
+      "type": "positive",
+      "required": false,
+      "description": "Смещение, необходимое для выборки определенного подмножества результатов. По умолчанию — 0."
+    },
+    {
+      "name": "count",
+      "type": "positive",
+      "required": false,
+      "description": "Число результатов, которые необходимо вернуть."
+    },
+    {
+      "name": "fields",
+      "type": "string",
+      "required": false,
+      "description": "Список дополнительных полей профилей, которые необходимо вернуть. См. подробное описание. Доступные значения: •about; •activities; •bdate; •books; •can_post; •can_see_all_posts; •can_see_audio; •can_write_private_message; •city; •common_count; •connections; •contacts; •counters; •country; •domain; •education; •games; •has_mobile; •interests; •last_seen; •maiden_name; •movies; •music; •occupation; •online; •online_mobile; •photo_100; •photo_200; •photo_200_orig; •photo_400_orig; •photo_50; •photo_max; •photo_max_orig; •quotes; •relation; •relatives; •schools; •screen_name; •sex; •site; •status; •timezone; •tv; •universities."
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "Возвращает список идентификаторов пользователей, отправивших заявки на вступление в сообщество. Если было передано значение в параметре fields, возвращается список объектов пользователей."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "group_idstringИдентификатор сообщества (указывается без знака «минус»).Обязательный параметрoffsetpositiveСмещение, необходимое для выборки определенного подмножества результатов. По умолчанию — 0.countpositiveЧисло результатов, которые необходимо вернуть.fieldsstringСписок дополнительных полей профилей, которые необходимо вернуть. См. подробное описание. Доступные значения: •about; •activities; •bdate; •books; •can_post; •can_see_all_posts; •can_see_audio; •can_write_private_message; •city; •common_count; •connections; •contacts; •counters; •country; •domain; •education; •games; •has_mobile; •interests; •last_seen; •maiden_name; •movies; •music; •occupation; •online; •online_mobile; •photo_100; •photo_200; •photo_200_orig; •photo_400_orig; •photo_50; •photo_max; •photo_max_orig; •quotes; •relation; •relatives; •schools; •screen_name; •sex; •site; •status; •timezone; •tv; •universities."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Возвращает список идентификаторов пользователей, отправивших заявки на вступление в сообщество. Если было передано значение в параметре fields, возвращается список объектов пользователей."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Возвращает список заявок на вступление в сообщество. Параметры: group_idstringИдентификатор сообщества (указывается без знака «минус»).Обязательный параметрoffsetpositiveСмещение, необходимое для выборки определенного подмножества результатов. По умолчанию — 0.countpositiveЧисло результатов, которые необходимо вернуть.fieldsstringСписок дополнительных полей профилей, которые необходимо вернуть. См. подробное описание. Доступные значения: •about; •activities; •bdate; •books; •can_post; •can_see_all_posts; •can_see_audio; •can_write_private_message; •city; •common_count; •connections; •contacts; •counters; •country; •domain; •education; •games; •has_mobile; •interests; •last_seen; •maiden_name; •movies; •music; •occupation; •online; •online_mobile; •photo_100; •photo_200; •photo_200_orig; •photo_400_orig; •photo_50; •photo_max; •photo_max_orig; •quotes; •relation; •relatives; •schools; •screen_name; •sex; •site; •status; •timezone; •tv; •universities. Результат: Возвращает список идентификаторов пользователей, отправивших заявки на вступление в сообщество. Если было передано значение в параметре fields, возвращается список объектов пользователей. Коды ошибок: В ходе выполнения могут произойти общие ошибки",
+  "group": "groups"
+}

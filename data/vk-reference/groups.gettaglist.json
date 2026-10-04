@@ -1,0 +1,31 @@
+{
+  "id": "groups.gettaglist",
+  "url": "https://dev.vk.com/ru/method/groups.getTagList",
+  "title": "groups.getTagList | VK для разработчиков",
+  "h1": "groups.getTagList",
+  "description": "Возвращает список тегов сообщества",
+  "params": [
+    {
+      "name": "group_id",
+      "type": "positive",
+      "required": true,
+      "description": "Идентификатор сообщества.Обязательный параметр"
+    }
+  ],
+  "returns": [],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "group_idpositiveИдентификатор сообщества.Обязательный параметр"
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Возвращает список тегов сообщества Параметры: group_idpositiveИдентификатор сообщества.Обязательный параметр Коды ошибок: В ходе выполнения могут произойти общие ошибки",
+  "group": "groups"
+}

@@ -1,0 +1,85 @@
+{
+  "id": "loyaltyteen.partnergettasks",
+  "url": "https://dev.vk.com/ru/method/loyaltyTeen.partnerGetTasks",
+  "title": "loyaltyTeen.partnerGetTasks | VK для разработчиков",
+  "h1": "loyaltyTeen.partnerGetTasks",
+  "description": "positive",
+  "params": [
+    {
+      "name": "count",
+      "type": "positive",
+      "required": false,
+      "description": ""
+    },
+    {
+      "name": "offset",
+      "type": "positive",
+      "required": false,
+      "description": ""
+    },
+    {
+      "name": "user_id",
+      "type": "string",
+      "required": false,
+      "description": ""
+    },
+    {
+      "name": "partner_ids",
+      "type": "integer",
+      "required": false,
+      "description": ""
+    },
+    {
+      "name": "min_price",
+      "type": "positive",
+      "required": false,
+      "description": ""
+    },
+    {
+      "name": "max_price",
+      "type": "positive",
+      "required": false,
+      "description": ""
+    },
+    {
+      "name": "city_ids",
+      "type": "integer",
+      "required": false,
+      "description": ""
+    },
+    {
+      "name": "category_multi_ids",
+      "type": "integer",
+      "required": false,
+      "description": ""
+    },
+    {
+      "name": "participation_format",
+      "type": "integer",
+      "required": false,
+      "description": ""
+    },
+    {
+      "name": "sort",
+      "type": "string",
+      "required": false,
+      "description": ""
+    }
+  ],
+  "returns": [],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "countpositiveoffsetpositiveuser_idstringpartner_idsintegermin_pricepositivemax_pricepositivecity_idsintegercategory_multi_idsintegerparticipation_formatintegersortstring"
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "5000No account В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "positive Параметры: countpositiveoffsetpositiveuser_idstringpartner_idsintegermin_pricepositivemax_pricepositivecity_idsintegercategory_multi_idsintegerparticipation_formatintegersortstring Коды ошибок: 5000No account В ходе выполнения могут произойти общие ошибки",
+  "group": "loyaltyteen"
+}

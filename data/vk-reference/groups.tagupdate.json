@@ -1,0 +1,43 @@
+{
+  "id": "groups.tagupdate",
+  "url": "https://dev.vk.com/ru/method/groups.tagUpdate",
+  "title": "groups.tagUpdate | VK для разработчиков",
+  "h1": "groups.tagUpdate",
+  "description": "Позволяет переименовать существующий тег.",
+  "params": [
+    {
+      "name": "group_id",
+      "type": "positive",
+      "required": true,
+      "description": "Идентификатор сообщества.Обязательный параметр"
+    },
+    {
+      "name": "tag_id",
+      "type": "positive",
+      "required": true,
+      "description": "Идентификатор тега.Обязательный параметр"
+    },
+    {
+      "name": "tag_name",
+      "type": "string",
+      "required": true,
+      "description": "Имя тега.Обязательный параметр Макс. длина = 20"
+    }
+  ],
+  "returns": [],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "group_idpositiveИдентификатор сообщества.Обязательный параметрtag_idpositiveИдентификатор тега.Обязательный параметрtag_namestringИмя тега.Обязательный параметр Макс. длина = 20"
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Позволяет переименовать существующий тег. Параметры: group_idpositiveИдентификатор сообщества.Обязательный параметрtag_idpositiveИдентификатор тега.Обязательный параметрtag_namestringИмя тега.Обязательный параметр Макс. длина = 20 Коды ошибок: В ходе выполнения могут произойти общие ошибки",
+  "group": "groups"
+}

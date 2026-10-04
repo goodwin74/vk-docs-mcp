@@ -1,0 +1,52 @@
+{
+  "id": "groups.getcallbacksettings",
+  "url": "https://dev.vk.com/ru/method/groups.getCallbackSettings",
+  "title": "groups.getCallbackSettings | VK для разработчиков",
+  "h1": "groups.getCallbackSettings",
+  "description": "Позволяет получить настройки уведомлений Callback API для сообщества.",
+  "params": [
+    {
+      "name": "group_id",
+      "type": "integer",
+      "required": true,
+      "description": "Идентификатор сообщества.Обязательный параметр"
+    },
+    {
+      "name": "server_id",
+      "type": "positive",
+      "required": false,
+      "description": "Идентификатор сервера."
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "После успешного выполнения возвращает объект, содержащий настройки уведомлений в формате «название события» : «статус» (0 — уведомления о событии выключены, 1 — уведомления о событии включены). Объект содержит следующие поля: ПолеОписаниеmessage_newНовое сообщение integer, [0, 1]message_replyНовое исходящее сообщение integer, [0, 1]message_editРедактирование сообщения integer, [0, 1]message_allowНовая подписка на сообщения integer, [0, 1]message_denyНовый запрет сообщений integer, [0, 1]photo_newДобавление новой фотографии integer, [0, 1]audio_newДобавление новой аудиозаписи integer, [0, 1]video_newДобавление новой видеозаписи integer, [0, 1]wall_reply_newДобавление нового комментария на стене integer, [0, 1]wall_reply_editРедактирование комментария на стене integer, [0, 1]wall_reply_deleteУдаление комментария на стене integer, [0, 1]wall_post_newДобавление новой записи на стене integer, [0, 1]wall_repostНовый репост записи на стене integer, [0, 1]board_post_newДобавление нового комментария в обсуждении integer, [0, 1]board_post_editРедактирование комментария в обсуждении integer, [0, 1]board_post_deleteУдаление комментария в обсуждении integer, [0, 1]board_post_restoreВосстановление комментария в обсуждении integer, [0, 1]photo_comment_newДобавление нового комментария к фото integer, [0, 1]photo_comment_editРедактирование комментария к фото integer, [0, 1]photo_comment_deleteУдаление комментария к фото integer, [0, 1]photo_comment_restoreВосстановление комментария к фото integer, [0, 1]video_comment_newДобавление нового комментария к видео integer, [0, 1]video_comment_editРедактирование комментария к видео integer, [0, 1]video_comment_deleteУдаление комментария к видео integer, [0, 1]video_comment_restoreВосстановление комментария к видео integer, [0, 1]market_comment_newДобавление нового комментария к товару integer, [0, 1]market_comment_editРедактирование комментария к товару integer, [0, 1]market_comment_deleteУдаление комментария к товару integer, [0, 1]market_comment_restoreВосстановление удалённого комментария к товару integer, [0, 1]poll_vote_newНовый голос в публичном опросе integer, [0, 1]group_joinВступление в сообщество integer, [0, 1]group_leaveВыход участника из сообщества integer, [0, 1]user_blockЗанесение пользователя в черный список integer, [0, 1]user_unblockУдаление пользователя из черного списка integer, [0, 1]group_change_settingsИзменение настроек сообщества integer, [0, 1]group_change_photoИзменение главной фотографии integer, [0, 1]group_officers_editИзменение руководства сообщества integer, [0, 1]donut_subscription_createСоздание подписки integer, [0, 1]donut_subscription_prolongedПродление подписки integer, [0, 1]donut_subscription_expiredПодписка истекла integer, [0, 1]donut_subscription_cancelledОтмена подписки integer, [0, 1]subscription_price_changedИзменение стоимости подписки integer, [0, 1]donut_money_withdrawВывод денег integer, [0, 1]donut_money_withdraw_errorОшибка вывода денег integer, [0, 1]"
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "group_idintegerИдентификатор сообщества.Обязательный параметрserver_idpositiveИдентификатор сервера."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "После успешного выполнения возвращает объект, содержащий настройки уведомлений в формате «название события» : «статус» (0 — уведомления о событии выключены, 1 — уведомления о событии включены). Объект содержит следующие поля: ПолеОписаниеmessage_newНовое сообщение integer, [0, 1]message_replyНовое исходящее сообщение integer, [0, 1]message_editРедактирование сообщения integer, [0, 1]message_allowНовая подписка на сообщения integer, [0, 1]message_denyНовый запрет сообщений integer, [0, 1]photo_newДобавление новой фотографии integer, [0, 1]audio_newДобавление новой аудиозаписи integer, [0, 1]video_newДобавление новой видеозаписи integer, [0, 1]wall_reply_newДобавление нового комментария на стене integer, [0, 1]wall_reply_editРедактирование комментария на стене integer, [0, 1]wall_reply_deleteУдаление комментария на стене integer, [0, 1]wall_post_newДобавление новой записи на стене integer, [0, 1]wall_repostНовый репост записи на стене integer, [0, 1]board_post_newДобавление нового комментария в обсуждении integer, [0, 1]board_post_editРедактирование комментария в обсуждении integer, [0, 1]board_post_deleteУдаление комментария в обсуждении integer, [0, 1]board_post_restoreВосстановление комментария в обсуждении integer, [0, 1]photo_comment_newДобавление нового комментария к фото integer, [0, 1]photo_comment_editРедактирование комментария к фото integer, [0, 1]photo_comment_deleteУдаление комментария к фото integer, [0, 1]photo_comment_restoreВосстановление комментария к фото int"
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "104Not found В ходе выполнения могут произойти общие ошибки"
+    },
+    {
+      "level": 2,
+      "title": "Связанные версии",
+      "text": "Перейти на страницу версий API 5.70 •В поле action объекта сообщения может возвращаться значение chat_invite_user_by_link. •В объекте сообщения добавлено поле update_time. •Методы wall.post, wall.editAdsStealth, wall.edit, wall.repost могут возвращать новую ошибку 224 — превышен лимит рекламных записей. •В Callback API добавлено новое событие — message_edit. 5.64 • В ответ метода messages.getDialogs добавлены поля unanswered и important. Они используются в объектах, описывающих сообщения сообществ. • В ответ метода groups.getCallbackSettings добавлено поле wall_repost, которое содержит информацию о настройках уведомления о репосте. • Метод video.save возвращает ошибку 15, если в вызове указан параметр wallpost = 1, и приложение не запрашивало права доступа wall. 5.58 • В возвращаемых объектах, описывающих сообщества, появилось новое поле is_messages_blocked. • В Callback API добавлены новые события: message_allow и message_deny. Метод groups.setCallbackSettings принимает два новых параметра, а метод groups.getCallbackSettings возвращает два новых поля, соответственно."
+    }
+  ],
+  "contentText": "Позволяет получить настройки уведомлений Callback API для сообщества. Параметры: group_idintegerИдентификатор сообщества.Обязательный параметрserver_idpositiveИдентификатор сервера. Результат: После успешного выполнения возвращает объект, содержащий настройки уведомлений в формате «название события» : «статус» (0 — уведомления о событии выключены, 1 — уведомления о событии включены). Объект содержит следующие поля: ПолеОписаниеmessage_newНовое сообщение integer, [0, 1]message_replyНовое исходящее сообщение integer, [0, 1]message_editРедактирование сообщения integer, [0, 1]message_allowНовая подписка на сообщения integer, [0, 1]message_denyНовый запрет сообщений integer, [0, 1]photo_newДобавление новой фотографии integer, [0, 1]audio_newДобавление новой аудиозаписи integer, [0, 1]video_newДобавление новой видеозаписи integer, [0, 1]wall_reply_newДобавление нового комментария на стене integer, [0, 1]wall_reply_editРедактирование комментария на стене integer, [0, 1]wall_reply_deleteУдаление комментария на стене integer, [0, 1]wall_post_newДобавление новой записи на стене integer, [0, 1]wall_repostНовый репост записи на стене integer, [0, 1]board_post_newДобавление нового комментария в обсуждении integer, [0, 1]board_post_editРедактирование комментария в обсуждении integer, [0, 1]board_post_deleteУдаление комментария в обсуждении integer, [0, 1]board_post_restoreВосстановление комментария в обсуждении integer, [0, 1]photo_comment_newДобавление нового комментария к фото integer, [0, 1]photo_comment_editРедактирование комментария к фото integer, [0, 1]photo_comment_deleteУдаление комментария к фото integer, [0, 1]photo_comment_restoreВосстановление комментария к фото int Коды ошибок: 104Not found В ходе выполнения могут произойти общие ошибки Связанные версии: Перейти на страницу версий API 5.70 •В поле action объекта сообщения может возвращаться значение chat_invite_user_by_link. •В объекте сообщения добавлено поле update_time. •Методы wall.post, wall.editAdsStealth, wall.edit, wall.repost могут возвращать новую ошибку 224 — превышен лимит рекламных записей. •В Callback API добавлено новое событие — message_edit. 5.64 • В ответ метода messages.getDialogs добавлены поля unanswered и important. Они используются в объектах, описывающих сообщения сообществ. • В ответ метода groups.getCallbackSettings добавлено поле wall_repost, которое содержит информацию о настройках уведомления о репосте. • Метод video.save возвращает ошибку 15, если в вызове указан параметр wallpost = 1, и приложение не запрашивало права доступа wall. 5.58 • В возвращаемых объектах, описывающих сообщества, появилось новое поле is_messages_blocked. • В Callback API добавлены новые события: message_allow и message_deny. Метод groups.setCallbackSettings принимает два новых параметра, а метод groups.getCallbackSettings возвращает два новых поля, соответственно.",
+  "group": "groups"
+}

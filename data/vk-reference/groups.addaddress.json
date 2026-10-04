@@ -1,0 +1,103 @@
+{
+  "id": "groups.addaddress",
+  "url": "https://dev.vk.com/ru/method/groups.addAddress",
+  "title": "groups.addAddress | VK для разработчиков",
+  "h1": "groups.addAddress",
+  "description": "Позволяет добавить адрес в сообщество. Список адресов может быть получен методом groups.getAddresses.",
+  "params": [
+    {
+      "name": "group_id",
+      "type": "positive",
+      "required": true,
+      "description": "Идентификатор сообщества, в которое добавляется адрес.Обязательный параметр"
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": true,
+      "description": "Заголовок адреса.Обязательный параметр Макс. длина = 255"
+    },
+    {
+      "name": "address",
+      "type": "string",
+      "required": true,
+      "description": "Строка адреса. Невский проспект, дом 28.Обязательный параметр Макс. длина = 255"
+    },
+    {
+      "name": "additional_address",
+      "type": "string",
+      "required": false,
+      "description": "Дополнительное описание адреса. Второй этаж, налево.Макс. длина = 400"
+    },
+    {
+      "name": "country_id",
+      "type": "positive",
+      "required": true,
+      "description": "Идентификатор страны. Для получения можно использовать database.getCountries.Обязательный параметр"
+    },
+    {
+      "name": "city_id",
+      "type": "positive",
+      "required": true,
+      "description": "Идентификатор города. Для получения можно использовать database.getCities.Обязательный параметр"
+    },
+    {
+      "name": "metro_id",
+      "type": "positive",
+      "required": false,
+      "description": "Идентификатор станции метро. Для получения можно использовать database.getMetroStations."
+    },
+    {
+      "name": "latitude",
+      "type": "string",
+      "required": true,
+      "description": "Географическая широта отметки, заданная в градусах (от -90 до 90).Обязательный параметр"
+    },
+    {
+      "name": "longitude",
+      "type": "string",
+      "required": true,
+      "description": "Географическая долгота отметки, заданная в градусах (от -180 до 180).Обязательный параметр"
+    },
+    {
+      "name": "phone",
+      "type": "string",
+      "required": false,
+      "description": "Номер телефона."
+    },
+    {
+      "name": "work_info_status",
+      "type": "string",
+      "required": false,
+      "description": "Тип расписания. Возможные значения: •no_information — нет информации о расписании; •temporarily_closed — временно закрыто; •always_opened — открыто круглосуточно; •forever_closed — закрыто навсегда; •timetable — открыто в указанные часы работы. Для этого типа расписания необходимо передать параметр timetable."
+    },
+    {
+      "name": "timetable",
+      "type": "text",
+      "required": false,
+      "description": "Для типа timetable можно передать расписание в формате JSON. Время передается в минутах от 0 часов. Ключ по дню означает, что день рабочий. open_time, close_time — начало и конец рабочего дня. break_open_time, break_close_time — время перерыва. JSON{ \"mon\": { \"open_time\": 1080, \"close_time\": 1380 }, \"tue\": { \"open_time\": 1080, \"close_time\": 1380 }, \"wed\": { \"open_time\": 1080, \"close_time\": 1320 }, \"thu\": { \"open_time\": 1080, \"close_time\": 1320 }, \"fri\": { \"open_time\": 1080, \"close_time\": 1320 }, \"sat\": { \"open_time\": 1080, \"close_time\": 1320, \"break_open_time\": 1200, \"break_close_time\": 1230 } }"
+    },
+    {
+      "name": "is_main_address",
+      "type": "checkbox",
+      "required": false,
+      "description": "Установить адрес основным. Информация об основном адресе сразу показывается в сообществе. Для получения информации об остальных адресах нужно перейти к списку адресов."
+    }
+  ],
+  "returns": [],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "group_idpositiveИдентификатор сообщества, в которое добавляется адрес.Обязательный параметрtitlestringЗаголовок адреса.Обязательный параметр Макс. длина = 255addressstringСтрока адреса. Невский проспект, дом 28.Обязательный параметр Макс. длина = 255additional_addressstringДополнительное описание адреса. Второй этаж, налево.Макс. длина = 400country_idpositiveИдентификатор страны. Для получения можно использовать database.getCountries.Обязательный параметрcity_idpositiveИдентификатор города. Для получения можно использовать database.getCities.Обязательный параметрmetro_idpositiveИдентификатор станции метро. Для получения можно использовать database.getMetroStations.latitudestringГеографическая широта отметки, заданная в градусах (от -90 до 90).Обязательный параметрlongitudestringГеографическая долгота отметки, заданная в градусах (от -180 до 180).Обязательный параметрphonestringНомер телефона.work_info_statusstringТип расписания. Возможные значения: •no_information — нет информации о расписании; •temporarily_closed — временно закрыто; •always_opened — открыто круглосуточно; •forever_closed — закрыто навсегда; •timetable — открыто в указанные часы работы. Для этого типа расписания необходимо передать параметр timetable. timetabletextДля типа timetable можно передать расписание в формате JSON. Время передается в минутах от 0 часов. Ключ по дню означает, что день рабочий. open_time, close_time — начало и конец рабочего дня. break_open_time, break_close_time — время перерыва. JSON"
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "104Not found260Access to the groups list is denied due to the user's privacy settings706Too many addresses in club В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Позволяет добавить адрес в сообщество. Список адресов может быть получен методом groups.getAddresses. Параметры: group_idpositiveИдентификатор сообщества, в которое добавляется адрес.Обязательный параметрtitlestringЗаголовок адреса.Обязательный параметр Макс. длина = 255addressstringСтрока адреса. Невский проспект, дом 28.Обязательный параметр Макс. длина = 255additional_addressstringДополнительное описание адреса. Второй этаж, налево.Макс. длина = 400country_idpositiveИдентификатор страны. Для получения можно использовать database.getCountries.Обязательный параметрcity_idpositiveИдентификатор города. Для получения можно использовать database.getCities.Обязательный параметрmetro_idpositiveИдентификатор станции метро. Для получения можно использовать database.getMetroStations.latitudestringГеографическая широта отметки, заданная в градусах (от -90 до 90).Обязательный параметрlongitudestringГеографическая долгота отметки, заданная в градусах (от -180 до 180).Обязательный параметрphonestringНомер телефона.work_info_statusstringТип расписания. Возможные значения: •no_information — нет информации о расписании; •temporarily_closed — временно закрыто; •always_opened — открыто круглосуточно; •forever_closed — закрыто навсегда; •timetable — открыто в указанные часы работы. Для этого типа расписания необходимо передать параметр timetable. timetabletextДля типа timetable можно передать расписание в формате JSON. Время передается в минутах от 0 часов. Ключ по дню означает, что день рабочий. open_time, close_time — начало и конец рабочего дня. break_open_time, break_close_time — время перерыва. JSON Коды ошибок: 104Not found260Access to the groups list is denied due to the user's privacy settings706Too many addresses in club В ходе выполнения могут произойти общие ошибки",
+  "group": "groups"
+}

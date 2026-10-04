@@ -1,0 +1,155 @@
+{
+  "id": "market.edit",
+  "url": "https://dev.vk.com/ru/method/market.edit",
+  "title": "market.edit | VK для разработчиков",
+  "h1": "market.edit",
+  "description": "Метод редактирует информацию о товаре.",
+  "params": [
+    {
+      "name": "owner_id",
+      "type": "integer",
+      "required": true,
+      "description": "Обязательный параметр. Идентификатор владельца товара. Идентификатор сообщества должен начинаться со знака -.Обязательный параметр"
+    },
+    {
+      "name": "item_id",
+      "type": "positive",
+      "required": true,
+      "description": "Обязательный параметр. Идентификатор товара.Обязательный параметр"
+    },
+    {
+      "name": "name",
+      "type": "string",
+      "required": false,
+      "description": "Необязательный параметр. Новое название товара.Макс. длина = 100 Мин. длина = 4"
+    },
+    {
+      "name": "description",
+      "type": "text",
+      "required": false,
+      "description": "Необязательный параметр. Новое описание товара."
+    },
+    {
+      "name": "category_id",
+      "type": "positive",
+      "required": false,
+      "description": "Необязательный параметр. Идентификатор категории товара."
+    },
+    {
+      "name": "price",
+      "type": "string",
+      "required": false,
+      "description": "Необязательный параметр. Цена товара."
+    },
+    {
+      "name": "old_price",
+      "type": "string",
+      "required": false,
+      "description": "Необязательный параметр. Старая цена товара."
+    },
+    {
+      "name": "deleted",
+      "type": "checkbox",
+      "required": false,
+      "description": "Необязательный параметр. Статус товара. Возможные значения: •1 — товар недоступен. •0 — товар доступен."
+    },
+    {
+      "name": "main_photo_id",
+      "type": "positive",
+      "required": false,
+      "description": "Необязательный параметр. Идентификатор фотографии для обложки товара. Фотография может быть загружена с помощью метода photos.getMarketUploadServer. Идентификатор фотографии можно получить: •Загрузив фотографию товара. •Вызвав методы market.get или market.getById, если вы хотите использовать существующую фотографию товара."
+    },
+    {
+      "name": "photo_ids",
+      "type": "integer",
+      "required": false,
+      "description": "Необязательный параметр. Идентификаторы дополнительных фотографий товара. Идентификатор фотографии можно получить, загрузив фотографию товара."
+    },
+    {
+      "name": "video_ids",
+      "type": "integer",
+      "required": false,
+      "description": "Необязательный параметр. Идентификаторы видео товара. Видео должно быть загружено в сообщество и быть доступным для просмотра, в UI отображается только один элемент."
+    },
+    {
+      "name": "url",
+      "type": "string",
+      "required": false,
+      "description": "Необязательный параметр. Ссылка на сайт товара. Игнорируется в расширенном магазине.Макс. длина = 320 Мин. длина = 0"
+    },
+    {
+      "name": "variant_ids",
+      "type": "integer",
+      "required": false,
+      "description": "Необязательный параметр. Список id вариантов свойств товаров. Не более 2 значений разных свойств. Если товар уже в группе, порядок свойств всех товаров группы должен совпадать, а набор свойств должен быть уникален для каждого товара."
+    },
+    {
+      "name": "is_main_variant",
+      "type": "checkbox",
+      "required": false,
+      "description": "Необязательный параметр. Признак, является ли товар главным в своей группе."
+    },
+    {
+      "name": "dimension_width",
+      "type": "positive",
+      "required": false,
+      "description": "Необязательный параметр. Ширина в миллиметрах."
+    },
+    {
+      "name": "dimension_height",
+      "type": "positive",
+      "required": false,
+      "description": "Необязательный параметр. Высота в миллиметрах."
+    },
+    {
+      "name": "dimension_length",
+      "type": "positive",
+      "required": false,
+      "description": "Необязательный параметр. Глубина в миллиметрах."
+    },
+    {
+      "name": "weight",
+      "type": "positive",
+      "required": false,
+      "description": "Необязательный параметр. Вес в граммах."
+    },
+    {
+      "name": "sku",
+      "type": "string",
+      "required": false,
+      "description": "Необязательный параметр. Артикул товара (произвольная строка).Макс. длина = 50"
+    },
+    {
+      "name": "stock_amount",
+      "type": "integer",
+      "required": false,
+      "description": "Необязательный параметр. Количество товара в наличии (для расширенного магазина). •-1 - неограниченное количество •0 - товар недоступен •> 0 - количество товара"
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "Метод возвращает 1, если информация товара изменена, и 0 в случае ошибки. Пример ответа: JSON{ \"response\": 1 }"
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "owner_idintegerОбязательный параметр. Идентификатор владельца товара. Идентификатор сообщества должен начинаться со знака -.Обязательный параметрitem_idpositiveОбязательный параметр. Идентификатор товара.Обязательный параметрnamestringНеобязательный параметр. Новое название товара.Макс. длина = 100 Мин. длина = 4descriptiontextНеобязательный параметр. Новое описание товара.category_idpositiveНеобязательный параметр. Идентификатор категории товара.pricestringНеобязательный параметр. Цена товара.old_pricestringНеобязательный параметр. Старая цена товара.deletedcheckboxНеобязательный параметр. Статус товара. Возможные значения: •1 — товар недоступен. •0 — товар доступен. main_photo_idpositiveНеобязательный параметр. Идентификатор фотографии для обложки товара. Фотография может быть загружена с помощью метода photos.getMarketUploadServer. Идентификатор фотографии можно получить: •Загрузив фотографию товара. •Вызвав методы market.get или market.getById, если вы хотите использовать существующую фотографию товара. photo_idsintegerНеобязательный параметр. Идентификаторы дополнительных фотографий товара. Идентификатор фотографии можно получить, загрузив фотографию товара.video_idsintegerНеобязательный параметр. Идентификаторы видео товара. Видео должно быть загружено в сообщество и быть доступным для просмотра, в UI отображается только один элемент.urlstringНеобязательный параметр. Ссылка на сайт товара. Игнорируется в расширенном магазине.Макс. длина = 320 Мин. длина = 0variant_idsin"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Метод возвращает 1, если информация товара изменена, и 0 в случае ошибки. Пример ответа: JSON{ \"response\": 1 }"
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "205Access denied1403Item not found1408Item has bad links in description1412Grouping items with different properties1413Grouping already has such variant1416Variant not found1417Property not found1425Grouping must have two or more items1426Item must have distinct properties1433Invalid image crop format1434Crop bottom right corner is outside of the image1435Crop size is less than the minimum1438Market not enabled В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Метод редактирует информацию о товаре. Параметры: owner_idintegerОбязательный параметр. Идентификатор владельца товара. Идентификатор сообщества должен начинаться со знака -.Обязательный параметрitem_idpositiveОбязательный параметр. Идентификатор товара.Обязательный параметрnamestringНеобязательный параметр. Новое название товара.Макс. длина = 100 Мин. длина = 4descriptiontextНеобязательный параметр. Новое описание товара.category_idpositiveНеобязательный параметр. Идентификатор категории товара.pricestringНеобязательный параметр. Цена товара.old_pricestringНеобязательный параметр. Старая цена товара.deletedcheckboxНеобязательный параметр. Статус товара. Возможные значения: •1 — товар недоступен. •0 — товар доступен. main_photo_idpositiveНеобязательный параметр. Идентификатор фотографии для обложки товара. Фотография может быть загружена с помощью метода photos.getMarketUploadServer. Идентификатор фотографии можно получить: •Загрузив фотографию товара. •Вызвав методы market.get или market.getById, если вы хотите использовать существующую фотографию товара. photo_idsintegerНеобязательный параметр. Идентификаторы дополнительных фотографий товара. Идентификатор фотографии можно получить, загрузив фотографию товара.video_idsintegerНеобязательный параметр. Идентификаторы видео товара. Видео должно быть загружено в сообщество и быть доступным для просмотра, в UI отображается только один элемент.urlstringНеобязательный параметр. Ссылка на сайт товара. Игнорируется в расширенном магазине.Макс. длина = 320 Мин. длина = 0variant_idsin Результат: Метод возвращает 1, если информация товара изменена, и 0 в случае ошибки. Пример ответа: JSON{ \"response\": 1 } Коды ошибок: 205Access denied1403Item not found1408Item has bad links in description1412Grouping items with different properties1413Grouping already has such variant1416Variant not found1417Property not found1425Grouping must have two or more items1426Item must have distinct properties1433Invalid image crop format1434Crop bottom right corner is outside of the image1435Crop size is less than the minimum1438Market not enabled В ходе выполнения могут произойти общие ошибки",
+  "group": "market"
+}

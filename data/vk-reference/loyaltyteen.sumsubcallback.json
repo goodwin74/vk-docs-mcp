@@ -1,0 +1,24 @@
+{
+  "id": "loyaltyteen.sumsubcallback",
+  "url": "https://dev.vk.com/ru/method/loyaltyTeen.sumsubCallback",
+  "title": "loyaltyTeen.sumsubCallback | VK для разработчиков",
+  "h1": "loyaltyTeen.sumsubCallback",
+  "description": "В ходе выполнения могут произойти общие ошибки",
+  "params": [],
+  "returns": [],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": ""
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "В ходе выполнения могут произойти общие ошибки Параметры: Коды ошибок: В ходе выполнения могут произойти общие ошибки",
+  "group": "loyaltyteen"
+}

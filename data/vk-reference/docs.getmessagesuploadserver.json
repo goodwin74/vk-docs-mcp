@@ -1,0 +1,47 @@
+{
+  "id": "docs.getmessagesuploadserver",
+  "url": "https://dev.vk.com/ru/method/docs.getMessagesUploadServer",
+  "title": "docs.getMessagesUploadServer | VK для разработчиков",
+  "h1": "docs.getMessagesUploadServer",
+  "description": "Метод получает адрес сервера для загрузки файла в личное сообщение.",
+  "params": [
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Необязательный параметр. Тип файла. Возможные значения: •doc — обычный файл. •audio_message — голосовое сообщение."
+    },
+    {
+      "name": "peer_id",
+      "type": "string",
+      "required": false,
+      "description": "Необязательный параметр. Идентификатор назначения. Возможные значения: •Для пользователя: {ИДЕНТИФИКАТОР_ПОЛЬЗОВАТЕЛЯ}. •Для групповой беседы: 2000000000 + {ИДЕНТИФИКАТОР_БЕСЕДЫ}. •Для сообщества: -{ИДЕНТИФИКАТОР_СООБЩЕСТВА}."
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "Метод возвращает объект. Поля объекта: ПолеТипОписаниеupload_urlstringАдрес, по которому нужно загрузить файл. Пример ответа: JSON{ \"response\":{ \"upload_url\":\"https:\\/\\/pu.vk.com\\/c236331\\/upload.php?act=add_doc_new&mid=743784474&aid=-1&gid=0&type=0&peer_id=0&rhash=4acca3170eeadfe8b76873d486d11962&api=1&server=236331&_origin=https%3A%2F%2Fapi.vk.com&_sig=a203dced42d9533f74c1130fa58a495f\" } }"
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "typestringНеобязательный параметр. Тип файла. Возможные значения: •doc — обычный файл. •audio_message — голосовое сообщение. peer_idstringНеобязательный параметр. Идентификатор назначения. Возможные значения: •Для пользователя: {ИДЕНТИФИКАТОР_ПОЛЬЗОВАТЕЛЯ}. •Для групповой беседы: 2000000000 + {ИДЕНТИФИКАТОР_БЕСЕДЫ}. •Для сообщества: -{ИДЕНТИФИКАТОР_СООБЩЕСТВА}."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Метод возвращает объект. Поля объекта: ПолеТипОписаниеupload_urlstringАдрес, по которому нужно загрузить файл. Пример ответа: JSON{ \"response\":{ \"upload_url\":\"https:\\/\\/pu.vk.com\\/c236331\\/upload.php?act=add_doc_new&mid=743784474&aid=-1&gid=0&type=0&peer_id=0&rhash=4acca3170eeadfe8b76873d486d11962&api=1&server=236331&_origin=https%3A%2F%2Fapi.vk.com&_sig=a203dced42d9533f74c1130fa58a495f\" } }"
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "901Can't send messages for users without permission В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Метод получает адрес сервера для загрузки файла в личное сообщение. Параметры: typestringНеобязательный параметр. Тип файла. Возможные значения: •doc — обычный файл. •audio_message — голосовое сообщение. peer_idstringНеобязательный параметр. Идентификатор назначения. Возможные значения: •Для пользователя: {ИДЕНТИФИКАТОР_ПОЛЬЗОВАТЕЛЯ}. •Для групповой беседы: 2000000000 + {ИДЕНТИФИКАТОР_БЕСЕДЫ}. •Для сообщества: -{ИДЕНТИФИКАТОР_СООБЩЕСТВА}. Результат: Метод возвращает объект. Поля объекта: ПолеТипОписаниеupload_urlstringАдрес, по которому нужно загрузить файл. Пример ответа: JSON{ \"response\":{ \"upload_url\":\"https:\\/\\/pu.vk.com\\/c236331\\/upload.php?act=add_doc_new&mid=743784474&aid=-1&gid=0&type=0&peer_id=0&rhash=4acca3170eeadfe8b76873d486d11962&api=1&server=236331&_origin=https%3A%2F%2Fapi.vk.com&_sig=a203dced42d9533f74c1130fa58a495f\" } } Коды ошибок: 901Can't send messages for users without permission В ходе выполнения могут произойти общие ошибки",
+  "group": "docs"
+}

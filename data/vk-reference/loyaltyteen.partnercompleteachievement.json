@@ -1,0 +1,37 @@
+{
+  "id": "loyaltyteen.partnercompleteachievement",
+  "url": "https://dev.vk.com/ru/method/loyaltyTeen.partnerCompleteAchievement",
+  "title": "loyaltyTeen.partnerCompleteAchievement | VK для разработчиков",
+  "h1": "loyaltyTeen.partnerCompleteAchievement",
+  "description": "integer",
+  "params": [
+    {
+      "name": "achievement_id",
+      "type": "integer",
+      "required": true,
+      "description": "Обязательный параметр"
+    },
+    {
+      "name": "user_id",
+      "type": "string",
+      "required": true,
+      "description": "Обязательный параметр"
+    }
+  ],
+  "returns": [],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "achievement_idintegerОбязательный параметрuser_idstringОбязательный параметр"
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "integer Параметры: achievement_idintegerОбязательный параметрuser_idstringОбязательный параметр Коды ошибок: В ходе выполнения могут произойти общие ошибки",
+  "group": "loyaltyteen"
+}

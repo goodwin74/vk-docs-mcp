@@ -1,0 +1,47 @@
+{
+  "id": "market.deleteproperty",
+  "url": "https://dev.vk.com/ru/method/market.deleteProperty",
+  "title": "market.deleteProperty | VK для разработчиков",
+  "h1": "market.deleteProperty",
+  "description": "Удаляет свойство товара.",
+  "params": [
+    {
+      "name": "group_id",
+      "type": "positive",
+      "required": true,
+      "description": "Идентификатор сообщества.Обязательный параметр"
+    },
+    {
+      "name": "property_id",
+      "type": "positive",
+      "required": true,
+      "description": "Идентификатор свойства.Обязательный параметр"
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "В случае успешного выполнения возвращает 1."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "group_idpositiveИдентификатор сообщества.Обязательный параметрproperty_idpositiveИдентификатор свойства.Обязательный параметр"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "В случае успешного выполнения возвращает 1."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "1409Extended market not enabled1411Variants error1417Property not found1438Market not enabled В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Удаляет свойство товара. Параметры: group_idpositiveИдентификатор сообщества.Обязательный параметрproperty_idpositiveИдентификатор свойства.Обязательный параметр Результат: В случае успешного выполнения возвращает 1. Коды ошибок: 1409Extended market not enabled1411Variants error1417Property not found1438Market not enabled В ходе выполнения могут произойти общие ошибки",
+  "group": "market"
+}

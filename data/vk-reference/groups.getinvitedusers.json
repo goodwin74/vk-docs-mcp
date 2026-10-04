@@ -1,0 +1,65 @@
+{
+  "id": "groups.getinvitedusers",
+  "url": "https://dev.vk.com/ru/method/groups.getInvitedUsers",
+  "title": "groups.getInvitedUsers | VK для разработчиков",
+  "h1": "groups.getInvitedUsers",
+  "description": "Возвращает список пользователей, которые были приглашены в группу.",
+  "params": [
+    {
+      "name": "group_id",
+      "type": "positive",
+      "required": true,
+      "description": "Идентификатор группы, список приглашенных в которую пользователей нужно вернуть.Обязательный параметр"
+    },
+    {
+      "name": "offset",
+      "type": "positive",
+      "required": false,
+      "description": "Смещение, необходимое для выборки определённого подмножества пользователей."
+    },
+    {
+      "name": "count",
+      "type": "positive",
+      "required": false,
+      "description": "Количество пользователей, информацию о которых нужно вернуть."
+    },
+    {
+      "name": "fields",
+      "type": "string",
+      "required": false,
+      "description": "Список дополнительных полей, которые необходимо вернуть. Доступные значения: •bdate; •can_post; •can_see_all_posts; •can_write_private_message; •city; •contacts; •country; •domain; •education, •has_mobile; •last_seen; •nickname; •online; •photo_100; •photo_200_orig; •photo_50; •relation; •sex; •status; •timezone; •universities."
+    },
+    {
+      "name": "name_case",
+      "type": "string",
+      "required": false,
+      "description": "Падеж для склонения имени и фамилии пользователя. Возможные значения: •именительный – nom; •родительный – gen; •дательный – dat; •винительный – acc; •творительный – ins; •предложный – abl. По умолчанию nom."
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "Возвращает список объектов пользователей."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "group_idpositiveИдентификатор группы, список приглашенных в которую пользователей нужно вернуть.Обязательный параметрoffsetpositiveСмещение, необходимое для выборки определённого подмножества пользователей.countpositiveКоличество пользователей, информацию о которых нужно вернуть.fieldsstringСписок дополнительных полей, которые необходимо вернуть. Доступные значения: •bdate; •can_post; •can_see_all_posts; •can_write_private_message; •city; •contacts; •country; •domain; •education, •has_mobile; •last_seen; •nickname; •online; •photo_100; •photo_200_orig; •photo_50; •relation; •sex; •status; •timezone; •universities. name_casestringПадеж для склонения имени и фамилии пользователя. Возможные значения: •именительный – nom; •родительный – gen; •дательный – dat; •винительный – acc; •творительный – ins; •предложный – abl. По умолчанию nom."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Возвращает список объектов пользователей."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Возвращает список пользователей, которые были приглашены в группу. Параметры: group_idpositiveИдентификатор группы, список приглашенных в которую пользователей нужно вернуть.Обязательный параметрoffsetpositiveСмещение, необходимое для выборки определённого подмножества пользователей.countpositiveКоличество пользователей, информацию о которых нужно вернуть.fieldsstringСписок дополнительных полей, которые необходимо вернуть. Доступные значения: •bdate; •can_post; •can_see_all_posts; •can_write_private_message; •city; •contacts; •country; •domain; •education, •has_mobile; •last_seen; •nickname; •online; •photo_100; •photo_200_orig; •photo_50; •relation; •sex; •status; •timezone; •universities. name_casestringПадеж для склонения имени и фамилии пользователя. Возможные значения: •именительный – nom; •родительный – gen; •дательный – dat; •винительный – acc; •творительный – ins; •предложный – abl. По умолчанию nom. Результат: Возвращает список объектов пользователей. Коды ошибок: В ходе выполнения могут произойти общие ошибки",
+  "group": "groups"
+}

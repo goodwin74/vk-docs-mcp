@@ -1,0 +1,94 @@
+{
+  "id": "market.getcomments",
+  "url": "https://dev.vk.com/ru/method/market.getComments",
+  "title": "market.getComments | VK для разработчиков",
+  "h1": "market.getComments",
+  "description": "Возвращает список комментариев к товару.",
+  "params": [
+    {
+      "name": "owner_id",
+      "type": "integer",
+      "required": true,
+      "description": "Идентификатор владельца товара. Обратите внимание, идентификатор сообщества в параметре owner_id необходимо указывать со знаком «-» — например, owner_id=-1 соответствует идентификатору сообщества ВКонтакте API (club1). Обязательный параметр"
+    },
+    {
+      "name": "item_id",
+      "type": "positive",
+      "required": true,
+      "description": "Идентификатор товара.Обязательный параметр"
+    },
+    {
+      "name": "need_likes",
+      "type": "checkbox",
+      "required": false,
+      "description": "1 — возвращать информацию о лайках."
+    },
+    {
+      "name": "start_comment_id",
+      "type": "positive",
+      "required": false,
+      "description": "Идентификатор комментария, начиная с которого нужно вернуть список (подробности см. ниже)."
+    },
+    {
+      "name": "offset",
+      "type": "positive",
+      "required": false,
+      "description": "Сдвиг, необходимый для получения конкретной выборки результатов."
+    },
+    {
+      "name": "count",
+      "type": "positive",
+      "required": false,
+      "description": "Число комментариев, которые необходимо получить."
+    },
+    {
+      "name": "sort",
+      "type": "string",
+      "required": false,
+      "description": "Порядок сортировки комментариев (asc — от старых к новым, desc - от новых к старым)."
+    },
+    {
+      "name": "extended",
+      "type": "checkbox",
+      "required": false,
+      "description": "1 — комментарии в ответе будут возвращены в виде пронумерованных объектов, дополнительно будут возвращены списки объектов profiles, groups."
+    },
+    {
+      "name": "fields",
+      "type": "string",
+      "required": false,
+      "description": "Список дополнительных полей профилей, которые необходимо вернуть. См. подробное описание. Доступные значения: •sex; •bdate; •city; •country; •photo_50; •photo_100; •photo_200_orig; •photo_200; •photo_400_orig; •photo_max; •photo_max_orig; •photo_id; •online; •online_mobile; •domain; •has_mobile; •contacts; •connections; •site; •education; •universities; •schools; •can_post; •can_see_all_posts; •can_see_audio; •can_write_private_message; •status; •last_seen; •common_count; •relation; •relatives; •counters; •screen_name; •maiden_name; •timezone; •occupation; •activities; •interests; •music; •movies; •tv; •books; •games; •about; •quotes; •personal; •friend_status; •military; •career."
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "После успешного выполнения возвращает объект, содержащий число результатов в поле count и массив объектов комментариев в поле items."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "owner_idintegerИдентификатор владельца товара. Обратите внимание, идентификатор сообщества в параметре owner_id необходимо указывать со знаком «-» — например, owner_id=-1 соответствует идентификатору сообщества ВКонтакте API (club1). Обязательный параметрitem_idpositiveИдентификатор товара.Обязательный параметрneed_likescheckbox1 — возвращать информацию о лайках.start_comment_idpositiveИдентификатор комментария, начиная с которого нужно вернуть список (подробности см. ниже).offsetpositiveСдвиг, необходимый для получения конкретной выборки результатов.countpositiveЧисло комментариев, которые необходимо получить.sortstringПорядок сортировки комментариев (asc — от старых к новым, desc - от новых к старым).extendedcheckbox1 — комментарии в ответе будут возвращены в виде пронумерованных объектов, дополнительно будут возвращены списки объектов profiles, groups.fieldsstringСписок дополнительных полей профилей, которые необходимо вернуть. См. подробное описание. Доступные значения: •sex; •bdate; •city; •country; •photo_50; •photo_100; •photo_200_orig; •photo_200; •photo_400_orig; •photo_max; •photo_max_orig; •photo_id; •online; •online_mobile; •domain; •has_mobile; •contacts; •connections; •site; •education; •universities; •schools; •can_post; •can_see_all_posts; •can_see_audio; •can_write_private_message; •status; •last_seen; •common_count; •relation; •relatives; •counters; •screen_name; •maiden_name; •timezone; •occupation; •activities; •interests; •music; •movies; •tv; •books; •ga"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "После успешного выполнения возвращает объект, содержащий число результатов в поле count и массив объектов комментариев в поле items."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "1401Comments for this market are closed В ходе выполнения могут произойти общие ошибки"
+    },
+    {
+      "level": 2,
+      "title": "Связанные версии",
+      "text": "Перейти на страницу версий API 5.95 •В методах wall.getComments, market.getComments, video.getComments, board.getComments граффити вынесен в отдельный тип attach. •Методы market.add, market.edit принимают параметр url. Объект market теперь может возвращать url и button_title."
+    }
+  ],
+  "contentText": "Возвращает список комментариев к товару. Параметры: owner_idintegerИдентификатор владельца товара. Обратите внимание, идентификатор сообщества в параметре owner_id необходимо указывать со знаком «-» — например, owner_id=-1 соответствует идентификатору сообщества ВКонтакте API (club1). Обязательный параметрitem_idpositiveИдентификатор товара.Обязательный параметрneed_likescheckbox1 — возвращать информацию о лайках.start_comment_idpositiveИдентификатор комментария, начиная с которого нужно вернуть список (подробности см. ниже).offsetpositiveСдвиг, необходимый для получения конкретной выборки результатов.countpositiveЧисло комментариев, которые необходимо получить.sortstringПорядок сортировки комментариев (asc — от старых к новым, desc - от новых к старым).extendedcheckbox1 — комментарии в ответе будут возвращены в виде пронумерованных объектов, дополнительно будут возвращены списки объектов profiles, groups.fieldsstringСписок дополнительных полей профилей, которые необходимо вернуть. См. подробное описание. Доступные значения: •sex; •bdate; •city; •country; •photo_50; •photo_100; •photo_200_orig; •photo_200; •photo_400_orig; •photo_max; •photo_max_orig; •photo_id; •online; •online_mobile; •domain; •has_mobile; •contacts; •connections; •site; •education; •universities; •schools; •can_post; •can_see_all_posts; •can_see_audio; •can_write_private_message; •status; •last_seen; •common_count; •relation; •relatives; •counters; •screen_name; •maiden_name; •timezone; •occupation; •activities; •interests; •music; •movies; •tv; •books; •ga Результат: После успешного выполнения возвращает объект, содержащий число результатов в поле count и массив объектов комментариев в поле items. Коды ошибок: 1401Comments for this market are closed В ходе выполнения могут произойти общие ошибки Связанные версии: Перейти на страницу версий API 5.95 •В методах wall.getComments, market.getComments, video.getComments, board.getComments граффити вынесен в отдельный тип attach. •Методы market.add, market.edit принимают параметр url. Объект market теперь может возвращать url и button_title.",
+  "group": "market"
+}

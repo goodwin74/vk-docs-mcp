@@ -1,0 +1,77 @@
+{
+  "id": "groups.editmanager",
+  "url": "https://dev.vk.com/ru/method/groups.editManager",
+  "title": "groups.editManager | VK для разработчиков",
+  "h1": "groups.editManager",
+  "description": "Позволяет назначить/разжаловать руководителя в сообществе или изменить уровень его полномочий.",
+  "params": [
+    {
+      "name": "group_id",
+      "type": "positive",
+      "required": true,
+      "description": "Идентификатор сообщества (указывается без знака «минус»).Обязательный параметр"
+    },
+    {
+      "name": "user_id",
+      "type": "positive",
+      "required": true,
+      "description": "Идентификатор пользователя, чьи полномочия в сообществе нужно изменить.Обязательный параметр"
+    },
+    {
+      "name": "role",
+      "type": "string",
+      "required": false,
+      "description": "Уровень полномочий: •moderator — модератор; •editor — редактор; •administrator — администратор. •advertiser — рекламодатель Если параметр не задан, с пользователя user_id снимаются полномочия руководителя."
+    },
+    {
+      "name": "is_contact",
+      "type": "checkbox",
+      "required": false,
+      "description": "Отображать ли пользователя в блоке контактов сообщества."
+    },
+    {
+      "name": "contact_position",
+      "type": "string",
+      "required": false,
+      "description": "Должность пользователя, отображаемая в блоке контактов."
+    },
+    {
+      "name": "contact_phone",
+      "type": "string",
+      "required": false,
+      "description": "Телефон пользователя, отображаемый в блоке контактов."
+    },
+    {
+      "name": "contact_email",
+      "type": "string",
+      "required": false,
+      "description": "Email пользователя, отображаемый в блоке контактов."
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "В случае успешного выполнения возвращает 1."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "group_idpositiveИдентификатор сообщества (указывается без знака «минус»).Обязательный параметрuser_idpositiveИдентификатор пользователя, чьи полномочия в сообществе нужно изменить.Обязательный параметрrolestringУровень полномочий: •moderator — модератор; •editor — редактор; •administrator — администратор. •advertiser — рекламодатель Если параметр не задан, с пользователя user_id снимаются полномочия руководителя.is_contactcheckboxОтображать ли пользователя в блоке контактов сообщества.contact_positionstringДолжность пользователя, отображаемая в блоке контактов.contact_phonestringТелефон пользователя, отображаемый в блоке контактов.contact_emailstringEmail пользователя, отображаемый в блоке контактов."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "В случае успешного выполнения возвращает 1."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "700Cannot edit creator role701User should be in club702Too many officers in club703You need to enable 2FA for this action704User needs to enable 2FA for this action В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Позволяет назначить/разжаловать руководителя в сообществе или изменить уровень его полномочий. Параметры: group_idpositiveИдентификатор сообщества (указывается без знака «минус»).Обязательный параметрuser_idpositiveИдентификатор пользователя, чьи полномочия в сообществе нужно изменить.Обязательный параметрrolestringУровень полномочий: •moderator — модератор; •editor — редактор; •administrator — администратор. •advertiser — рекламодатель Если параметр не задан, с пользователя user_id снимаются полномочия руководителя.is_contactcheckboxОтображать ли пользователя в блоке контактов сообщества.contact_positionstringДолжность пользователя, отображаемая в блоке контактов.contact_phonestringТелефон пользователя, отображаемый в блоке контактов.contact_emailstringEmail пользователя, отображаемый в блоке контактов. Результат: В случае успешного выполнения возвращает 1. Коды ошибок: 700Cannot edit creator role701User should be in club702Too many officers in club703You need to enable 2FA for this action704User needs to enable 2FA for this action В ходе выполнения могут произойти общие ошибки",
+  "group": "groups"
+}

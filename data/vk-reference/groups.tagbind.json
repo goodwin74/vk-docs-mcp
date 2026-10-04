@@ -1,0 +1,49 @@
+{
+  "id": "groups.tagbind",
+  "url": "https://dev.vk.com/ru/method/groups.tagBind",
+  "title": "groups.tagBind | VK для разработчиков",
+  "h1": "groups.tagBind",
+  "description": "Позволяет «привязывать» и «отвязывать» теги сообщества к беседам.",
+  "params": [
+    {
+      "name": "group_id",
+      "type": "positive",
+      "required": true,
+      "description": "Идентификатор группы.Обязательный параметр"
+    },
+    {
+      "name": "tag_id",
+      "type": "positive",
+      "required": true,
+      "description": "Идентификатор тега.Обязательный параметр"
+    },
+    {
+      "name": "user_id",
+      "type": "positive",
+      "required": true,
+      "description": "Обязательный параметр"
+    },
+    {
+      "name": "act",
+      "type": "string",
+      "required": true,
+      "description": "Действие с тегом: •\"bind\" — привязать. •\"unbind\" — отвязать. Обязательный параметр"
+    }
+  ],
+  "returns": [],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "group_idpositiveИдентификатор группы.Обязательный параметрtag_idpositiveИдентификатор тега.Обязательный параметрuser_idpositiveОбязательный параметрactstringДействие с тегом: •\"bind\" — привязать. •\"unbind\" — отвязать. Обязательный параметр"
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Позволяет «привязывать» и «отвязывать» теги сообщества к беседам. Параметры: group_idpositiveИдентификатор группы.Обязательный параметрtag_idpositiveИдентификатор тега.Обязательный параметрuser_idpositiveОбязательный параметрactstringДействие с тегом: •\"bind\" — привязать. •\"unbind\" — отвязать. Обязательный параметр Коды ошибок: В ходе выполнения могут произойти общие ошибки",
+  "group": "groups"
+}

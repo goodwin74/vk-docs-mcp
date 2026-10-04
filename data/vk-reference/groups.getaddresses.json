@@ -1,0 +1,77 @@
+{
+  "id": "groups.getaddresses",
+  "url": "https://dev.vk.com/ru/method/groups.getAddresses",
+  "title": "groups.getAddresses | VK для разработчиков",
+  "h1": "groups.getAddresses",
+  "description": "Метод возвращает адрес указанного сообщества.",
+  "params": [
+    {
+      "name": "group_id",
+      "type": "positive",
+      "required": true,
+      "description": "Обязательный параметр. Идентификатор сообщества.Обязательный параметр"
+    },
+    {
+      "name": "address_ids",
+      "type": "integer",
+      "required": false,
+      "description": "Необязательный параметр. Идентификаторы адресов, информацию о которых необходимо вернуть, перечисленные через запятую."
+    },
+    {
+      "name": "latitude",
+      "type": "string",
+      "required": false,
+      "description": "Необязательный параметр. Географическая широта отметки в градусах. Диапазон значений: от -90 до 90."
+    },
+    {
+      "name": "longitude",
+      "type": "string",
+      "required": false,
+      "description": "Необязательный параметр. Географическая долгота отметкив градусах. Диапазон значений: от -180 до 180."
+    },
+    {
+      "name": "offset",
+      "type": "positive",
+      "required": false,
+      "description": "Необязательный параметр. Смещение для возвращения адресов чёрного списка относительно начала списка."
+    },
+    {
+      "name": "count",
+      "type": "positive",
+      "required": false,
+      "description": "Необязательный параметр. Количество адресов, которое необходимо вернуть. Значение по умолчанию: 10."
+    },
+    {
+      "name": "fields",
+      "type": "string",
+      "required": false,
+      "description": "Необязательный параметр. Список дополнительных полей сообществ, которые необходимо вернуть."
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "Метод возвращает объект. Поля объекта: ПолеТипОписаниеcountintegerЧисло результатов.itemsarray[object]Массив объектов адресов. Пример ответа: JSON{ \"response\": { \"count\": 1, \"items\": [ { \"id\": 53461, \"additional_address\": \"Праздничные дни: 09:00 - 22:00\", \"address\": \"улица Тверитина, 45\", \"city_id\": 49, \"country_id\": 1, \"city\": { \"id\": 49, \"title\": \"Екатеринбург\" }, \"country\": { \"id\": 1, \"title\": \"Россия\" }, \"latitude\": 56.821658, \"longitude\": 60.624082, \"phone\": \"+7 (343) 311-01-23\", \"timetable\": { \"fri\": { \"close_time\": 1380, \"open_time\": 420, \"break_close_time\": 0, \"break_open_time\": 0 }, \"mon\": { \"close_time\": 1380, \"open_time\": 420, \"break_close_time\": 0, \"break_open_time\": 0 }, \"sat\": { \"close_time\": 1320, \"open_time\": 540, \"break_close_time\": 0, \"break_open_time\": 0 }, \"sun\": { \"close_time\": 1320, \"open_time\": 540, \"break_close_time\": 0, \"break_open_time\": 0 }, \"thu\": { \"close_time\": 1380, \"open_time\": 420, \"break_close_time\": 0, \"break_open_time\": 0 }, \"tue\": { \"close_time\": 1380, \"open_time\": 420, \"break_close_time\": 0, \"break_open_time\": 0 }, \"wed\": { \"close_time\": 1380, \"open_time\": 420, \"break_close_time\": 0, \"break_open_time\": 0 } }, \"title\": \"BF_ ПАРКОВЫЙ\", \"work_info_status\": \"timetable\" } ] } }"
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "group_idpositiveОбязательный параметр. Идентификатор сообщества.Обязательный параметрaddress_idsintegerНеобязательный параметр. Идентификаторы адресов, информацию о которых необходимо вернуть, перечисленные через запятую.latitudestringНеобязательный параметр. Географическая широта отметки в градусах. Диапазон значений: от -90 до 90.longitudestringНеобязательный параметр. Географическая долгота отметкив градусах. Диапазон значений: от -180 до 180.offsetpositiveНеобязательный параметр. Смещение для возвращения адресов чёрного списка относительно начала списка.countpositiveНеобязательный параметр. Количество адресов, которое необходимо вернуть. Значение по умолчанию: 10.fieldsstringНеобязательный параметр. Список дополнительных полей сообществ, которые необходимо вернуть."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Метод возвращает объект. Поля объекта: ПолеТипОписаниеcountintegerЧисло результатов.itemsarray[object]Массив объектов адресов. Пример ответа: JSON{ \"response\": { \"count\": 1, \"items\": [ { \"id\": 53461, \"additional_address\": \"Праздничные дни: 09:00 - 22:00\", \"address\": \"улица Тверитина, 45\", \"city_id\": 49, \"country_id\": 1, \"city\": { \"id\": 49, \"title\": \"Екатеринбург\" }, \"country\": { \"id\": 1, \"title\": \"Россия\" }, \"latitude\": 56.821658, \"longitude\": 60.624082, \"phone\": \"+7 (343) 311-01-23\", \"timetable\": { \"fri\": { \"close_time\": 1380, \"open_time\": 420, \"break_close_time\": 0, \"break_open_time\": 0 }, \"mon\": { \"close_time\": 1380, \"open_time\": 420, \"break_close_time\": 0, \"break_open_time\": 0 }, \"sat\": { \"close_time\": 1320, \"open_time\": 540, \"break_close_time\": 0, \"break_open_time\": 0 }, \"sun\": { \"close_time\": 1320, \"open_time\": 540, \"break_close_time\": 0, \"break_open_time\": 0 }, \"thu\": { \"close_time\": 1380, \"open_time\": 420, \"break_close_time\": 0, \"break_open_time\": 0 }, \"tue\": { \"close_time\": 1380, \"open_time\": 420, \"break_close_time\": 0, \"break_open_time\": 0 }, \"wed\": { \"close_time\": 1380, \"open_time\": 420, \"break_close_time\": 0, \"break_open_time\": 0 } }, \"title\": \"BF_ ПАРКОВЫЙ\", \"work_info_status\": \"timetable\" } ] } }"
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "125Invalid group id260Access to the groups list is denied due to the user's privacy settings В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Метод возвращает адрес указанного сообщества. Параметры: group_idpositiveОбязательный параметр. Идентификатор сообщества.Обязательный параметрaddress_idsintegerНеобязательный параметр. Идентификаторы адресов, информацию о которых необходимо вернуть, перечисленные через запятую.latitudestringНеобязательный параметр. Географическая широта отметки в градусах. Диапазон значений: от -90 до 90.longitudestringНеобязательный параметр. Географическая долгота отметкив градусах. Диапазон значений: от -180 до 180.offsetpositiveНеобязательный параметр. Смещение для возвращения адресов чёрного списка относительно начала списка.countpositiveНеобязательный параметр. Количество адресов, которое необходимо вернуть. Значение по умолчанию: 10.fieldsstringНеобязательный параметр. Список дополнительных полей сообществ, которые необходимо вернуть. Результат: Метод возвращает объект. Поля объекта: ПолеТипОписаниеcountintegerЧисло результатов.itemsarray[object]Массив объектов адресов. Пример ответа: JSON{ \"response\": { \"count\": 1, \"items\": [ { \"id\": 53461, \"additional_address\": \"Праздничные дни: 09:00 - 22:00\", \"address\": \"улица Тверитина, 45\", \"city_id\": 49, \"country_id\": 1, \"city\": { \"id\": 49, \"title\": \"Екатеринбург\" }, \"country\": { \"id\": 1, \"title\": \"Россия\" }, \"latitude\": 56.821658, \"longitude\": 60.624082, \"phone\": \"+7 (343) 311-01-23\", \"timetable\": { \"fri\": { \"close_time\": 1380, \"open_time\": 420, \"break_close_time\": 0, \"break_open_time\": 0 }, \"mon\": { \"close_time\": 1380, \"open_time\": 420, \"break_close_time\": 0, \"break_open_time\": 0 }, \"sat\": { \"close_time\": 1320, \"open_time\": 540, \"break_close_time\": 0, \"break_open_time\": 0 }, \"sun\": { \"close_time\": 1320, \"open_time\": 540, \"break_close_time\": 0, \"break_open_time\": 0 }, \"thu\": { \"close_time\": 1380, \"open_time\": 420, \"break_close_time\": 0, \"break_open_time\": 0 }, \"tue\": { \"close_time\": 1380, \"open_time\": 420, \"break_close_time\": 0, \"break_open_time\": 0 }, \"wed\": { \"close_time\": 1380, \"open_time\": 420, \"break_close_time\": 0, \"break_open_time\": 0 } }, \"title\": \"BF_ ПАРКОВЫЙ\", \"work_info_status\": \"timetable\" } ] } } Коды ошибок: 125Invalid group id260Access to the groups list is denied due to the user's privacy settings В ходе выполнения могут произойти общие ошибки",
+  "group": "groups"
+}

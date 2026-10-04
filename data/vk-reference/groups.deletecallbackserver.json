@@ -1,0 +1,47 @@
+{
+  "id": "groups.deletecallbackserver",
+  "url": "https://dev.vk.com/ru/method/groups.deleteCallbackServer",
+  "title": "groups.deleteCallbackServer | VK для разработчиков",
+  "h1": "groups.deleteCallbackServer",
+  "description": "Удаляет сервер для Callback API из сообщества.",
+  "params": [
+    {
+      "name": "group_id",
+      "type": "positive",
+      "required": true,
+      "description": "Идентификатор сообщества.Обязательный параметр"
+    },
+    {
+      "name": "server_id",
+      "type": "positive",
+      "required": true,
+      "description": "Идентификатор сервера, который нужно удалить.Обязательный параметр"
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "После успешного выполнения возвращает 1."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "group_idpositiveИдентификатор сообщества.Обязательный параметрserver_idpositiveИдентификатор сервера, который нужно удалить.Обязательный параметр"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "После успешного выполнения возвращает 1."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "104Not found В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Удаляет сервер для Callback API из сообщества. Параметры: group_idpositiveИдентификатор сообщества.Обязательный параметрserver_idpositiveИдентификатор сервера, который нужно удалить.Обязательный параметр Результат: После успешного выполнения возвращает 1. Коды ошибок: 104Not found В ходе выполнения могут произойти общие ошибки",
+  "group": "groups"
+}

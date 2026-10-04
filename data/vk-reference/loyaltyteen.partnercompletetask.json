@@ -1,0 +1,49 @@
+{
+  "id": "loyaltyteen.partnercompletetask",
+  "url": "https://dev.vk.com/ru/method/loyaltyTeen.partnerCompleteTask",
+  "title": "loyaltyTeen.partnerCompleteTask | VK для разработчиков",
+  "h1": "loyaltyTeen.partnerCompleteTask",
+  "description": "positive",
+  "params": [
+    {
+      "name": "user_id",
+      "type": "positive",
+      "required": true,
+      "description": "Обязательный параметр"
+    },
+    {
+      "name": "task_id",
+      "type": "positive",
+      "required": true,
+      "description": "Обязательный параметр"
+    },
+    {
+      "name": "request_id",
+      "type": "string",
+      "required": true,
+      "description": "Обязательный параметр"
+    },
+    {
+      "name": "coins",
+      "type": "positive",
+      "required": false,
+      "description": ""
+    }
+  ],
+  "returns": [],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "user_idpositiveОбязательный параметрtask_idpositiveОбязательный параметрrequest_idstringОбязательный параметрcoinspositive"
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "5000No account5001Task already completed5002Task not found5016Request has already been processed successfully5036Category task not allowed В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "positive Параметры: user_idpositiveОбязательный параметрtask_idpositiveОбязательный параметрrequest_idstringОбязательный параметрcoinspositive Коды ошибок: 5000No account5001Task already completed5002Task not found5016Request has already been processed successfully5036Category task not allowed В ходе выполнения могут произойти общие ошибки",
+  "group": "loyaltyteen"
+}

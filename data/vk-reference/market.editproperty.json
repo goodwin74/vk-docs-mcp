@@ -1,0 +1,53 @@
+{
+  "id": "market.editproperty",
+  "url": "https://dev.vk.com/ru/method/market.editProperty",
+  "title": "market.editProperty | VK для разработчиков",
+  "h1": "market.editProperty",
+  "description": "Редактирует свойство товара.",
+  "params": [
+    {
+      "name": "group_id",
+      "type": "integer",
+      "required": true,
+      "description": "Идентификатор сообщества.Обязательный параметр"
+    },
+    {
+      "name": "property_id",
+      "type": "positive",
+      "required": true,
+      "description": "Идентификатор свойства.Обязательный параметр"
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": true,
+      "description": "Название свойства.Обязательный параметр"
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "В случае успешного выполнения возвращает 1."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "group_idintegerИдентификатор сообщества.Обязательный параметрproperty_idpositiveИдентификатор свойства.Обязательный параметрtitlestringНазвание свойства.Обязательный параметр"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "В случае успешного выполнения возвращает 1."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "1411Variants error1421Name too long1424Unknown property type1438Market not enabled В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Редактирует свойство товара. Параметры: group_idintegerИдентификатор сообщества.Обязательный параметрproperty_idpositiveИдентификатор свойства.Обязательный параметрtitlestringНазвание свойства.Обязательный параметр Результат: В случае успешного выполнения возвращает 1. Коды ошибок: 1411Variants error1421Name too long1424Unknown property type1438Market not enabled В ходе выполнения могут произойти общие ошибки",
+  "group": "market"
+}

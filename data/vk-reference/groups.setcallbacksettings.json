@@ -1,0 +1,382 @@
+{
+  "id": "groups.setcallbacksettings",
+  "url": "https://dev.vk.com/ru/method/groups.setCallbackSettings",
+  "title": "groups.setCallbackSettings | VK для разработчиков",
+  "h1": "groups.setCallbackSettings",
+  "description": "Позволяет задать настройки уведомлений о событиях в Callback API.",
+  "params": [
+    {
+      "name": "group_id",
+      "type": "integer",
+      "required": true,
+      "description": "Идентификатор сообщества.Обязательный параметр"
+    },
+    {
+      "name": "server_id",
+      "type": "positive",
+      "required": false,
+      "description": "Идентификатор сервера."
+    },
+    {
+      "name": "api_version",
+      "type": "string",
+      "required": false,
+      "description": "Версия Callback API"
+    },
+    {
+      "name": "message_new",
+      "type": "checkbox",
+      "required": false,
+      "description": "Уведомления о новых сообщениях (0 — выключить, 1 — включить)."
+    },
+    {
+      "name": "message_reply",
+      "type": "checkbox",
+      "required": false,
+      "description": "Уведомления об исходящем сообщении (0 — выключить, 1 — включить)."
+    },
+    {
+      "name": "message_allow",
+      "type": "checkbox",
+      "required": false,
+      "description": "Уведомления о подписке на сообщения (0 — выключить, 1 — включить)."
+    },
+    {
+      "name": "message_edit",
+      "type": "checkbox",
+      "required": false,
+      "description": "Уведомления о редактировании сообщения (0 — выключить, 1 — включить)."
+    },
+    {
+      "name": "message_deny",
+      "type": "checkbox",
+      "required": false,
+      "description": "Уведомления о запрете на сообщения (0 — выключить, 1 — включить)."
+    },
+    {
+      "name": "message_typing_state",
+      "type": "checkbox",
+      "required": false,
+      "description": "Уведомления о наборе текста сообщения (0 — выключить, 1 — включить)."
+    },
+    {
+      "name": "message_read",
+      "type": "checkbox",
+      "required": false,
+      "description": ""
+    },
+    {
+      "name": "photo_new",
+      "type": "checkbox",
+      "required": false,
+      "description": "Уведомления о добавлении новой фотографии (0 — выключить, 1 — включить)."
+    },
+    {
+      "name": "audio_new",
+      "type": "checkbox",
+      "required": false,
+      "description": "Уведомления о добавлении новой аудиозаписи (0 — выключить, 1 — включить)."
+    },
+    {
+      "name": "video_new",
+      "type": "checkbox",
+      "required": false,
+      "description": "Уведомления о добавлении новой видеозаписи (0 — выключить, 1 — включить)."
+    },
+    {
+      "name": "wall_reply_new",
+      "type": "checkbox",
+      "required": false,
+      "description": "Уведомления о добавлении нового комментария на стене (0 — выключить, 1 — включить)."
+    },
+    {
+      "name": "wall_reply_edit",
+      "type": "checkbox",
+      "required": false,
+      "description": "Уведомления о редактировании комментария на стене (0 — выключить, 1 — включить)."
+    },
+    {
+      "name": "wall_reply_delete",
+      "type": "checkbox",
+      "required": false,
+      "description": "Уведомления об удалении комментария на стене (0 — выключить, 1 — включить)."
+    },
+    {
+      "name": "wall_reply_restore",
+      "type": "checkbox",
+      "required": false,
+      "description": "Уведомления о восстановлении комментария на стене (0 — выключить, 1 — включить)."
+    },
+    {
+      "name": "wall_post_new",
+      "type": "checkbox",
+      "required": false,
+      "description": "Уведомления о новой записи на стене (0 — выключить, 1 — включить)."
+    },
+    {
+      "name": "wall_repost",
+      "type": "checkbox",
+      "required": false,
+      "description": "Уведомления о репосте записи (0 — выключить, 1 — включить)."
+    },
+    {
+      "name": "board_post_new",
+      "type": "checkbox",
+      "required": false,
+      "description": "Уведомления о создании комментария в обсуждении (0 — выключить, 1 — включить)."
+    },
+    {
+      "name": "board_post_edit",
+      "type": "checkbox",
+      "required": false,
+      "description": "Уведомления о редактировании комментария в обсуждении (0 — выключить, 1 — включить)."
+    },
+    {
+      "name": "board_post_restore",
+      "type": "checkbox",
+      "required": false,
+      "description": "Уведомление о восстановлении комментария в обсуждении (0 — выключить, 1 — включить)."
+    },
+    {
+      "name": "board_post_delete",
+      "type": "checkbox",
+      "required": false,
+      "description": "Уведомления об удалении комментария в обсуждении (0 — выключить, 1 — включить)."
+    },
+    {
+      "name": "photo_comment_new",
+      "type": "checkbox",
+      "required": false,
+      "description": "Уведомления о добавлении нового комментария к фото (0 — выключить, 1 — включить)."
+    },
+    {
+      "name": "photo_comment_edit",
+      "type": "checkbox",
+      "required": false,
+      "description": "Уведомления о редактировании комментария к фото (0 — выключить, 1 — включить)."
+    },
+    {
+      "name": "photo_comment_delete",
+      "type": "checkbox",
+      "required": false,
+      "description": "Уведомления об удалении комментария к фото (0 — выключить, 1 — включить)."
+    },
+    {
+      "name": "photo_comment_restore",
+      "type": "checkbox",
+      "required": false,
+      "description": "Уведомления о восстановлении комментария к фото (0 — выключить, 1 — включить)."
+    },
+    {
+      "name": "video_comment_new",
+      "type": "checkbox",
+      "required": false,
+      "description": "Уведомления о добавлении нового комментария к видео (0 — выключить, 1 — включить)."
+    },
+    {
+      "name": "video_comment_edit",
+      "type": "checkbox",
+      "required": false,
+      "description": "Уведомления о редактировании комментария к видео (0 — выключить, 1 — включить)."
+    },
+    {
+      "name": "video_comment_delete",
+      "type": "checkbox",
+      "required": false,
+      "description": "Уведомления об удалении комментария к видео (0 — выключить, 1 — включить)."
+    },
+    {
+      "name": "video_comment_restore",
+      "type": "checkbox",
+      "required": false,
+      "description": "Уведомления о восстановлении комментария к видео (0 — выключить, 1 — включить)."
+    },
+    {
+      "name": "market_comment_new",
+      "type": "checkbox",
+      "required": false,
+      "description": "Уведомления о добавлении нового комментария к товару (0 — выключить, 1 — включить)."
+    },
+    {
+      "name": "market_comment_edit",
+      "type": "checkbox",
+      "required": false,
+      "description": "Уведомления о редактировании комментария к товару (0 — выключить, 1 — включить)."
+    },
+    {
+      "name": "market_comment_delete",
+      "type": "checkbox",
+      "required": false,
+      "description": "Уведомления об удалении комментария к товару (0 — выключить, 1 — включить)."
+    },
+    {
+      "name": "market_comment_restore",
+      "type": "checkbox",
+      "required": false,
+      "description": "Уведомления о восстановлении комментария к товару (0 — выключить, 1 — включить)."
+    },
+    {
+      "name": "market_order_new",
+      "type": "checkbox",
+      "required": false,
+      "description": ""
+    },
+    {
+      "name": "market_order_edit",
+      "type": "checkbox",
+      "required": false,
+      "description": ""
+    },
+    {
+      "name": "poll_vote_new",
+      "type": "checkbox",
+      "required": false,
+      "description": "Уведомления о новом голосе в публичных опросах (0 — выключить, 1 — включить)."
+    },
+    {
+      "name": "group_join",
+      "type": "checkbox",
+      "required": false,
+      "description": "Уведомления о вступлении в сообщество (0 — выключить, 1 — включить)."
+    },
+    {
+      "name": "group_leave",
+      "type": "checkbox",
+      "required": false,
+      "description": "Уведомления о выходе из сообщества (0 — выключить, 1 — включить)."
+    },
+    {
+      "name": "group_change_settings",
+      "type": "checkbox",
+      "required": false,
+      "description": "Уведомления об изменении настроек (0 — выключить, 1 — включить)."
+    },
+    {
+      "name": "group_change_photo",
+      "type": "checkbox",
+      "required": false,
+      "description": "Уведомления об изменении главной фотографии (0 — выключить, 1 — включить)."
+    },
+    {
+      "name": "group_officers_edit",
+      "type": "checkbox",
+      "required": false,
+      "description": "Уведомления об изменении руководства (0 — выключить, 1 — включить)."
+    },
+    {
+      "name": "user_block",
+      "type": "checkbox",
+      "required": false,
+      "description": "Уведомления об внесении пользователя в чёрный список (0 — выключить, 1 — включить)."
+    },
+    {
+      "name": "user_unblock",
+      "type": "checkbox",
+      "required": false,
+      "description": "Уведомления об исключении пользователя из чёрного списка (0 — выключить, 1 — включить)."
+    },
+    {
+      "name": "lead_forms_new",
+      "type": "checkbox",
+      "required": false,
+      "description": "Уведомления о заполнении формы."
+    },
+    {
+      "name": "like_add",
+      "type": "checkbox",
+      "required": false,
+      "description": "Уведомления о новой отметке «Мне нравится» (0 — выключить, 1 — включить)."
+    },
+    {
+      "name": "like_remove",
+      "type": "checkbox",
+      "required": false,
+      "description": "Уведомления о снятии отметки «Мне нравится» (0 — выключить, 1 — включить)."
+    },
+    {
+      "name": "message_event",
+      "type": "checkbox",
+      "required": false,
+      "description": ""
+    },
+    {
+      "name": "message_reaction_event",
+      "type": "checkbox",
+      "required": false,
+      "description": ""
+    },
+    {
+      "name": "donut_subscription_create",
+      "type": "checkbox",
+      "required": false,
+      "description": "Уведомление о создании подписки (0 — выключить, 1 — включить)."
+    },
+    {
+      "name": "donut_subscription_prolonged",
+      "type": "checkbox",
+      "required": false,
+      "description": "Уведомление о продлении подписки (0 — выключить, 1 — включить)."
+    },
+    {
+      "name": "donut_subscription_cancelled",
+      "type": "checkbox",
+      "required": false,
+      "description": "Уведомление об отмене подписки (0 — выключить, 1 — включить)."
+    },
+    {
+      "name": "donut_subscription_price_changed",
+      "type": "checkbox",
+      "required": false,
+      "description": "Уведомление об изменении стоимости подписки (0 — выключить, 1 — включить)."
+    },
+    {
+      "name": "donut_subscription_expired",
+      "type": "checkbox",
+      "required": false,
+      "description": "Уведомление о том, что подписка истекла (0 — выключить, 1 — включить)."
+    },
+    {
+      "name": "donut_money_withdraw",
+      "type": "checkbox",
+      "required": false,
+      "description": "Уведомление о выводе денег (0 — выключить, 1 — включить)."
+    },
+    {
+      "name": "donut_money_withdraw_error",
+      "type": "checkbox",
+      "required": false,
+      "description": "Уведомление об ошибке при выводе денег (0 — выключить, 1 — включить)."
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "После успешного выполнения возвращает 1."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "group_idintegerИдентификатор сообщества.Обязательный параметрserver_idpositiveИдентификатор сервера.api_versionstringВерсия Callback APImessage_newcheckboxУведомления о новых сообщениях (0 — выключить, 1 — включить).message_replycheckboxУведомления об исходящем сообщении (0 — выключить, 1 — включить).message_allowcheckboxУведомления о подписке на сообщения (0 — выключить, 1 — включить).message_editcheckboxУведомления о редактировании сообщения (0 — выключить, 1 — включить).message_denycheckboxУведомления о запрете на сообщения (0 — выключить, 1 — включить).message_typing_statecheckboxУведомления о наборе текста сообщения (0 — выключить, 1 — включить).message_readcheckboxphoto_newcheckboxУведомления о добавлении новой фотографии (0 — выключить, 1 — включить).audio_newcheckboxУведомления о добавлении новой аудиозаписи (0 — выключить, 1 — включить).video_newcheckboxУведомления о добавлении новой видеозаписи (0 — выключить, 1 — включить).wall_reply_newcheckboxУведомления о добавлении нового комментария на стене (0 — выключить, 1 — включить).wall_reply_editcheckboxУведомления о редактировании комментария на стене (0 — выключить, 1 — включить).wall_reply_deletecheckboxУведомления об удалении комментария на стене (0 — выключить, 1 — включить).wall_reply_restorecheckboxУведомления о восстановлении комментария на стене (0 — выключить, 1 — включить).wall_post_newcheckboxУведомления о новой записи на стене (0 — выключить, 1 — включить).wall_repostcheckboxУведомления о репосте записи (0 "
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "После успешного выполнения возвращает 1."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "104Not found В ходе выполнения могут произойти общие ошибки"
+    },
+    {
+      "level": 2,
+      "title": "Связанные версии",
+      "text": "Перейти на страницу версий API 5.70 •В поле action объекта сообщения может возвращаться значение chat_invite_user_by_link. •В объекте сообщения добавлено поле update_time. •Методы wall.post, wall.editAdsStealth, wall.edit, wall.repost могут возвращать новую ошибку 224 — превышен лимит рекламных записей. •В Callback API добавлено новое событие — message_edit. 5.58 • В возвращаемых объектах, описывающих сообщества, появилось новое поле is_messages_blocked. • В Callback API добавлены новые события: message_allow и message_deny. Метод groups.setCallbackSettings принимает два новых параметра, а метод groups.getCallbackSettings возвращает два новых поля, соответственно."
+    }
+  ],
+  "contentText": "Позволяет задать настройки уведомлений о событиях в Callback API. Параметры: group_idintegerИдентификатор сообщества.Обязательный параметрserver_idpositiveИдентификатор сервера.api_versionstringВерсия Callback APImessage_newcheckboxУведомления о новых сообщениях (0 — выключить, 1 — включить).message_replycheckboxУведомления об исходящем сообщении (0 — выключить, 1 — включить).message_allowcheckboxУведомления о подписке на сообщения (0 — выключить, 1 — включить).message_editcheckboxУведомления о редактировании сообщения (0 — выключить, 1 — включить).message_denycheckboxУведомления о запрете на сообщения (0 — выключить, 1 — включить).message_typing_statecheckboxУведомления о наборе текста сообщения (0 — выключить, 1 — включить).message_readcheckboxphoto_newcheckboxУведомления о добавлении новой фотографии (0 — выключить, 1 — включить).audio_newcheckboxУведомления о добавлении новой аудиозаписи (0 — выключить, 1 — включить).video_newcheckboxУведомления о добавлении новой видеозаписи (0 — выключить, 1 — включить).wall_reply_newcheckboxУведомления о добавлении нового комментария на стене (0 — выключить, 1 — включить).wall_reply_editcheckboxУведомления о редактировании комментария на стене (0 — выключить, 1 — включить).wall_reply_deletecheckboxУведомления об удалении комментария на стене (0 — выключить, 1 — включить).wall_reply_restorecheckboxУведомления о восстановлении комментария на стене (0 — выключить, 1 — включить).wall_post_newcheckboxУведомления о новой записи на стене (0 — выключить, 1 — включить).wall_repostcheckboxУведомления о репосте записи (0 Результат: После успешного выполнения возвращает 1. Коды ошибок: 104Not found В ходе выполнения могут произойти общие ошибки Связанные версии: Перейти на страницу версий API 5.70 •В поле action объекта сообщения может возвращаться значение chat_invite_user_by_link. •В объекте сообщения добавлено поле update_time. •Методы wall.post, wall.editAdsStealth, wall.edit, wall.repost могут возвращать новую ошибку 224 — превышен лимит рекламных записей. •В Callback API добавлено новое событие — message_edit. 5.58 • В возвращаемых объектах, описывающих сообщества, появилось новое поле is_messages_blocked. • В Callback API добавлены новые события: message_allow и message_deny. Метод groups.setCallbackSettings принимает два новых параметра, а метод groups.getCallbackSettings возвращает два новых поля, соответственно.",
+  "group": "groups"
+}

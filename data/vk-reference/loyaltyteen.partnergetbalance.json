@@ -1,0 +1,31 @@
+{
+  "id": "loyaltyteen.partnergetbalance",
+  "url": "https://dev.vk.com/ru/method/loyaltyTeen.partnerGetBalance",
+  "title": "loyaltyTeen.partnerGetBalance | VK для разработчиков",
+  "h1": "loyaltyTeen.partnerGetBalance",
+  "description": "positive",
+  "params": [
+    {
+      "name": "user_id",
+      "type": "positive",
+      "required": true,
+      "description": "Обязательный параметр"
+    }
+  ],
+  "returns": [],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "user_idpositiveОбязательный параметр"
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "5000No account В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "positive Параметры: user_idpositiveОбязательный параметр Коды ошибок: 5000No account В ходе выполнения могут произойти общие ошибки",
+  "group": "loyaltyteen"
+}

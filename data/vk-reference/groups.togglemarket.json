@@ -1,0 +1,79 @@
+{
+  "id": "groups.togglemarket",
+  "url": "https://dev.vk.com/ru/method/groups.toggleMarket",
+  "title": "groups.toggleMarket | VK для разработчиков",
+  "h1": "groups.toggleMarket",
+  "description": "Переключает функционал раздела «Товаров» в выбранной группе.",
+  "params": [
+    {
+      "name": "group_id",
+      "type": "positive",
+      "required": true,
+      "description": "Идентификатор сообщества, в котором необходимо переключить функционал магазина.Обязательный параметр"
+    },
+    {
+      "name": "state",
+      "type": "string",
+      "required": true,
+      "description": "Значение переключателя. Возможные значения: •none — товары отключены; •basic — базовые товары; •advanced — расширенные товары. Обязательный параметр"
+    },
+    {
+      "name": "ref",
+      "type": "string",
+      "required": false,
+      "description": ""
+    },
+    {
+      "name": "utm_source",
+      "type": "string",
+      "required": false,
+      "description": ""
+    },
+    {
+      "name": "utm_medium",
+      "type": "string",
+      "required": false,
+      "description": ""
+    },
+    {
+      "name": "utm_campaign",
+      "type": "string",
+      "required": false,
+      "description": ""
+    },
+    {
+      "name": "utm_content",
+      "type": "string",
+      "required": false,
+      "description": ""
+    },
+    {
+      "name": "utm_term",
+      "type": "string",
+      "required": false,
+      "description": ""
+    },
+    {
+      "name": "promocode",
+      "type": "string",
+      "required": false,
+      "description": ""
+    }
+  ],
+  "returns": [],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "group_idpositiveИдентификатор сообщества, в котором необходимо переключить функционал магазина.Обязательный параметрstatestringЗначение переключателя. Возможные значения: •none — товары отключены; •basic — базовые товары; •advanced — расширенные товары. Обязательный параметрrefstringutm_sourcestringutm_mediumstringutm_campaignstringutm_contentstringutm_termstringpromocodestring"
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "1431Market was already enabled in this group1432Market was already disabled in this group В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Переключает функционал раздела «Товаров» в выбранной группе. Параметры: group_idpositiveИдентификатор сообщества, в котором необходимо переключить функционал магазина.Обязательный параметрstatestringЗначение переключателя. Возможные значения: •none — товары отключены; •basic — базовые товары; •advanced — расширенные товары. Обязательный параметрrefstringutm_sourcestringutm_mediumstringutm_campaignstringutm_contentstringutm_termstringpromocodestring Коды ошибок: 1431Market was already enabled in this group1432Market was already disabled in this group В ходе выполнения могут произойти общие ошибки",
+  "group": "groups"
+}

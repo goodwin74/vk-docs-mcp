@@ -1,0 +1,53 @@
+{
+  "id": "market.editpropertyvariant",
+  "url": "https://dev.vk.com/ru/method/market.editPropertyVariant",
+  "title": "market.editPropertyVariant | VK для разработчиков",
+  "h1": "market.editPropertyVariant",
+  "description": "Редактирует вариант свойства.",
+  "params": [
+    {
+      "name": "group_id",
+      "type": "integer",
+      "required": true,
+      "description": "Идентификатор сообщества.Обязательный параметр"
+    },
+    {
+      "name": "variant_id",
+      "type": "positive",
+      "required": true,
+      "description": "Идентификатор варианта.Обязательный параметр"
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": true,
+      "description": "Название варианта.Обязательный параметр Макс. длина = 60 Мин. длина = 1"
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "В случае успешного выполнения возвращает 1."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "group_idintegerИдентификатор сообщества.Обязательный параметрvariant_idpositiveИдентификатор варианта.Обязательный параметрtitlestringНазвание варианта.Обязательный параметр Макс. длина = 60 Мин. длина = 1"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "В случае успешного выполнения возвращает 1."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "1409Extended market not enabled1411Variants error1416Variant not found1421Name too long1423Variant value is too long1438Market not enabled В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Редактирует вариант свойства. Параметры: group_idintegerИдентификатор сообщества.Обязательный параметрvariant_idpositiveИдентификатор варианта.Обязательный параметрtitlestringНазвание варианта.Обязательный параметр Макс. длина = 60 Мин. длина = 1 Результат: В случае успешного выполнения возвращает 1. Коды ошибок: 1409Extended market not enabled1411Variants error1416Variant not found1421Name too long1423Variant value is too long1438Market not enabled В ходе выполнения могут произойти общие ошибки",
+  "group": "market"
+}

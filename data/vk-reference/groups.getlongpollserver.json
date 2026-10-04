@@ -1,0 +1,41 @@
+{
+  "id": "groups.getlongpollserver",
+  "url": "https://dev.vk.com/ru/method/groups.getLongPollServer",
+  "title": "groups.getLongPollServer | VK для разработчиков",
+  "h1": "groups.getLongPollServer",
+  "description": "Возвращает данные для подключения к Bots Longpoll API.",
+  "params": [
+    {
+      "name": "group_id",
+      "type": "positive",
+      "required": true,
+      "description": "Идентификатор сообщества.Обязательный параметр"
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "Возвращает объект, который содержит следующие поля: •key (string) — ключ; •server (string) — URL сервера; •ts (string) — timestamp."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "group_idpositiveИдентификатор сообщества.Обязательный параметр Обратите внимание. При получении ключа доступа сообщества в параметре scope укажите право доступа manage. Ключи доступа сообщества, не включающие этот scope, использовать для вызова метода не получится."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Возвращает объект, который содержит следующие поля: •key (string) — ключ; •server (string) — URL сервера; •ts (string) — timestamp."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Возвращает данные для подключения к Bots Longpoll API. Параметры: group_idpositiveИдентификатор сообщества.Обязательный параметр Обратите внимание. При получении ключа доступа сообщества в параметре scope укажите право доступа manage. Ключи доступа сообщества, не включающие этот scope, использовать для вызова метода не получится. Результат: Возвращает объект, который содержит следующие поля: •key (string) — ключ; •server (string) — URL сервера; •ts (string) — timestamp. Коды ошибок: В ходе выполнения могут произойти общие ошибки",
+  "group": "groups"
+}

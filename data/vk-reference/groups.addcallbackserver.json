@@ -1,0 +1,59 @@
+{
+  "id": "groups.addcallbackserver",
+  "url": "https://dev.vk.com/ru/method/groups.addCallbackServer",
+  "title": "groups.addCallbackServer | VK для разработчиков",
+  "h1": "groups.addCallbackServer",
+  "description": "Добавляет сервер для Callback API в сообщество.",
+  "params": [
+    {
+      "name": "group_id",
+      "type": "positive",
+      "required": true,
+      "description": "Идентификатор сообщества.Обязательный параметр"
+    },
+    {
+      "name": "url",
+      "type": "string",
+      "required": true,
+      "description": "URL сервера.Обязательный параметр"
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": true,
+      "description": "Название сервера.Обязательный параметр Макс. длина = 14"
+    },
+    {
+      "name": "secret_key",
+      "type": "string",
+      "required": false,
+      "description": "Секретный ключ.Макс. длина = 50"
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "После успешного выполнения возвращает идентификатор добавленного сервера в поле server_id (integer)."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "group_idpositiveИдентификатор сообщества.Обязательный параметрurlstringURL сервера.Обязательный параметрtitlestringНазвание сервера.Обязательный параметр Макс. длина = 14secret_keystringСекретный ключ.Макс. длина = 50"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "После успешного выполнения возвращает идентификатор добавленного сервера в поле server_id (integer)."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "2000Servers number limit is reached В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Добавляет сервер для Callback API в сообщество. Параметры: group_idpositiveИдентификатор сообщества.Обязательный параметрurlstringURL сервера.Обязательный параметрtitlestringНазвание сервера.Обязательный параметр Макс. длина = 14secret_keystringСекретный ключ.Макс. длина = 50 Результат: После успешного выполнения возвращает идентификатор добавленного сервера в поле server_id (integer). Коды ошибок: 2000Servers number limit is reached В ходе выполнения могут произойти общие ошибки",
+  "group": "groups"
+}
