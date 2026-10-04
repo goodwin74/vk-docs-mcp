@@ -1,0 +1,37 @@
+{
+  "id": "messages.deletereaction",
+  "url": "https://dev.vk.com/ru/method/messages.deleteReaction",
+  "title": "messages.deleteReaction | VK для разработчиков",
+  "h1": "messages.deleteReaction",
+  "description": "Удаление ранее поставленной реакции",
+  "params": [
+    {
+      "name": "peer_id",
+      "type": "integer",
+      "required": true,
+      "description": "peer_id переписки: •user_id — для личных чатов. •group_id — для чатов с сообществом. •2 000 000 000 + id_чата — для чатов. Обязательный параметр"
+    },
+    {
+      "name": "cmid",
+      "type": "positive",
+      "required": true,
+      "description": "conversation_message_id - порядковый номер сообщения в чатеОбязательный параметр"
+    }
+  ],
+  "returns": [],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "peer_idintegerpeer_id переписки: •user_id — для личных чатов. •group_id — для чатов с сообществом. •2 000 000 000 + id_чата — для чатов. Обязательный параметрcmidpositiveconversation_message_id - порядковый номер сообщения в чатеОбязательный параметр"
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Удаление ранее поставленной реакции Параметры: peer_idintegerpeer_id переписки: •user_id — для личных чатов. •group_id — для чатов с сообществом. •2 000 000 000 + id_чата — для чатов. Обязательный параметрcmidpositiveconversation_message_id - порядковый номер сообщения в чатеОбязательный параметр Коды ошибок: В ходе выполнения могут произойти общие ошибки",
+  "group": "messages"
+}

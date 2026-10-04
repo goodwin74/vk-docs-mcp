@@ -1,0 +1,41 @@
+{
+  "id": "messages.setchatphoto",
+  "url": "https://dev.vk.com/ru/method/messages.setChatPhoto",
+  "title": "messages.setChatPhoto | VK для разработчиков",
+  "h1": "messages.setChatPhoto",
+  "description": "Метод сохраняет обложку беседы после её успешной загрузки на сервер.",
+  "params": [
+    {
+      "name": "file",
+      "type": "text",
+      "required": true,
+      "description": "Обязательный параметр. Фотография в формате multipart/form-data. Параметр возвращается в результате загрузки фотографии на сервер.Обязательный параметр"
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "Метод возвращает объект. Поля объекта: ПолеТипОписаниеmessage_idintegerИдентификатор отправленного системного сообщения.chatobjectОбъект группового чата. Пример ответа: JSON{ \"response\":{ \"message_id\":6, \"chat\":{ \"admin_id\":-218252175, \"id\":1, \"type\":\"chat\", \"members_count\":2, \"photo_100\":\"https:\\/\\/sun1.userapi.com\\/sun1-99\\/s\\/v1\\/s2\\/qca7xiltqwyAxlTuKSTZuXo0WwUBL871xSYll3e-wQrEtli-IMY2h27fTpwiHO48NPIyvq7sLfowbHbk7G5Nq98.jpg\", \"photo_200\":\"https:\\/\\/sun1.userapi.com\\/sun1-91\\/s\\/v1\\/s2\\/cPnmm9ZqzzFFXOiIBhsbKITg8RplB0e2uBtUERP1yxlliKS-SrF1bVNiKptonmXZ5QdLMysDb_qjs2DhJpGtyeY.jpg\", \"photo_50\":\"https:\\/\\/sun1.userapi.com\\/sun1-28\\/s\\/v1\\/ig2\\/4UuKyiSvJN4kluu_taiSuG3wzeMoIdRrz0GLXR55hC1jnXVPT0JuYqdDXVvHCkQ3HgPbcyjUOBRINx2XDSibsOGI.jpg?size=50x0&quality=96&crop=428,0,1704,1704&ava=1\", \"title\":\"Тестирование Персика\", \"users\":[ -218252175, 743784474 ], \"is_default_photo\":false } } }"
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "filetextОбязательный параметр. Фотография в формате multipart/form-data. Параметр возвращается в результате загрузки фотографии на сервер.Обязательный параметр"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Метод возвращает объект. Поля объекта: ПолеТипОписаниеmessage_idintegerИдентификатор отправленного системного сообщения.chatobjectОбъект группового чата. Пример ответа: JSON{ \"response\":{ \"message_id\":6, \"chat\":{ \"admin_id\":-218252175, \"id\":1, \"type\":\"chat\", \"members_count\":2, \"photo_100\":\"https:\\/\\/sun1.userapi.com\\/sun1-99\\/s\\/v1\\/s2\\/qca7xiltqwyAxlTuKSTZuXo0WwUBL871xSYll3e-wQrEtli-IMY2h27fTpwiHO48NPIyvq7sLfowbHbk7G5Nq98.jpg\", \"photo_200\":\"https:\\/\\/sun1.userapi.com\\/sun1-91\\/s\\/v1\\/s2\\/cPnmm9ZqzzFFXOiIBhsbKITg8RplB0e2uBtUERP1yxlliKS-SrF1bVNiKptonmXZ5QdLMysDb_qjs2DhJpGtyeY.jpg\", \"photo_50\":\"https:\\/\\/sun1.userapi.com\\/sun1-28\\/s\\/v1\\/ig2\\/4UuKyiSvJN4kluu_taiSuG3wzeMoIdRrz0GLXR55hC1jnXVPT0JuYqdDXVvHCkQ3HgPbcyjUOBRINx2XDSibsOGI.jpg?size=50x0&quality=96&crop=428,0,1704,1704&ava=1\", \"title\":\"Тестирование Персика\", \"users\":[ -218252175, 743784474 ], \"is_default_photo\":false } } }"
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "22Upload error925You are not admin of this chat945Chat was disabled1017Chat was deleted1160Original photo was changed В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Метод сохраняет обложку беседы после её успешной загрузки на сервер. Параметры: filetextОбязательный параметр. Фотография в формате multipart/form-data. Параметр возвращается в результате загрузки фотографии на сервер.Обязательный параметр Результат: Метод возвращает объект. Поля объекта: ПолеТипОписаниеmessage_idintegerИдентификатор отправленного системного сообщения.chatobjectОбъект группового чата. Пример ответа: JSON{ \"response\":{ \"message_id\":6, \"chat\":{ \"admin_id\":-218252175, \"id\":1, \"type\":\"chat\", \"members_count\":2, \"photo_100\":\"https:\\/\\/sun1.userapi.com\\/sun1-99\\/s\\/v1\\/s2\\/qca7xiltqwyAxlTuKSTZuXo0WwUBL871xSYll3e-wQrEtli-IMY2h27fTpwiHO48NPIyvq7sLfowbHbk7G5Nq98.jpg\", \"photo_200\":\"https:\\/\\/sun1.userapi.com\\/sun1-91\\/s\\/v1\\/s2\\/cPnmm9ZqzzFFXOiIBhsbKITg8RplB0e2uBtUERP1yxlliKS-SrF1bVNiKptonmXZ5QdLMysDb_qjs2DhJpGtyeY.jpg\", \"photo_50\":\"https:\\/\\/sun1.userapi.com\\/sun1-28\\/s\\/v1\\/ig2\\/4UuKyiSvJN4kluu_taiSuG3wzeMoIdRrz0GLXR55hC1jnXVPT0JuYqdDXVvHCkQ3HgPbcyjUOBRINx2XDSibsOGI.jpg?size=50x0&quality=96&crop=428,0,1704,1704&ava=1\", \"title\":\"Тестирование Персика\", \"users\":[ -218252175, 743784474 ], \"is_default_photo\":false } } } Коды ошибок: 22Upload error925You are not admin of this chat945Chat was disabled1017Chat was deleted1160Original photo was changed В ходе выполнения могут произойти общие ошибки",
+  "group": "messages"
+}

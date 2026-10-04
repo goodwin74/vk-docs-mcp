@@ -1,0 +1,52 @@
+{
+  "id": "messages.editchat",
+  "url": "https://dev.vk.com/ru/method/messages.editChat",
+  "title": "messages.editChat | VK для разработчиков",
+  "h1": "messages.editChat",
+  "description": "Изменяет название беседы.",
+  "params": [
+    {
+      "name": "chat_id",
+      "type": "positive",
+      "required": true,
+      "description": "Идентификатор беседы.Обязательный параметр"
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Новое название для беседы."
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "После успешного выполнения возвращает 1."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "chat_idpositiveИдентификатор беседы.Обязательный параметрtitlestringНовое название для беседы."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "После успешного выполнения возвращает 1."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "925You are not admin of this chat945Chat was disabled946Chat not supported983You are restricted to write to a chat984You has spam restriction1012Writing is disabled for this chat1017Chat was deleted В ходе выполнения могут произойти общие ошибки"
+    },
+    {
+      "level": 2,
+      "title": "Связанные методы",
+      "text": "messages.createChatСоздаёт чат с несколькими участниками.messages.addChatUserДобавляет в мультидиалог нового пользователя.messages.removeChatUserИсключает из мультидиалога пользователя, если текущий пользователь или сообщество является администратором беседы либо текущий пользователь пригласил исключаемого пользователя.messages.setChatPhotoМетод сохраняет обложку беседы после её успешной загрузки на сервер."
+    }
+  ],
+  "contentText": "Изменяет название беседы. Параметры: chat_idpositiveИдентификатор беседы.Обязательный параметрtitlestringНовое название для беседы. Результат: После успешного выполнения возвращает 1. Коды ошибок: 925You are not admin of this chat945Chat was disabled946Chat not supported983You are restricted to write to a chat984You has spam restriction1012Writing is disabled for this chat1017Chat was deleted В ходе выполнения могут произойти общие ошибки Связанные методы: messages.createChatСоздаёт чат с несколькими участниками.messages.addChatUserДобавляет в мультидиалог нового пользователя.messages.removeChatUserИсключает из мультидиалога пользователя, если текущий пользователь или сообщество является администратором беседы либо текущий пользователь пригласил исключаемого пользователя.messages.setChatPhotoМетод сохраняет обложку беседы после её успешной загрузки на сервер.",
+  "group": "messages"
+}

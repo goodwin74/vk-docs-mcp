@@ -1,0 +1,184 @@
+{
+  "id": "messages.send",
+  "url": "https://dev.vk.com/ru/method/messages.send",
+  "title": "messages.send | VK для разработчиков",
+  "h1": "messages.send",
+  "description": "Метод отправляет сообщение.",
+  "params": [
+    {
+      "name": "user_id",
+      "type": "integer",
+      "required": true,
+      "description": "Обязательный параметр. Идентификатор пользователя, которому отправляется сообщение. Вместо него можно использовать peer_id."
+    },
+    {
+      "name": "random_id",
+      "type": "integer",
+      "required": true,
+      "description": "Обязательный параметр. Уникальный (в привязке к идентификатору приложения и идентификатору отправителя) идентификатор, предназначенный для предотвращения повторной отправки одного и того же сообщения. Сохраняется вместе с сообщением и доступен в истории сообщений. Возможные значения: •0 — проверка на уникальность не нужна. •Любое другое число в пределах int32 — проверка на уникальность нужна. Переданный в запросе random_id используется для проверки уникальности сообщений в заданном диалоге за последний час (но не более 100 последних сообщений)."
+    },
+    {
+      "name": "peer_id",
+      "type": "integer",
+      "required": false,
+      "description": "Необязательный параметр. Идентификатор получателя сообщения: •Для пользователя — ИДЕНТИФИКАТОР_ПОЛЬЗОВАТЕЛЯ. •Для групповой беседы — 2000000000 + ИДЕНТИФИКАТОР_БЕСЕДЫ. •Для сообщества — -ИДЕНТИФИКАТОР_СООБЩЕСТВА."
+    },
+    {
+      "name": "peer_ids",
+      "type": "string",
+      "required": false,
+      "description": "Необязательный параметр. Идентификаторы получателей сообщения, перечисленные через запятую. Максимальное количество идентификаторов — 100. Примечание. Доступно только для ключа доступа сообщества."
+    },
+    {
+      "name": "domain",
+      "type": "string",
+      "required": false,
+      "description": "Необязательный параметр. Короткий адрес пользователя. Пример: persik_ryzhiy."
+    },
+    {
+      "name": "chat_id",
+      "type": "positive",
+      "required": false,
+      "description": "Необязательный параметр. Идентификатор беседы, в которую отправляется сообщение."
+    },
+    {
+      "name": "user_ids",
+      "type": "string",
+      "required": false,
+      "description": "Необязательный параметр. Идентификаторы получателей сообщения, перечисленные через запятую. Максимальное количество идентификаторов — 100. Примечание. Доступно только для ключа доступа сообщества."
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Необязательный параметр. Текст личного сообщения. Обязательный параметр, если не задан параметр attachment.Макс. длина = 9000"
+    },
+    {
+      "name": "lat",
+      "type": "string",
+      "required": false,
+      "description": "Необязательный параметр. Географическая широта в градусах. Диапазон значений: от -90 до 90."
+    },
+    {
+      "name": "long",
+      "type": "string",
+      "required": false,
+      "description": "Необязательный параметр. Географическая долгота в градусах. Диапазон значений: от -180 до 180."
+    },
+    {
+      "name": "attachment",
+      "type": "string",
+      "required": false,
+      "description": "Необязательный параметр. Объект или несколько объектов, приложенных к записи. Обязательный параметр, если не задан параметр message. К записи можно приложить медиа или ссылку на внешнюю страницу. Если объектов несколько, укажите их через запятую ,. Формат описания медиавложения: {type}{owner_id}_{media_id}, где: •type — тип медиавложения: •photo — фотография. •video — видеозапись. •audio — аудиозапись. •doc — файл. •wall — запись на стене. •market — товар. •poll — опрос. •question — вопрос. •owner_id — идентификатор владельца медиавложения. Идентификатор сообщества должен начинаться со знака -. •media_id — идентификатор медиавложения. Если прикрепляется медиавложение, которое принадлежит другому пользователю, добавьте к формату описания медиавложения ключ доступа: {type}{owner_id}_{media_id}_{access_key}.Макс. длина = 9000"
+    },
+    {
+      "name": "reply_to",
+      "type": "integer",
+      "required": false,
+      "description": "Необязательный параметр. Идентификатор сообщения, на которое требуется ответить."
+    },
+    {
+      "name": "forward_messages",
+      "type": "integer",
+      "required": false,
+      "description": "Необязательный параметр. Идентификаторы пересылаемых сообщений, перечисленные через запятую. Пересылаемые сообщения отправителя будут отображаться в теле сообщения у получателя. Ограничения: •Не более 100 значений на верхнем уровне. •Максимальный уровень вложенности — 45. •Максимальное количество пересылаемых сообщений — 500."
+    },
+    {
+      "name": "forward",
+      "type": "text",
+      "required": false,
+      "description": "Необязательный параметр. JSON-объект со следующими полями: •owner_id — владелец сообщений. Укажите это поле, если вы хотите переслать сообщения из сообщества в личный диалог. •peer_id — идентификатор места, из которого необходимо переслать сообщения. •conversation_message_ids — массив conversation_message_id сообщений, которые необходимо переслать. В параметр можно передать сообщения, которые: •Находятся в личном диалоге с ботом. •Являются исходящими сообщениями бота. •Написаны после того, как бот вступил в беседу и появился доступ к сообщениям. •message_ids — массив идентификаторов сообщений. •is_reply — ответ на сообщения. Укажите это поле, если вы хотите ответить на сообщения в том чате, в котором находятся сообщения. При этом в conversation_message_ids или message_ids должен находиться только один элемент."
+    },
+    {
+      "name": "sticker_id",
+      "type": "positive",
+      "required": false,
+      "description": "Необязательный параметр. Идентификатор стикера."
+    },
+    {
+      "name": "group_id",
+      "type": "integer",
+      "required": false,
+      "description": "Необязательный параметр. Идентификатор сообщества для сообщений сообщества с ключом доступа пользователя."
+    },
+    {
+      "name": "keyboard",
+      "type": "text",
+      "required": false,
+      "description": "Необязательный параметр. Объект, описывающий клавиатуру бота."
+    },
+    {
+      "name": "template",
+      "type": "text",
+      "required": false,
+      "description": "Необязательный параметр. Объект, описывающий шаблон сообщения."
+    },
+    {
+      "name": "payload",
+      "type": "text",
+      "required": false,
+      "description": "Необязательный параметр. Полезные данные."
+    },
+    {
+      "name": "content_source",
+      "type": "text",
+      "required": false,
+      "description": "Необязательный параметр. Объект в формате JSON, описывающий источник пользовательского контента для чат-ботов."
+    },
+    {
+      "name": "dont_parse_links",
+      "type": "checkbox",
+      "required": false,
+      "description": "Необязательный параметр. Информация о том, создать ли сниппет ссылки из сообщения. Возможные значения: •1 — не создавать сниппет ссылки из сообщения. •0 — создать сниппет ссылки из сообщения."
+    },
+    {
+      "name": "disable_mentions",
+      "type": "checkbox",
+      "required": false,
+      "description": "Необязательный параметр. Информация о том, отключить ли уведомление об упоминании в сообщении. Возможные значения: •1 — отключить уведомление об упоминании в сообщении. •0 — не отключать уведомление об упоминании в сообщении."
+    },
+    {
+      "name": "intent",
+      "type": "string",
+      "required": false,
+      "description": "Необязательный параметр. Строка, описывающая интенты."
+    },
+    {
+      "name": "subscribe_id",
+      "type": "positive",
+      "required": false,
+      "description": "Необязательный параметр. Число, которое будет использоваться для работы с интентами в будущем."
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "Метод возвращает идентификатор отправленного сообщения. Если передан параметр peer_ids, метод возвращает массив объектов. Поля объекта: ПолеТипОписаниеpeer_idintegerИдентификатор назначения.message_idintegerИдентификатор сообщения.conversation_message_idintegerИдентификатор сообщения в диалоге.errorstringСообщение об ошибке, если сообщение не было доставлено получателю. Пример ответа: JSON{ \"response\":5 }"
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "user_idintegerОбязательный параметр. Идентификатор пользователя, которому отправляется сообщение. Вместо него можно использовать peer_id.random_idintegerОбязательный параметр. Уникальный (в привязке к идентификатору приложения и идентификатору отправителя) идентификатор, предназначенный для предотвращения повторной отправки одного и того же сообщения. Сохраняется вместе с сообщением и доступен в истории сообщений. Возможные значения: •0 — проверка на уникальность не нужна. •Любое другое число в пределах int32 — проверка на уникальность нужна. Переданный в запросе random_id используется для проверки уникальности сообщений в заданном диалоге за последний час (но не более 100 последних сообщений).peer_idintegerНеобязательный параметр. Идентификатор получателя сообщения: •Для пользователя — ИДЕНТИФИКАТОР_ПОЛЬЗОВАТЕЛЯ. •Для групповой беседы — 2000000000 + ИДЕНТИФИКАТОР_БЕСЕДЫ. •Для сообщества — -ИДЕНТИФИКАТОР_СООБЩЕСТВА. peer_idsstringНеобязательный параметр. Идентификаторы получателей сообщения, перечисленные через запятую. Максимальное количество идентификаторов — 100. Примечание. Доступно только для ключа доступа сообщества.domainstringНеобязательный параметр. Короткий адрес пользователя. Пример: persik_ryzhiy.chat_idpositiveНеобязательный параметр. Идентификатор беседы, в которую отправляется сообщение.user_idsstringНеобязательный параметр. Идентификаторы получателей сообщения, перечисленные через запятую. Максимальное количество идентификаторов — 100. Примечание. Доступно тол"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Метод возвращает идентификатор отправленного сообщения. Если передан параметр peer_ids, метод возвращает массив объектов. Поля объекта: ПолеТипОписаниеpeer_idintegerИдентификатор назначения.message_idintegerИдентификатор сообщения.conversation_message_idintegerИдентификатор сообщения в диалоге.errorstringСообщение об ошибке, если сообщение не было доставлено получателю. Пример ответа: JSON{ \"response\":5 }"
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "104Not found900Can't send messages for users from blacklist901Can't send messages for users without permission902Can't send messages to this user due to their privacy settings911Keyboard format is invalid912This is a chat bot feature, change this status in settings913Too many forwarded messages914Message is too long917You don't have access to this chat921Can't forward these messages922You left this chat925You are not admin of this chat936Contact not found940Too many posts in messages943Cannot use this intent944Limits overflow for this intent945Chat was disabled946Chat not supported950Can't send message, reply timed out962You can't access donut chat without subscription969Message cannot be forwarded979App action is restricted for conversations with communities983You are restricted to write to a chat984You has spam restriction985Cannot write to notifications only groups986Need edu role987Need message request988Pending message request991Postponed messages for this peer not supported992Postponed messages limit for this peer id reached993Chat moved to MAX994Chat forward disabled995Messenger degradation996Chat blocked due to response from another admin1012Writing is disabled for this chat1016Invalid account type - should not be edu1017Chat was deleted1021Can't send messages for users without conversation В ходе выполнения могут произойти общие ошибки"
+    },
+    {
+      "level": 2,
+      "title": "Связанные версии",
+      "text": "Перейти на страницу версий API 5.111 •В объекте сообщения появилось поле template."
+    }
+  ],
+  "contentText": "Метод отправляет сообщение. Параметры: user_idintegerОбязательный параметр. Идентификатор пользователя, которому отправляется сообщение. Вместо него можно использовать peer_id.random_idintegerОбязательный параметр. Уникальный (в привязке к идентификатору приложения и идентификатору отправителя) идентификатор, предназначенный для предотвращения повторной отправки одного и того же сообщения. Сохраняется вместе с сообщением и доступен в истории сообщений. Возможные значения: •0 — проверка на уникальность не нужна. •Любое другое число в пределах int32 — проверка на уникальность нужна. Переданный в запросе random_id используется для проверки уникальности сообщений в заданном диалоге за последний час (но не более 100 последних сообщений).peer_idintegerНеобязательный параметр. Идентификатор получателя сообщения: •Для пользователя — ИДЕНТИФИКАТОР_ПОЛЬЗОВАТЕЛЯ. •Для групповой беседы — 2000000000 + ИДЕНТИФИКАТОР_БЕСЕДЫ. •Для сообщества — -ИДЕНТИФИКАТОР_СООБЩЕСТВА. peer_idsstringНеобязательный параметр. Идентификаторы получателей сообщения, перечисленные через запятую. Максимальное количество идентификаторов — 100. Примечание. Доступно только для ключа доступа сообщества.domainstringНеобязательный параметр. Короткий адрес пользователя. Пример: persik_ryzhiy.chat_idpositiveНеобязательный параметр. Идентификатор беседы, в которую отправляется сообщение.user_idsstringНеобязательный параметр. Идентификаторы получателей сообщения, перечисленные через запятую. Максимальное количество идентификаторов — 100. Примечание. Доступно тол Результат: Метод возвращает идентификатор отправленного сообщения. Если передан параметр peer_ids, метод возвращает массив объектов. Поля объекта: ПолеТипОписаниеpeer_idintegerИдентификатор назначения.message_idintegerИдентификатор сообщения.conversation_message_idintegerИдентификатор сообщения в диалоге.errorstringСообщение об ошибке, если сообщение не было доставлено получателю. Пример ответа: JSON{ \"response\":5 } Коды ошибок: 104Not found900Can't send messages for users from blacklist901Can't send messages for users without permission902Can't send messages to this user due to their privacy settings911Keyboard format is invalid912This is a chat bot feature, change this status in settings913Too many forwarded messages914Message is too long917You don't have access to this chat921Can't forward these messages922You left this chat925You are not admin of this chat936Contact not found940Too many posts in messages943Cannot use this intent944Limits overflow for this intent945Chat was disabled946Chat not supported950Can't send message, reply timed out962You can't access donut chat without subscription969Message cannot be forwarded979App action is restricted for conversations with communities983You are restricted to write to a chat984You has spam restriction985Cannot write to notifications only groups986Need edu role987Need message request988Pending message request991Postponed messages for this peer not supported992Postponed messages limit for this peer id reached993Chat moved to MAX994Chat forward disabled995Messenger degradation996Chat blocked due to response from another admin1012Writing is disabled for this chat1016Invalid account type - should not be edu1017Chat was deleted1021Can't send messages for users without conversation В ходе выполнения могут произойти общие ошибки Связанные версии: Перейти на страницу версий API 5.111 •В объекте сообщения появилось поле template.",
+  "group": "messages"
+}

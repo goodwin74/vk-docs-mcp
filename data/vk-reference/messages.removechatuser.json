@@ -1,0 +1,63 @@
+{
+  "id": "messages.removechatuser",
+  "url": "https://dev.vk.com/ru/method/messages.removeChatUser",
+  "title": "messages.removeChatUser | VK для разработчиков",
+  "h1": "messages.removeChatUser",
+  "description": "Исключает из мультидиалога пользователя, если текущий пользователь или сообщество является администратором беседы либо текущий пользователь пригласил исключаемого пользователя.",
+  "params": [
+    {
+      "name": "chat_id",
+      "type": "positive",
+      "required": true,
+      "description": "Идентификатор беседы.Обязательный параметр"
+    },
+    {
+      "name": "user_id",
+      "type": "integer",
+      "required": false,
+      "description": "Идентификатор пользователя, которого необходимо исключить из беседы."
+    },
+    {
+      "name": "member_id",
+      "type": "integer",
+      "required": false,
+      "description": "Идентификатор участника, которого необходимо исключить из беседы. Для сообществ — идентификатор сообщества со знаком «минус»."
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "После успешного выполнения возвращает 1."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "chat_idpositiveИдентификатор беседы.Обязательный параметрuser_idintegerИдентификатор пользователя, которого необходимо исключить из беседы.member_idintegerИдентификатор участника, которого необходимо исключить из беседы. Для сообществ — идентификатор сообщества со знаком «минус»."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "После успешного выполнения возвращает 1."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "925You are not admin of this chat935User not found in chat936Contact not found945Chat was disabled946Chat not supported983You are restricted to write to a chat984You has spam restriction1017Chat was deleted В ходе выполнения могут произойти общие ошибки"
+    },
+    {
+      "level": 2,
+      "title": "Связанные методы",
+      "text": "messages.editChatИзменяет название беседы."
+    },
+    {
+      "level": 2,
+      "title": "Связанные версии",
+      "text": "Перейти на страницу версий API 5.88 •Метод messages.removeChatUser возвращает ошибку 935: User not found in chat, если пользователя нет в чате. 5.81 •Метод messages.removeChatUser принимает новый параметр member_id (integer). •В Callback API и Bots Longpoll добавлено новое событие — платёж через VK Pay. •Метод messages.deleteConversation в ответе возвращает поле last_deleted_id, содержащее идентификатор последнего удалённого сообщения."
+    }
+  ],
+  "contentText": "Исключает из мультидиалога пользователя, если текущий пользователь или сообщество является администратором беседы либо текущий пользователь пригласил исключаемого пользователя. Параметры: chat_idpositiveИдентификатор беседы.Обязательный параметрuser_idintegerИдентификатор пользователя, которого необходимо исключить из беседы.member_idintegerИдентификатор участника, которого необходимо исключить из беседы. Для сообществ — идентификатор сообщества со знаком «минус». Результат: После успешного выполнения возвращает 1. Коды ошибок: 925You are not admin of this chat935User not found in chat936Contact not found945Chat was disabled946Chat not supported983You are restricted to write to a chat984You has spam restriction1017Chat was deleted В ходе выполнения могут произойти общие ошибки Связанные методы: messages.editChatИзменяет название беседы. Связанные версии: Перейти на страницу версий API 5.88 •Метод messages.removeChatUser возвращает ошибку 935: User not found in chat, если пользователя нет в чате. 5.81 •Метод messages.removeChatUser принимает новый параметр member_id (integer). •В Callback API и Bots Longpoll добавлено новое событие — платёж через VK Pay. •Метод messages.deleteConversation в ответе возвращает поле last_deleted_id, содержащее идентификатор последнего удалённого сообщения.",
+  "group": "messages"
+}

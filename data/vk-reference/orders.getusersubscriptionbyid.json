@@ -1,0 +1,47 @@
+{
+  "id": "orders.getusersubscriptionbyid",
+  "url": "https://dev.vk.com/ru/method/orders.getUserSubscriptionById",
+  "title": "orders.getUserSubscriptionById | VK для разработчиков",
+  "h1": "orders.getUserSubscriptionById",
+  "description": "Получает информацию о подписке по её идентификатору.",
+  "params": [
+    {
+      "name": "user_id",
+      "type": "positive",
+      "required": true,
+      "description": "Идентификатор пользователя.Обязательный параметр"
+    },
+    {
+      "name": "subscription_id",
+      "type": "positive",
+      "required": true,
+      "description": "Идентификатор подписки.Обязательный параметр"
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "Возвращает объект, описывающий подписку. Содержит следующие поля: •id (integer) — идентификатор подписки. •item_id (string) — идентификатор товара в приложении. •status (string) — статус подписки. Возможные значения: •chargeable — неподтвержденная подписка; •active — подписка активна; •cancelled — подписка отменена. •price (integer) — стоимость подписки. •period (integer) — период подписки. •create_time (integer) — дата создания в unixtime. •update_time (integer) — дата обновления в unixtime. •period_start_time (integer) — дата начала периода в unixtime. •next_bill_time (integer) — дата следующего платежа в unixtime (если status = active). •trial_expire_time (integer) — дата истечения триал-периода (если есть). •pending_cancel (boolean, [true] — true, если подписка ожидает отмены. •cancel_reason (string) — причина отмены (если есть). Возможные значения: •user_decision — по инициативе пользователя; •app_decision — по инициативе приложения; •payment_fail — из-за проблемы с платежом; •unknown — причина неизвестна. •test_mode (boolean, [true]) — true, если используется тестовый режим."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "user_idpositiveИдентификатор пользователя.Обязательный параметрsubscription_idpositiveИдентификатор подписки.Обязательный параметр"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Возвращает объект, описывающий подписку. Содержит следующие поля: •id (integer) — идентификатор подписки. •item_id (string) — идентификатор товара в приложении. •status (string) — статус подписки. Возможные значения: •chargeable — неподтвержденная подписка; •active — подписка активна; •cancelled — подписка отменена. •price (integer) — стоимость подписки. •period (integer) — период подписки. •create_time (integer) — дата создания в unixtime. •update_time (integer) — дата обновления в unixtime. •period_start_time (integer) — дата начала периода в unixtime. •next_bill_time (integer) — дата следующего платежа в unixtime (если status = active). •trial_expire_time (integer) — дата истечения триал-периода (если есть). •pending_cancel (boolean, [true] — true, если подписка ожидает отмены. •cancel_reason (string) — причина отмены (если есть). Возможные значения: •user_decision — по инициативе пользователя; •app_decision — по инициативе приложения; •payment_fail — из-за проблемы с платежом; •unknown — причина неизвестна. •test_mode (boolean, [true]) — true, если используется тестовый режим."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "1256Subscription not found В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Получает информацию о подписке по её идентификатору. Параметры: user_idpositiveИдентификатор пользователя.Обязательный параметрsubscription_idpositiveИдентификатор подписки.Обязательный параметр Результат: Возвращает объект, описывающий подписку. Содержит следующие поля: •id (integer) — идентификатор подписки. •item_id (string) — идентификатор товара в приложении. •status (string) — статус подписки. Возможные значения: •chargeable — неподтвержденная подписка; •active — подписка активна; •cancelled — подписка отменена. •price (integer) — стоимость подписки. •period (integer) — период подписки. •create_time (integer) — дата создания в unixtime. •update_time (integer) — дата обновления в unixtime. •period_start_time (integer) — дата начала периода в unixtime. •next_bill_time (integer) — дата следующего платежа в unixtime (если status = active). •trial_expire_time (integer) — дата истечения триал-периода (если есть). •pending_cancel (boolean, [true] — true, если подписка ожидает отмены. •cancel_reason (string) — причина отмены (если есть). Возможные значения: •user_decision — по инициативе пользователя; •app_decision — по инициативе приложения; •payment_fail — из-за проблемы с платежом; •unknown — причина неизвестна. •test_mode (boolean, [true]) — true, если используется тестовый режим. Коды ошибок: 1256Subscription not found В ходе выполнения могут произойти общие ошибки",
+  "group": "orders"
+}

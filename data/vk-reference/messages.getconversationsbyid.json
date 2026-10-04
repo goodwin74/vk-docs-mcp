@@ -1,0 +1,64 @@
+{
+  "id": "messages.getconversationsbyid",
+  "url": "https://dev.vk.com/ru/method/messages.getConversationsById",
+  "title": "messages.getConversationsById | VK для разработчиков",
+  "h1": "messages.getConversationsById",
+  "description": "Позволяет получить беседу по её идентификатору.",
+  "params": [
+    {
+      "name": "peer_ids",
+      "type": "integer",
+      "required": true,
+      "description": "Идентификаторы назначений, разделённые запятой. Для пользователя: •id пользователя. Для групповой беседы: •2000000000 + id беседы. Для сообщества: •-id сообщества. Максимум — 100 идентификаторов.Обязательный параметр"
+    },
+    {
+      "name": "extended",
+      "type": "checkbox",
+      "required": false,
+      "description": "1 — возвращать дополнительные поля."
+    },
+    {
+      "name": "fields",
+      "type": "string",
+      "required": false,
+      "description": "Дополнительные поля пользователей и сообществ, которые необходимо вернуть в ответе."
+    },
+    {
+      "name": "group_id",
+      "type": "positive",
+      "required": false,
+      "description": "Идентификатор сообщества (для сообщений сообщества с ключом доступа пользователя)."
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "Возвращает общее число результатов в поле count (integer) и массив объектов бесед в поле items."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "peer_idsintegerИдентификаторы назначений, разделённые запятой. Для пользователя: •id пользователя. Для групповой беседы: •2000000000 + id беседы. Для сообщества: •-id сообщества. Максимум — 100 идентификаторов.Обязательный параметрextendedcheckbox1 — возвращать дополнительные поля.fieldsstringДополнительные поля пользователей и сообществ, которые необходимо вернуть в ответе.group_idpositiveИдентификатор сообщества (для сообщений сообщества с ключом доступа пользователя)."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Возвращает общее число результатов в поле count (integer) и массив объектов бесед в поле items."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "917You don't have access to this chat927Chat does not exist936Contact not found1017Chat was deleted В ходе выполнения могут произойти общие ошибки"
+    },
+    {
+      "level": 2,
+      "title": "Связанные версии",
+      "text": "Перейти на страницу версий API 5.130 • В методе market.editOrder добавлены поля, которые может изменять администратор сообщества: •delivery_price — стоимость доставки. •track_number — трек-номер. •payment_status — статус оплаты. Также добавлены поля для редактирования габаритов и веса заказа: •width — ширина. •length — длина. •height — высота. •weight — вес. Поле merchant_comment теперь сохраняет комментарий продавца. 5.80 •Добавили новый API для сообщений. Изменился объект message, а также появился объект conversation и связанные с ним методы. •Следующие методы объявлены устаревшими и обновляться не будут: messages.getDialogs, messages.getChat, messages.getChatUsers, messages.get, messages.searchDialogs объявлены устаревшими и больше обновляться не будут. •В методе messages.markAsRead больше не поддерживается параметр message_ids. •Следующие методы будут перенаправляться на новые версии: •messages.markAsImportantDialog → messages.markAsImportantConversation •messages.markAsAnsweredDialog → messages.markAsAnsweredConversation •messages.deleteDialog → messages.deleteConversation. •Метод secure.sendSMSNotification теперь отправляет несколько сообщений. Изменился формат ответа."
+    }
+  ],
+  "contentText": "Позволяет получить беседу по её идентификатору. Параметры: peer_idsintegerИдентификаторы назначений, разделённые запятой. Для пользователя: •id пользователя. Для групповой беседы: •2000000000 + id беседы. Для сообщества: •-id сообщества. Максимум — 100 идентификаторов.Обязательный параметрextendedcheckbox1 — возвращать дополнительные поля.fieldsstringДополнительные поля пользователей и сообществ, которые необходимо вернуть в ответе.group_idpositiveИдентификатор сообщества (для сообщений сообщества с ключом доступа пользователя). Результат: Возвращает общее число результатов в поле count (integer) и массив объектов бесед в поле items. Коды ошибок: 917You don't have access to this chat927Chat does not exist936Contact not found1017Chat was deleted В ходе выполнения могут произойти общие ошибки Связанные версии: Перейти на страницу версий API 5.130 • В методе market.editOrder добавлены поля, которые может изменять администратор сообщества: •delivery_price — стоимость доставки. •track_number — трек-номер. •payment_status — статус оплаты. Также добавлены поля для редактирования габаритов и веса заказа: •width — ширина. •length — длина. •height — высота. •weight — вес. Поле merchant_comment теперь сохраняет комментарий продавца. 5.80 •Добавили новый API для сообщений. Изменился объект message, а также появился объект conversation и связанные с ним методы. •Следующие методы объявлены устаревшими и обновляться не будут: messages.getDialogs, messages.getChat, messages.getChatUsers, messages.get, messages.searchDialogs объявлены устаревшими и больше обновляться не будут. •В методе messages.markAsRead больше не поддерживается параметр message_ids. •Следующие методы будут перенаправляться на новые версии: •messages.markAsImportantDialog → messages.markAsImportantConversation •messages.markAsAnsweredDialog → messages.markAsAnsweredConversation •messages.deleteDialog → messages.deleteConversation. •Метод secure.sendSMSNotification теперь отправляет несколько сообщений. Изменился формат ответа.",
+  "group": "messages"
+}

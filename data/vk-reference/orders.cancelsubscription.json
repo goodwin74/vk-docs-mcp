@@ -1,0 +1,53 @@
+{
+  "id": "orders.cancelsubscription",
+  "url": "https://dev.vk.com/ru/method/orders.cancelSubscription",
+  "title": "orders.cancelSubscription | VK для разработчиков",
+  "h1": "orders.cancelSubscription",
+  "description": "Отменяет подписку.",
+  "params": [
+    {
+      "name": "user_id",
+      "type": "positive",
+      "required": true,
+      "description": "Идентификатор пользователя.Обязательный параметр"
+    },
+    {
+      "name": "subscription_id",
+      "type": "positive",
+      "required": true,
+      "description": "Идентификатор подписки.Обязательный параметр"
+    },
+    {
+      "name": "pending_cancel",
+      "type": "checkbox",
+      "required": false,
+      "description": "1 — отключить подписку по истечении текущего оплаченного периода; 0 — отключить подписку сразу."
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "После успешного выполнения возвращает 1. При отмене подписки на адрес обратного вызова будет отправлено платёжное уведомление с типом subscription_status_change."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "user_idpositiveИдентификатор пользователя.Обязательный параметрsubscription_idpositiveИдентификатор подписки.Обязательный параметрpending_cancelcheckbox1 — отключить подписку по истечении текущего оплаченного периода; 0 — отключить подписку сразу."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "После успешного выполнения возвращает 1. При отмене подписки на адрес обратного вызова будет отправлено платёжное уведомление с типом subscription_status_change."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "1256Subscription not found1257Subscription is in invalid status В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Отменяет подписку. Параметры: user_idpositiveИдентификатор пользователя.Обязательный параметрsubscription_idpositiveИдентификатор подписки.Обязательный параметрpending_cancelcheckbox1 — отключить подписку по истечении текущего оплаченного периода; 0 — отключить подписку сразу. Результат: После успешного выполнения возвращает 1. При отмене подписки на адрес обратного вызова будет отправлено платёжное уведомление с типом subscription_status_change. Коды ошибок: 1256Subscription not found1257Subscription is in invalid status В ходе выполнения могут произойти общие ошибки",
+  "group": "orders"
+}

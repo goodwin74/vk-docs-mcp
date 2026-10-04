@@ -1,0 +1,123 @@
+{
+  "id": "messages.getlongpollhistory",
+  "url": "https://dev.vk.com/ru/method/messages.getLongPollHistory",
+  "title": "messages.getLongPollHistory | VK для разработчиков",
+  "h1": "messages.getLongPollHistory",
+  "description": "Возвращает обновления в личных сообщениях пользователя.",
+  "params": [
+    {
+      "name": "ts",
+      "type": "positive",
+      "required": false,
+      "description": "Последнее значение параметра ts, полученное от Long Poll сервера или с помощью метода messages.getLongPollServer."
+    },
+    {
+      "name": "pts",
+      "type": "positive",
+      "required": false,
+      "description": "Последнее значение параметра new_pts, полученное от Long Poll сервера, используется для получения действий, которые хранятся всегда."
+    },
+    {
+      "name": "preview_length",
+      "type": "positive",
+      "required": false,
+      "description": "Количество символов, по которому нужно обрезать сообщение. Укажите 0, если вы не хотите обрезать сообщение. (по умолчанию сообщения не обрезаются)."
+    },
+    {
+      "name": "onlines",
+      "type": "checkbox",
+      "required": false,
+      "description": "1 — возвращать в числе прочих события 8 и 9 (пользователь стал онлайн/оффлайн). Учитывается только при использовании ts."
+    },
+    {
+      "name": "fields",
+      "type": "string",
+      "required": false,
+      "description": "Список дополнительных полей профилей, которые необходимо вернуть. См. подробное описание. Доступные значения: •about, •activities, •bdate, •books, •can_post, •can_see_all_posts, •can_see_audio, •can_write_private_message, •career, •city, •common_count, •connections, •contacts, •counters, •country, •domain, •education, •friend_status, •games, •has_mobile, •interests, •last_seen, •maiden_name, •military, •movies, •music, •occupation, •online, •online_mobile, •personal, •photo_100, •photo_200, •photo_200_orig, •photo_400_orig, •photo_50, •photo_id, •photo_max, •photo_max_orig, •quotes, •relation, •relatives, •schools, •screen_name, •sex, •site, •status, •timezone, •tv, •universities,"
+    },
+    {
+      "name": "events_limit",
+      "type": "positive",
+      "required": false,
+      "description": "Лимит по количеству всех событий в истории. Обратите внимание, параметры events_limit и msgs_limit применяются совместно. Число результатов в ответе ограничивается первым достигнутым лимитом."
+    },
+    {
+      "name": "msgs_limit",
+      "type": "positive",
+      "required": false,
+      "description": "Лимит по количеству событий с сообщениями в истории. Обратите внимание, параметры events_limit и msgs_limit применяются совместно. Число результатов в ответе ограничивается первым достигнутым лимитом."
+    },
+    {
+      "name": "max_msg_id",
+      "type": "positive",
+      "required": false,
+      "description": "Максимальный идентификатор сообщения среди уже имеющихся в локальной копии. Необходимо учитывать как сообщения, полученные через методы API (например messages.getDialogs, messages.getHistory), так и данные, полученные из Long Poll сервера (события с кодом 4)."
+    },
+    {
+      "name": "group_id",
+      "type": "integer",
+      "required": false,
+      "description": "Идентификатор сообщества (для сообщений сообщества с ключом доступа пользователя)."
+    },
+    {
+      "name": "lp_version",
+      "type": "positive",
+      "required": false,
+      "description": "Версия Long Poll."
+    },
+    {
+      "name": "last_n",
+      "type": "positive",
+      "required": false,
+      "description": ""
+    },
+    {
+      "name": "credentials",
+      "type": "checkbox",
+      "required": false,
+      "description": ""
+    },
+    {
+      "name": "extended",
+      "type": "checkbox",
+      "required": false,
+      "description": ""
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "Возвращает объект, который содержит поля history, messages, а также groups — массив объектов сообществ и profiles — массив объектов пользователей. Поле history представляет из себя массив, аналогичный полю updates, получаемому от Long Poll сервера, за некоторыми исключениями: для событий с кодом 4 (добавление нового сообщения) отсутствуют все поля, кроме первых трёх, а также отсутствуют события с кодами 8, 9 (друг появился/пропал из сети) и 61, 62 (набор текста в диалоге/беседе). Поле messages представляет из себя массив личных сообщений – объектов message, которые встречались среди событий с кодом 4 (добавление нового сообщения) из поля history. Каждый объект message содержит набор полей, описание которых доступно здесь. Первый элемент массива представляет собой общее количество сообщений. Ограничения В случае, если ts слишком старый (больше суток), а max_msg_id не передан, метод может вернуть ошибку 10 (Internal server error). Если количество событий превышает значение events_limit или количество событий с сообщениями превышает значение msgs_limit, ответ содержит дополнительное поле more со значением 1 — это означает, что нужно запросить оставшиеся данные с помощью запроса с параметром max_msg_id. Обратите внимание, что параметры events_limit и msgs_limit применяются совместно — число объектов в результате не превышает значения меньшего из этих параметров. Ошибки с кодами 907 и 908 означают, что нужно получить новое значение pts (ts) и вызвать метод повторно с новыми значениями, поскольку данных для переданных значений не существует."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "tspositiveПоследнее значение параметра ts, полученное от Long Poll сервера или с помощью метода messages.getLongPollServer.ptspositiveПоследнее значение параметра new_pts, полученное от Long Poll сервера, используется для получения действий, которые хранятся всегда.preview_lengthpositiveКоличество символов, по которому нужно обрезать сообщение. Укажите 0, если вы не хотите обрезать сообщение. (по умолчанию сообщения не обрезаются).onlinescheckbox1 — возвращать в числе прочих события 8 и 9 (пользователь стал онлайн/оффлайн). Учитывается только при использовании ts.fieldsstringСписок дополнительных полей профилей, которые необходимо вернуть. См. подробное описание. Доступные значения: •about, •activities, •bdate, •books, •can_post, •can_see_all_posts, •can_see_audio, •can_write_private_message, •career, •city, •common_count, •connections, •contacts, •counters, •country, •domain, •education, •friend_status, •games, •has_mobile, •interests, •last_seen, •maiden_name, •military, •movies, •music, •occupation, •online, •online_mobile, •personal, •photo_100, •photo_200, •photo_200_orig, •photo_400_orig, •photo_50, •photo_id, •photo_max, •photo_max_orig, •quotes, •relation, •relatives, •schools, •screen_name, •sex, •site, •status, •timezone, •tv, •universities, events_limitpositiveЛимит по количеству всех событий в истории. Обратите внимание, параметры events_limit и msgs_limit применяются совместно. Число результатов в ответе ограничивается первым достигнутым лимитом.msgs_limitpositiv"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Возвращает объект, который содержит поля history, messages, а также groups — массив объектов сообществ и profiles — массив объектов пользователей. Поле history представляет из себя массив, аналогичный полю updates, получаемому от Long Poll сервера, за некоторыми исключениями: для событий с кодом 4 (добавление нового сообщения) отсутствуют все поля, кроме первых трёх, а также отсутствуют события с кодами 8, 9 (друг появился/пропал из сети) и 61, 62 (набор текста в диалоге/беседе). Поле messages представляет из себя массив личных сообщений – объектов message, которые встречались среди событий с кодом 4 (добавление нового сообщения) из поля history. Каждый объект message содержит набор полей, описание которых доступно здесь. Первый элемент массива представляет собой общее количество сообщений. Ограничения В случае, если ts слишком старый (больше суток), а max_msg_id не передан, метод может вернуть ошибку 10 (Internal server error). Если количество событий превышает значение events_limit или количество событий с сообщениями превышает значение msgs_limit, ответ содержит дополнительное поле more со значением 1 — это означает, что нужно запросить оставшиеся данные с помощью запроса с параметром max_msg_id. Обратите внимание, что параметры events_limit и msgs_limit применяются совместно — число объектов в результате не превышает значения меньшего из этих параметров. Ошибки с кодами 907 и 908 означают, что нужно получить новое значение pts (ts) и вызвать метод повторно с новыми значен"
+    },
+    {
+      "level": 3,
+      "title": "Ограничения",
+      "text": "В случае, если ts слишком старый (больше суток), а max_msg_id не передан, метод может вернуть ошибку 10 (Internal server error). Если количество событий превышает значение events_limit или количество событий с сообщениями превышает значение msgs_limit, ответ содержит дополнительное поле more со значением 1 — это означает, что нужно запросить оставшиеся данные с помощью запроса с параметром max_msg_id. Обратите внимание, что параметры events_limit и msgs_limit применяются совместно — число объектов в результате не превышает значения меньшего из этих параметров. Ошибки с кодами 907 и 908 означают, что нужно получить новое значение pts (ts) и вызвать метод повторно с новыми значениями, поскольку данных для переданных значений не существует."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "36Method execution was interrupted due to timeout907Value of ts or pts is too old908Value of ts or pts is too new927Chat does not exist936Contact not found990Drop device cache1017Chat was deleted В ходе выполнения могут произойти общие ошибки"
+    },
+    {
+      "level": 2,
+      "title": "Связанные версии",
+      "text": "Перейти на страницу версий API 5.130 • В методе market.editOrder добавлены поля, которые может изменять администратор сообщества: •delivery_price — стоимость доставки. •track_number — трек-номер. •payment_status — статус оплаты. Также добавлены поля для редактирования габаритов и веса заказа: •width — ширина. •length — длина. •height — высота. •weight — вес. Поле merchant_comment теперь сохраняет комментарий продавца. 5.80 •Добавили новый API для сообщений. Изменился объект message, а также появился объект conversation и связанные с ним методы. •Следующие методы объявлены устаревшими и обновляться не будут: messages.getDialogs, messages.getChat, messages.getChatUsers, messages.get, messages.searchDialogs объявлены устаревшими и больше обновляться не будут. •В методе messages.markAsRead больше не поддерживается параметр message_ids. •Следующие методы будут перенаправляться на новые версии: •messages.markAsImportantDialog → messages.markAsImportantConversation •messages.markAsAnsweredDialog → messages.markAsAnsweredConversation •messages.deleteDialog → messages.deleteConversation. •Метод secure.sendSMSNotification теперь отправляет несколько сообщений. Изменился формат ответа. 5.29В метод messages.getLongPollHistory добавлен параметр fields.4.94Информация о ссылках, прикрепленных к личным сообщениям, теперь возвращается в виде объекта.4.8Ответ метода содержит информацию о подарке в виде объекта, а не документа.4.2Изменён формат поля chat_active в возвращаемом объекте. Теперь он"
+    }
+  ],
+  "contentText": "Возвращает обновления в личных сообщениях пользователя. Параметры: tspositiveПоследнее значение параметра ts, полученное от Long Poll сервера или с помощью метода messages.getLongPollServer.ptspositiveПоследнее значение параметра new_pts, полученное от Long Poll сервера, используется для получения действий, которые хранятся всегда.preview_lengthpositiveКоличество символов, по которому нужно обрезать сообщение. Укажите 0, если вы не хотите обрезать сообщение. (по умолчанию сообщения не обрезаются).onlinescheckbox1 — возвращать в числе прочих события 8 и 9 (пользователь стал онлайн/оффлайн). Учитывается только при использовании ts.fieldsstringСписок дополнительных полей профилей, которые необходимо вернуть. См. подробное описание. Доступные значения: •about, •activities, •bdate, •books, •can_post, •can_see_all_posts, •can_see_audio, •can_write_private_message, •career, •city, •common_count, •connections, •contacts, •counters, •country, •domain, •education, •friend_status, •games, •has_mobile, •interests, •last_seen, •maiden_name, •military, •movies, •music, •occupation, •online, •online_mobile, •personal, •photo_100, •photo_200, •photo_200_orig, •photo_400_orig, •photo_50, •photo_id, •photo_max, •photo_max_orig, •quotes, •relation, •relatives, •schools, •screen_name, •sex, •site, •status, •timezone, •tv, •universities, events_limitpositiveЛимит по количеству всех событий в истории. Обратите внимание, параметры events_limit и msgs_limit применяются совместно. Число результатов в ответе ограничивается первым достигнутым лимитом.msgs_limitpositiv Результат: Возвращает объект, который содержит поля history, messages, а также groups — массив объектов сообществ и profiles — массив объектов пользователей. Поле history представляет из себя массив, аналогичный полю updates, получаемому от Long Poll сервера, за некоторыми исключениями: для событий с кодом 4 (добавление нового сообщения) отсутствуют все поля, кроме первых трёх, а также отсутствуют события с кодами 8, 9 (друг появился/пропал из сети) и 61, 62 (набор текста в диалоге/беседе). Поле messages представляет из себя массив личных сообщений – объектов message, которые встречались среди событий с кодом 4 (добавление нового сообщения) из поля history. Каждый объект message содержит набор полей, описание которых доступно здесь. Первый элемент массива представляет собой общее количество сообщений. Ограничения В случае, если ts слишком старый (больше суток), а max_msg_id не передан, метод может вернуть ошибку 10 (Internal server error). Если количество событий превышает значение events_limit или количество событий с сообщениями превышает значение msgs_limit, ответ содержит дополнительное поле more со значением 1 — это означает, что нужно запросить оставшиеся данные с помощью запроса с параметром max_msg_id. Обратите внимание, что параметры events_limit и msgs_limit применяются совместно — число объектов в результате не превышает значения меньшего из этих параметров. Ошибки с кодами 907 и 908 означают, что нужно получить новое значение pts (ts) и вызвать метод повторно с новыми значен Ограничения: В случае, если ts слишком старый (больше суток), а max_msg_id не передан, метод может вернуть ошибку 10 (Internal server error). Если количество событий превышает значение events_limit или количество событий с сообщениями превышает значение msgs_limit, ответ содержит дополнительное поле more со значением 1 — это означает, что нужно запросить оставшиеся данные с помощью запроса с параметром max_msg_id. Обратите внимание, что параметры events_limit и msgs_limit применяются совместно — число объектов в результате не превышает значения меньшего из этих параметров. Ошибки с кодами 907 и 908 означают, что нужно получить новое значение pts (ts) и вызвать метод повторно с новыми значениями, поскольку данных для переданных значений не существует. Коды ошибок: 36Method execution was interrupted due to timeout907Value of ts or pts is too old908Value of ts or pts is too new927Chat does not exist936Contact not found990Drop device cache1017Chat was deleted В ходе выполнения могут произойти общие ошибки Связанные версии: Перейти на страницу версий API 5.130 • В методе market.editOrder добавлены поля, которые может изменять администратор сообщества: •delivery_price — стоимость доставки. •track_number — трек-номер. •payment_status — статус оплаты. Также добавлены поля для редактирования габаритов и веса заказа: •width — ширина. •length — длина. •height — высота. •weight — вес. Поле merchant_comment теперь сохраняет комментарий продавца. 5.80 •Добавили новый API для сообщений. Изменился объект message, а также появился объект conversation и связанные с ним методы. •Следующие методы объявлены устаревшими и обновляться не будут: messages.getDialogs, messages.getChat, messages.getChatUsers, messages.get, messages.searchDialogs объявлены устаревшими и больше обновляться не будут. •В методе messages.markAsRead больше не поддерживается параметр message_ids. •Следующие методы будут перенаправляться ",
+  "group": "messages"
+}

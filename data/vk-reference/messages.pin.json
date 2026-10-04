@@ -1,0 +1,53 @@
+{
+  "id": "messages.pin",
+  "url": "https://dev.vk.com/ru/method/messages.pin",
+  "title": "messages.pin | VK для разработчиков",
+  "h1": "messages.pin",
+  "description": "Закрепляет сообщение.",
+  "params": [
+    {
+      "name": "peer_id",
+      "type": "integer",
+      "required": true,
+      "description": "Идентификатор назначения. Для групповой беседы: •2000000000 + id беседы. Для сообщества: •-id сообщества. Обязательный параметр"
+    },
+    {
+      "name": "message_id",
+      "type": "positive",
+      "required": false,
+      "description": "Идентификатор сообщения, которое нужно закрепить."
+    },
+    {
+      "name": "conversation_message_id",
+      "type": "positive",
+      "required": false,
+      "description": "Идентификатор сообщения беседы, которое нужно закрепить."
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "Возвращает объект закреплённого сообщения."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "peer_idintegerИдентификатор назначения. Для групповой беседы: •2000000000 + id беседы. Для сообщества: •-id сообщества. Обязательный параметрmessage_idpositiveИдентификатор сообщения, которое нужно закрепить.conversation_message_idpositiveИдентификатор сообщения беседы, которое нужно закрепить."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Возвращает объект закреплённого сообщения."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "925You are not admin of this chat927Chat does not exist942Cannot pin one-time story970Cannot pin an expiring message980Cannot pin service message983You are restricted to write to a chat1012Writing is disabled for this chat1014Max count of pinned messages reached1018Message was deleted В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Закрепляет сообщение. Параметры: peer_idintegerИдентификатор назначения. Для групповой беседы: •2000000000 + id беседы. Для сообщества: •-id сообщества. Обязательный параметрmessage_idpositiveИдентификатор сообщения, которое нужно закрепить.conversation_message_idpositiveИдентификатор сообщения беседы, которое нужно закрепить. Результат: Возвращает объект закреплённого сообщения. Коды ошибок: 925You are not admin of this chat927Chat does not exist942Cannot pin one-time story970Cannot pin an expiring message980Cannot pin service message983You are restricted to write to a chat1012Writing is disabled for this chat1014Max count of pinned messages reached1018Message was deleted В ходе выполнения могут произойти общие ошибки",
+  "group": "messages"
+}

@@ -1,0 +1,58 @@
+{
+  "id": "newsfeed.getbanned",
+  "url": "https://dev.vk.com/ru/method/newsfeed.getBanned",
+  "title": "newsfeed.getBanned | VK для разработчиков",
+  "h1": "newsfeed.getBanned",
+  "description": "Возвращает список пользователей и групп, которые текущий пользователь скрыл из ленты новостей.",
+  "params": [
+    {
+      "name": "extended",
+      "type": "checkbox",
+      "required": false,
+      "description": "Если этот параметр равен 1, возвращается дополнительная информация о пользователях и группах"
+    },
+    {
+      "name": "fields",
+      "type": "string",
+      "required": false,
+      "description": "Список дополнительных полей профилей, которые необходимо вернуть. См. подробное описание. Доступные значения: •sex •bdate •city •country •photo_50 •photo_100 •photo_200_orig •photo_200 •photo_400_orig •photo_max •photo_max_orig •online •online_mobile •domain •has_mobile •contacts •connections •site •education •universities •schools •can_post •can_see_all_posts •can_see_audio •can_write_private_message •status •last_seen •common_count •relation •relatives •counters •screen_name •maiden_name •timezone •occupation •activities •interests •music •movies •tv •books •games •about •quotes"
+    },
+    {
+      "name": "name_case",
+      "type": "string",
+      "required": false,
+      "description": "Падеж для склонения имени и фамилии пользователя. Возможные значения: •именительный – nom; •родительный – gen; •дательный – dat; •винительный – acc; •творительный – ins; •предложный – abl. По умолчанию nom."
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "В случае успеха возвращает объект, в котором содержатся поля groups и members или profiles, в зависимости от параметра extended. Если extended=0: •В поле groups содержится массив идентификаторов сообществ, которые пользователь скрыл из ленты новостей. В поле members содержится массив идентификаторов пользователей, которых пользователь скрыл из ленты новостей. Если extended=1: •В поле groups содержится массив объектов с информацией о сообществах. В поле profiles содержится массив объектов с информацией о пользователях."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "extendedcheckboxЕсли этот параметр равен 1, возвращается дополнительная информация о пользователях и группахfieldsstringСписок дополнительных полей профилей, которые необходимо вернуть. См. подробное описание. Доступные значения: •sex •bdate •city •country •photo_50 •photo_100 •photo_200_orig •photo_200 •photo_400_orig •photo_max •photo_max_orig •online •online_mobile •domain •has_mobile •contacts •connections •site •education •universities •schools •can_post •can_see_all_posts •can_see_audio •can_write_private_message •status •last_seen •common_count •relation •relatives •counters •screen_name •maiden_name •timezone •occupation •activities •interests •music •movies •tv •books •games •about •quotes name_casestringПадеж для склонения имени и фамилии пользователя. Возможные значения: •именительный – nom; •родительный – gen; •дательный – dat; •винительный – acc; •творительный – ins; •предложный – abl. По умолчанию nom."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "В случае успеха возвращает объект, в котором содержатся поля groups и members или profiles, в зависимости от параметра extended. Если extended=0: •В поле groups содержится массив идентификаторов сообществ, которые пользователь скрыл из ленты новостей. В поле members содержится массив идентификаторов пользователей, которых пользователь скрыл из ленты новостей. Если extended=1: •В поле groups содержится массив объектов с информацией о сообществах. В поле profiles содержится массив объектов с информацией о пользователях."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "В ходе выполнения могут произойти общие ошибки"
+    },
+    {
+      "level": 2,
+      "title": "Связанные версии",
+      "text": "Перейти на страницу версий API 5.58 • В возвращаемых объектах, описывающих сообщества, появилось новое поле is_messages_blocked. • В Callback API добавлены новые события: message_allow и message_deny. Метод groups.setCallbackSettings принимает два новых параметра, а метод groups.getCallbackSettings возвращает два новых поля, соответственно. 5.54Если в параметрах вызова метода не была указана дата окончания, возвращаемые объекты, которые описывают сообщество, теперь не содержат поле finish_data. Ранее это поле присутствовало в ответе и содержало по умолчанию, равное start_date + 2 часа."
+    }
+  ],
+  "contentText": "Возвращает список пользователей и групп, которые текущий пользователь скрыл из ленты новостей. Параметры: extendedcheckboxЕсли этот параметр равен 1, возвращается дополнительная информация о пользователях и группахfieldsstringСписок дополнительных полей профилей, которые необходимо вернуть. См. подробное описание. Доступные значения: •sex •bdate •city •country •photo_50 •photo_100 •photo_200_orig •photo_200 •photo_400_orig •photo_max •photo_max_orig •online •online_mobile •domain •has_mobile •contacts •connections •site •education •universities •schools •can_post •can_see_all_posts •can_see_audio •can_write_private_message •status •last_seen •common_count •relation •relatives •counters •screen_name •maiden_name •timezone •occupation •activities •interests •music •movies •tv •books •games •about •quotes name_casestringПадеж для склонения имени и фамилии пользователя. Возможные значения: •именительный – nom; •родительный – gen; •дательный – dat; •винительный – acc; •творительный – ins; •предложный – abl. По умолчанию nom. Результат: В случае успеха возвращает объект, в котором содержатся поля groups и members или profiles, в зависимости от параметра extended. Если extended=0: •В поле groups содержится массив идентификаторов сообществ, которые пользователь скрыл из ленты новостей. В поле members содержится массив идентификаторов пользователей, которых пользователь скрыл из ленты новостей. Если extended=1: •В поле groups содержится массив объектов с информацией о сообществах. В поле profiles содержится массив объектов с информацией о пользователях. Коды ошибок: В ходе выполнения могут произойти общие ошибки Связанные версии: Перейти на страницу версий API 5.58 • В возвращаемых объектах, описывающих сообщества, появилось новое поле is_messages_blocked. • В Callback API добавлены новые события: message_allow и message_deny. Метод groups.setCallbackSettings принимает два новых параметра, а метод groups.getCallbackSettings возвращает два новых поля, соответственно. 5.54Если в параметрах вызова метода не была указана дата окончания, возвращаемые объекты, которые описывают сообщество, теперь не содержат поле finish_data. Ранее это поле присутствовало в ответе и содержало по умолчанию, равное start_date + 2 часа.",
+  "group": "newsfeed"
+}

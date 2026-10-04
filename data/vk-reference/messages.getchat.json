@@ -1,0 +1,64 @@
+{
+  "id": "messages.getchat",
+  "url": "https://dev.vk.com/ru/method/messages.getChat",
+  "title": "messages.getChat | VK для разработчиков",
+  "h1": "messages.getChat",
+  "description": "Возвращает информацию о беседе.",
+  "params": [
+    {
+      "name": "chat_id",
+      "type": "positive",
+      "required": false,
+      "description": "Идентификатор беседы."
+    },
+    {
+      "name": "chat_ids",
+      "type": "integer",
+      "required": false,
+      "description": "Список идентификаторов бесед."
+    },
+    {
+      "name": "fields",
+      "type": "string",
+      "required": false,
+      "description": "Список дополнительных полей профилей, которые необходимо вернуть. Доступные значения: •nickname, •screen_name, •sex, •bdate, •city, •country, •timezone, •photo_50, •photo_100, •photo_200_orig, •has_mobile, •contacts, •education, •online, •counters, •relation, •last_seen, •status, •can_write_private_message, •can_see_all_posts, •can_post, •universities."
+    },
+    {
+      "name": "name_case",
+      "type": "string",
+      "required": false,
+      "description": "Падеж для склонения имени и фамилии пользователя. Возможные значения: •nom — именительный, •gen — родительный, •dat — дательный, •acc — винительный, •ins — творительный, •abl — предложный. По умолчанию: nom."
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "После успешного выполнения возвращает объект (или список объектов) мультидиалога. Если был задан параметр fields, поле users содержит список объектов пользователей с дополнительным полем invited_by, содержащим идентификатор пользователя, пригласившего в беседу."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "chat_idpositiveИдентификатор беседы.chat_idsintegerСписок идентификаторов бесед.fieldsstringСписок дополнительных полей профилей, которые необходимо вернуть. Доступные значения: •nickname, •screen_name, •sex, •bdate, •city, •country, •timezone, •photo_50, •photo_100, •photo_200_orig, •has_mobile, •contacts, •education, •online, •counters, •relation, •last_seen, •status, •can_write_private_message, •can_see_all_posts, •can_post, •universities. name_casestringПадеж для склонения имени и фамилии пользователя. Возможные значения: •nom — именительный, •gen — родительный, •dat — дательный, •acc — винительный, •ins — творительный, •abl — предложный. По умолчанию: nom."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "После успешного выполнения возвращает объект (или список объектов) мультидиалога. Если был задан параметр fields, поле users содержит список объектов пользователей с дополнительным полем invited_by, содержащим идентификатор пользователя, пригласившего в беседу."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "925You are not admin of this chat945Chat was disabled946Chat not supported983You are restricted to write to a chat984You has spam restriction1012Writing is disabled for this chat1017Chat was deleted В ходе выполнения могут произойти общие ошибки"
+    },
+    {
+      "level": 2,
+      "title": "Связанные версии",
+      "text": "Перейти на страницу версий API 5.67 • В метод wall.createComment добавлен новый параметр from_group. Он позволяет указать идентификатор сообщества, от лица которого будет опубликован комментарий. • Метод messages.getChat не добавляет в возвращаемые объекты chat поле users, если оно пустое."
+    }
+  ],
+  "contentText": "Возвращает информацию о беседе. Параметры: chat_idpositiveИдентификатор беседы.chat_idsintegerСписок идентификаторов бесед.fieldsstringСписок дополнительных полей профилей, которые необходимо вернуть. Доступные значения: •nickname, •screen_name, •sex, •bdate, •city, •country, •timezone, •photo_50, •photo_100, •photo_200_orig, •has_mobile, •contacts, •education, •online, •counters, •relation, •last_seen, •status, •can_write_private_message, •can_see_all_posts, •can_post, •universities. name_casestringПадеж для склонения имени и фамилии пользователя. Возможные значения: •nom — именительный, •gen — родительный, •dat — дательный, •acc — винительный, •ins — творительный, •abl — предложный. По умолчанию: nom. Результат: После успешного выполнения возвращает объект (или список объектов) мультидиалога. Если был задан параметр fields, поле users содержит список объектов пользователей с дополнительным полем invited_by, содержащим идентификатор пользователя, пригласившего в беседу. Коды ошибок: 925You are not admin of this chat945Chat was disabled946Chat not supported983You are restricted to write to a chat984You has spam restriction1012Writing is disabled for this chat1017Chat was deleted В ходе выполнения могут произойти общие ошибки Связанные версии: Перейти на страницу версий API 5.67 • В метод wall.createComment добавлен новый параметр from_group. Он позволяет указать идентификатор сообщества, от лица которого будет опубликован комментарий. • Метод messages.getChat не добавляет в возвращаемые объекты chat поле users, если оно пустое.",
+  "group": "messages"
+}

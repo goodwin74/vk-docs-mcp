@@ -1,0 +1,67 @@
+{
+  "id": "market.getcommunityreviews",
+  "url": "https://dev.vk.com/ru/method/market.getCommunityReviews",
+  "title": "market.getCommunityReviews | VK для разработчиков",
+  "h1": "market.getCommunityReviews",
+  "description": "Возвращает список отзывов на сообщество (с пагинацией)",
+  "params": [
+    {
+      "name": "community_id",
+      "type": "integer",
+      "required": true,
+      "description": "Обязательный параметр"
+    },
+    {
+      "name": "limit",
+      "type": "integer",
+      "required": false,
+      "description": ""
+    },
+    {
+      "name": "offset",
+      "type": "integer",
+      "required": false,
+      "description": ""
+    },
+    {
+      "name": "last_id",
+      "type": "integer",
+      "required": false,
+      "description": ""
+    },
+    {
+      "name": "sort",
+      "type": "string",
+      "required": false,
+      "description": "Макс. длина = 8"
+    },
+    {
+      "name": "comments_limit",
+      "type": "integer",
+      "required": false,
+      "description": ""
+    },
+    {
+      "name": "comments_profile_fields",
+      "type": "string",
+      "required": false,
+      "description": ""
+    }
+  ],
+  "returns": [],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "community_idintegerОбязательный параметрlimitintegeroffsetintegerlast_idintegersortstringМакс. длина = 8comments_limitintegercomments_profile_fieldsstring"
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "1464Group is not business community1519Reviews not found1520Reviews not available1522Friends error В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Возвращает список отзывов на сообщество (с пагинацией) Параметры: community_idintegerОбязательный параметрlimitintegeroffsetintegerlast_idintegersortstringМакс. длина = 8comments_limitintegercomments_profile_fieldsstring Коды ошибок: 1464Group is not business community1519Reviews not found1520Reviews not available1522Friends error В ходе выполнения могут произойти общие ошибки",
+  "group": "market"
+}

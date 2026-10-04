@@ -1,0 +1,53 @@
+{
+  "id": "messages.getchatpreview",
+  "url": "https://dev.vk.com/ru/method/messages.getChatPreview",
+  "title": "messages.getChatPreview | VK для разработчиков",
+  "h1": "messages.getChatPreview",
+  "description": "Получает данные для превью чата с приглашением по ссылке.",
+  "params": [
+    {
+      "name": "peer_id",
+      "type": "positive",
+      "required": false,
+      "description": "Идентификатор получателя сообщения: •Для пользователя — ИДЕНТИФИКАТОР_ПОЛЬЗОВАТЕЛЯ. •Для групповой беседы — 2000000000 + ИДЕНТИФИКАТОР_БЕСЕДЫ. •Для сообщества — -ИДЕНТИФИКАТОР_СООБЩЕСТВА."
+    },
+    {
+      "name": "link",
+      "type": "string",
+      "required": false,
+      "description": "Ссылка-приглашение."
+    },
+    {
+      "name": "fields",
+      "type": "string",
+      "required": false,
+      "description": "Список полей профилей, данные о которых нужно получить. Полный список смотрите на этой странице."
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "Возвращает объект, который содержит следующие поля: preview object Информация о чате. Объект, который содержит поля: •admin_id (object) — идентификатор создателя чата; •members (array) — массив идентификаторов участников чата; •title (string) — название чата; •local_id (integer) — идентификатор чата для текущего пользователя. •photo (object) — обложка чата. Объект, который содержит поля: •photo_50 (string) — URL копии фотографии с шириной 50 px; •photo_100 (string) — URL копии фотографии с шириной 100 px; •photo_200 (string) — URL копии фотографии с шириной 200px. •photo_base (string) — URL копии фотографии с шириной 400px. добавив GET-параметр cs=<size>x<size>, где size=50|100|200 можно получить изображение соответствующего размера; profiles array Массив объектов пользователей; groups array Массив объектов сообществ; emails array Массив объектов, описывающих e-mail. Каждый из объектов содержит поля: •id (integer) — идентификатор e-mail; •address (string) — адрес e-mail."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "peer_idpositiveИдентификатор получателя сообщения: •Для пользователя — ИДЕНТИФИКАТОР_ПОЛЬЗОВАТЕЛЯ. •Для групповой беседы — 2000000000 + ИДЕНТИФИКАТОР_БЕСЕДЫ. •Для сообщества — -ИДЕНТИФИКАТОР_СООБЩЕСТВА. linkstringСсылка-приглашение.fieldsstringСписок полей профилей, данные о которых нужно получить. Полный список смотрите на этой странице."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Возвращает объект, который содержит следующие поля: preview object Информация о чате. Объект, который содержит поля: •admin_id (object) — идентификатор создателя чата; •members (array) — массив идентификаторов участников чата; •title (string) — название чата; •local_id (integer) — идентификатор чата для текущего пользователя. •photo (object) — обложка чата. Объект, который содержит поля: •photo_50 (string) — URL копии фотографии с шириной 50 px; •photo_100 (string) — URL копии фотографии с шириной 100 px; •photo_200 (string) — URL копии фотографии с шириной 200px. •photo_base (string) — URL копии фотографии с шириной 400px. добавив GET-параметр cs=<size>x<size>, где size=50|100|200 можно получить изображение соответствующего размера; profiles array Массив объектов пользователей; groups array Массив объектов сообществ; emails array Массив объектов, описывающих e-mail. Каждый из объектов содержит поля: •id (integer) — идентификатор e-mail; •address (string) — адрес e-mail."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "901Can't send messages for users without permission917You don't have access to this chat1017Chat was deleted1019Chat can not be joined because user who want to join not organization member В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Получает данные для превью чата с приглашением по ссылке. Параметры: peer_idpositiveИдентификатор получателя сообщения: •Для пользователя — ИДЕНТИФИКАТОР_ПОЛЬЗОВАТЕЛЯ. •Для групповой беседы — 2000000000 + ИДЕНТИФИКАТОР_БЕСЕДЫ. •Для сообщества — -ИДЕНТИФИКАТОР_СООБЩЕСТВА. linkstringСсылка-приглашение.fieldsstringСписок полей профилей, данные о которых нужно получить. Полный список смотрите на этой странице. Результат: Возвращает объект, который содержит следующие поля: preview object Информация о чате. Объект, который содержит поля: •admin_id (object) — идентификатор создателя чата; •members (array) — массив идентификаторов участников чата; •title (string) — название чата; •local_id (integer) — идентификатор чата для текущего пользователя. •photo (object) — обложка чата. Объект, который содержит поля: •photo_50 (string) — URL копии фотографии с шириной 50 px; •photo_100 (string) — URL копии фотографии с шириной 100 px; •photo_200 (string) — URL копии фотографии с шириной 200px. •photo_base (string) — URL копии фотографии с шириной 400px. добавив GET-параметр cs=<size>x<size>, где size=50|100|200 можно получить изображение соответствующего размера; profiles array Массив объектов пользователей; groups array Массив объектов сообществ; emails array Массив объектов, описывающих e-mail. Каждый из объектов содержит поля: •id (integer) — идентификатор e-mail; •address (string) — адрес e-mail. Коды ошибок: 901Can't send messages for users without permission917You don't have access to this chat1017Chat was deleted1019Chat can not be joined because user who want to join not organization member В ходе выполнения могут произойти общие ошибки",
+  "group": "messages"
+}

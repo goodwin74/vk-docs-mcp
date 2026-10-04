@@ -1,0 +1,31 @@
+{
+  "id": "market.saveproductphotobulk",
+  "url": "https://dev.vk.com/ru/method/market.saveProductPhotoBulk",
+  "title": "market.saveProductPhotoBulk | VK для разработчиков",
+  "h1": "market.saveProductPhotoBulk",
+  "description": "string",
+  "params": [
+    {
+      "name": "upload_response",
+      "type": "string",
+      "required": true,
+      "description": "Обязательный параметр"
+    }
+  ],
+  "returns": [],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "upload_responsestringОбязательный параметр"
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "1438Market not enabled В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "string Параметры: upload_responsestringОбязательный параметр Коды ошибок: 1438Market not enabled В ходе выполнения могут произойти общие ошибки",
+  "group": "market"
+}

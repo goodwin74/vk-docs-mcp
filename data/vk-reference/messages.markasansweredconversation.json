@@ -1,0 +1,53 @@
+{
+  "id": "messages.markasansweredconversation",
+  "url": "https://dev.vk.com/ru/method/messages.markAsAnsweredConversation",
+  "title": "messages.markAsAnsweredConversation | VK для разработчиков",
+  "h1": "messages.markAsAnsweredConversation",
+  "description": "Помечает беседу как отвеченную либо снимает отметку.",
+  "params": [
+    {
+      "name": "peer_id",
+      "type": "integer",
+      "required": true,
+      "description": "Идентификатор беседы.Обязательный параметр"
+    },
+    {
+      "name": "answered",
+      "type": "checkbox",
+      "required": false,
+      "description": "1 - беседа отмечена отвеченной, 0 - неотвеченной."
+    },
+    {
+      "name": "group_id",
+      "type": "integer",
+      "required": false,
+      "description": "Идентификатор сообщества (для сообщений сообщества с ключом доступа пользователя)."
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "После успешного выполнения возвращает 1."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "peer_idintegerИдентификатор беседы.Обязательный параметрansweredcheckbox1 - беседа отмечена отвеченной, 0 - неотвеченной.group_idintegerИдентификатор сообщества (для сообщений сообщества с ключом доступа пользователя)."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "После успешного выполнения возвращает 1."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Помечает беседу как отвеченную либо снимает отметку. Параметры: peer_idintegerИдентификатор беседы.Обязательный параметрansweredcheckbox1 - беседа отмечена отвеченной, 0 - неотвеченной.group_idintegerИдентификатор сообщества (для сообщений сообщества с ключом доступа пользователя). Результат: После успешного выполнения возвращает 1. Коды ошибок: В ходе выполнения могут произойти общие ошибки",
+  "group": "messages"
+}

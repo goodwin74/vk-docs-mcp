@@ -1,0 +1,47 @@
+{
+  "id": "messages.unpin",
+  "url": "https://dev.vk.com/ru/method/messages.unpin",
+  "title": "messages.unpin | VK для разработчиков",
+  "h1": "messages.unpin",
+  "description": "Открепляет сообщение.",
+  "params": [
+    {
+      "name": "peer_id",
+      "type": "integer",
+      "required": true,
+      "description": "Идентификатор назначения. Для пользователя: •id пользователя. Для групповой беседы: •2000000000 + id беседы. Для сообщества: •-id сообщества. Обязательный параметр"
+    },
+    {
+      "name": "group_id",
+      "type": "positive",
+      "required": false,
+      "description": "Идентификатор сообщества (для сообщений сообщества с ключом доступа пользователя)."
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "После успешного выполнения возвращает 1."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "peer_idintegerИдентификатор назначения. Для пользователя: •id пользователя. Для групповой беседы: •2000000000 + id беседы. Для сообщества: •-id сообщества. Обязательный параметрgroup_idpositiveИдентификатор сообщества (для сообщений сообщества с ключом доступа пользователя)."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "После успешного выполнения возвращает 1."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "925You are not admin of this chat927Chat does not exist983You are restricted to write to a chat1012Writing is disabled for this chat В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Открепляет сообщение. Параметры: peer_idintegerИдентификатор назначения. Для пользователя: •id пользователя. Для групповой беседы: •2000000000 + id беседы. Для сообщества: •-id сообщества. Обязательный параметрgroup_idpositiveИдентификатор сообщества (для сообщений сообщества с ключом доступа пользователя). Результат: После успешного выполнения возвращает 1. Коды ошибок: 925You are not admin of this chat927Chat does not exist983You are restricted to write to a chat1012Writing is disabled for this chat В ходе выполнения могут произойти общие ошибки",
+  "group": "messages"
+}

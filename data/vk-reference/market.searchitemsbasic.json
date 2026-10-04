@@ -1,0 +1,101 @@
+{
+  "id": "market.searchitemsbasic",
+  "url": "https://dev.vk.com/ru/method/market.searchItemsBasic",
+  "title": "market.searchItemsBasic | VK для разработчиков",
+  "h1": "market.searchItemsBasic",
+  "description": "Получение товаров по поисковому запросу для вкладки бизнес групп",
+  "params": [
+    {
+      "name": "q",
+      "type": "string",
+      "required": true,
+      "description": "Поисковый запросОбязательный параметр"
+    },
+    {
+      "name": "offset",
+      "type": "integer",
+      "required": false,
+      "description": "Смещение с начала поисковой выдачи, используется для пагинации. По умолчанию 0"
+    },
+    {
+      "name": "count",
+      "type": "positive",
+      "required": false,
+      "description": "Количество элементов в поисковой выдаче"
+    },
+    {
+      "name": "category_id",
+      "type": "positive",
+      "required": false,
+      "description": "Идентификатор категории"
+    },
+    {
+      "name": "price_from",
+      "type": "positive",
+      "required": false,
+      "description": "Фильтр нижняя граница цены"
+    },
+    {
+      "name": "price_to",
+      "type": "positive",
+      "required": false,
+      "description": "Фильтр верхняя граница цены"
+    },
+    {
+      "name": "sort_by",
+      "type": "integer",
+      "required": false,
+      "description": "Тип сортировки. 1 - по дате, 2 - по цене, 3 - по релевантности. По умолчанию 3"
+    },
+    {
+      "name": "sort_direction",
+      "type": "integer",
+      "required": false,
+      "description": "Направление сортировки. 0 - по возрастанию, 1 - по убыванию. По умолчанию 0"
+    },
+    {
+      "name": "country",
+      "type": "positive",
+      "required": false,
+      "description": "Идентификатор страны"
+    },
+    {
+      "name": "city",
+      "type": "positive",
+      "required": false,
+      "description": "Идентификатор города"
+    },
+    {
+      "name": "only_my_groups",
+      "type": "checkbox",
+      "required": false,
+      "description": "Искать только по товарам в своих группах"
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "Возвращает массив товаров (https://dev.vk.com/ru/reference/objects/market-item)"
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "qstringПоисковый запросОбязательный параметрoffsetintegerСмещение с начала поисковой выдачи, используется для пагинации. По умолчанию 0countpositiveКоличество элементов в поисковой выдачеcategory_idpositiveИдентификатор категорииprice_frompositiveФильтр нижняя граница ценыprice_topositiveФильтр верхняя граница ценыsort_byintegerТип сортировки. 1 - по дате, 2 - по цене, 3 - по релевантности. По умолчанию 3sort_directionintegerНаправление сортировки. 0 - по возрастанию, 1 - по убыванию. По умолчанию 0countrypositiveИдентификатор страныcitypositiveИдентификатор городаonly_my_groupscheckboxИскать только по товарам в своих группах"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Возвращает массив товаров (https://dev.vk.com/ru/reference/objects/market-item)"
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Получение товаров по поисковому запросу для вкладки бизнес групп Параметры: qstringПоисковый запросОбязательный параметрoffsetintegerСмещение с начала поисковой выдачи, используется для пагинации. По умолчанию 0countpositiveКоличество элементов в поисковой выдачеcategory_idpositiveИдентификатор категорииprice_frompositiveФильтр нижняя граница ценыprice_topositiveФильтр верхняя граница ценыsort_byintegerТип сортировки. 1 - по дате, 2 - по цене, 3 - по релевантности. По умолчанию 3sort_directionintegerНаправление сортировки. 0 - по возрастанию, 1 - по убыванию. По умолчанию 0countrypositiveИдентификатор страныcitypositiveИдентификатор городаonly_my_groupscheckboxИскать только по товарам в своих группах Результат: Возвращает массив товаров (https://dev.vk.com/ru/reference/objects/market-item) Коды ошибок: В ходе выполнения могут произойти общие ошибки",
+  "group": "market"
+}

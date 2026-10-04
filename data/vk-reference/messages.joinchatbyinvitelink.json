@@ -1,0 +1,41 @@
+{
+  "id": "messages.joinchatbyinvitelink",
+  "url": "https://dev.vk.com/ru/method/messages.joinChatByInviteLink",
+  "title": "messages.joinChatByInviteLink | VK для разработчиков",
+  "h1": "messages.joinChatByInviteLink",
+  "description": "Позволяет присоединиться к чату по ссылке-приглашению.",
+  "params": [
+    {
+      "name": "link",
+      "type": "string",
+      "required": true,
+      "description": "Ссылка-приглашение.Обязательный параметр"
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "Возвращает идентификатор чата в поле chat_id."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "linkstringСсылка-приглашение.Обязательный параметр"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Возвращает идентификатор чата в поле chat_id."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "103Out of limits917You don't have access to this chat1019Chat can not be joined because user who want to join not organization member В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Позволяет присоединиться к чату по ссылке-приглашению. Параметры: linkstringСсылка-приглашение.Обязательный параметр Результат: Возвращает идентификатор чата в поле chat_id. Коды ошибок: 103Out of limits917You don't have access to this chat1019Chat can not be joined because user who want to join not organization member В ходе выполнения могут произойти общие ошибки",
+  "group": "messages"
+}

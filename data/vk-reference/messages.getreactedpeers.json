@@ -1,0 +1,43 @@
+{
+  "id": "messages.getreactedpeers",
+  "url": "https://dev.vk.com/ru/method/messages.getReactedPeers",
+  "title": "messages.getReactedPeers | VK для разработчиков",
+  "h1": "messages.getReactedPeers",
+  "description": "Получить список пользователей и сообществ, которые поставили реакцию на сообщение",
+  "params": [
+    {
+      "name": "peer_id",
+      "type": "integer",
+      "required": true,
+      "description": "peer_id переписки: •user_id — для личных чатов. •group_id — для чатов с сообществом. •2 000 000 000 + id_чата — для чатов. Обязательный параметр"
+    },
+    {
+      "name": "cmid",
+      "type": "positive",
+      "required": true,
+      "description": "conversation_message_id сообщения, для которого нужно вернуть список отреагировавшихОбязательный параметр"
+    },
+    {
+      "name": "reaction_id",
+      "type": "positive",
+      "required": false,
+      "description": "Если указать, будут возвращены только те пользователи, которые поставили эту реакцию"
+    }
+  ],
+  "returns": [],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "peer_idintegerpeer_id переписки: •user_id — для личных чатов. •group_id — для чатов с сообществом. •2 000 000 000 + id_чата — для чатов. Обязательный параметрcmidpositiveconversation_message_id сообщения, для которого нужно вернуть список отреагировавшихОбязательный параметрreaction_idpositiveЕсли указать, будут возвращены только те пользователи, которые поставили эту реакцию"
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "995Messenger degradation1009Unknown reaction passed В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Получить список пользователей и сообществ, которые поставили реакцию на сообщение Параметры: peer_idintegerpeer_id переписки: •user_id — для личных чатов. •group_id — для чатов с сообществом. •2 000 000 000 + id_чата — для чатов. Обязательный параметрcmidpositiveconversation_message_id сообщения, для которого нужно вернуть список отреагировавшихОбязательный параметрreaction_idpositiveЕсли указать, будут возвращены только те пользователи, которые поставили эту реакцию Коды ошибок: 995Messenger degradation1009Unknown reaction passed В ходе выполнения могут произойти общие ошибки",
+  "group": "messages"
+}

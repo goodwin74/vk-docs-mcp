@@ -1,0 +1,37 @@
+{
+  "id": "messages.getmessagesreactions",
+  "url": "https://dev.vk.com/ru/method/messages.getMessagesReactions",
+  "title": "messages.getMessagesReactions | VK для разработчиков",
+  "h1": "messages.getMessagesReactions",
+  "description": "Получить актуальные счётчики реакций на сообщения",
+  "params": [
+    {
+      "name": "peer_id",
+      "type": "integer",
+      "required": true,
+      "description": "peer_id переписки: •user_id — для личных чатов. •group_id — для чатов с сообществом. •2 000 000 000 + id_чата — для чатов. Обязательный параметр"
+    },
+    {
+      "name": "cmids",
+      "type": "string",
+      "required": true,
+      "description": "Список conversation_message_id сообщений, для которых нужно вернуть счётчики реакций. Максимальный размер: 100Обязательный параметр"
+    }
+  ],
+  "returns": [],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "peer_idintegerpeer_id переписки: •user_id — для личных чатов. •group_id — для чатов с сообществом. •2 000 000 000 + id_чата — для чатов. Обязательный параметрcmidsstringСписок conversation_message_id сообщений, для которых нужно вернуть счётчики реакций. Максимальный размер: 100Обязательный параметр"
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "995Messenger degradation В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Получить актуальные счётчики реакций на сообщения Параметры: peer_idintegerpeer_id переписки: •user_id — для личных чатов. •group_id — для чатов с сообществом. •2 000 000 000 + id_чата — для чатов. Обязательный параметрcmidsstringСписок conversation_message_id сообщений, для которых нужно вернуть счётчики реакций. Максимальный размер: 100Обязательный параметр Коды ошибок: 995Messenger degradation В ходе выполнения могут произойти общие ошибки",
+  "group": "messages"
+}

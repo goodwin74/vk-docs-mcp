@@ -1,0 +1,70 @@
+{
+  "id": "pages.save",
+  "url": "https://dev.vk.com/ru/method/pages.save",
+  "title": "pages.save | VK для разработчиков",
+  "h1": "pages.save",
+  "description": "Сохраняет текст вики-страницы.",
+  "params": [
+    {
+      "name": "text",
+      "type": "text",
+      "required": false,
+      "description": "Новый текст страницы в вики-формате."
+    },
+    {
+      "name": "page_id",
+      "type": "integer",
+      "required": false,
+      "description": "Идентификатор вики-страницы. Вместо page_id может быть передан параметр title."
+    },
+    {
+      "name": "group_id",
+      "type": "integer",
+      "required": false,
+      "description": "Идентификатор сообщества, которому принадлежит вики-страница."
+    },
+    {
+      "name": "user_id",
+      "type": "integer",
+      "required": false,
+      "description": "Идентификатор пользователя, создавшего вики-страницу."
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Название вики-страницы."
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "В случае успеха возвращает id созданной страницы."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "texttextНовый текст страницы в вики-формате.page_idintegerИдентификатор вики-страницы. Вместо page_id может быть передан параметр title.group_idintegerИдентификатор сообщества, которому принадлежит вики-страница.user_idintegerИдентификатор пользователя, создавшего вики-страницу.titlestringНазвание вики-страницы."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "В случае успеха возвращает id созданной страницы."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "119Invalid title140Page not found141Access to page denied В ходе выполнения могут произойти общие ошибки"
+    },
+    {
+      "level": 2,
+      "title": "Связанные методы",
+      "text": "pages.saveAccessСохраняет новые настройки доступа на чтение и редактирование вики-страницы.pages.parseWikiМетод получает HTML-представление вики-разметки."
+    }
+  ],
+  "contentText": "Сохраняет текст вики-страницы. Параметры: texttextНовый текст страницы в вики-формате.page_idintegerИдентификатор вики-страницы. Вместо page_id может быть передан параметр title.group_idintegerИдентификатор сообщества, которому принадлежит вики-страница.user_idintegerИдентификатор пользователя, создавшего вики-страницу.titlestringНазвание вики-страницы. Результат: В случае успеха возвращает id созданной страницы. Коды ошибок: 119Invalid title140Page not found141Access to page denied В ходе выполнения могут произойти общие ошибки Связанные методы: pages.saveAccessСохраняет новые настройки доступа на чтение и редактирование вики-страницы.pages.parseWikiМетод получает HTML-представление вики-разметки.",
+  "group": "pages"
+}

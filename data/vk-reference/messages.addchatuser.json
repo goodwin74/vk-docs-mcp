@@ -1,0 +1,53 @@
+{
+  "id": "messages.addchatuser",
+  "url": "https://dev.vk.com/ru/method/messages.addChatUser",
+  "title": "messages.addChatUser | VK для разработчиков",
+  "h1": "messages.addChatUser",
+  "description": "Добавляет в мультидиалог нового пользователя.",
+  "params": [
+    {
+      "name": "chat_id",
+      "type": "positive",
+      "required": true,
+      "description": "Идентификатор беседы.Обязательный параметр"
+    },
+    {
+      "name": "user_id",
+      "type": "positive",
+      "required": false,
+      "description": "Идентификатор пользователя, которого необходимо включить в беседу."
+    },
+    {
+      "name": "visible_messages_count",
+      "type": "positive",
+      "required": false,
+      "description": ""
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "После успешного выполнения возвращает 1."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "chat_idpositiveИдентификатор беседы.Обязательный параметрuser_idpositiveИдентификатор пользователя, которого необходимо включить в беседу.visible_messages_countpositive"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "После успешного выполнения возвращает 1."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "103Out of limits925You are not admin of this chat932Your community can't interact with this peer936Contact not found939Message request already sent945Chat was disabled946Chat not supported947Can't add user to chat, because user has no access to group967This user can't be added to the work chat, as they aren't an employee.981Cannot add this user by privacy settings982Cannot add users to chat temporary983You are restricted to write to a chat984You has spam restriction1012Writing is disabled for this chat1017Chat was deleted В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Добавляет в мультидиалог нового пользователя. Параметры: chat_idpositiveИдентификатор беседы.Обязательный параметрuser_idpositiveИдентификатор пользователя, которого необходимо включить в беседу.visible_messages_countpositive Результат: После успешного выполнения возвращает 1. Коды ошибок: 103Out of limits925You are not admin of this chat932Your community can't interact with this peer936Contact not found939Message request already sent945Chat was disabled946Chat not supported947Can't add user to chat, because user has no access to group967This user can't be added to the work chat, as they aren't an employee.981Cannot add this user by privacy settings982Cannot add users to chat temporary983You are restricted to write to a chat984You has spam restriction1012Writing is disabled for this chat1017Chat was deleted В ходе выполнения могут произойти общие ошибки",
+  "group": "messages"
+}

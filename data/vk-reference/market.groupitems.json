@@ -1,0 +1,53 @@
+{
+  "id": "market.groupitems",
+  "url": "https://dev.vk.com/ru/method/market.groupItems",
+  "title": "market.groupItems | VK для разработчиков",
+  "h1": "market.groupItems",
+  "description": "Объединяет товары в группу товаров.",
+  "params": [
+    {
+      "name": "group_id",
+      "type": "positive",
+      "required": true,
+      "description": "идентификатор или короткое имя сообщества.Обязательный параметр"
+    },
+    {
+      "name": "item_ids",
+      "type": "integer",
+      "required": true,
+      "description": "список товаров, которые нужно объединить.Обязательный параметр"
+    },
+    {
+      "name": "item_group_id",
+      "type": "positive",
+      "required": false,
+      "description": "опциональное поле, указывает на группу товаров, к которой нужно добавить указанные item_ids. Если не задано, создается новая группа."
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "В случае успеха возвращается идентификатор группы товаров."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "group_idpositiveидентификатор или короткое имя сообщества.Обязательный параметрitem_idsintegerсписок товаров, которые нужно объединить.Обязательный параметрitem_group_idpositiveопциональное поле, указывает на группу товаров, к которой нужно добавить указанные item_ids. Если не задано, создается новая группа."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "В случае успеха возвращается идентификатор группы товаров."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "1403Item not found1409Extended market not enabled1410Variants not enabled1411Variants error1412Grouping items with different properties1413Grouping already has such variant1414Grouping has other properties1415Grouping must have variants1416Variant not found1417Property not found1425Grouping must have two or more items1426Item must have distinct properties1438Market not enabled В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Объединяет товары в группу товаров. Параметры: group_idpositiveидентификатор или короткое имя сообщества.Обязательный параметрitem_idsintegerсписок товаров, которые нужно объединить.Обязательный параметрitem_group_idpositiveопциональное поле, указывает на группу товаров, к которой нужно добавить указанные item_ids. Если не задано, создается новая группа. Результат: В случае успеха возвращается идентификатор группы товаров. Коды ошибок: 1403Item not found1409Extended market not enabled1410Variants not enabled1411Variants error1412Grouping items with different properties1413Grouping already has such variant1414Grouping has other properties1415Grouping must have variants1416Variant not found1417Property not found1425Grouping must have two or more items1426Item must have distinct properties1438Market not enabled В ходе выполнения могут произойти общие ошибки",
+  "group": "market"
+}

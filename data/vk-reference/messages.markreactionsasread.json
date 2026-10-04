@@ -1,0 +1,37 @@
+{
+  "id": "messages.markreactionsasread",
+  "url": "https://dev.vk.com/ru/method/messages.markReactionsAsRead",
+  "title": "messages.markReactionsAsRead | VK для разработчиков",
+  "h1": "messages.markReactionsAsRead",
+  "description": "Отмечает прочитанными все реакции на сообщениях с заданными cmids",
+  "params": [
+    {
+      "name": "peer_id",
+      "type": "integer",
+      "required": true,
+      "description": "peer_id переписки: •user_id — для личных чатов. •group_id — для чатов с сообществом. •2 000 000 000 + id_чата — для чатов. Обязательный параметр"
+    },
+    {
+      "name": "cmids",
+      "type": "integer",
+      "required": false,
+      "description": "conversation_message_id сообщений, для которого нужно отметить реакции прочитанными"
+    }
+  ],
+  "returns": [],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "peer_idintegerpeer_id переписки: •user_id — для личных чатов. •group_id — для чатов с сообществом. •2 000 000 000 + id_чата — для чатов. Обязательный параметрcmidsintegerconversation_message_id сообщений, для которого нужно отметить реакции прочитанными"
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Отмечает прочитанными все реакции на сообщениях с заданными cmids Параметры: peer_idintegerpeer_id переписки: •user_id — для личных чатов. •group_id — для чатов с сообществом. •2 000 000 000 + id_чата — для чатов. Обязательный параметрcmidsintegerconversation_message_id сообщений, для которого нужно отметить реакции прочитанными Коды ошибок: В ходе выполнения могут произойти общие ошибки",
+  "group": "messages"
+}

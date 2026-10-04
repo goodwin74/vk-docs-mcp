@@ -1,0 +1,47 @@
+{
+  "id": "market.ungroupitems",
+  "url": "https://dev.vk.com/ru/method/market.ungroupItems",
+  "title": "market.ungroupItems | VK для разработчиков",
+  "h1": "market.ungroupItems",
+  "description": "Разделяет группу товаров на несколько товаров.",
+  "params": [
+    {
+      "name": "group_id",
+      "type": "integer",
+      "required": true,
+      "description": "Идентификатор сообществаОбязательный параметр"
+    },
+    {
+      "name": "item_group_id",
+      "type": "positive",
+      "required": true,
+      "description": "Идентификатор товарной группыОбязательный параметр"
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "В случае успешного выполнения возвращает 1."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "group_idintegerИдентификатор сообществаОбязательный параметрitem_group_idpositiveИдентификатор товарной группыОбязательный параметр"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "В случае успешного выполнения возвращает 1."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "1409Extended market not enabled1411Variants error1438Market not enabled В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Разделяет группу товаров на несколько товаров. Параметры: group_idintegerИдентификатор сообществаОбязательный параметрitem_group_idpositiveИдентификатор товарной группыОбязательный параметр Результат: В случае успешного выполнения возвращает 1. Коды ошибок: 1409Extended market not enabled1411Variants error1438Market not enabled В ходе выполнения могут произойти общие ошибки",
+  "group": "market"
+}

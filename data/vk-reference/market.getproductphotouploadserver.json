@@ -1,0 +1,47 @@
+{
+  "id": "market.getproductphotouploadserver",
+  "url": "https://dev.vk.com/ru/method/market.getProductPhotoUploadServer",
+  "title": "market.getProductPhotoUploadServer | VK для разработчиков",
+  "h1": "market.getProductPhotoUploadServer",
+  "description": "Возвращает адрес для загрузки изображений товаров в сообщество.",
+  "params": [
+    {
+      "name": "group_id",
+      "type": "integer",
+      "required": true,
+      "description": "Идентификатор сообщества, которому принадлежит желаемый товар. Где найти идентификатор сообщества?Обязательный параметр"
+    },
+    {
+      "name": "bulk",
+      "type": "checkbox",
+      "required": false,
+      "description": "Указывает, нужно ли загрузить несколько файлов. Если передаётся true, то в ответе вернётся адрес сервера, на который можно загрузить до 5 фотографий."
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "Возвращает объект с полем upload_url, которое содержит адрес для загрузки изображений. JSON{ \"response\":{ \"upload_url\":\"https://pu.vk.com/c857008/ss2158/upload.php?act=do_add&mid=743784474&aid=-53&gid=218252175&hash=39db9a3676d5ecc9b39bc7ab79a50ca7&rhash=4c9dc359457c26d9ecc32c94272f3239&swfupload=1&api=1&market_photo=1\" } }"
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "group_idintegerИдентификатор сообщества, которому принадлежит желаемый товар. Где найти идентификатор сообщества?Обязательный параметрbulkcheckboxУказывает, нужно ли загрузить несколько файлов. Если передаётся true, то в ответе вернётся адрес сервера, на который можно загрузить до 5 фотографий."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Возвращает объект с полем upload_url, которое содержит адрес для загрузки изображений. JSON{ \"response\":{ \"upload_url\":\"https://pu.vk.com/c857008/ss2158/upload.php?act=do_add&mid=743784474&aid=-53&gid=218252175&hash=39db9a3676d5ecc9b39bc7ab79a50ca7&rhash=4c9dc359457c26d9ecc32c94272f3239&swfupload=1&api=1&market_photo=1\" } }"
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "1438Market not enabled В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Возвращает адрес для загрузки изображений товаров в сообщество. Параметры: group_idintegerИдентификатор сообщества, которому принадлежит желаемый товар. Где найти идентификатор сообщества?Обязательный параметрbulkcheckboxУказывает, нужно ли загрузить несколько файлов. Если передаётся true, то в ответе вернётся адрес сервера, на который можно загрузить до 5 фотографий. Результат: Возвращает объект с полем upload_url, которое содержит адрес для загрузки изображений. JSON{ \"response\":{ \"upload_url\":\"https://pu.vk.com/c857008/ss2158/upload.php?act=do_add&mid=743784474&aid=-53&gid=218252175&hash=39db9a3676d5ecc9b39bc7ab79a50ca7&rhash=4c9dc359457c26d9ecc32c94272f3239&swfupload=1&api=1&market_photo=1\" } } Коды ошибок: 1438Market not enabled В ходе выполнения могут произойти общие ошибки",
+  "group": "market"
+}

@@ -1,0 +1,47 @@
+{
+  "id": "messages.allowmessagesfromgroup",
+  "url": "https://dev.vk.com/ru/method/messages.allowMessagesFromGroup",
+  "title": "messages.allowMessagesFromGroup | VK для разработчиков",
+  "h1": "messages.allowMessagesFromGroup",
+  "description": "Позволяет разрешить отправку сообщений от сообщества текущему пользователю.",
+  "params": [
+    {
+      "name": "group_id",
+      "type": "positive",
+      "required": true,
+      "description": "Идентификатор сообщества.Обязательный параметр"
+    },
+    {
+      "name": "key",
+      "type": "string",
+      "required": false,
+      "description": "Произвольная строка. Этот параметр можно использовать для идентификации пользователя. Его значение будет возвращено в событии message_allow Callback API.Макс. длина = 256"
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "После успешного выполнения возвращает 1."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "group_idpositiveИдентификатор сообщества.Обязательный параметрkeystringПроизвольная строка. Этот параметр можно использовать для идентификации пользователя. Его значение будет возвращено в событии message_allow Callback API.Макс. длина = 256"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "После успешного выполнения возвращает 1."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "943Cannot use this intent В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Позволяет разрешить отправку сообщений от сообщества текущему пользователю. Параметры: group_idpositiveИдентификатор сообщества.Обязательный параметрkeystringПроизвольная строка. Этот параметр можно использовать для идентификации пользователя. Его значение будет возвращено в событии message_allow Callback API.Макс. длина = 256 Результат: После успешного выполнения возвращает 1. Коды ошибок: 943Cannot use this intent В ходе выполнения могут произойти общие ошибки",
+  "group": "messages"
+}

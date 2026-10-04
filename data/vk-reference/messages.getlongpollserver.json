@@ -1,0 +1,58 @@
+{
+  "id": "messages.getlongpollserver",
+  "url": "https://dev.vk.com/ru/method/messages.getLongPollServer",
+  "title": "messages.getLongPollServer | VK для разработчиков",
+  "h1": "messages.getLongPollServer",
+  "description": "Возвращает данные, необходимые для подключения к Long Poll серверу.",
+  "params": [
+    {
+      "name": "need_pts",
+      "type": "checkbox",
+      "required": false,
+      "description": "1 — возвращать поле pts, необходимое для работы метода messages.getLongPollHistory"
+    },
+    {
+      "name": "group_id",
+      "type": "integer",
+      "required": false,
+      "description": "Идентификатор сообщества (для сообщений сообщества с ключом доступа пользователя)."
+    },
+    {
+      "name": "lp_version",
+      "type": "positive",
+      "required": false,
+      "description": "Версия для подключения к Long Poll. Актуальная версия: 3. Подробную информацию об изменениях в версиях Вы найдёте на этой странице."
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "Возвращает объект, который содержит поля key, server, ts. Используя эти данные, Вы можете подключиться к серверу быстрых сообщений для мгновенного получения приходящих сообщений и других событий. Формат взаимодействия с LongPoll сервером."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "need_ptscheckbox1 — возвращать поле pts, необходимое для работы метода messages.getLongPollHistorygroup_idintegerИдентификатор сообщества (для сообщений сообщества с ключом доступа пользователя).lp_versionpositiveВерсия для подключения к Long Poll. Актуальная версия: 3. Подробную информацию об изменениях в версиях Вы найдёте на этой странице."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Возвращает объект, который содержит поля key, server, ts. Используя эти данные, Вы можете подключиться к серверу быстрых сообщений для мгновенного получения приходящих сообщений и других событий. Формат взаимодействия с LongPoll сервером."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "В ходе выполнения могут произойти общие ошибки"
+    },
+    {
+      "level": 2,
+      "title": "Связанные версии",
+      "text": "Перейти на страницу версий API 5.65 • В метод auth.restore добавлен обязательный параметр last_name. • В метод messages.getLongPollServer добавлен параметр lp_version. • Метод ads.getCategories возвращает результат в новом формате. • Метод wall.edit больше нельзя использовать для редактирования рекламной записи, вместо него нужно использовать метод wall.editAdsStealth. • Методы audio.getAlbums, audio.addAlbum, audio.editAlbum, audio.deleteAlbum и audio.moveToAlbum устарели."
+    }
+  ],
+  "contentText": "Возвращает данные, необходимые для подключения к Long Poll серверу. Параметры: need_ptscheckbox1 — возвращать поле pts, необходимое для работы метода messages.getLongPollHistorygroup_idintegerИдентификатор сообщества (для сообщений сообщества с ключом доступа пользователя).lp_versionpositiveВерсия для подключения к Long Poll. Актуальная версия: 3. Подробную информацию об изменениях в версиях Вы найдёте на этой странице. Результат: Возвращает объект, который содержит поля key, server, ts. Используя эти данные, Вы можете подключиться к серверу быстрых сообщений для мгновенного получения приходящих сообщений и других событий. Формат взаимодействия с LongPoll сервером. Коды ошибок: В ходе выполнения могут произойти общие ошибки Связанные версии: Перейти на страницу версий API 5.65 • В метод auth.restore добавлен обязательный параметр last_name. • В метод messages.getLongPollServer добавлен параметр lp_version. • Метод ads.getCategories возвращает результат в новом формате. • Метод wall.edit больше нельзя использовать для редактирования рекламной записи, вместо него нужно использовать метод wall.editAdsStealth. • Методы audio.getAlbums, audio.addAlbum, audio.editAlbum, audio.deleteAlbum и audio.moveToAlbum устарели.",
+  "group": "messages"
+}

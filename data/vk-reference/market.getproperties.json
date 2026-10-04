@@ -1,0 +1,41 @@
+{
+  "id": "market.getproperties",
+  "url": "https://dev.vk.com/ru/method/market.getProperties",
+  "title": "market.getProperties | VK для разработчиков",
+  "h1": "market.getProperties",
+  "description": "Возвращает список свойств для указанного сообщества.",
+  "params": [
+    {
+      "name": "group_id",
+      "type": "integer",
+      "required": true,
+      "description": "идентификатор сообщества, минимальное значение 1Обязательный параметр"
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "После успешного выполнения возвращает объект, содержащий число результатов в поле count и массив объектов cвойств."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "group_idintegerидентификатор сообщества, минимальное значение 1Обязательный параметр"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "После успешного выполнения возвращает объект, содержащий число результатов в поле count и массив объектов cвойств."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "1409Extended market not enabled1410Variants not enabled1411Variants error1438Market not enabled В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Возвращает список свойств для указанного сообщества. Параметры: group_idintegerидентификатор сообщества, минимальное значение 1Обязательный параметр Результат: После успешного выполнения возвращает объект, содержащий число результатов в поле count и массив объектов cвойств. Коды ошибок: 1409Extended market not enabled1410Variants not enabled1411Variants error1438Market not enabled В ходе выполнения могут произойти общие ошибки",
+  "group": "market"
+}

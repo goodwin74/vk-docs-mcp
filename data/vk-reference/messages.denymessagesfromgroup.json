@@ -1,0 +1,41 @@
+{
+  "id": "messages.denymessagesfromgroup",
+  "url": "https://dev.vk.com/ru/method/messages.denyMessagesFromGroup",
+  "title": "messages.denyMessagesFromGroup | VK для разработчиков",
+  "h1": "messages.denyMessagesFromGroup",
+  "description": "Позволяет запретить отправку сообщений от сообщества текущему пользователю.",
+  "params": [
+    {
+      "name": "group_id",
+      "type": "positive",
+      "required": true,
+      "description": "Идентификатор сообщества.Обязательный параметр"
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "После успешного выполнения возвращает 1."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "group_idpositiveИдентификатор сообщества.Обязательный параметр"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "После успешного выполнения возвращает 1."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Позволяет запретить отправку сообщений от сообщества текущему пользователю. Параметры: group_idpositiveИдентификатор сообщества.Обязательный параметр Результат: После успешного выполнения возвращает 1. Коды ошибок: В ходе выполнения могут произойти общие ошибки",
+  "group": "messages"
+}

@@ -1,0 +1,124 @@
+{
+  "id": "market.getgrouporders",
+  "url": "https://dev.vk.com/ru/method/market.getGroupOrders",
+  "title": "market.getGroupOrders | VK для разработчиков",
+  "h1": "market.getGroupOrders",
+  "description": "Возвращает заказы сообщества.",
+  "params": [
+    {
+      "name": "group_id",
+      "type": "string",
+      "required": false,
+      "description": "Идентификатор или короткое имя сообщества."
+    },
+    {
+      "name": "offset",
+      "type": "positive",
+      "required": false,
+      "description": "Смещение относительно первого найденного заказа для выборки определенного подмножества."
+    },
+    {
+      "name": "count",
+      "type": "positive",
+      "required": false,
+      "description": "Количество возвращаемых заказов."
+    },
+    {
+      "name": "statuses",
+      "type": "string",
+      "required": false,
+      "description": ""
+    },
+    {
+      "name": "date_from",
+      "type": "positive",
+      "required": false,
+      "description": ""
+    },
+    {
+      "name": "date_to",
+      "type": "positive",
+      "required": false,
+      "description": ""
+    },
+    {
+      "name": "price_from",
+      "type": "positive",
+      "required": false,
+      "description": ""
+    },
+    {
+      "name": "price_to",
+      "type": "positive",
+      "required": false,
+      "description": ""
+    },
+    {
+      "name": "tags",
+      "type": "string",
+      "required": false,
+      "description": ""
+    },
+    {
+      "name": "sort",
+      "type": "integer",
+      "required": false,
+      "description": ""
+    },
+    {
+      "name": "rev",
+      "type": "positive",
+      "required": false,
+      "description": ""
+    },
+    {
+      "name": "q",
+      "type": "string",
+      "required": false,
+      "description": ""
+    },
+    {
+      "name": "delivery_type",
+      "type": "string",
+      "required": false,
+      "description": ""
+    },
+    {
+      "name": "next_from",
+      "type": "string",
+      "required": false,
+      "description": ""
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "После успешного выполнения возвращает объект, содержащий число результатов в поле count и массив объектов заказов в поле items."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "group_idstringИдентификатор или короткое имя сообщества.offsetpositiveСмещение относительно первого найденного заказа для выборки определенного подмножества.countpositiveКоличество возвращаемых заказов.statusesstringdate_frompositivedate_topositiveprice_frompositiveprice_topositivetagsstringsortintegerrevpositiveqstringdelivery_typestringnext_fromstring"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "После успешного выполнения возвращает объект, содержащий число результатов в поле count и массив объектов заказов в поле items."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "1409Extended market not enabled1456Order status is invalid В ходе выполнения могут произойти общие ошибки"
+    },
+    {
+      "level": 2,
+      "title": "Связанные версии",
+      "text": "Перейти на страницу версий API 5.122 •В объекте товара поля date и views_count теперь возвращаются только администратору группы, которой принадлежит товар. •В объекте заказа информация о доставке и заказчике вынесена из основного объекта в новые вложенные объекты: delivery и recepient."
+    }
+  ],
+  "contentText": "Возвращает заказы сообщества. Параметры: group_idstringИдентификатор или короткое имя сообщества.offsetpositiveСмещение относительно первого найденного заказа для выборки определенного подмножества.countpositiveКоличество возвращаемых заказов.statusesstringdate_frompositivedate_topositiveprice_frompositiveprice_topositivetagsstringsortintegerrevpositiveqstringdelivery_typestringnext_fromstring Результат: После успешного выполнения возвращает объект, содержащий число результатов в поле count и массив объектов заказов в поле items. Коды ошибок: 1409Extended market not enabled1456Order status is invalid В ходе выполнения могут произойти общие ошибки Связанные версии: Перейти на страницу версий API 5.122 •В объекте товара поля date и views_count теперь возвращаются только администратору группы, которой принадлежит товар. •В объекте заказа информация о доставке и заказчике вынесена из основного объекта в новые вложенные объекты: delivery и recepient.",
+  "group": "market"
+}

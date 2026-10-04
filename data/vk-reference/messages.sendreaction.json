@@ -1,0 +1,53 @@
+{
+  "id": "messages.sendreaction",
+  "url": "https://dev.vk.com/ru/method/messages.sendReaction",
+  "title": "messages.sendReaction | VK для разработчиков",
+  "h1": "messages.sendReaction",
+  "description": "Метод установки реакции на сообщение",
+  "params": [
+    {
+      "name": "peer_id",
+      "type": "integer",
+      "required": true,
+      "description": "peer_id переписки: •user_id — для личных чатов. •group_id — для чатов с сообществом. •2 000 000 000 + id_чата — для чатов. Обязательный параметр"
+    },
+    {
+      "name": "cmid",
+      "type": "positive",
+      "required": true,
+      "description": "Conversation message id: Порядковый номер сообщения в чатеОбязательный параметр"
+    },
+    {
+      "name": "reaction_id",
+      "type": "positive",
+      "required": true,
+      "description": "Номер реакцииОбязательный параметр"
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "Возвращает {result: 1} при успешной отправке реакции или сообщение об ошибке"
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "peer_idintegerpeer_id переписки: •user_id — для личных чатов. •group_id — для чатов с сообществом. •2 000 000 000 + id_чата — для чатов. Обязательный параметрcmidpositiveConversation message id: Порядковый номер сообщения в чатеОбязательный параметрreaction_idpositiveНомер реакцииОбязательный параметр"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Возвращает {result: 1} при успешной отправке реакции или сообщение об ошибке"
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "995Messenger degradation1009Unknown reaction passed1010This reaction has been disabled1011Reactions limit for this message has been reached В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Метод установки реакции на сообщение Параметры: peer_idintegerpeer_id переписки: •user_id — для личных чатов. •group_id — для чатов с сообществом. •2 000 000 000 + id_чата — для чатов. Обязательный параметрcmidpositiveConversation message id: Порядковый номер сообщения в чатеОбязательный параметрreaction_idpositiveНомер реакцииОбязательный параметр Результат: Возвращает {result: 1} при успешной отправке реакции или сообщение об ошибке Коды ошибок: 995Messenger degradation1009Unknown reaction passed1010This reaction has been disabled1011Reactions limit for this message has been reached В ходе выполнения могут произойти общие ошибки",
+  "group": "messages"
+}
