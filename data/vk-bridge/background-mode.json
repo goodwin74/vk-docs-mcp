@@ -1,0 +1,15 @@
+{
+  "id": "background-mode",
+  "url": "https://dev.vk.com/ru/bridge/background-mode",
+  "title": "Работа в фоновом режиме",
+  "h1": "Работа в фоновом режиме",
+  "group": "",
+  "description": "",
+  "examples": [],
+  "params": [],
+  "returns": {
+    "description": ""
+  },
+  "sections": [],
+  "contentText": ""
+}
