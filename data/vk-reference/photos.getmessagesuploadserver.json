@@ -1,0 +1,41 @@
+{
+  "id": "photos.getmessagesuploadserver",
+  "url": "https://dev.vk.com/ru/method/photos.getMessagesUploadServer",
+  "title": "photos.getMessagesUploadServer | VK для разработчиков",
+  "h1": "photos.getMessagesUploadServer",
+  "description": "Метод получает адрес сервера для загрузки фотографии в личное сообщение пользователя или в сообщение сообщества.",
+  "params": [
+    {
+      "name": "peer_id",
+      "type": "integer",
+      "required": false,
+      "description": ""
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "Метод возвращает объект. Поля объекта: ПолеТипОписаниеalbum_idintegerИдентификатор альбома, в который нужно загрузить фотографию.upload_urlstringАдрес, по которому нужно загрузить фотографию.user_idintegerИдентификатор пользователя.group_idintegerИдентификатор сообщества, если используются сообщения сообщества. Пример ответа: JSON{ \"response\":{ \"album_id\":-64, \"upload_url\":\"https:\\/\\/pu.vk.com\\/c231331\\/ss2269\\/upload.php?act=do_add&mid=743784474&aid=-64&gid=218252175&hash=2e60ee02a7dd5aaaf0bce3e034b1dc30&rhash=eda561bac91afb0270fc9ca741ac626b&swfupload=1&api=1&mailphoto=1\", \"user_id\":0, \"group_id\":218252175 } }"
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "peer_idinteger"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Метод возвращает объект. Поля объекта: ПолеТипОписаниеalbum_idintegerИдентификатор альбома, в который нужно загрузить фотографию.upload_urlstringАдрес, по которому нужно загрузить фотографию.user_idintegerИдентификатор пользователя.group_idintegerИдентификатор сообщества, если используются сообщения сообщества. Пример ответа: JSON{ \"response\":{ \"album_id\":-64, \"upload_url\":\"https:\\/\\/pu.vk.com\\/c231331\\/ss2269\\/upload.php?act=do_add&mid=743784474&aid=-64&gid=218252175&hash=2e60ee02a7dd5aaaf0bce3e034b1dc30&rhash=eda561bac91afb0270fc9ca741ac626b&swfupload=1&api=1&mailphoto=1\", \"user_id\":0, \"group_id\":218252175 } }"
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "901Can't send messages for users without permission В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Метод получает адрес сервера для загрузки фотографии в личное сообщение пользователя или в сообщение сообщества. Параметры: peer_idinteger Результат: Метод возвращает объект. Поля объекта: ПолеТипОписаниеalbum_idintegerИдентификатор альбома, в который нужно загрузить фотографию.upload_urlstringАдрес, по которому нужно загрузить фотографию.user_idintegerИдентификатор пользователя.group_idintegerИдентификатор сообщества, если используются сообщения сообщества. Пример ответа: JSON{ \"response\":{ \"album_id\":-64, \"upload_url\":\"https:\\/\\/pu.vk.com\\/c231331\\/ss2269\\/upload.php?act=do_add&mid=743784474&aid=-64&gid=218252175&hash=2e60ee02a7dd5aaaf0bce3e034b1dc30&rhash=eda561bac91afb0270fc9ca741ac626b&swfupload=1&api=1&mailphoto=1\", \"user_id\":0, \"group_id\":218252175 } } Коды ошибок: 901Can't send messages for users without permission В ходе выполнения могут произойти общие ошибки",
+  "group": "photos"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "prettycards.getuploadurl",
+  "url": "https://dev.vk.com/ru/method/prettyCards.getUploadURL",
+  "title": "prettyCards.getUploadURL | VK для разработчиков",
+  "h1": "prettyCards.getUploadURL",
+  "description": "Возвращает URL для загрузки фотографии для карточки.",
+  "params": [],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "Возвращает URL для загрузки фотографии для карточки."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": ""
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Возвращает URL для загрузки фотографии для карточки."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Возвращает URL для загрузки фотографии для карточки. Параметры: Результат: Возвращает URL для загрузки фотографии для карточки. Коды ошибок: В ходе выполнения могут произойти общие ошибки",
+  "group": "prettycards"
+}

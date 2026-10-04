@@ -1,0 +1,83 @@
+{
+  "id": "photos.savewallphoto",
+  "url": "https://dev.vk.com/ru/method/photos.saveWallPhoto",
+  "title": "photos.saveWallPhoto | VK для разработчиков",
+  "h1": "photos.saveWallPhoto",
+  "description": "Метод сохраняет фотографии на стене после их успешной загрузки на сервер.",
+  "params": [
+    {
+      "name": "user_id",
+      "type": "positive",
+      "required": false,
+      "description": "Необязательный параметр. Идентификатор пользователя, на стену которого необходимо сохранить фотографию."
+    },
+    {
+      "name": "group_id",
+      "type": "positive",
+      "required": false,
+      "description": "Необязательный параметр. Идентификатор сообщества, на стену которого необходимо сохранить фотографию."
+    },
+    {
+      "name": "photo",
+      "type": "string",
+      "required": true,
+      "description": "Обязательный параметр. Фотография в формате multipart/form-data. Параметр возвращается в результате загрузки фотографий на сервер.Обязательный параметр"
+    },
+    {
+      "name": "server",
+      "type": "integer",
+      "required": true,
+      "description": "Обязательный параметр. Идентификатор сервера, на который загружены фотографии. Параметр возвращается в результате загрузки фотографий на сервер."
+    },
+    {
+      "name": "hash",
+      "type": "string",
+      "required": true,
+      "description": "Обязательный параметр. Хеш фотографий. Параметр возвращается в результате загрузки фотографий на сервер."
+    },
+    {
+      "name": "latitude",
+      "type": "string",
+      "required": false,
+      "description": "Необязательный параметр. Географическая широта в градусах. Диапазон значений: от -90 до 90."
+    },
+    {
+      "name": "longitude",
+      "type": "string",
+      "required": false,
+      "description": "Необязательный параметр. Географическая долгота в градусах. Диапазон значений: от -180 до 180."
+    },
+    {
+      "name": "caption",
+      "type": "string",
+      "required": false,
+      "description": "Необязательный параметр. Текст описания фотографии. Максимальная количество символов — 2048."
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "Метод возвращает массив объектов фотографий. Пример ответа: JSON{ \"response\":[ { \"album_id\":-14, \"date\":1673529541, \"id\":457239026, \"owner_id\":743784474, \"access_key\":\"45cdb4e3d461f8842b\", \"sizes\":[ { \"height\":50, \"type\":\"s\", \"width\":75, \"url\":\"https:\\/\\/sun9-east.userapi.com\\/sun9-74\\/s\\/v1\\/ig2\\/CRMz1CF_yXYlm_xJ7Ks2UGAjqNPS-GM07DOJvqf1cqP-Ah53dOnZbYsv7dHM4TeXpeuHzoemVmL_SWGSgVbZIOmE.jpg?size=75x50&quality=96&type=album\" }, { \"height\":87, \"type\":\"m\", \"width\":130, \"url\":\"https:\\/\\/sun9-east.userapi.com\\/sun9-74\\/s\\/v1\\/ig2\\/UXbrjKZm-33abaaLtEyIJn4nW4qdoOE3HjgnvR8sPXDWkD9sdzsx-J39RCMOAGCnPxpaEXecsDodtYMWZg-o3qNV.jpg?size=130x87&quality=96&type=album\" }, { \"height\":402, \"type\":\"x\", \"width\":604, \"url\":\"https:\\/\\/sun9-east.userapi.com\\/sun9-74\\/s\\/v1\\/ig2\\/Zvm8PMhCfyn68OQWXzFKK_sXHMcSS1ITUFyZb1CF_JlHCrVLYYoSl2BQlHhbt4b04khyYShSBj_PEkkHbS_FBfDy.jpg?size=604x402&quality=96&type=album\" }, { \"height\":537, \"type\":\"y\", \"width\":807, \"url\":\"https:\\/\\/sun9-east.userapi.com\\/sun9-74\\/s\\/v1\\/ig2\\/TUQ1BtADAo1Wh52JbPebvC_EQmkTzRRMgQ9TF5OhPZJgGXZvNHJmyPxpH4DzK_cAwcF4xaVcxwtqyoUhioE44MxU.jpg?size=807x537&quality=96&type=album\" }, { \"height\":852, \"type\":\"z\", \"width\":1280, \"url\":\"https:\\/\\/sun9-east.userapi.com\\/sun9-74\\/s\\/v1\\/ig2\\/EUkoEE-VjELh7nNrMI0cR0CvCwmb90LOZqhPuL3cTwXv5xIogHue37gDohU0fgjxbB9i7jQRS9chVCoNsH0oUbCl.jpg?size=1280x852&quality=96&type=album\" }, { \"height\":1704, \"type\":\"w\", \"width\":2560, \"url\":\"https:\\/\\/sun9-east.userapi.com\\/sun9-74\\/s\\/v1\\/ig2\\/ehuYZA6huTQHsSxQhqtWkZVOXbWksPPomgY8LBhGZ_CoYQSlw7Eegln3BLOumULu16navFECQottf9-tJdZwM1M9.jpg?size=2560x1704&quality=96&type=album\" }, { \"height\":87, \"type\":\"o\", \"width\":130, \"url\":\"https:\\/\\/sun9-east.userapi.com\\/sun9-74\\/s\\/v1\\/ig2\\/UXbrjKZm-33abaaLtEyIJn4nW4qdoOE3HjgnvR8sPXDWkD9sdzsx-J39RCMOAGCnPxpaEXecsDodtYMWZg-o3qNV.jpg?size=130x87&quality=96&type=album\" }, { \"height\":133, \"type\":\"p\", \"width\":200, \"url\":\"https:\\/\\/sun9-east.userapi.com\\/sun9-74\\/s\\/v1\\/ig2\\/5XymeZnsqufCgf-NjS1tZSktwilCLo4OvRm-KSIUoTvMWFzaUr-a42djy4VVmCs_QcvVds39JxNLQeRd1Il916Tg.jpg?size=200x133&quality=96&type=album\" }, { \"height\":213, \"type\":\"q\", \"width\":320, \"url\":\"https:\\/\\/sun9-east.userapi.com\\/sun9-74\\/s\\/v1\\/ig2\\/hAvemeTJAKa_Bk4-kU-edFxpx5Fm6kF3HSOKIJhH6i5NHn1bVBQSkPcIoGl43kwO_J0rUylgMl9CnB8IqHK2fD-p.jpg?size=320x213&quality=96&type=album\" }, { \"height\":340, \"type\":\"r\", \"width\":510, \"url\":\"https:\\/\\/sun9-east.userapi.com\\/sun9-74\\/s\\/v1\\/ig2\\/yV6LGUU_jrZUJsr2IPMrm_303ofB7BxsqiAjanlmFY2EJPrd94Gp-R4z4m4kYrkszA8uuAj-aSFfJDE4HAHyY9_V.jpg?size=510x340&quality=96&crop=2,0,2556,1704&type=album\" } ], \"text\":\"\", \"has_tags\":false } ] }"
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "user_idpositiveНеобязательный параметр. Идентификатор пользователя, на стену которого необходимо сохранить фотографию.group_idpositiveНеобязательный параметр. Идентификатор сообщества, на стену которого необходимо сохранить фотографию.photostringОбязательный параметр. Фотография в формате multipart/form-data. Параметр возвращается в результате загрузки фотографий на сервер.Обязательный параметрserverintegerОбязательный параметр. Идентификатор сервера, на который загружены фотографии. Параметр возвращается в результате загрузки фотографий на сервер.hashstringОбязательный параметр. Хеш фотографий. Параметр возвращается в результате загрузки фотографий на сервер.latitudestringНеобязательный параметр. Географическая широта в градусах. Диапазон значений: от -90 до 90.longitudestringНеобязательный параметр. Географическая долгота в градусах. Диапазон значений: от -180 до 180.captionstringНеобязательный параметр. Текст описания фотографии. Максимальная количество символов — 2048."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Метод возвращает массив объектов фотографий. Пример ответа: JSON{ \"response\":[ { \"album_id\":-14, \"date\":1673529541, \"id\":457239026, \"owner_id\":743784474, \"access_key\":\"45cdb4e3d461f8842b\", \"sizes\":[ { \"height\":50, \"type\":\"s\", \"width\":75, \"url\":\"https:\\/\\/sun9-east.userapi.com\\/sun9-74\\/s\\/v1\\/ig2\\/CRMz1CF_yXYlm_xJ7Ks2UGAjqNPS-GM07DOJvqf1cqP-Ah53dOnZbYsv7dHM4TeXpeuHzoemVmL_SWGSgVbZIOmE.jpg?size=75x50&quality=96&type=album\" }, { \"height\":87, \"type\":\"m\", \"width\":130, \"url\":\"https:\\/\\/sun9-east.userapi.com\\/sun9-74\\/s\\/v1\\/ig2\\/UXbrjKZm-33abaaLtEyIJn4nW4qdoOE3HjgnvR8sPXDWkD9sdzsx-J39RCMOAGCnPxpaEXecsDodtYMWZg-o3qNV.jpg?size=130x87&quality=96&type=album\" }, { \"height\":402, \"type\":\"x\", \"width\":604, \"url\":\"https:\\/\\/sun9-east.userapi.com\\/sun9-74\\/s\\/v1\\/ig2\\/Zvm8PMhCfyn68OQWXzFKK_sXHMcSS1ITUFyZb1CF_JlHCrVLYYoSl2BQlHhbt4b04khyYShSBj_PEkkHbS_FBfDy.jpg?size=604x402&quality=96&type=album\" }, { \"height\":537, \"type\":\"y\", \"width\":807, \"url\":\"https:\\/\\/sun9-east.userapi.com\\/sun9-74\\/s\\/v1\\/ig2\\/TUQ1BtADAo1Wh52JbPebvC_EQmkTzRRMgQ9TF5OhPZJgGXZvNHJmyPxpH4DzK_cAwcF4xaVcxwtqyoUhioE44MxU.jpg?size=807x537&quality=96&type=album\" }, { \"height\":852, \"type\":\"z\", \"width\":1280, \"url\":\"https:\\/\\/sun9-east.userapi.com\\/sun9-74\\/s\\/v1\\/ig2\\/EUkoEE-VjELh7nNrMI0cR0CvCwmb90LOZqhPuL3cTwXv5xIogHue37gDohU0fgjxbB9i7jQRS9chVCoNsH0oUbCl.jpg?size=1280x852&quality=96&type=album\" }, { \"height\":1704, \"type\":\"w\", \"width\":2560, \"url\":\"https:\\/\\/sun9-east.userapi.com\\/sun9-74\\/s\\/v1\\/ig2\\/ehuYZA6huTQHsSxQhqtWkZVOXbWksPP"
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "22Upload error114Invalid album id118Invalid server121Invalid hash В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Метод сохраняет фотографии на стене после их успешной загрузки на сервер. Параметры: user_idpositiveНеобязательный параметр. Идентификатор пользователя, на стену которого необходимо сохранить фотографию.group_idpositiveНеобязательный параметр. Идентификатор сообщества, на стену которого необходимо сохранить фотографию.photostringОбязательный параметр. Фотография в формате multipart/form-data. Параметр возвращается в результате загрузки фотографий на сервер.Обязательный параметрserverintegerОбязательный параметр. Идентификатор сервера, на который загружены фотографии. Параметр возвращается в результате загрузки фотографий на сервер.hashstringОбязательный параметр. Хеш фотографий. Параметр возвращается в результате загрузки фотографий на сервер.latitudestringНеобязательный параметр. Географическая широта в градусах. Диапазон значений: от -90 до 90.longitudestringНеобязательный параметр. Географическая долгота в градусах. Диапазон значений: от -180 до 180.captionstringНеобязательный параметр. Текст описания фотографии. Максимальная количество символов — 2048. Результат: Метод возвращает массив объектов фотографий. Пример ответа: JSON{ \"response\":[ { \"album_id\":-14, \"date\":1673529541, \"id\":457239026, \"owner_id\":743784474, \"access_key\":\"45cdb4e3d461f8842b\", \"sizes\":[ { \"height\":50, \"type\":\"s\", \"width\":75, \"url\":\"https:\\/\\/sun9-east.userapi.com\\/sun9-74\\/s\\/v1\\/ig2\\/CRMz1CF_yXYlm_xJ7Ks2UGAjqNPS-GM07DOJvqf1cqP-Ah53dOnZbYsv7dHM4TeXpeuHzoemVmL_SWGSgVbZIOmE.jpg?size=75x50&quality=96&type=album\" }, { \"height\":87, \"type\":\"m\", \"width\":130, \"url\":\"https:\\/\\/sun9-east.userapi.com\\/sun9-74\\/s\\/v1\\/ig2\\/UXbrjKZm-33abaaLtEyIJn4nW4qdoOE3HjgnvR8sPXDWkD9sdzsx-J39RCMOAGCnPxpaEXecsDodtYMWZg-o3qNV.jpg?size=130x87&quality=96&type=album\" }, { \"height\":402, \"type\":\"x\", \"width\":604, \"url\":\"https:\\/\\/sun9-east.userapi.com\\/sun9-74\\/s\\/v1\\/ig2\\/Zvm8PMhCfyn68OQWXzFKK_sXHMcSS1ITUFyZb1CF_JlHCrVLYYoSl2BQlHhbt4b04khyYShSBj_PEkkHbS_FBfDy.jpg?size=604x402&quality=96&type=album\" }, { \"height\":537, \"type\":\"y\", \"width\":807, \"url\":\"https:\\/\\/sun9-east.userapi.com\\/sun9-74\\/s\\/v1\\/ig2\\/TUQ1BtADAo1Wh52JbPebvC_EQmkTzRRMgQ9TF5OhPZJgGXZvNHJmyPxpH4DzK_cAwcF4xaVcxwtqyoUhioE44MxU.jpg?size=807x537&quality=96&type=album\" }, { \"height\":852, \"type\":\"z\", \"width\":1280, \"url\":\"https:\\/\\/sun9-east.userapi.com\\/sun9-74\\/s\\/v1\\/ig2\\/EUkoEE-VjELh7nNrMI0cR0CvCwmb90LOZqhPuL3cTwXv5xIogHue37gDohU0fgjxbB9i7jQRS9chVCoNsH0oUbCl.jpg?size=1280x852&quality=96&type=album\" }, { \"height\":1704, \"type\":\"w\", \"width\":2560, \"url\":\"https:\\/\\/sun9-east.userapi.com\\/sun9-74\\/s\\/v1\\/ig2\\/ehuYZA6huTQHsSxQhqtWkZVOXbWksPP Коды ошибок: 22Upload error114Invalid album id118Invalid server121Invalid hash В ходе выполнения могут произойти общие ошибки",
+  "group": "photos"
+}

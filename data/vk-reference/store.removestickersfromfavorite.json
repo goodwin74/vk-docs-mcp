@@ -1,0 +1,41 @@
+{
+  "id": "store.removestickersfromfavorite",
+  "url": "https://dev.vk.com/ru/method/store.removeStickersFromFavorite",
+  "title": "store.removeStickersFromFavorite | VK для разработчиков",
+  "h1": "store.removeStickersFromFavorite",
+  "description": "Удаляет стикер из избранных.",
+  "params": [
+    {
+      "name": "sticker_ids",
+      "type": "integer",
+      "required": true,
+      "description": "Идентификаторы стикеров.Обязательный параметр"
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "После успешного выполнения возвращает 1."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "sticker_idsintegerИдентификаторы стикеров.Обязательный параметр"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "После успешного выполнения возвращает 1."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "2102Stickers are not favorite В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Удаляет стикер из избранных. Параметры: sticker_idsintegerИдентификаторы стикеров.Обязательный параметр Результат: После успешного выполнения возвращает 1. Коды ошибок: 2102Stickers are not favorite В ходе выполнения могут произойти общие ошибки",
+  "group": "store"
+}

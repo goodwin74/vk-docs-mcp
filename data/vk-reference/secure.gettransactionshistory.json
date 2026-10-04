@@ -1,0 +1,34 @@
+{
+  "id": "secure.gettransactionshistory",
+  "url": "https://dev.vk.com/ru/method/secure.getTransactionsHistory",
+  "title": "secure.getTransactionsHistory | VK для разработчиков",
+  "h1": "secure.getTransactionsHistory",
+  "description": "Выводит историю транзакций по переводу голосов между пользователями и приложением.",
+  "params": [],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "Возвращает список транзакций, отсортированных по убыванию даты, и отфильтрованных с помощью параметров type, uid_from, uid_to, date_from, date_to, limit."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": ""
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Возвращает список транзакций, отсортированных по убыванию даты, и отфильтрованных с помощью параметров type, uid_from, uid_to, date_from, date_to, limit."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Выводит историю транзакций по переводу голосов между пользователями и приложением. Параметры: Результат: Возвращает список транзакций, отсортированных по убыванию даты, и отфильтрованных с помощью параметров type, uid_from, uid_to, date_from, date_to, limit. Коды ошибок: В ходе выполнения могут произойти общие ошибки",
+  "group": "secure"
+}

@@ -1,0 +1,47 @@
+{
+  "id": "prettycards.delete",
+  "url": "https://dev.vk.com/ru/method/prettyCards.delete",
+  "title": "prettyCards.delete | VK для разработчиков",
+  "h1": "prettyCards.delete",
+  "description": "Удаляет карточку.",
+  "params": [
+    {
+      "name": "owner_id",
+      "type": "integer",
+      "required": true,
+      "description": "Идентификатор владельца карточки.Обязательный параметр"
+    },
+    {
+      "name": "card_id",
+      "type": "string",
+      "required": true,
+      "description": "Идентификатор карточки.Обязательный параметр"
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "Возвращает структуру с информаций об удалённой карточке. •owner_id — идентификатор владельца карточки; •card_id — идентификатор карточки."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "owner_idintegerИдентификатор владельца карточки.Обязательный параметрcard_idstringИдентификатор карточки.Обязательный параметр"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Возвращает структуру с информаций об удалённой карточке. •owner_id — идентификатор владельца карточки; •card_id — идентификатор карточки."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "1900Card not found1902Card is connected to post В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Удаляет карточку. Параметры: owner_idintegerИдентификатор владельца карточки.Обязательный параметрcard_idstringИдентификатор карточки.Обязательный параметр Результат: Возвращает структуру с информаций об удалённой карточке. •owner_id — идентификатор владельца карточки; •card_id — идентификатор карточки. Коды ошибок: 1900Card not found1902Card is connected to post В ходе выполнения могут произойти общие ошибки",
+  "group": "prettycards"
+}

@@ -1,0 +1,59 @@
+{
+  "id": "users.get",
+  "url": "https://dev.vk.com/ru/method/users.get",
+  "title": "users.get | VK для разработчиков",
+  "h1": "users.get",
+  "description": "Метод позволяет получить информацию о пользователях.",
+  "params": [
+    {
+      "name": "user_ids",
+      "type": "string",
+      "required": false,
+      "description": "Перечисленные через запятую идентификаторы пользователей или их короткие имена (screen_name). По умолчанию — идентификатор текущего пользователя."
+    },
+    {
+      "name": "fields",
+      "type": "string",
+      "required": false,
+      "description": "Список дополнительных полей профилей, которые необходимо вернуть. См. подробное описание. Доступные значения: •activities, •about, •blacklisted, •blacklisted_by_me, •books, •bdate, •can_be_invited_group, •can_post, •can_see_all_posts, •can_see_audio, •can_send_friend_request, •can_write_private_message, •career, •common_count, •connections, •contacts, •city, •crop_photo, •domain, •education, •exports, •followers_count, •friend_status, •has_photo, •has_mobile, •home_town, •photo_100, •photo_200, •photo_200_orig, •photo_400_orig, •photo_50, •sex, •site, •schools, •screen_name, •status, •verified, •games, •interests, •is_favorite, •is_friend, •is_hidden_from_feed, •last_seen, •maiden_name, •military, •movies, •music, •nickname, •occupation, •online, •personal, •photo_id, •photo_max, •photo_max_orig, •quotes, •relation, •relatives, •timezone, •tv, •universities, •is_verified."
+    },
+    {
+      "name": "name_case",
+      "type": "string",
+      "required": false,
+      "description": "Падеж для склонения имени и фамилии пользователя. Возможные значения: •именительный – nom, •родительный – gen, •дательный – dat, •винительный – acc, •творительный – ins, •предложный – abl. По умолчанию nom."
+    },
+    {
+      "name": "from_group_id",
+      "type": "integer",
+      "required": false,
+      "description": "Параметр устарел и больше не используется."
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "После успешного выполнения возвращает массив объектов пользователей."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "user_idsstringПеречисленные через запятую идентификаторы пользователей или их короткие имена (screen_name). По умолчанию — идентификатор текущего пользователя.fieldsstringСписок дополнительных полей профилей, которые необходимо вернуть. См. подробное описание. Доступные значения: •activities, •about, •blacklisted, •blacklisted_by_me, •books, •bdate, •can_be_invited_group, •can_post, •can_see_all_posts, •can_see_audio, •can_send_friend_request, •can_write_private_message, •career, •common_count, •connections, •contacts, •city, •crop_photo, •domain, •education, •exports, •followers_count, •friend_status, •has_photo, •has_mobile, •home_town, •photo_100, •photo_200, •photo_200_orig, •photo_400_orig, •photo_50, •sex, •site, •schools, •screen_name, •status, •verified, •games, •interests, •is_favorite, •is_friend, •is_hidden_from_feed, •last_seen, •maiden_name, •military, •movies, •music, •nickname, •occupation, •online, •personal, •photo_id, •photo_max, •photo_max_orig, •quotes, •relation, •relatives, •timezone, •tv, •universities, •is_verified. name_casestringПадеж для склонения имени и фамилии пользователя. Возможные значения: •именительный – nom, •родительный – gen, •дательный – dat, •винительный – acc, •творительный – ins, •предложный – abl. По умолчанию nom.from_group_idintegerПараметр устарел и больше не используется. Поля counters, military будут возвращены только в случае, если передан ровно один user_id."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "После успешного выполнения возвращает массив объектов пользователей."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Метод позволяет получить информацию о пользователях. Параметры: user_idsstringПеречисленные через запятую идентификаторы пользователей или их короткие имена (screen_name). По умолчанию — идентификатор текущего пользователя.fieldsstringСписок дополнительных полей профилей, которые необходимо вернуть. См. подробное описание. Доступные значения: •activities, •about, •blacklisted, •blacklisted_by_me, •books, •bdate, •can_be_invited_group, •can_post, •can_see_all_posts, •can_see_audio, •can_send_friend_request, •can_write_private_message, •career, •common_count, •connections, •contacts, •city, •crop_photo, •domain, •education, •exports, •followers_count, •friend_status, •has_photo, •has_mobile, •home_town, •photo_100, •photo_200, •photo_200_orig, •photo_400_orig, •photo_50, •sex, •site, •schools, •screen_name, •status, •verified, •games, •interests, •is_favorite, •is_friend, •is_hidden_from_feed, •last_seen, •maiden_name, •military, •movies, •music, •nickname, •occupation, •online, •personal, •photo_id, •photo_max, •photo_max_orig, •quotes, •relation, •relatives, •timezone, •tv, •universities, •is_verified. name_casestringПадеж для склонения имени и фамилии пользователя. Возможные значения: •именительный – nom, •родительный – gen, •дательный – dat, •винительный – acc, •творительный – ins, •предложный – abl. По умолчанию nom.from_group_idintegerПараметр устарел и больше не используется. Поля counters, military будут возвращены только в случае, если передан ровно один user_id. Результат: После успешного выполнения возвращает массив объектов пользователей. Коды ошибок: В ходе выполнения могут произойти общие ошибки",
+  "group": "users"
+}

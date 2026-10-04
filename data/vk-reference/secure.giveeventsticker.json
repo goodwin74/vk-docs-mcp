@@ -1,0 +1,54 @@
+{
+  "id": "secure.giveeventsticker",
+  "url": "https://dev.vk.com/ru/method/secure.giveEventSticker",
+  "title": "secure.giveEventSticker | VK для разработчиков",
+  "h1": "secure.giveEventSticker",
+  "description": "Выдает пользователю стикер и открывает игровое достижение.",
+  "params": [
+    {
+      "name": "user_ids",
+      "type": "integer",
+      "required": true,
+      "description": "Список ID пользователей которым нужно открыть достижение.Обязательный параметр"
+    },
+    {
+      "name": "achievement_id",
+      "type": "positive",
+      "required": true,
+      "description": "ID игрового достижения на платформе игр.Обязательный параметр"
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "rows": [
+        {
+          "name": "{\n  \"user_id\": int,\n  \"status\": string\n}",
+          "type": "Возвращает список результатов выполнения в виде списка объектов:",
+          "required": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "user_idsintegerСписок ID пользователей которым нужно открыть достижение.Обязательный параметрachievement_idpositiveID игрового достижения на платформе игр.Обязательный параметр"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Возвращает список результатов выполнения в виде списка объектов: { \"user_id\": int, \"status\": string } status может принимать значения: •OK — операция успешна. •ERROR_ACHIEVEMENT_ALREADY_OPENED — стикер уже выдан пользователю. •ERROR_UNKNOWN_ERROR — непредвиденная ошибка."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Выдает пользователю стикер и открывает игровое достижение. Параметры: user_idsintegerСписок ID пользователей которым нужно открыть достижение.Обязательный параметрachievement_idpositiveID игрового достижения на платформе игр.Обязательный параметр Результат: Возвращает список результатов выполнения в виде списка объектов: { \"user_id\": int, \"status\": string } status может принимать значения: •OK — операция успешна. •ERROR_ACHIEVEMENT_ALREADY_OPENED — стикер уже выдан пользователю. •ERROR_UNKNOWN_ERROR — непредвиденная ошибка. Коды ошибок: В ходе выполнения могут произойти общие ошибки",
+  "group": "secure"
+}

@@ -1,0 +1,251 @@
+{
+  "id": "users.search",
+  "url": "https://dev.vk.com/ru/method/users.search",
+  "title": "users.search | VK для разработчиков",
+  "h1": "users.search",
+  "description": "Возвращает список пользователей в соответствии с заданным критерием поиска.",
+  "params": [
+    {
+      "name": "q",
+      "type": "string",
+      "required": false,
+      "description": "Строка поискового запроса. Например, Вася Бабич."
+    },
+    {
+      "name": "sort",
+      "type": "integer",
+      "required": false,
+      "description": "Сортировка результатов. Возможные значения: •1 — по дате регистрации, •0 — по популярности."
+    },
+    {
+      "name": "offset",
+      "type": "positive",
+      "required": false,
+      "description": "Смещение относительно первого найденного пользователя для выборки определенного подмножества."
+    },
+    {
+      "name": "count",
+      "type": "positive",
+      "required": false,
+      "description": "Количество возвращаемых пользователей. Обратите внимание, даже при использовании параметра offset для получения информации доступны только первые 1000 результатов."
+    },
+    {
+      "name": "fields",
+      "type": "string",
+      "required": false,
+      "description": "Список дополнительных полей профилей, которые необходимо вернуть. См. подробное описание. Доступные значения: •about, •activities, •bdate, •blacklisted, •blacklisted_by_me •books, •can_post, •can_see_all_posts, •can_see_audio, •can_send_friend_request, •can_write_private_message, •career, •city, •common_count, •connections, •contacts, •country, •crop_photo, •domain, •education, •exports, •followers_count, •friend_status, •games, •has_mobile, •has_photo, •home_town, •interests, •is_favorite, •is_friend, •is_hidden_from_feed, •last_seen, •lists, •maiden_name, •military, •movies, •music, •nickname, •occupation, •online, •personal, •photo_100, •photo_200, •photo_200_orig, •photo_400_orig, •photo_50, •photo_id, •photo_max, •photo_max_orig, •quotes, •relation, •relatives, •schools, •screen_name, •sex, •site, •status, •timezone, •tv, •universities, •verified, •wall_comments."
+    },
+    {
+      "name": "city",
+      "type": "positive",
+      "required": false,
+      "description": "Идентификатор города."
+    },
+    {
+      "name": "city_id",
+      "type": "positive",
+      "required": false,
+      "description": "Идентификатор города для обратной совместимости. Используйте city"
+    },
+    {
+      "name": "country",
+      "type": "positive",
+      "required": false,
+      "description": "Идентификатор страны."
+    },
+    {
+      "name": "country_id",
+      "type": "positive",
+      "required": false,
+      "description": "Идентификатор страны для обратной совместимости. Используйте country"
+    },
+    {
+      "name": "hometown",
+      "type": "string",
+      "required": false,
+      "description": "Название города строкой."
+    },
+    {
+      "name": "university_country",
+      "type": "positive",
+      "required": false,
+      "description": "Идентификатор страны, в которой пользователи закончили ВУЗ."
+    },
+    {
+      "name": "university",
+      "type": "positive",
+      "required": false,
+      "description": "Идентификатор ВУЗа."
+    },
+    {
+      "name": "university_year",
+      "type": "positive",
+      "required": false,
+      "description": "Год окончания ВУЗа."
+    },
+    {
+      "name": "university_faculty",
+      "type": "positive",
+      "required": false,
+      "description": "Идентификатор факультета."
+    },
+    {
+      "name": "university_chair",
+      "type": "positive",
+      "required": false,
+      "description": "Идентификатор кафедры."
+    },
+    {
+      "name": "sex",
+      "type": "positive",
+      "required": false,
+      "description": "Пол. Возможные значения: •1 — женщина, •2 — мужчина, •0 — любой (по умолчанию)."
+    },
+    {
+      "name": "status",
+      "type": "positive",
+      "required": false,
+      "description": "Семейное положение. Возможные значения: •1 — не женат (не замужем), •2 — встречается, •3 — помолвлен(-а), •4 — женат (замужем), •5 — всё сложно, •6 — в активном поиске, •7 — влюблен(-а), •8 — в гражданском браке."
+    },
+    {
+      "name": "age_from",
+      "type": "positive",
+      "required": false,
+      "description": "Возраст, от."
+    },
+    {
+      "name": "age_to",
+      "type": "positive",
+      "required": false,
+      "description": "Возраст, до."
+    },
+    {
+      "name": "birth_day",
+      "type": "positive",
+      "required": false,
+      "description": "День рождения."
+    },
+    {
+      "name": "birth_month",
+      "type": "positive",
+      "required": false,
+      "description": "Месяц рождения."
+    },
+    {
+      "name": "birth_year",
+      "type": "positive",
+      "required": false,
+      "description": "Год рождения."
+    },
+    {
+      "name": "online",
+      "type": "checkbox",
+      "required": false,
+      "description": "Учитывать ли статус «онлайн». Возможные значения: •1 — искать только пользователей онлайн, •0 — искать по всем пользователям."
+    },
+    {
+      "name": "has_photo",
+      "type": "checkbox",
+      "required": false,
+      "description": "Учитывать ли наличие фото. Возможные значения: •1 — искать только пользователей с фотографией, •0 — искать по всем пользователям."
+    },
+    {
+      "name": "school_country",
+      "type": "positive",
+      "required": false,
+      "description": "Идентификатор страны, в которой пользователи закончили школу."
+    },
+    {
+      "name": "school_city",
+      "type": "positive",
+      "required": false,
+      "description": "Идентификатор города, в котором пользователи закончили школу."
+    },
+    {
+      "name": "school_class",
+      "type": "positive",
+      "required": false,
+      "description": "Буква класса."
+    },
+    {
+      "name": "school",
+      "type": "positive",
+      "required": false,
+      "description": "Идентификатор школы, которую закончили пользователи."
+    },
+    {
+      "name": "school_year",
+      "type": "positive",
+      "required": false,
+      "description": "Год окончания школы."
+    },
+    {
+      "name": "religion",
+      "type": "string",
+      "required": false,
+      "description": "Религиозные взгляды."
+    },
+    {
+      "name": "company",
+      "type": "string",
+      "required": false,
+      "description": "Название компании, в которой работают пользователи."
+    },
+    {
+      "name": "position",
+      "type": "string",
+      "required": false,
+      "description": "Название должности."
+    },
+    {
+      "name": "group_id",
+      "type": "integer",
+      "required": false,
+      "description": "Идентификатор группы, среди пользователей которой необходимо проводить поиск."
+    },
+    {
+      "name": "from_list",
+      "type": "string",
+      "required": false,
+      "description": "Разделы среди которых нужно осуществить поиск, перечисленные через запятую. Возможные значения: •friends — искать среди друзей, •subscriptions — искать среди друзей и подписок пользователя."
+    },
+    {
+      "name": "screen_ref",
+      "type": "string",
+      "required": false,
+      "description": "Реферер, откуда был вызван метод"
+    },
+    {
+      "name": "from_group_id",
+      "type": "integer",
+      "required": false,
+      "description": ""
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "После успешного выполнения возвращает объект, содержащий число результатов в поле count и массив объектов, описывающих пользователей в поле items."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "qstringСтрока поискового запроса. Например, Вася Бабич.sortintegerСортировка результатов. Возможные значения: •1 — по дате регистрации, •0 — по популярности. offsetpositiveСмещение относительно первого найденного пользователя для выборки определенного подмножества.countpositiveКоличество возвращаемых пользователей. Обратите внимание, даже при использовании параметра offset для получения информации доступны только первые 1000 результатов. fieldsstringСписок дополнительных полей профилей, которые необходимо вернуть. См. подробное описание. Доступные значения: •about, •activities, •bdate, •blacklisted, •blacklisted_by_me •books, •can_post, •can_see_all_posts, •can_see_audio, •can_send_friend_request, •can_write_private_message, •career, •city, •common_count, •connections, •contacts, •country, •crop_photo, •domain, •education, •exports, •followers_count, •friend_status, •games, •has_mobile, •has_photo, •home_town, •interests, •is_favorite, •is_friend, •is_hidden_from_feed, •last_seen, •lists, •maiden_name, •military, •movies, •music, •nickname, •occupation, •online, •personal, •photo_100, •photo_200, •photo_200_orig, •photo_400_orig, •photo_50, •photo_id, •photo_max, •photo_max_orig, •quotes, •relation, •relatives, •schools, •screen_name, •sex, •site, •status, •timezone, •tv, •universities, •verified, •wall_comments. citypositiveИдентификатор города.city_idpositiveИдентификатор города для обратной совместимости. Используйте citycountrypositiveИдентификатор страны.country_idpositi"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "После успешного выполнения возвращает объект, содержащий число результатов в поле count и массив объектов, описывающих пользователей в поле items."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Возвращает список пользователей в соответствии с заданным критерием поиска. Параметры: qstringСтрока поискового запроса. Например, Вася Бабич.sortintegerСортировка результатов. Возможные значения: •1 — по дате регистрации, •0 — по популярности. offsetpositiveСмещение относительно первого найденного пользователя для выборки определенного подмножества.countpositiveКоличество возвращаемых пользователей. Обратите внимание, даже при использовании параметра offset для получения информации доступны только первые 1000 результатов. fieldsstringСписок дополнительных полей профилей, которые необходимо вернуть. См. подробное описание. Доступные значения: •about, •activities, •bdate, •blacklisted, •blacklisted_by_me •books, •can_post, •can_see_all_posts, •can_see_audio, •can_send_friend_request, •can_write_private_message, •career, •city, •common_count, •connections, •contacts, •country, •crop_photo, •domain, •education, •exports, •followers_count, •friend_status, •games, •has_mobile, •has_photo, •home_town, •interests, •is_favorite, •is_friend, •is_hidden_from_feed, •last_seen, •lists, •maiden_name, •military, •movies, •music, •nickname, •occupation, •online, •personal, •photo_100, •photo_200, •photo_200_orig, •photo_400_orig, •photo_50, •photo_id, •photo_max, •photo_max_orig, •quotes, •relation, •relatives, •schools, •screen_name, •sex, •site, •status, •timezone, •tv, •universities, •verified, •wall_comments. citypositiveИдентификатор города.city_idpositiveИдентификатор города для обратной совместимости. Используйте citycountrypositiveИдентификатор страны.country_idpositi Результат: После успешного выполнения возвращает объект, содержащий число результатов в поле count и массив объектов, описывающих пользователей в поле items. Коды ошибок: В ходе выполнения могут произойти общие ошибки",
+  "group": "users"
+}

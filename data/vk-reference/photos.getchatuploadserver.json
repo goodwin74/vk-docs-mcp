@@ -1,0 +1,59 @@
+{
+  "id": "photos.getchatuploadserver",
+  "url": "https://dev.vk.com/ru/method/photos.getChatUploadServer",
+  "title": "photos.getChatUploadServer | VK для разработчиков",
+  "h1": "photos.getChatUploadServer",
+  "description": "Метод получает адрес сервера для загрузки обложки чата.",
+  "params": [
+    {
+      "name": "chat_id",
+      "type": "positive",
+      "required": true,
+      "description": "Обязательный параметр. Идентификатор беседы, для которой нужно загрузить фотографию. Если вы вызываете метод с ключом доступа сообщества, этот параметр равен peer_id — 2000000000. peer_id нужной беседы можно узнать перебором бесед с помощью метода messages.getConversationsById либо с помощью Callback- или Longpoll-события message_new.Обязательный параметр"
+    },
+    {
+      "name": "crop_x",
+      "type": "positive",
+      "required": false,
+      "description": "Необязательный параметр. Координата x для обрезки фотографии (правый верхний угол)."
+    },
+    {
+      "name": "crop_y",
+      "type": "positive",
+      "required": false,
+      "description": "Необязательный параметр. Координата y для обрезки фотографии (правый верхний угол)."
+    },
+    {
+      "name": "crop_width",
+      "type": "positive",
+      "required": false,
+      "description": "Необязательный параметр. Ширина фотографии после обрезки в пикселях."
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "Метод возвращает объект. Поля объекта: ПолеТипОписаниеupload_urlstringАдрес, по которому нужно загрузить обложку чата. Пример ответа: JSON{ \"response\":{ \"upload_url\":\"https:\\/\\/pu.vk.com\\/c842430\\/ss2085\\/upload.php?_query=eyJhY3QiOiJvd25lcl9waG90byIsIm9pZCI6MjAwMDAwMDAwMSwic2F2ZSI6MSwic3F1YXJlIjoxLCJhcGlfd3JhcCI6eyJyZXNwb25zZSI6IntyZXN1bHR9In0sIm1pZCI6NzQzNzg0NDc0LCJzZXJ2ZXIiOjg0MjQzMCwiX29yaWdpbiI6Imh0dHBzOlwvXC9hcGkudmsuY29tIiwiX3NpZyI6ImM4ZjI4MTkzY2YwOGVhZTRiMDkyYzk1Yjk0ZmMyM2QxIn0\" } }"
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "chat_idpositiveОбязательный параметр. Идентификатор беседы, для которой нужно загрузить фотографию. Если вы вызываете метод с ключом доступа сообщества, этот параметр равен peer_id — 2000000000. peer_id нужной беседы можно узнать перебором бесед с помощью метода messages.getConversationsById либо с помощью Callback- или Longpoll-события message_new.Обязательный параметрcrop_xpositiveНеобязательный параметр. Координата x для обрезки фотографии (правый верхний угол).crop_ypositiveНеобязательный параметр. Координата y для обрезки фотографии (правый верхний угол).crop_widthpositiveНеобязательный параметр. Ширина фотографии после обрезки в пикселях."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Метод возвращает объект. Поля объекта: ПолеТипОписаниеupload_urlstringАдрес, по которому нужно загрузить обложку чата. Пример ответа: JSON{ \"response\":{ \"upload_url\":\"https:\\/\\/pu.vk.com\\/c842430\\/ss2085\\/upload.php?_query=eyJhY3QiOiJvd25lcl9waG90byIsIm9pZCI6MjAwMDAwMDAwMSwic2F2ZSI6MSwic3F1YXJlIjoxLCJhcGlfd3JhcCI6eyJyZXNwb25zZSI6IntyZXN1bHR9In0sIm1pZCI6NzQzNzg0NDc0LCJzZXJ2ZXIiOjg0MjQzMCwiX29yaWdpbiI6Imh0dHBzOlwvXC9hcGkudmsuY29tIiwiX3NpZyI6ImM4ZjI4MTkzY2YwOGVhZTRiMDkyYzk1Yjk0ZmMyM2QxIn0\" } }"
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Метод получает адрес сервера для загрузки обложки чата. Параметры: chat_idpositiveОбязательный параметр. Идентификатор беседы, для которой нужно загрузить фотографию. Если вы вызываете метод с ключом доступа сообщества, этот параметр равен peer_id — 2000000000. peer_id нужной беседы можно узнать перебором бесед с помощью метода messages.getConversationsById либо с помощью Callback- или Longpoll-события message_new.Обязательный параметрcrop_xpositiveНеобязательный параметр. Координата x для обрезки фотографии (правый верхний угол).crop_ypositiveНеобязательный параметр. Координата y для обрезки фотографии (правый верхний угол).crop_widthpositiveНеобязательный параметр. Ширина фотографии после обрезки в пикселях. Результат: Метод возвращает объект. Поля объекта: ПолеТипОписаниеupload_urlstringАдрес, по которому нужно загрузить обложку чата. Пример ответа: JSON{ \"response\":{ \"upload_url\":\"https:\\/\\/pu.vk.com\\/c842430\\/ss2085\\/upload.php?_query=eyJhY3QiOiJvd25lcl9waG90byIsIm9pZCI6MjAwMDAwMDAwMSwic2F2ZSI6MSwic3F1YXJlIjoxLCJhcGlfd3JhcCI6eyJyZXNwb25zZSI6IntyZXN1bHR9In0sIm1pZCI6NzQzNzg0NDc0LCJzZXJ2ZXIiOjg0MjQzMCwiX29yaWdpbiI6Imh0dHBzOlwvXC9hcGkudmsuY29tIiwiX3NpZyI6ImM4ZjI4MTkzY2YwOGVhZTRiMDkyYzk1Yjk0ZmMyM2QxIn0\" } } Коды ошибок: В ходе выполнения могут произойти общие ошибки",
+  "group": "photos"
+}

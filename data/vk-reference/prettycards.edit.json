@@ -1,0 +1,83 @@
+{
+  "id": "prettycards.edit",
+  "url": "https://dev.vk.com/ru/method/prettyCards.edit",
+  "title": "prettyCards.edit | VK для разработчиков",
+  "h1": "prettyCards.edit",
+  "description": "Редактирует карточку карусели.",
+  "params": [
+    {
+      "name": "owner_id",
+      "type": "integer",
+      "required": true,
+      "description": "Идентификатор владельца карточки.Обязательный параметр"
+    },
+    {
+      "name": "card_id",
+      "type": "string",
+      "required": true,
+      "description": "Идентификатор карточки.Обязательный параметр"
+    },
+    {
+      "name": "photo",
+      "type": "string",
+      "required": false,
+      "description": "Новая фотография. Подробнее см. метод prettyCards.create."
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Новый заголовок."
+    },
+    {
+      "name": "link",
+      "type": "string",
+      "required": false,
+      "description": "Новая ссылка. Подробнее см. метод prettyCards.create.Макс. длина = 2000"
+    },
+    {
+      "name": "price",
+      "type": "string",
+      "required": false,
+      "description": "Новая цена. Подробнее см. метод prettyCards.create.Макс. длина = 20"
+    },
+    {
+      "name": "price_old",
+      "type": "string",
+      "required": false,
+      "description": "Обновлённая старая цена. Подробнее см. метод prettyCards.create.Макс. длина = 20"
+    },
+    {
+      "name": "button",
+      "type": "string",
+      "required": false,
+      "description": "Новая кнопка. Подробнее см. метод prettyCards.create.Макс. длина = 255"
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "Возвращает структуру с информаций об обновлённой карточке. •owner_id — идентификатор владельца карточки, •card_id — идентификатор карточки."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "owner_idintegerИдентификатор владельца карточки.Обязательный параметрcard_idstringИдентификатор карточки.Обязательный параметрphotostringНовая фотография. Подробнее см. метод prettyCards.create.titlestringНовый заголовок.linkstringНовая ссылка. Подробнее см. метод prettyCards.create.Макс. длина = 2000pricestringНовая цена. Подробнее см. метод prettyCards.create.Макс. длина = 20price_oldstringОбновлённая старая цена. Подробнее см. метод prettyCards.create.Макс. длина = 20buttonstringНовая кнопка. Подробнее см. метод prettyCards.create.Макс. длина = 255"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Возвращает структуру с информаций об обновлённой карточке. •owner_id — идентификатор владельца карточки, •card_id — идентификатор карточки."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "1900Card not found В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Редактирует карточку карусели. Параметры: owner_idintegerИдентификатор владельца карточки.Обязательный параметрcard_idstringИдентификатор карточки.Обязательный параметрphotostringНовая фотография. Подробнее см. метод prettyCards.create.titlestringНовый заголовок.linkstringНовая ссылка. Подробнее см. метод prettyCards.create.Макс. длина = 2000pricestringНовая цена. Подробнее см. метод prettyCards.create.Макс. длина = 20price_oldstringОбновлённая старая цена. Подробнее см. метод prettyCards.create.Макс. длина = 20buttonstringНовая кнопка. Подробнее см. метод prettyCards.create.Макс. длина = 255 Результат: Возвращает структуру с информаций об обновлённой карточке. •owner_id — идентификатор владельца карточки, •card_id — идентификатор карточки. Коды ошибок: 1900Card not found В ходе выполнения могут произойти общие ошибки",
+  "group": "prettycards"
+}

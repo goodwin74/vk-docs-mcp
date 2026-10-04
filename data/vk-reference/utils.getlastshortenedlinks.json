@@ -1,0 +1,77 @@
+{
+  "id": "utils.getlastshortenedlinks",
+  "url": "https://dev.vk.com/ru/method/utils.getLastShortenedLinks",
+  "title": "utils.getLastShortenedLinks | VK для разработчиков",
+  "h1": "utils.getLastShortenedLinks",
+  "description": "Получает список сокращённых ссылок для текущего пользователя.",
+  "params": [
+    {
+      "name": "count",
+      "type": "positive",
+      "required": false,
+      "description": "Количество ссылок, которые необходимо получить."
+    },
+    {
+      "name": "offset",
+      "type": "positive",
+      "required": false,
+      "description": "Сдвиг для получения определенного подмножества ссылок."
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "Возвращает количество ссылок в поле count (integer) и массив объектов items, описывающих ссылки. Каждый из объектов содержит следующие поля: timestamp integer Время создания ссылки в Unixtime. url string URL ссылки до сокращения. short_url string Сокращённый URL. key string Содержательная часть (символы после «vk.cc»). views integer Число переходов. access_key string Ключ доступа к приватной статистике."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "countpositiveКоличество ссылок, которые необходимо получить.offsetpositiveСдвиг для получения определенного подмножества ссылок."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Возвращает количество ссылок в поле count (integer) и массив объектов items, описывающих ссылки. Каждый из объектов содержит следующие поля: timestamp integer Время создания ссылки в Unixtime. url string URL ссылки до сокращения. short_url string Сокращённый URL. key string Содержательная часть (символы после «vk.cc»). views integer Число переходов. access_key string Ключ доступа к приватной статистике."
+    },
+    {
+      "level": 3,
+      "title": "timestamp",
+      "text": "integer Время создания ссылки в Unixtime."
+    },
+    {
+      "level": 3,
+      "title": "url",
+      "text": "string URL ссылки до сокращения."
+    },
+    {
+      "level": 3,
+      "title": "short_url",
+      "text": "string Сокращённый URL."
+    },
+    {
+      "level": 3,
+      "title": "key",
+      "text": "string Содержательная часть (символы после «vk.cc»)."
+    },
+    {
+      "level": 3,
+      "title": "views",
+      "text": "integer Число переходов."
+    },
+    {
+      "level": 3,
+      "title": "access_key",
+      "text": "string Ключ доступа к приватной статистике."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Получает список сокращённых ссылок для текущего пользователя. Параметры: countpositiveКоличество ссылок, которые необходимо получить.offsetpositiveСдвиг для получения определенного подмножества ссылок. Результат: Возвращает количество ссылок в поле count (integer) и массив объектов items, описывающих ссылки. Каждый из объектов содержит следующие поля: timestamp integer Время создания ссылки в Unixtime. url string URL ссылки до сокращения. short_url string Сокращённый URL. key string Содержательная часть (символы после «vk.cc»). views integer Число переходов. access_key string Ключ доступа к приватной статистике. timestamp: integer Время создания ссылки в Unixtime. url: string URL ссылки до сокращения. short_url: string Сокращённый URL. key: string Содержательная часть (символы после «vk.cc»). views: integer Число переходов. access_key: string Ключ доступа к приватной статистике. Коды ошибок: В ходе выполнения могут произойти общие ошибки",
+  "group": "utils"
+}

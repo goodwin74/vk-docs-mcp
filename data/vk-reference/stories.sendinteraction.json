@@ -1,0 +1,55 @@
+{
+  "id": "stories.sendinteraction",
+  "url": "https://dev.vk.com/ru/method/stories.sendInteraction",
+  "title": "stories.sendInteraction | VK для разработчиков",
+  "h1": "stories.sendInteraction",
+  "description": "Отправляет фидбек на историю.",
+  "params": [
+    {
+      "name": "access_key",
+      "type": "string",
+      "required": true,
+      "description": "Ключ доступа пользователя, полученный при подписке. Возвращает событие VKWebAppSubscribeStoryApp.Обязательный параметр"
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Текст фидбека.Макс. длина = 1000"
+    },
+    {
+      "name": "is_broadcast",
+      "type": "checkbox",
+      "required": false,
+      "description": "Возможные значения: •0 — фидбек виден только отправителю и автору истории; •1 — фидбек виден всем зрителям истории и автору."
+    },
+    {
+      "name": "is_anonymous",
+      "type": "checkbox",
+      "required": false,
+      "description": "Возможные значения: •0 — автор фидбека не анонимный; •1 — автор фидбека анонимный."
+    },
+    {
+      "name": "unseen_marker",
+      "type": "checkbox",
+      "required": false,
+      "description": ""
+    }
+  ],
+  "returns": [],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "access_keystringКлюч доступа пользователя, полученный при подписке. Возвращает событие VKWebAppSubscribeStoryApp.Обязательный параметрmessagestringТекст фидбека.Макс. длина = 1000is_broadcastcheckboxВозможные значения: •0 — фидбек виден только отправителю и автору истории; •1 — фидбек виден всем зрителям истории и автору. is_anonymouscheckboxВозможные значения: •0 — автор фидбека не анонимный; •1 — автор фидбека анонимный. unseen_markercheckbox"
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Отправляет фидбек на историю. Параметры: access_keystringКлюч доступа пользователя, полученный при подписке. Возвращает событие VKWebAppSubscribeStoryApp.Обязательный параметрmessagestringТекст фидбека.Макс. длина = 1000is_broadcastcheckboxВозможные значения: •0 — фидбек виден только отправителю и автору истории; •1 — фидбек виден всем зрителям истории и автору. is_anonymouscheckboxВозможные значения: •0 — автор фидбека не анонимный; •1 — автор фидбека анонимный. unseen_markercheckbox Коды ошибок: В ходе выполнения могут произойти общие ошибки",
+  "group": "stories"
+}

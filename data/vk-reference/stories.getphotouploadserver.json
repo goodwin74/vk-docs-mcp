@@ -1,0 +1,77 @@
+{
+  "id": "stories.getphotouploadserver",
+  "url": "https://dev.vk.com/ru/method/stories.getPhotoUploadServer",
+  "title": "stories.getPhotoUploadServer | VK для разработчиков",
+  "h1": "stories.getPhotoUploadServer",
+  "description": "Метод получает адрес сервера для загрузки изображения в историю.",
+  "params": [
+    {
+      "name": "add_to_news",
+      "type": "checkbox",
+      "required": false,
+      "description": "Необязательный параметр. Информация о том, разместить ли историю в новостях. Возможные значения: •1 — разместить историю в новостях. •0 — не размещать историю в новостях. Значение используется по умолчанию. Обязательный параметр, если не передан параметр user_ids."
+    },
+    {
+      "name": "user_ids",
+      "type": "string",
+      "required": false,
+      "description": "Необязательный параметр. Идентификаторы пользователей, которые будут видеть историю (для отправки в личном сообщении), перечисленные через запятую. Обязательный параметр, если не передан параметр add_to_news."
+    },
+    {
+      "name": "reply_to_story",
+      "type": "string",
+      "required": false,
+      "description": "Идентификатор истории, в ответ на которую создаётся новая история."
+    },
+    {
+      "name": "link_text",
+      "type": "string",
+      "required": false,
+      "description": "Текст ссылки для перехода из истории (только для историй сообществ). Возможные значения: •to_store — В магазин. •vote — Голосовать. •more — Ещё. •book — Забронировать. •order — Заказать. •enroll — Записаться. •fill — Заполнить. •signup — Зарегистрироваться. •buy — Купить. •ticket — Купить билет. •write — Написать. •open — Открыть. •learn_more — Подробнее. Значение используется по умолчанию. •view — Посмотреть. •go_to — Перейти. •contact — Связаться. •watch — Смотреть. •play — Слушать. •install — Установить. •read — Читать."
+    },
+    {
+      "name": "link_url",
+      "type": "string",
+      "required": false,
+      "description": "Адрес ссылки для перехода из истории.Макс. длина = 2048"
+    },
+    {
+      "name": "group_id",
+      "type": "integer",
+      "required": false,
+      "description": "Идентификатор сообщества, в которое должна быть загружена история (при работе с ключом доступа пользователя)."
+    },
+    {
+      "name": "clickable_stickers",
+      "type": "text",
+      "required": false,
+      "description": "Объект кликабельного стикера."
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "Метод возвращает объект. Поля объекта: ПолеТипОписаниеupload_urlstringАдрес, по которому нужно загрузить изображение.user_idsarray[integer]Массив идентификаторов пользователей, которые будут видеть историю (для отправки в личном сообщении).peer_idsarray[integer]Массив идентификаторов пользователей или сообществ, которые будут видеть видеоисторию (для отправки в личном сообщении). Пример ответа: JSON{ \"response\":{ \"upload_url\":\"https:\\/\\/pu.vk.com\\/c857012\\/ss2159\\/upload.php?_query=eyJ0aW1lIjoiMjAyMzAxMTgxMyIsImFwaV9pZCI6NTE1MjQ1MTksImFwaSI6MSwidiI6IjUuMTMxIiwiYWN0IjoiZG9fYWRkIiwibWV0aG9kIjoic3RvcmllcyIsImFpZCI6LTgxLCJtaWQiOjc0Mzc4NDQ3NCwib2lkIjo3NDM3ODQ0NzQsImdpZCI6MCwic3Rvcmllc191cGxvYWRfaGFzaCI6ImExNDYzYWExYjIzNmRhMzg0ZTZhYWY5MDE4MjRjNzA4NDQwOGI4ZDZiZGUxNjE2Y2VlMjI3MzY2M2M0NWM1NmYiLCJzdG9yaWVzX2FzeW5jIjoxLCJzZXJ2ZXIiOjg1NzAxMiwiX29yaWdpbiI6Imh0dHBzOlwvXC9hcGkudmsuY29tIiwiX3NpZyI6ImQ1MmJiODljY2QyOTcyYjQ3OTc5NTkwYWMxM2Q1YmEwIn0\", \"user_ids\":[], \"peer_ids\":[] } }"
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "add_to_newscheckboxНеобязательный параметр. Информация о том, разместить ли историю в новостях. Возможные значения: •1 — разместить историю в новостях. •0 — не размещать историю в новостях. Значение используется по умолчанию. Обязательный параметр, если не передан параметр user_ids.user_idsstringНеобязательный параметр. Идентификаторы пользователей, которые будут видеть историю (для отправки в личном сообщении), перечисленные через запятую. Обязательный параметр, если не передан параметр add_to_news.reply_to_storystringИдентификатор истории, в ответ на которую создаётся новая история.link_textstringТекст ссылки для перехода из истории (только для историй сообществ). Возможные значения: •to_store — В магазин. •vote — Голосовать. •more — Ещё. •book — Забронировать. •order — Заказать. •enroll — Записаться. •fill — Заполнить. •signup — Зарегистрироваться. •buy — Купить. •ticket — Купить билет. •write — Написать. •open — Открыть. •learn_more — Подробнее. Значение используется по умолчанию. •view — Посмотреть. •go_to — Перейти. •contact — Связаться. •watch — Смотреть. •play — Слушать. •install — Установить. •read — Читать. link_urlstringАдрес ссылки для перехода из истории.Макс. длина = 2048group_idintegerИдентификатор сообщества, в которое должна быть загружена история (при работе с ключом доступа пользователя).clickable_stickerstextОбъект кликабельного стикера."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Метод возвращает объект. Поля объекта: ПолеТипОписаниеupload_urlstringАдрес, по которому нужно загрузить изображение.user_idsarray[integer]Массив идентификаторов пользователей, которые будут видеть историю (для отправки в личном сообщении).peer_idsarray[integer]Массив идентификаторов пользователей или сообществ, которые будут видеть видеоисторию (для отправки в личном сообщении). Пример ответа: JSON{ \"response\":{ \"upload_url\":\"https:\\/\\/pu.vk.com\\/c857012\\/ss2159\\/upload.php?_query=eyJ0aW1lIjoiMjAyMzAxMTgxMyIsImFwaV9pZCI6NTE1MjQ1MTksImFwaSI6MSwidiI6IjUuMTMxIiwiYWN0IjoiZG9fYWRkIiwibWV0aG9kIjoic3RvcmllcyIsImFpZCI6LTgxLCJtaWQiOjc0Mzc4NDQ3NCwib2lkIjo3NDM3ODQ0NzQsImdpZCI6MCwic3Rvcmllc191cGxvYWRfaGFzaCI6ImExNDYzYWExYjIzNmRhMzg0ZTZhYWY5MDE4MjRjNzA4NDQwOGI4ZDZiZGUxNjE2Y2VlMjI3MzY2M2M0NWM1NmYiLCJzdG9yaWVzX2FzeW5jIjoxLCJzZXJ2ZXIiOjg1NzAxMiwiX29yaWdpbiI6Imh0dHBzOlwvXC9hcGkudmsuY29tIiwiX3NpZyI6ImQ1MmJiODljY2QyOTcyYjQ3OTc5NTkwYWMxM2Q1YmEwIn0\", \"user_ids\":[], \"peer_ids\":[] } }"
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "19Content blocked900Can't send messages for users from blacklist1602Incorrect reply privacy В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Метод получает адрес сервера для загрузки изображения в историю. Параметры: add_to_newscheckboxНеобязательный параметр. Информация о том, разместить ли историю в новостях. Возможные значения: •1 — разместить историю в новостях. •0 — не размещать историю в новостях. Значение используется по умолчанию. Обязательный параметр, если не передан параметр user_ids.user_idsstringНеобязательный параметр. Идентификаторы пользователей, которые будут видеть историю (для отправки в личном сообщении), перечисленные через запятую. Обязательный параметр, если не передан параметр add_to_news.reply_to_storystringИдентификатор истории, в ответ на которую создаётся новая история.link_textstringТекст ссылки для перехода из истории (только для историй сообществ). Возможные значения: •to_store — В магазин. •vote — Голосовать. •more — Ещё. •book — Забронировать. •order — Заказать. •enroll — Записаться. •fill — Заполнить. •signup — Зарегистрироваться. •buy — Купить. •ticket — Купить билет. •write — Написать. •open — Открыть. •learn_more — Подробнее. Значение используется по умолчанию. •view — Посмотреть. •go_to — Перейти. •contact — Связаться. •watch — Смотреть. •play — Слушать. •install — Установить. •read — Читать. link_urlstringАдрес ссылки для перехода из истории.Макс. длина = 2048group_idintegerИдентификатор сообщества, в которое должна быть загружена история (при работе с ключом доступа пользователя).clickable_stickerstextОбъект кликабельного стикера. Результат: Метод возвращает объект. Поля объекта: ПолеТипОписаниеupload_urlstringАдрес, по которому нужно загрузить изображение.user_idsarray[integer]Массив идентификаторов пользователей, которые будут видеть историю (для отправки в личном сообщении).peer_idsarray[integer]Массив идентификаторов пользователей или сообществ, которые будут видеть видеоисторию (для отправки в личном сообщении). Пример ответа: JSON{ \"response\":{ \"upload_url\":\"https:\\/\\/pu.vk.com\\/c857012\\/ss2159\\/upload.php?_query=eyJ0aW1lIjoiMjAyMzAxMTgxMyIsImFwaV9pZCI6NTE1MjQ1MTksImFwaSI6MSwidiI6IjUuMTMxIiwiYWN0IjoiZG9fYWRkIiwibWV0aG9kIjoic3RvcmllcyIsImFpZCI6LTgxLCJtaWQiOjc0Mzc4NDQ3NCwib2lkIjo3NDM3ODQ0NzQsImdpZCI6MCwic3Rvcmllc191cGxvYWRfaGFzaCI6ImExNDYzYWExYjIzNmRhMzg0ZTZhYWY5MDE4MjRjNzA4NDQwOGI4ZDZiZGUxNjE2Y2VlMjI3MzY2M2M0NWM1NmYiLCJzdG9yaWVzX2FzeW5jIjoxLCJzZXJ2ZXIiOjg1NzAxMiwiX29yaWdpbiI6Imh0dHBzOlwvXC9hcGkudmsuY29tIiwiX3NpZyI6ImQ1MmJiODljY2QyOTcyYjQ3OTc5NTkwYWMxM2Q1YmEwIn0\", \"user_ids\":[], \"peer_ids\":[] } } Коды ошибок: 19Content blocked900Can't send messages for users from blacklist1602Incorrect reply privacy В ходе выполнения могут произойти общие ошибки",
+  "group": "stories"
+}

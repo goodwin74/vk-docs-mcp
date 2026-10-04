@@ -1,0 +1,65 @@
+{
+  "id": "photos.getownercoverphotouploadserver",
+  "url": "https://dev.vk.com/ru/method/photos.getOwnerCoverPhotoUploadServer",
+  "title": "photos.getOwnerCoverPhotoUploadServer | VK для разработчиков",
+  "h1": "photos.getOwnerCoverPhotoUploadServer",
+  "description": "Метод получает адрес сервера для загрузки обложки сообщества.",
+  "params": [
+    {
+      "name": "group_id",
+      "type": "positive",
+      "required": true,
+      "description": "Обязательный параметр. Идентификатор сообщества.Обязательный параметр"
+    },
+    {
+      "name": "crop_x",
+      "type": "positive",
+      "required": false,
+      "description": "Необязательный параметр. Координата X верхнего левого угла для обрезки фотографии."
+    },
+    {
+      "name": "crop_y",
+      "type": "positive",
+      "required": false,
+      "description": "Необязательный параметр. Координата Y верхнего левого угла для обрезки фотографии."
+    },
+    {
+      "name": "crop_x2",
+      "type": "positive",
+      "required": false,
+      "description": "Необязательный параметр. Координата X нижнего правого угла для обрезки изображения."
+    },
+    {
+      "name": "crop_y2",
+      "type": "positive",
+      "required": false,
+      "description": "Необязательный параметр. Координата Y нижнего правого угла для обрезки изображения."
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "Метод возвращает объект. Поле объекта: ПолеТипОписаниеupload_urlstringАдрес, по которому нужно загрузить фотографию. Пример ответа: JSON{ \"response\":{ \"upload_url\":\"https:\\/\\/pu.vk.com\\/c534336\\/ss2248\\/upload.php?_query=eyJhY3QiOiJvd25lcl9jb3ZlciIsIm9pZCI6LTIxODI1MjE3NSwiYXBpIjp0cnVlLCJhcGlfd3JhcCI6eyJoYXNoIjoiMzhmYTEwMThiNGI5ODUxYzZjIiwicGhvdG8iOiJ7cmVzdWx0fSJ9LCJmb3JjZV9taW5fc2l6ZXMiOmZhbHNlLCJtaWQiOjc0Mzc4NDQ3NCwic2VydmVyIjo1MzQzMzYsIl9vcmlnaW4iOiJodHRwczpcL1wvYXBpLnZrLmNvbSIsIl9zaWciOiJkNWU5NjQ1MDhiZTM3YWEwMDUyZmJmZTljMWRhZjhjYyJ9&_crop=0,0,911,911\" } }"
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "group_idpositiveОбязательный параметр. Идентификатор сообщества.Обязательный параметрcrop_xpositiveНеобязательный параметр. Координата X верхнего левого угла для обрезки фотографии.crop_ypositiveНеобязательный параметр. Координата Y верхнего левого угла для обрезки фотографии.crop_x2positiveНеобязательный параметр. Координата X нижнего правого угла для обрезки изображения.crop_y2positiveНеобязательный параметр. Координата Y нижнего правого угла для обрезки изображения."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Метод возвращает объект. Поле объекта: ПолеТипОписаниеupload_urlstringАдрес, по которому нужно загрузить фотографию. Пример ответа: JSON{ \"response\":{ \"upload_url\":\"https:\\/\\/pu.vk.com\\/c534336\\/ss2248\\/upload.php?_query=eyJhY3QiOiJvd25lcl9jb3ZlciIsIm9pZCI6LTIxODI1MjE3NSwiYXBpIjp0cnVlLCJhcGlfd3JhcCI6eyJoYXNoIjoiMzhmYTEwMThiNGI5ODUxYzZjIiwicGhvdG8iOiJ7cmVzdWx0fSJ9LCJmb3JjZV9taW5fc2l6ZXMiOmZhbHNlLCJtaWQiOjc0Mzc4NDQ3NCwic2VydmVyIjo1MzQzMzYsIl9vcmlnaW4iOiJodHRwczpcL1wvYXBpLnZrLmNvbSIsIl9zaWciOiJkNWU5NjQ1MDhiZTM3YWEwMDUyZmJmZTljMWRhZjhjYyJ9&_crop=0,0,911,911\" } }"
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "703You need to enable 2FA for this action13000Content upload was denied due to active community strikes В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Метод получает адрес сервера для загрузки обложки сообщества. Параметры: group_idpositiveОбязательный параметр. Идентификатор сообщества.Обязательный параметрcrop_xpositiveНеобязательный параметр. Координата X верхнего левого угла для обрезки фотографии.crop_ypositiveНеобязательный параметр. Координата Y верхнего левого угла для обрезки фотографии.crop_x2positiveНеобязательный параметр. Координата X нижнего правого угла для обрезки изображения.crop_y2positiveНеобязательный параметр. Координата Y нижнего правого угла для обрезки изображения. Результат: Метод возвращает объект. Поле объекта: ПолеТипОписаниеupload_urlstringАдрес, по которому нужно загрузить фотографию. Пример ответа: JSON{ \"response\":{ \"upload_url\":\"https:\\/\\/pu.vk.com\\/c534336\\/ss2248\\/upload.php?_query=eyJhY3QiOiJvd25lcl9jb3ZlciIsIm9pZCI6LTIxODI1MjE3NSwiYXBpIjp0cnVlLCJhcGlfd3JhcCI6eyJoYXNoIjoiMzhmYTEwMThiNGI5ODUxYzZjIiwicGhvdG8iOiJ7cmVzdWx0fSJ9LCJmb3JjZV9taW5fc2l6ZXMiOmZhbHNlLCJtaWQiOjc0Mzc4NDQ3NCwic2VydmVyIjo1MzQzMzYsIl9vcmlnaW4iOiJodHRwczpcL1wvYXBpLnZrLmNvbSIsIl9zaWciOiJkNWU5NjQ1MDhiZTM3YWEwMDUyZmJmZTljMWRhZjhjYyJ9&_crop=0,0,911,911\" } } Коды ошибок: 703You need to enable 2FA for this action13000Content upload was denied due to active community strikes В ходе выполнения могут произойти общие ошибки",
+  "group": "photos"
+}

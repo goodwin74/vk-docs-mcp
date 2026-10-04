@@ -1,0 +1,43 @@
+{
+  "id": "podcasts.searchpodcast",
+  "url": "https://dev.vk.com/ru/method/podcasts.searchPodcast",
+  "title": "podcasts.searchPodcast | VK для разработчиков",
+  "h1": "podcasts.searchPodcast",
+  "description": "string",
+  "params": [
+    {
+      "name": "search_string",
+      "type": "string",
+      "required": true,
+      "description": "Обязательный параметр"
+    },
+    {
+      "name": "offset",
+      "type": "positive",
+      "required": false,
+      "description": ""
+    },
+    {
+      "name": "count",
+      "type": "positive",
+      "required": false,
+      "description": ""
+    }
+  ],
+  "returns": [],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "search_stringstringОбязательный параметрoffsetpositivecountpositive"
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "string Параметры: search_stringstringОбязательный параметрoffsetpositivecountpositive Коды ошибок: В ходе выполнения могут произойти общие ошибки",
+  "group": "podcasts"
+}

@@ -1,0 +1,47 @@
+{
+  "id": "photos.saveownercoverphoto",
+  "url": "https://dev.vk.com/ru/method/photos.saveOwnerCoverPhoto",
+  "title": "photos.saveOwnerCoverPhoto | VK для разработчиков",
+  "h1": "photos.saveOwnerCoverPhoto",
+  "description": "Метод сохраняет обложку сообщества или профиля пользователя после её успешной загрузки на сервер.",
+  "params": [
+    {
+      "name": "hash",
+      "type": "string",
+      "required": true,
+      "description": "Обязательный параметр. Хеш фотографии. Параметр возвращается в результате загрузки фотографии на сервер.Обязательный параметр"
+    },
+    {
+      "name": "photo",
+      "type": "string",
+      "required": true,
+      "description": "Обязательный параметр. Фотография в формате multipart/form-data. Параметр возвращается в результате загрузки фотографии на сервер.Обязательный параметр"
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "Метод возвращает массив объектов фотографий. Пример ответа: JSON{ \"response\":{ \"images\":[ { \"url\":\"https:\\/\\/sun9-east.userapi.com\\/sun9-26\\/s\\/v1\\/if2\\/Mni2GyylYCr29hIht90Hm-wORG-kqQDYI5xHCuMzaQPsboFbXyy0KMpx5mAOjit0Vii8v3c8kv4Mn5XnVVr9XGLr.jpg?size=200x80&quality=95&crop=0,0,911,364&type=cover_group\", \"width\":200, \"height\":67 }, { \"url\":\"https:\\/\\/sun9-east.userapi.com\\/sun9-26\\/s\\/v1\\/if2\\/kAbza3O55NCG1z85nhJh9cf1J4VhgPQG9kpWIaVyy5iPmhj4MW53T6B6F7LcsqA4HI9FY_I8DXDLHWbMzUnZ0fU2.jpg?size=400x160&quality=95&crop=0,0,911,364&type=cover_group\", \"width\":400, \"height\":134 }, { \"url\":\"https:\\/\\/sun9-east.userapi.com\\/sun9-26\\/s\\/v1\\/if2\\/jISd7b26ICGB-d2zwCICktzIqwoSssjmxANNtDnn7RTK3uxlNC37Ys4nHw0EuSTMBsb1lOK3DwFjpAuWbRo4YiKX.jpg?size=911x364&quality=95&crop=0,0,911,364&type=cover_group\", \"width\":795, \"height\":265 }, { \"url\":\"https:\\/\\/sun9-east.userapi.com\\/sun9-26\\/s\\/v1\\/if2\\/rpm-mQ-FVmdJyNIFIhGp1tSd31cN2FD_gQuf6g1KRwYEcSs8yuU-peJnutIwZofCdre2vdmBODtER44z4WqaGsd8.jpg?size=1080x432&quality=95&crop=0,0,911,364&type=cover_group\", \"width\":1080, \"height\":360 }, { \"url\":\"https:\\/\\/sun9-east.userapi.com\\/sun9-26\\/s\\/v1\\/if2\\/-e-NafJqKpegWOE1AbemQpCT2IuOf-disLL8AWLEhWWqMOM0Xcou3pyS8Dvc0pAH4hvkjbJ74l9iLfR0-Bt71Lwl.jpg?size=1920x768&quality=95&crop=0,0,911,364&type=cover_group\", \"width\":1590, \"height\":530 } ] } }"
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "hashstringОбязательный параметр. Хеш фотографии. Параметр возвращается в результате загрузки фотографии на сервер.Обязательный параметрphotostringОбязательный параметр. Фотография в формате multipart/form-data. Параметр возвращается в результате загрузки фотографии на сервер.Обязательный параметр"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Метод возвращает массив объектов фотографий. Пример ответа: JSON{ \"response\":{ \"images\":[ { \"url\":\"https:\\/\\/sun9-east.userapi.com\\/sun9-26\\/s\\/v1\\/if2\\/Mni2GyylYCr29hIht90Hm-wORG-kqQDYI5xHCuMzaQPsboFbXyy0KMpx5mAOjit0Vii8v3c8kv4Mn5XnVVr9XGLr.jpg?size=200x80&quality=95&crop=0,0,911,364&type=cover_group\", \"width\":200, \"height\":67 }, { \"url\":\"https:\\/\\/sun9-east.userapi.com\\/sun9-26\\/s\\/v1\\/if2\\/kAbza3O55NCG1z85nhJh9cf1J4VhgPQG9kpWIaVyy5iPmhj4MW53T6B6F7LcsqA4HI9FY_I8DXDLHWbMzUnZ0fU2.jpg?size=400x160&quality=95&crop=0,0,911,364&type=cover_group\", \"width\":400, \"height\":134 }, { \"url\":\"https:\\/\\/sun9-east.userapi.com\\/sun9-26\\/s\\/v1\\/if2\\/jISd7b26ICGB-d2zwCICktzIqwoSssjmxANNtDnn7RTK3uxlNC37Ys4nHw0EuSTMBsb1lOK3DwFjpAuWbRo4YiKX.jpg?size=911x364&quality=95&crop=0,0,911,364&type=cover_group\", \"width\":795, \"height\":265 }, { \"url\":\"https:\\/\\/sun9-east.userapi.com\\/sun9-26\\/s\\/v1\\/if2\\/rpm-mQ-FVmdJyNIFIhGp1tSd31cN2FD_gQuf6g1KRwYEcSs8yuU-peJnutIwZofCdre2vdmBODtER44z4WqaGsd8.jpg?size=1080x432&quality=95&crop=0,0,911,364&type=cover_group\", \"width\":1080, \"height\":360 }, { \"url\":\"https:\\/\\/sun9-east.userapi.com\\/sun9-26\\/s\\/v1\\/if2\\/-e-NafJqKpegWOE1AbemQpCT2IuOf-disLL8AWLEhWWqMOM0Xcou3pyS8Dvc0pAH4hvkjbJ74l9iLfR0-Bt71Lwl.jpg?size=1920x768&quality=95&crop=0,0,911,364&type=cover_group\", \"width\":1590, \"height\":530 } ] } }"
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "129Invalid photo703You need to enable 2FA for this action13000Content upload was denied due to active community strikes В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Метод сохраняет обложку сообщества или профиля пользователя после её успешной загрузки на сервер. Параметры: hashstringОбязательный параметр. Хеш фотографии. Параметр возвращается в результате загрузки фотографии на сервер.Обязательный параметрphotostringОбязательный параметр. Фотография в формате multipart/form-data. Параметр возвращается в результате загрузки фотографии на сервер.Обязательный параметр Результат: Метод возвращает массив объектов фотографий. Пример ответа: JSON{ \"response\":{ \"images\":[ { \"url\":\"https:\\/\\/sun9-east.userapi.com\\/sun9-26\\/s\\/v1\\/if2\\/Mni2GyylYCr29hIht90Hm-wORG-kqQDYI5xHCuMzaQPsboFbXyy0KMpx5mAOjit0Vii8v3c8kv4Mn5XnVVr9XGLr.jpg?size=200x80&quality=95&crop=0,0,911,364&type=cover_group\", \"width\":200, \"height\":67 }, { \"url\":\"https:\\/\\/sun9-east.userapi.com\\/sun9-26\\/s\\/v1\\/if2\\/kAbza3O55NCG1z85nhJh9cf1J4VhgPQG9kpWIaVyy5iPmhj4MW53T6B6F7LcsqA4HI9FY_I8DXDLHWbMzUnZ0fU2.jpg?size=400x160&quality=95&crop=0,0,911,364&type=cover_group\", \"width\":400, \"height\":134 }, { \"url\":\"https:\\/\\/sun9-east.userapi.com\\/sun9-26\\/s\\/v1\\/if2\\/jISd7b26ICGB-d2zwCICktzIqwoSssjmxANNtDnn7RTK3uxlNC37Ys4nHw0EuSTMBsb1lOK3DwFjpAuWbRo4YiKX.jpg?size=911x364&quality=95&crop=0,0,911,364&type=cover_group\", \"width\":795, \"height\":265 }, { \"url\":\"https:\\/\\/sun9-east.userapi.com\\/sun9-26\\/s\\/v1\\/if2\\/rpm-mQ-FVmdJyNIFIhGp1tSd31cN2FD_gQuf6g1KRwYEcSs8yuU-peJnutIwZofCdre2vdmBODtER44z4WqaGsd8.jpg?size=1080x432&quality=95&crop=0,0,911,364&type=cover_group\", \"width\":1080, \"height\":360 }, { \"url\":\"https:\\/\\/sun9-east.userapi.com\\/sun9-26\\/s\\/v1\\/if2\\/-e-NafJqKpegWOE1AbemQpCT2IuOf-disLL8AWLEhWWqMOM0Xcou3pyS8Dvc0pAH4hvkjbJ74l9iLfR0-Bt71Lwl.jpg?size=1920x768&quality=95&crop=0,0,911,364&type=cover_group\", \"width\":1590, \"height\":530 } ] } } Коды ошибок: 129Invalid photo703You need to enable 2FA for this action13000Content upload was denied due to active community strikes В ходе выполнения могут произойти общие ошибки",
+  "group": "photos"
+}

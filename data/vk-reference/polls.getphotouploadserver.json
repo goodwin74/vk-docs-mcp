@@ -1,0 +1,41 @@
+{
+  "id": "polls.getphotouploadserver",
+  "url": "https://dev.vk.com/ru/method/polls.getPhotoUploadServer",
+  "title": "polls.getPhotoUploadServer | VK для разработчиков",
+  "h1": "polls.getPhotoUploadServer",
+  "description": "Возвращает адрес сервера для загрузки фоновой фотографии в опрос.",
+  "params": [
+    {
+      "name": "owner_id",
+      "type": "integer",
+      "required": false,
+      "description": "Идентификатор владельца опроса."
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "Возвращает объект с единственным полем upload_url (string), содержащим URL для загрузки фотографии."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "owner_idintegerИдентификатор владельца опроса."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Возвращает объект с единственным полем upload_url (string), содержащим URL для загрузки фотографии."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Возвращает адрес сервера для загрузки фоновой фотографии в опрос. Параметры: owner_idintegerИдентификатор владельца опроса. Результат: Возвращает объект с единственным полем upload_url (string), содержащим URL для загрузки фотографии. Коды ошибок: В ходе выполнения могут произойти общие ошибки",
+  "group": "polls"
+}

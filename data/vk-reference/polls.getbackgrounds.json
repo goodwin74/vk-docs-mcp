@@ -1,0 +1,34 @@
+{
+  "id": "polls.getbackgrounds",
+  "url": "https://dev.vk.com/ru/method/polls.getBackgrounds",
+  "title": "polls.getBackgrounds | VK для разработчиков",
+  "h1": "polls.getBackgrounds",
+  "description": "Возвращает варианты фонового изображения для опросов.",
+  "params": [],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "Возвращает массив объектов, описывающих фоновое изображение опроса. Каждый из объектов содержит поля: •type (string) — тип фона. Возможные значения: gradient или tile. •angle (string) — (для type = gradient) угол градиента по оси X. •color (string) — HEX-код замещающего цвета (без #). •width (integer) — (для type = tile) ширина плитки паттерна. •height (integer) — (для type = tile) высота плитки паттерна. •points (array) — (для type = gradient) точки градиента. Массив объектов, каждый из которых содержит поля position (number) — положение точки — и color (string) — HEX-код цвета точки. •id (integer) — идентификатор фона."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": ""
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Возвращает массив объектов, описывающих фоновое изображение опроса. Каждый из объектов содержит поля: •type (string) — тип фона. Возможные значения: gradient или tile. •angle (string) — (для type = gradient) угол градиента по оси X. •color (string) — HEX-код замещающего цвета (без #). •width (integer) — (для type = tile) ширина плитки паттерна. •height (integer) — (для type = tile) высота плитки паттерна. •points (array) — (для type = gradient) точки градиента. Массив объектов, каждый из которых содержит поля position (number) — положение точки — и color (string) — HEX-код цвета точки. •id (integer) — идентификатор фона."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Возвращает варианты фонового изображения для опросов. Параметры: Результат: Возвращает массив объектов, описывающих фоновое изображение опроса. Каждый из объектов содержит поля: •type (string) — тип фона. Возможные значения: gradient или tile. •angle (string) — (для type = gradient) угол градиента по оси X. •color (string) — HEX-код замещающего цвета (без #). •width (integer) — (для type = tile) ширина плитки паттерна. •height (integer) — (для type = tile) высота плитки паттерна. •points (array) — (для type = gradient) точки градиента. Массив объектов, каждый из которых содержит поля position (number) — положение точки — и color (string) — HEX-код цвета точки. •id (integer) — идентификатор фона. Коды ошибок: В ходе выполнения могут произойти общие ошибки",
+  "group": "polls"
+}

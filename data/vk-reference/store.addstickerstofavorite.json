@@ -1,0 +1,41 @@
+{
+  "id": "store.addstickerstofavorite",
+  "url": "https://dev.vk.com/ru/method/store.addStickersToFavorite",
+  "title": "store.addStickersToFavorite | VK для разработчиков",
+  "h1": "store.addStickersToFavorite",
+  "description": "Добавляет стикер в избранные.",
+  "params": [
+    {
+      "name": "sticker_ids",
+      "type": "integer",
+      "required": true,
+      "description": "Идентификаторы стикеров.Обязательный параметр"
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "После успешного выполнения возвращает 1."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "sticker_idsintegerИдентификаторы стикеров.Обязательный параметр"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "После успешного выполнения возвращает 1."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "2100Stickers are not purchased2101Too many favorite stickers В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Добавляет стикер в избранные. Параметры: sticker_idsintegerИдентификаторы стикеров.Обязательный параметр Результат: После успешного выполнения возвращает 1. Коды ошибок: 2100Stickers are not purchased2101Too many favorite stickers В ходе выполнения могут произойти общие ошибки",
+  "group": "store"
+}

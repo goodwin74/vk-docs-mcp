@@ -1,0 +1,106 @@
+{
+  "id": "stats.get",
+  "url": "https://dev.vk.com/ru/method/stats.get",
+  "title": "stats.get | VK для разработчиков",
+  "h1": "stats.get",
+  "description": "Возвращает статистику сообщества или приложения.",
+  "params": [
+    {
+      "name": "group_id",
+      "type": "positive",
+      "required": false,
+      "description": "Идентификатор сообщества."
+    },
+    {
+      "name": "app_id",
+      "type": "positive",
+      "required": false,
+      "description": "Идентификатор приложения."
+    },
+    {
+      "name": "date_from",
+      "type": "string",
+      "required": false,
+      "description": "Начальная дата выводимой статистики в формате YYYY-MM-DD."
+    },
+    {
+      "name": "date_to",
+      "type": "string",
+      "required": false,
+      "description": "Конечная дата выводимой статистики в формате YYYY-MM-DD."
+    },
+    {
+      "name": "timestamp_from",
+      "type": "positive",
+      "required": false,
+      "description": "Начало периода статистики в Unixtime."
+    },
+    {
+      "name": "timestamp_to",
+      "type": "positive",
+      "required": false,
+      "description": "Окончание периода статистики в Unixtime."
+    },
+    {
+      "name": "interval",
+      "type": "string",
+      "required": false,
+      "description": "Временные интервалы. Возможные значения: day, week, month, year, all. По умолчанию: day."
+    },
+    {
+      "name": "intervals_count",
+      "type": "positive",
+      "required": false,
+      "description": "Количество интервалов времени."
+    },
+    {
+      "name": "filters",
+      "type": "string",
+      "required": false,
+      "description": ""
+    },
+    {
+      "name": "stats_groups",
+      "type": "string",
+      "required": false,
+      "description": "Фильтр для получения данных по конкретному блоку статистики сообщества. Возможные значения: visitors, reach, activity."
+    },
+    {
+      "name": "extended",
+      "type": "checkbox",
+      "required": false,
+      "description": "1 — возвращать дополнительно агрегированные данные в результатах."
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "После успешного выполнения возвращает объект с данными статистики."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "group_idpositiveИдентификатор сообщества.app_idpositiveИдентификатор приложения.date_fromstringНачальная дата выводимой статистики в формате YYYY-MM-DD.date_tostringКонечная дата выводимой статистики в формате YYYY-MM-DD.timestamp_frompositiveНачало периода статистики в Unixtime.timestamp_topositiveОкончание периода статистики в Unixtime.intervalstringВременные интервалы. Возможные значения: day, week, month, year, all. По умолчанию: day.intervals_countpositiveКоличество интервалов времени.filtersstringstats_groupsstringФильтр для получения данных по конкретному блоку статистики сообщества. Возможные значения: visitors, reach, activity.extendedcheckbox1 — возвращать дополнительно агрегированные данные в результатах."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "После успешного выполнения возвращает объект с данными статистики."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "В ходе выполнения могут произойти общие ошибки"
+    },
+    {
+      "level": 2,
+      "title": "Связанные версии",
+      "text": "Перейти на страницу версий API 5.86 •Метод messages.search при использовании параметра extended = 1 возвращает массив объектов бесед. •Изменения в методе stats.get: •Входные параметры date_from и date_to устарели, вместо них используются timestamp_from и timestamp_to — целые числа, представляющее собой время в Unixtime. •Появился входной параметр stats_groups, который позволяет фильтровать по отдельным блокам в статистике. Возможные значения: visitors, reach, activity. •В ответе поля period_from и period_to являются целыми числами и так же представляют собой время в Unixtime. 5.75 •Добавлен новый формат ответа в методе stats.get. •В настройках Callback-сервера и Long Poll API появилась возможность указывать версию API. От нее зависит формат получаемых событий."
+    }
+  ],
+  "contentText": "Возвращает статистику сообщества или приложения. Параметры: group_idpositiveИдентификатор сообщества.app_idpositiveИдентификатор приложения.date_fromstringНачальная дата выводимой статистики в формате YYYY-MM-DD.date_tostringКонечная дата выводимой статистики в формате YYYY-MM-DD.timestamp_frompositiveНачало периода статистики в Unixtime.timestamp_topositiveОкончание периода статистики в Unixtime.intervalstringВременные интервалы. Возможные значения: day, week, month, year, all. По умолчанию: day.intervals_countpositiveКоличество интервалов времени.filtersstringstats_groupsstringФильтр для получения данных по конкретному блоку статистики сообщества. Возможные значения: visitors, reach, activity.extendedcheckbox1 — возвращать дополнительно агрегированные данные в результатах. Результат: После успешного выполнения возвращает объект с данными статистики. Коды ошибок: В ходе выполнения могут произойти общие ошибки Связанные версии: Перейти на страницу версий API 5.86 •Метод messages.search при использовании параметра extended = 1 возвращает массив объектов бесед. •Изменения в методе stats.get: •Входные параметры date_from и date_to устарели, вместо них используются timestamp_from и timestamp_to — целые числа, представляющее собой время в Unixtime. •Появился входной параметр stats_groups, который позволяет фильтровать по отдельным блокам в статистике. Возможные значения: visitors, reach, activity. •В ответе поля period_from и period_to являются целыми числами и так же представляют собой время в Unixtime. 5.75 •Добавлен новый формат ответа в методе stats.get. •В настройках Callback-сервера и Long Poll API появилась возможность указывать версию API. От нее зависит формат получаемых событий.",
+  "group": "stats"
+}

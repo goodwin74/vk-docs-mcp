@@ -1,0 +1,47 @@
+{
+  "id": "stats.getpostreach",
+  "url": "https://dev.vk.com/ru/method/stats.getPostReach",
+  "title": "stats.getPostReach | VK для разработчиков",
+  "h1": "stats.getPostReach",
+  "description": "Возвращает статистику для записи на стене.",
+  "params": [
+    {
+      "name": "owner_id",
+      "type": "string",
+      "required": true,
+      "description": "Идентификатор владельца записи (сообщества). Должен начинаться со знака -.Обязательный параметр"
+    },
+    {
+      "name": "post_ids",
+      "type": "integer",
+      "required": true,
+      "description": "Обязательный параметр"
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "Метод возвращает объект со следующими полями: ПолеТипОписаниеreach_subscribersintegerОхват подписчиков.reach_totalintegerСуммарный охват.reach_adsintegerРекламный охват, если запись продвигалась с помощью таргетированной рекламы.reach_viralintegerВиральный охват, если запись продвигалась с помощью таргетированной рекламы.linksintegerКоличество переходов по ссылке.to_groupintegerКоличество переходов в сообщество.join_groupintegerКоличество вступлений в сообщество.reportintegerКоличество жалоб на запись.hideintegerКоличество участников, скрывших запись.unsubscribeintegerКоличество отписавшихся участников. Пример ответа: JSON{ \"response\": [ { \"reach_subscribers\": 11385, \"reach_total\": 21105, \"links\": 92, \"to_group\": 97, \"join_group\": 3, \"report\": 0, \"hide\": 58, \"unsubscribe\": 15 } ] }"
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "owner_idstringИдентификатор владельца записи (сообщества). Должен начинаться со знака -.Обязательный параметрpost_idsintegerОбязательный параметр"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Метод возвращает объект со следующими полями: ПолеТипОписаниеreach_subscribersintegerОхват подписчиков.reach_totalintegerСуммарный охват.reach_adsintegerРекламный охват, если запись продвигалась с помощью таргетированной рекламы.reach_viralintegerВиральный охват, если запись продвигалась с помощью таргетированной рекламы.linksintegerКоличество переходов по ссылке.to_groupintegerКоличество переходов в сообщество.join_groupintegerКоличество вступлений в сообщество.reportintegerКоличество жалоб на запись.hideintegerКоличество участников, скрывших запись.unsubscribeintegerКоличество отписавшихся участников. Пример ответа: JSON{ \"response\": [ { \"reach_subscribers\": 11385, \"reach_total\": 21105, \"links\": 92, \"to_group\": 97, \"join_group\": 3, \"report\": 0, \"hide\": 58, \"unsubscribe\": 15 } ] }"
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "210Access to wall's post denied В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Возвращает статистику для записи на стене. Параметры: owner_idstringИдентификатор владельца записи (сообщества). Должен начинаться со знака -.Обязательный параметрpost_idsintegerОбязательный параметр Результат: Метод возвращает объект со следующими полями: ПолеТипОписаниеreach_subscribersintegerОхват подписчиков.reach_totalintegerСуммарный охват.reach_adsintegerРекламный охват, если запись продвигалась с помощью таргетированной рекламы.reach_viralintegerВиральный охват, если запись продвигалась с помощью таргетированной рекламы.linksintegerКоличество переходов по ссылке.to_groupintegerКоличество переходов в сообщество.join_groupintegerКоличество вступлений в сообщество.reportintegerКоличество жалоб на запись.hideintegerКоличество участников, скрывших запись.unsubscribeintegerКоличество отписавшихся участников. Пример ответа: JSON{ \"response\": [ { \"reach_subscribers\": 11385, \"reach_total\": 21105, \"links\": 92, \"to_group\": 97, \"join_group\": 3, \"report\": 0, \"hide\": 58, \"unsubscribe\": 15 } ] } Коды ошибок: 210Access to wall's post denied В ходе выполнения могут произойти общие ошибки",
+  "group": "stats"
+}
