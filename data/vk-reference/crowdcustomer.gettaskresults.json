@@ -1,0 +1,55 @@
+{
+  "id": "crowdcustomer.gettaskresults",
+  "url": "https://dev.vk.com/ru/method/crowdCustomer.getTaskResults",
+  "title": "crowdCustomer.getTaskResults | VK для разработчиков",
+  "h1": "crowdCustomer.getTaskResults",
+  "description": "Получение результатов разметки задачи",
+  "params": [
+    {
+      "name": "task_id",
+      "type": "positive",
+      "required": true,
+      "description": "Id задачиОбязательный параметр"
+    },
+    {
+      "name": "token",
+      "type": "string",
+      "required": true,
+      "description": "ТокенОбязательный параметр"
+    },
+    {
+      "name": "limit",
+      "type": "positive",
+      "required": false,
+      "description": "Количество результатов"
+    },
+    {
+      "name": "last_id",
+      "type": "positive",
+      "required": false,
+      "description": "Последний id результата"
+    },
+    {
+      "name": "ids",
+      "type": "string",
+      "required": false,
+      "description": "Фильтр по id результатов"
+    }
+  ],
+  "returns": [],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "task_idpositiveId задачиОбязательный параметрtokenstringТокенОбязательный параметрlimitpositiveКоличество результатовlast_idpositiveПоследний id результатаidsstringФильтр по id результатов"
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Получение результатов разметки задачи Параметры: task_idpositiveId задачиОбязательный параметрtokenstringТокенОбязательный параметрlimitpositiveКоличество результатовlast_idpositiveПоследний id результатаidsstringФильтр по id результатов Коды ошибок: В ходе выполнения могут произойти общие ошибки",
+  "group": "crowdcustomer"
+}

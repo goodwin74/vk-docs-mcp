@@ -1,0 +1,53 @@
+{
+  "id": "bugtracker.removecompanygroupmember",
+  "url": "https://dev.vk.com/ru/method/bugtracker.removeCompanyGroupMember",
+  "title": "bugtracker.removeCompanyGroupMember | VK для разработчиков",
+  "h1": "bugtracker.removeCompanyGroupMember",
+  "description": "Исключает сотрудника из группы доступа компании.",
+  "params": [
+    {
+      "name": "company_id",
+      "type": "positive",
+      "required": true,
+      "description": "Идентификатор компании. Его можно найти в ссылке на страницу компании, например: https://vk.com/bugs_mng?company_id=3Обязательный параметр"
+    },
+    {
+      "name": "user_id",
+      "type": "integer",
+      "required": true,
+      "description": "Идентификатор пользователя.Обязательный параметр"
+    },
+    {
+      "name": "company_group_id",
+      "type": "positive",
+      "required": true,
+      "description": "Идентификатор группы доступа. Его можно найти в ссылке на страницу группы, например: https://vk.com/bugs_mng?act=group_members&company_id=3&group_id=65Обязательный параметр"
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "При успешном выполнении возвращает 1. Пример ответа: JSON{ \"response\": 1 }"
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "company_idpositiveИдентификатор компании. Его можно найти в ссылке на страницу компании, например: https://vk.com/bugs_mng?company_id=3Обязательный параметрuser_idintegerИдентификатор пользователя.Обязательный параметрcompany_group_idpositiveИдентификатор группы доступа. Его можно найти в ссылке на страницу группы, например: https://vk.com/bugs_mng?act=group_members&company_id=3&group_id=65Обязательный параметр"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "При успешном выполнении возвращает 1. Пример ответа: JSON{ \"response\": 1 }"
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "103Out of limits104Not found В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Исключает сотрудника из группы доступа компании. Параметры: company_idpositiveИдентификатор компании. Его можно найти в ссылке на страницу компании, например: https://vk.com/bugs_mng?company_id=3Обязательный параметрuser_idintegerИдентификатор пользователя.Обязательный параметрcompany_group_idpositiveИдентификатор группы доступа. Его можно найти в ссылке на страницу группы, например: https://vk.com/bugs_mng?act=group_members&company_id=3&group_id=65Обязательный параметр Результат: При успешном выполнении возвращает 1. Пример ответа: JSON{ \"response\": 1 } Коды ошибок: 103Out of limits104Not found В ходе выполнения могут произойти общие ошибки",
+  "group": "bugtracker"
+}

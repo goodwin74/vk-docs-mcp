@@ -1,0 +1,52 @@
+{
+  "id": "ads.getuploadurl",
+  "url": "https://dev.vk.com/ru/method/ads.getUploadURL",
+  "title": "ads.getUploadURL | VK для разработчиков",
+  "h1": "ads.getUploadURL",
+  "description": "Возвращает URL-адрес для загрузки фотографии рекламного объявления.",
+  "params": [
+    {
+      "name": "ad_format",
+      "type": "integer",
+      "required": false,
+      "description": "Формат объявления: •1 — изображение и текст. •2 — большое изображение. •3 — эксклюзивный формат. •4 — продвижение сообществ или приложений, квадратное изображение. •5 — приложение в новостной ленте (устаревший). •6 — мобильное приложение. •11 — адаптивный формат. Для формата объявления «запись в сообществе» этот метод не используется, т.к. фотографии являются частью записи со стены сообщества. Смотрите методы ads.createAds и wall.postAdsStealth."
+    },
+    {
+      "name": "icon",
+      "type": "integer",
+      "required": false,
+      "description": "1 — получить URL для загрузки логотипа, а не основного изображения. Используется только для ad_format = 11."
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "Возвращает URL-адрес для загрузки изображения."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "ad_formatintegerФормат объявления: •1 — изображение и текст. •2 — большое изображение. •3 — эксклюзивный формат. •4 — продвижение сообществ или приложений, квадратное изображение. •5 — приложение в новостной ленте (устаревший). •6 — мобильное приложение. •11 — адаптивный формат. Для формата объявления «запись в сообществе» этот метод не используется, т.к. фотографии являются частью записи со стены сообщества. Смотрите методы ads.createAds и wall.postAdsStealth.iconinteger1 — получить URL для загрузки логотипа, а не основного изображения. Используется только для ad_format = 11."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Возвращает URL-адрес для загрузки изображения."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "В ходе выполнения могут произойти общие ошибки"
+    },
+    {
+      "level": 2,
+      "title": "Связанные версии",
+      "text": "Перейти на страницу версий API 5.59Обновлены требования к размерам изображений в рекламных объявлениях. Подробности.5.50 • Изменения в методе ads.getAds: • Возвращаемое поле impressions_limit заменено двумя полями: impressions_limit и impressions_limited. • Изменено возвращаемое поле ad_platform. • Возвращаемое поле disclaimer заменено полями disclaimer_medical, disclaimer_specialist, disclaimer_supplements. • Изменения в методах ads.createAds и ads.updateAds: • Параметр impressions_limit в ad_specification заменён двумя параметрами: impressions_limit и impressions_limited. • Изменён параметр ad_specification.ad_platform. • Поле disclaimer в ad_specification заменено на поля disclaimer_medical, disclaimer_specialist, disclaimer_supplements. • Параметр ad_specification.ad_format метода ads.createAds стал обязательным. • Параметр ad_format метода ads.getUploadURL стал обязательным."
+    }
+  ],
+  "contentText": "Возвращает URL-адрес для загрузки фотографии рекламного объявления. Параметры: ad_formatintegerФормат объявления: •1 — изображение и текст. •2 — большое изображение. •3 — эксклюзивный формат. •4 — продвижение сообществ или приложений, квадратное изображение. •5 — приложение в новостной ленте (устаревший). •6 — мобильное приложение. •11 — адаптивный формат. Для формата объявления «запись в сообществе» этот метод не используется, т.к. фотографии являются частью записи со стены сообщества. Смотрите методы ads.createAds и wall.postAdsStealth.iconinteger1 — получить URL для загрузки логотипа, а не основного изображения. Используется только для ad_format = 11. Результат: Возвращает URL-адрес для загрузки изображения. Коды ошибок: В ходе выполнения могут произойти общие ошибки Связанные версии: Перейти на страницу версий API 5.59Обновлены требования к размерам изображений в рекламных объявлениях. Подробности.5.50 • Изменения в методе ads.getAds: • Возвращаемое поле impressions_limit заменено двумя полями: impressions_limit и impressions_limited. • Изменено возвращаемое поле ad_platform. • Возвращаемое поле disclaimer заменено полями disclaimer_medical, disclaimer_specialist, disclaimer_supplements. • Изменения в методах ads.createAds и ads.updateAds: • Параметр impressions_limit в ad_specification заменён двумя параметрами: impressions_limit и impressions_limited. • Изменён параметр ad_specification.ad_platform. • Поле disclaimer в ad_specification заменено на поля disclaimer_medical, disclaimer_specialist, disclaimer_supplements. • Параметр ad_specification.ad_format метода ads.createAds стал обязательным. • Параметр ad_format метода ads.getUploadURL стал обязательным.",
+  "group": "ads"
+}

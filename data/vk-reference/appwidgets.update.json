@@ -1,0 +1,47 @@
+{
+  "id": "appwidgets.update",
+  "url": "https://dev.vk.com/ru/method/appWidgets.update",
+  "title": "appWidgets.update | VK для разработчиков",
+  "h1": "appWidgets.update",
+  "description": "Позволяет обновить виджет приложения сообщества.",
+  "params": [
+    {
+      "name": "code",
+      "type": "text",
+      "required": true,
+      "description": "Код виджета. Подробное описание — в разделе Виджеты сообществ.Обязательный параметр"
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": true,
+      "description": "Тип виджета. Список всех доступных типов — в разделе Виджеты приложений сообществ.Обязательный параметр"
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "После успешного выполнения возвращает 1."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "codetextКод виджета. Подробное описание — в разделе Виджеты сообществ.Обязательный параметрtypestringТип виджета. Список всех доступных типов — в разделе Виджеты приложений сообществ.Обязательный параметр"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "После успешного выполнения возвращает 1."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "12Unable to compile code19Content blocked125Invalid group id210Access to wall's post denied212Access to post comments denied В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Позволяет обновить виджет приложения сообщества. Параметры: codetextКод виджета. Подробное описание — в разделе Виджеты сообществ.Обязательный параметрtypestringТип виджета. Список всех доступных типов — в разделе Виджеты приложений сообществ.Обязательный параметр Результат: После успешного выполнения возвращает 1. Коды ошибок: 12Unable to compile code19Content blocked125Invalid group id210Access to wall's post denied212Access to post comments denied В ходе выполнения могут произойти общие ошибки",
+  "group": "appwidgets"
+}

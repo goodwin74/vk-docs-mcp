@@ -1,0 +1,59 @@
+{
+  "id": "ads.savelookalikerequestresult",
+  "url": "https://dev.vk.com/ru/method/ads.saveLookalikeRequestResult",
+  "title": "ads.saveLookalikeRequestResult | VK для разработчиков",
+  "h1": "ads.saveLookalikeRequestResult",
+  "description": "Сохраняет результат поиска похожей аудитории.",
+  "params": [
+    {
+      "name": "account_id",
+      "type": "integer",
+      "required": true,
+      "description": "Идентификатор рекламного кабинета.Обязательный параметр"
+    },
+    {
+      "name": "client_id",
+      "type": "integer",
+      "required": false,
+      "description": "Только для рекламных агентств. Идентификатор клиента, для которого будут сохраняться аудитория."
+    },
+    {
+      "name": "request_id",
+      "type": "integer",
+      "required": true,
+      "description": "Идентификатор запроса на поиск похожей аудитории. Получить список всех запросов на поиск похожей аудитории для данного кабинета можно с помощью ads.getLookalikeRequests.Обязательный параметр"
+    },
+    {
+      "name": "level",
+      "type": "integer",
+      "required": true,
+      "description": "Уровень конкретного размера похожей аудитории для сохранения. Получить список всех доступных размеров аудиторий можно с помощью ads.getLookalikeRequests.Обязательный параметр"
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "Возвращает объект с полями: •retargeting_group_id – идентификатор группы ретаргетинга, в которую будет сохранена запрошенная похожая аудитория. •audience_count – размер запрошенной похожей аудитории."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "account_idintegerИдентификатор рекламного кабинета.Обязательный параметрclient_idintegerТолько для рекламных агентств. Идентификатор клиента, для которого будут сохраняться аудитория.request_idintegerИдентификатор запроса на поиск похожей аудитории. Получить список всех запросов на поиск похожей аудитории для данного кабинета можно с помощью ads.getLookalikeRequests.Обязательный параметрlevelintegerУровень конкретного размера похожей аудитории для сохранения. Получить список всех доступных размеров аудиторий можно с помощью ads.getLookalikeRequests.Обязательный параметр"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Возвращает объект с полями: •retargeting_group_id – идентификатор группы ретаргетинга, в которую будет сохранена запрошенная похожая аудитория. •audience_count – размер запрошенной похожей аудитории."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "601Permission denied. You have requested too many actions this day. Try later.634Lookalike request audience save already in progress635Max count of lookalike request audience saves per day reached636Max count of retargeting groups reached В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Сохраняет результат поиска похожей аудитории. Параметры: account_idintegerИдентификатор рекламного кабинета.Обязательный параметрclient_idintegerТолько для рекламных агентств. Идентификатор клиента, для которого будут сохраняться аудитория.request_idintegerИдентификатор запроса на поиск похожей аудитории. Получить список всех запросов на поиск похожей аудитории для данного кабинета можно с помощью ads.getLookalikeRequests.Обязательный параметрlevelintegerУровень конкретного размера похожей аудитории для сохранения. Получить список всех доступных размеров аудиторий можно с помощью ads.getLookalikeRequests.Обязательный параметр Результат: Возвращает объект с полями: •retargeting_group_id – идентификатор группы ретаргетинга, в которую будет сохранена запрошенная похожая аудитория. •audience_count – размер запрошенной похожей аудитории. Коды ошибок: 601Permission denied. You have requested too many actions this day. Try later.634Lookalike request audience save already in progress635Max count of lookalike request audience saves per day reached636Max count of retargeting groups reached В ходе выполнения могут произойти общие ошибки",
+  "group": "ads"
+}

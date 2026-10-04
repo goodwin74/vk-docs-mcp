@@ -1,0 +1,65 @@
+{
+  "id": "board.addtopic",
+  "url": "https://dev.vk.com/ru/method/board.addTopic",
+  "title": "board.addTopic | VK для разработчиков",
+  "h1": "board.addTopic",
+  "description": "Создает новую тему в списке обсуждений группы.",
+  "params": [
+    {
+      "name": "group_id",
+      "type": "string",
+      "required": true,
+      "description": "Идентификатор сообщества.Обязательный параметр"
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": true,
+      "description": "Название обсуждения.Обязательный параметр"
+    },
+    {
+      "name": "text",
+      "type": "string",
+      "required": false,
+      "description": "Текст первого сообщения в обсуждении."
+    },
+    {
+      "name": "from_group",
+      "type": "checkbox",
+      "required": false,
+      "description": "1 — тема будет создана от имени группы, 0 — тема будет создана от имени пользователя (по умолчанию)."
+    },
+    {
+      "name": "attachments",
+      "type": "string",
+      "required": false,
+      "description": "Список объектов, приложенных к записи, в формате: <type><owner_id>_<media_id>,<type><owner_id>_<media_id> <type> — тип медиа-приложения: •photo — фотография; •video — видеозапись ; •audio — аудиозапись; •doc — документ. <owner_id> — идентификатор владельца медиа-приложения. <media_id> — идентификатор медиа-приложения. Например: photo100172_166443618,photo66748_265827614 Параметр является обязательным, если не задан параметр text."
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "В случае успеха возвращает идентификатор созданной темы."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "group_idstringИдентификатор сообщества.Обязательный параметрtitlestringНазвание обсуждения.Обязательный параметрtextstringТекст первого сообщения в обсуждении.from_groupcheckbox1 — тема будет создана от имени группы, 0 — тема будет создана от имени пользователя (по умолчанию).attachmentsstringСписок объектов, приложенных к записи, в формате: <type><owner_id>_<media_id>,<type><owner_id>_<media_id> <type> — тип медиа-приложения: •photo — фотография; •video — видеозапись ; •audio — аудиозапись; •doc — документ. <owner_id> — идентификатор владельца медиа-приложения. <media_id> — идентификатор медиа-приложения. Например: photo100172_166443618,photo66748_265827614 Параметр является обязательным, если не задан параметр text."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "В случае успеха возвращает идентификатор созданной темы."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "703You need to enable 2FA for this action13000Content upload was denied due to active community strikes В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Создает новую тему в списке обсуждений группы. Параметры: group_idstringИдентификатор сообщества.Обязательный параметрtitlestringНазвание обсуждения.Обязательный параметрtextstringТекст первого сообщения в обсуждении.from_groupcheckbox1 — тема будет создана от имени группы, 0 — тема будет создана от имени пользователя (по умолчанию).attachmentsstringСписок объектов, приложенных к записи, в формате: <type><owner_id>_<media_id>,<type><owner_id>_<media_id> <type> — тип медиа-приложения: •photo — фотография; •video — видеозапись ; •audio — аудиозапись; •doc — документ. <owner_id> — идентификатор владельца медиа-приложения. <media_id> — идентификатор медиа-приложения. Например: photo100172_166443618,photo66748_265827614 Параметр является обязательным, если не задан параметр text. Результат: В случае успеха возвращает идентификатор созданной темы. Коды ошибок: 703You need to enable 2FA for this action13000Content upload was denied due to active community strikes В ходе выполнения могут произойти общие ошибки",
+  "group": "board"
+}

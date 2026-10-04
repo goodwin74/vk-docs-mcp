@@ -1,0 +1,43 @@
+{
+  "id": "crowdcustomer.createtaskjob",
+  "url": "https://dev.vk.com/ru/method/crowdCustomer.createTaskJob",
+  "title": "crowdCustomer.createTaskJob | VK для разработчиков",
+  "h1": "crowdCustomer.createTaskJob",
+  "description": "Создание задания на разметку",
+  "params": [
+    {
+      "name": "task_id",
+      "type": "positive",
+      "required": true,
+      "description": "Id задачиОбязательный параметр"
+    },
+    {
+      "name": "token",
+      "type": "string",
+      "required": true,
+      "description": "ТокенОбязательный параметр"
+    },
+    {
+      "name": "variables",
+      "type": "text",
+      "required": true,
+      "description": "Переменные заданияОбязательный параметр"
+    }
+  ],
+  "returns": [],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "task_idpositiveId задачиОбязательный параметрtokenstringТокенОбязательный параметрvariablestextПеременные заданияОбязательный параметр"
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Создание задания на разметку Параметры: task_idpositiveId задачиОбязательный параметрtokenstringТокенОбязательный параметрvariablestextПеременные заданияОбязательный параметр Коды ошибок: В ходе выполнения могут произойти общие ошибки",
+  "group": "crowdcustomer"
+}

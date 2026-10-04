@@ -1,0 +1,47 @@
+{
+  "id": "bugtracker.setproductisover",
+  "url": "https://dev.vk.com/ru/method/bugtracker.setProductIsOver",
+  "title": "bugtracker.setProductIsOver | VK для разработчиков",
+  "h1": "bugtracker.setProductIsOver",
+  "description": "Отключает или включает приём отчётов в продукте.",
+  "params": [
+    {
+      "name": "product_id",
+      "type": "positive",
+      "required": true,
+      "description": "Идентификатор продукта. Его можно найти в ссылке на страницу продукта, например: https://vk.com/bugs?act=product&id=17Обязательный параметр"
+    },
+    {
+      "name": "is_over",
+      "type": "checkbox",
+      "required": false,
+      "description": "Устанавливает, отключать ли приём отчётов. Возможные значения: •1 — отключить. •0 — включить приём отчётов."
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "При успешном выполнении возвращает 1. Пример ответа: JSON{ \"response\": 1 }"
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "product_idpositiveИдентификатор продукта. Его можно найти в ссылке на страницу продукта, например: https://vk.com/bugs?act=product&id=17Обязательный параметрis_overcheckboxУстанавливает, отключать ли приём отчётов. Возможные значения: •1 — отключить. •0 — включить приём отчётов."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "При успешном выполнении возвращает 1. Пример ответа: JSON{ \"response\": 1 }"
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "104Not found106Unable to process action В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Отключает или включает приём отчётов в продукте. Параметры: product_idpositiveИдентификатор продукта. Его можно найти в ссылке на страницу продукта, например: https://vk.com/bugs?act=product&id=17Обязательный параметрis_overcheckboxУстанавливает, отключать ли приём отчётов. Возможные значения: •1 — отключить. •0 — включить приём отчётов. Результат: При успешном выполнении возвращает 1. Пример ответа: JSON{ \"response\": 1 } Коды ошибок: 104Not found106Unable to process action В ходе выполнения могут произойти общие ошибки",
+  "group": "bugtracker"
+}

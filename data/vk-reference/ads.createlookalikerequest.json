@@ -1,0 +1,59 @@
+{
+  "id": "ads.createlookalikerequest",
+  "url": "https://dev.vk.com/ru/method/ads.createLookalikeRequest",
+  "title": "ads.createLookalikeRequest | VK для разработчиков",
+  "h1": "ads.createLookalikeRequest",
+  "description": "Создаёт запрос на поиск похожей аудитории.",
+  "params": [
+    {
+      "name": "account_id",
+      "type": "integer",
+      "required": true,
+      "description": "Идентификатор рекламного кабинета.Обязательный параметр"
+    },
+    {
+      "name": "client_id",
+      "type": "integer",
+      "required": false,
+      "description": "Только для рекламных агентств. Идентификатор клиента, для которого будет создаваться аудитория."
+    },
+    {
+      "name": "source_type",
+      "type": "string",
+      "required": true,
+      "description": "Тип источника исходной аудитории. На данный момент может принимать единственное значение retargeting_group.Обязательный параметр"
+    },
+    {
+      "name": "retargeting_group_id",
+      "type": "integer",
+      "required": false,
+      "description": ""
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "Поле request_id, в котором указан идентификатор созданного запроса на поиск похожей аудитории."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "account_idintegerИдентификатор рекламного кабинета.Обязательный параметрclient_idintegerТолько для рекламных агентств. Идентификатор клиента, для которого будет создаваться аудитория.source_typestringТип источника исходной аудитории. На данный момент может принимать единственное значение retargeting_group.Обязательный параметрretargeting_group_idinteger"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Поле request_id, в котором указан идентификатор созданного запроса на поиск похожей аудитории."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "601Permission denied. You have requested too many actions this day. Try later.630Lookalike request with same source already in progress631Max count of lookalike requests per day reached632Given audience is too small633Given audience is too large В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Создаёт запрос на поиск похожей аудитории. Параметры: account_idintegerИдентификатор рекламного кабинета.Обязательный параметрclient_idintegerТолько для рекламных агентств. Идентификатор клиента, для которого будет создаваться аудитория.source_typestringТип источника исходной аудитории. На данный момент может принимать единственное значение retargeting_group.Обязательный параметрretargeting_group_idinteger Результат: Поле request_id, в котором указан идентификатор созданного запроса на поиск похожей аудитории. Коды ошибок: 601Permission denied. You have requested too many actions this day. Try later.630Lookalike request with same source already in progress631Max count of lookalike requests per day reached632Given audience is too small633Given audience is too large В ходе выполнения могут произойти общие ошибки",
+  "group": "ads"
+}

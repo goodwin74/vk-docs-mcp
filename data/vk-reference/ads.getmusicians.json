@@ -1,0 +1,41 @@
+{
+  "id": "ads.getmusicians",
+  "url": "https://dev.vk.com/ru/method/ads.getMusicians",
+  "title": "ads.getMusicians | VK для разработчиков",
+  "h1": "ads.getMusicians",
+  "description": "Возвращает информацию о музыкантах, на слушателей которых доступно таргетирование.",
+  "params": [
+    {
+      "name": "artist_name",
+      "type": "text",
+      "required": true,
+      "description": "Имя музыканта.Обязательный параметр"
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "Возвращает массив всех подходящих под запрос artist_name музыкантов. name string Полный псевдоним музыканта. avatar string Аватарка музыканта."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "artist_nametextИмя музыканта.Обязательный параметр"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Возвращает массив всех подходящих под запрос artist_name музыкантов. name string Полный псевдоним музыканта. avatar string Аватарка музыканта."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "104Not found601Permission denied. You have requested too many actions this day. Try later. В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Возвращает информацию о музыкантах, на слушателей которых доступно таргетирование. Параметры: artist_nametextИмя музыканта.Обязательный параметр Результат: Возвращает массив всех подходящих под запрос artist_name музыкантов. name string Полный псевдоним музыканта. avatar string Аватарка музыканта. Коды ошибок: 104Not found601Permission denied. You have requested too many actions this day. Try later. В ходе выполнения могут произойти общие ошибки",
+  "group": "ads"
+}

@@ -1,0 +1,47 @@
+{
+  "id": "ads.gettargetpixels",
+  "url": "https://dev.vk.com/ru/method/ads.getTargetPixels",
+  "title": "ads.getTargetPixels | VK для разработчиков",
+  "h1": "ads.getTargetPixels",
+  "description": "Возвращает список пикселей ретаргетинга.",
+  "params": [
+    {
+      "name": "account_id",
+      "type": "integer",
+      "required": true,
+      "description": "Идентификатор рекламного кабинета.Обязательный параметр"
+    },
+    {
+      "name": "client_id",
+      "type": "integer",
+      "required": false,
+      "description": "Только для рекламных агентств. Id клиента, в рекламном кабинете которого находятся пиксели."
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "Возвращает массив объектов, каждый из которых содержит следующие поля: target_pixel_id integer Идентификатор пикселя. name string Название пикселя. last_updated integer Дата и время последнего использования пикселя в формате unixtime. domain string Домен сайта, где размещен пиксель. category_id integer Идентификатор категории сайта, где размещён пиксель смотрите раздел interest_categories метода ads.getSuggestions. pixel string Код для размещения на сайте рекламодателя."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "account_idintegerИдентификатор рекламного кабинета.Обязательный параметрclient_idintegerТолько для рекламных агентств. Id клиента, в рекламном кабинете которого находятся пиксели."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Возвращает массив объектов, каждый из которых содержит следующие поля: target_pixel_id integer Идентификатор пикселя. name string Название пикселя. last_updated integer Дата и время последнего использования пикселя в формате unixtime. domain string Домен сайта, где размещен пиксель. category_id integer Идентификатор категории сайта, где размещён пиксель смотрите раздел interest_categories метода ads.getSuggestions. pixel string Код для размещения на сайте рекламодателя."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "601Permission denied. You have requested too many actions this day. Try later. В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Возвращает список пикселей ретаргетинга. Параметры: account_idintegerИдентификатор рекламного кабинета.Обязательный параметрclient_idintegerТолько для рекламных агентств. Id клиента, в рекламном кабинете которого находятся пиксели. Результат: Возвращает массив объектов, каждый из которых содержит следующие поля: target_pixel_id integer Идентификатор пикселя. name string Название пикселя. last_updated integer Дата и время последнего использования пикселя в формате unixtime. domain string Домен сайта, где размещен пиксель. category_id integer Идентификатор категории сайта, где размещён пиксель смотрите раздел interest_categories метода ads.getSuggestions. pixel string Код для размещения на сайте рекламодателя. Коды ошибок: 601Permission denied. You have requested too many actions this day. Try later. В ходе выполнения могут произойти общие ошибки",
+  "group": "ads"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "ads.deletetargetpixel",
+  "url": "https://dev.vk.com/ru/method/ads.deleteTargetPixel",
+  "title": "ads.deleteTargetPixel | VK для разработчиков",
+  "h1": "ads.deleteTargetPixel",
+  "description": "Удаляет пиксель ретаргетинга.",
+  "params": [
+    {
+      "name": "account_id",
+      "type": "integer",
+      "required": true,
+      "description": "Идентификатор рекламного кабинета.Обязательный параметр"
+    },
+    {
+      "name": "client_id",
+      "type": "integer",
+      "required": false,
+      "description": "Только для рекламных агентств. Id клиента, в рекламном кабинете которого будет удаляться пиксель."
+    },
+    {
+      "name": "target_pixel_id",
+      "type": "integer",
+      "required": true,
+      "description": "Идентификатор пикселя.Обязательный параметр"
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "В случае успеха метод возвратит 1."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "account_idintegerИдентификатор рекламного кабинета.Обязательный параметрclient_idintegerТолько для рекламных агентств. Id клиента, в рекламном кабинете которого будет удаляться пиксель.target_pixel_idintegerИдентификатор пикселя.Обязательный параметр"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "В случае успеха метод возвратит 1."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "601Permission denied. You have requested too many actions this day. Try later. В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Удаляет пиксель ретаргетинга. Параметры: account_idintegerИдентификатор рекламного кабинета.Обязательный параметрclient_idintegerТолько для рекламных агентств. Id клиента, в рекламном кабинете которого будет удаляться пиксель.target_pixel_idintegerИдентификатор пикселя.Обязательный параметр Результат: В случае успеха метод возвратит 1. Коды ошибок: 601Permission denied. You have requested too many actions this day. Try later. В ходе выполнения могут произойти общие ошибки",
+  "group": "ads"
+}

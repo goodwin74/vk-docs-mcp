@@ -1,0 +1,41 @@
+{
+  "id": "ads.getbudget",
+  "url": "https://dev.vk.com/ru/method/ads.getBudget",
+  "title": "ads.getBudget | VK для разработчиков",
+  "h1": "ads.getBudget",
+  "description": "Возвращает текущий бюджет рекламного кабинета.",
+  "params": [
+    {
+      "name": "account_id",
+      "type": "integer",
+      "required": true,
+      "description": "Идентификатор рекламного кабинета.Обязательный параметр"
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "Возвращает единственное число — оставшийся бюджет в указанном рекламном кабинете."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "account_idintegerИдентификатор рекламного кабинета.Обязательный параметр"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Возвращает единственное число — оставшийся бюджет в указанном рекламном кабинете."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "601Permission denied. You have requested too many actions this day. Try later. В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Возвращает текущий бюджет рекламного кабинета. Параметры: account_idintegerИдентификатор рекламного кабинета.Обязательный параметр Результат: Возвращает единственное число — оставшийся бюджет в указанном рекламном кабинете. Коды ошибок: 601Permission denied. You have requested too many actions this day. Try later. В ходе выполнения могут произойти общие ошибки",
+  "group": "ads"
+}

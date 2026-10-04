@@ -1,0 +1,52 @@
+{
+  "id": "ads.updatecampaigns",
+  "url": "https://dev.vk.com/ru/method/ads.updateCampaigns",
+  "title": "ads.updateCampaigns | VK для разработчиков",
+  "h1": "ads.updateCampaigns",
+  "description": "Редактирует рекламные кампании.",
+  "params": [
+    {
+      "name": "account_id",
+      "type": "integer",
+      "required": true,
+      "description": "Идентификатор рекламного кабинета.Обязательный параметр"
+    },
+    {
+      "name": "data",
+      "type": "text",
+      "required": true,
+      "description": "Сериализованный JSON-массив объектов, описывающих изменения в кампаниях. Описание объектов campaign_mod_specification см. ниже.Обязательный параметр"
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "Возвращает массив ответов на каждый запрос в массиве data. Соответствующий объект в выходном массиве содержит идентификатор изменяемого клиента и, в случае возникновения ошибки, поля error_code и error_desc."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "account_idintegerИдентификатор рекламного кабинета.Обязательный параметрdatatextСериализованный JSON-массив объектов, описывающих изменения в кампаниях. Описание объектов campaign_mod_specification см. ниже.Обязательный параметр campaign_mod_specification campaign_id integer, обязательный ID редактируемой кампании. name string, от 3 до 60 символов Название рекламной кампании. day_limit integer Дневной лимит в рублях. all_limit integer общий лимит в рублях. start_time integer Время запуска кампании в формате Unixtime. Укажите 0 для сброса времени запуска. stop_time integer Время остановки кампании в формате Unixtime. Укажите 0 для сброса времени остановки. status integer, [0,1] Статус рекламной кампании (1 — запущена, 0 — остановлена)."
+    },
+    {
+      "level": 2,
+      "title": "campaign_mod_specification",
+      "text": "campaign_id integer, обязательный ID редактируемой кампании. name string, от 3 до 60 символов Название рекламной кампании. day_limit integer Дневной лимит в рублях. all_limit integer общий лимит в рублях. start_time integer Время запуска кампании в формате Unixtime. Укажите 0 для сброса времени запуска. stop_time integer Время остановки кампании в формате Unixtime. Укажите 0 для сброса времени остановки. status integer, [0,1] Статус рекламной кампании (1 — запущена, 0 — остановлена)."
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Возвращает массив ответов на каждый запрос в массиве data. Соответствующий объект в выходном массиве содержит идентификатор изменяемого клиента и, в случае возникновения ошибки, поля error_code и error_desc."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "601Permission denied. You have requested too many actions this day. Try later.602Some part of the request has not been completed В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Редактирует рекламные кампании. Параметры: account_idintegerИдентификатор рекламного кабинета.Обязательный параметрdatatextСериализованный JSON-массив объектов, описывающих изменения в кампаниях. Описание объектов campaign_mod_specification см. ниже.Обязательный параметр campaign_mod_specification campaign_id integer, обязательный ID редактируемой кампании. name string, от 3 до 60 символов Название рекламной кампании. day_limit integer Дневной лимит в рублях. all_limit integer общий лимит в рублях. start_time integer Время запуска кампании в формате Unixtime. Укажите 0 для сброса времени запуска. stop_time integer Время остановки кампании в формате Unixtime. Укажите 0 для сброса времени остановки. status integer, [0,1] Статус рекламной кампании (1 — запущена, 0 — остановлена). campaign_mod_specification: campaign_id integer, обязательный ID редактируемой кампании. name string, от 3 до 60 символов Название рекламной кампании. day_limit integer Дневной лимит в рублях. all_limit integer общий лимит в рублях. start_time integer Время запуска кампании в формате Unixtime. Укажите 0 для сброса времени запуска. stop_time integer Время остановки кампании в формате Unixtime. Укажите 0 для сброса времени остановки. status integer, [0,1] Статус рекламной кампании (1 — запущена, 0 — остановлена). Результат: Возвращает массив ответов на каждый запрос в массиве data. Соответствующий объект в выходном массиве содержит идентификатор изменяемого клиента и, в случае возникновения ошибки, поля error_code и error_desc. Коды ошибок: 601Permission denied. You have requested too many actions this day. Try later.602Some part of the request has not been completed В ходе выполнения могут произойти общие ошибки",
+  "group": "ads"
+}

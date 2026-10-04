@@ -1,0 +1,47 @@
+{
+  "id": "ads.deleteads",
+  "url": "https://dev.vk.com/ru/method/ads.deleteAds",
+  "title": "ads.deleteAds | VK для разработчиков",
+  "h1": "ads.deleteAds",
+  "description": "Архивирует рекламные объявления.",
+  "params": [
+    {
+      "name": "account_id",
+      "type": "integer",
+      "required": true,
+      "description": "Идентификатор рекламного кабинета.Обязательный параметр"
+    },
+    {
+      "name": "ids",
+      "type": "text",
+      "required": true,
+      "description": "Сериализованный JSON-массив, содержащий идентификаторы объявлений.Обязательный параметр"
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "Возвращает массив ответов на каждый запрос. Каждый ответ является либо 0, что означает успешное удаление, либо код ошибки."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "account_idintegerИдентификатор рекламного кабинета.Обязательный параметрidstextСериализованный JSON-массив, содержащий идентификаторы объявлений.Обязательный параметр"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Возвращает массив ответов на каждый запрос. Каждый ответ является либо 0, что означает успешное удаление, либо код ошибки."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "601Permission denied. You have requested too many actions this day. Try later.602Some part of the request has not been completed629Object deleted В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Архивирует рекламные объявления. Параметры: account_idintegerИдентификатор рекламного кабинета.Обязательный параметрidstextСериализованный JSON-массив, содержащий идентификаторы объявлений.Обязательный параметр Результат: Возвращает массив ответов на каждый запрос. Каждый ответ является либо 0, что означает успешное удаление, либо код ошибки. Коды ошибок: 601Permission denied. You have requested too many actions this day. Try later.602Some part of the request has not been completed629Object deleted В ходе выполнения могут произойти общие ошибки",
+  "group": "ads"
+}

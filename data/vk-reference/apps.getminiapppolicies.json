@@ -1,0 +1,41 @@
+{
+  "id": "apps.getminiapppolicies",
+  "url": "https://dev.vk.com/ru/method/apps.getMiniAppPolicies",
+  "title": "apps.getMiniAppPolicies | VK для разработчиков",
+  "h1": "apps.getMiniAppPolicies",
+  "description": "Метод получает ссылки, указанные в разделе пользовательское соглашение и политика конфиденциальности мини-приложения.",
+  "params": [
+    {
+      "name": "app_id",
+      "type": "positive",
+      "required": true,
+      "description": "Идентификатор мини-приложения.Обязательный параметр"
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "Метод возвращает объект. Поля объекта: ПолеТипОписаниеprivacy_policystringСсылка на политику конфиденциальности.termsstringСсылка на пользовательское соглашение. Пример ответа: JSON{ \"response\":{ \"privacy_policy\":\"https://example.com\", \"terms\":\"https://example.com\" } }"
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "app_idpositiveИдентификатор мини-приложения.Обязательный параметр"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Метод возвращает объект. Поля объекта: ПолеТипОписаниеprivacy_policystringСсылка на политику конфиденциальности.termsstringСсылка на пользовательское соглашение. Пример ответа: JSON{ \"response\":{ \"privacy_policy\":\"https://example.com\", \"terms\":\"https://example.com\" } }"
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Метод получает ссылки, указанные в разделе пользовательское соглашение и политика конфиденциальности мини-приложения. Параметры: app_idpositiveИдентификатор мини-приложения.Обязательный параметр Результат: Метод возвращает объект. Поля объекта: ПолеТипОписаниеprivacy_policystringСсылка на политику конфиденциальности.termsstringСсылка на пользовательское соглашение. Пример ответа: JSON{ \"response\":{ \"privacy_policy\":\"https://example.com\", \"terms\":\"https://example.com\" } } Коды ошибок: В ходе выполнения могут произойти общие ошибки",
+  "group": "apps"
+}

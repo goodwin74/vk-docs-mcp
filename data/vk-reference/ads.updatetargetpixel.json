@@ -1,0 +1,71 @@
+{
+  "id": "ads.updatetargetpixel",
+  "url": "https://dev.vk.com/ru/method/ads.updateTargetPixel",
+  "title": "ads.updateTargetPixel | VK для разработчиков",
+  "h1": "ads.updateTargetPixel",
+  "description": "Редактирует пиксель ретаргетинга.",
+  "params": [
+    {
+      "name": "account_id",
+      "type": "integer",
+      "required": true,
+      "description": "Идентификатор рекламного кабинета.Обязательный параметр"
+    },
+    {
+      "name": "client_id",
+      "type": "integer",
+      "required": false,
+      "description": "Только для рекламных агентств. ID клиента, в рекламном кабинете которого находится пиксель."
+    },
+    {
+      "name": "target_pixel_id",
+      "type": "integer",
+      "required": true,
+      "description": "Идентификатор пикселя.Обязательный параметр"
+    },
+    {
+      "name": "name",
+      "type": "string",
+      "required": true,
+      "description": "Новое название пикселя — строка до 64 символов.Обязательный параметр"
+    },
+    {
+      "name": "domain",
+      "type": "string",
+      "required": false,
+      "description": "Новый домен сайта, на котором будет размещён код пикселя."
+    },
+    {
+      "name": "category_id",
+      "type": "integer",
+      "required": true,
+      "description": "Новый идентификатор категории сайта, на котором будет размещён пиксель. Для получения списка возможных идентификаторов можно использовать метод ads.getSuggestions (раздел interest_categories).Обязательный параметр"
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "После успешного выполнения возвращает 1."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "account_idintegerИдентификатор рекламного кабинета.Обязательный параметрclient_idintegerТолько для рекламных агентств. ID клиента, в рекламном кабинете которого находится пиксель.target_pixel_idintegerИдентификатор пикселя.Обязательный параметрnamestringНовое название пикселя — строка до 64 символов.Обязательный параметрdomainstringНовый домен сайта, на котором будет размещён код пикселя.category_idintegerНовый идентификатор категории сайта, на котором будет размещён пиксель. Для получения списка возможных идентификаторов можно использовать метод ads.getSuggestions (раздел interest_categories).Обязательный параметр"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "После успешного выполнения возвращает 1."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "601Permission denied. You have requested too many actions this day. Try later. В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Редактирует пиксель ретаргетинга. Параметры: account_idintegerИдентификатор рекламного кабинета.Обязательный параметрclient_idintegerТолько для рекламных агентств. ID клиента, в рекламном кабинете которого находится пиксель.target_pixel_idintegerИдентификатор пикселя.Обязательный параметрnamestringНовое название пикселя — строка до 64 символов.Обязательный параметрdomainstringНовый домен сайта, на котором будет размещён код пикселя.category_idintegerНовый идентификатор категории сайта, на котором будет размещён пиксель. Для получения списка возможных идентификаторов можно использовать метод ads.getSuggestions (раздел interest_categories).Обязательный параметр Результат: После успешного выполнения возвращает 1. Коды ошибок: 601Permission denied. You have requested too many actions this day. Try later. В ходе выполнения могут произойти общие ошибки",
+  "group": "ads"
+}

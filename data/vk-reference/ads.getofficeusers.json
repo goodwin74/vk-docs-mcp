@@ -1,0 +1,41 @@
+{
+  "id": "ads.getofficeusers",
+  "url": "https://dev.vk.com/ru/method/ads.getOfficeUsers",
+  "title": "ads.getOfficeUsers | VK для разработчиков",
+  "h1": "ads.getOfficeUsers",
+  "description": "Возвращает список администраторов и наблюдателей рекламного кабинета.",
+  "params": [
+    {
+      "name": "account_id",
+      "type": "integer",
+      "required": true,
+      "description": "Идентификатор рекламного кабинета.Обязательный параметр"
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "Возвращает массив объектов-описаний пользователей рекламного кабинета. Каждый объект содержит массив описаний прав доступа к конкретным клиентам. Описание содержит два поля: •client_id — id клиента; •role — строка admin, manager или reports. Для admin client_id не указывается."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "account_idintegerИдентификатор рекламного кабинета.Обязательный параметр"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Возвращает массив объектов-описаний пользователей рекламного кабинета. Каждый объект содержит массив описаний прав доступа к конкретным клиентам. Описание содержит два поля: •client_id — id клиента; •role — строка admin, manager или reports. Для admin client_id не указывается."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "601Permission denied. You have requested too many actions this day. Try later. В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Возвращает список администраторов и наблюдателей рекламного кабинета. Параметры: account_idintegerИдентификатор рекламного кабинета.Обязательный параметр Результат: Возвращает массив объектов-описаний пользователей рекламного кабинета. Каждый объект содержит массив описаний прав доступа к конкретным клиентам. Описание содержит два поля: •client_id — id клиента; •role — строка admin, manager или reports. Для admin client_id не указывается. Коды ошибок: 601Permission denied. You have requested too many actions this day. Try later. В ходе выполнения могут произойти общие ошибки",
+  "group": "ads"
+}

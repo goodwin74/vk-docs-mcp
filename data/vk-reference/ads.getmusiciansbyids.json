@@ -1,0 +1,41 @@
+{
+  "id": "ads.getmusiciansbyids",
+  "url": "https://dev.vk.com/ru/method/ads.getMusiciansByIds",
+  "title": "ads.getMusiciansByIds | VK для разработчиков",
+  "h1": "ads.getMusiciansByIds",
+  "description": "Возвращает информацию о музыкантах на слушателей, для которых доступно таргетирование.",
+  "params": [
+    {
+      "name": "ids",
+      "type": "integer",
+      "required": true,
+      "description": "Идентификаторы музыкантов.Обязательный параметр"
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "Возвращает массив музыкантов с соответствующими идентификаторами из запроса. id integer Идентификатор музыканта. name string Полный псевдоним музыканта. avatar string Аватарка музыканта."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "idsintegerИдентификаторы музыкантов.Обязательный параметр"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Возвращает массив музыкантов с соответствующими идентификаторами из запроса. id integer Идентификатор музыканта. name string Полный псевдоним музыканта. avatar string Аватарка музыканта."
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "601Permission denied. You have requested too many actions this day. Try later. В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Возвращает информацию о музыкантах на слушателей, для которых доступно таргетирование. Параметры: idsintegerИдентификаторы музыкантов.Обязательный параметр Результат: Возвращает массив музыкантов с соответствующими идентификаторами из запроса. id integer Идентификатор музыканта. name string Полный псевдоним музыканта. avatar string Аватарка музыканта. Коды ошибок: 601Permission denied. You have requested too many actions this day. Try later. В ходе выполнения могут произойти общие ошибки",
+  "group": "ads"
+}

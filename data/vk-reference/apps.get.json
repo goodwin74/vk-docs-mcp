@@ -1,0 +1,83 @@
+{
+  "id": "apps.get",
+  "url": "https://dev.vk.com/ru/method/apps.get",
+  "title": "apps.get | VK для разработчиков",
+  "h1": "apps.get",
+  "description": "Метод возвращает данные о приложениях.",
+  "params": [
+    {
+      "name": "app_id",
+      "type": "positive",
+      "required": false,
+      "description": "Необязательный параметр. Идентификатор приложения, данные которого необходимо получить. Если этот параметр и параметр app_ids не указаны, возвращается идентификатор приложения, через которое выдан ключ доступа (access_token)."
+    },
+    {
+      "name": "app_ids",
+      "type": "string",
+      "required": false,
+      "description": "Необязательный параметр. Список идентификаторов приложений, данные которых необходимо получить, перечисленный через запятую."
+    },
+    {
+      "name": "platform",
+      "type": "string",
+      "required": false,
+      "description": "Необязательный параметр. Платформа, для которой необходимо вернуть данные. Возможные значения: •ios — мобильное приложение для iOS. •android — мобильное приложение для Android. •winphone — мобильное приложение для Windows Phone. •web — десктопная версия сайта (vk.com). Значение используется по умолчанию."
+    },
+    {
+      "name": "extended",
+      "type": "checkbox",
+      "required": false,
+      "description": "Необязательный параметр. Информация о том, вернуть ли дополнительные поля. Возможные значения: •1 — вернуть дополнительные поля. •0 — не возвращать дополнительные поля. Значение используется по умолчанию."
+    },
+    {
+      "name": "return_friends",
+      "type": "checkbox",
+      "required": false,
+      "description": "Примечание. Параметр учитывается, только если передан параметр access_token. Необязательный параметр. Информация о том, вернуть ли список друзей, установивших это приложение. Возможные значения: •1 – вернуть список друзей. •0 — не возвращать список друзей. Значение используется по умолчанию."
+    },
+    {
+      "name": "fields",
+      "type": "string",
+      "required": false,
+      "description": "Примечание. Параметр учитывается, только если параметр return_friends передан со значением 1. Необязательный параметр. Список дополнительных полей, которые необходимо вернуть для профилей пользователей. Возможные значения: •bdate •can_post •can_see_all_posts •can_see_audio •can_write_private_message •city •common_count •connections •contacts •counters •country •domain •education •has_mobile •last_seen •lists •online •online_mobile •photo_100 •photo_200 •photo_200_orig •photo_400_orig •photo_50 •photo_max •photo_max_orig •relation •relatives •schools •screen_name •sex •site •status •timezone •universities"
+    },
+    {
+      "name": "name_case",
+      "type": "string",
+      "required": false,
+      "description": "Примечание. Параметр учитывается, только если параметр return_friends передан со значением 1. Необязательный параметр. Падеж для склонения имени и фамилии пользователей. Возможные значения: •nom — именительный. Значение используется по умолчанию. •gen — родительный. •dat — дательный. •acc — винительный. •ins — творительный. •abl — предложный."
+    },
+    {
+      "name": "app_fields",
+      "type": "string",
+      "required": false,
+      "description": "Необязательный параметр. Список названий полей из метода apps.get, которые должны вернуться. Поля id, type, title вернутся всегда."
+    }
+  ],
+  "returns": [
+    {
+      "title": "Результат",
+      "text": "Метод возвращает объект. Поля объекта: ПолеТипОписаниеcountintegerКоличество обработанных мини-приложений.itemsarray[object]Массив объектов, описывающих приложения. Пример ответа: JSON{ \"response\":{ \"count\":2, \"items\":[ { \"type\":\"mini_app\", \"id\":7539087, \"title\":\"Шаги ВКонтакте\", \"author_url\":\"https://vk.com/club197864572\", \"banner_1120\":\"https://sun1-54.userapi.com/impf/-q99QhNanKXxJYRiM2E1fVGwG8tsytVjWXWE9w/UFhjrfum9U8.jpg?size=1120x630&quality=90&sign=050a4ba768b9ff5a8bea753a26e84225&c_uniq_tag=sNH2G_xHvpLdjanC1W_cXuLJKlSKrNzyIQb1yzPbvKU\", \"banner_560\":\"https://sun1-54.userapi.com/impf/-q99QhNanKXxJYRiM2E1fVGwG8tsytVjWXWE9w/UFhjrfum9U8.jpg?size=560x315&quality=90&sign=59b1829c668a8da5cb1196a8ea76ec1a&c_uniq_tag=pgk2rgw5Rl7dOGhqLN-1y-zY9cneI5Ou24JZgS1e9gg\", \"catalog_banner\":{ \"background_color\":\"FFFFFF\", \"description_color\":\"000000\", \"title_color\":\"000000\" }, \"genre\":\"Образ жизни\", \"genre_id\":3010, \"international\":false, \"is_in_catalog\":0, \"leaderboard_type\":0, \"members_count\":34721527, \"section\":\"Образ жизни\", \"author_owner_id\":-197864572, \"can_cache\":true, \"is_installed\":true, \"hide_tabbar\":0, \"icon_139\":\"https://sun1-94.userapi.com/impf/hKMwjwu7SoQmY6prlBsQuJrMEpXKWFOzp2oyXA/9hfKQc7tVJA.jpg?size=139x139&quality=90&sign=9a464cf3ad1674c345f18e68e8105818&c_uniq_tag=U2zf4hj7zHQowY3tCGPF3Y6aBIL2MfKKuHt8YfiZ3kM\", \"icon_150\":\"https://sun1-92.userapi.com/impf/fPaZn6NVDApwcaer6nUnHAwevMFlisMilEEbjA/xl79uYke71k.jpg?size=150x150&quality=90&sign=d0e5e4127759617fb3d7b8b121f128d1&c_uniq_tag=40ztKihlAfh4Le5ucRd9gsP6w6HdpiLpPQQRYFsTSlg\", \"icon_278\":\"https://sun1-94.userapi.com/impf/hKMwjwu7SoQmY6prlBsQuJrMEpXKWFOzp2oyXA/9hfKQc7tVJA.jpg?size=278x278&quality=90&sign=c3cd0a7faffd39e157fafc8505b92a0f&c_uniq_tag=M8uk0IeLDIjag1g_dBFUSS9v3v4wRSuCjL3nK3OdvgE\", \"icon_576\":\"https://sun1-22.userapi.com/impf/-V2KuvmLu9njJPhd6MiPJAsg8Cv1TKoEQLUE-g/IK8TGI1IliE.jpg?size=576x576&quality=90&sign=73b7d136043d6387d49ead128fd6457e&c_uniq_tag=fF54qOygwguMv5aPK4vRxKslkqeX6TiPjCbNypl4h7w\", \"icon_75\":\"https://sun1-92.userapi.com/impf/fPaZn6NVDApwcaer6nUnHAwevMFlisMilEEbjA/xl79uYke71k.jpg?size=75x75&quality=90&sign=969437d7e5d550b9dbe66a1d817ae1fd&c_uniq_tag=r5e-QjoU9bmcY8BnK4HgQiW8lxXxISUQik4SzhQoL4s\", \"is_vkui_internal\":true, \"has_vk_connect\":false, \"need_show_unverified_screen\":false } { \"type\":\"mini_app\", \"id\":6909581, \"title\":\"VK Bridge Sandbox\", \"author_url\":\"https://vk.com/club166562603\", \"banner_1120\":\"https://sun1-23.userapi.com/impf/U59-0U6RHkLCxaQyUAouF4Tc3qwW-j8bgYY2Rw/nk8u-SP5t4A.jpg?size=1120x630&quality=90&sign=41506843a35f9a28c5605e824321540b&c_uniq_tag=saSVEDMoiTmkGSJcVqfsZs2fE9OsVVByBIlm6jFMktM\", \"banner_560\":\"https://sun1-23.userapi.com/impf/U59-0U6RHkLCxaQyUAouF4Tc3qwW-j8bgYY2Rw/nk8u-SP5t4A.jpg?size=560x315&quality=90&sign=0df15098f4db926b39357f09f950f595&c_uniq_tag=BTGY9ve0aF35UTbXVisnoU5BropzEZ15vADFu2198n8\", \"catalog_banner\":{ \"background_color\":\"ffffff\", \"description_color\":\"000000\", \"title_color\":\"000000\" }, \"genre\":\"Инструменты\", \"genre_id\":3014, \"international\":false, \"is_in_catalog\":0, \"leaderboard_type\":0, \"members_count\":99903, \"section\":\"Инструменты\", \"author_owner_id\":-166562603, \"is_installed\":true, \"hide_tabbar\":0, \"icon_139\":\"https://sun1-20.userapi.com/impf/CQHWaTeRMpxgc49ucEePTshejqOszgErsMRdiA/Lt_2Fhfvfmc.jpg?size=139x139&quality=90&sign=77c307779c8ecd06a607cac225b3b81b&c_uniq_tag=X5Jj-OL7tWYShFPkvDMJvfrhTPb4vRzs1TlrrsWVve4\", \"icon_150\":\"https://sun1-54.userapi.com/impf/mWaxqMtvOAhXMhbtP5OVzkby0eg5UUx-zXBXoA/o7mTj8Jyytc.jpg?size=150x150&quality=90&sign=02d965c2c2938efd80e67190a89da4cd&c_uniq_tag=c8g0wzSSaGL_mErH4qNiutMyL4uH4a448qkeVnjIbiM\", \"icon_278\":\"https://sun1-20.userapi.com/impf/CQHWaTeRMpxgc49ucEePTshejqOszgErsMRdiA/Lt_2Fhfvfmc.jpg?size=278x278&quality=90&sign=e562548cb544cbf282e60d1567557e31&c_uniq_tag=BY6Gw5n9Pz7Z31KeZjFCm4ogqd2ka4GYpTBoGZicVw0\", \"icon_576\":\"https://sun1-97.userapi.com/impf/yQgVsYwITBo4SQqKSiWkvQCSaGceOSczQ1X3rA/w-p1tH_2TUI.jpg?size=576x576&quality=90&sign=90639d9ab4023758b5f28d0fd49b0165&c_uniq_tag=rP9d5O94Iv_SkYkZkSBVFmN9MsoYGaiZ8FzPqxXeyKg\", \"icon_75\":\"https://sun1-54.userapi.com/impf/mWaxqMtvOAhXMhbtP5OVzkby0eg5UUx-zXBXoA/o7mTj8Jyytc.jpg?size=75x75&quality=90&sign=fb03c1d7979b19a6168d2719497aa2f2&c_uniq_tag=nGAWl-_OPEYJPVhfoFoA739g9DT5_pE_Wblnu8Tm3Nw\", \"has_vk_connect\":false, \"need_show_unverified_screen\":false } ] } }"
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Параметры",
+      "text": "app_idpositiveНеобязательный параметр. Идентификатор приложения, данные которого необходимо получить. Если этот параметр и параметр app_ids не указаны, возвращается идентификатор приложения, через которое выдан ключ доступа (access_token).app_idsstringНеобязательный параметр. Список идентификаторов приложений, данные которых необходимо получить, перечисленный через запятую.platformstringНеобязательный параметр. Платформа, для которой необходимо вернуть данные. Возможные значения: •ios — мобильное приложение для iOS. •android — мобильное приложение для Android. •winphone — мобильное приложение для Windows Phone. •web — десктопная версия сайта (vk.com). Значение используется по умолчанию. extendedcheckboxНеобязательный параметр. Информация о том, вернуть ли дополнительные поля. Возможные значения: •1 — вернуть дополнительные поля. •0 — не возвращать дополнительные поля. Значение используется по умолчанию. return_friendscheckboxПримечание. Параметр учитывается, только если передан параметр access_token. Необязательный параметр. Информация о том, вернуть ли список друзей, установивших это приложение. Возможные значения: •1 – вернуть список друзей. •0 — не возвращать список друзей. Значение используется по умолчанию. fieldsstringПримечание. Параметр учитывается, только если параметр return_friends передан со значением 1. Необязательный параметр. Список дополнительных полей, которые необходимо вернуть для профилей пользователей. Возможные значения: •bdate •can_post •can_see_all_pos"
+    },
+    {
+      "level": 2,
+      "title": "Результат",
+      "text": "Метод возвращает объект. Поля объекта: ПолеТипОписаниеcountintegerКоличество обработанных мини-приложений.itemsarray[object]Массив объектов, описывающих приложения. Пример ответа: JSON{ \"response\":{ \"count\":2, \"items\":[ { \"type\":\"mini_app\", \"id\":7539087, \"title\":\"Шаги ВКонтакте\", \"author_url\":\"https://vk.com/club197864572\", \"banner_1120\":\"https://sun1-54.userapi.com/impf/-q99QhNanKXxJYRiM2E1fVGwG8tsytVjWXWE9w/UFhjrfum9U8.jpg?size=1120x630&quality=90&sign=050a4ba768b9ff5a8bea753a26e84225&c_uniq_tag=sNH2G_xHvpLdjanC1W_cXuLJKlSKrNzyIQb1yzPbvKU\", \"banner_560\":\"https://sun1-54.userapi.com/impf/-q99QhNanKXxJYRiM2E1fVGwG8tsytVjWXWE9w/UFhjrfum9U8.jpg?size=560x315&quality=90&sign=59b1829c668a8da5cb1196a8ea76ec1a&c_uniq_tag=pgk2rgw5Rl7dOGhqLN-1y-zY9cneI5Ou24JZgS1e9gg\", \"catalog_banner\":{ \"background_color\":\"FFFFFF\", \"description_color\":\"000000\", \"title_color\":\"000000\" }, \"genre\":\"Образ жизни\", \"genre_id\":3010, \"international\":false, \"is_in_catalog\":0, \"leaderboard_type\":0, \"members_count\":34721527, \"section\":\"Образ жизни\", \"author_owner_id\":-197864572, \"can_cache\":true, \"is_installed\":true, \"hide_tabbar\":0, \"icon_139\":\"https://sun1-94.userapi.com/impf/hKMwjwu7SoQmY6prlBsQuJrMEpXKWFOzp2oyXA/9hfKQc7tVJA.jpg?size=139x139&quality=90&sign=9a464cf3ad1674c345f18e68e8105818&c_uniq_tag=U2zf4hj7zHQowY3tCGPF3Y6aBIL2MfKKuHt8YfiZ3kM\", \"icon_150\":\"https://sun1-92.userapi.com/impf/fPaZn6NVDApwcaer6nUnHAwevMFlisMilEEbjA/xl79uYke71k.jpg?size=150x150&quality=90&sign=d0e5e4127759617fb3d7b8b121f128d1&c_un"
+    },
+    {
+      "level": 2,
+      "title": "Коды ошибок",
+      "text": "В ходе выполнения могут произойти общие ошибки"
+    }
+  ],
+  "contentText": "Метод возвращает данные о приложениях. Параметры: app_idpositiveНеобязательный параметр. Идентификатор приложения, данные которого необходимо получить. Если этот параметр и параметр app_ids не указаны, возвращается идентификатор приложения, через которое выдан ключ доступа (access_token).app_idsstringНеобязательный параметр. Список идентификаторов приложений, данные которых необходимо получить, перечисленный через запятую.platformstringНеобязательный параметр. Платформа, для которой необходимо вернуть данные. Возможные значения: •ios — мобильное приложение для iOS. •android — мобильное приложение для Android. •winphone — мобильное приложение для Windows Phone. •web — десктопная версия сайта (vk.com). Значение используется по умолчанию. extendedcheckboxНеобязательный параметр. Информация о том, вернуть ли дополнительные поля. Возможные значения: •1 — вернуть дополнительные поля. •0 — не возвращать дополнительные поля. Значение используется по умолчанию. return_friendscheckboxПримечание. Параметр учитывается, только если передан параметр access_token. Необязательный параметр. Информация о том, вернуть ли список друзей, установивших это приложение. Возможные значения: •1 – вернуть список друзей. •0 — не возвращать список друзей. Значение используется по умолчанию. fieldsstringПримечание. Параметр учитывается, только если параметр return_friends передан со значением 1. Необязательный параметр. Список дополнительных полей, которые необходимо вернуть для профилей пользователей. Возможные значения: •bdate •can_post •can_see_all_pos Результат: Метод возвращает объект. Поля объекта: ПолеТипОписаниеcountintegerКоличество обработанных мини-приложений.itemsarray[object]Массив объектов, описывающих приложения. Пример ответа: JSON{ \"response\":{ \"count\":2, \"items\":[ { \"type\":\"mini_app\", \"id\":7539087, \"title\":\"Шаги ВКонтакте\", \"author_url\":\"https://vk.com/club197864572\", \"banner_1120\":\"https://sun1-54.userapi.com/impf/-q99QhNanKXxJYRiM2E1fVGwG8tsytVjWXWE9w/UFhjrfum9U8.jpg?size=1120x630&quality=90&sign=050a4ba768b9ff5a8bea753a26e84225&c_uniq_tag=sNH2G_xHvpLdjanC1W_cXuLJKlSKrNzyIQb1yzPbvKU\", \"banner_560\":\"https://sun1-54.userapi.com/impf/-q99QhNanKXxJYRiM2E1fVGwG8tsytVjWXWE9w/UFhjrfum9U8.jpg?size=560x315&quality=90&sign=59b1829c668a8da5cb1196a8ea76ec1a&c_uniq_tag=pgk2rgw5Rl7dOGhqLN-1y-zY9cneI5Ou24JZgS1e9gg\", \"catalog_banner\":{ \"background_color\":\"FFFFFF\", \"description_color\":\"000000\", \"title_color\":\"000000\" }, \"genre\":\"Образ жизни\", \"genre_id\":3010, \"international\":false, \"is_in_catalog\":0, \"leaderboard_type\":0, \"members_count\":34721527, \"section\":\"Образ жизни\", \"author_owner_id\":-197864572, \"can_cache\":true, \"is_installed\":true, \"hide_tabbar\":0, \"icon_139\":\"https://sun1-94.userapi.com/impf/hKMwjwu7SoQmY6prlBsQuJrMEpXKWFOzp2oyXA/9hfKQc7tVJA.jpg?size=139x139&quality=90&sign=9a464cf3ad1674c345f18e68e8105818&c_uniq_tag=U2zf4hj7zHQowY3tCGPF3Y6aBIL2MfKKuHt8YfiZ3kM\", \"icon_150\":\"https://sun1-92.userapi.com/impf/fPaZn6NVDApwcaer6nUnHAwevMFlisMilEEbjA/xl79uYke71k.jpg?size=150x150&quality=90&sign=d0e5e4127759617fb3d7b8b121f128d1&c_un Коды ошибок: В ходе выполнения могут произойти общие ошибки",
+  "group": "apps"
+}
