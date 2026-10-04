@@ -35,15 +35,16 @@ npm install
 ```json
 {
   "mcp": {
-    "vk-docs": {
-      "type": "stdio",
-      "command": "node",
-      "args": ["C:/путь/к/vk-docs-mcp/mcp-server/dist/index.js"]
+    "servers": {
+      "vk-docs": {
+        "type": "local",
+        "command": ["node", "C:/путь/к/vk-docs-mcp/mcp-server/dist/index.js"]
+      }
     }
   }
 }
 ```
-> ⚠️ В `args` указывай путь **к файлу `dist/index.js`** с абсолютным путём
+> ⚠️ В `command` указывай путь **к файлу `dist/index.js`** с абсолютным путём
 > (в Windows используй прямые слэши: `C:/Users/you/vk-docs-mcp/...`).
 > Если в конфиге уже есть другие ключи (`provider` и т.п.) — не удаляй их,
 > просто добавь `"mcp": { ... }` рядом в соответствии с JSON синтаксисом.
