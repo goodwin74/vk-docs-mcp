@@ -78,7 +78,6 @@ JSON и JSONC поддерживаются; расположение и прио
 
 ```json
 {
-  "$schema": "https://opencode.ai/config.json",
   "mcp": {
     "vk-docs": {
       "type": "local",
@@ -94,7 +93,8 @@ JSON и JSONC поддерживаются; расположение и прио
 Если `mcp` и `servers` уже есть, добавьте `vk-docs` в `servers` , не создавая второй ключ `mcp` и `servers`.
 
 ```json
-"mcp": {
+{
+  "mcp": {
     "servers": {
       "vk-docs": {
         "type": "local",
@@ -103,6 +103,7 @@ JSON и JSONC поддерживаются; расположение и прио
       }
     }
   }
+}
 ```
 
 Замените второй элемент массива `command` своим **абсолютным путём к файлу**, например:
