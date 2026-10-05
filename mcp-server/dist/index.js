@@ -15,9 +15,9 @@ function parseArguments(schema, args) {
     }
     return parsed.data;
 }
-function methodResult(method) {
+function methodResult(method, searchTool) {
     if (!method) {
-        return { isError: true, content: [{ type: 'text', text: 'Метод не найден' }] };
+        return { isError: true, content: [{ type: 'text', text: `Метод не найден. Уточните название или найдите его через ${searchTool}.` }] };
     }
     return { content: [{ type: 'text', text: JSON.stringify(method, null, 2) }] };
 }
@@ -76,7 +76,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
     if (name === 'vk_bridge_get_method') {
         const { slug } = parseArguments(z.object({ slug: requiredText }), args);
         const method = getBridgeMethod(slug);
-        return methodResult(method);
+        return methodResult(method, 'vk_bridge_search');
     }
     if (name === 'vk_bridge_list') {
         parseArguments(z.object({}), args);
@@ -94,7 +94,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
     if (name === 'vk_api_get_method') {
         const { name: method } = parseArguments(z.object({ name: requiredText }), args);
         const m = getApiMethod(method);
-        return methodResult(m);
+        return methodResult(m, 'vk_api_search');
     }
     if (name === 'vk_api_list') {
         const { group } = parseArguments(z.object({ group: optionalGroup }), args);

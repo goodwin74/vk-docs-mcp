@@ -11,7 +11,7 @@
 
 ### 1. Подготовить окружение
 
-Нужны [Git](https://git-scm.com/downloads), [Node.js](https://nodejs.org/en/download) и npm. Рекомендуется актуальный патч **Node.js 24 LTS**. В `package-lock.json` есть зависимость с требованием Node.js `>=20`; Node.js 18 не подходит. Для новой установки выбирайте [поддерживаемую LTS-ветку](https://nodejs.org/en/about/previous-releases).
+Нужны [Git](https://git-scm.com/downloads), [Node.js](https://nodejs.org/en/download) и npm. Рекомендуется актуальный патч **Node.js 24 LTS**. Минимальная версия — Node.js 20 (поле `engines` в `package.json`); Node.js 18 не подходит. Для новой установки выбирайте [поддерживаемую LTS-ветку](https://nodejs.org/en/about/previous-releases).
 
 Проверьте в терминале:
 

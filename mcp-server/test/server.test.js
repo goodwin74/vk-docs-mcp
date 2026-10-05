@@ -174,13 +174,28 @@ test('MCP tool calls over stdio', async t => {
     });
 
     await t.test('missing methods are tool errors, including path-like identifiers', async () => {
-        for (const [name, key] of [['vk_bridge_get_method', 'slug'], ['vk_api_get_method', 'name']]) {
+        for (const [name, key, search] of [
+            ['vk_bridge_get_method', 'slug', 'vk_bridge_search'],
+            ['vk_api_get_method', 'name', 'vk_api_search'],
+        ]) {
             for (const missing of ['does-not-exist', '../../package.json']) {
                 const response = await client.call(name, { [key]: missing });
                 assert.equal(response.error, undefined);
                 assert.equal(response.result.isError, true);
-                assert.equal(response.result.content[0].text, 'Метод не найден');
+                assert.match(response.result.content[0].text, /^Метод не найден/);
+                assert.ok(response.result.content[0].text.includes(search));
             }
+        }
+    });
+
+    await t.test('bridge lookup prefers exact matches and rejects ambiguous fragments', async () => {
+        assert.equal(resultData(await client.call('vk_bridge_get_method', { slug: 'vkwebappinit' })).id, 'vkwebappinit');
+        assert.equal(resultData(await client.call('vk_bridge_get_method', { slug: 'VKWebAppGetUserInfo' })).id, 'vkwebappgetuserinfo');
+        // A unique title fragment still resolves.
+        assert.equal(resultData(await client.call('vk_bridge_get_method', { slug: 'Быстрый старт' })).id, 'getting-started');
+        // Fragments shared by many pages must not silently pick an arbitrary one.
+        for (const slug of ['VKWebAppShow', 'VK Bridge', 'vk']) {
+            assert.equal((await client.call('vk_bridge_get_method', { slug })).result.isError, true, slug);
         }
     });
 });

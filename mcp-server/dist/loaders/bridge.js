@@ -13,9 +13,13 @@ function loadAll() {
         return [];
     const files = fs.readdirSync(BRIDGE_DIR).filter(f => f.endsWith('.json'));
     cache = files.map(f => {
-        const raw = fs.readFileSync(path.join(BRIDGE_DIR, f), 'utf8');
-        return JSON.parse(raw);
-    });
+        try {
+            return JSON.parse(fs.readFileSync(path.join(BRIDGE_DIR, f), 'utf8'));
+        }
+        catch {
+            return null;
+        }
+    }).filter((m) => m !== null);
     return cache;
 }
 export function searchBridge(query) {
@@ -28,9 +32,16 @@ export function searchBridge(query) {
         (m.contentText || '').toLowerCase().includes(q)).slice(0, 20);
 }
 export function getBridgeMethod(slugOrName) {
-    const key = slugOrName.toLowerCase();
+    const key = slugOrName.toLowerCase().trim();
     const all = loadAll();
-    return all.find(m => m.id === key || (m.h1 || '').toLowerCase() === key || (m.title || '').toLowerCase().includes(key)) || null;
+    // Точное совпадение id или заголовка страницы
+    const exact = all.find(m => m.id === key || (m.h1 || '').toLowerCase() === key);
+    if (exact)
+        return exact;
+    // Частичное совпадение заголовка допускается, только если оно однозначно:
+    // иначе "VKWebAppShow" или "VK Bridge" молча вернули бы случайную страницу.
+    const partial = all.filter(m => (m.h1 || '').toLowerCase().includes(key) || (m.title || '').toLowerCase().includes(key));
+    return partial.length === 1 ? partial[0] : null;
 }
 export function listBridge() {
     return loadAll();
