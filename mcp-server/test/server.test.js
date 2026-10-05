@@ -200,12 +200,24 @@ test('MCP tool calls over stdio', async t => {
     });
 });
 
-test('README OpenCode example configures the server directly under mcp', () => {
+test('README OpenCode examples match the 1.x and 2.x config layouts', () => {
     const readme = readFileSync(resolve(root, 'README.md'), 'utf8');
-    const example = JSON.parse(readme.match(/```json\s*([\s\S]*?)```/)[1]);
-    assert.equal(example.mcp['vk-docs'].type, 'local');
-    assert.equal(example.mcp['vk-docs'].command[0], 'node');
-    assert.equal(example.mcp.servers, undefined);
+    const examples = [...readme.matchAll(/```json\s*([\s\S]*?)```/g)].map(match => JSON.parse(match[1]));
+    const opencode = examples.filter(example => example.mcp);
+    assert.equal(opencode.length, 2);
+    const [v1, v2] = opencode;
+    // 1.x: servers directly under mcp.
+    assert.equal(v1.mcp.servers, undefined);
+    assert.equal(v1.mcp['vk-docs'].type, 'local');
+    assert.equal(v1.mcp['vk-docs'].command[0], 'node');
+    // 2.x: servers under mcp.servers; `enabled` was replaced by `disabled`.
+    assert.deepEqual(Object.keys(v2.mcp), ['servers']);
+    const server = v2.mcp.servers['vk-docs'];
+    assert.equal(server.type, 'local');
+    assert.deepEqual(server.command, v1.mcp['vk-docs'].command);
+    assert.equal(server.enabled, undefined);
+    assert.notEqual(server.disabled, true);
+    assert.ok(readme.includes(`opencode mcp add vk-docs -- node "${server.command[1]}"`));
 });
 
 test('README Codex and Claude Code examples use the same stdio entry point', () => {
