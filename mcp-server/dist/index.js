@@ -1,22 +1,38 @@
 #!/usr/bin/env node
 import { Server } from '@modelcontextprotocol/sdk/server/index.js';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
-import { CallToolRequestSchema, ListToolsRequestSchema, } from '@modelcontextprotocol/sdk/types.js';
+import { CallToolRequestSchema, ListToolsRequestSchema, ErrorCode, McpError, } from '@modelcontextprotocol/sdk/types.js';
 import { z } from 'zod';
 import { getBridgeMethod, listBridge, searchBridge } from './loaders/bridge.js';
 import { getApiMethod, listApi, searchApi } from './loaders/reference.js';
+const requiredText = z.string().trim().min(1);
+const optionalGroup = z.string().trim().optional();
+const requiredTextSchema = { type: 'string', minLength: 1, pattern: '\\S' };
+function parseArguments(schema, args) {
+    const parsed = schema.safeParse(args === undefined ? {} : args);
+    if (!parsed.success) {
+        throw new McpError(ErrorCode.InvalidParams, `Invalid arguments: ${parsed.error.message}`);
+    }
+    return parsed.data;
+}
+function methodResult(method) {
+    if (!method) {
+        return { isError: true, content: [{ type: 'text', text: 'Метод не найден' }] };
+    }
+    return { content: [{ type: 'text', text: JSON.stringify(method, null, 2) }] };
+}
 const server = new Server({ name: 'vk-docs-mcp', version: '0.1.0' }, { capabilities: { tools: {} } });
 server.setRequestHandler(ListToolsRequestSchema, async () => ({
     tools: [
         {
             name: 'vk_bridge_search',
             description: 'Поиск по документации VK Bridge (Bridge.send) для VK Mini Apps / мини-приложений ВКонтакте. Использовать при вопросах о разработке мини-приложений VK, VKMiniApps, мини-аппа: события, capabilities, вызовы bridge.send.',
-            inputSchema: { type: 'object', properties: { query: { type: 'string' } }, required: ['query'] },
+            inputSchema: { type: 'object', properties: { query: requiredTextSchema }, required: ['query'] },
         },
         {
             name: 'vk_bridge_get_method',
             description: 'Получить полное описание метода VK Bridge (VKWebApp*) для VK Mini Apps / мини-приложений ВКонтакте. Использовать при вопросах о методах мини-приложений VK: VKWebAppInit, VKWebAppCallAPIMethod, VKWebAppStorageSet и т.д.',
-            inputSchema: { type: 'object', properties: { slug: { type: 'string' } }, required: ['slug'] },
+            inputSchema: { type: 'object', properties: { slug: requiredTextSchema }, required: ['slug'] },
         },
         {
             name: 'vk_bridge_list',
@@ -29,7 +45,7 @@ server.setRequestHandler(ListToolsRequestSchema, async () => ({
             inputSchema: {
                 type: 'object',
                 properties: {
-                    query: { type: 'string' },
+                    query: requiredTextSchema,
                     group: { type: 'string', description: 'Ограничить группой, например: users, groups, messages, wall, photos' },
                 },
                 required: ['query'],
@@ -38,7 +54,7 @@ server.setRequestHandler(ListToolsRequestSchema, async () => ({
         {
             name: 'vk_api_get_method',
             description: 'Получить полное описание метода VK API (параметры, типы, обязательность, результат): напр. users.get, messages.send, wall.post. Использовать при вопросах о методах API ВКонтакте в любом проекте на VK — сервисы, интеграции, мини-приложения VK Mini Apps.',
-            inputSchema: { type: 'object', properties: { name: { type: 'string' } }, required: ['name'] },
+            inputSchema: { type: 'object', properties: { name: requiredTextSchema }, required: ['name'] },
         },
         {
             name: 'vk_api_list',
@@ -53,38 +69,39 @@ server.setRequestHandler(ListToolsRequestSchema, async () => ({
 server.setRequestHandler(CallToolRequestSchema, async (request) => {
     const { name, arguments: args } = request.params;
     if (name === 'vk_bridge_search') {
-        const { query } = z.object({ query: z.string() }).parse(args);
+        const { query } = parseArguments(z.object({ query: requiredText }), args);
         const results = searchBridge(query);
         return { content: [{ type: 'text', text: JSON.stringify(results, null, 2) }] };
     }
     if (name === 'vk_bridge_get_method') {
-        const { slug } = z.object({ slug: z.string() }).parse(args);
+        const { slug } = parseArguments(z.object({ slug: requiredText }), args);
         const method = getBridgeMethod(slug);
-        return { content: [{ type: 'text', text: method ? JSON.stringify(method, null, 2) : 'Метод не найден' }] };
+        return methodResult(method);
     }
     if (name === 'vk_bridge_list') {
+        parseArguments(z.object({}), args);
         const all = listBridge();
         const list = all.map(m => ({ id: m.id, h1: m.h1, title: m.title, group: m.group, url: m.url }));
         return { content: [{ type: 'text', text: JSON.stringify(list, null, 2) }] };
     }
     if (name === 'vk_api_search') {
-        const { query, group } = z.object({ query: z.string(), group: z.string().optional() }).parse(args);
+        const { query, group } = parseArguments(z.object({ query: requiredText, group: optionalGroup }), args);
         const results = searchApi(query, group).map(m => ({
             id: m.id, group: m.group, description: m.description, url: m.url,
         }));
         return { content: [{ type: 'text', text: JSON.stringify(results, null, 2) }] };
     }
     if (name === 'vk_api_get_method') {
-        const { name: method } = z.object({ name: z.string() }).parse(args);
+        const { name: method } = parseArguments(z.object({ name: requiredText }), args);
         const m = getApiMethod(method);
-        return { content: [{ type: 'text', text: m ? JSON.stringify(m, null, 2) : 'Метод не найден' }] };
+        return methodResult(m);
     }
     if (name === 'vk_api_list') {
-        const { group } = z.object({ group: z.string().optional() }).parse(args);
+        const { group } = parseArguments(z.object({ group: optionalGroup }), args);
         const list = listApi(group).map(m => ({ id: m.id, group: m.group, description: m.description, url: m.url }));
         return { content: [{ type: 'text', text: JSON.stringify(list, null, 2) }] };
     }
-    throw new Error(`Unknown tool: ${name}`);
+    throw new McpError(ErrorCode.InvalidParams, `Unknown tool: ${name}`);
 });
 async function main() {
     const transport = new StdioServerTransport();
