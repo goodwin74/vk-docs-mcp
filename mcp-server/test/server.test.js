@@ -192,3 +192,17 @@ test('README OpenCode example configures the server directly under mcp', () => {
     assert.equal(example.mcp['vk-docs'].command[0], 'node');
     assert.equal(example.mcp.servers, undefined);
 });
+
+test('README Codex and Claude Code examples use the same stdio entry point', () => {
+    const readme = readFileSync(resolve(root, 'README.md'), 'utf8');
+    const examples = [...readme.matchAll(/```json\s*([\s\S]*?)```/g)].map(match => JSON.parse(match[1]));
+    const expectedPath = examples.find(example => example.mcp).mcp['vk-docs'].command[1];
+    const claude = examples.find(example => example.mcpServers).mcpServers['vk-docs'];
+    assert.deepEqual(claude, { type: 'stdio', command: 'node', args: [expectedPath] });
+    // Check the documented minimal TOML shape without adding a parser dependency.
+    const toml = readme.match(/```toml\s*([\s\S]*?)```/)[1];
+    assert.match(toml, /^\[mcp_servers\.vk-docs\]\r?\ncommand = "node"\r?\n/);
+    assert.deepEqual(JSON.parse(toml.match(/^args = (.+)$/m)[1]), [expectedPath]);
+    assert.ok(readme.includes(`codex mcp add vk-docs -- node "${expectedPath}"`));
+    assert.ok(readme.includes(`claude mcp add --transport stdio --scope local vk-docs -- node "${expectedPath}"`));
+});
