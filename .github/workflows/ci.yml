@@ -1,0 +1,55 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event_name }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: Node ${{ matrix.node }} / ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-latest
+            node: '22'
+          - os: ubuntu-latest
+            node: '24'
+          - os: windows-latest
+            node: '24'
+          - os: macos-latest
+            node: '24'
+    defaults:
+      run:
+        working-directory: mcp-server
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Set up Node.js
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: ${{ matrix.node }}
+          package-manager-cache: false
+      - name: Install locked dependencies
+        run: npm ci --ignore-scripts --no-audit --no-fund
+      # The repository ships dist/ without TypeScript sources or a tsconfig.
+      # Validate the shipped JavaScript instead of invoking the legacy build script.
+      - name: Check JavaScript syntax
+        run: |
+          node --check dist/index.js
+          node --check dist/loaders/bridge.js
+          node --check dist/loaders/reference.js
+          node --check test/server.test.js
+      - name: Run MCP stdio regression tests
+        run: npm test
