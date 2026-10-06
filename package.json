@@ -1,0 +1,45 @@
+{
+  "name": "vk-docs-mcp",
+  "version": "0.1.0",
+  "description": "Офлайн MCP-сервер с документацией VK Bridge и VK API для AI-агентов (OpenCode, Claude Code, Cursor, Cline)",
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "vk-docs-mcp": "./mcp-server/dist/index.js"
+  },
+  "files": [
+    "mcp-server/dist/",
+    "data/",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.9.0",
+    "zod": "^3.23.8"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "vk",
+    "vkontakte",
+    "vk-mini-apps",
+    "vk-bridge",
+    "vk-api",
+    "ai",
+    "llm",
+    "opencode",
+    "claude-code",
+    "cursor"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/goodwin74/vk-docs-mcp.git"
+  },
+  "homepage": "https://github.com/goodwin74/vk-docs-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/goodwin74/vk-docs-mcp/issues"
+  }
+}

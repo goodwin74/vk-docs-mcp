@@ -1,0 +1,17 @@
+# Все текстовые файлы с LF переносами
+*.js text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.ts text eol=lf
+*.tsx text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+*.sh text eol=lf
+
+# Бинарные файлы — не трогать
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.tgz binary

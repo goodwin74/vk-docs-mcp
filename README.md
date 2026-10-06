@@ -7,7 +7,66 @@
 
 После установки сервер читает JSON-файлы с диска, работает офлайн и не обращается к VK API. Токены и API-ключи VK не нужны. Подключение модели в AI-клиенте настраивается отдельно.
 
-## Быстрый старт
+## Установка через npm
+
+Понадобится только Node.js ≥ 20 (рекомендуется актуальный LTS).
+
+### OpenCode 2.x
+
+Для всех проектов (глобальная регистрация):
+
+    opencode mcp add vk-docs -- npx -y vk-docs-mcp@0.1.0
+
+### OpenCode 1.x
+
+Добавьте vk-docs внутрь объекта mcp верхнего уровня в opencode.json или opencode.jsonc:
+
+    {
+      "mcp": {
+        "vk-docs": {
+          "type": "local",
+          "command": ["npx", "-y", "vk-docs-mcp@0.1.0"],
+          "enabled": true
+        }
+      }
+    }
+
+### Claude Code
+
+    claude mcp add vk-docs -- npx -y vk-docs-mcp@0.1.0
+
+### Cursor
+
+Откройте Cursor Settings → MCP → Add new MCP server:
+
+- Name: vk-docs
+- Type: command
+- Command: npx -y vk-docs-mcp@0.1.0
+
+Или добавьте в ~/.cursor/mcp.json:
+
+    {
+      "mcpServers": {
+        "vk-docs": {
+          "command": "npx",
+          "args": ["-y", "vk-docs-mcp@0.1.0"]
+        }
+      }
+    }
+
+### Cline (VS Code)
+
+В настройках Cline → MCP Servers добавьте:
+
+    {
+      "vk-docs": {
+        "command": "npx",
+        "args": ["-y", "vk-docs-mcp@0.1.0"],
+        "disabled": false
+      }
+    }
+
+## Установка через клонирование (для контрибьюторов)
 
 ### 1. Подготовить окружение
 
