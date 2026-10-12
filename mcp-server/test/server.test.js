@@ -94,11 +94,12 @@ test('MCP tool calls over stdio', async t => {
     assert.equal(initialized.error, undefined);
     client.notify('notifications/initialized');
 
-    await t.test('advertises all six tools and nonblank required strings', async () => {
+    await t.test('advertises all nine tools and nonblank required strings', async () => {
         const { result } = await client.request('tools/list', {});
         assert.deepEqual(result.tools.map(tool => tool.name).sort(), [
             'vk_api_get_method', 'vk_api_list', 'vk_api_search',
             'vk_bridge_get_method', 'vk_bridge_list', 'vk_bridge_search',
+            'vk_objects_get_object', 'vk_objects_list', 'vk_objects_search',
         ]);
         for (const tool of result.tools) {
             for (const key of tool.inputSchema.required || []) {
@@ -111,12 +112,12 @@ test('MCP tool calls over stdio', async t => {
     });
 
     await t.test('optional arguments can be omitted or empty', async () => {
-        for (const name of ['vk_api_list', 'vk_bridge_list']) {
+        for (const name of ['vk_api_list', 'vk_bridge_list', 'vk_objects_list']) {
             const omitted = resultData(await client.call(name));
             assert.ok(omitted.length > 0);
             assert.deepEqual(resultData(await client.call(name, {})), omitted);
         }
-        for (const [name, directory] of [['vk_api_list', 'vk-reference'], ['vk_bridge_list', 'vk-bridge']]) {
+        for (const [name, directory] of [['vk_api_list', 'vk-reference'], ['vk_bridge_list', 'vk-bridge'], ['vk_objects_list', 'vk-objects']]) {
             const expectedIds = readdirSync(resolve(root, 'data', directory))
                 .filter(file => file.endsWith('.json')).map(file => file.slice(0, -5)).sort();
             assert.deepEqual(resultData(await client.call(name)).map(method => method.id).sort(), expectedIds);
@@ -130,6 +131,11 @@ test('MCP tool calls over stdio', async t => {
         const api = resultData(await client.call('vk_api_get_method', { name: 'users.get' }));
         assert.equal(api.id, 'users.get');
         assert.ok(Array.isArray(api.params));
+        const object = resultData(await client.call('vk_objects_get_object', { id: 'user' }));
+        assert.equal(object.id, 'user');
+        assert.ok(Array.isArray(object.fields));
+        assert.ok(resultData(await client.call('vk_objects_search', { query: 'пользователь' }))
+            .some(o => o.id === 'user'));
         assert.ok(resultData(await client.call('vk_bridge_search', { query: 'VKWebAppInit' }))
             .some(method => method.id === 'vkwebappinit'));
         const results = resultData(await client.call('vk_api_search', { query: 'users.get', group: 'users' }));
@@ -146,6 +152,9 @@ test('MCP tool calls over stdio', async t => {
             ['vk_api_get_method', { name: ' users.get ' }, { name: 'users.get' }],
             ['vk_api_list', { group: ' USERS ' }, { group: 'users' }],
             ['vk_api_list', { group: '   ' }, {}],
+            ['vk_objects_get_object', { id: ' user ' }, { id: 'user' }],
+            ['vk_objects_search', { query: ' пользователь ' }, { query: 'пользователь' }],
+            ['vk_objects_list', { group: ' Основные объекты ' }, { group: 'Основные объекты' }],
         ];
         for (const [name, padded, normal] of cases) {
             assert.deepEqual(resultData(await client.call(name, padded)), resultData(await client.call(name, normal)), name);
@@ -156,6 +165,7 @@ test('MCP tool calls over stdio', async t => {
         for (const [name, key] of [
             ['vk_bridge_search', 'query'], ['vk_bridge_get_method', 'slug'],
             ['vk_api_search', 'query'], ['vk_api_get_method', 'name'],
+            ['vk_objects_search', 'query'], ['vk_objects_get_object', 'id'],
         ]) {
             for (const args of [undefined, {}, { [key]: 123 }, { [key]: '' }, { [key]: ' \t\n ' }]) {
                 const response = await client.call(name, args);
@@ -174,15 +184,16 @@ test('MCP tool calls over stdio', async t => {
     });
 
     await t.test('missing methods are tool errors, including path-like identifiers', async () => {
-        for (const [name, key, search] of [
-            ['vk_bridge_get_method', 'slug', 'vk_bridge_search'],
-            ['vk_api_get_method', 'name', 'vk_api_search'],
+        for (const [name, key, search, missingText] of [
+            ['vk_bridge_get_method', 'slug', 'vk_bridge_search', 'Метод не найден'],
+            ['vk_api_get_method', 'name', 'vk_api_search', 'Метод не найден'],
+            ['vk_objects_get_object', 'id', 'vk_objects_search', 'Объект не найден'],
         ]) {
             for (const missing of ['does-not-exist', '../../package.json']) {
                 const response = await client.call(name, { [key]: missing });
                 assert.equal(response.error, undefined);
                 assert.equal(response.result.isError, true);
-                assert.match(response.result.content[0].text, /^Метод не найден/);
+                assert.match(response.result.content[0].text, new RegExp(`^${missingText}`));
                 assert.ok(response.result.content[0].text.includes(search));
             }
         }

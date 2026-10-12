@@ -1,0 +1,364 @@
+{
+  "id": "clickable-sticker",
+  "url": "https://dev.vk.com/ru/reference/objects/clickable-sticker",
+  "title": "Cправочник API | Объекты | Медиаконтент и вложения | Кликабельный стикер в истории | VK для разработчиков",
+  "h1": "Кликабельный стикер в истории",
+  "group": "Медиаконтент и вложения",
+  "description": "Объект, описывающий кликабельный стикер. В объекте истории доступно поле clickable_stickers. Объект стикера вклеивается разработчиком на клиенте самостоятельно, на сервер передаются только координаты.",
+  "fields": [
+    {
+      "name": "original_width",
+      "type": "integer",
+      "section": "Поля объекта clickable_stickers",
+      "description": "Ширина оригинального фото или видео."
+    },
+    {
+      "name": "original_height",
+      "type": "integer",
+      "section": "Поля объекта clickable_stickers",
+      "description": "Высота оригинального фото или видео."
+    },
+    {
+      "name": "clickable_stickers",
+      "type": "array",
+      "section": "Поля объекта clickable_stickers",
+      "description": "Массив объектов кликабельных стикеров."
+    },
+    {
+      "name": "hashtag",
+      "type": "string",
+      "section": "Объект hashtag",
+      "description": ", обязательный Текст хештега."
+    },
+    {
+      "name": "style",
+      "type": "string",
+      "section": "Объект hashtag",
+      "description": "Стиль хештега. По умолчанию: blue_gradient. Возможные значения: transparent, blue_gradient."
+    },
+    {
+      "name": "mention",
+      "type": "string",
+      "section": "Объект mention",
+      "description": ", обязательный Текст в формате упоминания: для профилей людей \"[name](id123)\", для групп/сообщ./событий - \"[name](club123)\"."
+    },
+    {
+      "name": "style",
+      "type": "string",
+      "section": "Объект mention",
+      "description": "Стиль упоминания. По умолчанию: red_gradient. Возможные значения: transparent, red_gradient."
+    },
+    {
+      "name": "audio",
+      "type": "",
+      "section": "Объект music",
+      "description": "Подробнее — в разделе Аудиозапись."
+    },
+    {
+      "name": "audio_start_time",
+      "type": "integer",
+      "section": "Объект music",
+      "description": "Время начала воспроизведения аудиозаписи."
+    },
+    {
+      "name": "style",
+      "type": "string",
+      "section": "Объект music",
+      "description": "Стиль отображения аудиозаписи. Возможные значения: •album — большое изображение альбома и название аудиозаписи. •horizontal — малое изображение альбома и название аудиозаписи. •header_meta — без изображений, только название аудиозаписи в верхней части истории."
+    },
+    {
+      "name": "place_id",
+      "type": "integer",
+      "section": "Объект place",
+      "description": ", обязательный ID места."
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "section": "Объект place",
+      "description": ", обязательный Название места."
+    },
+    {
+      "name": "category_id",
+      "type": "integer",
+      "section": "Объект place",
+      "description": "ID категории места."
+    },
+    {
+      "name": "style",
+      "type": "string",
+      "section": "Объект place",
+      "description": "Стиль. По умолчанию: blue. Возможные значения: transparent, blue, green, white."
+    },
+    {
+      "name": "link",
+      "type": "string",
+      "section": "Объект link",
+      "description": ", обязательный Ссылка на контент."
+    },
+    {
+      "name": "tooltip_text_key",
+      "type": "string",
+      "section": "Объект link",
+      "description": "Ключ на строку, которая будет отображаться на клиенте при клику на тултип Варианты тултипов сейчас: •tooltip_open_post', •tooltip_open_photo', •'tooltip_open_page', •'tooltip_open_default'(подставится, если не передать)."
+    },
+    {
+      "name": "style",
+      "type": "integer",
+      "section": "Объект time",
+      "description": "Стиль стикера времени: black,white, green, text, date По умолчанию: date."
+    },
+    {
+      "name": "timestamp_ms",
+      "type": "long",
+      "section": "Объект time",
+      "description": "Unix timestamp в милисекундах."
+    },
+    {
+      "name": "date",
+      "type": "string",
+      "section": "Объект time",
+      "description": "Дата (альтернатива timestamp_ms) в формате yyyy:MM:ddHH:mm:ss (такой формат выбран для унификации даты из exif полей."
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "section": "Объект time",
+      "description": "Верхний тайтл стикера, используется только для стиля date"
+    },
+    {
+      "name": "question",
+      "type": "string",
+      "section": "Объект question",
+      "description": ", обязательный Текст вопроса."
+    },
+    {
+      "name": "button",
+      "type": "string",
+      "section": "Объект question",
+      "description": ", обязательный Текст кнопки."
+    },
+    {
+      "name": "style",
+      "type": "string",
+      "section": "Объект question",
+      "description": "Cтиль стикера (\"light\"/\"impressive\"). light – кнопка будет иметь цвет color, фон будет белый. Impressive – кнопка будет белой, фон будет иметь цвет color. На клиенте default: light."
+    },
+    {
+      "name": "color",
+      "type": "string",
+      "section": "Объект question",
+      "description": "Основной цвет. Hex строка в RGB (например \"3f8ae0\") На клиенте default: \"3f8ae0\""
+    },
+    {
+      "name": "text",
+      "type": "string",
+      "section": "Объект text",
+      "description": ", обязательный Текст, может содержать упоминания/хештеги в форматах указанных с соответствующих объектах."
+    },
+    {
+      "name": "style",
+      "type": "string",
+      "section": "Объект text",
+      "description": "Стиль текста (названия взяты по стате): classic, cursive, marker, italics, typewriter, poster, retro."
+    },
+    {
+      "name": "background_style",
+      "type": "string",
+      "section": "Объект text",
+      "description": "Стиль фона/обводки, значения: none, alpha, solid, sticker, neon Применимость стиля фона зависит от исходного стиля текста По умолчанию: none."
+    },
+    {
+      "name": "alignment",
+      "type": "string",
+      "section": "Объект text",
+      "description": "Выравнивание: center, left, right."
+    },
+    {
+      "name": "selection_color",
+      "type": "string",
+      "section": "Объект text",
+      "description": "Цвет в формате: #ff0000. Если background_style задан none, то значение будет определять цвет текста. Иначе будет означать цвет применяемый к стилю Поддерживаемые стили фона относительно стиля текста"
+    },
+    {
+      "name": "'classic",
+      "type": "none",
+      "section": "Объект text",
+      "description": ", solid, alpha, sticker."
+    },
+    {
+      "name": "'cursive",
+      "type": "none",
+      "section": "Объект text",
+      "description": ", solid."
+    },
+    {
+      "name": "'marker",
+      "type": "none",
+      "section": "Объект text",
+      "description": ", neon."
+    },
+    {
+      "name": "'italics",
+      "type": "none",
+      "section": "Объект text",
+      "description": ", solid."
+    },
+    {
+      "name": "'typewriter",
+      "type": "none",
+      "section": "Объект text",
+      "description": ", solid."
+    },
+    {
+      "name": "'poster",
+      "type": "none",
+      "section": "Объект text",
+      "description": ", solid."
+    },
+    {
+      "name": "'retro",
+      "type": "none",
+      "section": "Объект text",
+      "description": ", solid."
+    },
+    {
+      "name": "emoji",
+      "type": "string",
+      "section": "Объект emoji",
+      "description": ", обязательный Символ emoji."
+    },
+    {
+      "name": "sticker_id",
+      "type": "integer",
+      "section": "Объект sticker",
+      "description": ", обязательный ID стикера."
+    },
+    {
+      "name": "pack_id",
+      "type": "integer",
+      "section": "Объект sticker",
+      "description": ", обязательный ID набора стикера."
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "section": "Объект market_item",
+      "description": ", обязательный Текст для заголовка товара."
+    },
+    {
+      "name": "product_id",
+      "type": "integer",
+      "section": "Объект market_item",
+      "description": "ID продукта для VK товаров."
+    },
+    {
+      "name": "owner_id",
+      "type": "integer",
+      "section": "Объект market_item",
+      "description": "ID владельца для VK товаров."
+    },
+    {
+      "name": "link",
+      "type": "string",
+      "section": "Объект market_item",
+      "description": "Ссылка на товар AliExpress."
+    },
+    {
+      "name": "type=mention",
+      "type": "mention",
+      "section": "Опциональные поля, в зависимости от типа стикера",
+      "description": "string Содержит строку в формате упоминания ВКонтакте, например: [id1|name] или [club1|name]."
+    },
+    {
+      "name": "type=hashtag",
+      "type": "hashtag",
+      "section": "Опциональные поля, в зависимости от типа стикера",
+      "description": "string Содержит строку в формате хештега. Должна обязательно начинаться с символа #. JSON{ \"original_height\": 2001, \"original_width\": 1125, \"clickable_stickers\": [ { \"type\": \"mention\", \"clickable_area\": [ { \"x\": 425, \"y\": 853 }, { \"x\": 825, \"y\": 1210 }, { \"x\": 699, \"y\": 1351 }, { \"x\": 299, \"y\": 993 } ], \"mention\": \"[club22822305|@team]\", \"style\": \"red_gradient\" }, { \"type\": \"hashtag\", \"clickable_area\": [ { \"x\": 269, \"y\": 525 }, { \"x\": 663, \"y\": 377 }, { \"x\": 711, \"y\": 505 }, { \"x\": 317, \"y\": 653 } ], \"hashtag\": \"#hello\", \"style\": \"blue_gradient\" } ] }"
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Поля объекта clickable_stickers",
+      "text": ""
+    },
+    {
+      "level": 2,
+      "title": "Объект hashtag",
+      "text": ""
+    },
+    {
+      "level": 2,
+      "title": "Объект mention",
+      "text": ""
+    },
+    {
+      "level": 2,
+      "title": "Объект music",
+      "text": ""
+    },
+    {
+      "level": 2,
+      "title": "Объект place",
+      "text": ""
+    },
+    {
+      "level": 2,
+      "title": "Объект link",
+      "text": ""
+    },
+    {
+      "level": 2,
+      "title": "Объект time",
+      "text": ""
+    },
+    {
+      "level": 2,
+      "title": "Объект question",
+      "text": ""
+    },
+    {
+      "level": 2,
+      "title": "Объект text",
+      "text": ""
+    },
+    {
+      "level": 2,
+      "title": "Объект emoji",
+      "text": ""
+    },
+    {
+      "level": 2,
+      "title": "Объект sticker",
+      "text": ""
+    },
+    {
+      "level": 2,
+      "title": "Объект market_item",
+      "text": ""
+    },
+    {
+      "level": 2,
+      "title": "Объект app",
+      "text": "app_id integer, обязательный ID приложения, является обязательным т.к передача может происходить по ссылке, не напрямую через VK Mini Apps. app_context string Если апп открывается из истории, то в параметрах запуска в vk_ref будет значение (проставляется на бекенде): story{owner_id}_{story_id}_{access_key}_{sticker_id}_{context}. Максимум 500 символов."
+    },
+    {
+      "level": 2,
+      "title": "Объект poll",
+      "text": "poll_id integer, обязательный ID опроса. poll_owner_id integer ID владельца. is_board boolean Из обсуждений ли опрос."
+    },
+    {
+      "level": 2,
+      "title": "Общие поля для всех типов стикеров",
+      "text": "type string, обязательный Тип стикера. Возможные значения: •mention — упоминание; •hashtag — хэштег. clickable_area array, обязательный Массив точек с координатами кликабельной области. Каждый элемент — объект с двумя координатами точки x, y (int). Желательно передавать прямоугольную область из четырех точек. style string Визуальный стиль стикера. Возможные значения: •transparent — прозрачный; •underline — подчеркнутый (только для Android)."
+    },
+    {
+      "level": 2,
+      "title": "Опциональные поля, в зависимости от типа стикера",
+      "text": ""
+    }
+  ],
+  "contentText": "Объект, описывающий кликабельный стикер. В объекте истории доступно поле clickable_stickers. Объект стикера вклеивается разработчиком на клиенте самостоятельно, на сервер передаются только координаты. original_width (integer): Ширина оригинального фото или видео. original_height (integer): Высота оригинального фото или видео. clickable_stickers (array): Массив объектов кликабельных стикеров. hashtag (string): , обязательный Текст хештега. style (string): Стиль хештега. По умолчанию: blue_gradient. Возможные значения: transparent, blue_gradient. mention (string): , обязательный Текст в формате упоминания: для профилей людей \"[name](id123)\", для групп/сообщ./событий - \"[name](club123)\". style (string): Стиль упоминания. По умолчанию: red_gradient. Возможные значения: transparent, red_gradient. audio: Подробнее — в разделе Аудиозапись. audio_start_time (integer): Время начала воспроизведения аудиозаписи. style (string): Стиль отображения аудиозаписи. Возможные значения: •album — большое изображение альбома и название аудиозаписи. •horizontal — малое изображение альбома и название аудиозаписи. •header_meta — без изображений, только название аудиозаписи в верхней части истории. place_id (integer): , обязательный ID места. title (string): , обязательный Название места. category_id (integer): ID категории места. style (string): Стиль. По умолчанию: blue. Возможные значения: transparent, blue, green, white. link (string): , обязательный Ссылка на контент. tooltip_text_key (string): Ключ на строку, которая будет отображаться на клиенте при клику на тултип Варианты тултипов сейчас: •tooltip_open_post', •tooltip_open_photo', •'tooltip_open_page', •'tooltip_open_default'(подставится, если не передать). style (integer): Стиль стикера времени: black,white, green, text, date По умолчанию: date. timestamp_ms (long): Unix timestamp в милисекундах. date (string): Дата (альтернатива timestamp_ms) в формате yyyy:MM:ddHH:mm:ss (такой формат выбран для унификации даты из exif полей. title (string): Верхний тайтл стикера, используется только для стиля date question (string): , обязательный Текст вопроса. button (string): , обязательный Текст кнопки. style (string): Cтиль стикера (\"light\"/\"impressive\"). light – кнопка будет иметь цвет color, фон будет белый. Impressive – кнопка будет белой, фон будет иметь цвет color. На клиенте default: light. color (string): Основной цвет. Hex строка в RGB (например \"3f8ae0\") На клиенте default: \"3f8ae0\" text (string): , обязательный Текст, может содержать упоминания/хештеги в форматах указанных с соответствующих объектах. style (string): Стиль текста (названия взяты по стате): classic, cursive, marker, italics, typewriter, poster, retro. background_style (string): Стиль фона/обводки, значения: none, alpha, solid, sticker, neon Применимость стиля фона зависит от исходного стиля текста По умолчанию: none. alignment (string): Выравнивание: center, left, right. selection_color (string): Цвет в формате: #ff0000. Если background_style задан none, то значение будет определять цвет текста. Иначе будет означать цвет применяемый к стилю Поддерживаемые стили фона относительно стиля текста 'classic (none): , solid, alpha, sticker. 'cursive (none): , solid. 'marker (none): , neon. 'italics (none): , solid. 'typewriter (none): , solid. 'poster (none): , solid. 'retro (none): , solid. emoji (string): , обязательный Символ emoji. sticker_id (integer): , обязательный ID стикера. pack_id (integer): , обязательный ID набора стикера. title (string): , обязательный Текст для заголовка товара. product_id (integer): ID продукта для VK товаров. owner_id (integer): ID владельца для VK товаров. link (string): Ссылка на товар AliExpress. type=mention (mention): string Содержит строку в формате упоминания ВКонтакте, например: [id1|name] или [club1|name]. type=hashtag (hashtag): string Содержит строку в формате хештега. Должна обязательно начинаться с символа #. JSON{ \"original_height\": 2001, \"original_width\": 1125, \"clickable_stickers\": [ { \"type\": \"mention\", \"clickable_area\": [ { \"x\": 425, \"y\": 853 }, { \"x\": 825, \"y\": 1210 }, { \"x\": 699, \"y\": 1351 }, { \"x\": 299, \"y\": 993 } ], \"mention\": \"[club22822305|@team]\", \"style\": \"red_gradient\" }, { \"type\": \"hashtag\", \"clickable_area\": [ { \"x\": 269, \"y\": 525 }, { \"x\": 663, \"y\": 377 }, { \"x\": 711, \"y\": 505 }, { \"x\": 317, \"y\": 653 } ], \"hashtag\": \"#hello\", \"style\": \"blue_gradient\" } ] }"
+}

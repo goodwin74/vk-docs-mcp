@@ -1,0 +1,222 @@
+{
+  "id": "app",
+  "url": "https://dev.vk.com/ru/reference/objects/app",
+  "title": "Cправочник API | Объекты | Основные объекты | Приложение | VK для разработчиков",
+  "h1": "Приложение",
+  "group": "Основные объекты",
+  "description": "Объект, описывающий приложение, содержит следующие поля:",
+  "fields": [
+    {
+      "name": "id",
+      "type": "integer",
+      "section": "Базовые поля",
+      "description": "Идентификатор приложения."
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "section": "Базовые поля",
+      "description": "Название приложения."
+    },
+    {
+      "name": "icon_278",
+      "type": "string",
+      "section": "Базовые поля",
+      "description": "URL-адрес обложки приложения шириной 278px."
+    },
+    {
+      "name": "icon_139",
+      "type": "string",
+      "section": "Базовые поля",
+      "description": "URL-адрес обложки приложения шириной 139px."
+    },
+    {
+      "name": "icon_150",
+      "type": "string",
+      "section": "Базовые поля",
+      "description": "URL-адрес обложки приложения шириной 150px."
+    },
+    {
+      "name": "icon_75",
+      "type": "string",
+      "section": "Базовые поля",
+      "description": "URL-адрес обложки приложения шириной 75px."
+    },
+    {
+      "name": "banner_560",
+      "type": "string",
+      "section": "Базовые поля",
+      "description": "URL-адрес баннера шириной 560px."
+    },
+    {
+      "name": "banner_1120",
+      "type": "string",
+      "section": "Базовые поля",
+      "description": "URL-адрес баннера шириной 1120px."
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "section": "Базовые поля",
+      "description": "Тип приложения. Возможные значения: •vk_app — мини-приложение ВКонтакте / VK; •app — социальное приложение; •game — игра; •site — подключаемый сайт; •standalone — отдельное приложение (для мобильного устройства)."
+    },
+    {
+      "name": "section",
+      "type": "string",
+      "section": "Базовые поля",
+      "description": "Категория приложения."
+    },
+    {
+      "name": "author_url",
+      "type": "string",
+      "section": "Базовые поля",
+      "description": "Адрес страницы автора приложения."
+    },
+    {
+      "name": "author_id",
+      "type": "integer",
+      "section": "Базовые поля",
+      "description": "Идентификатор автора приложения."
+    },
+    {
+      "name": "author_group",
+      "type": "integer",
+      "section": "Базовые поля",
+      "description": "Идентификатор официальной группы приложения."
+    },
+    {
+      "name": "members_count",
+      "type": "integer",
+      "section": "Базовые поля",
+      "description": "Количество участников приложения."
+    },
+    {
+      "name": "published_date",
+      "type": "integer",
+      "section": "Базовые поля",
+      "description": "Дата размещения в Unixtime."
+    },
+    {
+      "name": "catalog_position",
+      "type": "integer",
+      "section": "Базовые поля",
+      "description": "Позиция в каталоге."
+    },
+    {
+      "name": "international",
+      "type": "integer",
+      "section": "Базовые поля",
+      "description": "Является ли приложение мультиязычным (1)."
+    },
+    {
+      "name": "leaderboard_type",
+      "type": "integer",
+      "section": "Базовые поля",
+      "description": "Тип таблицы результатов. Возможные значения: •0 — не поддерживается; •1 — по уровню; •2 — по очкам."
+    },
+    {
+      "name": "genre_id",
+      "type": "integer",
+      "section": "Базовые поля",
+      "description": "Идентификатор жанра"
+    },
+    {
+      "name": "genre",
+      "type": "string",
+      "section": "Базовые поля",
+      "description": "Название жанра"
+    },
+    {
+      "name": "platform_id",
+      "type": "string",
+      "section": "Базовые поля",
+      "description": "Идентификатор приложения в магазине приложений"
+    },
+    {
+      "name": "is_in_catalog",
+      "type": "integer",
+      "section": "Базовые поля",
+      "description": "Доступно ли приложение в мобильном каталоге. Возможные значения: •1 — доступно; •0 — недоступно."
+    },
+    {
+      "name": "friends",
+      "type": "array",
+      "section": "Базовые поля",
+      "description": "Список идентификаторов друзей текущего пользователя, которые установили приложение (если был передан параметр return_friends = 1."
+    },
+    {
+      "name": "installed",
+      "type": "integer | boolean",
+      "section": "Базовые поля",
+      "description": "1, если приложение установлено у текущего пользователя."
+    },
+    {
+      "name": "is_html5_app",
+      "type": "integer",
+      "section": "Базовые поля",
+      "description": "1, если приложение — HTML5-игра."
+    },
+    {
+      "name": "screen_orientation",
+      "type": "integer",
+      "section": "Базовые поля",
+      "description": "Поддерживаемая ориентация экрана. Возможные значения: •0 — альбомная и портретная; •1 — только альбомная; •2 — только портретная."
+    },
+    {
+      "name": "mobile_controls_type",
+      "type": "integer",
+      "section": "Базовые поля",
+      "description": "Тип элементов управления игрой на мобильных устройствах. Возможные значения: •1 — прозрачный элемент управления поверх области с игрой; •0 — чёрная полоска над областью с игрой;"
+    },
+    {
+      "name": "mobile_view_support_type",
+      "type": "integer",
+      "section": "Базовые поля",
+      "description": "1, если игра использует нижнюю часть экрана на iPhoneX"
+    },
+    {
+      "name": "description",
+      "type": "string",
+      "section": "Опциональные поля",
+      "description": "Описание."
+    },
+    {
+      "name": "screen_name",
+      "type": "string",
+      "section": "Опциональные поля",
+      "description": "Короткий адрес приложения (или строка idXXXXXXX, если короткий адрес не задан)."
+    },
+    {
+      "name": "icon_16",
+      "type": "string",
+      "section": "Опциональные поля",
+      "description": "URL-адрес обложки приложения шириной 16px."
+    },
+    {
+      "name": "screenshots",
+      "type": "array",
+      "section": "Опциональные поля",
+      "description": "Массив объектов фотографий, описывающих скриншоты приложения."
+    },
+    {
+      "name": "push_enabled",
+      "type": "integer",
+      "section": "Опциональные поля",
+      "description": "1, если у пользователя включены уведомления из этого приложения."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "Базовые поля",
+      "text": ""
+    },
+    {
+      "level": 2,
+      "title": "Опциональные поля",
+      "text": "Объект содержит опциональные поля, если в методе был передан параметр extended = 1."
+    }
+  ],
+  "contentText": "Объект, описывающий приложение, содержит следующие поля: id (integer): Идентификатор приложения. title (string): Название приложения. icon_278 (string): URL-адрес обложки приложения шириной 278px. icon_139 (string): URL-адрес обложки приложения шириной 139px. icon_150 (string): URL-адрес обложки приложения шириной 150px. icon_75 (string): URL-адрес обложки приложения шириной 75px. banner_560 (string): URL-адрес баннера шириной 560px. banner_1120 (string): URL-адрес баннера шириной 1120px. type (string): Тип приложения. Возможные значения: •vk_app — мини-приложение ВКонтакте / VK; •app — социальное приложение; •game — игра; •site — подключаемый сайт; •standalone — отдельное приложение (для мобильного устройства). section (string): Категория приложения. author_url (string): Адрес страницы автора приложения. author_id (integer): Идентификатор автора приложения. author_group (integer): Идентификатор официальной группы приложения. members_count (integer): Количество участников приложения. published_date (integer): Дата размещения в Unixtime. catalog_position (integer): Позиция в каталоге. international (integer): Является ли приложение мультиязычным (1). leaderboard_type (integer): Тип таблицы результатов. Возможные значения: •0 — не поддерживается; •1 — по уровню; •2 — по очкам. genre_id (integer): Идентификатор жанра genre (string): Название жанра platform_id (string): Идентификатор приложения в магазине приложений is_in_catalog (integer): Доступно ли приложение в мобильном каталоге. Возможные значения: •1 — доступно; •0 — недоступно. friends (array): Список идентификаторов друзей текущего пользователя, которые установили приложение (если был передан параметр return_friends = 1. installed (integer | boolean): 1, если приложение установлено у текущего пользователя. is_html5_app (integer): 1, если приложение — HTML5-игра. screen_orientation (integer): Поддерживаемая ориентация экрана. Возможные значения: •0 — альбомная и портретная; •1 — только альбомная; •2 — только портретная. mobile_controls_type (integer): Тип элементов управления игрой на мобильных устройствах. Возможные значения: •1 — прозрачный элемент управления поверх области с игрой; •0 — чёрная полоска над областью с игрой; mobile_view_support_type (integer): 1, если игра использует нижнюю часть экрана на iPhoneX description (string): Описание. screen_name (string): Короткий адрес приложения (или строка idXXXXXXX, если короткий адрес не задан). icon_16 (string): URL-адрес обложки приложения шириной 16px. screenshots (array): Массив объектов фотографий, описывающих скриншоты приложения. push_enabled (integer): 1, если у пользователя включены уведомления из этого приложения."
+}

@@ -1,0 +1,135 @@
+{
+  "id": "place",
+  "url": "https://dev.vk.com/ru/reference/objects/place",
+  "title": "Cправочник API | Объекты | Вспомогательные объекты и наборы значений | Место | VK для разработчиков",
+  "h1": "Место",
+  "group": "Вспомогательные объекты и наборы значений",
+  "description": "Объект, описывающий место, содержит следующие поля:",
+  "fields": [
+    {
+      "name": "id",
+      "type": "integer",
+      "section": "",
+      "description": "Идентификатор места."
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "section": "",
+      "description": "Название места."
+    },
+    {
+      "name": "latitude",
+      "type": "integer",
+      "section": "",
+      "description": "Географическая широта, заданная в градусах (от -90 до 90)."
+    },
+    {
+      "name": "longitude",
+      "type": "integer",
+      "section": "",
+      "description": "Географическая широта, заданная в градусах (от -90 до 90)."
+    },
+    {
+      "name": "created",
+      "type": "integer",
+      "section": "",
+      "description": "Дата создания места в Unixtime."
+    },
+    {
+      "name": "icon",
+      "type": "string",
+      "section": "",
+      "description": "Иконка места, URL изображения."
+    },
+    {
+      "name": "checkins",
+      "type": "integer",
+      "section": "",
+      "description": "Число отметок в этом месте."
+    },
+    {
+      "name": "updated",
+      "type": "integer",
+      "section": "",
+      "description": "Дата обновления места в Unixtime."
+    },
+    {
+      "name": "type",
+      "type": "integer",
+      "section": "",
+      "description": "Тип места."
+    },
+    {
+      "name": "city",
+      "type": "integer",
+      "section": "",
+      "description": "Идентификатор города."
+    },
+    {
+      "name": "address",
+      "type": "string",
+      "section": "",
+      "description": "Адрес места."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "id",
+      "text": "integer Идентификатор места."
+    },
+    {
+      "level": 2,
+      "title": "title",
+      "text": "string Название места."
+    },
+    {
+      "level": 2,
+      "title": "latitude",
+      "text": "integer Географическая широта, заданная в градусах (от -90 до 90)."
+    },
+    {
+      "level": 2,
+      "title": "longitude",
+      "text": "integer Географическая широта, заданная в градусах (от -90 до 90)."
+    },
+    {
+      "level": 2,
+      "title": "created",
+      "text": "integer Дата создания места в Unixtime."
+    },
+    {
+      "level": 2,
+      "title": "icon",
+      "text": "string Иконка места, URL изображения."
+    },
+    {
+      "level": 2,
+      "title": "checkins",
+      "text": "integer Число отметок в этом месте."
+    },
+    {
+      "level": 2,
+      "title": "updated",
+      "text": "integer Дата обновления места в Unixtime."
+    },
+    {
+      "level": 2,
+      "title": "type",
+      "text": "integer Тип места."
+    },
+    {
+      "level": 2,
+      "title": "city",
+      "text": "integer Идентификатор города."
+    },
+    {
+      "level": 2,
+      "title": "address",
+      "text": "string Адрес места."
+    }
+  ],
+  "contentText": "Объект, описывающий место, содержит следующие поля: id (integer): Идентификатор места. title (string): Название места. latitude (integer): Географическая широта, заданная в градусах (от -90 до 90). longitude (integer): Географическая широта, заданная в градусах (от -90 до 90). created (integer): Дата создания места в Unixtime. icon (string): Иконка места, URL изображения. checkins (integer): Число отметок в этом месте. updated (integer): Дата обновления места в Unixtime. type (integer): Тип места. city (integer): Идентификатор города. address (string): Адрес места."
+}

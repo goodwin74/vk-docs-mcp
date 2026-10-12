@@ -1,0 +1,157 @@
+{
+  "id": "address",
+  "url": "https://dev.vk.com/ru/reference/objects/address",
+  "title": "Cправочник API | Объекты | Основные объекты | Адрес | VK для разработчиков",
+  "h1": "Адрес",
+  "group": "Основные объекты",
+  "description": "Объект, описывающий адрес в сообществе. Доступен с версии 5.85.",
+  "fields": [
+    {
+      "name": "id",
+      "type": "integer",
+      "section": "",
+      "description": "Идентификатор адреса."
+    },
+    {
+      "name": "city_id",
+      "type": "integer",
+      "section": "",
+      "description": "Идентификатор города."
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "section": "",
+      "description": "Заголовок адреса."
+    },
+    {
+      "name": "address",
+      "type": "string",
+      "section": "",
+      "description": "Строка адреса."
+    },
+    {
+      "name": "additional_address",
+      "type": "string",
+      "section": "",
+      "description": "Описание адреса."
+    },
+    {
+      "name": "latitude",
+      "type": "number",
+      "section": "",
+      "description": "Географическая широта отметки, заданная в градусах (от -90 до 90)."
+    },
+    {
+      "name": "longitude",
+      "type": "number",
+      "section": "",
+      "description": "Географическая долгота отметки, заданная в градусах (от -180 до 180)."
+    },
+    {
+      "name": "distance",
+      "type": "integer",
+      "section": "",
+      "description": "Расстояние до цели в метрах."
+    },
+    {
+      "name": "phone",
+      "type": "string",
+      "section": "",
+      "description": "Номер телефона."
+    },
+    {
+      "name": "time_offset",
+      "type": "integer",
+      "section": "",
+      "description": "Смещение времени в минутах относительно UTC."
+    },
+    {
+      "name": "metro_station_id",
+      "type": "integer",
+      "section": "",
+      "description": "Идентификатор станции метрополитена."
+    },
+    {
+      "name": "work_info_status",
+      "type": "string",
+      "section": "",
+      "description": "Тип расписания. Возможные значения: •no_information — нет информации о расписании; •temporarily_closed — временно закрыто; •always_opened — открыто круглосуточно; •forever_closed — закрыто навсегда; •timetable — открыто в указанные часы работы. Для этого типа расписания необходимо передать параметр timetable."
+    },
+    {
+      "name": "timetable",
+      "type": "object",
+      "section": "",
+      "description": "Для типа расписания timetable можно передать расписание в формате JSON. Время передается в минутах от 0 часов. Ключ по дню означает, что день рабочий. open_time, close_time — начало и конец рабочего дня. break_open_time, break_close_time - время перерыва."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "id",
+      "text": "integer Идентификатор адреса."
+    },
+    {
+      "level": 2,
+      "title": "city_id",
+      "text": "integer Идентификатор города."
+    },
+    {
+      "level": 2,
+      "title": "title",
+      "text": "string Заголовок адреса."
+    },
+    {
+      "level": 2,
+      "title": "address",
+      "text": "string Строка адреса."
+    },
+    {
+      "level": 2,
+      "title": "additional_address",
+      "text": "string Описание адреса."
+    },
+    {
+      "level": 2,
+      "title": "latitude",
+      "text": "number Географическая широта отметки, заданная в градусах (от -90 до 90)."
+    },
+    {
+      "level": 2,
+      "title": "longitude",
+      "text": "number Географическая долгота отметки, заданная в градусах (от -180 до 180)."
+    },
+    {
+      "level": 2,
+      "title": "distance",
+      "text": "integer Расстояние до цели в метрах."
+    },
+    {
+      "level": 2,
+      "title": "phone",
+      "text": "string Номер телефона."
+    },
+    {
+      "level": 2,
+      "title": "time_offset",
+      "text": "integer Смещение времени в минутах относительно UTC."
+    },
+    {
+      "level": 2,
+      "title": "metro_station_id",
+      "text": "integer Идентификатор станции метрополитена."
+    },
+    {
+      "level": 2,
+      "title": "work_info_status",
+      "text": "string Тип расписания. Возможные значения: •no_information — нет информации о расписании; •temporarily_closed — временно закрыто; •always_opened — открыто круглосуточно; •forever_closed — закрыто навсегда; •timetable — открыто в указанные часы работы. Для этого типа расписания необходимо передать параметр timetable."
+    },
+    {
+      "level": 2,
+      "title": "timetable",
+      "text": "object Для типа расписания timetable можно передать расписание в формате JSON. Время передается в минутах от 0 часов. Ключ по дню означает, что день рабочий. open_time, close_time — начало и конец рабочего дня. break_open_time, break_close_time - время перерыва."
+    }
+  ],
+  "contentText": "Объект, описывающий адрес в сообществе. Доступен с версии 5.85. id (integer): Идентификатор адреса. city_id (integer): Идентификатор города. title (string): Заголовок адреса. address (string): Строка адреса. additional_address (string): Описание адреса. latitude (number): Географическая широта отметки, заданная в градусах (от -90 до 90). longitude (number): Географическая долгота отметки, заданная в градусах (от -180 до 180). distance (integer): Расстояние до цели в метрах. phone (string): Номер телефона. time_offset (integer): Смещение времени в минутах относительно UTC. metro_station_id (integer): Идентификатор станции метрополитена. work_info_status (string): Тип расписания. Возможные значения: •no_information — нет информации о расписании; •temporarily_closed — временно закрыто; •always_opened — открыто круглосуточно; •forever_closed — закрыто навсегда; •timetable — открыто в указанные часы работы. Для этого типа расписания необходимо передать параметр timetable. timetable (object): Для типа расписания timetable можно передать расписание в формате JSON. Время передается в минутах от 0 часов. Ключ по дню означает, что день рабочий. open_time, close_time — начало и конец рабочего дня. break_open_time, break_close_time - время перерыва."
+}

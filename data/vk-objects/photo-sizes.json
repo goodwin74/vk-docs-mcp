@@ -1,0 +1,50 @@
+{
+  "id": "photo-sizes",
+  "url": "https://dev.vk.com/ru/reference/objects/photo-sizes",
+  "title": "Cправочник API | Объекты | Вспомогательные объекты и наборы значений | Формат описания размеров фотографии | VK для разработчиков",
+  "h1": "Формат описания размеров фотографии",
+  "group": "Вспомогательные объекты и наборы значений",
+  "description": "При использовании параметра photo_sizes = 1 в методах для работы с фотографиями, в ответе возвращается информация о копиях исходного изображения разных размеров, представленная в виде массива sizes, содержащего объекты со следующими полями:",
+  "fields": [
+    {
+      "name": "sizes",
+      "type": "",
+      "section": "Значения type для документов (поле preview)",
+      "description": "Исходная фотография — https://pp.vk.me/c633825/v633825034/736c/ydLOoRmlTQ8.jpg, размер оригинала — 1280x853 px, соотношение \"ширина/высота\" — 1.50058617 JSONsizes: [{ src: 'https://pp.vk.me/c633825/v633825034/7369/wbsAsrooqfA.jpg', width: 130, height: 87, type: 'm' }, { src: 'https://pp.vk.me/c633825/v633825034/736e/SKfi-9SeR0I.jpg', width: 130, height: 87, type: 'o' }, { src: 'https://pp.vk.me/c633825/v633825034/736e/SKfi-9SeR0I.jpg', width: 200, height: 133, type: 'p' }, { src: 'https://pp.vk.me/c633825/v633825034/736f/wOXUnCuD68I.jpg', width: 320, height: 213, type: 'q' }, { src: 'https://pp.vk.me/c633825/v633825034/7370/vGTSDUiWxMM.jpg', width: 510, height: 340, type: 'r' }, { src: 'https://pp.vk.me/c633825/v633825034/7368/VeknQj61GOA.jpg', width: 75, height: 50, type: 's' }, { src: 'https://pp.vk.me/c633825/v633825034/736a/zCT2b_SP8tY.jpg', width: 604, height: 403, type: 'x' }, { src: 'https://pp.vk.me/c633825/v633825034/736b/jhXaGZzKF-0.jpg', width: 807, height: 538, type: 'y' }, { src: 'https://pp.vk.me/c633825/v633825034/736c/ydLOoRmlTQ8.jpg', width: 1280, height: 853, type: 'z' }]({ src: 'https://pp.vk.me/c633825/v633825034/7369/wbsAsrooqfA.jpg', width: 130, height: 87, type: 'm' }, { src: 'https://pp.vk.me/c633825/v633825034/736e/SKfi-9SeR0I.jpg', width: 130, height: 87, type: 'o' }, { src: 'https://pp.vk.me/c633825/v633825034/736e/SKfi-9SeR0I.jpg', width: 200, height: 133, type: 'p' }, { src: 'https://pp.vk.me/c633825/v633825034/736f/wOXUnCuD68I.jpg', width: 320, height: 213, type: 'q' }, { src: 'https://pp.vk.me/c633825/v633825034/7370/vGTSDUiWxMM.jpg', width: 510, height: 340, type: 'r' }, { src: 'https://pp.vk.me/c633825/v633825034/7368/VeknQj61GOA.jpg', width: 75, height: 50, type: 's' }, { src: 'https://pp.vk.me/c633825/v633825034/736a/zCT2b_SP8tY.jpg', width: 604, height: 403, type: 'x' }, { src: 'https://pp.vk.me/c633825/v633825034/736b/jhXaGZzKF-0.jpg', width: 807, height: 538, type: 'y' }, { src: 'https://pp.vk.me/c633825/v633825034/736c/ydLOoRmlTQ8.jpg', width: 1280, height: 853, type: 'z' })"
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "url",
+      "text": "string URL копии изображения."
+    },
+    {
+      "level": 2,
+      "title": "width",
+      "text": "integer Ширина копии в пикселях."
+    },
+    {
+      "level": 2,
+      "title": "height",
+      "text": "integer Высота копии в пикселях."
+    },
+    {
+      "level": 2,
+      "title": "type",
+      "text": "string Обозначение размера и пропорций копии."
+    },
+    {
+      "level": 2,
+      "title": "Значения type для фотографий",
+      "text": "Для фотографий, загруженных на сайт до 2012 года, значения width и height могут быть недоступны, в этом случае соответствующие поля содержат 0. •s — Пропорциональная копия изображения с максимальной стороной 75px; •m — Пропорциональная копия изображения с максимальной стороной 130px; •x — Пропорциональная копия изображения с максимальной стороной 604px; •o — Если соотношение \"ширина/высота\" исходного изображения меньше или равно 3:2, то пропорциональная копия с максимальной стороной 130px. Если соотношение \"ширина/высота\" больше 3:2, то копия обрезанного слева изображения с максимальной стороной 130px и соотношением сторон 3:2. •p — Если соотношение \"ширина/высота\" исходного изображения меньше или равно 3:2, то пропорциональная копия с максимальной стороной 200px. Если соотношение \"ширина/высота\" больше 3:2, то копия обрезанного слева и справа изображения с максимальной стороной 200px и соотношением сторон 3:2. •q — Если соотношение \"ширина/высота\" исходного изображения меньше или равно 3:2, то пропорциональная копия с максимальной стороной 320px. Если соотношение \"ширина/высота\" больше 3:2, то копия обрезанного слева и справа изображения с максимальной стороной 320px и соотношением сторон 3:2. •r — Если соотношение \"ширина/высота\" исходного изображения меньше или равно 3:2, то пропорциональная копия с максимальной стороной 510px. Если соотношение \"ширина/высота\" больше 3:2, то копия обрезанного слева и справа изображения с максимальной стороной 510px и соотношением сторон 3:"
+    },
+    {
+      "level": 2,
+      "title": "Значения type для документов (поле preview)",
+      "text": "•s — Пропорциональная копия изображения с максимальной стороной 100px; •m — Пропорциональная копия изображения с максимальной стороной 130px; •x — Пропорциональная копия изображения с максимальной стороной 604px; •y — Пропорциональная копия изображения с максимальной стороной 807px; •z — Пропорциональная копия изображения с максимальным размером 1080x1024px; •o — Копия изображения с размерами оригинала."
+    }
+  ],
+  "contentText": "При использовании параметра photo_sizes = 1 в методах для работы с фотографиями, в ответе возвращается информация о копиях исходного изображения разных размеров, представленная в виде массива sizes, содержащего объекты со следующими полями: sizes: Исходная фотография — https://pp.vk.me/c633825/v633825034/736c/ydLOoRmlTQ8.jpg, размер оригинала — 1280x853 px, соотношение \"ширина/высота\" — 1.50058617 JSONsizes: [{ src: 'https://pp.vk.me/c633825/v633825034/7369/wbsAsrooqfA.jpg', width: 130, height: 87, type: 'm' }, { src: 'https://pp.vk.me/c633825/v633825034/736e/SKfi-9SeR0I.jpg', width: 130, height: 87, type: 'o' }, { src: 'https://pp.vk.me/c633825/v633825034/736e/SKfi-9SeR0I.jpg', width: 200, height: 133, type: 'p' }, { src: 'https://pp.vk.me/c633825/v633825034/736f/wOXUnCuD68I.jpg', width: 320, height: 213, type: 'q' }, { src: 'https://pp.vk.me/c633825/v633825034/7370/vGTSDUiWxMM.jpg', width: 510, height: 340, type: 'r' }, { src: 'https://pp.vk.me/c633825/v633825034/7368/VeknQj61GOA.jpg', width: 75, height: 50, type: 's' }, { src: 'https://pp.vk.me/c633825/v633825034/736a/zCT2b_SP8tY.jpg', width: 604, height: 403, type: 'x' }, { src: 'https://pp.vk.me/c633825/v633825034/736b/jhXaGZzKF-0.jpg', width: 807, height: 538, type: 'y' }, { src: 'https://pp.vk.me/c633825/v633825034/736c/ydLOoRmlTQ8.jpg', width: 1280, height: 853, type: 'z' }]({ src: 'https://pp.vk.me/c633825/v633825034/7369/wbsAsrooqfA.jpg', width: 130, height: 87, type: 'm' }, { src: 'https://pp.vk.me/c633825/v633825034/736e/SKfi-9SeR0I.jpg', width: 130, height: 87, type: 'o' }, { src: 'https://pp.vk.me/c633825/v633825034/736e/SKfi-9SeR0I.jpg', width: 200, height: 133, type: 'p' }, { src: 'https://pp.vk.me/c633825/v633825034/736f/wOXUnCuD68I.jpg', width: 320, height: 213, type: 'q' }, { src: 'https://pp.vk.me/c633825/v633825034/7370/vGTSDUiWxMM.jpg', width: 510, height: 340, type: 'r' }, { src: 'https://pp.vk.me/c633825/v633825034/7368/VeknQj61GOA.jpg', width: 75, height: 50, type: 's' }, { src: 'https://pp.vk.me/c633825/v633825034/736a/zCT2b_SP8tY.jpg', width: 604, height: 403, type: 'x' }, { src: 'https://pp.vk.me/c633825/v633825034/736b/jhXaGZzKF-0.jpg', width: 807, height: 538, type: 'y' }, { src: 'https://pp.vk.me/c633825/v633825034/736c/ydLOoRmlTQ8.jpg', width: 1280, height: 853, type: 'z' })"
+}

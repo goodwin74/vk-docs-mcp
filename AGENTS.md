@@ -12,6 +12,7 @@ VK Mini Apps / VKMiniApps / мини-приложениями ВКонтакте
 |---|---|
 | Мини-приложения VK, VK Mini Apps, bridge.send, VKWebApp* | `vk_bridge_search`, `vk_bridge_get_method`, `vk_bridge_list` |
 | VK API, методы API (users.get, messages.send...), сервисы/бэкенд на VK | `vk_api_search`, `vk_api_get_method`, `vk_api_list` |
+| Объекты VK API (поля пользователей, сообществ, вложений, структуры данных) | `vk_objects_search`, `vk_objects_get_object`, `vk_objects_list` |
 
 Примеры запросов, где ОБЯЗАТЕЛЬНО использовать MCP:
 - «давай создадим сервис VK Mini Apps» / «сервис на платформе VK Mini Apps»
@@ -25,4 +26,4 @@ VK Mini Apps / VKMiniApps / мини-приложениями ВКонтакте
 3. Если MCP-инструмент недоступен — прямо сообщи об этом пользователю,
    не подменяй документацию памятью модели.
 
-База локальная и оффлайн (`vk-docs-mcp/data/`): 98 страниц VK Bridge + 452 метода VK API.
+База локальная и оффлайн (`vk-docs-mcp/data/`): 98 страниц VK Bridge + 452 метода VK API + 44 объекта VK API.

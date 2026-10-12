@@ -1,0 +1,58 @@
+{
+  "id": "story-feed-item",
+  "url": "https://dev.vk.com/ru/reference/objects/story-feed-item",
+  "title": "Cправочник API | Объекты | Медиаконтент и вложения | Блок ленты историй | VK для разработчиков",
+  "h1": "Блок ленты историй",
+  "group": "Медиаконтент и вложения",
+  "description": "Объект описывает блок ленты историй. Содержит следующие поля:",
+  "fields": [
+    {
+      "name": "type",
+      "type": "string",
+      "section": "",
+      "description": "Тип элемента ленты. Возможные значения: •stories — история; •community_grouped_stories — сгруппированные истории сообществ; •app_grouped_stories — сгруппированные истории мини-приложений."
+    },
+    {
+      "name": "stories",
+      "type": "array",
+      "section": "",
+      "description": "Массив объектов истории."
+    },
+    {
+      "name": "grouped",
+      "type": "array",
+      "section": "",
+      "description": "Массив объектов блока ленты историй."
+    },
+    {
+      "name": "app",
+      "type": "object",
+      "section": "",
+      "description": "Объект приложения."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "type",
+      "text": "string Тип элемента ленты. Возможные значения: •stories — история; •community_grouped_stories — сгруппированные истории сообществ; •app_grouped_stories — сгруппированные истории мини-приложений."
+    },
+    {
+      "level": 2,
+      "title": "stories",
+      "text": "array Массив объектов истории."
+    },
+    {
+      "level": 2,
+      "title": "grouped",
+      "text": "array Массив объектов блока ленты историй."
+    },
+    {
+      "level": 2,
+      "title": "app",
+      "text": "object Объект приложения."
+    }
+  ],
+  "contentText": "Объект описывает блок ленты историй. Содержит следующие поля: type (string): Тип элемента ленты. Возможные значения: •stories — история; •community_grouped_stories — сгруппированные истории сообществ; •app_grouped_stories — сгруппированные истории мини-приложений. stories (array): Массив объектов истории. grouped (array): Массив объектов блока ленты историй. app (object): Объект приложения."
+}

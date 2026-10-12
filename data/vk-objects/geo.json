@@ -1,0 +1,47 @@
+{
+  "id": "geo",
+  "url": "https://dev.vk.com/ru/reference/objects/geo",
+  "title": "Cправочник API | Объекты | Медиаконтент и вложения | Геометка | VK для разработчиков",
+  "h1": "Геометка",
+  "group": "Медиаконтент и вложения",
+  "description": "Объект, описывающий геометку, содержит следующие поля:",
+  "fields": [
+    {
+      "name": "type",
+      "type": "string",
+      "section": "",
+      "description": "Тип места."
+    },
+    {
+      "name": "coordinates",
+      "type": "object",
+      "section": "",
+      "description": "Координаты места. Объект, который содержит поля: •latitude (integer) — географическая широта; •longitude (integer) — географическая долгота."
+    },
+    {
+      "name": "place",
+      "type": "object",
+      "section": "",
+      "description": "Информация о месте, если она добавлена. Если место добавлено как чекин в сообщество, объект place имеет дополнительные поля: •type (integer) — тип чекина; •group_id (integer) — идентификатор сообщества; •group_photo (string) — URL миниатюры главной фотографии сообщества; •checkins (integer) — количество чекинов; •updated (integer) — время последнего чекина в Unixtime; •address (integer) — адрес."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "type",
+      "text": "string Тип места."
+    },
+    {
+      "level": 2,
+      "title": "coordinates",
+      "text": "object Координаты места. Объект, который содержит поля: •latitude (integer) — географическая широта; •longitude (integer) — географическая долгота."
+    },
+    {
+      "level": 2,
+      "title": "place",
+      "text": "object Информация о месте, если она добавлена. Если место добавлено как чекин в сообщество, объект place имеет дополнительные поля: •type (integer) — тип чекина; •group_id (integer) — идентификатор сообщества; •group_photo (string) — URL миниатюры главной фотографии сообщества; •checkins (integer) — количество чекинов; •updated (integer) — время последнего чекина в Unixtime; •address (integer) — адрес."
+    }
+  ],
+  "contentText": "Объект, описывающий геометку, содержит следующие поля: type (string): Тип места. coordinates (object): Координаты места. Объект, который содержит поля: •latitude (integer) — географическая широта; •longitude (integer) — географическая долгота. place (object): Информация о месте, если она добавлена. Если место добавлено как чекин в сообщество, объект place имеет дополнительные поля: •type (integer) — тип чекина; •group_id (integer) — идентификатор сообщества; •group_photo (string) — URL миниатюры главной фотографии сообщества; •checkins (integer) — количество чекинов; •updated (integer) — время последнего чекина в Unixtime; •address (integer) — адрес."
+}
