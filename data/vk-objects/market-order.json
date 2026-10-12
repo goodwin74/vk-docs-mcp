@@ -1,0 +1,190 @@
+{
+  "id": "market-order",
+  "url": "https://dev.vk.com/ru/reference/objects/market-order",
+  "title": "Cправочник API | Объекты | Основные объекты | Заказ | VK для разработчиков",
+  "h1": "Заказ",
+  "group": "Основные объекты",
+  "description": "Объект, содержащий информацию о заказе.",
+  "fields": [
+    {
+      "name": "id",
+      "type": "integer",
+      "section": "",
+      "description": "Идентификатор заказа."
+    },
+    {
+      "name": "group_id",
+      "type": "integer",
+      "section": "",
+      "description": "Идентификатор сообщества."
+    },
+    {
+      "name": "user_id",
+      "type": "integer",
+      "section": "",
+      "description": "Идентификатор покупателя."
+    },
+    {
+      "name": "date",
+      "type": "integer",
+      "section": "",
+      "description": "Дата создания заказа в формате Unixtime."
+    },
+    {
+      "name": "variants_grouping_id",
+      "type": "integer",
+      "section": "",
+      "description": "Идентификатор группы вариантов."
+    },
+    {
+      "name": "is_main_variant",
+      "type": "bool",
+      "section": "",
+      "description": "Является ли вариант основным."
+    },
+    {
+      "name": "property_values",
+      "type": "array",
+      "section": "",
+      "description": "Массив объектов, каждый из которых может содержать поля: •variant_id (integer) — идентификатор варианта; •variant_name (string) — название варианта; •property_name (string) — название свойства."
+    },
+    {
+      "name": "cart_quantity",
+      "type": "integer",
+      "section": "",
+      "description": "Количество товара в корзине."
+    },
+    {
+      "name": "status",
+      "type": "integer",
+      "section": "",
+      "description": "Статус заказа: •0 - Новый, •1 - Согласуется, •2 - Собирается, •3 - Доставляется, •4 - Выполнен, •5 - Отменен, •6 - Возвращен."
+    },
+    {
+      "name": "items_count",
+      "type": "integer",
+      "section": "",
+      "description": "Количество товаров в заказе."
+    },
+    {
+      "name": "total_price",
+      "type": "object",
+      "section": "",
+      "description": "Общая стоимость заказа. Объект, который содержит поля: •amount (string) — стоимость в сотых долях единицы валюты. •currency (object) — валюта. Объект, содержащий поля: •id (integer) — идентификатор валюты; •name(string) — обозначение валюты; •text (string) — строковое представление стоимости заказа."
+    },
+    {
+      "name": "display_order_id",
+      "type": "string",
+      "section": "",
+      "description": "Номер заказа, состоящий из идентификатора покупателя и идентификатора заказа."
+    },
+    {
+      "name": "comment",
+      "type": "string",
+      "section": "",
+      "description": "Комментарий к заказу."
+    },
+    {
+      "name": "preview_order_items",
+      "type": "Array",
+      "section": "",
+      "description": "Массив объектов, описывающих товары. Возвращается не больше 5 случайных товаров заказа."
+    },
+    {
+      "name": "delivery",
+      "type": "object",
+      "section": "",
+      "description": "Информация о доставке. Объект, который содержит поля: •address (string) — адрес доставки. •type (string) — тип доставки. •track_number (string) — трек-номер для отслеживания заказа. •track_link (string) — ссылка для отслеживания заказа по трек-номеру. •delivery_point (object) — информация о пункте выдачи."
+    },
+    {
+      "name": "recipient",
+      "type": "object",
+      "section": "",
+      "description": "Информация о покупателе. Объект, который содержит поля: •name (string) — имя покупателя. •phone (string) — номер покупателя. •display_text (string) — строковое представление информации о покупателе."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "id",
+      "text": "integer Идентификатор заказа."
+    },
+    {
+      "level": 2,
+      "title": "group_id",
+      "text": "integer Идентификатор сообщества."
+    },
+    {
+      "level": 2,
+      "title": "user_id",
+      "text": "integer Идентификатор покупателя."
+    },
+    {
+      "level": 2,
+      "title": "date",
+      "text": "integer Дата создания заказа в формате Unixtime."
+    },
+    {
+      "level": 2,
+      "title": "variants_grouping_id",
+      "text": "integer Идентификатор группы вариантов."
+    },
+    {
+      "level": 2,
+      "title": "is_main_variant",
+      "text": "bool Является ли вариант основным."
+    },
+    {
+      "level": 2,
+      "title": "property_values",
+      "text": "array Массив объектов, каждый из которых может содержать поля: •variant_id (integer) — идентификатор варианта; •variant_name (string) — название варианта; •property_name (string) — название свойства."
+    },
+    {
+      "level": 2,
+      "title": "cart_quantity",
+      "text": "integer Количество товара в корзине."
+    },
+    {
+      "level": 2,
+      "title": "status",
+      "text": "integer Статус заказа: •0 - Новый, •1 - Согласуется, •2 - Собирается, •3 - Доставляется, •4 - Выполнен, •5 - Отменен, •6 - Возвращен."
+    },
+    {
+      "level": 2,
+      "title": "items_count",
+      "text": "integer Количество товаров в заказе."
+    },
+    {
+      "level": 2,
+      "title": "total_price",
+      "text": "object Общая стоимость заказа. Объект, который содержит поля: •amount (string) — стоимость в сотых долях единицы валюты. •currency (object) — валюта. Объект, содержащий поля: •id (integer) — идентификатор валюты; •name(string) — обозначение валюты; •text (string) — строковое представление стоимости заказа."
+    },
+    {
+      "level": 2,
+      "title": "display_order_id",
+      "text": "string Номер заказа, состоящий из идентификатора покупателя и идентификатора заказа."
+    },
+    {
+      "level": 2,
+      "title": "comment",
+      "text": "string Комментарий к заказу."
+    },
+    {
+      "level": 2,
+      "title": "preview_order_items",
+      "text": "Array Массив объектов, описывающих товары. Возвращается не больше 5 случайных товаров заказа."
+    },
+    {
+      "level": 2,
+      "title": "delivery",
+      "text": "object Информация о доставке. Объект, который содержит поля: •address (string) — адрес доставки. •type (string) — тип доставки. •track_number (string) — трек-номер для отслеживания заказа. •track_link (string) — ссылка для отслеживания заказа по трек-номеру. •delivery_point (object) — информация о пункте выдачи."
+    },
+    {
+      "level": 2,
+      "title": "recipient",
+      "text": "object Информация о покупателе. Объект, который содержит поля: •name (string) — имя покупателя. •phone (string) — номер покупателя. •display_text (string) — строковое представление информации о покупателе."
+    }
+  ],
+  "contentText": "Объект, содержащий информацию о заказе. id (integer): Идентификатор заказа. group_id (integer): Идентификатор сообщества. user_id (integer): Идентификатор покупателя. date (integer): Дата создания заказа в формате Unixtime. variants_grouping_id (integer): Идентификатор группы вариантов. is_main_variant (bool): Является ли вариант основным. property_values (array): Массив объектов, каждый из которых может содержать поля: •variant_id (integer) — идентификатор варианта; •variant_name (string) — название варианта; •property_name (string) — название свойства. cart_quantity (integer): Количество товара в корзине. status (integer): Статус заказа: •0 - Новый, •1 - Согласуется, •2 - Собирается, •3 - Доставляется, •4 - Выполнен, •5 - Отменен, •6 - Возвращен. items_count (integer): Количество товаров в заказе. total_price (object): Общая стоимость заказа. Объект, который содержит поля: •amount (string) — стоимость в сотых долях единицы валюты. •currency (object) — валюта. Объект, содержащий поля: •id (integer) — идентификатор валюты; •name(string) — обозначение валюты; •text (string) — строковое представление стоимости заказа. display_order_id (string): Номер заказа, состоящий из идентификатора покупателя и идентификатора заказа. comment (string): Комментарий к заказу. preview_order_items (Array): Массив объектов, описывающих товары. Возвращается не больше 5 случайных товаров заказа. delivery (object): Информация о доставке. Объект, который содержит поля: •address (string) — адрес доставки. •type (string) — тип доставки. •track_number (string) — трек-номер для отслеживания заказа. •track_link (string) — ссылка для отслеживания заказа по трек-номеру. •delivery_point (object) — информация о пункте выдачи. recipient (object): Информация о покупателе. Объект, который содержит поля: •name (string) — имя покупателя. •phone (string) — номер покупателя. •display_text (string) — строковое представление информации о покупателе."
+}

@@ -1,0 +1,41 @@
+{
+  "id": "button",
+  "url": "https://dev.vk.com/ru/reference/objects/button",
+  "title": "Cправочник API | Объекты | Вспомогательные объекты и наборы значений | Кнопка | VK для разработчиков",
+  "h1": "Кнопка",
+  "group": "Вспомогательные объекты и наборы значений",
+  "description": "Объект button, описывающий информацию о кнопке, содержит следующие поля:",
+  "fields": [
+    {
+      "name": "title",
+      "type": "string",
+      "section": "Версии ниже 5.60",
+      "description": "Название кнопки."
+    },
+    {
+      "name": "url",
+      "type": "string",
+      "section": "Версии ниже 5.60",
+      "description": "URL, на который ведет кнопка."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "title",
+      "text": "string Название кнопки."
+    },
+    {
+      "level": 2,
+      "title": "action",
+      "text": "object Действие для кнопки. Объект, который содержит следующие поля: •type (string) — тип действия. Возможные значения: •open_url — открыть адрес из поля url; •url (string) — URL для перехода."
+    },
+    {
+      "level": 2,
+      "title": "Версии ниже 5.60",
+      "text": ""
+    }
+  ],
+  "contentText": "Объект button, описывающий информацию о кнопке, содержит следующие поля: title (string): Название кнопки. url (string): URL, на который ведет кнопка."
+}

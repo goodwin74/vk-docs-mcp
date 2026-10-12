@@ -1,0 +1,133 @@
+{
+  "id": "audio",
+  "url": "https://dev.vk.com/ru/reference/objects/audio",
+  "title": "Cправочник API | Объекты | Медиаконтент и вложения | Аудиозапись | VK для разработчиков",
+  "h1": "Аудиозапись",
+  "group": "Медиаконтент и вложения",
+  "description": "Объект, описывающий аудиозапись, содержит следующие поля:",
+  "fields": [
+    {
+      "name": "aid",
+      "type": "integer",
+      "section": "Версии API ниже 5.0",
+      "description": "Идентификатор аудиозаписи"
+    },
+    {
+      "name": "owner_id",
+      "type": "integer",
+      "section": "Версии API ниже 5.0",
+      "description": "Идентификатор владельца аудиозаписи."
+    },
+    {
+      "name": "artist",
+      "type": "string",
+      "section": "Версии API ниже 5.0",
+      "description": "Исполнитель."
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "section": "Версии API ниже 5.0",
+      "description": "Название композиции."
+    },
+    {
+      "name": "duration",
+      "type": "integer",
+      "section": "Версии API ниже 5.0",
+      "description": "Длительность аудиозаписи в секундах."
+    },
+    {
+      "name": "url",
+      "type": "string",
+      "section": "Версии API ниже 5.0",
+      "description": "Ссылка на mp3."
+    },
+    {
+      "name": "lyrics_id",
+      "type": "integer",
+      "section": "Версии API ниже 5.0",
+      "description": "Идентификатор текста аудиозаписи (если доступно)."
+    },
+    {
+      "name": "album",
+      "type": "integer",
+      "section": "Версии API ниже 5.0",
+      "description": "Идентификатор альбома, в котором находится аудиозапись (если присвоен)."
+    },
+    {
+      "name": "genre",
+      "type": "integer",
+      "section": "Версии API ниже 5.0",
+      "description": "Идентификатор жанра из списка аудио жанров."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "id",
+      "text": "integer Идентификатор аудиозаписи."
+    },
+    {
+      "level": 2,
+      "title": "owner_id",
+      "text": "integer Идентификатор владельца аудиозаписи."
+    },
+    {
+      "level": 2,
+      "title": "artist",
+      "text": "string Исполнитель."
+    },
+    {
+      "level": 2,
+      "title": "title",
+      "text": "string Название композиции."
+    },
+    {
+      "level": 2,
+      "title": "duration",
+      "text": "integer Длительность аудиозаписи в секундах."
+    },
+    {
+      "level": 2,
+      "title": "url",
+      "text": "string Ссылка на mp3."
+    },
+    {
+      "level": 2,
+      "title": "lyrics_id",
+      "text": "integer Идентификатор текста аудиозаписи (если доступно)."
+    },
+    {
+      "level": 2,
+      "title": "album_id",
+      "text": "integer Идентификатор альбома, в котором находится аудиозапись (если присвоен)."
+    },
+    {
+      "level": 2,
+      "title": "genre_id",
+      "text": "integer Идентификатор жанра из списка аудио жанров."
+    },
+    {
+      "level": 2,
+      "title": "date",
+      "text": "integer Дата добавления."
+    },
+    {
+      "level": 2,
+      "title": "no_search",
+      "text": "integer 1, если включена опция «Не выводить при поиске». Если опция отключена, поле не возвращается."
+    },
+    {
+      "level": 2,
+      "title": "is_hq",
+      "text": "integer 1, если аудио в высоком качестве."
+    },
+    {
+      "level": 2,
+      "title": "Версии API ниже 5.0",
+      "text": "Для версий ниже 5.0 названия полей и их структура отличаются от приведенных выше. Мы не рекомендуем использовать версии ниже 5.0."
+    }
+  ],
+  "contentText": "Объект, описывающий аудиозапись, содержит следующие поля: aid (integer): Идентификатор аудиозаписи owner_id (integer): Идентификатор владельца аудиозаписи. artist (string): Исполнитель. title (string): Название композиции. duration (integer): Длительность аудиозаписи в секундах. url (string): Ссылка на mp3. lyrics_id (integer): Идентификатор текста аудиозаписи (если доступно). album (integer): Идентификатор альбома, в котором находится аудиозапись (если присвоен). genre (integer): Идентификатор жанра из списка аудио жанров."
+}

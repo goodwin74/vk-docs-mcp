@@ -1,0 +1,46 @@
+{
+  "id": "price",
+  "url": "https://dev.vk.com/ru/reference/objects/price",
+  "title": "Cправочник API | Объекты | Вспомогательные объекты и наборы значений | Цена | VK для разработчиков",
+  "h1": "Цена",
+  "group": "Вспомогательные объекты и наборы значений",
+  "description": "Объект price, описывающий цену, содержит следующие поля:",
+  "fields": [
+    {
+      "name": "currency",
+      "type": "currency",
+      "section": "amount",
+      "description": "Объект currency."
+    },
+    {
+      "name": "currency",
+      "type": "currency",
+      "section": "text",
+      "description": "Объект currency, описывающий информацию о валюте, содержит следующие поля: • id – идентификатор валюты. • name – буквенное обозначение валюты."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "amount",
+      "text": "Целочисленное значение цены, умноженное на 100."
+    },
+    {
+      "level": 2,
+      "title": "currency",
+      "text": "Объект currency."
+    },
+    {
+      "level": 2,
+      "title": "text",
+      "text": "Строка с локализованной ценой и валютой."
+    },
+    {
+      "level": 2,
+      "title": "Объект currency",
+      "text": "Объект currency, описывающий информацию о валюте, содержит следующие поля: • id – идентификатор валюты. • name – буквенное обозначение валюты."
+    }
+  ],
+  "contentText": "Объект price, описывающий цену, содержит следующие поля: currency (currency): Объект currency. currency (currency): Объект currency, описывающий информацию о валюте, содержит следующие поля: • id – идентификатор валюты. • name – буквенное обозначение валюты."
+}

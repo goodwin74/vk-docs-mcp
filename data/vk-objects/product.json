@@ -1,0 +1,25 @@
+{
+  "id": "product",
+  "url": "https://dev.vk.com/ru/reference/objects/product",
+  "title": "Cправочник API | Объекты | Вспомогательные объекты и наборы значений | Продукт | VK для разработчиков",
+  "h1": "Продукт",
+  "group": "Вспомогательные объекты и наборы значений",
+  "description": "Объект product, описывающий информацию о продукте, содержит следующие поля:",
+  "fields": [
+    {
+      "name": "price",
+      "type": "price",
+      "section": "",
+      "description": "Объект price, описывающий цену."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "price",
+      "text": "Объект price, описывающий цену."
+    }
+  ],
+  "contentText": "Объект product, описывающий информацию о продукте, содержит следующие поля: price (price): Объект price, описывающий цену."
+}

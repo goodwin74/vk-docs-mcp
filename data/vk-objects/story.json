@@ -1,0 +1,256 @@
+{
+  "id": "story",
+  "url": "https://dev.vk.com/ru/reference/objects/story",
+  "title": "Cправочник API | Объекты | Медиаконтент и вложения | История | VK для разработчиков",
+  "h1": "История",
+  "group": "Медиаконтент и вложения",
+  "description": "Объект, описывающий историю, содержит следующие поля:",
+  "fields": [
+    {
+      "name": "id",
+      "type": "integer",
+      "section": "",
+      "description": "Идентификатор истории."
+    },
+    {
+      "name": "owner_id",
+      "type": "integer",
+      "section": "",
+      "description": "Идентификатор владельца истории."
+    },
+    {
+      "name": "date",
+      "type": "integer",
+      "section": "",
+      "description": "Дата добавления в Unixtime."
+    },
+    {
+      "name": "expires_at",
+      "type": "integer",
+      "section": "",
+      "description": "Дата в Unixtime, когда история истечёт."
+    },
+    {
+      "name": "is_expired",
+      "type": "boolean",
+      "section": "",
+      "description": "true, если срок хранения истории истёк. В этом случае объект истории содержит только поля id, owner_id, date, expires_at, is_expired."
+    },
+    {
+      "name": "is_deleted",
+      "type": "boolean",
+      "section": "",
+      "description": "true, если история удалена или не существует. В этом случае объект истории содержит только поля id, owner_id, is_deleted."
+    },
+    {
+      "name": "can_see",
+      "type": "integer",
+      "section": "",
+      "description": "Информация о том, может ли пользователь просмотреть историю (0 — нет, 1 — да). Если can_see = 0, объект истории содержит только поля id, owner_id, date, expires_at, can_see, type."
+    },
+    {
+      "name": "seen",
+      "type": "integer",
+      "section": "",
+      "description": "1, если история просмотрена текущим пользователем."
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "section": "",
+      "description": "Тип истории. Возможные значения: •photo — фотография; •video — видеозапись."
+    },
+    {
+      "name": "photo",
+      "type": "object",
+      "section": "",
+      "description": "Фотография из истории, если тип истории — photo. Подробнее о полях объекта photo — в разделе Фотография."
+    },
+    {
+      "name": "video",
+      "type": "object",
+      "section": "",
+      "description": "Видеозапись из истории, если тип истории — video. Подробнее о полях объекта video — в разделе Видеозапись."
+    },
+    {
+      "name": "link",
+      "type": "object",
+      "section": "",
+      "description": "Ссылка для перехода из истории. Объект, который содержит поля: •text (string) — текст ссылки; •url (string) — URL для перехода."
+    },
+    {
+      "name": "parent_story_owner_id",
+      "type": "integer",
+      "section": "",
+      "description": "Идентификатор пользователя, загрузившего историю, ответом на которую является текущая."
+    },
+    {
+      "name": "parent_story_id",
+      "type": "integer",
+      "section": "",
+      "description": "Идентификатор истории, ответом на которую является текущая."
+    },
+    {
+      "name": "parent_story",
+      "type": "object",
+      "section": "",
+      "description": "Объект родительской истории."
+    },
+    {
+      "name": "replies",
+      "type": "object",
+      "section": "",
+      "description": "Информация об ответах на текущую историю. Объект, который содержит поля: •count (integer) — число ответов; •new (integer) — число новых ответов. Возвращается только для историй текущего пользователя. Получить истории-ответы можно методом stories.getReplies."
+    },
+    {
+      "name": "can_reply",
+      "type": "integer",
+      "section": "",
+      "description": "Информация о том, может ли пользователь ответить на историю (0 — нет, 1 — да)."
+    },
+    {
+      "name": "can_share",
+      "type": "integer",
+      "section": "",
+      "description": "Информация о том, может ли пользователь расшарить историю (0 — нет, 1 — да)."
+    },
+    {
+      "name": "can_comment",
+      "type": "integer",
+      "section": "",
+      "description": "Информация о том, может ли пользователь комментировать историю (0 — нет, 1 — да)."
+    },
+    {
+      "name": "clickable_stickers",
+      "type": "object",
+      "section": "",
+      "description": "Объект кликабельного стикера."
+    },
+    {
+      "name": "views",
+      "type": "integer",
+      "section": "",
+      "description": "Число просмотров."
+    },
+    {
+      "name": "access_key",
+      "type": "string",
+      "section": "",
+      "description": "Ключ доступа для приватного объекта."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "id",
+      "text": "integer Идентификатор истории."
+    },
+    {
+      "level": 2,
+      "title": "owner_id",
+      "text": "integer Идентификатор владельца истории."
+    },
+    {
+      "level": 2,
+      "title": "date",
+      "text": "integer Дата добавления в Unixtime."
+    },
+    {
+      "level": 2,
+      "title": "expires_at",
+      "text": "integer Дата в Unixtime, когда история истечёт."
+    },
+    {
+      "level": 2,
+      "title": "is_expired",
+      "text": "boolean true, если срок хранения истории истёк. В этом случае объект истории содержит только поля id, owner_id, date, expires_at, is_expired."
+    },
+    {
+      "level": 2,
+      "title": "is_deleted",
+      "text": "boolean true, если история удалена или не существует. В этом случае объект истории содержит только поля id, owner_id, is_deleted."
+    },
+    {
+      "level": 2,
+      "title": "can_see",
+      "text": "integer Информация о том, может ли пользователь просмотреть историю (0 — нет, 1 — да). Если can_see = 0, объект истории содержит только поля id, owner_id, date, expires_at, can_see, type."
+    },
+    {
+      "level": 2,
+      "title": "seen",
+      "text": "integer 1, если история просмотрена текущим пользователем."
+    },
+    {
+      "level": 2,
+      "title": "type",
+      "text": "string Тип истории. Возможные значения: •photo — фотография; •video — видеозапись."
+    },
+    {
+      "level": 2,
+      "title": "photo",
+      "text": "object Фотография из истории, если тип истории — photo. Подробнее о полях объекта photo — в разделе Фотография."
+    },
+    {
+      "level": 2,
+      "title": "video",
+      "text": "object Видеозапись из истории, если тип истории — video. Подробнее о полях объекта video — в разделе Видеозапись."
+    },
+    {
+      "level": 2,
+      "title": "link",
+      "text": "object Ссылка для перехода из истории. Объект, который содержит поля: •text (string) — текст ссылки; •url (string) — URL для перехода."
+    },
+    {
+      "level": 2,
+      "title": "parent_story_owner_id",
+      "text": "integer Идентификатор пользователя, загрузившего историю, ответом на которую является текущая."
+    },
+    {
+      "level": 2,
+      "title": "parent_story_id",
+      "text": "integer Идентификатор истории, ответом на которую является текущая."
+    },
+    {
+      "level": 2,
+      "title": "parent_story",
+      "text": "object Объект родительской истории."
+    },
+    {
+      "level": 2,
+      "title": "replies",
+      "text": "object Информация об ответах на текущую историю. Объект, который содержит поля: •count (integer) — число ответов; •new (integer) — число новых ответов. Возвращается только для историй текущего пользователя. Получить истории-ответы можно методом stories.getReplies."
+    },
+    {
+      "level": 2,
+      "title": "can_reply",
+      "text": "integer Информация о том, может ли пользователь ответить на историю (0 — нет, 1 — да)."
+    },
+    {
+      "level": 2,
+      "title": "can_share",
+      "text": "integer Информация о том, может ли пользователь расшарить историю (0 — нет, 1 — да)."
+    },
+    {
+      "level": 2,
+      "title": "can_comment",
+      "text": "integer Информация о том, может ли пользователь комментировать историю (0 — нет, 1 — да)."
+    },
+    {
+      "level": 2,
+      "title": "clickable_stickers",
+      "text": "object Объект кликабельного стикера."
+    },
+    {
+      "level": 2,
+      "title": "views",
+      "text": "integer Число просмотров."
+    },
+    {
+      "level": 2,
+      "title": "access_key",
+      "text": "string Ключ доступа для приватного объекта."
+    }
+  ],
+  "contentText": "Объект, описывающий историю, содержит следующие поля: id (integer): Идентификатор истории. owner_id (integer): Идентификатор владельца истории. date (integer): Дата добавления в Unixtime. expires_at (integer): Дата в Unixtime, когда история истечёт. is_expired (boolean): true, если срок хранения истории истёк. В этом случае объект истории содержит только поля id, owner_id, date, expires_at, is_expired. is_deleted (boolean): true, если история удалена или не существует. В этом случае объект истории содержит только поля id, owner_id, is_deleted. can_see (integer): Информация о том, может ли пользователь просмотреть историю (0 — нет, 1 — да). Если can_see = 0, объект истории содержит только поля id, owner_id, date, expires_at, can_see, type. seen (integer): 1, если история просмотрена текущим пользователем. type (string): Тип истории. Возможные значения: •photo — фотография; •video — видеозапись. photo (object): Фотография из истории, если тип истории — photo. Подробнее о полях объекта photo — в разделе Фотография. video (object): Видеозапись из истории, если тип истории — video. Подробнее о полях объекта video — в разделе Видеозапись. link (object): Ссылка для перехода из истории. Объект, который содержит поля: •text (string) — текст ссылки; •url (string) — URL для перехода. parent_story_owner_id (integer): Идентификатор пользователя, загрузившего историю, ответом на которую является текущая. parent_story_id (integer): Идентификатор истории, ответом на которую является текущая. parent_story (object): Объект родительской истории. replies (object): Информация об ответах на текущую историю. Объект, который содержит поля: •count (integer) — число ответов; •new (integer) — число новых ответов. Возвращается только для историй текущего пользователя. Получить истории-ответы можно методом stories.getReplies. can_reply (integer): Информация о том, может ли пользователь ответить на историю (0 — нет, 1 — да). can_share (integer): Информация о том, может ли пользователь расшарить историю (0 — нет, 1 — да). can_comment (integer): Информация о том, может ли пользователь комментировать историю (0 — нет, 1 — да). clickable_stickers (object): Объект кликабельного стикера. views (integer): Число просмотров. access_key (string): Ключ доступа для приватного объекта."
+}

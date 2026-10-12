@@ -1,0 +1,91 @@
+{
+  "id": "market-album",
+  "url": "https://dev.vk.com/ru/reference/objects/market-album",
+  "title": "Cправочник API | Объекты | Основные объекты | Подборка товаров | VK для разработчиков",
+  "h1": "Подборка товаров",
+  "group": "Основные объекты",
+  "description": "Объект, описывающий подборку товаров, содержит следующие поля:",
+  "fields": [
+    {
+      "name": "id",
+      "type": "integer",
+      "section": "",
+      "description": "Идентификатор подборки."
+    },
+    {
+      "name": "owner_id",
+      "type": "integer",
+      "section": "",
+      "description": "Идентификатор владельца подборки."
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "section": "",
+      "description": "Название подборки."
+    },
+    {
+      "name": "is_main",
+      "type": "boolean",
+      "section": "",
+      "description": "Является ли подборка основной."
+    },
+    {
+      "name": "is_hidden",
+      "type": "boolean",
+      "section": "",
+      "description": "Является ли подборка скрытой."
+    },
+    {
+      "name": "photo",
+      "type": "object",
+      "section": "",
+      "description": "Обложка подборки, объект, описывающий фотографию."
+    },
+    {
+      "name": "count",
+      "type": "integer",
+      "section": "",
+      "description": "Число товаров в подборке."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "id",
+      "text": "integer Идентификатор подборки."
+    },
+    {
+      "level": 2,
+      "title": "owner_id",
+      "text": "integer Идентификатор владельца подборки."
+    },
+    {
+      "level": 2,
+      "title": "title",
+      "text": "string Название подборки."
+    },
+    {
+      "level": 2,
+      "title": "is_main",
+      "text": "boolean Является ли подборка основной."
+    },
+    {
+      "level": 2,
+      "title": "is_hidden",
+      "text": "boolean Является ли подборка скрытой."
+    },
+    {
+      "level": 2,
+      "title": "photo",
+      "text": "object Обложка подборки, объект, описывающий фотографию."
+    },
+    {
+      "level": 2,
+      "title": "count",
+      "text": "integer Число товаров в подборке."
+    }
+  ],
+  "contentText": "Объект, описывающий подборку товаров, содержит следующие поля: id (integer): Идентификатор подборки. owner_id (integer): Идентификатор владельца подборки. title (string): Название подборки. is_main (boolean): Является ли подборка основной. is_hidden (boolean): Является ли подборка скрытой. photo (object): Обложка подборки, объект, описывающий фотографию. count (integer): Число товаров в подборке."
+}

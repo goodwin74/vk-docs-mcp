@@ -1,0 +1,69 @@
+{
+  "id": "graffiti",
+  "url": "https://dev.vk.com/ru/reference/objects/graffiti",
+  "title": "Cправочник API | Объекты | Медиаконтент и вложения | Граффити | VK для разработчиков",
+  "h1": "Граффити",
+  "group": "Медиаконтент и вложения",
+  "description": "Объект, описывающий граффити, содержит следующие поля:",
+  "fields": [
+    {
+      "name": "id",
+      "type": "integer",
+      "section": "",
+      "description": "Идентификатор граффити."
+    },
+    {
+      "name": "owner_id",
+      "type": "integer",
+      "section": "",
+      "description": "Идентификатор пользователя, загрузившего графити."
+    },
+    {
+      "name": "url",
+      "type": "string",
+      "section": "",
+      "description": "Адрес граффити, по которому его можно загрузить."
+    },
+    {
+      "name": "width",
+      "type": "integer",
+      "section": "",
+      "description": "Ширина изображения в px."
+    },
+    {
+      "name": "height",
+      "type": "integer",
+      "section": "",
+      "description": "Высота изображения в px."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "id",
+      "text": "integer Идентификатор граффити."
+    },
+    {
+      "level": 2,
+      "title": "owner_id",
+      "text": "integer Идентификатор пользователя, загрузившего графити."
+    },
+    {
+      "level": 2,
+      "title": "url",
+      "text": "string Адрес граффити, по которому его можно загрузить."
+    },
+    {
+      "level": 2,
+      "title": "width",
+      "text": "integer Ширина изображения в px."
+    },
+    {
+      "level": 2,
+      "title": "height",
+      "text": "integer Высота изображения в px."
+    }
+  ],
+  "contentText": "Объект, описывающий граффити, содержит следующие поля: id (integer): Идентификатор граффити. owner_id (integer): Идентификатор пользователя, загрузившего графити. url (string): Адрес граффити, по которому его можно загрузить. width (integer): Ширина изображения в px. height (integer): Высота изображения в px."
+}

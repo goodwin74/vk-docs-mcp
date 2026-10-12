@@ -1,0 +1,135 @@
+{
+  "id": "topic",
+  "url": "https://dev.vk.com/ru/reference/objects/topic",
+  "title": "Cправочник API | Объекты | Основные объекты | Обсуждение | VK для разработчиков",
+  "h1": "Обсуждение",
+  "group": "Основные объекты",
+  "description": "Объект, описывающий обсуждение в сообществе, содержит следующие поля:",
+  "fields": [
+    {
+      "name": "id",
+      "type": "integer",
+      "section": "",
+      "description": "Идентификатор обсуждения."
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "section": "",
+      "description": "Название обсуждения."
+    },
+    {
+      "name": "created",
+      "type": "integer",
+      "section": "",
+      "description": "Дата создания обсуждения в Unixtime."
+    },
+    {
+      "name": "created_by",
+      "type": "integer",
+      "section": "",
+      "description": "Идентификатор создателя обсуждения."
+    },
+    {
+      "name": "updated",
+      "type": "integer",
+      "section": "",
+      "description": "Дата последнего обновления обсуждения в Unixtime."
+    },
+    {
+      "name": "updated_by",
+      "type": "integer",
+      "section": "",
+      "description": "Идентификатор автора последнего комментария в обсуждении."
+    },
+    {
+      "name": "is_closed",
+      "type": "integer",
+      "section": "",
+      "description": "Информация о том, закрыто ли обсуждение. Возможные значения: •0 — не закрыто; •1 — закрыто."
+    },
+    {
+      "name": "is_fixed",
+      "type": "integer",
+      "section": "",
+      "description": "Информация о том, закреплено ли обсуждение наверху списка. Возможные значения: •0 — не закреплено; •1 — закреплено."
+    },
+    {
+      "name": "comments",
+      "type": "integer",
+      "section": "",
+      "description": "Число комментариев в обсуждении."
+    },
+    {
+      "name": "first_comment",
+      "type": "string",
+      "section": "",
+      "description": "(для preview = 1). Текст первого комментария в обсуждении."
+    },
+    {
+      "name": "last_comment",
+      "type": "string",
+      "section": "",
+      "description": "(для preview = 2). Текст последнего комментария в обсуждении."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "id",
+      "text": "integer Идентификатор обсуждения."
+    },
+    {
+      "level": 2,
+      "title": "title",
+      "text": "string Название обсуждения."
+    },
+    {
+      "level": 2,
+      "title": "created",
+      "text": "integer Дата создания обсуждения в Unixtime."
+    },
+    {
+      "level": 2,
+      "title": "created_by",
+      "text": "integer Идентификатор создателя обсуждения."
+    },
+    {
+      "level": 2,
+      "title": "updated",
+      "text": "integer Дата последнего обновления обсуждения в Unixtime."
+    },
+    {
+      "level": 2,
+      "title": "updated_by",
+      "text": "integer Идентификатор автора последнего комментария в обсуждении."
+    },
+    {
+      "level": 2,
+      "title": "is_closed",
+      "text": "integer Информация о том, закрыто ли обсуждение. Возможные значения: •0 — не закрыто; •1 — закрыто."
+    },
+    {
+      "level": 2,
+      "title": "is_fixed",
+      "text": "integer Информация о том, закреплено ли обсуждение наверху списка. Возможные значения: •0 — не закреплено; •1 — закреплено."
+    },
+    {
+      "level": 2,
+      "title": "comments",
+      "text": "integer Число комментариев в обсуждении."
+    },
+    {
+      "level": 2,
+      "title": "first_comment",
+      "text": "string (для preview = 1). Текст первого комментария в обсуждении."
+    },
+    {
+      "level": 2,
+      "title": "last_comment",
+      "text": "string (для preview = 2). Текст последнего комментария в обсуждении."
+    }
+  ],
+  "contentText": "Объект, описывающий обсуждение в сообществе, содержит следующие поля: id (integer): Идентификатор обсуждения. title (string): Название обсуждения. created (integer): Дата создания обсуждения в Unixtime. created_by (integer): Идентификатор создателя обсуждения. updated (integer): Дата последнего обновления обсуждения в Unixtime. updated_by (integer): Идентификатор автора последнего комментария в обсуждении. is_closed (integer): Информация о том, закрыто ли обсуждение. Возможные значения: •0 — не закрыто; •1 — закрыто. is_fixed (integer): Информация о том, закреплено ли обсуждение наверху списка. Возможные значения: •0 — не закреплено; •1 — закреплено. comments (integer): Число комментариев в обсуждении. first_comment (string): (для preview = 1). Текст первого комментария в обсуждении. last_comment (string): (для preview = 2). Текст последнего комментария в обсуждении."
+}

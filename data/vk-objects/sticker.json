@@ -1,0 +1,51 @@
+{
+  "id": "sticker",
+  "url": "https://dev.vk.com/ru/reference/objects/sticker",
+  "title": "Cправочник API | Объекты | Медиаконтент и вложения | Стикер | VK для разработчиков",
+  "h1": "Стикер",
+  "group": "Медиаконтент и вложения",
+  "description": "Объект, описывающий стикер, содержит следующие поля:",
+  "fields": [
+    {
+      "name": "images",
+      "type": "array",
+      "section": "Версии API ниже 5.190",
+      "description": "Изображения для стикера (с прозрачным фоном). Массив, каждый объект в котором содержит поля: •url (string) — URL копии изображения. •width (integer) — ширина копии в пикселях. •height (integer) — высота копии в пикселях."
+    },
+    {
+      "name": "images_with_background",
+      "type": "array",
+      "section": "Версии API ниже 5.190",
+      "description": "Изображения для стикера (с непрозрачным фоном). Массив, каждый объект в котором содержит поля: •url (string) — URL копии изображения. •width (integer) — ширина копии в пикселях. •height (integer) — высота копии в пикселях."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "product_id",
+      "text": "integer Идентификатор набора."
+    },
+    {
+      "level": 2,
+      "title": "sticker_id",
+      "text": "integer Идентификатор стикера."
+    },
+    {
+      "level": 2,
+      "title": "animation_url",
+      "text": "string URL анимации стикера."
+    },
+    {
+      "level": 2,
+      "title": "is_allowed",
+      "text": "boolean Информация о том, доступен ли стикер."
+    },
+    {
+      "level": 2,
+      "title": "Версии API ниже 5.190",
+      "text": ""
+    }
+  ],
+  "contentText": "Объект, описывающий стикер, содержит следующие поля: images (array): Изображения для стикера (с прозрачным фоном). Массив, каждый объект в котором содержит поля: •url (string) — URL копии изображения. •width (integer) — ширина копии в пикселях. •height (integer) — высота копии в пикселях. images_with_background (array): Изображения для стикера (с непрозрачным фоном). Массив, каждый объект в котором содержит поля: •url (string) — URL копии изображения. •width (integer) — ширина копии в пикселях. •height (integer) — высота копии в пикселях."
+}

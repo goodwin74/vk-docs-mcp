@@ -1,0 +1,224 @@
+{
+  "objects": [
+    {
+      "id": "user",
+      "title": "Пользователь",
+      "url": "https://dev.vk.com/ru/reference/objects/user"
+    },
+    {
+      "id": "group",
+      "title": "Сообщество",
+      "url": "https://dev.vk.com/ru/reference/objects/group"
+    },
+    {
+      "id": "post",
+      "title": "Запись на стене",
+      "url": "https://dev.vk.com/ru/reference/objects/post"
+    },
+    {
+      "id": "comment",
+      "title": "Комментарий на стене",
+      "url": "https://dev.vk.com/ru/reference/objects/comment"
+    },
+    {
+      "id": "message",
+      "title": "Личное сообщение",
+      "url": "https://dev.vk.com/ru/reference/objects/message"
+    },
+    {
+      "id": "conversation",
+      "title": "Беседа",
+      "url": "https://dev.vk.com/ru/reference/objects/conversation"
+    },
+    {
+      "id": "chat",
+      "title": "Чат",
+      "url": "https://dev.vk.com/ru/reference/objects/chat"
+    },
+    {
+      "id": "wiki-page",
+      "title": "Вики-страница",
+      "url": "https://dev.vk.com/ru/reference/objects/wiki-page"
+    },
+    {
+      "id": "market-item",
+      "title": "Товар",
+      "url": "https://dev.vk.com/ru/reference/objects/market-item"
+    },
+    {
+      "id": "market-album",
+      "title": "Подборка товаров",
+      "url": "https://dev.vk.com/ru/reference/objects/market-album"
+    },
+    {
+      "id": "market-order",
+      "title": "Заказ",
+      "url": "https://dev.vk.com/ru/reference/objects/market-order"
+    },
+    {
+      "id": "topic",
+      "title": "Обсуждение",
+      "url": "https://dev.vk.com/ru/reference/objects/topic"
+    },
+    {
+      "id": "comment-topic",
+      "title": "Комментарий в обсуждении",
+      "url": "https://dev.vk.com/ru/reference/objects/comment-topic"
+    },
+    {
+      "id": "app",
+      "title": "Приложение",
+      "url": "https://dev.vk.com/ru/reference/objects/app"
+    },
+    {
+      "id": "poll",
+      "title": "Опрос",
+      "url": "https://dev.vk.com/ru/reference/objects/poll"
+    },
+    {
+      "id": "stats-format",
+      "title": "Данные статистики",
+      "url": "https://dev.vk.com/ru/reference/objects/stats-format"
+    },
+    {
+      "id": "address",
+      "title": "Адрес",
+      "url": "https://dev.vk.com/ru/reference/objects/address"
+    },
+    {
+      "id": "photo",
+      "title": "Фотография",
+      "url": "https://dev.vk.com/ru/reference/objects/photo"
+    },
+    {
+      "id": "audio",
+      "title": "Аудиозапись",
+      "url": "https://dev.vk.com/ru/reference/objects/audio"
+    },
+    {
+      "id": "video",
+      "title": "Видеозапись",
+      "url": "https://dev.vk.com/ru/reference/objects/video"
+    },
+    {
+      "id": "doc",
+      "title": "Файл",
+      "url": "https://dev.vk.com/ru/reference/objects/doc"
+    },
+    {
+      "id": "attachments-wall",
+      "title": "Медиавложения в записях на стене",
+      "url": "https://dev.vk.com/ru/reference/objects/attachments-wall"
+    },
+    {
+      "id": "attachments-message",
+      "title": "Медиавложения в личных сообщениях",
+      "url": "https://dev.vk.com/ru/reference/objects/attachments-message"
+    },
+    {
+      "id": "link",
+      "title": "Прикрепленная ссылка",
+      "url": "https://dev.vk.com/ru/reference/objects/link"
+    },
+    {
+      "id": "sticker",
+      "title": "Стикер",
+      "url": "https://dev.vk.com/ru/reference/objects/sticker"
+    },
+    {
+      "id": "gift-item",
+      "title": "Подарок",
+      "url": "https://dev.vk.com/ru/reference/objects/gift-item"
+    },
+    {
+      "id": "geo",
+      "title": "Геометка",
+      "url": "https://dev.vk.com/ru/reference/objects/geo"
+    },
+    {
+      "id": "app-widget",
+      "title": "Виджеты приложений сообществ",
+      "url": "https://dev.vk.com/ru/reference/objects/app-widget"
+    },
+    {
+      "id": "story",
+      "title": "История",
+      "url": "https://dev.vk.com/ru/reference/objects/story"
+    },
+    {
+      "id": "story-feed-item",
+      "title": "Блок ленты историй",
+      "url": "https://dev.vk.com/ru/reference/objects/story-feed-item"
+    },
+    {
+      "id": "clickable-sticker",
+      "title": "Кликабельный стикер в истории",
+      "url": "https://dev.vk.com/ru/reference/objects/clickable-sticker"
+    },
+    {
+      "id": "graffiti",
+      "title": "Граффити",
+      "url": "https://dev.vk.com/ru/reference/objects/graffiti"
+    },
+    {
+      "id": "call",
+      "title": "Звонок",
+      "url": "https://dev.vk.com/ru/reference/objects/call"
+    },
+    {
+      "id": "audio-genres",
+      "title": "Жанры аудиозаписей",
+      "url": "https://dev.vk.com/ru/reference/objects/audio-genres"
+    },
+    {
+      "id": "post-source",
+      "title": "Источник записи",
+      "url": "https://dev.vk.com/ru/reference/objects/post-source"
+    },
+    {
+      "id": "button",
+      "title": "Кнопка",
+      "url": "https://dev.vk.com/ru/reference/objects/button"
+    },
+    {
+      "id": "place",
+      "title": "Место",
+      "url": "https://dev.vk.com/ru/reference/objects/place"
+    },
+    {
+      "id": "privacy",
+      "title": "Настройки приватности",
+      "url": "https://dev.vk.com/ru/reference/objects/privacy"
+    },
+    {
+      "id": "application",
+      "title": "Приложение из магазина",
+      "url": "https://dev.vk.com/ru/reference/objects/application"
+    },
+    {
+      "id": "product",
+      "title": "Продукт",
+      "url": "https://dev.vk.com/ru/reference/objects/product"
+    },
+    {
+      "id": "rating",
+      "title": "Рейтинг продукта",
+      "url": "https://dev.vk.com/ru/reference/objects/rating"
+    },
+    {
+      "id": "photo-sizes",
+      "title": "Формат описания размеров фотографии",
+      "url": "https://dev.vk.com/ru/reference/objects/photo-sizes"
+    },
+    {
+      "id": "price",
+      "title": "Цена",
+      "url": "https://dev.vk.com/ru/reference/objects/price"
+    },
+    {
+      "id": "podcast-episode",
+      "title": "Эпизод подкаста",
+      "url": "https://dev.vk.com/ru/reference/objects/podcast-episode"
+    }
+  ]
+}

@@ -1,0 +1,234 @@
+{
+  "id": "poll",
+  "url": "https://dev.vk.com/ru/reference/objects/poll",
+  "title": "Cправочник API | Объекты | Основные объекты | Опрос | VK для разработчиков",
+  "h1": "Опрос",
+  "group": "Основные объекты",
+  "description": "Объект, описывающий опрос, содержит следующие поля:",
+  "fields": [
+    {
+      "name": "id",
+      "type": "integer",
+      "section": "",
+      "description": "Идентификатор опроса для получения информации о нем через метод polls.getById."
+    },
+    {
+      "name": "owner_id",
+      "type": "integer",
+      "section": "",
+      "description": "Идентификатор владельца опроса."
+    },
+    {
+      "name": "created",
+      "type": "integer",
+      "section": "",
+      "description": "Дата создания в формате Unixtime."
+    },
+    {
+      "name": "question",
+      "type": "string",
+      "section": "",
+      "description": "Текст вопроса."
+    },
+    {
+      "name": "votes",
+      "type": "integer",
+      "section": "",
+      "description": "Количество голосов."
+    },
+    {
+      "name": "answers",
+      "type": "array",
+      "section": "",
+      "description": "Массив объектов, которые содержат информацию о вариантах ответа. Каждый объект содержит следующие поля: •id (integer) — идентификатор ответа; •text (string) — текст ответа; •votes (integer) — число проголосовавших за этот ответ; •rate (number) — рейтинг ответа."
+    },
+    {
+      "name": "anonymous",
+      "type": "boolean",
+      "section": "",
+      "description": "Является ли опрос анонимным."
+    },
+    {
+      "name": "multiple",
+      "type": "boolean",
+      "section": "",
+      "description": "Допускает ли опрос выбор нескольких вариантов ответа."
+    },
+    {
+      "name": "answer_ids",
+      "type": "array",
+      "section": "",
+      "description": "Идентификаторы вариантов ответа, выбранных текущим пользователем."
+    },
+    {
+      "name": "end_date",
+      "type": "integer",
+      "section": "",
+      "description": "Дата завершения опроса в Unixtime. 0, если опрос бессрочный."
+    },
+    {
+      "name": "closed",
+      "type": "boolean",
+      "section": "",
+      "description": "Является ли опрос завершенным."
+    },
+    {
+      "name": "is_board",
+      "type": "boolean",
+      "section": "",
+      "description": "Прикреплён ли опрос к обсуждению."
+    },
+    {
+      "name": "can_edit",
+      "type": "boolean",
+      "section": "",
+      "description": "Можно ли отредактировать опрос."
+    },
+    {
+      "name": "can_vote",
+      "type": "boolean",
+      "section": "",
+      "description": "Можно ли проголосовать в опросе."
+    },
+    {
+      "name": "can_report",
+      "type": "boolean",
+      "section": "",
+      "description": "Можно ли пожаловаться на опрос."
+    },
+    {
+      "name": "can_share",
+      "type": "boolean",
+      "section": "",
+      "description": "Можно ли поделиться опросом."
+    },
+    {
+      "name": "author_id",
+      "type": "integer",
+      "section": "",
+      "description": "Идентификатор автора опроса."
+    },
+    {
+      "name": "photo",
+      "type": "object",
+      "section": "",
+      "description": "Фотография — фон сниппета опроса. Объект фотографии."
+    },
+    {
+      "name": "background",
+      "type": "object",
+      "section": "",
+      "description": "Фон сниппета опроса. Объект, который содержит поля: •id (integer) — идентификатор фона. •type (string) — тип фона. Возможные значения: gradient, tile. •angle (integer) — (для type = gradient) угол градиента по оси X. •color (string) — HEX-код замещающего цвета (без #). •width (integer) — (для type = tile) ширина плитки паттерна. •height (integer) — (для type = tile) высота плитки паттерна. •images (array) — (для type = tile) изображение плитки паттерна. Массив объектов . •points (array) — (для type = gradient) точки градиента. Массив объектов, каждый из которых содержит поля position (number) — положение точки — и color (string) — HEX-код цвета точки."
+    },
+    {
+      "name": "friends",
+      "type": "array",
+      "section": "",
+      "description": "Идентификаторы 3 друзей, которые проголосовали в опросе."
+    }
+  ],
+  "examples": [],
+  "sections": [
+    {
+      "level": 2,
+      "title": "id",
+      "text": "integer Идентификатор опроса для получения информации о нем через метод polls.getById."
+    },
+    {
+      "level": 2,
+      "title": "owner_id",
+      "text": "integer Идентификатор владельца опроса."
+    },
+    {
+      "level": 2,
+      "title": "created",
+      "text": "integer Дата создания в формате Unixtime."
+    },
+    {
+      "level": 2,
+      "title": "question",
+      "text": "string Текст вопроса."
+    },
+    {
+      "level": 2,
+      "title": "votes",
+      "text": "integer Количество голосов."
+    },
+    {
+      "level": 2,
+      "title": "answers",
+      "text": "array Массив объектов, которые содержат информацию о вариантах ответа. Каждый объект содержит следующие поля: •id (integer) — идентификатор ответа; •text (string) — текст ответа; •votes (integer) — число проголосовавших за этот ответ; •rate (number) — рейтинг ответа."
+    },
+    {
+      "level": 2,
+      "title": "anonymous",
+      "text": "boolean Является ли опрос анонимным."
+    },
+    {
+      "level": 2,
+      "title": "multiple",
+      "text": "boolean Допускает ли опрос выбор нескольких вариантов ответа."
+    },
+    {
+      "level": 2,
+      "title": "answer_ids",
+      "text": "array Идентификаторы вариантов ответа, выбранных текущим пользователем."
+    },
+    {
+      "level": 2,
+      "title": "end_date",
+      "text": "integer Дата завершения опроса в Unixtime. 0, если опрос бессрочный."
+    },
+    {
+      "level": 2,
+      "title": "closed",
+      "text": "boolean Является ли опрос завершенным."
+    },
+    {
+      "level": 2,
+      "title": "is_board",
+      "text": "boolean Прикреплён ли опрос к обсуждению."
+    },
+    {
+      "level": 2,
+      "title": "can_edit",
+      "text": "boolean Можно ли отредактировать опрос."
+    },
+    {
+      "level": 2,
+      "title": "can_vote",
+      "text": "boolean Можно ли проголосовать в опросе."
+    },
+    {
+      "level": 2,
+      "title": "can_report",
+      "text": "boolean Можно ли пожаловаться на опрос."
+    },
+    {
+      "level": 2,
+      "title": "can_share",
+      "text": "boolean Можно ли поделиться опросом."
+    },
+    {
+      "level": 2,
+      "title": "author_id",
+      "text": "integer Идентификатор автора опроса."
+    },
+    {
+      "level": 2,
+      "title": "photo",
+      "text": "object Фотография — фон сниппета опроса. Объект фотографии."
+    },
+    {
+      "level": 2,
+      "title": "background",
+      "text": "object Фон сниппета опроса. Объект, который содержит поля: •id (integer) — идентификатор фона. •type (string) — тип фона. Возможные значения: gradient, tile. •angle (integer) — (для type = gradient) угол градиента по оси X. •color (string) — HEX-код замещающего цвета (без #). •width (integer) — (для type = tile) ширина плитки паттерна. •height (integer) — (для type = tile) высота плитки паттерна. •images (array) — (для type = tile) изображение плитки паттерна. Массив объектов . •points (array) — (для type = gradient) точки градиента. Массив объектов, каждый из которых содержит поля position (number) — положение точки — и color (string) — HEX-код цвета точки."
+    },
+    {
+      "level": 2,
+      "title": "friends",
+      "text": "array Идентификаторы 3 друзей, которые проголосовали в опросе."
+    }
+  ],
+  "contentText": "Объект, описывающий опрос, содержит следующие поля: id (integer): Идентификатор опроса для получения информации о нем через метод polls.getById. owner_id (integer): Идентификатор владельца опроса. created (integer): Дата создания в формате Unixtime. question (string): Текст вопроса. votes (integer): Количество голосов. answers (array): Массив объектов, которые содержат информацию о вариантах ответа. Каждый объект содержит следующие поля: •id (integer) — идентификатор ответа; •text (string) — текст ответа; •votes (integer) — число проголосовавших за этот ответ; •rate (number) — рейтинг ответа. anonymous (boolean): Является ли опрос анонимным. multiple (boolean): Допускает ли опрос выбор нескольких вариантов ответа. answer_ids (array): Идентификаторы вариантов ответа, выбранных текущим пользователем. end_date (integer): Дата завершения опроса в Unixtime. 0, если опрос бессрочный. closed (boolean): Является ли опрос завершенным. is_board (boolean): Прикреплён ли опрос к обсуждению. can_edit (boolean): Можно ли отредактировать опрос. can_vote (boolean): Можно ли проголосовать в опросе. can_report (boolean): Можно ли пожаловаться на опрос. can_share (boolean): Можно ли поделиться опросом. author_id (integer): Идентификатор автора опроса. photo (object): Фотография — фон сниппета опроса. Объект фотографии. background (object): Фон сниппета опроса. Объект, который содержит поля: •id (integer) — идентификатор фона. •type (string) — тип фона. Возможные значения: gradient, tile. •angle (integer) — (для type = gradient) угол градиента по оси X. •color (string) — HEX-код замещающего цвета (без #). •width (integer) — (для type = tile) ширина плитки паттерна. •height (integer) — (для type = tile) высота плитки паттерна. •images (array) — (для type = tile) изображение плитки паттерна. Массив объектов . •points (array) — (для type = gradient) точки градиента. Массив объектов, каждый из которых содержит поля position (number) — положение точки — и color (string) — HEX-код цвета точки. friends (array): Идентификаторы 3 друзей, которые проголосовали в опросе."
+}

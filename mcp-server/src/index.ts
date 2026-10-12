@@ -10,6 +10,7 @@ import {
 import { z } from 'zod';
 import { getBridgeMethod, listBridge, searchBridge } from './loaders/bridge.js';
 import { getApiMethod, listApi, searchApi } from './loaders/reference.js';
+import { getObject, listObjects, searchObjects } from './loaders/objects.js';
 
 const requiredText = z.string().trim().min(1);
 const optionalGroup = z.string().trim().optional();
@@ -25,9 +26,9 @@ function parseArguments<T extends z.ZodTypeAny>(schema: T, args: unknown): z.inf
   }
   return parsed.data;
 }
-function methodResult(method: unknown, searchTool: string): ToolResult {
+function methodResult(method: unknown, searchTool: string, noun: string = 'Метод'): ToolResult {
   if (!method) {
-    return { isError: true, content: [{ type: 'text', text: `Метод не найден. Уточните название или найдите его через ${searchTool}.` }] };
+    return { isError: true, content: [{ type: 'text', text: `${noun} не найден. Уточните название или найдите его через ${searchTool}.` }] };
   }
   return { content: [{ type: 'text', text: JSON.stringify(method, null, 2) }] };
 }
@@ -79,6 +80,31 @@ server.setRequestHandler(ListToolsRequestSchema, async () => ({
         properties: { group: { type: 'string', description: 'Группа: users, groups, messages, wall, photos...' } },
       },
     },
+    {
+      name: 'vk_objects_search',
+      description: 'Поиск по объектам VK API (dev.vk.com/ru/reference/objects): структуры данных users_user, groups_group, messages_message, вложения (attachments) и др. Использовать при вопросах о полях и структуре объектов ВКонтакте / VK API: что содержит пользователь, сообщество, запись, сообщение, вложения.',
+      inputSchema: {
+        type: 'object',
+        properties: {
+          query: requiredTextSchema,
+          group: { type: 'string', description: 'Ограничить категорией, например: Основные объекты, Медиаконтент и вложения, Вспомогательные объекты и наборы значений' },
+        },
+        required: ['query'],
+      },
+    },
+    {
+      name: 'vk_objects_get_object',
+      description: 'Получить полное описание объекта VK API (поля, типы, вложенные поля): напр. user (пользователь), group (сообщество), post (запись), message (сообщение), attachments-wall (вложения стен). Использовать при вопросах о структуре данных объектов ВКонтакте / VK API, о полях ответа методов.',
+      inputSchema: { type: 'object', properties: { id: requiredTextSchema }, required: ['id'] },
+    },
+    {
+      name: 'vk_objects_list',
+      description: 'Список всех объектов VK API Reference (user, group, post, message, photo, video, вложения и др.) по категориям — навигация по документации объектов ВКонтакте.',
+      inputSchema: {
+        type: 'object',
+        properties: { group: { type: 'string', description: 'Категория: Основные объекты, Медиаконтент и вложения, Вспомогательные объекты и наборы значений' } },
+      },
+    },
   ],
 }));
 
@@ -115,6 +141,23 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
   if (name === 'vk_api_list') {
     const { group } = parseArguments(z.object({ group: optionalGroup }), args);
     const list = listApi(group).map(m => ({ id: m.id, group: m.group, description: m.description, url: m.url }));
+    return { content: [{ type: 'text', text: JSON.stringify(list, null, 2) }] };
+  }
+  if (name === 'vk_objects_search') {
+    const { query, group } = parseArguments(z.object({ query: requiredText, group: optionalGroup }), args);
+    const results = searchObjects(query, group).map(m => ({
+      id: m.id, group: m.group, description: m.description, url: m.url,
+    }));
+    return { content: [{ type: 'text', text: JSON.stringify(results, null, 2) }] };
+  }
+  if (name === 'vk_objects_get_object') {
+    const { id } = parseArguments(z.object({ id: requiredText }), args);
+    const obj = getObject(id);
+    return methodResult(obj, 'vk_objects_search', 'Объект');
+  }
+  if (name === 'vk_objects_list') {
+    const { group } = parseArguments(z.object({ group: optionalGroup }), args);
+    const list = listObjects(group).map(m => ({ id: m.id, h1: m.h1, group: m.group, description: m.description, url: m.url }));
     return { content: [{ type: 'text', text: JSON.stringify(list, null, 2) }] };
   }
   throw new McpError(ErrorCode.InvalidParams, `Unknown tool: ${name}`);
