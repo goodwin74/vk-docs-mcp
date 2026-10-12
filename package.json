@@ -1,7 +1,7 @@
 {
   "name": "vk-docs-mcp",
-  "version": "0.1.0",
-  "description": "Офлайн MCP-сервер с документацией VK Bridge и VK API для AI-агентов (OpenCode, Claude Code, Cursor, Cline)",
+  "version": "0.2.0",
+  "description": "Офлайн MCP-сервер с документацией VK Bridge, VK API и объектов VK API для AI-агентов (OpenCode, Claude Code, Cursor, Cline)",
   "type": "module",
   "license": "MIT",
   "bin": {
@@ -28,6 +28,7 @@
     "vk-mini-apps",
     "vk-bridge",
     "vk-api",
+    "vk-objects",
     "ai",
     "llm",
     "opencode",

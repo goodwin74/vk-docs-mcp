@@ -34,7 +34,7 @@ function methodResult(method: unknown, searchTool: string, noun: string = 'Ме�
 }
 
 const server = new Server(
-  { name: 'vk-docs-mcp', version: '0.1.0' },
+  { name: 'vk-docs-mcp', version: '0.2.0' },
   { capabilities: { tools: {} } }
 );
 

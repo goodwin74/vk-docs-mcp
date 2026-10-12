@@ -16,7 +16,7 @@
 
 Для всех проектов (глобальная регистрация):
 
-    opencode mcp add vk-docs -- npx -y vk-docs-mcp@0.1.0
+    opencode mcp add vk-docs -- npx -y vk-docs-mcp@0.2.0
 
 ### OpenCode 1.x
 
@@ -26,7 +26,7 @@
       "mcp": {
         "vk-docs": {
           "type": "local",
-          "command": ["npx", "-y", "vk-docs-mcp@0.1.0"],
+          "command": ["npx", "-y", "vk-docs-mcp@0.2.0"],
           "enabled": true
         }
       }
@@ -34,7 +34,7 @@
 
 ### Claude Code
 
-    claude mcp add vk-docs -- npx -y vk-docs-mcp@0.1.0
+    claude mcp add vk-docs -- npx -y vk-docs-mcp@0.2.0
 
 ### Cursor
 
@@ -42,7 +42,7 @@
 
 - Name: vk-docs
 - Type: command
-- Command: npx -y vk-docs-mcp@0.1.0
+- Command: npx -y vk-docs-mcp@0.2.0
 
 Или добавьте в ~/.cursor/mcp.json:
 
@@ -50,7 +50,7 @@
       "mcpServers": {
         "vk-docs": {
           "command": "npx",
-          "args": ["-y", "vk-docs-mcp@0.1.0"]
+          "args": ["-y", "vk-docs-mcp@0.2.0"]
         }
       }
     }
@@ -62,7 +62,7 @@
     {
       "vk-docs": {
         "command": "npx",
-        "args": ["-y", "vk-docs-mcp@0.1.0"],
+        "args": ["-y", "vk-docs-mcp@0.2.0"],
         "disabled": false
       }
     }
@@ -94,7 +94,7 @@ npm ci --ignore-scripts
 npm test
 ```
 
-[`npm ci`](https://docs.npmjs.com/cli/v11/commands/npm-ci/) устанавливает зависимости по lock-файлу, не меняя его; `--ignore-scripts` отключает установочные скрипты. Все тесты должны пройти: они проверяют stdio-соединение, список и вызовы шести инструментов, аргументы, ошибки и конфигурацию ниже. Доступ к VK для тестов не нужен.
+[`npm ci`](https://docs.npmjs.com/cli/v11/commands/npm-ci/) устанавливает зависимости по lock-файлу, не меняя его; `--ignore-scripts` отключает установочные скрипты. Все тесты должны пройти: они проверяют stdio-соединение, список и вызовы девяти инструментов, аргументы, ошибки и конфигурацию ниже. Доступ к VK для тестов не нужен.
 
 Автотесты stdio проходят в CI на Linux (Node.js 22 и 24), Windows и macOS (Node.js 24). Настройки клиентов ниже сверены с официальной документацией; подключение через интерфейсы OpenCode, Codex и Claude Code отдельно не проверялось. Наличие записи в конфигурации ещё не подтверждает вызов инструментов.
 
@@ -103,13 +103,15 @@ npm test
 ```text
 data/vk-bridge/                # JSON-документация Bridge
 data/vk-reference/             # JSON-документация VK API
+data/vk-objects/               # JSON-документация объектов VK API
+mcp-server/src/                # TypeScript-исходники сервера
 mcp-server/dist/index.js       # точка входа; рядом dist/loaders/
 mcp-server/package.json        # зависимости и npm-команды
 mcp-server/package-lock.json   # зафиксированные версии
 mcp-server/test/server.test.js # проверки MCP
 ```
 
-Готовый `dist/` уже включён в репозиторий. **Сборка не нужна:** сейчас в репозитории нет TypeScript-исходников и `tsconfig.json`, хотя скрипт `build` указан в `package.json`. Не используйте `npm run build` для установки.
+Готовый `dist/` уже включён в репозиторий, поэтому **для установки сборка не нужна**. TypeScript-исходники лежат в `mcp-server/src/`; если меняете их, пересоберите `dist` командой `npm run build` (нужен установленный `npm ci`) и закоммитьте оба — CI проверяет, что `dist` соответствует исходникам.
 
 Сохраняйте `data/` и `mcp-server/` вместе в этой структуре: копирования одного `index.js` недостаточно.
 
@@ -330,7 +332,7 @@ claude mcp get vk-docs
 
 ## Обновление
 
-Дата обновления данных, указанная в репозитории: **04.10.2026**. Это локальная копия документации; сервер не скачивает новые страницы автоматически.
+Дата обновления данных, указанная в репозитории: **12.10.2026**. Это локальная копия документации; сервер не скачивает новые страницы автоматически.
 
 Закройте использующие сервер AI-клиенты и остановите ручной запуск сервера. В корне `vk-docs-mcp` проверьте локальные изменения:
 
