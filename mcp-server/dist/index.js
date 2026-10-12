@@ -22,7 +22,7 @@ function methodResult(method, searchTool, noun = 'Метод') {
     }
     return { content: [{ type: 'text', text: JSON.stringify(method, null, 2) }] };
 }
-const server = new Server({ name: 'vk-docs-mcp', version: '0.1.0' }, { capabilities: { tools: {} } });
+const server = new Server({ name: 'vk-docs-mcp', version: '0.2.0' }, { capabilities: { tools: {} } });
 server.setRequestHandler(ListToolsRequestSchema, async () => ({
     tools: [
         {
