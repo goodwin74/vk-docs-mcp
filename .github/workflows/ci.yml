@@ -45,8 +45,12 @@ jobs:
           package-manager-cache: false
       - name: Install locked dependencies
         run: npm ci --ignore-scripts --no-audit --no-fund
-      # The repository ships dist/ without TypeScript sources or a tsconfig.
-      # Validate the shipped JavaScript instead of invoking the legacy build script.
+      # src/ is the source of truth; dist/ is generated with `npm run build`.
+      # Fail if dist/ drifts from the TypeScript sources (no direct dist edits).
+      - name: Build TypeScript sources
+        run: npm run build
+      - name: Verify dist matches TypeScript sources
+        run: git diff --exit-code -- dist
       - name: Check JavaScript syntax
         run: |
           node --check dist/index.js
