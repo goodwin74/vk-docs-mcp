@@ -56,6 +56,7 @@ jobs:
           node --check dist/index.js
           node --check dist/loaders/bridge.js
           node --check dist/loaders/reference.js
+          node --check dist/loaders/payments.js
           node --check test/server.test.js
       - name: Run MCP stdio regression tests
         run: npm test

@@ -6,6 +6,7 @@ import { z } from 'zod';
 import { getBridgeMethod, listBridge, searchBridge } from './loaders/bridge.js';
 import { getApiMethod, listApi, searchApi } from './loaders/reference.js';
 import { getObject, listObjects, searchObjects } from './loaders/objects.js';
+import { getPaymentPage, listPayments, searchPayments } from './loaders/payments.js';
 const requiredText = z.string().trim().min(1);
 const optionalGroup = z.string().trim().optional();
 const requiredTextSchema = { type: 'string', minLength: 1, pattern: '\\S' };
@@ -16,13 +17,13 @@ function parseArguments(schema, args) {
     }
     return parsed.data;
 }
-function methodResult(method, searchTool, noun = 'Метод') {
+function methodResult(method, searchTool, noun = 'Метод', notFoundMsg) {
     if (!method) {
-        return { isError: true, content: [{ type: 'text', text: `${noun} не найден. Уточните название или найдите его через ${searchTool}.` }] };
+        return { isError: true, content: [{ type: 'text', text: notFoundMsg || `${noun} не найден. Уточните название или найдите его через ${searchTool}.` }] };
     }
     return { content: [{ type: 'text', text: JSON.stringify(method, null, 2) }] };
 }
-const server = new Server({ name: 'vk-docs-mcp', version: '0.2.0' }, { capabilities: { tools: {} } });
+const server = new Server({ name: 'vk-docs-mcp', version: '0.3.0' }, { capabilities: { tools: {} } });
 server.setRequestHandler(ListToolsRequestSchema, async () => ({
     tools: [
         {
@@ -90,6 +91,31 @@ server.setRequestHandler(ListToolsRequestSchema, async () => ({
                 properties: { group: { type: 'string', description: 'Категория: Основные объекты, Медиаконтент и вложения, Вспомогательные объекты и наборы значений' } },
             },
         },
+        {
+            name: 'vk_payments_search',
+            description: 'Поиск по документации платежей VK / ВКонтакте (dev.vk.ru/ru/api/payments): подключение сервиса к платёжной системе ВКонтакте, продажа виртуальных ценностей и подписок за голоса, платёжные уведомления на сервер, проверка подписи sig, тестирование платежей, VK Донат API. Использовать при вопросах о приёме оплаты, монетизации игр и мини-приложений, донатах, платежах в приложениях VK.',
+            inputSchema: {
+                type: 'object',
+                properties: {
+                    query: requiredTextSchema,
+                    group: { type: 'string', description: 'Ограничить разделом: payments (платежи виртуальной валютой) или donut (VK Донат API)' },
+                },
+                required: ['query'],
+            },
+        },
+        {
+            name: 'vk_payments_get_page',
+            description: 'Получить полную статью документации платежей VK в Markdown (текст, таблицы параметров уведомлений, блоки кода PHP/JavaScript/JSON, директивы :::note): напр. payments/overview (обзор), payments/notifications/vk (обработка платёжных уведомлений и подпись sig), payments/virtual-goods/vk, payments/subscriptions/vk, payments/testing (тестирование), donut/getting-started (VK Донат API). Использовать, когда нужен полный текст статьи о платежах, формате уведомлений или примеры кода обработчиков.',
+            inputSchema: { type: 'object', properties: { id: requiredTextSchema }, required: ['id'] },
+        },
+        {
+            name: 'vk_payments_list',
+            description: 'Список статей документации по платежам VK (id, заголовки, описания, ссылки): обзор платежей, покупка виртуальных товаров и подписок, типы платёжных уведомлений, тестирование, VK Донат API — навигация по платежной документации ВКонтакте.',
+            inputSchema: {
+                type: 'object',
+                properties: { group: { type: 'string', description: 'Раздел: payments или donut' } },
+            },
+        },
     ],
 }));
 server.setRequestHandler(CallToolRequestSchema, async (request) => {
@@ -142,6 +168,25 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
     if (name === 'vk_objects_list') {
         const { group } = parseArguments(z.object({ group: optionalGroup }), args);
         const list = listObjects(group).map(m => ({ id: m.id, h1: m.h1, group: m.group, description: m.description, url: m.url }));
+        return { content: [{ type: 'text', text: JSON.stringify(list, null, 2) }] };
+    }
+    if (name === 'vk_payments_search') {
+        const { query, group } = parseArguments(z.object({ query: requiredText, group: optionalGroup }), args);
+        const results = searchPayments(query, group).map(d => ({
+            id: d.id, group: d.group, h1: d.h1, description: d.description, url: d.url,
+            headings: d.headings.slice(0, 10),
+            examples: d.examples.length,
+        }));
+        return { content: [{ type: 'text', text: JSON.stringify(results, null, 2) }] };
+    }
+    if (name === 'vk_payments_get_page') {
+        const { id } = parseArguments(z.object({ id: requiredText }), args);
+        const doc = getPaymentPage(id);
+        return methodResult(doc, 'vk_payments_search', 'Страница', 'Страница не найдена. Уточните id (например payments/overview, payments/notifications/vk) или найдите её через vk_payments_search.');
+    }
+    if (name === 'vk_payments_list') {
+        const { group } = parseArguments(z.object({ group: optionalGroup }), args);
+        const list = listPayments(group).map(d => ({ id: d.id, h1: d.h1, group: d.group, title: d.title, url: d.url }));
         return { content: [{ type: 'text', text: JSON.stringify(list, null, 2) }] };
     }
     throw new McpError(ErrorCode.InvalidParams, `Unknown tool: ${name}`);

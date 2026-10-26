@@ -94,12 +94,13 @@ test('MCP tool calls over stdio', async t => {
     assert.equal(initialized.error, undefined);
     client.notify('notifications/initialized');
 
-    await t.test('advertises all nine tools and nonblank required strings', async () => {
+    await t.test('advertises all twelve tools and nonblank required strings', async () => {
         const { result } = await client.request('tools/list', {});
         assert.deepEqual(result.tools.map(tool => tool.name).sort(), [
             'vk_api_get_method', 'vk_api_list', 'vk_api_search',
             'vk_bridge_get_method', 'vk_bridge_list', 'vk_bridge_search',
             'vk_objects_get_object', 'vk_objects_list', 'vk_objects_search',
+            'vk_payments_get_page', 'vk_payments_list', 'vk_payments_search',
         ]);
         for (const tool of result.tools) {
             for (const key of tool.inputSchema.required || []) {
@@ -112,14 +113,16 @@ test('MCP tool calls over stdio', async t => {
     });
 
     await t.test('optional arguments can be omitted or empty', async () => {
-        for (const name of ['vk_api_list', 'vk_bridge_list', 'vk_objects_list']) {
+        for (const name of ['vk_api_list', 'vk_bridge_list', 'vk_objects_list', 'vk_payments_list']) {
             const omitted = resultData(await client.call(name));
             assert.ok(omitted.length > 0);
             assert.deepEqual(resultData(await client.call(name, {})), omitted);
         }
-        for (const [name, directory] of [['vk_api_list', 'vk-reference'], ['vk_bridge_list', 'vk-bridge'], ['vk_objects_list', 'vk-objects']]) {
+        for (const [name, directory] of [['vk_api_list', 'vk-reference'], ['vk_bridge_list', 'vk-bridge'], ['vk_objects_list', 'vk-objects'], ['vk_payments_list', 'vk-payments']]) {
             const expectedIds = readdirSync(resolve(root, 'data', directory))
-                .filter(file => file.endsWith('.json')).map(file => file.slice(0, -5)).sort();
+                .filter(file => file.endsWith('.json')).map(file => file.slice(0, -5))
+                // Статьи о платежах именуются точками, но их id используют пути с «/».
+                .map(id => directory === 'vk-payments' ? id.replace(/\./g, '/') : id).sort();
             assert.deepEqual(resultData(await client.call(name)).map(method => method.id).sort(), expectedIds);
         }
     });
@@ -142,6 +145,16 @@ test('MCP tool calls over stdio', async t => {
         assert.ok(results.some(method => method.id === 'users.get'));
         assert.ok(results.every(method => method.group === 'users'));
         assert.deepEqual(Object.keys(results[0]).sort(), ['description', 'group', 'id', 'url']);
+        const page = resultData(await client.call('vk_payments_get_page', { id: 'payments/notifications/vk' }));
+        assert.equal(page.h1, 'Обработка платёжных уведомлений ВКонтакте');
+        assert.ok(Array.isArray(page.examples));
+        assert.ok(page.examples.length > 0);
+        assert.ok(page.content.startsWith(`# ${page.h1}`));
+        const paymentResults = resultData(await client.call('vk_payments_search', { query: 'проверка подписи sig' }));
+        assert.ok(paymentResults.some(doc => doc.id === 'payments/notifications/vk'));
+        assert.deepEqual(Object.keys(paymentResults[0]).sort(), ['description', 'examples', 'group', 'h1', 'headings', 'id', 'url']);
+        const donut = resultData(await client.call('vk_payments_list', { group: 'donut' }));
+        assert.deepEqual(donut.map(doc => doc.id), ['donut/getting-started']);
     });
 
     await t.test('trims queries, identifiers and optional groups', async () => {
@@ -155,6 +168,10 @@ test('MCP tool calls over stdio', async t => {
             ['vk_objects_get_object', { id: ' user ' }, { id: 'user' }],
             ['vk_objects_search', { query: ' пользователь ' }, { query: 'пользователь' }],
             ['vk_objects_list', { group: ' Основные объекты ' }, { group: 'Основные объекты' }],
+            ['vk_payments_search', { query: ' платежи ' }, { query: 'платежи' }],
+            ['vk_payments_get_page', { id: ' overview ' }, { id: 'overview' }],
+            ['vk_payments_list', { group: ' donut ' }, { group: 'donut' }],
+            ['vk_payments_list', { group: '   ' }, {}],
         ];
         for (const [name, padded, normal] of cases) {
             assert.deepEqual(resultData(await client.call(name, padded)), resultData(await client.call(name, normal)), name);
@@ -166,6 +183,7 @@ test('MCP tool calls over stdio', async t => {
             ['vk_bridge_search', 'query'], ['vk_bridge_get_method', 'slug'],
             ['vk_api_search', 'query'], ['vk_api_get_method', 'name'],
             ['vk_objects_search', 'query'], ['vk_objects_get_object', 'id'],
+            ['vk_payments_search', 'query'], ['vk_payments_get_page', 'id'],
         ]) {
             for (const args of [undefined, {}, { [key]: 123 }, { [key]: '' }, { [key]: ' \t\n ' }]) {
                 const response = await client.call(name, args);
@@ -188,6 +206,7 @@ test('MCP tool calls over stdio', async t => {
             ['vk_bridge_get_method', 'slug', 'vk_bridge_search', 'Метод не найден'],
             ['vk_api_get_method', 'name', 'vk_api_search', 'Метод не найден'],
             ['vk_objects_get_object', 'id', 'vk_objects_search', 'Объект не найден'],
+            ['vk_payments_get_page', 'id', 'vk_payments_search', 'Страница не найдена'],
         ]) {
             for (const missing of ['does-not-exist', '../../package.json']) {
                 const response = await client.call(name, { [key]: missing });
