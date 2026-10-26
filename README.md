@@ -5,6 +5,7 @@
 - **VK Bridge:** 98 страниц о методах и событиях мини-приложений
 - **VK API Reference:** 452 метода в 39 группах
 - **Объекты VK API:** 44 объекта (пользователь, сообщество, запись, сообщение, вложения...)
+- **Платежи VK:** 10 статей о платежной системе ВКонтакте — обзор, покупка виртуальных товаров и подписок за голоса, платёжные уведомления на сервер с примерами кода, тестирование платежей, VK Донат API
 
 После установки сервер читает JSON-файлы с диска, работает офлайн и не обращается к VK API. Токены и API-ключи VK не нужны. Подключение модели в AI-клиенте настраивается отдельно.
 
@@ -16,7 +17,7 @@
 
 Для всех проектов (глобальная регистрация):
 
-    opencode mcp add vk-docs -- npx -y vk-docs-mcp@0.2.0
+    opencode mcp add vk-docs -- npx -y vk-docs-mcp@0.3.0
 
 ### OpenCode 1.x
 
@@ -26,7 +27,7 @@
       "mcp": {
         "vk-docs": {
           "type": "local",
-          "command": ["npx", "-y", "vk-docs-mcp@0.2.0"],
+          "command": ["npx", "-y", "vk-docs-mcp@0.3.0"],
           "enabled": true
         }
       }
@@ -34,7 +35,7 @@
 
 ### Claude Code
 
-    claude mcp add vk-docs -- npx -y vk-docs-mcp@0.2.0
+    claude mcp add vk-docs -- npx -y vk-docs-mcp@0.3.0
 
 ### Cursor
 
@@ -42,7 +43,7 @@
 
 - Name: vk-docs
 - Type: command
-- Command: npx -y vk-docs-mcp@0.2.0
+- Command: npx -y vk-docs-mcp@0.3.0
 
 Или добавьте в ~/.cursor/mcp.json:
 
@@ -50,7 +51,7 @@
       "mcpServers": {
         "vk-docs": {
           "command": "npx",
-          "args": ["-y", "vk-docs-mcp@0.2.0"]
+          "args": ["-y", "vk-docs-mcp@0.3.0"]
         }
       }
     }
@@ -62,7 +63,7 @@
     {
       "vk-docs": {
         "command": "npx",
-        "args": ["-y", "vk-docs-mcp@0.2.0"],
+        "args": ["-y", "vk-docs-mcp@0.3.0"],
         "disabled": false
       }
     }
@@ -94,7 +95,7 @@ npm ci --ignore-scripts
 npm test
 ```
 
-[`npm ci`](https://docs.npmjs.com/cli/v11/commands/npm-ci/) устанавливает зависимости по lock-файлу, не меняя его; `--ignore-scripts` отключает установочные скрипты. Все тесты должны пройти: они проверяют stdio-соединение, список и вызовы девяти инструментов, аргументы, ошибки и конфигурацию ниже. Доступ к VK для тестов не нужен.
+[`npm ci`](https://docs.npmjs.com/cli/v11/commands/npm-ci/) устанавливает зависимости по lock-файлу, не меняя его; `--ignore-scripts` отключает установочные скрипты. Все тесты должны пройти: они проверяют stdio-соединение, список и вызовы двенадцати инструментов, аргументы, ошибки и конфигурацию ниже. Доступ к VK для тестов не нужен.
 
 Автотесты stdio проходят в CI на Linux (Node.js 22 и 24), Windows и macOS (Node.js 24). Настройки клиентов ниже сверены с официальной документацией; подключение через интерфейсы OpenCode, Codex и Claude Code отдельно не проверялось. Наличие записи в конфигурации ещё не подтверждает вызов инструментов.
 
@@ -104,6 +105,7 @@ npm test
 data/vk-bridge/                # JSON-документация Bridge
 data/vk-reference/             # JSON-документация VK API
 data/vk-objects/               # JSON-документация объектов VK API
+data/vk-payments/              # JSON-статьи о платежах (платежи, уведомления, VK Донат)
 mcp-server/src/                # TypeScript-исходники сервера
 mcp-server/dist/index.js       # точка входа; рядом dist/loaders/
 mcp-server/package.json        # зависимости и npm-команды
@@ -289,7 +291,7 @@ claude mcp get vk-docs
 
 ## Инструменты
 
-Сервер предоставляет девять инструментов; клиент может показывать их с префиксом имени сервера.
+Сервер предоставляет двенадцать инструментов; клиент может показывать их с префиксом имени сервера.
 
 | Инструмент | Аргументы | Назначение |
 |---|---|---|
@@ -302,15 +304,18 @@ claude mcp get vk-docs
 | `vk_objects_search` | `query`, необязательный `group` | Поиск по объектам VK API |
 | `vk_objects_get_object` | `id`, например `user` | Поля и типы объекта VK API |
 | `vk_objects_list` | Необязательный `group`, например `Основные объекты` | Все объекты или выбранная категория |
+| `vk_payments_search` | `query`, необязательный `group` | Поиск по документации платежей VK |
+| `vk_payments_get_page` | `id`, например `payments/notifications/vk` | Полная статья о платежах в Markdown |
+| `vk_payments_list` | Необязательный `group`: `payments` или `donut` | Все статьи о платежах |
 
-`query`, `slug`, `name` и `id` должны быть непустыми строками. Для API используйте полное имя метода, например `messages.send`. Объекты описывают структуры данных: `user` (пользователь), `group` (сообщество), `post` (запись), `message` (сообщение), `attachments-wall` (вложения стен) и др.
+`query`, `slug`, `name` и `id` должны быть непустыми строками. Для API используйте полное имя метода, например `messages.send`. Объекты описывают структуры данных: `user` (пользователь), `group` (сообщество), `post` (запись), `message` (сообщение), `attachments-wall` (вложения стен) и др. Статьи о платежах идентифицируются путём без `/api/`: `payments/overview`, `payments/virtual-goods/vk`, `payments/subscriptions/vk`, `payments/notifications/vk`, `payments/notifications/get-item`, `payments/notifications/get-subscription`, `payments/notifications/order-status-change`, `payments/notifications/subscription-status-change`, `payments/testing`, `donut/getting-started`. В ответе `vk_payments_get_page` поле `content` — полный текст статьи в Markdown (таблицы параметров, блоки кода PHP/JavaScript/JSON, директивы `:::note`), `examples` — только блоки кода, `sections` и `headings` — оглавление.
 
 ### Подсказка агенту (необязательно)
 
 Чтобы напоминать агенту обращаться к документации, **добавьте** короткое правило в существующий `AGENTS.md` проекта для OpenCode/Codex или в `CLAUDE.md` для Claude Code. Если файла нет, создайте его. Не заменяйте существующие инструкции целиком; [AGENTS.md](AGENTS.md) этого репозитория можно использовать как образец.
 
 ```text
-Для задач по VK API, VK Bridge и VK Mini Apps сначала используй подходящие
+Для задач по VK API, VK Bridge, VK Mini Apps и платежам VK сначала используй подходящие
 инструменты MCP vk-docs. Если они недоступны, сообщи об этом явно.
 ```
 
@@ -327,12 +332,12 @@ claude mcp get vk-docs
 - **Codex не видит сервер:** проверьте `mcp_servers.vk-docs`, путь и доверие к проекту для `.codex/config.toml`; откройте новую сессию и проверьте `/mcp`.
 - **Claude Code не видит сервер:** проверьте область настройки и рабочий проект, `mcpServers.vk-docs`, затем `claude mcp get vk-docs`. Ожидающее подтверждение project-сервера завершите в интерактивной сессии.
 - **WSL или разные окружения:** Node.js, зависимости и сервер должны быть доступны в среде запуска клиента; в WSL используйте Linux-пути.
-- **Сервер подключён, но списки пусты:** проверьте наличие JSON-файлов в `data/vk-bridge/`, `data/vk-reference/` и `data/vk-objects/` рядом с `mcp-server/`, затем перезапустите клиент. Один пустой результат поиска ещё не означает поломку: попробуйте `vk_bridge_list`, `vk_api_list` или `vk_objects_list` без фильтра.
+- **Сервер подключён, но списки пусты:** проверьте наличие JSON-файлов в `data/vk-bridge/`, `data/vk-reference/`, `data/vk-objects/` и `data/vk-payments/` рядом с `mcp-server/`, затем перезапустите клиент. Один пустой результат поиска ещё не означает поломку: попробуйте `vk_bridge_list`, `vk_api_list`, `vk_objects_list` или `vk_payments_list` без фильтра.
 - **Агент не вызывает инструменты:** попросите вызвать конкретный инструмент, как в примере выше, и проверьте, что инструменты `vk-docs` не отключены в настройках клиента или агента.
 
 ## Обновление
 
-Дата обновления данных, указанная в репозитории: **12.10.2026**. Это локальная копия документации; сервер не скачивает новые страницы автоматически.
+Дата обновления данных, указанная в репозитории: **24.10.2026**. Это локальная копия документации; сервер не скачивает новые страницы автоматически.
 
 Закройте использующие сервер AI-клиенты и остановите ручной запуск сервера. В корне `vk-docs-mcp` проверьте локальные изменения:
 
